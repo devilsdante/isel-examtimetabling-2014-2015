@@ -1,0 +1,93 @@
+
+\documentclass[12pt,envcountsame,envcountchap]{svmono}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc} % high quality pdf
+\usepackage{ucs} % unicode for mac os x
+\usepackage{geometry} % Flexible and complete interface to document dimensions.
+\geometry{a4paper}
+\usepackage{graphics}
+\usepackage{caption}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{epstopdf} % eps to pdf
+\usepackage{rotating} % rotate stuff
+\usepackage{lmodern} %Type1-font for non-english texts and characters
+\usepackage{graphicx}        % standard LaTeX graphics tool when including figure files
+\usepackage{multicol}        % used for the two-column index
+\usepackage[bottom]{footmisc}% places footnotes at page bottom, etc.
+\usepackage{url}
+\linespread{1.2}
+\usepackage{color}
+\usepackage{array}
+\usepackage[toc,page]{appendix}
+\usepackage[acronym]{glossaries}
+\usepackage{glossaries}
+\usepackage{listings}
+\usepackage{longtable}
+\usepackage{subcaption}
+\usepackage{etoolbox}% http://ctan.org/pkg/etoolbox
+\usepackage{algorithm}
+\usepackage{algorithmic}	
+
+\usepackage[rgb]{xcolor}
+\definecolor{Highlight}{rgb}{0.84,0.47,0.10} 
+
+
+\captionsetup{compatibility=false,figurename=Figure}
+
+\interfootnotelinepenalty=10000
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Use of Times New Roman font
+\usefont{T1}{ptm}{m}{n}
+\selectfont
+
+\loadglsentries{001-acronyms} 	% Load list of acronyms
+\makeglossaries
+\glsaddall
+
+\include{000-latex-config}
+\include{000-format-json}
+
+\begin{document}
+\frontmatter 				%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagenumbering{roman}  
+\include{100-cover}
+
+\include{002-abstract}
+
+%%% The followinf 3 commands will force page number to 
+%%% appear on every page after the cover pages
+\makeatletter
+\let\ps@empty\ps@plain
+\makeatother
+
+\pagestyle{plain} 
+\tableofcontents
+\listoffigures	
+\addcontentsline{toc}{chapter}{List of Figures} 
+\listoftables
+\addcontentsline{toc}{chapter}{List of Tables}
+\lstlistoflistings
+\addcontentsline{toc}{chapter}{List of Code Listings}
+
+\printglossary[type=\acronymtype, nonumberlist, title=List of Acronyms, style=listwithwidth]
+\addcontentsline{toc}{chapter}{List of Acronyms}
+
+\mainmatter 					%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagenumbering{arabic}
+
+\include{200-introduction}
+\include{300-theory}
+\include{400-proposed-solution}
+\include{500-developed-work}
+\include{550-experimental-results}
+\include{600-conclusions}
+\include{700-attachments}
+
+\backmatter					%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{800-references}
+
+\end{document}
+

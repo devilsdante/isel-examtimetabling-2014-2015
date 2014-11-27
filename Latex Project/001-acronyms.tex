@@ -1,0 +1,69 @@
+\newlength{\acronymlabelwidth}
+\setlength{\acronymlabelwidth}{0.25\textwidth}
+\newglossarystyle{listwithwidth}{%
+  \renewenvironment{theglossary}%
+    {\begin{description}}{\end{description}}%
+  \renewcommand*{\glossaryheader}{}%
+  \renewcommand*{\glsgroupheading}[1]{}%
+  \renewcommand*{\glossaryentryfield}[5]{%
+    \item[\parbox{\acronymlabelwidth}{\glsentryitem{##1}\glstarget{##1}{##2}}]
+       ##3\glspostdescription\space ##5}%
+  \renewcommand*{\glossarysubentryfield}[6]{%
+    \glssubentryitem{##2}%
+    \glstarget{##2}{\strut}##4\glspostdescription\space ##6.}%
+  \renewcommand*{\glsgroupskip}{\indexspace}%
+}
+
+\begin{titlepage}
+\thispagestyle{empty}
+	\newacronym{soa}{SOA}{Service Oriented Architecture}
+	\newacronym{http}{HTTP}{HyperText Transfer Protocol}
+	\newacronym{rest}{REST}{REpresentational State Transfer}
+	\newacronym{ide}{IDE}{Integrated Development Environment}
+	\newacronym{cf}{CF}{Collaborative Filtering}
+	\newacronym{cbf}{CBF}{Content-Based Filtering}
+	\newacronym{ubcf}{UBCF}{User-Based Collaborative Filtering}
+	\newacronym{knn}{KNN}{K-Nearest Neighbors}
+	\newacronym{lsh}{LSH}{Locality Sensitive Hashing}
+	\newacronym{ibcf}{IBCF}{Item-Based CF}	
+	\newacronym{api}{API}{Application Programming Interface}	
+	\newacronym{apns}{APNS}{Apple Push Notification Service}	
+	\newacronym{qos}{QoS}{Quality of Service}	
+	\newacronym{er}{ER}{Entity Relationship}	
+	\newacronym{dal}{DAL}{Data Access Layer}	
+	\newacronym{dao}{DAO}{Data Access Object}	
+	\newacronym{json}{JSON}{JavaScript Object Notation}	
+	\newacronym{gg}{GG}{Google Geocoding}
+	\newacronym{orm}{ORM}{Object-Relational Mapping}
+	\newacronym{crud}{CRUD}{Create, Read, Update, and Delete}
+	\newacronym{url}{URL}{Uniform Resource Locator}
+	\newacronym{html5}{HTML5}{HyperText Markup Language version 5}
+	\newacronym{css3}{CSS3}{Cascading Style Sheets version 3}
+	\newacronym{sql}{SQL}{Structured Query Language}
+	\newacronym{ip}{IP}{Internet Protocol}
+	\newacronym{gps}{GPS}{Global Positioning System}
+	\newacronym{hbm}{HBM}{Hibernate Mapping}
+	\newacronym{hql}{HQL}{Hibernate Query Language}
+	\newacronym{pk}{PK}{Primary Key}	
+	\newacronym{fk}{FK}{Foreign Key}	
+	\newacronym{uml}{UML}{Unified Modeling Language}	
+	\newacronym{uri}{URI}{Uniform Resource Identifier}	
+	\newacronym{gcd}{GCD}{Grand Central Dispatch}	
+	\newacronym{ui}{UI}{User Interface}	
+	\newacronym{mvc}{MVC}{Model View Controller}		
+	\newacronym{ajax}{AJAX}{Asynchronous JavaScript and XML}		
+	\newacronym{js}{JS}{JavaScript}
+	\newacronym{wwo}{WWO}{World Weather Online}
+	\newacronym{jdbc}{JDBC}{Java Database Connectivity}
+	\newacronym{ssl}{SSL}{Secure Socket Layer}
+	
+	\newacronym{treeTierDT}{DT}{Data Tier}
+	\newacronym{treeTierBT}{BLT}{Business Logic Tier}
+	\newacronym{threeTierPT}{PT}{Presentation Tier}
+	
+	\newacronym{xml}{XML}{Extensible Markup Language}
+	\newacronym{csv}{CSV}{Comma-Separated Values}
+
+	\newacronym{mae}{MAE}{Mean Absolute Error}
+	\newacronym{rs}{RS}{Recommender System}
+\end{titlepage}

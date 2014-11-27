@@ -1,0 +1,27 @@
+\chapter{Conclusions}
+\label{conclusions}
+In this Chapter we start by taking the conclusions from the developed project and in Section~\ref{lbl:featureWork} we present some technical and functional aspects that can be improved in the future.\\
+\\
+Many people are stuck in their daily routine and when the time comes to travel, they choose to spent more time (and money) to visit well known touristic locations such as Eiffel Tower in Paris or the Big Ben in London. Sometimes they forget or ignore the fact that their home country also has great places to visit and to spend a great time. Many approaches for touristic guides have been proposed, but all of them are mainly focusing in the well known touristic locations.\\
+\\
+We developed a service, and its client applications with web and mobile interfaces, which facilitate the discovery of the beautiful and previously unseen touristic points. Users can visualize places around their current geographic location. We have integrated a recommender engine which follows the collaborative filtering method. This service helps users to discover new sights without any effort from their part. The recommended information is based on locations previously rated by the user, when touristic locations are marked as visited. During the project development, in order to achieve better results, we have focused on the following issues:
+\begin{itemize}
+\item Study of the similar solutions for the problem in question.
+\item Analysis of different techniques and algorithms for the reliable recommender system.
+\item Careful design of the iOS and Web applications in order to make them look simplistic and to minimize the user's learning curve.
+\end{itemize}
+The chosen technologies are mostly open source, the combination of the MySQL, Hibernate and Play framework have made the server side of the GuideMe service functional and robust, while the iOS SDK allowed to develop a well designed and easy to use mobile application. Its usage will contribute to tourism, by promoting all kind of touristic locations, even the lesser known ones in the proximity of the users location. Its social component allows for users to interact between themselves.
+
+\section{Future Work}
+\label{lbl:featureWork}
+In this Section we approach directions for improvements and the future work that should be made in order to make the current implementation more robust for massive use.\\
+\\
+When the user authenticates himself, the API provides the authentication token which is used to validate the user's session. Almost every request to the REST API requires that one passes the authentication token for identification. An alternative could be to pass one's id from the database, but this could compromise the user's private information. To overcome this security issue, the API will be deployed to a secure web server with \gls{ssl} certificate in order to keep the authentication token encrypted and to ensure information privacy. With use of the \gls{ssl} certificate, the information between the sender and the server becomes unreadable to everyone except to the involved parties.\\
+\\
+In the future we intend to implement the full set of functionalities in the Web application. By supporting most of the features through the Web interface, it would be possible to reach more users. We will use the Facebook and Twitter to expand our service with more users, by inviting friends of the registered users. It will be possible to leave descriptive feedback for the visited locations and exchange messages between users.\\
+\\
+Currently, the recommendation system uses the information regarding all the visited locations, but the user's preference may change over time. We thought about the possibility to improve the quality of the recommender system by implementing the concept of the sliding window, which would include considerable number of the user's last visits, but not all. With this approach, the produced recommendations would be more similar to the user's last visits, avoiding the recommendation of the touristic locations in which user is not interested.\\
+\\
+Another aspect to be improved is the social interaction between users. We intent to add support for user to leave his appreciation regarding the visited location, which can be read by other users. Current applications will also provide the feed page, where users will be able to consult what places their friends have been visiting recently.\\
+\\
+The new version of the iOS (iOS7) was released on September 18 of 2013. It brings some new design concepts (more simplistic) to the iOS platform. As the development of the GuideMe application has started sooner, its UI was designed to be simple but it does not completely follow the design concepts of the new operating system. Our goal is to redesign some screens in order to perfectly fit the iOS7 UI.

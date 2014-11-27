@@ -1,0 +1,3685 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.11.27)  27 NOV 2014 03:31
+entering extended mode
+**000-main.tex
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\000-main.tex"
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\svmono.cls"
+Document Class: svmono 2006/10/31 v4.17 
+Springer Verlag global LaTeX document class for monographs
+Class Springer-SVMono Info: extra/valid Springer sub-package 
+(Springer-SVMono)           not found in option list - using "global" style.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size10.clo"
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+\betweenumberspace=\dimen103
+\headlineindent=\dimen104
+\c@chapter=\count87
+\chapstarthookwidth=\dimen105
+\svitemindent=\dimen106
+\verbatimindent=\dimen107
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 633.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 634.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 635.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 636.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 637.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 638.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 639.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 640.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 641.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 642.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 643.
+\tocchpnum=\dimen108
+\tocsecnum=\dimen109
+\tocsectotal=\dimen110
+\tocsubsecnum=\dimen111
+\tocsubsectotal=\dimen112
+\tocsubsubsecnum=\dimen113
+\tocsubsubsectotal=\dimen114
+\tocparanum=\dimen115
+\tocparatotal=\dimen116
+\tocsubparanum=\dimen117
+\foot@parindent=\dimen118
+\spthmsep=\dimen119
+\c@theorem=\count88
+\c@prob=\count89
+\instindent=\dimen120
+\figgap=\dimen121
+\figcapgap=\dimen122
+\tabcapgap=\dimen123
+\c@merk=\count90
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encoding T1
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
+File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0104 (decimal 260)
+   defining Unicode char U+0105 (decimal 261)
+   defining Unicode char U+0106 (decimal 262)
+   defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+010C (decimal 268)
+   defining Unicode char U+010D (decimal 269)
+   defining Unicode char U+010E (decimal 270)
+   defining Unicode char U+010F (decimal 271)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0118 (decimal 280)
+   defining Unicode char U+0119 (decimal 281)
+   defining Unicode char U+011A (decimal 282)
+   defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011E (decimal 286)
+   defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0130 (decimal 304)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0132 (decimal 306)
+   defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0139 (decimal 313)
+   defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013D (decimal 317)
+   defining Unicode char U+013E (decimal 318)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0143 (decimal 323)
+   defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0147 (decimal 327)
+   defining Unicode char U+0148 (decimal 328)
+   defining Unicode char U+014A (decimal 330)
+   defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+0150 (decimal 336)
+   defining Unicode char U+0151 (decimal 337)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0154 (decimal 340)
+   defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0158 (decimal 344)
+   defining Unicode char U+0159 (decimal 345)
+   defining Unicode char U+015A (decimal 346)
+   defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015E (decimal 350)
+   defining Unicode char U+015F (decimal 351)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0162 (decimal 354)
+   defining Unicode char U+0163 (decimal 355)
+   defining Unicode char U+0164 (decimal 356)
+   defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+016E (decimal 366)
+   defining Unicode char U+016F (decimal 367)
+   defining Unicode char U+0170 (decimal 368)
+   defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+0179 (decimal 377)
+   defining Unicode char U+017A (decimal 378)
+   defining Unicode char U+017B (decimal 379)
+   defining Unicode char U+017C (decimal 380)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
+)
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encoding OT1
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
+File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00B8 (decimal 184)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+)
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encoding OMS
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
+File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+)
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2423 (decimal 9251)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.def"
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ucs\ucs.sty"
+Package: ucs 2013/05/11 v2.2 UCS: Unicode input support
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ucs\uni-global.def"
+File: uni-global.def 2013/05/13 UCS: Unicode global data
+)
+\uc@secondtry=\count91
+\uc@combtoks=\toks16
+\uc@combtoksb=\toks17
+\uc@temptokena=\toks18
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks19
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count92
+\Gm@cntv=\count93
+\c@Gm@tempcnt=\count94
+\Gm@bindingoffset=\dimen124
+\Gm@wd@mp=\dimen125
+\Gm@odd@mp=\dimen126
+\Gm@even@mp=\dimen127
+\Gm@layoutwidth=\dimen128
+\Gm@layoutheight=\dimen129
+\Gm@layouthoffset=\dimen130
+\Gm@layoutvoffset=\dimen131
+\Gm@dimlist=\toks20
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count95
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption.sty"
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen132
+\captionmargin@=\dimen133
+\captionwidth=\dimen134
+\caption@tempdima=\dimen135
+\caption@indent=\dimen136
+\caption@parindent=\dimen137
+\caption@hangindent=\dimen138
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+)
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption)                usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+Package caption Info: \@makecaption = \long macro:#1#2->\captionstyle \ifx \@ca
+ptype \fig@type \vskip \figcapgap \fi \setbox \@tempboxa \hbox {{\floatlegendst
+yle #1\floatcounterend }\capstrut #2}\ifdim \wd \@tempboxa >\hsize {\floatlegen
+dstyle #1\floatcounterend }\capstrut #2\par \else \hbox to\hsize {\leftlegendgl
+ue \unhbox \@tempboxa \hfil }\fi \ifx \@captype \fig@type \else \vskip \tabcapg
+ap \fi .
+\c@ContinuedFloat=\count96
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks21
+\ex@=\dimen139
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen140
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count97
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count98
+\leftroot@=\count99
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count100
+\DOTSCASE@=\count101
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen141
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+
+
+Package amsmath Warning: Unable to redefine math accent \vec.
+
+\macc@depth=\count102
+\c@MaxMatrixCols=\count103
+\dotsspace@=\muskip10
+\c@parentequation=\count104
+\dspbrk@lvl=\count105
+\tag@help=\toks22
+\row@=\count106
+\column@=\count107
+\maxfields@=\count108
+\andhelp@=\toks23
+\eqnshift@=\dimen142
+\alignsep@=\dimen143
+\tagshift@=\dimen144
+\tagwidth@=\dimen145
+\totwidth@=\dimen146
+\lineht@=\dimen147
+\@envbody=\toks24
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks25
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.sty"
+Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\rotating\rotating.sty"
+Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+\Gin@req@height=\dimen148
+\Gin@req@width=\dimen149
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count109
+\rotFPtop=\skip46
+\rotFPbot=\skip47
+\rot@float@box=\box28
+\rot@mess@toks=\toks26
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\lmodern.sty"
+Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\multicol.sty"
+Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
+\c@tracingmulticols=\count110
+\mult@box=\box29
+\multicol@leftmargin=\dimen150
+\c@unbalance=\count111
+\c@collectmore=\count112
+\doublecol@number=\count113
+\multicoltolerance=\count114
+\multicolpretolerance=\count115
+\full@width=\dimen151
+\page@free=\dimen152
+\premulticols=\dimen153
+\postmulticols=\dimen154
+\multicolsep=\skip48
+\multicolbaselineskip=\skip49
+\partial@page=\box30
+\last@line=\box31
+\mult@rightbox=\box32
+\mult@grightbox=\box33
+\mult@gfirstbox=\box34
+\mult@firstbox=\box35
+\@tempa=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\@tempa=\box52
+\c@columnbadness=\count116
+\c@finalcolumnbadness=\count117
+\last@try=\dimen155
+\multicolovershoot=\dimen156
+\multicolundershoot=\dimen157
+\mult@nat@firstbox=\box53
+\colbreak@box=\box54
+\multicol@sort@counter=\count118
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\footmisc\footmisc.sty"
+Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
+\FN@temptoken=\toks27
+\footnotemargin=\dimen158
+\c@pp@next@reset=\count119
+Package footmisc Info: Declaring symbol style bringhurst on input line 855.
+Package footmisc Info: Declaring symbol style chicago on input line 863.
+Package footmisc Info: Declaring symbol style wiley on input line 872.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
+
+Package footmisc Info: Declaring symbol style lamport* on input line 903.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
+.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\color.sty"
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\array.sty"
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen159
+\extrarowheight=\dimen160
+\NC@list=\toks28
+\extratabsurround=\skip50
+\backup@length=\skip51
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\appendix\appendix.sty"
+Package: appendix 2009/09/02 v1.2b extra appendix facilities
+\c@@pps=\count120
+\c@@ppsavesec=\count121
+\c@@ppsaveapp=\count122
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\glossaries\base\glossaries.sty"
+Package: glossaries 2014/09/01 v4.11 (NLCT)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
+Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
+\XKV@toks=\toks29
+\XKV@tempa@toks=\toks30
+\XKV@depth=\count123
+File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\glossaries\base\mfirstuc.sty"
+Package: mfirstuc 2014/07/30 v1.09 (NLCT)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty"
+Package: etoolbox 2011/01/03 v2.1 e-TeX tools for LaTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\misc\etex.sty"
+Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
+\et@xins=\count124
+)
+\etb@tempcnta=\count125
+)
+\@glsmfirst=\toks31
+\@glsmrest=\toks32
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\textcase\textcase.sty"
+Package: textcase 2004/10/07 v0.07 Text only upper/lower case changing (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xfor\xfor.sty"
+Package: xfor 2009/02/05 v1.05 (NLCT)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\datatool\datatool-base.sty"
+Package: datatool-base 2014/06/10 v2.22 (NLCT)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\substr\substr.sty"
+Package: substr 2009/10/20 v1.2 Handle substrings
+\c@su@anzahl=\count126
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\datatool\datatool-fp.sty"
+Package: datatool-fp 2013/08/29 v2.17 (NLCT)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp.sty"
+Package: fp 1995/04/02
+
+`Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\defpattern.sty"
+Package: defpattern 1994/10/12
+\actioncount=\count127
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-basic.sty"
+Package: fp-basic 1996/05/13
+\FP@xs=\count128
+\FP@xia=\count129
+\FP@xib=\count130
+\FP@xfa=\count131
+\FP@xfb=\count132
+\FP@rega=\count133
+\FP@regb=\count134
+\FP@regs=\count135
+\FP@times=\count136
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-addons.sty"
+Package: fp-addons 1995/03/15
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-snap.sty"
+Package: fp-snap 1995/04/05
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-exp.sty"
+Package: fp-exp 1995/04/03
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-trigo.sty"
+Package: fp-trigo 1995/04/14
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-pas.sty"
+Package: fp-pas 1994/08/29
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-random.sty"
+Package: fp-random 1995/02/23
+\FPseed=\count137
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-eqn.sty"
+Package: fp-eqn 1995/04/03
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-upn.sty"
+Package: fp-upn 1996/10/21
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-eval.sty"
+Package: fp-eval 1995/04/03
+)))
+\@dtl@toks=\toks33
+\@dtl@tmpcount=\count138
+\dtl@tmplength=\skip52
+\dtl@sortresult=\count139
+\@dtl@numgrpsepcount=\count140
+\@dtl@datatype=\count141
+\dtl@codeA=\count142
+\dtl@codeB=\count143
+\@dtl@foreach@level=\count144
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\glossaries\base\glossaries-compat
+ible-307.sty"
+Package: glossaries-compatible-307 2013/11/14 v4.0 (NLCT)
+)
+\gls@level=\count145
+\@gls@tmpb=\toks34
+\gls@tmplen=\skip53
+\glskeylisttok=\toks35
+\glslabeltok=\toks36
+\glsshorttok=\toks37
+\glslongtok=\toks38
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-hypern
+av.sty"
+Package: glossary-hypernav 2013/11/14 v4.0 (NLCT)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-list.s
+ty"
+Package: glossary-list 2013/11/14 v4.0 (NLCT)
+\glslistdottedwidth=\skip54
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-long.s
+ty"
+Package: glossary-long 2013/11/14 v4.0 (NLCT)
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\longtable.sty"
+Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip55
+\LTright=\skip56
+\LTpre=\skip57
+\LTpost=\skip58
+\LTchunksize=\count146
+\LTcapwidth=\dimen161
+\LT@head=\box55
+\LT@firsthead=\box56
+\LT@foot=\box57
+\LT@lastfoot=\box58
+\LT@cols=\count147
+\LT@rows=\count148
+\c@LT@tables=\count149
+\c@LT@chunks=\count150
+\LT@p@ftn=\toks39
+)
+\glsdescwidth=\skip59
+\glspagelistwidth=\skip60
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-super.
+sty"
+Package: glossary-super 2013/11/14 v4.0 (NLCT)
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\supertabular\supertabular.sty"
+Package: supertabular 2004/02/20 v4.1e the supertabular environment
+\c@tracingst=\count151
+\ST@wd=\dimen162
+\ST@rightskip=\skip61
+\ST@leftskip=\skip62
+\ST@parfillskip=\skip63
+\ST@pageleft=\dimen163
+\ST@headht=\dimen164
+\ST@tailht=\dimen165
+\ST@pagesofar=\dimen166
+\ST@pboxht=\dimen167
+\ST@lineht=\dimen168
+\ST@stretchht=\dimen169
+\ST@prevht=\dimen170
+\ST@toadd=\dimen171
+\ST@dimen=\dimen172
+\ST@pbox=\box59
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-tree.s
+ty"
+Package: glossary-tree 2014/08/27 v4.10 (NLCT)
+\glstreeindent=\skip64
+)) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.sty"
+\lst@mode=\count152
+\lst@gtempboxa=\box60
+\lst@token=\toks40
+\lst@length=\count153
+\lst@currlwidth=\dimen173
+\lst@column=\count154
+\lst@pos=\count155
+\lst@lostspace=\dimen174
+\lst@width=\dimen175
+\lst@newlines=\count156
+\lst@lineno=\count157
+\lst@maxwidth=\dimen176
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
+\c@lstnumber=\count158
+\lst@skipnumbers=\count159
+\lst@framebox=\box61
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.cfg"
+File: listings.cfg 2014/09/06 1.5e listings configuration
+))
+Package: listings 2014/09/06 1.5e (Carsten Heinz)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\subcaption.sty"
+Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
+\c@subfigure=\count160
+\c@subtable=\count161
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\algorithms\algorithm.sty"
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count162
+\float@exts=\toks41
+\float@box=\box62
+\@float@everytoks=\toks42
+\@floatcapt=\box63
+)
+\@float@every@algorithm=\toks43
+\c@algorithm=\count163
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\algorithms\algorithmic.sty"
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+\c@ALC@unique=\count164
+\c@ALC@line=\count165
+\c@ALC@rem=\count166
+\c@ALC@depth=\count167
+\ALC@tlm=\skip65
+\algorithmicindent=\skip66
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 702.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+Package caption Info: We need package `newfloat' on input line 37.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\newfloat.sty"
+Package: newfloat 2013/05/11 v1.1-91 Defining new floating environments (AR)
+Package newfloat Info: Unsupported document class, or \@chapter 
+(newfloat)             was already redefined by another package.
+Package newfloat Info: \@chapter = macro:[#1]#2->\ifnum \c@secnumdepth >\m@ne \
+refstepcounter {chapter}\if@mainmatter \typeout {\@chapapp \space \thechapter .
+}\addcontentsline {toc}{chapter}{\protect \numberline {\thechapter \thechaptere
+nd }#1}\else \addcontentsline {toc}{chapter}{#1}\fi \else \addcontentsline {toc
+}{chapter}{#1}\fi \chaptermark {#1}\addtocontents {lof}{\protect \addvspace {10
+\p@ }}\addtocontents {lot}{\protect \addvspace {10\p@ }}\if@twocolumn \@topnewp
+age [\@makechapterhead {#2}]\else \@makechapterhead {#2}\@afterheading \fi .
+Package newfloat Info: \Hy@org@chapter = undefined.
+Package newfloat Info: Trying Plan B...
+)
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 43.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1ptm.fd"
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+)
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\001-acronyms.tex
+"
+\acronymlabelwidth=\skip67
+)
+\glswrite=\write3
+\glo@main@file=\write4
+Package glossaries Info: Writing glossary file 000-main.glo on input line 47.
+\glo@acronym@file=\write5
+Package glossaries Info: Writing glossary file 000-main.acn on input line 47.
+
+\@input{000-latex-config.aux}
+
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\000-latex-config
+.tex")
+\@input{000-format-json.aux}
+
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\000-format-json.
+tex" ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bera\bera.sty"
+Package: bera 2004/01/31 (WaS)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.def"
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\textcomp.sty"
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1enc.def"
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+Now handling font encoding TS1 ...
+... processing UTF-8 mapping file for font encoding TS1
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1enc.dfu"
+File: ts1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+))
+LaTeX Info: Redefining \oldstylenums on input line 266.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 281.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 282.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 283.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 284.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 285.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 286.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 287.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 288.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 289.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 290.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 291.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 292.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 293.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 294.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 295.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 296.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 297.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 298.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 299.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 300.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 301.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 302.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 303.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 304.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 305.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 306.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 311.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 312.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 313.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 314.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 315.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 316.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 317.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 318.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 319.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 320.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 321.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 322.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 323.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 324.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 325.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 326.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 327.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 328.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 329.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 330.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 331.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 332.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 333.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 334.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 335.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 336.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 337.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 338.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bera\beraserif.sty"
+Package: beraserif 2004/01/30 (WaS)
+LaTeX Font Info:    Try loading font information for T1+fve on input line 30.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bera\t1fve.fd"
+File: t1fve.fd 2004/09/07 scalable font definitions for T1/fve.
+)
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 30.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bera\berasans.sty"
+Package: berasans 2004/01/30 (WaS)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bera\beramono.sty"
+Package: beramono 2004/01/31 (WaS)
+)))
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\000-main.aux"
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\100-cover.aux")
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\002-abstract.aux
+")
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\200-introduction
+.aux")
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\300-theory.aux")
+
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\400-proposed-sol
+ution.aux")
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\500-developed-wo
+rk.aux")
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\550-experimental
+-results.aux")
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\600-conclusions.
+aux")
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\700-attachments.
+aux"
+
+LaTeX Warning: Label `fig:surveyPage1' multiply defined.
+
+
+LaTeX Warning: Label `fig:surveyPage1' multiply defined.
+
+)
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\800-references.a
+ux"))
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 53.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 53.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 53.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ucs\ucsencs.def"
+File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
+)
+
+Package ucs Warning: ***************************
+(ucs)                You seem to have loaded inputencoding utf8
+(ucs)                (LaTeX kernel UTF-8) instead of utf8x (ucs.sty UTF-8).
+(ucs)                Probably you are compiling a document written for a
+(ucs)                pre-august-2004 ucs.sty.
+(ucs)                ***************************
+(ucs)                Please use \usepackage[utf8x]{inputenc} instead of
+(ucs)                \usepackage[utf8]{inputenc}.
+(ucs)                ***************************
+(ucs)                If you should really want to use ucs.sty and kernel's
+(ucs)                utf8.def together, use \usepackage[utf8x,utf8]{inputenc}
+(ucs)                to disable compatibility mode
+(ucs)                ***************************
+(ucs)                Activating compatibility mode.
+(ucs)                ***************************
+(ucs)                 on input line 53.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ucs\utf8x.def"
+File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(71.70166pt, 418.25368pt, 107.55254pt)
+* v-part:(T,H,B)=(101.40665pt, 591.5302pt, 152.11pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=418.25368pt
+* \textheight=591.5302pt
+* \oddsidemargin=-0.56833pt
+* \evensidemargin=35.28255pt
+* \topmargin=5.13666pt
+* \headheight=12.0pt
+* \headsep=12.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=90.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count168
+\scratchdimen=\dimen177
+\scratchbox=\box64
+\nofMPsegments=\count169
+\nofMParguments=\count170
+\everyMPshowfont=\toks44
+\MPscratchCnt=\count171
+\MPscratchDim=\dimen178
+\MPnumerator=\count172
+\makeMPintoPDFobject=\count173
+\everyMPtoPDFconversion=\toks45
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: Incompatible package detected (regarding \@caption).
+(caption)             \@caption = \long macro:#1[#2]#3->\par \addcontentsline {
+\csname ext@#1\endcsname }{#1}{\protect \numberline {\csname the#1\endcsname }{
+\ignorespaces #2}}\begingroup \@parboxrestore \if@minipage \@setminipage \fi \@
+makecaption {\csname fnum@#1\endcsname }{\ignorespaces #3}\par \endgroup .
+
+
+Package caption Warning: Forced redefinition of \caption since the
+(caption)                unsupported(!) package option `compatibility=false'
+(caption)                was given.
+See the caption package documentation for explanation.
+
+Package caption Info: float package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: longtable package is loaded.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\ltcaption.sty"
+Package: ltcaption 2013/02/03 v1.3-62 longtable captions (AR)
+)
+Package caption Info: rotating package is loaded.
+Package caption Info: supertabular package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count174
+
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\100-cover.tex"
+<./images/isel_logo.jpg, id=1, 1207.51125pt x 462.72874pt>
+File: ./images/isel_logo.jpg Graphic file (type jpg)
+
+<use ./images/isel_logo.jpg>
+Package pdftex.def Info: ./images/isel_logo.jpg used on input line 4.
+(pdftex.def)             Requested size: 142.26378pt x 54.51537pt.
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 12.9599pt on input line 5.
+LaTeX Font Info:    Font shape `T1/fve/b/n' will be
+(Font)              scaled to size 12.9599pt on input line 5.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ucs\uni-0.def"
+File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
+)
+<./images/guide_me_logo.jpg, id=2, 313.17pt x 313.17pt>
+File: ./images/guide_me_logo.jpg Graphic file (type jpg)
+
+<use ./images/guide_me_logo.jpg>
+Package pdftex.def Info: ./images/guide_me_logo.jpg used on input line 7.
+(pdftex.def)             Requested size: 99.58566pt x 99.58464pt.
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 16.19989pt on input line 8.
+LaTeX Font Info:    Font shape `T1/fve/b/n' will be
+(Font)              scaled to size 16.19989pt on input line 9.
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 14.3999pt on input line 10.
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 12.59991pt on input line 13.
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 10.79993pt on input line 15.
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 9.89993pt on input line 22.
+LaTeX Font Info:    Font shape `T1/fve/b/n' will be
+(Font)              scaled to size 8.99994pt on input line 43.
+ [1
+
+
+
+
+
+
+
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Mike/Dropbox/Exa
+m timetabling/Student/Latex Project/images/isel_logo.jpg> <C:/Users/Mike/Dropbo
+x/Exam timetabling/Student/Latex Project/images/guide_me_logo.jpg>] [2
+
+]
+File: ./images/isel_logo.jpg Graphic file (type jpg)
+ <use ./images/isel_logo.jpg>
+Package pdftex.def Info: ./images/isel_logo.jpg used on input line 53.
+(pdftex.def)             Requested size: 142.26378pt x 54.51537pt.
+File: ./images/guide_me_logo.jpg Graphic file (type jpg)
+
+<use ./images/guide_me_logo.jpg>
+Package pdftex.def Info: ./images/guide_me_logo.jpg used on input line 56.
+(pdftex.def)             Requested size: 99.58566pt x 99.58464pt.
+ [3])
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\002-abstract.tex
+" [4
+
+
+
+
+]
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 1.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 1.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 1.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 1.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 1.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 1.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 1.
+LaTeX Font Info:    Try loading font information for U+msa on input line 1.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 1.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Underfull \hbox (badness 10000) in paragraph at lines 3--8
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--8
+
+ []
+
+[5] [6
+
+
+]
+LaTeX Font Info:    Font shape `T1/fve/m/it' in size <10> not available
+(Font)              Font shape `T1/fve/m/sl' tried instead on input line 11.
+LaTeX Font Info:    Font shape `T1/fve/m/sl' will be
+(Font)              scaled to size 8.99994pt on input line 11.
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--30
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--30
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--30
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--30
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--30
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--30
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--30
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--30
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--30
+
+ []
+
+[7]
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 8.09995pt on input line 30.
+ [8]
+LaTeX Font Info:    Font shape `T1/fve/b/n' will be
+(Font)              scaled to size 10.79993pt on input line 31.
+ [9] [10
+
+
+] ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ucs\uni-32.def"
+File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
+)
+Underfull \hbox (badness 10000) in paragraph at lines 36--41
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--41
+
+ []
+
+) [11] [12
+
+
+
+]
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\000-main.toc"
+Overfull \hbox (4.85092pt too wide) detected at line 4
+ \T1/fve/m/n/10 xviii
+ []
+
+[13] [14])
+\tf@toc=\write6
+ [15] [16
+
+
+]
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\000-main.lof"
+
+LaTeX Warning: Citation `TouristEyeWeb' on page xvii undefined on input line 2.
+
+
+
+LaTeX Warning: Citation `GuidePalWeb' on page xvii undefined on input line 3.
+
+
+LaTeX Warning: Citation `GuidePaliPhone' on page xvii undefined on input line 3
+.
+
+
+LaTeX Warning: Citation `ibCollabrativeVSGK' on page xvii undefined on input li
+ne 15.
+
+
+LaTeX Warning: Citation `ibCollabrativeVSGK' on page xvii undefined on input li
+ne 17.
+
+
+LaTeX Warning: Citation `ibCollabrativeVSGK' on page xvii undefined on input li
+ne 18.
+
+
+LaTeX Warning: Citation `apns' on page xvii undefined on input line 24.
+
+
+LaTeX Warning: Citation `apnsDetailed' on page xvii undefined on input line 25.
+
+
+[17])
+\tf@lof=\write7
+ [18]
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\000-main.lot")
+\tf@lot=\write8
+
+[19
+
+
+] [20
+
+
+]
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\000-main.lol")
+\tf@lol=\write9
+
+No file 000-main.acr.
+[21] [22
+
+
+]
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\200-introduction
+.tex"
+Chapter 1.
+Package newfloat Info: Setting Plan B file extension to `lof'... on input line 
+1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--15
+
+ []
+
+[1
+
+
+
+]
+
+LaTeX Warning: Citation `TouristEyeWeb' on page 2 undefined on input line 22.
+
+
+LaTeX Warning: Citation `TouristEyeiPhone' on page 2 undefined on input line 22
+.
+
+
+LaTeX Warning: Citation `touristEyeAndroid' on page 2 undefined on input line 2
+2.
+
+
+LaTeX Warning: Citation `GoogleMaps' on page 2 undefined on input line 24.
+
+<./images/screenshots/screenshot_tourist_eye_1.jpg, id=79, 642.4pt x 963.6pt>
+File: ./images/screenshots/screenshot_tourist_eye_1.jpg Graphic file (type jpg)
+
+
+<use ./images/screenshots/screenshot_tourist_eye_1.jpg>
+Package pdftex.def Info: ./images/screenshots/screenshot_tourist_eye_1.jpg used
+ on input line 32.
+(pdftex.def)             Requested size: 132.77109pt x 199.16928pt.
+
+Overfull \hbox (28.20767pt too wide) in paragraph at lines 32--33
+ [][] 
+ []
+
+
+Underfull \hbox (badness 4713) in paragraph at lines 33--33
+[]\T1/fve/m/n/9 (a) |Ex-plo-ration of the
+ []
+
+<./images/screenshots/screenshot_tourist_eye_2.jpg, id=80, 642.4pt x 963.6pt>
+File: ./images/screenshots/screenshot_tourist_eye_2.jpg Graphic file (type jpg)
+
+
+<use ./images/screenshots/screenshot_tourist_eye_2.jpg>
+Package pdftex.def Info: ./images/screenshots/screenshot_tourist_eye_2.jpg used
+ on input line 39.
+(pdftex.def)             Requested size: 132.77109pt x 199.16928pt.
+
+Overfull \hbox (28.20767pt too wide) in paragraph at lines 39--40
+ [][] 
+ []
+
+
+LaTeX Warning: Citation `TouristEyeWeb' on page 2 undefined on input line 43.
+
+
+LaTeX Warning: Citation `TouristEyeWeb' on page 2 undefined on input line 43.
+
+
+LaTeX Warning: Citation `touristEyeRecommender' on page 2 undefined on input li
+ne 46.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--47
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--47
+
+ []
+
+
+LaTeX Warning: Citation `GuidePalWeb' on page 2 undefined on input line 50.
+
+
+LaTeX Warning: Citation `GuidePaliPhone' on page 2 undefined on input line 50.
+
+<./images/screenshots/screenshot_guidepal_1.jpg, id=81, 642.4pt x 963.6pt>
+File: ./images/screenshots/screenshot_guidepal_1.jpg Graphic file (type jpg)
+
+<use ./images/screenshots/screenshot_guidepal_1.jpg>
+Package pdftex.def Info: ./images/screenshots/screenshot_guidepal_1.jpg used on
+ input line 56.
+(pdftex.def)             Requested size: 142.25964pt x 213.39566pt.
+
+Overfull \hbox (37.69623pt too wide) in paragraph at lines 56--57
+ [][] 
+ []
+
+<./images/screenshots/screenshot_guidepal_2.jpg, id=82, 642.4pt x 957.5775pt>
+File: ./images/screenshots/screenshot_guidepal_2.jpg Graphic file (type jpg)
+
+<use ./images/screenshots/screenshot_guidepal_2.jpg>
+Package pdftex.def Info: ./images/screenshots/screenshot_guidepal_2.jpg used on
+ input line 63.
+(pdftex.def)             Requested size: 143.15164pt x 213.39566pt.
+
+Overfull \hbox (38.58823pt too wide) in paragraph at lines 63--64
+ [][] 
+ []
+
+
+LaTeX Warning: Citation `GuidePalWeb' on page 2 undefined on input line 67.
+
+
+LaTeX Warning: Citation `GuidePaliPhone' on page 2 undefined on input line 67.
+
+
+LaTeX Warning: Citation `GuidePalWeb' on page 2 undefined on input line 67.
+
+
+LaTeX Warning: Citation `GuidePaliPhone' on page 2 undefined on input line 67.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--75
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--75
+
+ []
+
+[2] [3 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/scr
+eenshots/screenshot_tourist_eye_1.jpg> <C:/Users/Mike/Dropbox/Exam timetabling/
+Student/Latex Project/images/screenshots/screenshot_tourist_eye_2.jpg> <C:/User
+s/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/screenshots/screen
+shot_guidepal_1.jpg> <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Proj
+ect/images/screenshots/screenshot_guidepal_2.jpg>]
+
+LaTeX Warning: Citation `mTrip' on page 4 undefined on input line 76.
+
+<./images/screenshots/screenshot_mtrip_1.jpg, id=90, 672.5125pt x 963.6pt>
+File: ./images/screenshots/screenshot_mtrip_1.jpg Graphic file (type jpg)
+
+<use ./images/screenshots/screenshot_mtrip_1.jpg>
+Package pdftex.def Info: ./images/screenshots/screenshot_mtrip_1.jpg used on in
+put line 85.
+(pdftex.def)             Requested size: 148.92805pt x 213.39566pt.
+
+Overfull \hbox (44.36464pt too wide) in paragraph at lines 85--86
+ [][] 
+ []
+
+<./images/screenshots/screenshot_mtrip_2.jpg, id=91, 675.52374pt x 963.6pt>
+File: ./images/screenshots/screenshot_mtrip_2.jpg Graphic file (type jpg)
+
+<use ./images/screenshots/screenshot_mtrip_2.jpg>
+Package pdftex.def Info: ./images/screenshots/screenshot_mtrip_2.jpg used on in
+put line 92.
+(pdftex.def)             Requested size: 149.59491pt x 213.39566pt.
+
+Overfull \hbox (45.0315pt too wide) in paragraph at lines 92--93
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--103
+
+ []
+
+[4 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/screens
+hots/screenshot_mtrip_1.jpg> <C:/Users/Mike/Dropbox/Exam timetabling/Student/La
+tex Project/images/screenshots/screenshot_mtrip_2.jpg>]
+
+LaTeX Warning: Citation `triposo' on page 5 undefined on input line 104.
+
+
+LaTeX Warning: Citation `wikipedia' on page 5 undefined on input line 104.
+
+
+LaTeX Warning: Citation `wikitravel' on page 5 undefined on input line 104.
+
+
+LaTeX Warning: Citation `world66' on page 5 undefined on input line 104.
+
+<./images/screenshots/screenshot_triposo_1.jpg, id=95, 642.4pt x 963.6pt>
+File: ./images/screenshots/screenshot_triposo_1.jpg Graphic file (type jpg)
+
+<use ./images/screenshots/screenshot_triposo_1.jpg>
+Package pdftex.def Info: ./images/screenshots/screenshot_triposo_1.jpg used on 
+input line 112.
+(pdftex.def)             Requested size: 142.25964pt x 213.39566pt.
+
+Overfull \hbox (37.69623pt too wide) in paragraph at lines 112--113
+ [][] 
+ []
+
+<./images/screenshots/screenshot_triposo_2.jpg, id=96, 642.4pt x 963.6pt>
+File: ./images/screenshots/screenshot_triposo_2.jpg Graphic file (type jpg)
+
+<use ./images/screenshots/screenshot_triposo_2.jpg>
+Package pdftex.def Info: ./images/screenshots/screenshot_triposo_2.jpg used on 
+input line 119.
+(pdftex.def)             Requested size: 142.25964pt x 213.39566pt.
+
+Overfull \hbox (37.69623pt too wide) in paragraph at lines 119--120
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--126
+
+ []
+
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 6.29996pt on input line 130.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 130.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 130.
+
+LaTeX Warning: Citation `foursqureRecommendationEngine' on page 5 undefined on 
+input line 130.
+
+<./images/screenshots/screenshot_foursqure_1.jpg, id=97, 642.4pt x 923.45pt>
+File: ./images/screenshots/screenshot_foursqure_1.jpg Graphic file (type jpg)
+
+<use ./images/screenshots/screenshot_foursqure_1.jpg>
+Package pdftex.def Info: ./images/screenshots/screenshot_foursqure_1.jpg used o
+n input line 138.
+(pdftex.def)             Requested size: 138.5446pt x 199.16928pt.
+
+Overfull \hbox (33.98119pt too wide) in paragraph at lines 138--139
+ [][] 
+ []
+
+<./images/screenshots/screenshot_foursqure_2.jpg, id=98, 642.4pt x 923.45pt>
+File: ./images/screenshots/screenshot_foursqure_2.jpg Graphic file (type jpg)
+
+<use ./images/screenshots/screenshot_foursqure_2.jpg>
+Package pdftex.def Info: ./images/screenshots/screenshot_foursqure_2.jpg used o
+n input line 145.
+(pdftex.def)             Requested size: 138.5446pt x 199.16928pt.
+
+Overfull \hbox (33.98119pt too wide) in paragraph at lines 145--146
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--154
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--154
+
+ []
+
+[5 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/screens
+hots/screenshot_triposo_1.jpg> <C:/Users/Mike/Dropbox/Exam timetabling/Student/
+Latex Project/images/screenshots/screenshot_triposo_2.jpg>] [6 <C:/Users/Mike/D
+ropbox/Exam timetabling/Student/Latex Project/images/screenshots/screenshot_fou
+rsqure_1.jpg> <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/ima
+ges/screenshots/screenshot_foursqure_2.jpg>]
+
+LaTeX Warning: Citation `RestWebber' on page 7 undefined on input line 158.
+
+
+LaTeX Warning: Citation `ios' on page 7 undefined on input line 158.
+
+
+<./images/diagrams/diagram_introduction_architecture.jpg, id=106, 3908.6025pt x
+ 1809.76125pt>
+File: ./images/diagrams/diagram_introduction_architecture.jpg Graphic file (typ
+e jpg)
+ <use ./images/diagrams/diagram_introduction_architecture.jpg>
+Package pdftex.def Info: ./images/diagrams/diagram_introduction_architecture.jp
+g used on input line 162.
+(pdftex.def)             Requested size: 421.10086pt x 194.95976pt.
+
+Overfull \hbox (2.84718pt too wide) in paragraph at lines 162--163
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 158--168
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 158--168
+
+ []
+
+LaTeX Font Info:    Try loading font information for TS1+fve on input line 169.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bera\ts1fve.fd"
+File: ts1fve.fd 2004/09/07 scalable font definitions for TS1/fve.
+)
+LaTeX Font Info:    Font shape `TS1/fve/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 169.
+
+
+LaTeX Warning: Citation `MySqlOrcale' on page 7 undefined on input line 180.
+
+
+LaTeX Warning: Citation `playFramework' on page 7 undefined on input line 183.
+
+
+LaTeX Warning: Citation `html5' on page 7 undefined on input line 185.
+
+
+LaTeX Warning: Citation `css3' on page 7 undefined on input line 185.
+
+
+LaTeX Warning: Citation `javaScript' on page 7 undefined on input line 185.
+
+
+LaTeX Warning: Citation `twitterBootstrap' on page 7 undefined on input line 18
+5.
+
+
+LaTeX Warning: Citation `iPadSanchez' on page 7 undefined on input line 188.
+
+
+LaTeX Warning: Citation `ObjectiveC' on page 7 undefined on input line 188.
+
+LaTeX Font Info:    Font shape `T1/fve/b/n' will be
+(Font)              scaled to size 8.09995pt on input line 188.
+
+LaTeX Warning: Citation `ObjectiveC' on page 7 undefined on input line 188.
+
+
+LaTeX Warning: Citation `objectiveCBook' on page 7 undefined on input line 188.
+
+
+
+LaTeX Warning: Citation `UniversalApps' on page 7 undefined on input line 188.
+
+
+LaTeX Warning: Citation `Xcode' on page 7 undefined on input line 191.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--192
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--192
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--192
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--192
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--192
+
+ []
+
+[7 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/diagram
+s/diagram_introduction_architecture.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 195--197
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 195--197
+
+ []
+
+[8]
+
+LaTeX Warning: Citation `ibCollabrativeVSGK' on page 9 undefined on input line 
+236.
+
+
+LaTeX Warning: Citation `AmazonRecommendGLBSJY' on page 9 undefined on input li
+ne 236.
+
+
+LaTeX Warning: Citation `recommSystemPMVS' on page 9 undefined on input line 23
+6.
+
+
+LaTeX Warning: Citation `apns' on page 9 undefined on input line 243.
+
+
+LaTeX Warning: Citation `FacebookLogin' on page 9 undefined on input line 247.
+
+
+LaTeX Warning: Citation `TwitterLogin' on page 9 undefined on input line 247.
+
+
+Overfull \hbox (4.3567pt too wide) in alignment at lines 199--261
+ [] [] 
+ []
+
+[9]
+<./images/diagrams/diagram_usecase_users_location.jpg, id=117, 2319.66624pt x 5
+97.23125pt>
+File: ./images/diagrams/diagram_usecase_users_location.jpg Graphic file (type j
+pg)
+ <use ./images/diagrams/diagram_usecase_users_location.jpg>
+Package pdftex.def Info: ./images/diagrams/diagram_usecase_users_location.jpg u
+sed on input line 268.
+(pdftex.def)             Requested size: 369.88582pt x 95.23088pt.
+
+<./images/diagrams/diagram_usecase_recommender_system.jpg, id=118, 2933.96124pt
+ x 1049.9225pt>
+File: ./images/diagrams/diagram_usecase_recommender_system.jpg Graphic file (ty
+pe jpg)
+ <use ./images/diagrams/diagram_usecase_recommender_system.jpg>
+Package pdftex.def Info: ./images/diagrams/diagram_usecase_recommender_system.j
+pg used on input line 284.
+(pdftex.def)             Requested size: 369.88582pt x 132.36142pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: Citation `cronTab' on page 10 undefined on input line 292.
+
+[10 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/diagra
+ms/diagram_usecase_users_location.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 308--313
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 308--313
+
+ []
+
+[11 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/diagra
+ms/diagram_usecase_recommender_system.jpg>]
+
+LaTeX Warning: Citation `guideMeArticle' on page 12 undefined on input line 316
+.
+
+) [12]
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\300-theory.tex"
+Chapter 2.
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--8
+
+ []
+
+
+LaTeX Warning: Citation `AmazonRecommendGLBSJY' on page 13 undefined on input l
+ine 11.
+
+
+LaTeX Warning: Citation `spotifyRecommenderEngine' on page 13 undefined on inpu
+t line 11.
+
+
+LaTeX Warning: Citation `recommSystemPMVS' on page 13 undefined on input line 1
+1.
+
+
+<./images/flows/flow_recomender_hierarchy.jpg, id=128, 671.50874pt x 163.61125p
+t>
+File: ./images/flows/flow_recomender_hierarchy.jpg Graphic file (type jpg)
+ <use ./images/flows/flow_recomender_hierarchy.jpg>
+Package pdftex.def Info: ./images/flows/flow_recomender_hierarchy.jpg used on i
+nput line 15.
+(pdftex.def)             Requested size: 284.52756pt x 69.32289pt.
+ [13
+
+
+
+
+ <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/flows/flo
+w_recomender_hierarchy.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 26--51
+
+ []
+
+
+<./images/flows/flow_content_based_filtering_diagram.jpg, id=132, 3706.84875pt 
+x 844.15375pt>
+File: ./images/flows/flow_content_based_filtering_diagram.jpg Graphic file (typ
+e jpg)
+ <use ./images/flows/flow_content_based_filtering_diagram.jpg>
+Package pdftex.def Info: ./images/flows/flow_content_based_filtering_diagram.jp
+g used on input line 62.
+(pdftex.def)             Requested size: 341.43306pt x 77.7481pt.
+
+
+LaTeX Warning: Citation `pandoraInternetradio' on page 14 undefined on input li
+ne 67.
+
+
+LaTeX Warning: Citation `recommenderSystemWiki' on page 14 undefined on input l
+ine 67.
+
+
+<./images/examples/example_content_based_filtering.jpg, id=133, 903.375pt x 341
+.275pt>
+File: ./images/examples/example_content_based_filtering.jpg Graphic file (type 
+jpg)
+ <use ./images/examples/example_content_based_filtering.jpg>
+Package pdftex.def Info: ./images/examples/example_content_based_filtering.jpg 
+used on input line 73.
+(pdftex.def)             Requested size: 341.43306pt x 128.98804pt.
+LaTeX Font Info:    Try loading font information for T1+fvm on input line 78.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bera\t1fvm.fd"
+File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
+)
+LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 78.
+
+<./images/flows/flow_example_diagram_cbf.jpg, id=134, 1809.76125pt x 427.5975pt
+>
+File: ./images/flows/flow_example_diagram_cbf.jpg Graphic file (type jpg)
+ <use ./images/flows/flow_example_diagram_cbf.jpg>
+Package pdftex.def Info: ./images/flows/flow_example_diagram_cbf.jpg used on in
+put line 84.
+(pdftex.def)             Requested size: 412.56496pt x 97.47757pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--89
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--89
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--89
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--89
+
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[14] [15 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/f
+lows/flow_content_based_filtering_diagram.jpg> <C:/Users/Mike/Dropbox/Exam time
+tabling/Student/Latex Project/images/examples/example_content_based_filtering.j
+pg>]
+
+LaTeX Warning: Citation `ibCollabrativeVSGK' on page 16 undefined on input line
+ 93.
+
+
+<./images/flows/flow_cf_algorithm_process.jpg, id=154, 1719.42375pt x 583.17876
+pt>
+File: ./images/flows/flow_cf_algorithm_process.jpg Graphic file (type jpg)
+ <use ./images/flows/flow_cf_algorithm_process.jpg>
+Package pdftex.def Info: ./images/flows/flow_cf_algorithm_process.jpg used on i
+nput line 101.
+(pdftex.def)             Requested size: 412.56496pt x 139.93016pt.
+
+
+LaTeX Warning: Citation `ibCollabrativeVSGK' on page 16 undefined on input line
+ 102.
+
+
+LaTeX Warning: Citation `ibCollabrativeVSGK' on page 16 undefined on input line
+ 102.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--107
+
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+<./images/examples/example_item_based_filtering.jpg, id=155, 779.91376pt x 341.
+275pt>
+File: ./images/examples/example_item_based_filtering.jpg Graphic file (type jpg
+)
+ <use ./images/examples/example_item_based_filtering.jpg>
+Package pdftex.def Info: ./images/examples/example_item_based_filtering.jpg use
+d on input line 114.
+(pdftex.def)             Requested size: 341.43306pt x 149.40117pt.
+ [16 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/flows
+/flow_example_diagram_cbf.jpg>]
+
+LaTeX Warning: Citation `Aha91' on page 17 undefined on input line 123.
+
+
+LaTeX Warning: Citation `Duda_Book' on page 17 undefined on input line 123.
+
+
+LaTeX Warning: Citation `neighborhoodCF' on page 17 undefined on input line 123
+.
+
+
+LaTeX Warning: Citation `googleScalableCF' on page 17 undefined on input line 1
+28.
+
+
+LaTeX Warning: Citation `ibCollabrativeVSGK' on page 17 undefined on input line
+ 128.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--129
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--129
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--129
+
+ []
+
+[17 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/flows/
+flow_cf_algorithm_process.jpg> <C:/Users/Mike/Dropbox/Exam timetabling/Student/
+Latex Project/images/examples/example_item_based_filtering.jpg>]
+
+LaTeX Warning: Citation `Bayesian' on page 18 undefined on input line 134.
+
+
+LaTeX Warning: Citation `ibCollabrativeVSGK' on page 18 undefined on input line
+ 134.
+
+
+LaTeX Warning: Citation `ibCollabrativeVSGK' on page 18 undefined on input line
+ 134.
+
+
+LaTeX Warning: Citation `cfrsBook' on page 18 undefined on input line 137.
+
+
+<./images/flows/flow_item_based_filtering_1.jpg, id=162, 705.63625pt x 622.325p
+t>
+File: ./images/flows/flow_item_based_filtering_1.jpg Graphic file (type jpg)
+ <use ./images/flows/flow_item_based_filtering_1.jpg>
+Package pdftex.def Info: ./images/flows/flow_item_based_filtering_1.jpg used on
+ input line 142.
+(pdftex.def)             Requested size: 161.30234pt x 142.26378pt.
+
+
+LaTeX Warning: Citation `ibCollabrativeVSGK' on page 18 undefined on input line
+ 143.
+
+
+LaTeX Warning: Citation `ibCollabrativeVSGK' on page 18 undefined on input line
+ 143.
+
+
+LaTeX Warning: Citation `ibCollabrativeVSGK' on page 18 undefined on input line
+ 146.
+
+
+<./images/flows/flow_item_based_filtering_2.jpg, id=163, 1557.82pt x 681.54625p
+t>
+File: ./images/flows/flow_item_based_filtering_2.jpg Graphic file (type jpg)
+ <use ./images/flows/flow_item_based_filtering_2.jpg>
+Package pdftex.def Info: ./images/flows/flow_item_based_filtering_2.jpg used on
+ input line 149.
+(pdftex.def)             Requested size: 325.17891pt x 142.26378pt.
+
+
+LaTeX Warning: Citation `ibCollabrativeVSGK' on page 18 undefined on input line
+ 150.
+
+
+LaTeX Warning: Citation `ibCollabrativeVSGK' on page 18 undefined on input line
+ 150.
+
+
+LaTeX Warning: Citation `ibCollabrativeVSGK' on page 18 undefined on input line
+ 155.
+
+
+LaTeX Warning: Citation `ibCollabrativeVSGK' on page 18 undefined on input line
+ 155.
+
+
+<./images/examples/example_item_based_filtering2.jpg, id=164, 779.91376pt x 341
+.275pt>
+File: ./images/examples/example_item_based_filtering2.jpg Graphic file (type jp
+g)
+ <use ./images/examples/example_item_based_filtering2.jpg>
+Package pdftex.def Info: ./images/examples/example_item_based_filtering2.jpg us
+ed on input line 160.
+(pdftex.def)             Requested size: 312.9803pt x 136.9502pt.
+
+<./images/flows/flow_example_diagram_ibf.jpg, id=165, 884.30376pt x 285.065pt>
+File: ./images/flows/flow_example_diagram_ibf.jpg Graphic file (type jpg)
+
+<use ./images/flows/flow_example_diagram_ibf.jpg>
+Package pdftex.def Info: ./images/flows/flow_example_diagram_ibf.jpg used on in
+put line 170.
+(pdftex.def)             Requested size: 312.9803pt x 100.89212pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--176
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--176
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--176
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--176
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--176
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--176
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--176
+
+ []
+
+[18] [19 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/f
+lows/flow_item_based_filtering_1.jpg> <C:/Users/Mike/Dropbox/Exam timetabling/S
+tudent/Latex Project/images/flows/flow_item_based_filtering_2.jpg>] [20 <C:/Use
+rs/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/examples/example_
+item_based_filtering2.jpg> <C:/Users/Mike/Dropbox/Exam timetabling/Student/Late
+x Project/images/flows/flow_example_diagram_ibf.jpg>]
+<./images/tables/table_filter_comparison.jpg, id=175, 1792.6975pt x 608.2725pt>
+File: ./images/tables/table_filter_comparison.jpg Graphic file (type jpg)
+<use ./images/tables/table_filter_comparison.jpg>
+Package pdftex.def Info: ./images/tables/table_filter_comparison.jpg used on in
+put line 196.
+(pdftex.def)             Requested size: 369.88582pt x 125.50415pt.
+ [21 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/table
+s/table_filter_comparison.jpg>]
+
+LaTeX Warning: Citation `content-based-Filtering' on page 22 undefined on input
+ line 201.
+
+
+LaTeX Warning: Citation `CBFandCFApproach' on page 22 undefined on input line 2
+01.
+
+
+LaTeX Warning: Citation `rsHybridApproach' on page 22 undefined on input line 2
+01.
+
+
+LaTeX Warning: Citation `apacheMahout' on page 22 undefined on input line 203.
+
+
+LaTeX Warning: Citation `slopeOne' on page 22 undefined on input line 206.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 201--209
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 201--209
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 201--209
+
+ []
+
+
+LaTeX Warning: Citation `mahoutInAction' on page 22 undefined on input line 214
+.
+
+
+LaTeX Warning: Citation `slopeOneComplexity' on page 22 undefined on input line
+ 214.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--217
+
+ []
+
+
+LaTeX Warning: Citation `mahoutInAction' on page 22 undefined on input line 219
+.
+
+
+LaTeX Warning: Citation `slopeOneWeighted' on page 22 undefined on input line 2
+21.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--256
+
+ []
+
+[22]
+<./images/tables/table_slope_one_step_by_step_step_1.jpg, id=183, 1260.71pt x 5
+44.0325pt>
+File: ./images/tables/table_slope_one_step_by_step_step_1.jpg Graphic file (typ
+e jpg)
+ <use ./images/tables/table_slope_one_step_by_step_step_1.jpg>
+Package pdftex.def Info: ./images/tables/table_slope_one_step_by_step_step_1.jp
+g used on input line 262.
+(pdftex.def)             Requested size: 199.16928pt x 85.9429pt.
+
+[23 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/tables
+/table_slope_one_step_by_step_step_1.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 267--269
+
+ []
+
+
+<./images/tables/table_slope_one_step_by_step_step_2.jpg, id=188, 1573.88pt x 6
+02.25pt>
+File: ./images/tables/table_slope_one_step_by_step_step_2.jpg Graphic file (typ
+e jpg)
+ <use ./images/tables/table_slope_one_step_by_step_step_2.jpg>
+Package pdftex.def Info: ./images/tables/table_slope_one_step_by_step_step_2.jp
+g used on input line 275.
+(pdftex.def)             Requested size: 227.62204pt x 87.09886pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--281
+
+ []
+
+
+<./images/tables/table_slope_one_step_by_step_step_3.jpg, id=189, 1593.955pt x 
+572.1375pt>
+File: ./images/tables/table_slope_one_step_by_step_step_3.jpg Graphic file (typ
+e jpg)
+ <use ./images/tables/table_slope_one_step_by_step_step_3.jpg>
+Package pdftex.def Info: ./images/tables/table_slope_one_step_by_step_step_3.jp
+g used on input line 287.
+(pdftex.def)             Requested size: 227.62204pt x 81.6963pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 291--305
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 291--305
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 291--305
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 291--305
+
+ []
+
+[24 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/tables
+/table_slope_one_step_by_step_step_2.jpg> <C:/Users/Mike/Dropbox/Exam timetabli
+ng/Student/Latex Project/images/tables/table_slope_one_step_by_step_step_3.jpg>
+]
+
+LaTeX Warning: Citation `foursqureRecommendationEngine' on page 25 undefined on
+ input line 312.
+
+
+LaTeX Warning: Citation `tourisEyeRecommender' on page 25 undefined on input li
+ne 312.
+
+
+LaTeX Warning: Citation `itemBasedSlopeOne' on page 25 undefined on input line 
+314.
+
+
+LaTeX Warning: Citation `intelligenHybrid' on page 25 undefined on input line 3
+16.
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 310--82
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 310--82
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 310--82
+
+ []
+
+[25]
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\400-proposed-sol
+ution.tex" [26
+
+
+
+
+]
+Chapter 3.
+
+LaTeX Warning: Citation `MySqlOrcale' on page 27 undefined on input line 11.
+
+
+LaTeX Warning: Citation `hibernate' on page 27 undefined on input line 12.
+
+
+LaTeX Warning: Citation `playFramework' on page 27 undefined on input line 13.
+
+
+LaTeX Warning: Citation `ObjectiveC' on page 27 undefined on input line 14.
+
+
+LaTeX Warning: Citation `msSqlServer' on page 27 undefined on input line 16.
+
+
+LaTeX Warning: Citation `licenseLGPG' on page 27 undefined on input line 18.
+
+
+LaTeX Warning: Citation `licenseApacheV2' on page 27 undefined on input line 18
+.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--20
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--20
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--20
+
+ []
+
+[27]
+<./images/diagrams/diagram_service_architecture.jpg, id=203, 1541.76pt x 1593.9
+55pt>
+File: ./images/diagrams/diagram_service_architecture.jpg Graphic file (type jpg
+)
+ <use ./images/diagrams/diagram_service_architecture.jpg>
+Package pdftex.def Info: ./images/diagrams/diagram_service_architecture.jpg use
+d on input line 24.
+(pdftex.def)             Requested size: 355.65944pt x 367.69643pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--34
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--37
+
+ []
+
+[28 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/diagra
+ms/diagram_service_architecture.jpg>]
+<./images/diagrams/diagram_three_tier_architecture.jpg, id=207, 529.98pt x 857.
+2025pt>
+File: ./images/diagrams/diagram_three_tier_architecture.jpg Graphic file (type 
+jpg)
+ <use ./images/diagrams/diagram_three_tier_architecture.jpg>
+Package pdftex.def Info: ./images/diagrams/diagram_three_tier_architecture.jpg 
+used on input line 45.
+(pdftex.def)             Requested size: 140.72707pt x 227.62204pt.
+
+
+LaTeX Warning: Citation `threeTierArchitecture' on page 29 undefined on input l
+ine 51.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--52
+
+ []
+
+[29 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/diagra
+ms/diagram_three_tier_architecture.jpg>]
+
+LaTeX Warning: Citation `apns' on page 30 undefined on input line 68.
+
+<./images/diagrams/diagram_apns_simple.jpg, id=211, 654.445pt x 90.3375pt>
+File: ./images/diagrams/diagram_apns_simple.jpg Graphic file (type jpg)
+
+<use ./images/diagrams/diagram_apns_simple.jpg>
+Package pdftex.def Info: ./images/diagrams/diagram_apns_simple.jpg used on inpu
+t line 73.
+(pdftex.def)             Requested size: 341.43306pt x 47.13014pt.
+
+
+LaTeX Warning: Citation `apns' on page 30 undefined on input line 74.
+
+
+LaTeX Warning: Citation `apns' on page 30 undefined on input line 74.
+
+
+<./images/diagrams/diagram_apns_payload.jpg, id=212, 523.9575pt x 111.41624pt>
+File: ./images/diagrams/diagram_apns_payload.jpg Graphic file (type jpg)
+
+<use ./images/diagrams/diagram_apns_payload.jpg>
+Package pdftex.def Info: ./images/diagrams/diagram_apns_payload.jpg used on inp
+ut line 95.
+(pdftex.def)             Requested size: 341.43306pt x 72.605pt.
+
+
+LaTeX Warning: Citation `apnsDetailed' on page 30 undefined on input line 96.
+
+
+LaTeX Warning: Citation `apnsDetailed' on page 30 undefined on input line 96.
+
+
+LaTeX Warning: Citation `json' on page 30 undefined on input line 101.
+
+
+LaTeX Warning: Citation `apns' on page 30 undefined on input line 101.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--102
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--102
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--102
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--102
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--102
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--102
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--102
+
+ []
+
+[30 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/diagra
+ms/diagram_apns_simple.jpg>]
+
+LaTeX Warning: Citation `git' on page 31 undefined on input line 112.
+
+
+LaTeX Warning: Citation `Bitbucket' on page 31 undefined on input line 112.
+
+<./images/tables/table_bitbucket.jpg, id=216, 1533.73pt x 723.70375pt>
+File: ./images/tables/table_bitbucket.jpg Graphic file (type jpg)
+
+<use ./images/tables/table_bitbucket.jpg>
+Package pdftex.def Info: ./images/tables/table_bitbucket.jpg used on input line
+ 119.
+(pdftex.def)             Requested size: 341.43306pt x 161.10364pt.
+ [31 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/diagr
+ams/diagram_apns_payload.jpg>]
+
+LaTeX Warning: Citation `twitterBootstrap' on page 32 undefined on input line 1
+32.
+
+
+LaTeX Warning: Citation `playFramework' on page 32 undefined on input line 132.
+
+
+
+LaTeX Warning: Citation `playFramework' on page 32 undefined on input line 142.
+
+
+
+LaTeX Warning: Citation `restletFramework' on page 32 undefined on input line 1
+42.
+
+
+LaTeX Warning: Citation `jaxRsJerseyExamples' on page 32 undefined on input lin
+e 142.
+
+
+LaTeX Warning: Citation `jaxrsFramework' on page 32 undefined on input line 142
+.
+
+[32 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/tables
+/table_bitbucket.jpg>]
+<./images/tables/table_java_rest_framework_comparison.jpg, id=223, 1981.4025pt 
+x 493.845pt>
+File: ./images/tables/table_java_rest_framework_comparison.jpg Graphic file (ty
+pe jpg)
+ <use ./images/tables/table_java_rest_framework_comparison.jpg>
+Package pdftex.def Info: ./images/tables/table_java_rest_framework_comparison.j
+pg used on input line 149.
+(pdftex.def)             Requested size: 418.25542pt x 104.24551pt.
+
+Overfull \hbox (3.00174pt too wide) in paragraph at lines 148--151
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--156
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--156
+
+ []
+
+
+LaTeX Warning: Citation `php' on page 33 undefined on input line 157.
+
+
+LaTeX Warning: Citation `phpBadReputation' on page 33 undefined on input line 1
+57.
+
+
+LaTeX Warning: Citation `playFramework' on page 33 undefined on input line 159.
+
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--160
+
+ []
+
+
+LaTeX Warning: Citation `hibernate' on page 33 undefined on input line 168.
+
+
+LaTeX Warning: Citation `activeJDBC' on page 33 undefined on input line 168.
+
+
+LaTeX Warning: Citation `jooq' on page 33 undefined on input line 168.
+
+
+LaTeX Warning: Citation `hibernateBenefits' on page 33 undefined on input line 
+170.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--171
+
+ []
+
+[33 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/tables
+/table_java_rest_framework_comparison.jpg>]
+
+LaTeX Warning: Citation `photoshop' on page 34 undefined on input line 188.
+
+
+<./images/screenshots/screenshot_prototype_web_1.jpg, id=228, 1284.8pt x 1029.8
+475pt>
+File: ./images/screenshots/screenshot_prototype_web_1.jpg Graphic file (type jp
+g)
+ <use ./images/screenshots/screenshot_prototype_web_1.jpg>
+Package pdftex.def Info: ./images/screenshots/screenshot_prototype_web_1.jpg us
+ed on input line 191.
+(pdftex.def)             Requested size: 205.86626pt x 165.02606pt.
+
+<./images/screenshots/screenshot_prototype_web_2.jpg, id=229, 1284.8pt x 1029.8
+475pt>
+File: ./images/screenshots/screenshot_prototype_web_2.jpg Graphic file (type jp
+g)
+ <use ./images/screenshots/screenshot_prototype_web_2.jpg>
+Package pdftex.def Info: ./images/screenshots/screenshot_prototype_web_2.jpg us
+ed on input line 196.
+(pdftex.def)             Requested size: 205.86626pt x 165.02606pt.
+
+<./images/diagrams/diagram_hierarchy_web.jpg, id=230, 1950.28625pt x 1119.18124
+pt>
+File: ./images/diagrams/diagram_hierarchy_web.jpg Graphic file (type jpg)
+ <use ./images/diagrams/diagram_hierarchy_web.jpg>
+Package pdftex.def Info: ./images/diagrams/diagram_hierarchy_web.jpg used on in
+put line 208.
+(pdftex.def)             Requested size: 272.6811pt x 156.49014pt.
+ [34]
+
+LaTeX Warning: Citation `appCooker' on page 35 undefined on input line 215.
+
+
+<./images/screenshots/screenshot_prototype_mobile_1.jpg, id=234, 761.84625pt x 
+1490.56876pt>
+File: ./images/screenshots/screenshot_prototype_mobile_1.jpg Graphic file (type
+ jpg)
+ <use ./images/screenshots/screenshot_prototype_mobile_1.jpg>
+Package pdftex.def Info: ./images/screenshots/screenshot_prototype_mobile_1.jpg
+ used on input line 221.
+(pdftex.def)             Requested size: 101.78694pt x 199.16928pt.
+
+<./images/screenshots/screenshot_prototype_mobile_2.jpg, id=235, 761.84625pt x 
+1490.56876pt>
+File: ./images/screenshots/screenshot_prototype_mobile_2.jpg Graphic file (type
+ jpg)
+ <use ./images/screenshots/screenshot_prototype_mobile_2.jpg>
+Package pdftex.def Info: ./images/screenshots/screenshot_prototype_mobile_2.jpg
+ used on input line 228.
+(pdftex.def)             Requested size: 101.78694pt x 199.16928pt.
+
+<./images/screenshots/screenshot_prototype_mobile_3.jpg, id=236, 761.84625pt x 
+1490.56876pt>
+File: ./images/screenshots/screenshot_prototype_mobile_3.jpg Graphic file (type
+ jpg)
+ <use ./images/screenshots/screenshot_prototype_mobile_3.jpg>
+Package pdftex.def Info: ./images/screenshots/screenshot_prototype_mobile_3.jpg
+ used on input line 235.
+(pdftex.def)             Requested size: 101.78694pt x 199.16928pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--248
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--248
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--248
+
+ []
+
+[35 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/screen
+shots/screenshot_prototype_web_1.jpg> <C:/Users/Mike/Dropbox/Exam timetabling/S
+tudent/Latex Project/images/screenshots/screenshot_prototype_web_2.jpg> <C:/Use
+rs/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/diagrams/diagram_
+hierarchy_web.jpg>]
+<./images/diagrams/diagram_hierarchy_ios_standard.jpg, id=240, 2418.03375pt x 9
+02.37125pt>
+File: ./images/diagrams/diagram_hierarchy_ios_standard.jpg Graphic file (type j
+pg)
+ <use ./images/diagrams/diagram_hierarchy_ios_standard.jpg>
+Package pdftex.def Info: ./images/diagrams/diagram_hierarchy_ios_standard.jpg u
+sed on input line 262.
+(pdftex.def)             Requested size: 335.46004pt x 125.19194pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[36 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/screen
+shots/screenshot_prototype_mobile_1.jpg> <C:/Users/Mike/Dropbox/Exam timetablin
+g/Student/Latex Project/images/screenshots/screenshot_prototype_mobile_2.jpg> <
+C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/screenshots
+/screenshot_prototype_mobile_3.jpg>]
+<./images/diagrams/diagram_hierarchy_ios_admin.jpg, id=244, 2217.28375pt x 728.
+7225pt>
+File: ./images/diagrams/diagram_hierarchy_ios_admin.jpg Graphic file (type jpg)
+
+ <use ./images/diagrams/diagram_hierarchy_ios_admin.jpg>
+Package pdftex.def Info: ./images/diagrams/diagram_hierarchy_ios_admin.jpg used
+ on input line 275.
+(pdftex.def)             Requested size: 328.95808pt x 108.12054pt.
+) [37 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/diag
+rams/diagram_hierarchy_ios_standard.jpg> <C:/Users/Mike/Dropbox/Exam timetablin
+g/Student/Latex Project/images/diagrams/diagram_hierarchy_ios_admin.jpg>]
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\500-developed-wo
+rk.tex" [38
+
+
+
+
+]
+Chapter 4.
+
+LaTeX Warning: Citation `rfcLanguageCode' on page 39 undefined on input line 13
+.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--16
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--16
+
+ []
+
+[39]
+Underfull \hbox (badness 10000) in paragraph at lines 69--73
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--73
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--73
+
+ []
+
+[40]
+
+LaTeX Warning: Citation `apacheLog4j' on page 41 undefined on input line 89.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--90
+
+ []
+
+
+LaTeX Warning: Citation `dao' on page 41 undefined on input line 98.
+
+
+LaTeX Warning: Citation `eclipse' on page 41 undefined on input line 98.
+
+[41]
+
+LaTeX Warning: Citation `umlLanguage' on page 42 undefined on input line 104.
+
+<./images/umls/uml_diagram_dal.jpg, id=261, 3091.55pt x 2318.6625pt>
+File: ./images/umls/uml_diagram_dal.jpg Graphic file (type jpg)
+
+<use ./images/umls/uml_diagram_dal.jpg>
+Package pdftex.def Info: ./images/umls/uml_diagram_dal.jpg used on input line 1
+08.
+(pdftex.def)             Requested size: 375.57628pt x 281.65935pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--120
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--120
+
+ []
+
+[42 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/umls/u
+ml_diagram_dal.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 122--127
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--127
+
+ []
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2014/09/06 1.5e listings language file
+)
+LaTeX Font Info:    Font shape `TS1/fve/m/it' in size <10> not available
+(Font)              Font shape `TS1/fve/m/sl' tried instead on input line 130.
+LaTeX Font Info:    Font shape `TS1/fve/m/sl' will be
+(Font)              scaled to size 8.99994pt on input line 130.
+
+
+LaTeX Warning: Citation `antTask' on page 43 undefined on input line 146.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--147
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--147
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--147
+
+ []
+
+[43]
+
+LaTeX Warning: Citation `playPerformance' on page 44 undefined on input line 15
+3.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--157
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--157
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--157
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--157
+
+ []
+
+[44]
+
+LaTeX Warning: Citation `i18nOrigin' on page 45 undefined on input line 187.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 183--188
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 183--188
+
+ []
+
+[45] ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2014/09/06 1.5e listings language file
+)
+<./images/umls/uml_diagram_api_core.jpg, id=275, 2905.85625pt x 2378.8875pt>
+File: ./images/umls/uml_diagram_api_core.jpg Graphic file (type jpg)
+
+<use ./images/umls/uml_diagram_api_core.jpg>
+Package pdftex.def Info: ./images/umls/uml_diagram_api_core.jpg used on input l
+ine 204.
+(pdftex.def)             Requested size: 369.88582pt x 302.80504pt.
+
+<./images/flows/flow_web_operation_flow.jpg, id=276, 1437.37pt x 1370.11874pt>
+File: ./images/flows/flow_web_operation_flow.jpg Graphic file (type jpg)
+
+<use ./images/flows/flow_web_operation_flow.jpg>
+Package pdftex.def Info: ./images/flows/flow_web_operation_flow.jpg used on inp
+ut line 212.
+(pdftex.def)             Requested size: 256.0748pt x 244.08107pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[46 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/umls/u
+ml_diagram_api_core.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 223--226
+
+ []
+
+[47 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/flows/
+flow_web_operation_flow.jpg>]
+
+LaTeX Warning: Citation `jsonJackson' on page 48 undefined on input line 230.
+
+
+LaTeX Warning: Citation `facebook' on page 48 undefined on input line 241.
+
+
+LaTeX Warning: Citation `twitter' on page 48 undefined on input line 241.
+
+
+LaTeX Warning: Citation `restfb' on page 48 undefined on input line 241.
+
+
+LaTeX Warning: Citation `facebookGraphAPI' on page 48 undefined on input line 2
+41.
+
+
+LaTeX Warning: Citation `twitterRestAPI' on page 48 undefined on input line 243
+.
+
+
+LaTeX Warning: Citation `twitter4j' on page 48 undefined on input line 243.
+
+
+LaTeX Warning: Citation `oauth2' on page 48 undefined on input line 245.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 241--248
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 241--248
+
+ []
+
+
+LaTeX Warning: Citation `googleGeocodingAPI' on page 48 undefined on input line
+ 250.
+
+
+LaTeX Warning: Citation `googleGeocodingLanguages' on page 48 undefined on inpu
+t line 252.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 250--258
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 250--258
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 250--258
+
+ []
+
+[48]
+
+LaTeX Warning: Citation `rfc3066' on page 49 undefined on input line 280.
+
+
+LaTeX Warning: Citation `sphericalCosine' on page 49 undefined on input line 28
+9.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--290
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--290
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--290
+
+ []
+
+[49]
+
+LaTeX Warning: Citation `wwo' on page 50 undefined on input line 306.
+
+
+LaTeX Warning: Citation `wwoCodes' on page 50 undefined on input line 312.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 306--313
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 306--313
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 306--313
+
+ []
+
+[50]
+
+LaTeX Warning: Citation `apacheMahout' on page 51 undefined on input line 317.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 317--320
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 317--320
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 322--326
+
+ []
+
+
+LaTeX Warning: Citation `appleAppStore' on page 51 undefined on input line 332.
+
+
+
+LaTeX Warning: Citation `appleiOSGuideLines' on page 51 undefined on input line
+ 334.
+
+
+LaTeX Warning: Citation `appleiCloud' on page 51 undefined on input line 336.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--339
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--339
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--339
+
+ []
+
+[51] <./images/umls/uml_diagram_ios.jpg, id=297, 4125.4125pt x 2398.9625pt>
+File: ./images/umls/uml_diagram_ios.jpg Graphic file (type jpg)
+
+<use ./images/umls/uml_diagram_ios.jpg>
+Package pdftex.def Info: ./images/umls/uml_diagram_ios.jpg used on input line 3
+44.
+(pdftex.def)             Requested size: 335.7426pt x 195.21538pt.
+
+
+LaTeX Warning: Citation `gcd' on page 52 undefined on input line 349.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 341--350
+
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[52]
+<./images/flows/flow_ios_operation_flow.jpg, id=301, 1413.28pt x 1711.39375pt>
+File: ./images/flows/flow_ios_operation_flow.jpg Graphic file (type jpg)
+
+<use ./images/flows/flow_ios_operation_flow.jpg>
+Package pdftex.def Info: ./images/flows/flow_ios_operation_flow.jpg used on inp
+ut line 361.
+(pdftex.def)             Requested size: 256.0748pt x 310.07445pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2014/09/06 1.5e listings language file
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2014/09/06 1.5e listings language file
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
+)
+Underfull \hbox (badness 10000) in paragraph at lines 365--366
+
+ []
+
+[53 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/umls/u
+ml_diagram_ios.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 379--380
+
+ []
+
+
+<./images/screenshots/screenshot_iphone_app_1.jpg, id=305, 761.84625pt x 1490.5
+6876pt>
+File: ./images/screenshots/screenshot_iphone_app_1.jpg Graphic file (type jpg)
+ <use ./images/screenshots/screenshot_iphone_app_1.jpg>
+Package pdftex.def Info: ./images/screenshots/screenshot_iphone_app_1.jpg used 
+on input line 408.
+(pdftex.def)             Requested size: 116.32959pt x 227.62204pt.
+
+<./images/screenshots/screenshot_iphone_app_2.jpg, id=306, 761.84625pt x 1490.5
+6876pt>
+File: ./images/screenshots/screenshot_iphone_app_2.jpg Graphic file (type jpg)
+ <use ./images/screenshots/screenshot_iphone_app_2.jpg>
+Package pdftex.def Info: ./images/screenshots/screenshot_iphone_app_2.jpg used 
+on input line 414.
+(pdftex.def)             Requested size: 116.32959pt x 227.62204pt.
+
+<./images/screenshots/screenshot_iphone_app_3.jpg, id=307, 761.84625pt x 1490.5
+6876pt>
+File: ./images/screenshots/screenshot_iphone_app_3.jpg Graphic file (type jpg)
+ <use ./images/screenshots/screenshot_iphone_app_3.jpg>
+Package pdftex.def Info: ./images/screenshots/screenshot_iphone_app_3.jpg used 
+on input line 420.
+(pdftex.def)             Requested size: 116.32959pt x 227.62204pt.
+
+<./images/screenshots/screenshot_ipad_app_1.jpg, id=308, 973.6375pt x 1261.7137
+5pt>
+File: ./images/screenshots/screenshot_ipad_app_1.jpg Graphic file (type jpg)
+ <use ./images/screenshots/screenshot_ipad_app_1.jpg>
+Package pdftex.def Info: ./images/screenshots/screenshot_ipad_app_1.jpg used on
+ input line 436.
+(pdftex.def)             Requested size: 175.6483pt x 227.62204pt.
+
+<./images/screenshots/screenshot_ipad_app_2.jpg, id=309, 973.6375pt x 1261.7137
+5pt>
+File: ./images/screenshots/screenshot_ipad_app_2.jpg Graphic file (type jpg)
+ <use ./images/screenshots/screenshot_ipad_app_2.jpg>
+Package pdftex.def Info: ./images/screenshots/screenshot_ipad_app_2.jpg used on
+ input line 442.
+(pdftex.def)             Requested size: 175.6483pt x 227.62204pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 397--453
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 397--453
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 397--453
+
+ []
+
+[54 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/flows/
+flow_ios_operation_flow.jpg>] [55 <C:/Users/Mike/Dropbox/Exam timetabling/Stude
+nt/Latex Project/images/screenshots/screenshot_iphone_app_1.jpg> <C:/Users/Mike
+/Dropbox/Exam timetabling/Student/Latex Project/images/screenshots/screenshot_i
+phone_app_2.jpg> <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/
+images/screenshots/screenshot_iphone_app_3.jpg>]
+<./images/screenshots/screenshot_push_notification_example.jpg, id=316, 775.898
+74pt x 1601.985pt>
+File: ./images/screenshots/screenshot_push_notification_example.jpg Graphic fil
+e (type jpg)
+
+<use ./images/screenshots/screenshot_push_notification_example.jpg>
+Package pdftex.def Info: ./images/screenshots/screenshot_push_notification_exam
+ple.jpg used on input line 464.
+(pdftex.def)             Requested size: 82.67345pt x 170.71652pt.
+
+
+LaTeX Warning: Citation `javaApns' on page 56 undefined on input line 468.
+
+
+LaTeX Warning: Citation `appleRemoteNotifProvisioning' on page 56 undefined on 
+input line 468.
+
+
+LaTeX Warning: Citation `appleIosDeveCenter' on page 56 undefined on input line
+ 468.
+
+
+<./images/diagrams/diagram_usecase_pushnotification.jpg, id=317, 3117.6475pt x 
+882.29625pt>
+File: ./images/diagrams/diagram_usecase_pushnotification.jpg Graphic file (type
+ jpg)
+ <use ./images/diagrams/diagram_usecase_pushnotification.jpg>
+Package pdftex.def Info: ./images/diagrams/diagram_usecase_pushnotification.jpg
+ used on input line 472.
+(pdftex.def)             Requested size: 281.48003pt x 79.6678pt.
+
+[56 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/screen
+shots/screenshot_ipad_app_1.jpg> <C:/Users/Mike/Dropbox/Exam timetabling/Studen
+t/Latex Project/images/screenshots/screenshot_ipad_app_2.jpg>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[57 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/screen
+shots/screenshot_push_notification_example.jpg>]
+
+LaTeX Warning: Citation `aspNetRazor' on page 58 undefined on input line 493.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2014/09/06 1.5e listings language file
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
+)
+Underfull \hbox (badness 10000) in paragraph at lines 493--494
+
+ []
+
+[58 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/diagra
+ms/diagram_usecase_pushnotification.jpg>]
+
+LaTeX Warning: Citation `twitterBootstrap' on page 59 undefined on input line 5
+06.
+
+
+<./images/screenshots/screenshot_web_app_1.jpg, id=328, 2047.65pt x 1453.43pt>
+File: ./images/screenshots/screenshot_web_app_1.jpg Graphic file (type jpg)
+
+<use ./images/screenshots/screenshot_web_app_1.jpg>
+Package pdftex.def Info: ./images/screenshots/screenshot_web_app_1.jpg used on 
+input line 516.
+(pdftex.def)             Requested size: 208.4326pt x 147.95424pt.
+
+<./images/screenshots/screenshot_web_app_2.jpg, id=329, 2047.65pt x 1453.43pt>
+File: ./images/screenshots/screenshot_web_app_2.jpg Graphic file (type jpg)
+
+<use ./images/screenshots/screenshot_web_app_2.jpg>
+Package pdftex.def Info: ./images/screenshots/screenshot_web_app_2.jpg used on 
+input line 521.
+(pdftex.def)             Requested size: 208.4326pt x 147.95424pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 511--530
+
+ []
+
+
+LaTeX Warning: Citation `httpCookie' on page 59 undefined on input line 532.
+
+
+LaTeX Warning: Citation `jquery' on page 59 undefined on input line 534.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--537
+
+ []
+
+[59 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/screen
+shots/screenshot_web_app_1.jpg> <C:/Users/Mike/Dropbox/Exam timetabling/Student
+/Latex Project/images/screenshots/screenshot_web_app_2.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 539--540
+
+ []
+
+
+<./images/examples/example_webapp_documentation.jpg, id=333, 1280.785pt x 1166.
+3575pt>
+File: ./images/examples/example_webapp_documentation.jpg Graphic file (type jpg
+)
+ <use ./images/examples/example_webapp_documentation.jpg>
+Package pdftex.def Info: ./images/examples/example_webapp_documentation.jpg use
+d on input line 559.
+(pdftex.def)             Requested size: 256.0748pt x 233.19618pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[60]
+
+LaTeX Warning: Citation `codeCoveragEclEmma' on page 61 undefined on input line
+ 575.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 573--579
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 573--579
+
+ []
+
+[61 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/exampl
+es/example_webapp_documentation.jpg>]) [62]
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\550-experimental
+-results.tex"
+Chapter 5.
+
+LaTeX Warning: Citation `movieLens' on page 63 undefined on input line 9.
+
+
+LaTeX Warning: Citation `gourpLens' on page 63 undefined on input line 9.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--12
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--12
+
+ []
+
+
+<./images/tables/table_moviles_dataset_distribution.jpg, id=343, 783.92876pt x 
+235.88126pt>
+File: ./images/tables/table_moviles_dataset_distribution.jpg Graphic file (type
+ jpg)
+ <use ./images/tables/table_moviles_dataset_distribution.jpg>
+Package pdftex.def Info: ./images/tables/table_moviles_dataset_distribution.jpg
+ used on input line 18.
+(pdftex.def)             Requested size: 189.11565pt x 56.9055pt.
+
+[63
+
+
+
+
+ <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/tables/ta
+ble_moviles_dataset_distribution.jpg>]
+
+LaTeX Warning: Citation `ibCollabrativeVSGK' on page 64 undefined on input line
+ 27.
+
+
+LaTeX Warning: Citation `Duda_Book' on page 64 undefined on input line 29.
+
+
+<./images/charts/charts_eval_alg_performance.jpg, id=348, 3619.5225pt x 1204.5p
+t>
+File: ./images/charts/charts_eval_alg_performance.jpg Graphic file (type jpg)
+ <use ./images/charts/charts_eval_alg_performance.jpg>
+Package pdftex.def Info: ./images/charts/charts_eval_alg_performance.jpg used o
+n input line 35.
+(pdftex.def)             Requested size: 369.88582pt x 123.08527pt.
+
+<./images/charts/charts_eval_alg_execution_time.jpg, id=349, 3619.5225pt x 1204
+.5pt>
+File: ./images/charts/charts_eval_alg_execution_time.jpg Graphic file (type jpg
+)
+ <use ./images/charts/charts_eval_alg_execution_time.jpg>
+Package pdftex.def Info: ./images/charts/charts_eval_alg_execution_time.jpg use
+d on input line 43.
+(pdftex.def)             Requested size: 369.88582pt x 123.08527pt.
+
+
+LaTeX Warning: Citation `mahoutInAction' on page 64 undefined on input line 48.
+
+
+
+<./images/charts/charts_eval_alg_slopone_model_size.jpg, id=350, 3619.5225pt x 
+1204.5pt>
+File: ./images/charts/charts_eval_alg_slopone_model_size.jpg Graphic file (type
+ jpg)
+ <use ./images/charts/charts_eval_alg_slopone_model_size.jpg>
+Package pdftex.def Info: ./images/charts/charts_eval_alg_slopone_model_size.jpg
+ used on input line 52.
+(pdftex.def)             Requested size: 369.88582pt x 123.08527pt.
+
+<./images/charts/charts_eval_alg_slopone_dataset_ration.jpg, id=351, 3619.5225p
+t x 1204.5pt>
+File: ./images/charts/charts_eval_alg_slopone_dataset_ration.jpg Graphic file (
+type jpg)
+ <use ./images/charts/charts_eval_alg_slopone_dataset_ration.jpg>
+Package pdftex.def Info: ./images/charts/charts_eval_alg_slopone_dataset_ration
+.jpg used on input line 60.
+(pdftex.def)             Requested size: 369.88582pt x 123.08527pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--66
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--66
+
+ []
+
+[64 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/charts
+/charts_eval_alg_performance.jpg>] [65 <C:/Users/Mike/Dropbox/Exam timetabling/
+Student/Latex Project/images/charts/charts_eval_alg_execution_time.jpg> <C:/Use
+rs/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/charts/charts_eva
+l_alg_slopone_model_size.jpg>]
+
+LaTeX Warning: Citation `amazonEC2' on page 66 undefined on input line 69.
+
+<./images/tables/table_server_specs.jpg, id=358, 1449.415pt x 306.14375pt>
+File: ./images/tables/table_server_specs.jpg Graphic file (type jpg)
+
+<use ./images/tables/table_server_specs.jpg>
+Package pdftex.def Info: ./images/tables/table_server_specs.jpg used on input l
+ine 76.
+(pdftex.def)             Requested size: 312.9803pt x 66.10457pt.
+
+
+LaTeX Warning: Citation `gatling' on page 66 undefined on input line 80.
+
+<./images/tables/table_load_testcase.jpg, id=359, 1608.0075pt x 813.0375pt>
+File: ./images/tables/table_load_testcase.jpg Graphic file (type jpg)
+
+<use ./images/tables/table_load_testcase.jpg>
+Package pdftex.def Info: ./images/tables/table_load_testcase.jpg used on input 
+line 87.
+(pdftex.def)             Requested size: 312.9803pt x 158.23773pt.
+
+<./images/charts/charts_eval_load_test_requests_per_second.jpg, id=360, 3619.52
+25pt x 1204.5pt>
+File: ./images/charts/charts_eval_load_test_requests_per_second.jpg Graphic fil
+e (type jpg)
+
+<use ./images/charts/charts_eval_load_test_requests_per_second.jpg>
+Package pdftex.def Info: ./images/charts/charts_eval_load_test_requests_per_sec
+ond.jpg used on input line 95.
+(pdftex.def)             Requested size: 369.88582pt x 123.08527pt.
+
+<./images/charts/charts_eval_load_test_average_request_duration.jpg, id=361, 36
+19.5225pt x 1204.5pt>
+File: ./images/charts/charts_eval_load_test_average_request_duration.jpg Graphi
+c file (type jpg)
+
+<use ./images/charts/charts_eval_load_test_average_request_duration.jpg>
+Package pdftex.def Info: ./images/charts/charts_eval_load_test_average_request_
+duration.jpg used on input line 104.
+(pdftex.def)             Requested size: 369.88582pt x 123.08527pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--112
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--112
+
+ []
+
+[66 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/charts
+/charts_eval_alg_slopone_dataset_ration.jpg> <C:/Users/Mike/Dropbox/Exam timeta
+bling/Student/Latex Project/images/tables/table_server_specs.jpg>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[67 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/tables
+/table_load_testcase.jpg> <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex
+ Project/images/charts/charts_eval_load_test_requests_per_second.jpg>]
+<./images/charts/charts_eval_usability_and_appearence.jpg, id=368, 3619.5225pt 
+x 1204.5pt>
+File: ./images/charts/charts_eval_usability_and_appearence.jpg Graphic file (ty
+pe jpg)
+ <use ./images/charts/charts_eval_usability_and_appearence.jpg>
+Package pdftex.def Info: ./images/charts/charts_eval_usability_and_appearence.j
+pg used on input line 125.
+(pdftex.def)             Requested size: 455.24408pt x 151.48108pt.
+
+Overfull \hbox (36.9904pt too wide) in paragraph at lines 125--126
+ [][] 
+ []
+
+
+<./images/charts/charts_eval_usability_features.jpg, id=369, 3619.5225pt x 1204
+.5pt>
+File: ./images/charts/charts_eval_usability_features.jpg Graphic file (type jpg
+)
+ <use ./images/charts/charts_eval_usability_features.jpg>
+Package pdftex.def Info: ./images/charts/charts_eval_usability_features.jpg use
+d on input line 134.
+(pdftex.def)             Requested size: 455.24408pt x 151.48108pt.
+
+Overfull \hbox (36.9904pt too wide) in paragraph at lines 134--135
+ [][] 
+ []
+
+
+<./images/charts/charts_eval_usability_will_install.jpg, id=370, 3619.5225pt x 
+1204.5pt>
+File: ./images/charts/charts_eval_usability_will_install.jpg Graphic file (type
+ jpg)
+ <use ./images/charts/charts_eval_usability_will_install.jpg>
+Package pdftex.def Info: ./images/charts/charts_eval_usability_will_install.jpg
+ used on input line 143.
+(pdftex.def)             Requested size: 455.24408pt x 151.48108pt.
+
+Overfull \hbox (36.9904pt too wide) in paragraph at lines 143--144
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--149
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--149
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--149
+
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[68 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/charts
+/charts_eval_load_test_average_request_duration.jpg>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[69 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/charts
+/charts_eval_usability_and_appearence.jpg> <C:/Users/Mike/Dropbox/Exam timetabl
+ing/Student/Latex Project/images/charts/charts_eval_usability_features.jpg>])
+[70 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/charts
+/charts_eval_usability_will_install.jpg>]
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\600-conclusions.
+tex"
+Chapter 6.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--8
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--8
+
+ []
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 17--86
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--86
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--86
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--86
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--86
+
+ []
+
+[71
+
+
+
+
+] [72]
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\700-attachments.
+tex"
+Appendix A.
+<./images/umls/uml_dbmodel_service.jpg, id=387, 1301.86375pt x 1036.87375pt>
+File: ./images/umls/uml_dbmodel_service.jpg Graphic file (type jpg)
+
+<use ./images/umls/uml_dbmodel_service.jpg>
+Package pdftex.def Info: ./images/umls/uml_dbmodel_service.jpg used on input li
+ne 12.
+(pdftex.def)             Requested size: 364.19536pt x 290.0537pt.
+ [73
+
+
+
+
+ <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/umls/uml_
+dbmodel_service.jpg>]
+<./images/umls/uml_dbmodel_log.jpg, id=391, 646.415pt x 198.7425pt>
+File: ./images/umls/uml_dbmodel_log.jpg Graphic file (type jpg)
+
+<use ./images/umls/uml_dbmodel_log.jpg>
+Package pdftex.def Info: ./images/umls/uml_dbmodel_log.jpg used on input line 2
+4.
+(pdftex.def)             Requested size: 341.43306pt x 104.97517pt.
+ [74 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/umls/
+uml_dbmodel_log.jpg>]
+<./images/survey/survey_page_1.jpg, id=395, 1847.90375pt x 2525.435pt>
+File: ./images/survey/survey_page_1.jpg Graphic file (type jpg)
+
+<use ./images/survey/survey_page_1.jpg>
+Package pdftex.def Info: ./images/survey/survey_page_1.jpg used on input line 3
+5.
+(pdftex.def)             Requested size: 355.65944pt x 486.04178pt.
+ [75 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/surve
+y/survey_page_1.jpg>]
+<./images/survey/survey_page_2.jpg, id=400, 1847.90375pt x 2885.78125pt>
+File: ./images/survey/survey_page_2.jpg Graphic file (type jpg)
+
+<use ./images/survey/survey_page_2.jpg>
+Package pdftex.def Info: ./images/survey/survey_page_2.jpg used on input line 4
+3.
+(pdftex.def)             Requested size: 355.65944pt x 555.39352pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./images/survey/survey_page_3.jpg, id=401, 1847.90375pt x 2261.44875pt>
+File: ./images/survey/survey_page_3.jpg Graphic file (type jpg)
+
+<use ./images/survey/survey_page_3.jpg>
+Package pdftex.def Info: ./images/survey/survey_page_3.jpg used on input line 5
+1.
+(pdftex.def)             Requested size: 355.65944pt x 435.23534pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [76 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/surv
+ey/survey_page_2.jpg>] [77 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Late
+x Project/images/survey/survey_page_3.jpg>] [78
+
+
+
+]
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\800-references.t
+ex"
+No file 000-main.bbl.
+) ("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\000-main.aux"
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\100-cover.aux")
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\002-abstract.aux
+")
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\200-introduction
+.aux")
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\300-theory.aux")
+
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\400-proposed-sol
+ution.aux")
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\500-developed-wo
+rk.aux")
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\550-experimental
+-results.aux")
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\600-conclusions.
+aux")
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\700-attachments.
+aux")
+("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\800-references.a
+ux"))
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 15946 strings out of 493921
+ 246369 string characters out of 3144878
+ 393144 words of memory out of 3000000
+ 18709 multiletter control sequences out of 15000+200000
+ 74209 words of font info for 74 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 51i,15n,101p,2222b,1536s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Progr
+am Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files (x86)/
+MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Program Files (x86)/MiKTeX 2.9/f
+onts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dv
+ips/lm/lm-mathit.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/bera/fveb8a
+.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/bera/fver8a.pfb><C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/type1/bera/fver8a.pfb><C:/Program Files (x86)/MiK
+TeX 2.9/fonts/type1/bera/fvmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
+pe1/public/lm/lmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
+lm/lmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi5.pf
+b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi6.pfb><C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi7.pfb><C:/Program Files (x86
+)/MiKTeX 2.9/fonts/type1/public/lm/lmmi9.pfb><C:/Program Files (x86)/MiKTeX 2.9
+/fonts/type1/public/lm/lmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
+/public/lm/lmr5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lm
+r6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Pr
+ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr9.pfb><C:/Program Files (
+x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files (x86)/MiKTeX
+ 2.9/fonts/type1/public/lm/lmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
+ype1/public/lm/lmsy9.pfb>
+Output written on 000-main.pdf (100 pages, 16308215 bytes).
+PDF statistics:
+ 475 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 376 words of extra memory for PDF output out of 10000 (max. 10000000)
+
