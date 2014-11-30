@@ -6,14 +6,14 @@
 \contentsline {chapter}{List of Code Listings}{xxi}
 \contentsline {chapter}{List of Acronyms}{xxi}
 \contentsline {chapter}{\numberline {1}Introduction}{1}
-\contentsline {section}{\numberline {1.1}Tourist Guides: State of the Art}{2}
-\contentsline {subsection}{\numberline {1.1.1}TouristEye}{2}
-\contentsline {subsection}{\numberline {1.1.2}GuidePal Offline City Guides}{2}
-\contentsline {subsection}{\numberline {1.1.3}mTrip}{4}
-\contentsline {subsection}{\numberline {1.1.4}Triposo}{5}
-\contentsline {subsection}{\numberline {1.1.5}Foursquare}{6}
-\contentsline {section}{\numberline {1.2}Proposed Solution}{7}
-\contentsline {subsection}{\numberline {1.2.1}Tools and Technologies}{8}
+\contentsline {section}{\numberline {1.1}Examination timetable: State of the Art}{2}
+\contentsline {subsection}{\numberline {1.1.1}Timetabling Problem}{2}
+\contentsline {subsection}{\numberline {1.1.2}Solution approaches}{2}
+\contentsline {subsection}{\numberline {1.1.3}mTrip}{3}
+\contentsline {subsection}{\numberline {1.1.4}Triposo}{4}
+\contentsline {subsection}{\numberline {1.1.5}Foursquare}{5}
+\contentsline {section}{\numberline {1.2}Proposed Solution}{6}
+\contentsline {subsection}{\numberline {1.2.1}Tools and Technologies}{7}
 \contentsline {subsection}{\numberline {1.2.2}Core Features}{8}
 \contentsline {section}{\numberline {1.3}Report Organization}{11}
 \contentsline {section}{\numberline {1.4}Our Contribution}{12}

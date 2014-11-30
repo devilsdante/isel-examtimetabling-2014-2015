@@ -1,7 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.11.27)  27 NOV 2014 03:31
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.11.27)  30 NOV 2014 22:53
 entering extended mode
 **000-main.tex
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\000-main.tex"
+
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\000-ma
+in.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -13,7 +15,9 @@ german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\svmono.cls"
+
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\svmono
+.cls"
 Document Class: svmono 2006/10/31 v4.17 
 Springer Verlag global LaTeX document class for monographs
 Class Springer-SVMono Info: extra/valid Springer sub-package 
@@ -905,8 +909,8 @@ LaTeX Font Info:    Try loading font information for T1+ptm on input line 43.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1ptm.fd"
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\001-acronyms.tex
-"
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\001-ac
+ronyms.tex"
 \acronymlabelwidth=\skip67
 )
 \glswrite=\write3
@@ -917,12 +921,12 @@ Package glossaries Info: Writing glossary file 000-main.acn on input line 47.
 
 \@input{000-latex-config.aux}
 
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\000-latex-config
-.tex")
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\000-la
+tex-config.tex")
 \@input{000-format-json.aux}
 
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\000-format-json.
-tex" ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bera\bera.sty"
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\000-fo
+rmat-json.tex" ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bera\bera.sty"
 Package: bera 2004/01/31 (WaS)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
@@ -1034,24 +1038,26 @@ Package: berasans 2004/01/30 (WaS)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bera\beramono.sty"
 Package: beramono 2004/01/31 (WaS)
 )))
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\000-main.aux"
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\100-cover.aux")
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\002-abstract.aux
-")
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\200-introduction
-.aux")
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\300-theory.aux")
-
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\400-proposed-sol
-ution.aux")
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\500-developed-wo
-rk.aux")
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\550-experimental
--results.aux")
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\600-conclusions.
-aux")
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\700-attachments.
-aux"
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\000-ma
+in.aux"
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\100-co
+ver.aux")
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\002-ab
+stract.aux")
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\200-in
+troduction.aux")
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\300-th
+eory.aux")
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\400-pr
+oposed-solution.aux")
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\500-de
+veloped-work.aux")
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\550-ex
+perimental-results.aux")
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\600-co
+nclusions.aux")
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\700-at
+tachments.aux"
 
 LaTeX Warning: Label `fig:surveyPage1' multiply defined.
 
@@ -1059,8 +1065,8 @@ LaTeX Warning: Label `fig:surveyPage1' multiply defined.
 LaTeX Warning: Label `fig:surveyPage1' multiply defined.
 
 )
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\800-references.a
-ux"))
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\800-re
+ferences.aux"))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
 LaTeX Font Info:    ... okay on input line 53.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
@@ -1176,8 +1182,8 @@ Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count174
 
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\100-cover.tex"
-<./images/isel_logo.jpg, id=1, 1207.51125pt x 462.72874pt>
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\100-co
+ver.tex" <./images/isel_logo.jpg, id=1, 1207.51125pt x 462.72874pt>
 File: ./images/isel_logo.jpg Graphic file (type jpg)
 
 <use ./images/isel_logo.jpg>
@@ -1220,9 +1226,10 @@ LaTeX Font Info:    Font shape `T1/fve/b/n' will be
 
 
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Mike/Dropbox/Exa
-m timetabling/Student/Latex Project/images/isel_logo.jpg> <C:/Users/Mike/Dropbo
-x/Exam timetabling/Student/Latex Project/images/guide_me_logo.jpg>] [2
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <D:/Mike/Documentos/GitHub
+/isel-examtimetabling-2014-2015/Latex Project/images/isel_logo.jpg> <D:/Mike/Do
+cumentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/images/guide_me_lo
+go.jpg>] [2
 
 ]
 File: ./images/isel_logo.jpg Graphic file (type jpg)
@@ -1235,8 +1242,8 @@ File: ./images/guide_me_logo.jpg Graphic file (type jpg)
 Package pdftex.def Info: ./images/guide_me_logo.jpg used on input line 56.
 (pdftex.def)             Requested size: 99.58566pt x 99.58464pt.
  [3])
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\002-abstract.tex
-" [4
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\002-ab
+stract.tex" [4
 
 
 
@@ -1365,7 +1372,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--41
 
 
 ]
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\000-main.toc"
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\000-ma
+in.toc"
 Overfull \hbox (4.85092pt too wide) detected at line 4
  \T1/fve/m/n/10 xviii
  []
@@ -1376,7 +1384,8 @@ Overfull \hbox (4.85092pt too wide) detected at line 4
 
 
 ]
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\000-main.lof"
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\000-ma
+in.lof"
 
 LaTeX Warning: Citation `TouristEyeWeb' on page xvii undefined on input line 2.
 
@@ -1410,17 +1419,18 @@ LaTeX Warning: Citation `apnsDetailed' on page xvii undefined on input line 25.
 [17])
 \tf@lof=\write7
  [18]
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\000-main.lot")
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\000-ma
+in.lot")
 \tf@lot=\write8
-
-[19
+ [19
 
 
 ] [20
 
 
 ]
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\000-main.lol")
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\000-ma
+in.lol")
 \tf@lol=\write9
 
 No file 000-main.acr.
@@ -1428,23 +1438,28 @@ No file 000-main.acr.
 
 
 ]
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\200-introduction
-.tex"
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\200-in
+troduction.tex"
 Chapter 1.
 Package newfloat Info: Setting Plan B file extension to `lof'... on input line 
 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 5--15
+Underfull \hbox (badness 10000) in paragraph at lines 5--16
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5--15
+Underfull \hbox (badness 10000) in paragraph at lines 5--16
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5--15
+Underfull \hbox (badness 10000) in paragraph at lines 5--16
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--16
 
  []
 
@@ -1453,440 +1468,397 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--15
 
 
 ]
-
-LaTeX Warning: Citation `TouristEyeWeb' on page 2 undefined on input line 22.
-
-
-LaTeX Warning: Citation `TouristEyeiPhone' on page 2 undefined on input line 22
-.
-
-
-LaTeX Warning: Citation `touristEyeAndroid' on page 2 undefined on input line 2
-2.
-
-
-LaTeX Warning: Citation `GoogleMaps' on page 2 undefined on input line 24.
-
-<./images/screenshots/screenshot_tourist_eye_1.jpg, id=79, 642.4pt x 963.6pt>
-File: ./images/screenshots/screenshot_tourist_eye_1.jpg Graphic file (type jpg)
-
-
-<use ./images/screenshots/screenshot_tourist_eye_1.jpg>
-Package pdftex.def Info: ./images/screenshots/screenshot_tourist_eye_1.jpg used
- on input line 32.
-(pdftex.def)             Requested size: 132.77109pt x 199.16928pt.
-
-Overfull \hbox (28.20767pt too wide) in paragraph at lines 32--33
- [][] 
- []
-
-
-Underfull \hbox (badness 4713) in paragraph at lines 33--33
-[]\T1/fve/m/n/9 (a) |Ex-plo-ration of the
- []
-
-<./images/screenshots/screenshot_tourist_eye_2.jpg, id=80, 642.4pt x 963.6pt>
-File: ./images/screenshots/screenshot_tourist_eye_2.jpg Graphic file (type jpg)
-
-
-<use ./images/screenshots/screenshot_tourist_eye_2.jpg>
-Package pdftex.def Info: ./images/screenshots/screenshot_tourist_eye_2.jpg used
- on input line 39.
-(pdftex.def)             Requested size: 132.77109pt x 199.16928pt.
-
-Overfull \hbox (28.20767pt too wide) in paragraph at lines 39--40
- [][] 
- []
-
-
-LaTeX Warning: Citation `TouristEyeWeb' on page 2 undefined on input line 43.
-
-
-LaTeX Warning: Citation `TouristEyeWeb' on page 2 undefined on input line 43.
-
-
-LaTeX Warning: Citation `touristEyeRecommender' on page 2 undefined on input li
-ne 46.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 22--47
+Underfull \hbox (badness 10000) in paragraph at lines 22--30
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--47
+Underfull \hbox (badness 10000) in paragraph at lines 22--30
 
  []
 
 
-LaTeX Warning: Citation `GuidePalWeb' on page 2 undefined on input line 50.
+Underfull \hbox (badness 10000) in paragraph at lines 22--30
+
+ []
 
 
-LaTeX Warning: Citation `GuidePaliPhone' on page 2 undefined on input line 50.
+Underfull \hbox (badness 10000) in paragraph at lines 22--30
 
-<./images/screenshots/screenshot_guidepal_1.jpg, id=81, 642.4pt x 963.6pt>
+ []
+
+
+LaTeX Warning: Citation `GuidePalWeb' on page 2 undefined on input line 34.
+
+
+LaTeX Warning: Citation `GuidePaliPhone' on page 2 undefined on input line 34.
+
+<./images/screenshots/screenshot_guidepal_1.jpg, id=79, 642.4pt x 963.6pt>
 File: ./images/screenshots/screenshot_guidepal_1.jpg Graphic file (type jpg)
 
 <use ./images/screenshots/screenshot_guidepal_1.jpg>
 Package pdftex.def Info: ./images/screenshots/screenshot_guidepal_1.jpg used on
- input line 56.
+ input line 40.
 (pdftex.def)             Requested size: 142.25964pt x 213.39566pt.
 
-Overfull \hbox (37.69623pt too wide) in paragraph at lines 56--57
+Overfull \hbox (37.69623pt too wide) in paragraph at lines 40--41
  [][] 
  []
 
-<./images/screenshots/screenshot_guidepal_2.jpg, id=82, 642.4pt x 957.5775pt>
+<./images/screenshots/screenshot_guidepal_2.jpg, id=80, 642.4pt x 957.5775pt>
 File: ./images/screenshots/screenshot_guidepal_2.jpg Graphic file (type jpg)
 
 <use ./images/screenshots/screenshot_guidepal_2.jpg>
 Package pdftex.def Info: ./images/screenshots/screenshot_guidepal_2.jpg used on
- input line 63.
+ input line 47.
 (pdftex.def)             Requested size: 143.15164pt x 213.39566pt.
 
-Overfull \hbox (38.58823pt too wide) in paragraph at lines 63--64
+Overfull \hbox (38.58823pt too wide) in paragraph at lines 47--48
  [][] 
  []
 
 
-LaTeX Warning: Citation `GuidePalWeb' on page 2 undefined on input line 67.
+LaTeX Warning: Citation `GuidePalWeb' on page 2 undefined on input line 51.
 
 
-LaTeX Warning: Citation `GuidePaliPhone' on page 2 undefined on input line 67.
+LaTeX Warning: Citation `GuidePaliPhone' on page 2 undefined on input line 51.
 
 
-LaTeX Warning: Citation `GuidePalWeb' on page 2 undefined on input line 67.
+LaTeX Warning: Citation `GuidePalWeb' on page 2 undefined on input line 51.
 
 
-LaTeX Warning: Citation `GuidePaliPhone' on page 2 undefined on input line 67.
+LaTeX Warning: Citation `GuidePaliPhone' on page 2 undefined on input line 51.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--75
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 50--75
+Underfull \hbox (badness 10000) in paragraph at lines 34--59
 
  []
 
-[2] [3 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/scr
-eenshots/screenshot_tourist_eye_1.jpg> <C:/Users/Mike/Dropbox/Exam timetabling/
-Student/Latex Project/images/screenshots/screenshot_tourist_eye_2.jpg> <C:/User
-s/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/screenshots/screen
-shot_guidepal_1.jpg> <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Proj
-ect/images/screenshots/screenshot_guidepal_2.jpg>]
 
-LaTeX Warning: Citation `mTrip' on page 4 undefined on input line 76.
+Underfull \hbox (badness 10000) in paragraph at lines 34--59
 
-<./images/screenshots/screenshot_mtrip_1.jpg, id=90, 672.5125pt x 963.6pt>
+ []
+
+[2]
+
+LaTeX Warning: Citation `mTrip' on page 3 undefined on input line 60.
+
+<./images/screenshots/screenshot_mtrip_1.jpg, id=84, 672.5125pt x 963.6pt>
 File: ./images/screenshots/screenshot_mtrip_1.jpg Graphic file (type jpg)
 
 <use ./images/screenshots/screenshot_mtrip_1.jpg>
 Package pdftex.def Info: ./images/screenshots/screenshot_mtrip_1.jpg used on in
-put line 85.
+put line 69.
 (pdftex.def)             Requested size: 148.92805pt x 213.39566pt.
 
-Overfull \hbox (44.36464pt too wide) in paragraph at lines 85--86
+Overfull \hbox (44.36464pt too wide) in paragraph at lines 69--70
  [][] 
  []
 
-<./images/screenshots/screenshot_mtrip_2.jpg, id=91, 675.52374pt x 963.6pt>
+<./images/screenshots/screenshot_mtrip_2.jpg, id=85, 675.52374pt x 963.6pt>
 File: ./images/screenshots/screenshot_mtrip_2.jpg Graphic file (type jpg)
 
 <use ./images/screenshots/screenshot_mtrip_2.jpg>
 Package pdftex.def Info: ./images/screenshots/screenshot_mtrip_2.jpg used on in
-put line 92.
+put line 76.
 (pdftex.def)             Requested size: 149.59491pt x 213.39566pt.
 
-Overfull \hbox (45.0315pt too wide) in paragraph at lines 92--93
+Overfull \hbox (45.0315pt too wide) in paragraph at lines 76--77
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--103
+Underfull \hbox (badness 10000) in paragraph at lines 60--87
 
  []
 
-[4 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/screens
-hots/screenshot_mtrip_1.jpg> <C:/Users/Mike/Dropbox/Exam timetabling/Student/La
-tex Project/images/screenshots/screenshot_mtrip_2.jpg>]
+[3 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/imag
+es/screenshots/screenshot_guidepal_1.jpg> <D:/Mike/Documentos/GitHub/isel-examt
+imetabling-2014-2015/Latex Project/images/screenshots/screenshot_guidepal_2.jpg
+>]
 
-LaTeX Warning: Citation `triposo' on page 5 undefined on input line 104.
-
-
-LaTeX Warning: Citation `wikipedia' on page 5 undefined on input line 104.
+LaTeX Warning: Citation `triposo' on page 4 undefined on input line 88.
 
 
-LaTeX Warning: Citation `wikitravel' on page 5 undefined on input line 104.
+LaTeX Warning: Citation `wikipedia' on page 4 undefined on input line 88.
 
 
-LaTeX Warning: Citation `world66' on page 5 undefined on input line 104.
+LaTeX Warning: Citation `wikitravel' on page 4 undefined on input line 88.
 
-<./images/screenshots/screenshot_triposo_1.jpg, id=95, 642.4pt x 963.6pt>
+
+LaTeX Warning: Citation `world66' on page 4 undefined on input line 88.
+
+<./images/screenshots/screenshot_triposo_1.jpg, id=90, 642.4pt x 963.6pt>
 File: ./images/screenshots/screenshot_triposo_1.jpg Graphic file (type jpg)
 
 <use ./images/screenshots/screenshot_triposo_1.jpg>
 Package pdftex.def Info: ./images/screenshots/screenshot_triposo_1.jpg used on 
-input line 112.
+input line 96.
 (pdftex.def)             Requested size: 142.25964pt x 213.39566pt.
 
-Overfull \hbox (37.69623pt too wide) in paragraph at lines 112--113
+Overfull \hbox (37.69623pt too wide) in paragraph at lines 96--97
  [][] 
  []
 
-<./images/screenshots/screenshot_triposo_2.jpg, id=96, 642.4pt x 963.6pt>
+<./images/screenshots/screenshot_triposo_2.jpg, id=91, 642.4pt x 963.6pt>
 File: ./images/screenshots/screenshot_triposo_2.jpg Graphic file (type jpg)
 
 <use ./images/screenshots/screenshot_triposo_2.jpg>
 Package pdftex.def Info: ./images/screenshots/screenshot_triposo_2.jpg used on 
-input line 119.
+input line 103.
 (pdftex.def)             Requested size: 142.25964pt x 213.39566pt.
 
-Overfull \hbox (37.69623pt too wide) in paragraph at lines 119--120
+Overfull \hbox (37.69623pt too wide) in paragraph at lines 103--104
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--126
+Underfull \hbox (badness 10000) in paragraph at lines 88--110
 
  []
 
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
-(Font)              scaled to size 6.29996pt on input line 130.
+(Font)              scaled to size 6.29996pt on input line 114.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 130.
+(Font)              <9> on input line 114.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 130.
+(Font)              <6> on input line 114.
 
-LaTeX Warning: Citation `foursqureRecommendationEngine' on page 5 undefined on 
-input line 130.
+LaTeX Warning: Citation `foursqureRecommendationEngine' on page 4 undefined on 
+input line 114.
 
-<./images/screenshots/screenshot_foursqure_1.jpg, id=97, 642.4pt x 923.45pt>
+<./images/screenshots/screenshot_foursqure_1.jpg, id=92, 642.4pt x 923.45pt>
 File: ./images/screenshots/screenshot_foursqure_1.jpg Graphic file (type jpg)
 
 <use ./images/screenshots/screenshot_foursqure_1.jpg>
 Package pdftex.def Info: ./images/screenshots/screenshot_foursqure_1.jpg used o
-n input line 138.
+n input line 122.
 (pdftex.def)             Requested size: 138.5446pt x 199.16928pt.
 
-Overfull \hbox (33.98119pt too wide) in paragraph at lines 138--139
+Overfull \hbox (33.98119pt too wide) in paragraph at lines 122--123
  [][] 
  []
 
-<./images/screenshots/screenshot_foursqure_2.jpg, id=98, 642.4pt x 923.45pt>
+<./images/screenshots/screenshot_foursqure_2.jpg, id=93, 642.4pt x 923.45pt>
 File: ./images/screenshots/screenshot_foursqure_2.jpg Graphic file (type jpg)
 
 <use ./images/screenshots/screenshot_foursqure_2.jpg>
 Package pdftex.def Info: ./images/screenshots/screenshot_foursqure_2.jpg used o
-n input line 145.
+n input line 129.
 (pdftex.def)             Requested size: 138.5446pt x 199.16928pt.
 
-Overfull \hbox (33.98119pt too wide) in paragraph at lines 145--146
+Overfull \hbox (33.98119pt too wide) in paragraph at lines 129--130
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--154
+Underfull \hbox (badness 10000) in paragraph at lines 114--138
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--154
+Underfull \hbox (badness 10000) in paragraph at lines 114--138
 
  []
 
-[5 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/screens
-hots/screenshot_triposo_1.jpg> <C:/Users/Mike/Dropbox/Exam timetabling/Student/
-Latex Project/images/screenshots/screenshot_triposo_2.jpg>] [6 <C:/Users/Mike/D
-ropbox/Exam timetabling/Student/Latex Project/images/screenshots/screenshot_fou
-rsqure_1.jpg> <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/ima
-ges/screenshots/screenshot_foursqure_2.jpg>]
+[4 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/imag
+es/screenshots/screenshot_mtrip_1.jpg> <D:/Mike/Documentos/GitHub/isel-examtime
+tabling-2014-2015/Latex Project/images/screenshots/screenshot_mtrip_2.jpg>]
+[5 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/imag
+es/screenshots/screenshot_triposo_1.jpg> <D:/Mike/Documentos/GitHub/isel-examti
+metabling-2014-2015/Latex Project/images/screenshots/screenshot_triposo_2.jpg>]
 
-LaTeX Warning: Citation `RestWebber' on page 7 undefined on input line 158.
-
-
-LaTeX Warning: Citation `ios' on page 7 undefined on input line 158.
+LaTeX Warning: Citation `RestWebber' on page 6 undefined on input line 142.
 
 
-<./images/diagrams/diagram_introduction_architecture.jpg, id=106, 3908.6025pt x
+LaTeX Warning: Citation `ios' on page 6 undefined on input line 142.
+
+
+<./images/diagrams/diagram_introduction_architecture.jpg, id=101, 3908.6025pt x
  1809.76125pt>
 File: ./images/diagrams/diagram_introduction_architecture.jpg Graphic file (typ
 e jpg)
  <use ./images/diagrams/diagram_introduction_architecture.jpg>
 Package pdftex.def Info: ./images/diagrams/diagram_introduction_architecture.jp
-g used on input line 162.
+g used on input line 146.
 (pdftex.def)             Requested size: 421.10086pt x 194.95976pt.
 
-Overfull \hbox (2.84718pt too wide) in paragraph at lines 162--163
+Overfull \hbox (2.84718pt too wide) in paragraph at lines 146--147
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--168
+Underfull \hbox (badness 10000) in paragraph at lines 142--152
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--168
+Underfull \hbox (badness 10000) in paragraph at lines 142--152
 
  []
 
-LaTeX Font Info:    Try loading font information for TS1+fve on input line 169.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Font Info:    Try loading font information for TS1+fve on input line 153.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bera\ts1fve.fd"
 File: ts1fve.fd 2004/09/07 scalable font definitions for TS1/fve.
 )
 LaTeX Font Info:    Font shape `TS1/fve/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 169.
+(Font)              scaled to size 8.99994pt on input line 153.
 
 
-LaTeX Warning: Citation `MySqlOrcale' on page 7 undefined on input line 180.
+LaTeX Warning: Citation `MySqlOrcale' on page 6 undefined on input line 164.
 
 
-LaTeX Warning: Citation `playFramework' on page 7 undefined on input line 183.
+LaTeX Warning: Citation `playFramework' on page 6 undefined on input line 167.
 
 
-LaTeX Warning: Citation `html5' on page 7 undefined on input line 185.
+LaTeX Warning: Citation `html5' on page 6 undefined on input line 169.
 
 
-LaTeX Warning: Citation `css3' on page 7 undefined on input line 185.
+LaTeX Warning: Citation `css3' on page 6 undefined on input line 169.
 
 
-LaTeX Warning: Citation `javaScript' on page 7 undefined on input line 185.
+LaTeX Warning: Citation `javaScript' on page 6 undefined on input line 169.
 
 
-LaTeX Warning: Citation `twitterBootstrap' on page 7 undefined on input line 18
-5.
+LaTeX Warning: Citation `twitterBootstrap' on page 6 undefined on input line 16
+9.
 
 
-LaTeX Warning: Citation `iPadSanchez' on page 7 undefined on input line 188.
+LaTeX Warning: Citation `iPadSanchez' on page 6 undefined on input line 172.
 
 
-LaTeX Warning: Citation `ObjectiveC' on page 7 undefined on input line 188.
+LaTeX Warning: Citation `ObjectiveC' on page 6 undefined on input line 172.
 
 LaTeX Font Info:    Font shape `T1/fve/b/n' will be
-(Font)              scaled to size 8.09995pt on input line 188.
+(Font)              scaled to size 8.09995pt on input line 172.
 
-LaTeX Warning: Citation `ObjectiveC' on page 7 undefined on input line 188.
-
-
-LaTeX Warning: Citation `objectiveCBook' on page 7 undefined on input line 188.
+LaTeX Warning: Citation `ObjectiveC' on page 6 undefined on input line 172.
 
 
-
-LaTeX Warning: Citation `UniversalApps' on page 7 undefined on input line 188.
-
-
-LaTeX Warning: Citation `Xcode' on page 7 undefined on input line 191.
+LaTeX Warning: Citation `objectiveCBook' on page 6 undefined on input line 172.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--192
 
- []
+LaTeX Warning: Citation `UniversalApps' on page 6 undefined on input line 172.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--192
+LaTeX Warning: Citation `Xcode' on page 6 undefined on input line 175.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--176
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--192
+Underfull \hbox (badness 10000) in paragraph at lines 161--176
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--192
+Underfull \hbox (badness 10000) in paragraph at lines 161--176
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--192
-
- []
-
-[7 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/diagram
-s/diagram_introduction_architecture.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 195--197
+Underfull \hbox (badness 10000) in paragraph at lines 161--176
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 195--197
+Underfull \hbox (badness 10000) in paragraph at lines 161--176
+
+ []
+
+[6 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/imag
+es/screenshots/screenshot_foursqure_1.jpg> <D:/Mike/Documentos/GitHub/isel-exam
+timetabling-2014-2015/Latex Project/images/screenshots/screenshot_foursqure_2.j
+pg>] [7 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project
+/images/diagrams/diagram_introduction_architecture.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 179--181
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--181
 
  []
 
 [8]
 
 LaTeX Warning: Citation `ibCollabrativeVSGK' on page 9 undefined on input line 
-236.
+220.
 
 
 LaTeX Warning: Citation `AmazonRecommendGLBSJY' on page 9 undefined on input li
-ne 236.
+ne 220.
 
 
-LaTeX Warning: Citation `recommSystemPMVS' on page 9 undefined on input line 23
-6.
+LaTeX Warning: Citation `recommSystemPMVS' on page 9 undefined on input line 22
+0.
 
 
-LaTeX Warning: Citation `apns' on page 9 undefined on input line 243.
+LaTeX Warning: Citation `apns' on page 9 undefined on input line 227.
 
 
-LaTeX Warning: Citation `FacebookLogin' on page 9 undefined on input line 247.
+LaTeX Warning: Citation `FacebookLogin' on page 9 undefined on input line 231.
 
 
-LaTeX Warning: Citation `TwitterLogin' on page 9 undefined on input line 247.
+LaTeX Warning: Citation `TwitterLogin' on page 9 undefined on input line 231.
 
 
-Overfull \hbox (4.3567pt too wide) in alignment at lines 199--261
+Overfull \hbox (4.3567pt too wide) in alignment at lines 183--245
  [] [] 
  []
 
 [9]
-<./images/diagrams/diagram_usecase_users_location.jpg, id=117, 2319.66624pt x 5
+<./images/diagrams/diagram_usecase_users_location.jpg, id=115, 2319.66624pt x 5
 97.23125pt>
 File: ./images/diagrams/diagram_usecase_users_location.jpg Graphic file (type j
 pg)
  <use ./images/diagrams/diagram_usecase_users_location.jpg>
 Package pdftex.def Info: ./images/diagrams/diagram_usecase_users_location.jpg u
-sed on input line 268.
+sed on input line 252.
 (pdftex.def)             Requested size: 369.88582pt x 95.23088pt.
 
-<./images/diagrams/diagram_usecase_recommender_system.jpg, id=118, 2933.96124pt
+<./images/diagrams/diagram_usecase_recommender_system.jpg, id=116, 2933.96124pt
  x 1049.9225pt>
 File: ./images/diagrams/diagram_usecase_recommender_system.jpg Graphic file (ty
 pe jpg)
  <use ./images/diagrams/diagram_usecase_recommender_system.jpg>
 Package pdftex.def Info: ./images/diagrams/diagram_usecase_recommender_system.j
-pg used on input line 284.
+pg used on input line 268.
 (pdftex.def)             Requested size: 369.88582pt x 132.36142pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: Citation `cronTab' on page 10 undefined on input line 292.
+LaTeX Warning: Citation `cronTab' on page 10 undefined on input line 276.
 
-[10 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/diagra
-ms/diagram_usecase_users_location.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 308--313
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 308--313
+[10 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/ima
+ges/diagrams/diagram_usecase_users_location.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 292--297
 
  []
 
-[11 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/diagra
-ms/diagram_usecase_recommender_system.jpg>]
 
-LaTeX Warning: Citation `guideMeArticle' on page 12 undefined on input line 316
+Underfull \hbox (badness 10000) in paragraph at lines 292--297
+
+ []
+
+[11 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/ima
+ges/diagrams/diagram_usecase_recommender_system.jpg>]
+
+LaTeX Warning: Citation `guideMeArticle' on page 12 undefined on input line 300
 .
 
 ) [12]
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\300-theory.tex"
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\300-th
+eory.tex"
 Chapter 2.
 
 Underfull \hbox (badness 10000) in paragraph at lines 5--8
@@ -1906,7 +1878,7 @@ LaTeX Warning: Citation `recommSystemPMVS' on page 13 undefined on input line 1
 1.
 
 
-<./images/flows/flow_recomender_hierarchy.jpg, id=128, 671.50874pt x 163.61125p
+<./images/flows/flow_recomender_hierarchy.jpg, id=126, 671.50874pt x 163.61125p
 t>
 File: ./images/flows/flow_recomender_hierarchy.jpg Graphic file (type jpg)
  <use ./images/flows/flow_recomender_hierarchy.jpg>
@@ -1918,14 +1890,14 @@ nput line 15.
 
 
 
- <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/flows/flo
-w_recomender_hierarchy.jpg>]
+ <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/images
+/flows/flow_recomender_hierarchy.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 26--51
 
  []
 
 
-<./images/flows/flow_content_based_filtering_diagram.jpg, id=132, 3706.84875pt 
+<./images/flows/flow_content_based_filtering_diagram.jpg, id=130, 3706.84875pt 
 x 844.15375pt>
 File: ./images/flows/flow_content_based_filtering_diagram.jpg Graphic file (typ
 e jpg)
@@ -1943,7 +1915,7 @@ LaTeX Warning: Citation `recommenderSystemWiki' on page 14 undefined on input l
 ine 67.
 
 
-<./images/examples/example_content_based_filtering.jpg, id=133, 903.375pt x 341
+<./images/examples/example_content_based_filtering.jpg, id=131, 903.375pt x 341
 .275pt>
 File: ./images/examples/example_content_based_filtering.jpg Graphic file (type 
 jpg)
@@ -1959,7 +1931,7 @@ File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
 (Font)              scaled to size 8.99994pt on input line 78.
 
-<./images/flows/flow_example_diagram_cbf.jpg, id=134, 1809.76125pt x 427.5975pt
+<./images/flows/flow_example_diagram_cbf.jpg, id=132, 1809.76125pt x 427.5975pt
 >
 File: ./images/flows/flow_example_diagram_cbf.jpg Graphic file (type jpg)
  <use ./images/flows/flow_example_diagram_cbf.jpg>
@@ -1989,16 +1961,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--89
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[14] [15 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/f
-lows/flow_content_based_filtering_diagram.jpg> <C:/Users/Mike/Dropbox/Exam time
-tabling/Student/Latex Project/images/examples/example_content_based_filtering.j
-pg>]
+[14] [15 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Projec
+t/images/flows/flow_content_based_filtering_diagram.jpg> <D:/Mike/Documentos/Gi
+tHub/isel-examtimetabling-2014-2015/Latex Project/images/examples/example_conte
+nt_based_filtering.jpg>]
 
 LaTeX Warning: Citation `ibCollabrativeVSGK' on page 16 undefined on input line
  93.
 
 
-<./images/flows/flow_cf_algorithm_process.jpg, id=154, 1719.42375pt x 583.17876
+<./images/flows/flow_cf_algorithm_process.jpg, id=152, 1719.42375pt x 583.17876
 pt>
 File: ./images/flows/flow_cf_algorithm_process.jpg Graphic file (type jpg)
  <use ./images/flows/flow_cf_algorithm_process.jpg>
@@ -2023,7 +1995,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 93--107
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<./images/examples/example_item_based_filtering.jpg, id=155, 779.91376pt x 341.
+<./images/examples/example_item_based_filtering.jpg, id=153, 779.91376pt x 341.
 275pt>
 File: ./images/examples/example_item_based_filtering.jpg Graphic file (type jpg
 )
@@ -2031,8 +2003,8 @@ File: ./images/examples/example_item_based_filtering.jpg Graphic file (type jpg
 Package pdftex.def Info: ./images/examples/example_item_based_filtering.jpg use
 d on input line 114.
 (pdftex.def)             Requested size: 341.43306pt x 149.40117pt.
- [16 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/flows
-/flow_example_diagram_cbf.jpg>]
+ [16 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/im
+ages/flows/flow_example_diagram_cbf.jpg>]
 
 LaTeX Warning: Citation `Aha91' on page 17 undefined on input line 123.
 
@@ -2066,9 +2038,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 121--129
 
  []
 
-[17 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/flows/
-flow_cf_algorithm_process.jpg> <C:/Users/Mike/Dropbox/Exam timetabling/Student/
-Latex Project/images/examples/example_item_based_filtering.jpg>]
+[17 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/ima
+ges/flows/flow_cf_algorithm_process.jpg> <D:/Mike/Documentos/GitHub/isel-examti
+metabling-2014-2015/Latex Project/images/examples/example_item_based_filtering.
+jpg>]
 
 LaTeX Warning: Citation `Bayesian' on page 18 undefined on input line 134.
 
@@ -2084,7 +2057,7 @@ LaTeX Warning: Citation `ibCollabrativeVSGK' on page 18 undefined on input line
 LaTeX Warning: Citation `cfrsBook' on page 18 undefined on input line 137.
 
 
-<./images/flows/flow_item_based_filtering_1.jpg, id=162, 705.63625pt x 622.325p
+<./images/flows/flow_item_based_filtering_1.jpg, id=160, 705.63625pt x 622.325p
 t>
 File: ./images/flows/flow_item_based_filtering_1.jpg Graphic file (type jpg)
  <use ./images/flows/flow_item_based_filtering_1.jpg>
@@ -2105,7 +2078,7 @@ LaTeX Warning: Citation `ibCollabrativeVSGK' on page 18 undefined on input line
  146.
 
 
-<./images/flows/flow_item_based_filtering_2.jpg, id=163, 1557.82pt x 681.54625p
+<./images/flows/flow_item_based_filtering_2.jpg, id=161, 1557.82pt x 681.54625p
 t>
 File: ./images/flows/flow_item_based_filtering_2.jpg Graphic file (type jpg)
  <use ./images/flows/flow_item_based_filtering_2.jpg>
@@ -2130,7 +2103,7 @@ LaTeX Warning: Citation `ibCollabrativeVSGK' on page 18 undefined on input line
  155.
 
 
-<./images/examples/example_item_based_filtering2.jpg, id=164, 779.91376pt x 341
+<./images/examples/example_item_based_filtering2.jpg, id=162, 779.91376pt x 341
 .275pt>
 File: ./images/examples/example_item_based_filtering2.jpg Graphic file (type jp
 g)
@@ -2139,7 +2112,7 @@ Package pdftex.def Info: ./images/examples/example_item_based_filtering2.jpg us
 ed on input line 160.
 (pdftex.def)             Requested size: 312.9803pt x 136.9502pt.
 
-<./images/flows/flow_example_diagram_ibf.jpg, id=165, 884.30376pt x 285.065pt>
+<./images/flows/flow_example_diagram_ibf.jpg, id=163, 884.30376pt x 285.065pt>
 File: ./images/flows/flow_example_diagram_ibf.jpg Graphic file (type jpg)
 
 <use ./images/flows/flow_example_diagram_ibf.jpg>
@@ -2181,20 +2154,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 132--176
 
  []
 
-[18] [19 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/f
-lows/flow_item_based_filtering_1.jpg> <C:/Users/Mike/Dropbox/Exam timetabling/S
-tudent/Latex Project/images/flows/flow_item_based_filtering_2.jpg>] [20 <C:/Use
-rs/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/examples/example_
-item_based_filtering2.jpg> <C:/Users/Mike/Dropbox/Exam timetabling/Student/Late
-x Project/images/flows/flow_example_diagram_ibf.jpg>]
-<./images/tables/table_filter_comparison.jpg, id=175, 1792.6975pt x 608.2725pt>
+[18] [19 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Projec
+t/images/flows/flow_item_based_filtering_1.jpg> <D:/Mike/Documentos/GitHub/isel
+-examtimetabling-2014-2015/Latex Project/images/flows/flow_item_based_filtering
+_2.jpg>] [20 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Pr
+oject/images/examples/example_item_based_filtering2.jpg> <D:/Mike/Documentos/Gi
+tHub/isel-examtimetabling-2014-2015/Latex Project/images/flows/flow_example_dia
+gram_ibf.jpg>]
+<./images/tables/table_filter_comparison.jpg, id=173, 1792.6975pt x 608.2725pt>
 File: ./images/tables/table_filter_comparison.jpg Graphic file (type jpg)
 <use ./images/tables/table_filter_comparison.jpg>
 Package pdftex.def Info: ./images/tables/table_filter_comparison.jpg used on in
 put line 196.
 (pdftex.def)             Requested size: 369.88582pt x 125.50415pt.
- [21 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/table
-s/table_filter_comparison.jpg>]
+ [21 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/im
+ages/tables/table_filter_comparison.jpg>]
 
 LaTeX Warning: Citation `content-based-Filtering' on page 22 undefined on input
  line 201.
@@ -2255,7 +2229,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 219--256
  []
 
 [22]
-<./images/tables/table_slope_one_step_by_step_step_1.jpg, id=183, 1260.71pt x 5
+<./images/tables/table_slope_one_step_by_step_step_1.jpg, id=181, 1260.71pt x 5
 44.0325pt>
 File: ./images/tables/table_slope_one_step_by_step_step_1.jpg Graphic file (typ
 e jpg)
@@ -2264,14 +2238,14 @@ Package pdftex.def Info: ./images/tables/table_slope_one_step_by_step_step_1.jp
 g used on input line 262.
 (pdftex.def)             Requested size: 199.16928pt x 85.9429pt.
 
-[23 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/tables
-/table_slope_one_step_by_step_step_1.jpg>]
+[23 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/ima
+ges/tables/table_slope_one_step_by_step_step_1.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 267--269
 
  []
 
 
-<./images/tables/table_slope_one_step_by_step_step_2.jpg, id=188, 1573.88pt x 6
+<./images/tables/table_slope_one_step_by_step_step_2.jpg, id=186, 1573.88pt x 6
 02.25pt>
 File: ./images/tables/table_slope_one_step_by_step_step_2.jpg Graphic file (typ
 e jpg)
@@ -2285,7 +2259,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 280--281
  []
 
 
-<./images/tables/table_slope_one_step_by_step_step_3.jpg, id=189, 1593.955pt x 
+<./images/tables/table_slope_one_step_by_step_step_3.jpg, id=187, 1593.955pt x 
 572.1375pt>
 File: ./images/tables/table_slope_one_step_by_step_step_3.jpg Graphic file (typ
 e jpg)
@@ -2313,10 +2287,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 291--305
 
  []
 
-[24 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/tables
-/table_slope_one_step_by_step_step_2.jpg> <C:/Users/Mike/Dropbox/Exam timetabli
-ng/Student/Latex Project/images/tables/table_slope_one_step_by_step_step_3.jpg>
-]
+[24 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/ima
+ges/tables/table_slope_one_step_by_step_step_2.jpg> <D:/Mike/Documentos/GitHub/
+isel-examtimetabling-2014-2015/Latex Project/images/tables/table_slope_one_step
+_by_step_step_3.jpg>]
 
 LaTeX Warning: Citation `foursqureRecommendationEngine' on page 25 undefined on
  input line 312.
@@ -2349,8 +2323,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 310--82
  []
 
 [25]
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\400-proposed-sol
-ution.tex" [26
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\400-pr
+oposed-solution.tex" [26
 
 
 
@@ -2395,7 +2369,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--20
  []
 
 [27]
-<./images/diagrams/diagram_service_architecture.jpg, id=203, 1541.76pt x 1593.9
+<./images/diagrams/diagram_service_architecture.jpg, id=201, 1541.76pt x 1593.9
 55pt>
 File: ./images/diagrams/diagram_service_architecture.jpg Graphic file (type jpg
 )
@@ -2413,9 +2387,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 35--37
 
  []
 
-[28 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/diagra
-ms/diagram_service_architecture.jpg>]
-<./images/diagrams/diagram_three_tier_architecture.jpg, id=207, 529.98pt x 857.
+[28 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/ima
+ges/diagrams/diagram_service_architecture.jpg>]
+<./images/diagrams/diagram_three_tier_architecture.jpg, id=205, 529.98pt x 857.
 2025pt>
 File: ./images/diagrams/diagram_three_tier_architecture.jpg Graphic file (type 
 jpg)
@@ -2433,12 +2407,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--52
 
  []
 
-[29 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/diagra
-ms/diagram_three_tier_architecture.jpg>]
+[29 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/ima
+ges/diagrams/diagram_three_tier_architecture.jpg>]
 
 LaTeX Warning: Citation `apns' on page 30 undefined on input line 68.
 
-<./images/diagrams/diagram_apns_simple.jpg, id=211, 654.445pt x 90.3375pt>
+<./images/diagrams/diagram_apns_simple.jpg, id=209, 654.445pt x 90.3375pt>
 File: ./images/diagrams/diagram_apns_simple.jpg Graphic file (type jpg)
 
 <use ./images/diagrams/diagram_apns_simple.jpg>
@@ -2453,7 +2427,7 @@ LaTeX Warning: Citation `apns' on page 30 undefined on input line 74.
 LaTeX Warning: Citation `apns' on page 30 undefined on input line 74.
 
 
-<./images/diagrams/diagram_apns_payload.jpg, id=212, 523.9575pt x 111.41624pt>
+<./images/diagrams/diagram_apns_payload.jpg, id=210, 523.9575pt x 111.41624pt>
 File: ./images/diagrams/diagram_apns_payload.jpg Graphic file (type jpg)
 
 <use ./images/diagrams/diagram_apns_payload.jpg>
@@ -2508,23 +2482,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 68--102
 
  []
 
-[30 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/diagra
-ms/diagram_apns_simple.jpg>]
+[30 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/ima
+ges/diagrams/diagram_apns_simple.jpg>]
 
 LaTeX Warning: Citation `git' on page 31 undefined on input line 112.
 
 
 LaTeX Warning: Citation `Bitbucket' on page 31 undefined on input line 112.
 
-<./images/tables/table_bitbucket.jpg, id=216, 1533.73pt x 723.70375pt>
+<./images/tables/table_bitbucket.jpg, id=214, 1533.73pt x 723.70375pt>
 File: ./images/tables/table_bitbucket.jpg Graphic file (type jpg)
 
 <use ./images/tables/table_bitbucket.jpg>
 Package pdftex.def Info: ./images/tables/table_bitbucket.jpg used on input line
  119.
 (pdftex.def)             Requested size: 341.43306pt x 161.10364pt.
- [31 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/diagr
-ams/diagram_apns_payload.jpg>]
+ [31 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/im
+ages/diagrams/diagram_apns_payload.jpg>]
 
 LaTeX Warning: Citation `twitterBootstrap' on page 32 undefined on input line 1
 32.
@@ -2549,9 +2523,9 @@ e 142.
 LaTeX Warning: Citation `jaxrsFramework' on page 32 undefined on input line 142
 .
 
-[32 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/tables
-/table_bitbucket.jpg>]
-<./images/tables/table_java_rest_framework_comparison.jpg, id=223, 1981.4025pt 
+[32 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/ima
+ges/tables/table_bitbucket.jpg>]
+<./images/tables/table_java_rest_framework_comparison.jpg, id=221, 1981.4025pt 
 x 493.845pt>
 File: ./images/tables/table_java_rest_framework_comparison.jpg Graphic file (ty
 pe jpg)
@@ -2608,13 +2582,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 168--171
 
  []
 
-[33 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/tables
-/table_java_rest_framework_comparison.jpg>]
+[33 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/ima
+ges/tables/table_java_rest_framework_comparison.jpg>]
 
 LaTeX Warning: Citation `photoshop' on page 34 undefined on input line 188.
 
 
-<./images/screenshots/screenshot_prototype_web_1.jpg, id=228, 1284.8pt x 1029.8
+<./images/screenshots/screenshot_prototype_web_1.jpg, id=226, 1284.8pt x 1029.8
 475pt>
 File: ./images/screenshots/screenshot_prototype_web_1.jpg Graphic file (type jp
 g)
@@ -2623,7 +2597,7 @@ Package pdftex.def Info: ./images/screenshots/screenshot_prototype_web_1.jpg us
 ed on input line 191.
 (pdftex.def)             Requested size: 205.86626pt x 165.02606pt.
 
-<./images/screenshots/screenshot_prototype_web_2.jpg, id=229, 1284.8pt x 1029.8
+<./images/screenshots/screenshot_prototype_web_2.jpg, id=227, 1284.8pt x 1029.8
 475pt>
 File: ./images/screenshots/screenshot_prototype_web_2.jpg Graphic file (type jp
 g)
@@ -2632,7 +2606,7 @@ Package pdftex.def Info: ./images/screenshots/screenshot_prototype_web_2.jpg us
 ed on input line 196.
 (pdftex.def)             Requested size: 205.86626pt x 165.02606pt.
 
-<./images/diagrams/diagram_hierarchy_web.jpg, id=230, 1950.28625pt x 1119.18124
+<./images/diagrams/diagram_hierarchy_web.jpg, id=228, 1950.28625pt x 1119.18124
 pt>
 File: ./images/diagrams/diagram_hierarchy_web.jpg Graphic file (type jpg)
  <use ./images/diagrams/diagram_hierarchy_web.jpg>
@@ -2644,7 +2618,7 @@ put line 208.
 LaTeX Warning: Citation `appCooker' on page 35 undefined on input line 215.
 
 
-<./images/screenshots/screenshot_prototype_mobile_1.jpg, id=234, 761.84625pt x 
+<./images/screenshots/screenshot_prototype_mobile_1.jpg, id=232, 761.84625pt x 
 1490.56876pt>
 File: ./images/screenshots/screenshot_prototype_mobile_1.jpg Graphic file (type
  jpg)
@@ -2653,7 +2627,7 @@ Package pdftex.def Info: ./images/screenshots/screenshot_prototype_mobile_1.jpg
  used on input line 221.
 (pdftex.def)             Requested size: 101.78694pt x 199.16928pt.
 
-<./images/screenshots/screenshot_prototype_mobile_2.jpg, id=235, 761.84625pt x 
+<./images/screenshots/screenshot_prototype_mobile_2.jpg, id=233, 761.84625pt x 
 1490.56876pt>
 File: ./images/screenshots/screenshot_prototype_mobile_2.jpg Graphic file (type
  jpg)
@@ -2662,7 +2636,7 @@ Package pdftex.def Info: ./images/screenshots/screenshot_prototype_mobile_2.jpg
  used on input line 228.
 (pdftex.def)             Requested size: 101.78694pt x 199.16928pt.
 
-<./images/screenshots/screenshot_prototype_mobile_3.jpg, id=236, 761.84625pt x 
+<./images/screenshots/screenshot_prototype_mobile_3.jpg, id=234, 761.84625pt x 
 1490.56876pt>
 File: ./images/screenshots/screenshot_prototype_mobile_3.jpg Graphic file (type
  jpg)
@@ -2685,12 +2659,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 215--248
 
  []
 
-[35 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/screen
-shots/screenshot_prototype_web_1.jpg> <C:/Users/Mike/Dropbox/Exam timetabling/S
-tudent/Latex Project/images/screenshots/screenshot_prototype_web_2.jpg> <C:/Use
-rs/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/diagrams/diagram_
-hierarchy_web.jpg>]
-<./images/diagrams/diagram_hierarchy_ios_standard.jpg, id=240, 2418.03375pt x 9
+[35 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/ima
+ges/screenshots/screenshot_prototype_web_1.jpg> <D:/Mike/Documentos/GitHub/isel
+-examtimetabling-2014-2015/Latex Project/images/screenshots/screenshot_prototyp
+e_web_2.jpg> <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Pr
+oject/images/diagrams/diagram_hierarchy_web.jpg>]
+<./images/diagrams/diagram_hierarchy_ios_standard.jpg, id=238, 2418.03375pt x 9
 02.37125pt>
 File: ./images/diagrams/diagram_hierarchy_ios_standard.jpg Graphic file (type j
 pg)
@@ -2702,12 +2676,12 @@ sed on input line 262.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[36 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/screen
-shots/screenshot_prototype_mobile_1.jpg> <C:/Users/Mike/Dropbox/Exam timetablin
-g/Student/Latex Project/images/screenshots/screenshot_prototype_mobile_2.jpg> <
-C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/screenshots
-/screenshot_prototype_mobile_3.jpg>]
-<./images/diagrams/diagram_hierarchy_ios_admin.jpg, id=244, 2217.28375pt x 728.
+[36 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/ima
+ges/screenshots/screenshot_prototype_mobile_1.jpg> <D:/Mike/Documentos/GitHub/i
+sel-examtimetabling-2014-2015/Latex Project/images/screenshots/screenshot_proto
+type_mobile_2.jpg> <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/La
+tex Project/images/screenshots/screenshot_prototype_mobile_3.jpg>]
+<./images/diagrams/diagram_hierarchy_ios_admin.jpg, id=242, 2217.28375pt x 728.
 7225pt>
 File: ./images/diagrams/diagram_hierarchy_ios_admin.jpg Graphic file (type jpg)
 
@@ -2715,11 +2689,12 @@ File: ./images/diagrams/diagram_hierarchy_ios_admin.jpg Graphic file (type jpg)
 Package pdftex.def Info: ./images/diagrams/diagram_hierarchy_ios_admin.jpg used
  on input line 275.
 (pdftex.def)             Requested size: 328.95808pt x 108.12054pt.
-) [37 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/diag
-rams/diagram_hierarchy_ios_standard.jpg> <C:/Users/Mike/Dropbox/Exam timetablin
-g/Student/Latex Project/images/diagrams/diagram_hierarchy_ios_admin.jpg>]
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\500-developed-wo
-rk.tex" [38
+) [37 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/i
+mages/diagrams/diagram_hierarchy_ios_standard.jpg> <D:/Mike/Documentos/GitHub/i
+sel-examtimetabling-2014-2015/Latex Project/images/diagrams/diagram_hierarchy_i
+os_admin.jpg>]
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\500-de
+veloped-work.tex" [38
 
 
 
@@ -2774,7 +2749,7 @@ LaTeX Warning: Citation `eclipse' on page 41 undefined on input line 98.
 
 LaTeX Warning: Citation `umlLanguage' on page 42 undefined on input line 104.
 
-<./images/umls/uml_diagram_dal.jpg, id=261, 3091.55pt x 2318.6625pt>
+<./images/umls/uml_diagram_dal.jpg, id=259, 3091.55pt x 2318.6625pt>
 File: ./images/umls/uml_diagram_dal.jpg Graphic file (type jpg)
 
 <use ./images/umls/uml_diagram_dal.jpg>
@@ -2791,8 +2766,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 104--120
 
  []
 
-[42 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/umls/u
-ml_diagram_dal.jpg>]
+[42 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/ima
+ges/umls/uml_diagram_dal.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 122--127
 
  []
@@ -2870,7 +2845,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 183--188
 [45] ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
-<./images/umls/uml_diagram_api_core.jpg, id=275, 2905.85625pt x 2378.8875pt>
+<./images/umls/uml_diagram_api_core.jpg, id=273, 2905.85625pt x 2378.8875pt>
 File: ./images/umls/uml_diagram_api_core.jpg Graphic file (type jpg)
 
 <use ./images/umls/uml_diagram_api_core.jpg>
@@ -2878,7 +2853,7 @@ Package pdftex.def Info: ./images/umls/uml_diagram_api_core.jpg used on input l
 ine 204.
 (pdftex.def)             Requested size: 369.88582pt x 302.80504pt.
 
-<./images/flows/flow_web_operation_flow.jpg, id=276, 1437.37pt x 1370.11874pt>
+<./images/flows/flow_web_operation_flow.jpg, id=274, 1437.37pt x 1370.11874pt>
 File: ./images/flows/flow_web_operation_flow.jpg Graphic file (type jpg)
 
 <use ./images/flows/flow_web_operation_flow.jpg>
@@ -2889,14 +2864,14 @@ ut line 212.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[46 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/umls/u
-ml_diagram_api_core.jpg>]
+[46 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/ima
+ges/umls/uml_diagram_api_core.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 223--226
 
  []
 
-[47 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/flows/
-flow_web_operation_flow.jpg>]
+[47 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/ima
+ges/flows/flow_web_operation_flow.jpg>]
 
 LaTeX Warning: Citation `jsonJackson' on page 48 undefined on input line 230.
 
@@ -3046,7 +3021,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 330--339
 
  []
 
-[51] <./images/umls/uml_diagram_ios.jpg, id=297, 4125.4125pt x 2398.9625pt>
+[51] <./images/umls/uml_diagram_ios.jpg, id=295, 4125.4125pt x 2398.9625pt>
 File: ./images/umls/uml_diagram_ios.jpg Graphic file (type jpg)
 
 <use ./images/umls/uml_diagram_ios.jpg>
@@ -3066,7 +3041,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 341--350
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [52]
-<./images/flows/flow_ios_operation_flow.jpg, id=301, 1413.28pt x 1711.39375pt>
+<./images/flows/flow_ios_operation_flow.jpg, id=299, 1413.28pt x 1711.39375pt>
 File: ./images/flows/flow_ios_operation_flow.jpg Graphic file (type jpg)
 
 <use ./images/flows/flow_ios_operation_flow.jpg>
@@ -3090,14 +3065,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 365--366
 
  []
 
-[53 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/umls/u
-ml_diagram_ios.jpg>]
+[53 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/ima
+ges/umls/uml_diagram_ios.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 379--380
 
  []
 
 
-<./images/screenshots/screenshot_iphone_app_1.jpg, id=305, 761.84625pt x 1490.5
+<./images/screenshots/screenshot_iphone_app_1.jpg, id=303, 761.84625pt x 1490.5
 6876pt>
 File: ./images/screenshots/screenshot_iphone_app_1.jpg Graphic file (type jpg)
  <use ./images/screenshots/screenshot_iphone_app_1.jpg>
@@ -3105,7 +3080,7 @@ Package pdftex.def Info: ./images/screenshots/screenshot_iphone_app_1.jpg used
 on input line 408.
 (pdftex.def)             Requested size: 116.32959pt x 227.62204pt.
 
-<./images/screenshots/screenshot_iphone_app_2.jpg, id=306, 761.84625pt x 1490.5
+<./images/screenshots/screenshot_iphone_app_2.jpg, id=304, 761.84625pt x 1490.5
 6876pt>
 File: ./images/screenshots/screenshot_iphone_app_2.jpg Graphic file (type jpg)
  <use ./images/screenshots/screenshot_iphone_app_2.jpg>
@@ -3113,7 +3088,7 @@ Package pdftex.def Info: ./images/screenshots/screenshot_iphone_app_2.jpg used
 on input line 414.
 (pdftex.def)             Requested size: 116.32959pt x 227.62204pt.
 
-<./images/screenshots/screenshot_iphone_app_3.jpg, id=307, 761.84625pt x 1490.5
+<./images/screenshots/screenshot_iphone_app_3.jpg, id=305, 761.84625pt x 1490.5
 6876pt>
 File: ./images/screenshots/screenshot_iphone_app_3.jpg Graphic file (type jpg)
  <use ./images/screenshots/screenshot_iphone_app_3.jpg>
@@ -3121,7 +3096,7 @@ Package pdftex.def Info: ./images/screenshots/screenshot_iphone_app_3.jpg used
 on input line 420.
 (pdftex.def)             Requested size: 116.32959pt x 227.62204pt.
 
-<./images/screenshots/screenshot_ipad_app_1.jpg, id=308, 973.6375pt x 1261.7137
+<./images/screenshots/screenshot_ipad_app_1.jpg, id=306, 973.6375pt x 1261.7137
 5pt>
 File: ./images/screenshots/screenshot_ipad_app_1.jpg Graphic file (type jpg)
  <use ./images/screenshots/screenshot_ipad_app_1.jpg>
@@ -3129,7 +3104,7 @@ Package pdftex.def Info: ./images/screenshots/screenshot_ipad_app_1.jpg used on
  input line 436.
 (pdftex.def)             Requested size: 175.6483pt x 227.62204pt.
 
-<./images/screenshots/screenshot_ipad_app_2.jpg, id=309, 973.6375pt x 1261.7137
+<./images/screenshots/screenshot_ipad_app_2.jpg, id=307, 973.6375pt x 1261.7137
 5pt>
 File: ./images/screenshots/screenshot_ipad_app_2.jpg Graphic file (type jpg)
  <use ./images/screenshots/screenshot_ipad_app_2.jpg>
@@ -3151,13 +3126,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 397--453
 
  []
 
-[54 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/flows/
-flow_ios_operation_flow.jpg>] [55 <C:/Users/Mike/Dropbox/Exam timetabling/Stude
-nt/Latex Project/images/screenshots/screenshot_iphone_app_1.jpg> <C:/Users/Mike
-/Dropbox/Exam timetabling/Student/Latex Project/images/screenshots/screenshot_i
-phone_app_2.jpg> <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/
-images/screenshots/screenshot_iphone_app_3.jpg>]
-<./images/screenshots/screenshot_push_notification_example.jpg, id=316, 775.898
+[54 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/ima
+ges/flows/flow_ios_operation_flow.jpg>] [55 <D:/Mike/Documentos/GitHub/isel-exa
+mtimetabling-2014-2015/Latex Project/images/screenshots/screenshot_iphone_app_1
+.jpg> <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/i
+mages/screenshots/screenshot_iphone_app_2.jpg> <D:/Mike/Documentos/GitHub/isel-
+examtimetabling-2014-2015/Latex Project/images/screenshots/screenshot_iphone_ap
+p_3.jpg>]
+<./images/screenshots/screenshot_push_notification_example.jpg, id=314, 775.898
 74pt x 1601.985pt>
 File: ./images/screenshots/screenshot_push_notification_example.jpg Graphic fil
 e (type jpg)
@@ -3179,7 +3155,7 @@ LaTeX Warning: Citation `appleIosDeveCenter' on page 56 undefined on input line
  468.
 
 
-<./images/diagrams/diagram_usecase_pushnotification.jpg, id=317, 3117.6475pt x 
+<./images/diagrams/diagram_usecase_pushnotification.jpg, id=315, 3117.6475pt x 
 882.29625pt>
 File: ./images/diagrams/diagram_usecase_pushnotification.jpg Graphic file (type
  jpg)
@@ -3188,14 +3164,15 @@ Package pdftex.def Info: ./images/diagrams/diagram_usecase_pushnotification.jpg
  used on input line 472.
 (pdftex.def)             Requested size: 281.48003pt x 79.6678pt.
 
-[56 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/screen
-shots/screenshot_ipad_app_1.jpg> <C:/Users/Mike/Dropbox/Exam timetabling/Studen
-t/Latex Project/images/screenshots/screenshot_ipad_app_2.jpg>]
+[56 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/ima
+ges/screenshots/screenshot_ipad_app_1.jpg> <D:/Mike/Documentos/GitHub/isel-exam
+timetabling-2014-2015/Latex Project/images/screenshots/screenshot_ipad_app_2.jp
+g>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[57 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/screen
-shots/screenshot_push_notification_example.jpg>]
+[57 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/ima
+ges/screenshots/screenshot_push_notification_example.jpg>]
 
 LaTeX Warning: Citation `aspNetRazor' on page 58 undefined on input line 493.
 
@@ -3209,14 +3186,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 493--494
 
  []
 
-[58 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/diagra
-ms/diagram_usecase_pushnotification.jpg>]
+[58 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/ima
+ges/diagrams/diagram_usecase_pushnotification.jpg>]
 
 LaTeX Warning: Citation `twitterBootstrap' on page 59 undefined on input line 5
 06.
 
 
-<./images/screenshots/screenshot_web_app_1.jpg, id=328, 2047.65pt x 1453.43pt>
+<./images/screenshots/screenshot_web_app_1.jpg, id=326, 2047.65pt x 1453.43pt>
 File: ./images/screenshots/screenshot_web_app_1.jpg Graphic file (type jpg)
 
 <use ./images/screenshots/screenshot_web_app_1.jpg>
@@ -3224,7 +3201,7 @@ Package pdftex.def Info: ./images/screenshots/screenshot_web_app_1.jpg used on
 input line 516.
 (pdftex.def)             Requested size: 208.4326pt x 147.95424pt.
 
-<./images/screenshots/screenshot_web_app_2.jpg, id=329, 2047.65pt x 1453.43pt>
+<./images/screenshots/screenshot_web_app_2.jpg, id=327, 2047.65pt x 1453.43pt>
 File: ./images/screenshots/screenshot_web_app_2.jpg Graphic file (type jpg)
 
 <use ./images/screenshots/screenshot_web_app_2.jpg>
@@ -3247,15 +3224,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 532--537
 
  []
 
-[59 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/screen
-shots/screenshot_web_app_1.jpg> <C:/Users/Mike/Dropbox/Exam timetabling/Student
-/Latex Project/images/screenshots/screenshot_web_app_2.jpg>]
+[59 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/ima
+ges/screenshots/screenshot_web_app_1.jpg> <D:/Mike/Documentos/GitHub/isel-examt
+imetabling-2014-2015/Latex Project/images/screenshots/screenshot_web_app_2.jpg>
+]
 Underfull \hbox (badness 10000) in paragraph at lines 539--540
 
  []
 
 
-<./images/examples/example_webapp_documentation.jpg, id=333, 1280.785pt x 1166.
+<./images/examples/example_webapp_documentation.jpg, id=331, 1280.785pt x 1166.
 3575pt>
 File: ./images/examples/example_webapp_documentation.jpg Graphic file (type jpg
 )
@@ -3282,10 +3260,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 573--579
 
  []
 
-[61 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/exampl
-es/example_webapp_documentation.jpg>]) [62]
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\550-experimental
--results.tex"
+[61 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/ima
+ges/examples/example_webapp_documentation.jpg>]) [62]
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\550-ex
+perimental-results.tex"
 Chapter 5.
 
 LaTeX Warning: Citation `movieLens' on page 63 undefined on input line 9.
@@ -3304,7 +3282,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--12
  []
 
 
-<./images/tables/table_moviles_dataset_distribution.jpg, id=343, 783.92876pt x 
+<./images/tables/table_moviles_dataset_distribution.jpg, id=341, 783.92876pt x 
 235.88126pt>
 File: ./images/tables/table_moviles_dataset_distribution.jpg Graphic file (type
  jpg)
@@ -3318,8 +3296,8 @@ Package pdftex.def Info: ./images/tables/table_moviles_dataset_distribution.jpg
 
 
 
- <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/tables/ta
-ble_moviles_dataset_distribution.jpg>]
+ <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/images
+/tables/table_moviles_dataset_distribution.jpg>]
 
 LaTeX Warning: Citation `ibCollabrativeVSGK' on page 64 undefined on input line
  27.
@@ -3328,7 +3306,7 @@ LaTeX Warning: Citation `ibCollabrativeVSGK' on page 64 undefined on input line
 LaTeX Warning: Citation `Duda_Book' on page 64 undefined on input line 29.
 
 
-<./images/charts/charts_eval_alg_performance.jpg, id=348, 3619.5225pt x 1204.5p
+<./images/charts/charts_eval_alg_performance.jpg, id=346, 3619.5225pt x 1204.5p
 t>
 File: ./images/charts/charts_eval_alg_performance.jpg Graphic file (type jpg)
  <use ./images/charts/charts_eval_alg_performance.jpg>
@@ -3336,7 +3314,7 @@ Package pdftex.def Info: ./images/charts/charts_eval_alg_performance.jpg used o
 n input line 35.
 (pdftex.def)             Requested size: 369.88582pt x 123.08527pt.
 
-<./images/charts/charts_eval_alg_execution_time.jpg, id=349, 3619.5225pt x 1204
+<./images/charts/charts_eval_alg_execution_time.jpg, id=347, 3619.5225pt x 1204
 .5pt>
 File: ./images/charts/charts_eval_alg_execution_time.jpg Graphic file (type jpg
 )
@@ -3350,7 +3328,7 @@ LaTeX Warning: Citation `mahoutInAction' on page 64 undefined on input line 48.
 
 
 
-<./images/charts/charts_eval_alg_slopone_model_size.jpg, id=350, 3619.5225pt x 
+<./images/charts/charts_eval_alg_slopone_model_size.jpg, id=348, 3619.5225pt x 
 1204.5pt>
 File: ./images/charts/charts_eval_alg_slopone_model_size.jpg Graphic file (type
  jpg)
@@ -3359,7 +3337,7 @@ Package pdftex.def Info: ./images/charts/charts_eval_alg_slopone_model_size.jpg
  used on input line 52.
 (pdftex.def)             Requested size: 369.88582pt x 123.08527pt.
 
-<./images/charts/charts_eval_alg_slopone_dataset_ration.jpg, id=351, 3619.5225p
+<./images/charts/charts_eval_alg_slopone_dataset_ration.jpg, id=349, 3619.5225p
 t x 1204.5pt>
 File: ./images/charts/charts_eval_alg_slopone_dataset_ration.jpg Graphic file (
 type jpg)
@@ -3377,15 +3355,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--66
 
  []
 
-[64 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/charts
-/charts_eval_alg_performance.jpg>] [65 <C:/Users/Mike/Dropbox/Exam timetabling/
-Student/Latex Project/images/charts/charts_eval_alg_execution_time.jpg> <C:/Use
-rs/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/charts/charts_eva
-l_alg_slopone_model_size.jpg>]
+[64 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/ima
+ges/charts/charts_eval_alg_performance.jpg>] [65 <D:/Mike/Documentos/GitHub/ise
+l-examtimetabling-2014-2015/Latex Project/images/charts/charts_eval_alg_executi
+on_time.jpg> <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Pr
+oject/images/charts/charts_eval_alg_slopone_model_size.jpg>]
 
 LaTeX Warning: Citation `amazonEC2' on page 66 undefined on input line 69.
 
-<./images/tables/table_server_specs.jpg, id=358, 1449.415pt x 306.14375pt>
+<./images/tables/table_server_specs.jpg, id=356, 1449.415pt x 306.14375pt>
 File: ./images/tables/table_server_specs.jpg Graphic file (type jpg)
 
 <use ./images/tables/table_server_specs.jpg>
@@ -3396,7 +3374,7 @@ ine 76.
 
 LaTeX Warning: Citation `gatling' on page 66 undefined on input line 80.
 
-<./images/tables/table_load_testcase.jpg, id=359, 1608.0075pt x 813.0375pt>
+<./images/tables/table_load_testcase.jpg, id=357, 1608.0075pt x 813.0375pt>
 File: ./images/tables/table_load_testcase.jpg Graphic file (type jpg)
 
 <use ./images/tables/table_load_testcase.jpg>
@@ -3404,7 +3382,7 @@ Package pdftex.def Info: ./images/tables/table_load_testcase.jpg used on input
 line 87.
 (pdftex.def)             Requested size: 312.9803pt x 158.23773pt.
 
-<./images/charts/charts_eval_load_test_requests_per_second.jpg, id=360, 3619.52
+<./images/charts/charts_eval_load_test_requests_per_second.jpg, id=358, 3619.52
 25pt x 1204.5pt>
 File: ./images/charts/charts_eval_load_test_requests_per_second.jpg Graphic fil
 e (type jpg)
@@ -3414,7 +3392,7 @@ Package pdftex.def Info: ./images/charts/charts_eval_load_test_requests_per_sec
 ond.jpg used on input line 95.
 (pdftex.def)             Requested size: 369.88582pt x 123.08527pt.
 
-<./images/charts/charts_eval_load_test_average_request_duration.jpg, id=361, 36
+<./images/charts/charts_eval_load_test_average_request_duration.jpg, id=359, 36
 19.5225pt x 1204.5pt>
 File: ./images/charts/charts_eval_load_test_average_request_duration.jpg Graphi
 c file (type jpg)
@@ -3433,16 +3411,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 91--112
 
  []
 
-[66 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/charts
-/charts_eval_alg_slopone_dataset_ration.jpg> <C:/Users/Mike/Dropbox/Exam timeta
-bling/Student/Latex Project/images/tables/table_server_specs.jpg>]
+[66 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/ima
+ges/charts/charts_eval_alg_slopone_dataset_ration.jpg> <D:/Mike/Documentos/GitH
+ub/isel-examtimetabling-2014-2015/Latex Project/images/tables/table_server_spec
+s.jpg>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[67 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/tables
-/table_load_testcase.jpg> <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex
- Project/images/charts/charts_eval_load_test_requests_per_second.jpg>]
-<./images/charts/charts_eval_usability_and_appearence.jpg, id=368, 3619.5225pt 
+[67 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/ima
+ges/tables/table_load_testcase.jpg> <D:/Mike/Documentos/GitHub/isel-examtimetab
+ling-2014-2015/Latex Project/images/charts/charts_eval_load_test_requests_per_s
+econd.jpg>]
+<./images/charts/charts_eval_usability_and_appearence.jpg, id=366, 3619.5225pt 
 x 1204.5pt>
 File: ./images/charts/charts_eval_usability_and_appearence.jpg Graphic file (ty
 pe jpg)
@@ -3456,7 +3436,7 @@ Overfull \hbox (36.9904pt too wide) in paragraph at lines 125--126
  []
 
 
-<./images/charts/charts_eval_usability_features.jpg, id=369, 3619.5225pt x 1204
+<./images/charts/charts_eval_usability_features.jpg, id=367, 3619.5225pt x 1204
 .5pt>
 File: ./images/charts/charts_eval_usability_features.jpg Graphic file (type jpg
 )
@@ -3470,7 +3450,7 @@ Overfull \hbox (36.9904pt too wide) in paragraph at lines 134--135
  []
 
 
-<./images/charts/charts_eval_usability_will_install.jpg, id=370, 3619.5225pt x 
+<./images/charts/charts_eval_usability_will_install.jpg, id=368, 3619.5225pt x 
 1204.5pt>
 File: ./images/charts/charts_eval_usability_will_install.jpg Graphic file (type
  jpg)
@@ -3501,18 +3481,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 115--149
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[68 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/charts
-/charts_eval_load_test_average_request_duration.jpg>]
+[68 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/ima
+ges/charts/charts_eval_load_test_average_request_duration.jpg>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[69 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/charts
-/charts_eval_usability_and_appearence.jpg> <C:/Users/Mike/Dropbox/Exam timetabl
-ing/Student/Latex Project/images/charts/charts_eval_usability_features.jpg>])
-[70 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/charts
-/charts_eval_usability_will_install.jpg>]
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\600-conclusions.
-tex"
+[69 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/ima
+ges/charts/charts_eval_usability_and_appearence.jpg> <D:/Mike/Documentos/GitHub
+/isel-examtimetabling-2014-2015/Latex Project/images/charts/charts_eval_usabili
+ty_features.jpg>]) [70 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-201
+5/Latex Project/images/charts/charts_eval_usability_will_install.jpg>]
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\600-co
+nclusions.tex"
 Chapter 6.
 
 Underfull \hbox (badness 10000) in paragraph at lines 3--8
@@ -3555,10 +3535,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--86
 
 
 ] [72]
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\700-attachments.
-tex"
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\700-at
+tachments.tex"
 Appendix A.
-<./images/umls/uml_dbmodel_service.jpg, id=387, 1301.86375pt x 1036.87375pt>
+<./images/umls/uml_dbmodel_service.jpg, id=385, 1301.86375pt x 1036.87375pt>
 File: ./images/umls/uml_dbmodel_service.jpg Graphic file (type jpg)
 
 <use ./images/umls/uml_dbmodel_service.jpg>
@@ -3570,27 +3550,27 @@ ne 12.
 
 
 
- <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/umls/uml_
-dbmodel_service.jpg>]
-<./images/umls/uml_dbmodel_log.jpg, id=391, 646.415pt x 198.7425pt>
+ <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/images
+/umls/uml_dbmodel_service.jpg>]
+<./images/umls/uml_dbmodel_log.jpg, id=389, 646.415pt x 198.7425pt>
 File: ./images/umls/uml_dbmodel_log.jpg Graphic file (type jpg)
 
 <use ./images/umls/uml_dbmodel_log.jpg>
 Package pdftex.def Info: ./images/umls/uml_dbmodel_log.jpg used on input line 2
 4.
 (pdftex.def)             Requested size: 341.43306pt x 104.97517pt.
- [74 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/umls/
-uml_dbmodel_log.jpg>]
-<./images/survey/survey_page_1.jpg, id=395, 1847.90375pt x 2525.435pt>
+ [74 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/im
+ages/umls/uml_dbmodel_log.jpg>]
+<./images/survey/survey_page_1.jpg, id=393, 1847.90375pt x 2525.435pt>
 File: ./images/survey/survey_page_1.jpg Graphic file (type jpg)
 
 <use ./images/survey/survey_page_1.jpg>
 Package pdftex.def Info: ./images/survey/survey_page_1.jpg used on input line 3
 5.
 (pdftex.def)             Requested size: 355.65944pt x 486.04178pt.
- [75 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/surve
-y/survey_page_1.jpg>]
-<./images/survey/survey_page_2.jpg, id=400, 1847.90375pt x 2885.78125pt>
+ [75 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/im
+ages/survey/survey_page_1.jpg>]
+<./images/survey/survey_page_2.jpg, id=398, 1847.90375pt x 2885.78125pt>
 File: ./images/survey/survey_page_2.jpg Graphic file (type jpg)
 
 <use ./images/survey/survey_page_2.jpg>
@@ -3601,7 +3581,7 @@ Package pdftex.def Info: ./images/survey/survey_page_2.jpg used on input line 4
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./images/survey/survey_page_3.jpg, id=401, 1847.90375pt x 2261.44875pt>
+<./images/survey/survey_page_3.jpg, id=399, 1847.90375pt x 2261.44875pt>
 File: ./images/survey/survey_page_3.jpg Graphic file (type jpg)
 
 <use ./images/survey/survey_page_3.jpg>
@@ -3612,36 +3592,39 @@ Package pdftex.def Info: ./images/survey/survey_page_3.jpg used on input line 5
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [76 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Latex Project/images/surv
-ey/survey_page_2.jpg>] [77 <C:/Users/Mike/Dropbox/Exam timetabling/Student/Late
-x Project/images/survey/survey_page_3.jpg>] [78
+) [76 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/Latex Project/i
+mages/survey/survey_page_2.jpg>] [77 <D:/Mike/Documentos/GitHub/isel-examtimeta
+bling-2014-2015/Latex Project/images/survey/survey_page_3.jpg>] [78
 
 
 
 ]
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\800-references.t
-ex"
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\800-re
+ferences.tex"
 No file 000-main.bbl.
-) ("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\000-main.aux"
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\100-cover.aux")
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\002-abstract.aux
-")
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\200-introduction
-.aux")
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\300-theory.aux")
-
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\400-proposed-sol
-ution.aux")
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\500-developed-wo
-rk.aux")
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\550-experimental
--results.aux")
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\600-conclusions.
-aux")
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\700-attachments.
-aux")
-("C:\Users\Mike\Dropbox\Exam timetabling\Student\Latex Project\800-references.a
-ux"))
+)
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\000-ma
+in.aux"
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\100-co
+ver.aux")
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\002-ab
+stract.aux")
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\200-in
+troduction.aux")
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\300-th
+eory.aux")
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\400-pr
+oposed-solution.aux")
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\500-de
+veloped-work.aux")
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\550-ex
+perimental-results.aux")
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\600-co
+nclusions.aux")
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\700-at
+tachments.aux")
+("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\800-re
+ferences.aux"))
 
 LaTeX Warning: There were undefined references.
 
@@ -3650,10 +3633,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 15946 strings out of 493921
- 246369 string characters out of 3144878
- 393144 words of memory out of 3000000
- 18709 multiletter control sequences out of 15000+200000
+ 15932 strings out of 493921
+ 246641 string characters out of 3144878
+ 392048 words of memory out of 3000000
+ 18697 multiletter control sequences out of 15000+200000
  74209 words of font info for 74 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  51i,15n,101p,2222b,1536s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -3677,9 +3660,9 @@ ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr9.pfb><C:/Program Files (
 x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files (x86)/MiKTeX
  2.9/fonts/type1/public/lm/lmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
 ype1/public/lm/lmsy9.pfb>
-Output written on 000-main.pdf (100 pages, 16308215 bytes).
+Output written on 000-main.pdf (100 pages, 16105587 bytes).
 PDF statistics:
- 475 PDF objects out of 1000 (max. 8388607)
+ 473 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 376 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 366 words of extra memory for PDF output out of 10000 (max. 10000000)
 

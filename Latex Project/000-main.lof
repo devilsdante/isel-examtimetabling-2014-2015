@@ -1,12 +1,11 @@
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces TouristEye\nobreakspace {}\cite {TouristEyeWeb} iPhone application screenshots.\relax }}{3}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces GuidePal\nobreakspace {}\cite {GuidePalWeb}\cite {GuidePaliPhone} iPhone application screenshots.\relax }}{3}
-\contentsline {figure}{\numberline {1.3}{\ignorespaces mTrip iPhone application screenshots.\relax }}{4}
-\contentsline {figure}{\numberline {1.4}{\ignorespaces Triposo iPhone application screenshots.\relax }}{5}
-\contentsline {figure}{\numberline {1.5}{\ignorespaces Foursquare iPhone application screenshots.\relax }}{6}
-\contentsline {figure}{\numberline {1.6}{\ignorespaces Generic service architecture.\relax }}{7}
-\contentsline {figure}{\numberline {1.7}{\ignorespaces Use-case of the near by feature.\relax }}{10}
-\contentsline {figure}{\numberline {1.8}{\ignorespaces The recommendation process.\relax }}{11}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces GuidePal\nobreakspace {}\cite {GuidePalWeb}\cite {GuidePaliPhone} iPhone application screenshots.\relax }}{3}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces mTrip iPhone application screenshots.\relax }}{4}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Triposo iPhone application screenshots.\relax }}{5}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Foursquare iPhone application screenshots.\relax }}{6}
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Generic service architecture.\relax }}{7}
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Use-case of the near by feature.\relax }}{10}
+\contentsline {figure}{\numberline {1.7}{\ignorespaces The recommendation process.\relax }}{11}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Recommender systems hierarchy.\relax }}{13}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces The Content-Based Filtering process. Creation of the similarity matrix and computation of the top most similar items.\relax }}{15}
