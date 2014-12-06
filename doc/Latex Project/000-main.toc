@@ -1,0 +1,9 @@
+\contentsline {chapter}{Acknowledgments}{v}
+\contentsline {chapter}{List of Figures}{xiii}
+\contentsline {chapter}{List of Tables}{xv}
+\contentsline {chapter}{List of Code Listings}{xvii}
+\contentsline {chapter}{List of Acronyms}{xvii}
+\contentsline {chapter}{\numberline {1}Introduction}{1}
+\contentsline {section}{\numberline {1.1}Examination timetable: State of the Art}{2}
+\contentsline {subsection}{\numberline {1.1.1}Timetabling Problem}{2}
+\contentsline {subsection}{\numberline {1.1.2}Solution approaches}{2}
