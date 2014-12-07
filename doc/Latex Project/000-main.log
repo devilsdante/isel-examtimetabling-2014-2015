@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.11.27)  6 DEC 2014 19:18
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.11.27)  7 DEC 2014 23:27
 entering extended mode
 **000-main.tex
 
@@ -1310,24 +1310,24 @@ No file 000-main.acr.
 0-introduction.tex"
 Chapter 1.
 Package newfloat Info: Setting Plan B file extension to `lof'... on input line 
-1.
+2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 5--16
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--16
+Underfull \hbox (badness 10000) in paragraph at lines 6--17
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5--16
+Underfull \hbox (badness 10000) in paragraph at lines 6--17
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5--16
+Underfull \hbox (badness 10000) in paragraph at lines 6--17
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--17
 
  []
 
@@ -1336,26 +1336,55 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--16
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 22--30
+Underfull \hbox (badness 10000) in paragraph at lines 23--31
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--30
+Underfull \hbox (badness 10000) in paragraph at lines 23--31
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--30
+Underfull \hbox (badness 10000) in paragraph at lines 23--31
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--30
+Underfull \hbox (badness 10000) in paragraph at lines 23--31
 
  []
 
-) [2]
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--37
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--37
+
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 38--40
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--40
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
+
+ []
+
+LaTeX Font Info:    Font shape `T1/fve/m/it' in size <10> not available
+(Font)              Font shape `T1/fve/m/sl' tried instead on input line 45.
+LaTeX Font Info:    Font shape `T1/fve/m/sl' will be
+(Font)              scaled to size 8.99994pt on input line 45.
+[3]) [4]
 ("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\00
 0-main.aux"
 ("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\10
@@ -1365,19 +1394,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--30
 ("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\20
 0-introduction.aux")) ) 
 Here is how much of TeX's memory you used:
- 13783 strings out of 493921
- 203007 string characters out of 3144878
- 323506 words of memory out of 3000000
- 16717 multiletter control sequences out of 15000+200000
- 51746 words of font info for 52 fonts, out of 3000000 for 9000
+ 13788 strings out of 493921
+ 203077 string characters out of 3144878
+ 323520 words of memory out of 3000000
+ 16720 multiletter control sequences out of 15000+200000
+ 55056 words of font info for 54 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  46i,5n,62p,2222b,1536s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontn
 ame/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/bera/fveb8a.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/bera/fver8a.pfb>
-Output written on 000-main.pdf (20 pages, 132280 bytes).
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/bera/fver8a.pfb><C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/bera/fver8a.pfb>
+Output written on 000-main.pdf (22 pages, 142077 bytes).
 PDF statistics:
- 78 PDF objects out of 1000 (max. 8388607)
+ 88 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

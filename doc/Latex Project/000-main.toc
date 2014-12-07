@@ -7,3 +7,7 @@
 \contentsline {section}{\numberline {1.1}Examination timetable: State of the Art}{2}
 \contentsline {subsection}{\numberline {1.1.1}Timetabling Problem}{2}
 \contentsline {subsection}{\numberline {1.1.2}Solution approaches}{2}
+\contentsline {subsubsection}{\numberline {1.1.2.1}Typical solution approaches}{3}
+\contentsline {paragraph}{Graph Coloring:}{3}
+\contentsline {paragraph}{Constraint Programming Based Technique:}{4}
+\contentsline {paragraph}{Integer Linear Programming:}{4}
