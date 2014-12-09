@@ -34,29 +34,27 @@ Search problems are quoted as NP-Complete (REF: NP-Complete wiki) and optimizati
 
 Timetabling solution approaches may be the most difficult decision making part of the project. Considering the number of possible solution approaches that can be made, but still only a short number of those approaches may have good solutions within a reasonable amount of time. Considering the state of art, some combinations of algorithms appear to be better than others, if well implemented and optimized. These algorithms normally are divided in search algorithms and optimization algorithms in which are known as Heuristics and Meta-heuristics. Both of these can be used to generate solutions separately, but normally Heuristics are used to generate a solution not guaranteed to be optimal, but good enough to at least solve all the hard constraints. In contrary the Meta-heuristics are often only to, given a feasible solution, generate an even better optimized solution, in which the main goal is to solve the most soft constraints possible in order to get the lowest score. Heuristics though are problem-dependent, meaning that these are adapted to a specific problem in which take advantage of its details. Considering these algorithms are often greedy, they tend to get trapped on local optimum. Meta-heuristics are problem-independent, meaning they can't take advantages of specific problems. These are often not greedy so they can be used to solve (optimize) any problem given.\\
 \\
-
 Most of the Meta-heuristic algorithms used belong to one of the three categories: One-Stage algorithms, Two-Stage algorithms and Algorithms that allow relaxations. (REF: 2008 - Rhydian Lewis). The first two algorithms are worth explaining, mainly because of their usage in the state of art. The One-Stage algorithm works as Meta-heuristic algorithm(s) that is only used to get an initial optimal solution, which the goal is to satisfy both hard and soft constraints at the same time. Approaches using this are not very common because it's hard to get proper solutions in a reasonable amount of time trying to satisfy both types of constraints at the same time and this one of the reasons the Meta-heuristics are only used as optimization algorithms instead of search algorithms. The Two-Stage algorithms are the most used types of approaches because two phases (the reason for "Two-Stage" name) which the first phase consists in all soft constraints being "discarded" and focus only on solving hard constraints to obtain feasible solution. The next phase is an attempt to find the best solution, trying to solve the highest number soft constraints possible.\\
 \\
-
-\subsubsection{Typical solution approaches}
-\label{subsection:TypSolutionsApp}
-The most typical heuristic (?) solution approaches are: Graph Coloring, Constraint Programming Based Technique, Integer Linear Programming.\\
-
-\paragraph{Graph Coloring:}
-This algorithm is divided in two main sub-types, which is vertex coloring and edge coloring. The main goal of this algorithm (vertex) is to, given a number of vertices and edges, color the vertexes so that no adjacent vertices have the same color. In this algorithm, it's best to find a solution with least colors possible. In examination timetable problem, a basic approach could be to represent the exams as vertices and the hard constraints as edges (considering this is search algorithm, it is good to use optimization algorithms to deal with soft constraints) so that exams with the same color, can be assign to the same timeslot. After coloring, it proceeds to assign the exams into timeslots considering the colors in the solution. (REF: 2009 - Qu Burke)
-
+Some approaches may use methods dominated \textit{exact methods} which may be viewed as tree algorithms and can be proved that it can find the optimal solution (global optimal). Exact methods search for solutions in the whole search space, and it divides the global problem into simpler problems in order to find the solution. This is not always used because these methods require a lot of computing time and it rarely produces results in a reasonable time in complex problems. For example, if the problem is complex enough it may require dozens of processors to obtain the best solution in a month of computing time. Approaches use some of these exact methods, named: Constraint Programming Based Technique, Integer Linear Programming.\\
+\\
 \paragraph{Constraint Programming Based Technique:}
-This type of technique allows direct programming with constraints which gives ease and flexibility in solving problems like timetabling. Two important features about this technique that are used are backtracking and local variables that facilitates searching for an optimal solution (with a great cost: time). Constraint programming is different from other types of programming, as in these types it is specified the steps that need to be executed, but in constraint programming it is specified the properties (hard constraints) of the solution or properties that should not be in the solution. (REF: 2009 - Qu Burke)
-
+This type of technique allows direct programming with constraints which gives ease and flexibility in solving problems like timetabling. Two important features about this technique that are used are backtracking and local variables that facilitates searching for an optimal solution (with a great cost: time). Constraint programming is different from other types of programming, as in these types it is specified the steps that need to be executed, but in constraint programming it is specified the properties (hard constraints) of the solution or properties that should not be in the solution. (REF: 2009 - Qu Burke)\\
+\\
 \paragraph{Integer Linear Programming:}
-Integer Linear Programming is a technique in which some or all variables must be integer and the objective function and the constraints (non-integer) must be linear. Schaerf in his article specifies some approaches to school, course and examination timetabling using all integer linear programming methods to obtain feasible solutions and perform optimization (REF: 1999 - Schaerf).
-
-
-
-
-
-
-
+Integer Linear Programming is a technique in which some or all variables must be integer and the objective function and the constraints (non-integer) must be linear. Schaerf in his article specifies some approaches to school, course and examination timetabling using all integer linear programming methods to obtain feasible solutions and perform optimization (REF: 1999 - Schaerf).\\
+\\
+The usual approaches start with using heuristics of Graph Coloring to get an initial solution that most of the cases is a local optimum. Graph Coloring itself is not an heuristic or meta-heuristic but a method that designates a problem and its variants:\\
+\\
+\paragraph{Graph Coloring:}
+This algorithm is divided in two main sub-types, which is vertex coloring and edge coloring. The main goal of this algorithm (vertex) is to, given a number of vertices and edges, color the vertexes so that no adjacent vertices have the same color. In this algorithm, it's best to find a solution with least colors possible. In examination timetable problem, a basic approach could be to represent the exams as vertices and the hard constraints as edges (considering this is search algorithm, it is good to use optimization algorithms to deal with soft constraints) so that exams with the same color, can be assign to the same timeslot. After coloring, it proceeds to assign the exams into timeslots considering the colors of the solution. (REF: 2009 - Qu Burke)\\
+\\
+Graphic Colors heuristics like \textit{Saturation Degree Ordering} are very commonly used to get the initial solutions. Others like \textit{First Fit}, \textit{Degree Based Ordering}, \textit{Largest Degree Ordering}, \textit{Incident Degree Ordering} are also heuristic techniques for coloring graphs.
+\\
+\paragraph{Saturation Degree Ordering:}
+This heuristic is very useful because it colors the vertices with more constraints first. The coloring method is as follows: while choosing a vertice to color, the ones with higher saturation degree will be colored first. Saturation degree of one vertice can be denominated as the number of differently colored vertices adjacent to this vertice or, in another words, the number of different colors of all adjacent vertices. In case of ties, the highest saturation vertice with higher number of adjacent vertices is chosen.\\
+\\
+Meta-heuristics on the other hand, as mentioned above, are used to optimize first solutions. On examination timetabling Graph Coloring is used to get feasible solutions, and after that, Meta-heuristics are used to get even better solutions, optimizing the ones obtained via Graph Coloring. Some Meta-heuristics used are named \textit{Evolutionary Algorithms} [REF: Glover and Kochenberger 2003; Reeves 1993; Sastry et al. 2005], \textit{Ant Colony Optimization}[REF: (Dorigo and Blum 2005; Merkle and Middendorf 2005], \textit{Tabu Search}[REF: Gendreau and Potvin 2005; Glover and Laguna 1993], \textit{Simulated Annealing} [REF: Aarts and Korst 1989]. For more details about these Meta-heuristics (REF: 2009 - Qu Burke).
 
 
 \iffalse
