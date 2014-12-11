@@ -54,7 +54,42 @@ Graphic Colors heuristics like \textit{Saturation Degree Ordering} are very comm
 \paragraph{Saturation Degree Ordering:}
 This heuristic is very useful because it colors the vertices with more constraints first. The coloring method is as follows: while choosing a vertice to color, the ones with higher saturation degree will be colored first. Saturation degree of one vertice can be denominated as the number of differently colored vertices adjacent to this vertice or, in another words, the number of different colors of all adjacent vertices. In case of ties, the highest saturation vertice with higher number of adjacent vertices is chosen.\\
 \\
-Meta-heuristics on the other hand, as mentioned above, are used to optimize first solutions. On examination timetabling Graph Coloring is used to get feasible solutions, and after that, Meta-heuristics are used to get even better solutions, optimizing the ones obtained via Graph Coloring. Some Meta-heuristics used are named \textit{Evolutionary Algorithms} [REF: Glover and Kochenberger 2003; Reeves 1993; Sastry et al. 2005], \textit{Ant Colony Optimization}[REF: (Dorigo and Blum 2005; Merkle and Middendorf 2005], \textit{Tabu Search}[REF: Gendreau and Potvin 2005; Glover and Laguna 1993], \textit{Simulated Annealing} [REF: Aarts and Korst 1989]. For more details about these Meta-heuristics (REF: 2009 - Qu Burke).
+Meta-heuristics on the other hand, as mentioned above, are used to optimize first solutions. On examination timetabling Graph Coloring is used to get feasible solutions, and after that, Meta-heuristics are used to get even better solutions, optimizing the ones obtained via Graph Coloring. Some Meta-heuristics used are named \textit{Evolutionary Algorithms} [REF: Glover and Kochenberger 2003; Reeves 1993; Sastry et al. 2005], \textit{Ant Colony Optimization}[REF: (Dorigo and Blum 2005; Merkle and Middendorf 2005], \textit{Tabu Search}[REF: Gendreau and Potvin 2005; Glover and Laguna 1993], \textit{Simulated Annealing} [REF: Aarts and Korst 1989]. For more details about these Meta-heuristics (REF: 2009 - Qu Burke).\\
+\\
+
+For the common types of algorithms and how they are organized, please check Figure~\ref{fig:TypesAlgorithms}
+
+\begin{figure}[h!]
+ \centering
+   \includegraphics{./images/types_of_algorithms.png}
+   \caption{Types of algorithms.}
+   \label{fig:TypesAlgorithms}
+\end{figure}
+
+
+\subsubsection{Some approaches applied to the ITC 2007 Examination timetabling problem}
+\label{subsection:ApprITC2007}
+
+I will briefly describe some techniques used in ITC 2007 - Examination timetabling, as detailed explanations about its techniques are properly presented in its articles which will be referenced below. ITC 2007 Examination timetabling problem consists on submitting a solution which may solve all hard constraints and the quality of each solution is calculated using the soft constraints the the solution didn't solve. Each soft constraint has its weight in the problem's context, and that weight adds points to each other solution. In this case, the more points a solution has, the worse it is. Solutions with zero points are considered optimal solutions, because they were able to solve all hard and soft constraints. Each of these constraints are presented on ITC's site (REF: ITC's site) or it can be read in Tomas Muller's article as he explains each constraints, including for other educational timetabling problems, named \textit{post enrollment based course timetabling}, and \textit{curriculum based course timetabling}\\
+\\
+
+\paragraph{\textbf{Tomas Muller's approach:}}
+
+Tomas Muller's approach was actually used to solve all three problems established by ITC 2007 competition. He was able to win two of them and be finalist on the third. For solving the problems, he opted for an hybrid approach. Meaning it has more than one algorithm working at the same time for first (construction) phase and/or for the second (optimization) phase. In this case, he chose to use multiple algorithms to optimize its first solutions.\\
+\\
+In the \underline{first phase}, \textit{Tomas used Iterative Forward Search} (IFS) algorithm (REF: Muller 2005) to obtain feasible solutions and \textit{Conflict-based Statistics} (Muller et al. 2004) to prevent IFS from looping. \\
+\\
+IFS algorithm assigns a value to one unassigned variable on each iteration. These variables are exams (in examination timetabling problem) and are only assignable if the result won't cause violations of hard constraints. If it's the case, some precautions may be applied to continue with the algorithm. An assign will result in an exam (the variable assigned) being held in a room X, time Y with Z students. The variable chosen in each iteration is randomized or parametrized to, for example, assign the most difficult assignable exam first. The Conflict-based Statistics was used to memorize some previously passed conflicts and avoid repeating those for each iteration.\\
+\\
+The \underline{second phase} consists in using multiple optimization algorithms. These algorithms are applied using this order: \textit{Hill Climbing}, "edited" \textit{Great Deluge} (REF: Dueck 1993) and optionally \textit{Simulated Annealing} (REF: Kirkpatrick et al. 1983).\\
+\\
+Hill Climbing is used to optimize the current solution only, by generating a neighbor solution each iteration. The neighbor solution is only accepted if the "score" of this solution is lower than the one we had before (only soft constraints count now) and no hard constraint is violated. If there is no better solutions for a number of iterations, which is parametrized, this algorithms stops running and the Great Deluge starts doing its job.  \\
+(GREAT DELUGE??)
+\\
+When Simulated Annealing (SA) is used (remember that this method is optional) it is only used after Great Deluge reaches his bound lower limit. If this method is not meant to be used, Great Deluge might be used until reaches timeout or a global maximum. SA is a method similar to Hill Climbing, as it accepts neighbor solutions better than the current one. But this method also allows neighbor solutions that are worse than the current one, by establishing a mathematical operation using a variable called Temperature. The result of this operation stands for "how much wrong can the solution become" in order to avoid local maximums. This variable called Temperature is parametrized so as the Cooling Rate variable which is multiplied by the Temperature each iteration, in order to reduce the Temperature. This means that for each iteration, neighbor solutions will get less worse and it is possible to reach a local maximum again. If the local maximum is the same (solution is the same as before running Simulated Annealing), that means the maximum Temperature must get higher in order to avoid the local maximum and/or to possibly get a better solution. As the Temperature gets higher, Simulated Annealing is not repeated, but instead, Hill Climbing takes control again.
+
+And this is the basics of Muller's approach. More detailed explanations and implementations can be viewed on his article (REF: 2009 - Thomas Muller).
+
 
 
 \iffalse

@@ -11,3 +11,5 @@
 \contentsline {paragraph}{Integer Linear Programming:}{4}
 \contentsline {paragraph}{Graph Coloring:}{4}
 \contentsline {paragraph}{Saturation Degree Ordering:}{4}
+\contentsline {subsubsection}{\numberline {1.1.2.1}Some approaches applied to the ITC 2007 Examination timetabling problem}{5}
+\contentsline {paragraph}{\textbf {Tomas Muller's approach:}}{6}
