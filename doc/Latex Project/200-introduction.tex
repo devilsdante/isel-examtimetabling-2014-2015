@@ -109,11 +109,16 @@ The last stage is the Shaking Stage. This method "shakes" the current best solut
 \\
 Tabu Search is also used in this approach, even tho it's not used as a standalone method. This one is used along with Hill Climbing and Simulated Annealing algorithms to prevent them from looping and creating the same results. Tabu Search avoids the creation of equal neighbor solutions by not letting the same period be selected for swapping after this being selected once. This period can only be selected again after a certain number of swaps on other periods.\\
 \\
-This was a brief resume of Gogos' approach. Detailed explanations, implementations, experiments and results are present on this article (REF: 2010 - Gogos et al. - An improved multi-staged algorithmic process for the solution of the examination timetabling problem)
+This was a brief resume of Gogos' approach. Detailed explanations, implementations, experiments and results are present on this article (REF: 2010 - Gogos et al. - An improved multi-staged algorithmic process for the solution of the examination timetabling problem)\\
+\\
+It is possible to check the results of ITC 2007's Examination challenge in Figure~\ref{fig:Top5itc}, which illustrates these two top competitors on this challenge. Most of the test instances shows that Muller got the least points (black numbers and dots) and so the reason why he ended up winning. Gogo's results were a little worse (orange numbers and dots) compared to Muller's results and beat the other competitors in most of the instances, not including instances 10 and 12 which no valid solutions were found. Calculating the instance's points, Gogo ended up in second place. All the results can be seen on ITC's original site (REF: ITC's site with results) or on Muller's article (REF: 2009 - Thomas Muller - ITC2007 solver description a hybrid approach)
 
-
-
-
+\begin{figure}[h!]
+ \centering
+   \includegraphics[scale=1]{./images/presentation.png}
+   \caption{Top 5 results on ITC 2007 Examination Challenge}
+   \label{fig:Top5itc}
+\end{figure}
 
 
 
