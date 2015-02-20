@@ -17,23 +17,24 @@ The process of creating a timetable requires that the final solution follows a s
 %%%%%%%%%%%%%%%
 The goal of the present project is to create an examination timetable generator using the ITC 2007 (International Timetabling Competition) specification. The solutions will be validated using a validator developed for this purpose in order to assess the quality of the solution. It is also required that the developed prototype may work with two exam epochs which can be considered an extension to the ITC-2007 formulation. In the end an (optional) Graphical User Interface will be created in order to allow the user to edit the current solution to fit the users needs and and to allow the optimization of the edited solution. The generator will be tested using data from ITC-2007 and some actual data from six different programs lectured at ISEL.\\
 %%%%%%%%%%%%%%%
-\section{Examination timetable: State of the Art}
+\section{Examination timetabling: State of the Art}
 \label{sec:sota}
-In this topic we'll be writing about the state of art concerning examination timetable. Concretely, we'll be writing about why timetabling is a rather complex problem, some possible approaches on trying to solve a problem this type and some of the solutions already taken, specifically in ITC 2007.
+In this Section, we review the state of the art of problem at hand. We start by describing why timetabling is a rather complex problem, some possible approaches on trying to solve the problem and some of the solutions already taken, specifically for ITC 2007 data.
 %%%%%%%%%%%%%%%%%%%%
 \subsection{Timetabling Problem}
 %%%%%%%%%%%%%%%%%%%%
-Timetabling is a subject that has been under investigation for more than ten years. There is no optimal solution for creating perfect timetables. Creating timetables is a process that requires complex algorithms in which search for solutions following a set of constraints, as mentioned above. These constraints can be divided into five main classes named Unary, Binary, Capacity, Event Spread and Agent constraints (REF: 2008 Rhydian Lewis)\\
+Timetabling is a subject that has been a target of research for about 50 years. 
+Timetabling problem may be formulated as a search or optimization problem (REF: 1999 Schaerf). As a search problem, the goal consist on ﬁnding a solution (feasible solution) that satisﬁes all the hard constraints, while ignoring the soft constraints. On the contrary, posing the timetabling problem as an optimization problem, one wants to find the best solution possible with time constraints. That is, one seeks to minimize (considering a minimization problem) the violations of soft constraints while satisfying the hard
+constraints. Typically, the optimization is done after using a search procedure for finding an initial feasible solution.\\
 \\
 %%%%%%%%%%%%%%%
-Timetabling problem may be formulated as a search or optimization problem (REF: 1999 Schaerf). Search problems consists about finding a solution that satisfies all the hard constraints, which soft constraints aren't the main goal, on contrary optimization problems are problems which tries to satisfy as most soft constraints as possible after satisfying all hard constraints. Optimization problems though are more commonly used to optimize feasible solutions obtained by using a search algorithm. The main goal consists in searching for a feasible solution which satisfies all hard constraints using a search algorithm. If the user's goal is to find the best solution possible in given time, a optimization solution may be applied to the solution given by the search algorithm.\\
-\\
-%%%%%%%%%%%%%%%
-Search problems are quoted as NP-Complete (REF: NP-Complete wiki) and optimization problems are quoted as NP-Hard (REF: NP-Hard wiki) problem. Optimization problems are labeled NP-Hard because any optimization problem can be reduced to a graph coloring problem which is also NP-Hard. Graph coloring will be briefly explained later.\\
+The basic examination timetabling problem, where only the clash hard constraint is observed, reduces to the graph coloring problem [ref.]. 
+[Definir, resumidamente, o graph coloring problem.]
+This is a well studied hard problem. Deciding whether a solution exists in the Graph Coloring problem is a NP-complete problem [ref. Arora and Barak book titled "Computational Complexity"]. Considering the graph coloring as an optimization problem, it is proven that the task of finding the optimal solution is a NP-Hard problem [ref. Arora and Barak book titled "Computational Complexity"].\\
 \\
 
-\subsection{Solution approaches}
-\label{subsection:SolutionsAppr}
+\subsection{Existing approaches}
+\label{subsection:ExistingAppr}
 
 Timetabling solution approaches may be the most difficult decision making part of the project. Considering the number of possible solution approaches that can be made, but still only a short number of those approaches may have good solutions within a reasonable amount of time. Considering the state of art, some combinations of algorithms appear to be better than others, if well implemented and optimized. These algorithms normally are divided in search algorithms and optimization algorithms in which are known as Heuristics and Meta-heuristics. Both of these can be used to generate solutions separately, but normally Heuristics are used to generate a solution not guaranteed to be optimal, but good enough to at least solve all the hard constraints. In contrary the Meta-heuristics are often only to, given a feasible solution, generate an even better optimized solution, in which the main goal is to solve the most soft constraints possible in order to get the lowest score. Heuristics though are problem-dependent, meaning that these are adapted to a specific problem in which take advantage of its details. Considering these algorithms are often greedy, they tend to get trapped on local optimum. Meta-heuristics are problem-independent, meaning they can't take advantages of specific problems. These are often not greedy so they can be used to solve (optimize) any problem given.\\
 \\
