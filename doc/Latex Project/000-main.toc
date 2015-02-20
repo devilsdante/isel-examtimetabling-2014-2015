@@ -1,13 +1,12 @@
-\contentsline {chapter}{Acknowledgments}{v}
-\contentsline {chapter}{List of Figures}{xiii}
-\contentsline {chapter}{List of Tables}{xv}
-\contentsline {chapter}{List of Code Listings}{xvii}
-\contentsline {chapter}{List of Acronyms}{xvii}
+\contentsline {chapter}{List of Figures}{v}
+\contentsline {chapter}{List of Tables}{vii}
+\contentsline {chapter}{List of Code Listings}{ix}
+\contentsline {chapter}{List of Acronyms}{ix}
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \contentsline {section}{\numberline {1.1}Examination timetable: State of the Art}{2}
 \contentsline {subsection}{\numberline {1.1.1}Timetabling Problem}{2}
-\contentsline {subsection}{\numberline {1.1.2}Solution approaches}{2}
-\contentsline {paragraph}{Constraint Programming Based Technique:}{3}
+\contentsline {subsection}{\numberline {1.1.2}Solution approaches}{3}
+\contentsline {paragraph}{Constraint Programming Based Technique:}{4}
 \contentsline {paragraph}{Integer Linear Programming:}{4}
 \contentsline {paragraph}{Graph Coloring:}{4}
 \contentsline {paragraph}{Saturation Degree Ordering:}{4}

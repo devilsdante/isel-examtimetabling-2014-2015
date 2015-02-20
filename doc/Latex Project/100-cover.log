@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.11.27)  6 DEC 2014 18:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.19)  19 FEB 2015 19:27
 entering extended mode
 **100-cover.tex
 
-("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\Latex Project\100-co
-ver.tex"
+("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
+100-cover.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -47,7 +47,7 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 3--3
 
 ! Undefined control sequence.
 l.4 		\includegraphics
-                      [width=5 cm]{./images/isel_logo.jpg} \\[0.5cm]
+                      [width=7 cm]{./images/Logo_ISEL2.png} \\[0.5cm]
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -61,7 +61,7 @@ Missing character: There is no d in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no = in font nullfont!
-Missing character: There is no 5 in font nullfont!
+Missing character: There is no 7 in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no m in font nullfont!
 Missing character: There is no ] in font nullfont!
@@ -74,15 +74,15 @@ Missing character: There is no g in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no / in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no l in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no o in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4 		\includegraphics[width=5 cm]{./images/isel_
-                                                 logo.jpg} \\[0.5cm]
+l.4 		\includegraphics[width=7 cm]{./images/Logo_
+                                                 ISEL2.png} \\[0.5cm]
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
@@ -91,7 +91,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 4.
 ! Extra }, or forgotten $.
-l.4 ...raphics[width=5 cm]{./images/isel_logo.jpg}
+l.4 ...aphics[width=7 cm]{./images/Logo_ISEL2.png}
                                                    \\[0.5cm]
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -106,7 +106,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...hics[width=5 cm]{./images/isel_logo.jpg} \\
+l.4 ...ics[width=7 cm]{./images/Logo_ISEL2.png} \\
                                                   [0.5cm]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -115,7 +115,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4 ...hics[width=5 cm]{./images/isel_logo.jpg} \\
+l.4 ...ics[width=7 cm]{./images/Logo_ISEL2.png} \\
                                                   [0.5cm]
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -123,7 +123,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.4 ...hics[width=5 cm]{./images/isel_logo.jpg} \\
+l.4 ...ics[width=7 cm]{./images/Logo_ISEL2.png} \\
                                                   [0.5cm]
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -132,8 +132,8 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (35.52037pt too wide) in paragraph at lines 4--4
- $[]\OML/cmm/m/it/10 ogo:jpg[]$ 
+Overfull \hbox (50.00027pt too wide) in paragraph at lines 4--4
+ $[]\OML/cmm/m/it/10 SEL\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 :png[]$ 
  []
 
 ! Undefined control sequence.
@@ -425,123 +425,13 @@ LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <18> not available
 (Font)              size <17.28> substituted on input line 9.
 
 
-Overfull \hbox (78.45996pt too wide) in paragraph at lines 9--9
- []\OT1/cmr/bx/n/17.28 GuideMe 
+Overfull \hbox (48.66998pt too wide) in paragraph at lines 9--9
+ []\OT1/cmr/bx/n/17.28 Exam 
  []
 
 
-Overfull \hbox (6.48pt too wide) in paragraph at lines 9--9
- \OT1/cmr/bx/n/17.28 - 
- []
-
-
-Overfull \hbox (34.08998pt too wide) in paragraph at lines 9--9
- \OT1/cmr/bx/n/17.28 Ser- 
- []
-
-
-Overfull \hbox (33.16998pt too wide) in paragraph at lines 9--9
- \OT1/cmr/bx/n/17.28 vice 
- []
-
-
-Overfull \hbox (23.59998pt too wide) in paragraph at lines 9--9
- \OT1/cmr/bx/n/17.28 for 
- []
-
-
-Overfull \hbox (41.03996pt too wide) in paragraph at lines 9--9
- \OT1/cmr/bx/n/17.28 Con- 
- []
-
-
-Overfull \hbox (37.90799pt too wide) in paragraph at lines 9--9
- \OT1/cmr/bx/n/17.28 sult- 
- []
-
-
-Overfull \hbox (31.31996pt too wide) in paragraph at lines 9--9
- \OT1/cmr/bx/n/17.28 ing, 
- []
-
-
-Overfull \hbox (41.35999pt too wide) in paragraph at lines 9--9
- \OT1/cmr/bx/n/17.28 Pub- 
- []
-
-
-Overfull \hbox (17.27998pt too wide) in paragraph at lines 9--9
- \OT1/cmr/bx/n/17.28 li- 
- []
-
-
-Overfull \hbox (24.56999pt too wide) in paragraph at lines 9--9
- \OT1/cmr/bx/n/17.28 ca- 
- []
-
-
-Overfull \hbox (33.47997pt too wide) in paragraph at lines 9--9
- \OT1/cmr/bx/n/17.28 tion 
- []
-
-
-Overfull \hbox (31.04997pt too wide) in paragraph at lines 9--9
- \OT1/cmr/bx/n/17.28 and 
- []
-
-
-Overfull \hbox (38.49pt too wide) in paragraph at lines 9--9
- \OT1/cmr/bx/n/17.28 Rec- 
- []
-
-
-Overfull \hbox (32.39998pt too wide) in paragraph at lines 9--9
- \OT1/cmr/bx/n/17.28 om- 
- []
-
-
-Overfull \hbox (42.34998pt too wide) in paragraph at lines 9--9
- \OT1/cmr/bx/n/17.28 men- 
- []
-
-
-Overfull \hbox (26.72998pt too wide) in paragraph at lines 9--9
- \OT1/cmr/bx/n/17.28 da- 
- []
-
-
-Overfull \hbox (33.47997pt too wide) in paragraph at lines 9--9
- \OT1/cmr/bx/n/17.28 tion 
- []
-
-
-Overfull \hbox (15.65997pt too wide) in paragraph at lines 9--9
- \OT1/cmr/bx/n/17.28 of 
- []
-
-
-Overfull \hbox (59.90794pt too wide) in paragraph at lines 9--9
- \OT1/cmr/bx/n/17.28 Touris- 
- []
-
-
-Overfull \hbox (21.59999pt too wide) in paragraph at lines 9--9
- \OT1/cmr/bx/n/17.28 tic 
- []
-
-
-Overfull \hbox (27.87997pt too wide) in paragraph at lines 9--9
- \OT1/cmr/bx/n/17.28 Lo- 
- []
-
-
-Overfull \hbox (24.56999pt too wide) in paragraph at lines 9--9
- \OT1/cmr/bx/n/17.28 ca- 
- []
-
-
-Overfull \hbox (41.14798pt too wide) in paragraph at lines 9--9
- \OT1/cmr/bx/n/17.28 tions 
+Overfull \hbox (103.3899pt too wide) in paragraph at lines 9--9
+ \OT1/cmr/bx/n/17.28 Timetabling 
  []
 
 
@@ -549,13 +439,28 @@ LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <16> not available
 (Font)              size <17.28> substituted on input line 10.
 
 
-Overfull \hbox (59.46477pt too wide) in paragraph at lines 12--12
- []\OT1/cmr/m/n/17.28 ARTEM 
+Overfull \hbox (65.68832pt too wide) in paragraph at lines 12--12
+ []\OT1/cmr/m/n/17.28 MIGUEL 
  []
 
 
-Overfull \hbox (81.84933pt too wide) in paragraph at lines 12--12
- \OT1/cmr/m/n/17.28 UMANETS 
+Overfull \hbox (23.06508pt too wide) in paragraph at lines 12--12
+ \OT1/cmr/m/n/17.28 DE 
+ []
+
+
+Overfull \hbox (52.70091pt too wide) in paragraph at lines 12--12
+ \OT1/cmr/m/n/17.28 BRITO 
+ []
+
+
+Overfull \hbox (10.85547pt too wide) in paragraph at lines 12--12
+ \OT1/cmr/m/n/17.28 E 
+ []
+
+
+Overfull \hbox (55.62457pt too wide) in paragraph at lines 12--12
+ \OT1/cmr/m/n/17.28 NUNES 
  []
 
 Missing character: There is no √ in font cmr12!
@@ -744,9 +649,42 @@ Overfull \hbox (26.82889pt too wide) in paragraph at lines 17--17
  \OT1/cmr/m/n/12 dores 
  []
 
+Missing character: There is no √ in font cmr17!
+Missing character: There is no ≥ in font cmr17!
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \hbox (55.4966pt too wide) in paragraph at lines 19--20
+ []\OT1/cmr/m/n/17.28 Relatrio 
+ []
 
+
+Overfull \hbox (15.84985pt too wide) in paragraph at lines 19--20
+ \OT1/cmr/m/n/17.28 de 
+ []
+
+
+Overfull \hbox (30.11636pt too wide) in paragraph at lines 19--20
+ \OT1/cmr/m/n/17.28 Pro- 
+ []
+
+
+Overfull \hbox (41.41066pt too wide) in paragraph at lines 19--20
+ \OT1/cmr/m/n/17.28 gresso 
+ []
+
+
+Overfull \hbox (46.25674pt too wide) in paragraph at lines 45--46
+ []\OT1/cmr/bx/n/10 Fevereiro 
+ []
+
+
+Overfull \hbox (11.65967pt too wide) in paragraph at lines 45--46
+ \OT1/cmr/bx/n/10 de 
+ []
+
+
+Overfull \hbox (22.99988pt too wide) in paragraph at lines 45--46
+ \OT1/cmr/bx/n/10 2015 
+ []
 
 
 ! LaTeX Error: The font size command \normalsize is not defined:
@@ -756,27 +694,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.17 ...enharia Inform√°tica e de Computadores} \\
-                                                  [0.8cm]
+l.46 	\end{center}
+                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Overfull \hbox (51.59003pt too wide) in paragraph at lines 43--44
- []\OT1/cmr/bx/n/10 Novembro 
- []
-
-
-Overfull \hbox (11.65967pt too wide) in paragraph at lines 43--44
- \OT1/cmr/bx/n/10 de 
- []
-
-
-Overfull \hbox (22.99988pt too wide) in paragraph at lines 43--44
- \OT1/cmr/bx/n/10 2013 
- []
-
 
 ! LaTeX Error: The font size command \normalsize is not defined:
                there is probably something wrong with the class file.
@@ -785,20 +709,20 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.46 	\newpage
+l.48 	\newpage
               
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 [2]
-Overfull \hbox (20.0pt too wide) in paragraph at lines 52--52
+Overfull \hbox (20.0pt too wide) in paragraph at lines 54--54
 [] 
  []
 
 ! Undefined control sequence.
-l.53 		\includegraphics
-                       [width=5 cm]{./images/isel_logo.jpg} \\[0.5cm]
+l.55 		\includegraphics
+                       [width=7 cm]{./images/Logo_ISEL2.png} \\[0.5cm]
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -812,7 +736,7 @@ Missing character: There is no d in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no = in font nullfont!
-Missing character: There is no 5 in font nullfont!
+Missing character: There is no 7 in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no m in font nullfont!
 Missing character: There is no ] in font nullfont!
@@ -825,20 +749,20 @@ Missing character: There is no g in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no / in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no l in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no o in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.53 		\includegraphics[width=5 cm]{./images/isel_
-                                                  logo.jpg} \\[0.5cm]
+l.55 		\includegraphics[width=7 cm]{./images/Logo_
+                                                  ISEL2.png} \\[0.5cm]
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.53 ...aphics[width=5 cm]{./images/isel_logo.jpg}
+l.55 ...phics[width=7 cm]{./images/Logo_ISEL2.png}
                                                    \\[0.5cm]
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -853,7 +777,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.53 ...ics[width=5 cm]{./images/isel_logo.jpg} \\
+l.55 ...cs[width=7 cm]{./images/Logo_ISEL2.png} \\
                                                   [0.5cm]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -862,7 +786,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.53 ...ics[width=5 cm]{./images/isel_logo.jpg} \\
+l.55 ...cs[width=7 cm]{./images/Logo_ISEL2.png} \\
                                                   [0.5cm]
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -870,7 +794,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.53 ...ics[width=5 cm]{./images/isel_logo.jpg} \\
+l.55 ...cs[width=7 cm]{./images/Logo_ISEL2.png} \\
                                                   [0.5cm]
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -879,12 +803,12 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (35.52037pt too wide) in paragraph at lines 53--53
- $[]\OML/cmm/m/it/10 ogo:jpg[]$ 
+Overfull \hbox (50.00027pt too wide) in paragraph at lines 55--55
+ $[]\OML/cmm/m/it/10 SEL\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 :png[]$ 
  []
 
 ! Undefined control sequence.
-l.54 		{\Large
+l.56 		{\Large
                \textbf{INSTITUTO SUPERIOR DE ENGENHARIA DE LISBOA}} \\[0.5cm]
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -893,62 +817,62 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (65.59685pt too wide) in paragraph at lines 54--54
+Overfull \hbox (65.59685pt too wide) in paragraph at lines 56--56
  []\OT1/cmr/bx/n/10 INSTITUTO 
  []
 
 
-Overfull \hbox (19.06934pt too wide) in paragraph at lines 54--54
+Overfull \hbox (19.06934pt too wide) in paragraph at lines 56--56
  \OT1/cmr/bx/n/10 SU- 
  []
 
 
-Overfull \hbox (19.2499pt too wide) in paragraph at lines 54--54
+Overfull \hbox (19.2499pt too wide) in paragraph at lines 56--56
  \OT1/cmr/bx/n/10 PE- 
  []
 
 
-Overfull \hbox (30.24983pt too wide) in paragraph at lines 54--54
+Overfull \hbox (30.24983pt too wide) in paragraph at lines 56--56
  \OT1/cmr/bx/n/10 RIOR 
  []
 
 
-Overfull \hbox (16.37491pt too wide) in paragraph at lines 54--54
+Overfull \hbox (16.37491pt too wide) in paragraph at lines 56--56
  \OT1/cmr/bx/n/10 DE 
  []
 
 
-Overfull \hbox (20.38878pt too wide) in paragraph at lines 54--54
+Overfull \hbox (20.38878pt too wide) in paragraph at lines 56--56
  \OT1/cmr/bx/n/10 EN- 
  []
 
 
-Overfull \hbox (29.43039pt too wide) in paragraph at lines 54--54
+Overfull \hbox (29.43039pt too wide) in paragraph at lines 56--56
  \OT1/cmr/bx/n/10 GEN- 
  []
 
 
-Overfull \hbox (39.37479pt too wide) in paragraph at lines 54--54
+Overfull \hbox (39.37479pt too wide) in paragraph at lines 56--56
  \OT1/cmr/bx/n/10 HARIA 
  []
 
 
-Overfull \hbox (16.37491pt too wide) in paragraph at lines 54--54
+Overfull \hbox (16.37491pt too wide) in paragraph at lines 56--56
  \OT1/cmr/bx/n/10 DE 
  []
 
 
-Overfull \hbox (21.49988pt too wide) in paragraph at lines 54--54
+Overfull \hbox (21.49988pt too wide) in paragraph at lines 56--56
  \OT1/cmr/bx/n/10 LIS- 
  []
 
 
-Overfull \hbox (25.1943pt too wide) in paragraph at lines 54--54
+Overfull \hbox (25.1943pt too wide) in paragraph at lines 56--56
  \OT1/cmr/bx/n/10 BOA 
  []
 
 ! Undefined control sequence.
-l.55 		{\Large
+l.57 		{\Large
                \textbf{√Årea Departamental de Engenharia de \\Electr√≥nica e...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -959,57 +883,57 @@ and I'll forget about whatever was undefined.
 Missing character: There is no √ in font cmbx10!
 Missing character: There is no Å in font cmbx10!
 
-Overfull \hbox (15.59714pt too wide) in paragraph at lines 55--55
+Overfull \hbox (15.59714pt too wide) in paragraph at lines 57--57
  []\OT1/cmr/bx/n/10 rea 
  []
 
 
-Overfull \hbox (17.92352pt too wide) in paragraph at lines 55--55
+Overfull \hbox (17.92352pt too wide) in paragraph at lines 57--57
  \OT1/cmr/bx/n/10 De- 
  []
 
 
-Overfull \hbox (20.5485pt too wide) in paragraph at lines 55--55
+Overfull \hbox (20.5485pt too wide) in paragraph at lines 57--57
  \OT1/cmr/bx/n/10 par- 
  []
 
 
-Overfull \hbox (13.89574pt too wide) in paragraph at lines 55--55
+Overfull \hbox (13.89574pt too wide) in paragraph at lines 57--57
  \OT1/cmr/bx/n/10 ta- 
  []
 
 
-Overfull \hbox (25.07626pt too wide) in paragraph at lines 55--55
+Overfull \hbox (25.07626pt too wide) in paragraph at lines 57--57
  \OT1/cmr/bx/n/10 men- 
  []
 
 
-Overfull \hbox (13.25685pt too wide) in paragraph at lines 55--55
+Overfull \hbox (13.25685pt too wide) in paragraph at lines 57--57
  \OT1/cmr/bx/n/10 tal 
  []
 
 
-Overfull \hbox (11.65967pt too wide) in paragraph at lines 55--55
+Overfull \hbox (11.65967pt too wide) in paragraph at lines 57--57
  \OT1/cmr/bx/n/10 de 
  []
 
 
-Overfull \hbox (17.77768pt too wide) in paragraph at lines 55--55
+Overfull \hbox (17.77768pt too wide) in paragraph at lines 57--57
  \OT1/cmr/bx/n/10 En- 
  []
 
 
-Overfull \hbox (21.24295pt too wide) in paragraph at lines 55--55
+Overfull \hbox (21.24295pt too wide) in paragraph at lines 57--57
  \OT1/cmr/bx/n/10 gen- 
  []
 
 
-Overfull \hbox (25.49983pt too wide) in paragraph at lines 55--55
+Overfull \hbox (25.49983pt too wide) in paragraph at lines 57--57
  \OT1/cmr/bx/n/10 haria 
  []
 
 
-Overfull \hbox (11.65967pt too wide) in paragraph at lines 55--55
+Overfull \hbox (11.65967pt too wide) in paragraph at lines 57--57
  \OT1/cmr/bx/n/10 de 
  []
 
@@ -1018,62 +942,62 @@ Missing character: There is no ≥ in font cmbx10!
 Missing character: There is no √ in font cmbx10!
 Missing character: There is no µ in font cmbx10!
 
-Overfull \hbox (50.62473pt too wide) in paragraph at lines 55--55
+Overfull \hbox (50.62473pt too wide) in paragraph at lines 57--57
  []\OT1/cmr/bx/n/10 Electrnica 
  []
 
 
-Overfull \hbox (5.27081pt too wide) in paragraph at lines 55--55
+Overfull \hbox (5.27081pt too wide) in paragraph at lines 57--57
  \OT1/cmr/bx/n/10 e 
  []
 
 
-Overfull \hbox (24.611pt too wide) in paragraph at lines 55--55
+Overfull \hbox (24.611pt too wide) in paragraph at lines 57--57
  \OT1/cmr/bx/n/10 Tele- 
  []
 
 
-Overfull \hbox (14.69437pt too wide) in paragraph at lines 55--55
+Overfull \hbox (14.69437pt too wide) in paragraph at lines 57--57
  \OT1/cmr/bx/n/10 co- 
  []
 
 
-Overfull \hbox (19.48601pt too wide) in paragraph at lines 55--55
+Overfull \hbox (19.48601pt too wide) in paragraph at lines 57--57
  \OT1/cmr/bx/n/10 mu- 
  []
 
 
-Overfull \hbox (35.20256pt too wide) in paragraph at lines 55--55
+Overfull \hbox (35.20256pt too wide) in paragraph at lines 57--57
  \OT1/cmr/bx/n/10 nicaces 
  []
 
 
-Overfull \hbox (5.27081pt too wide) in paragraph at lines 55--55
+Overfull \hbox (5.27081pt too wide) in paragraph at lines 57--57
  \OT1/cmr/bx/n/10 e 
  []
 
 
-Overfull \hbox (11.65967pt too wide) in paragraph at lines 55--55
+Overfull \hbox (11.65967pt too wide) in paragraph at lines 57--57
  \OT1/cmr/bx/n/10 de 
  []
 
 
-Overfull \hbox (27.47208pt too wide) in paragraph at lines 55--55
+Overfull \hbox (27.47208pt too wide) in paragraph at lines 57--57
  \OT1/cmr/bx/n/10 Com- 
  []
 
 
-Overfull \hbox (26.67345pt too wide) in paragraph at lines 55--55
+Overfull \hbox (26.67345pt too wide) in paragraph at lines 57--57
  \OT1/cmr/bx/n/10 puta- 
  []
 
 
-Overfull \hbox (26.68181pt too wide) in paragraph at lines 55--55
+Overfull \hbox (26.68181pt too wide) in paragraph at lines 57--57
  \OT1/cmr/bx/n/10 dores 
  []
 
 ! Undefined control sequence.
-l.56 		\includegraphics
+l.58 		\includegraphics
                        [height=3.5 cm]{./images/guide_me_logo.jpg} \\[0.8cm]
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1112,13 +1036,13 @@ Missing character: There is no e in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.56 ...udegraphics[height=3.5 cm]{./images/guide_
+l.58 ...udegraphics[height=3.5 cm]{./images/guide_
                                                   me_logo.jpg} \\[0.8cm]
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.56 ...height=3.5 cm]{./images/guide_me_logo.jpg}
+l.58 ...height=3.5 cm]{./images/guide_me_logo.jpg}
                                                    \\[0.8cm]
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1133,7 +1057,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.56 ...ght=3.5 cm]{./images/guide_me_logo.jpg} \\
+l.58 ...ght=3.5 cm]{./images/guide_me_logo.jpg} \\
                                                   [0.8cm]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1142,7 +1066,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.56 ...ght=3.5 cm]{./images/guide_me_logo.jpg} \\
+l.58 ...ght=3.5 cm]{./images/guide_me_logo.jpg} \\
                                                   [0.8cm]
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1150,7 +1074,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.56 ...ght=3.5 cm]{./images/guide_me_logo.jpg} \\
+l.58 ...ght=3.5 cm]{./images/guide_me_logo.jpg} \\
                                                   [0.8cm]
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1159,339 +1083,266 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (47.77275pt too wide) in paragraph at lines 56--56
+Overfull \hbox (47.77275pt too wide) in paragraph at lines 58--58
  $[]\OML/cmm/m/it/10 e[]ogo:jpg[]$ 
  []
 
 
-Overfull \hbox (78.45996pt too wide) in paragraph at lines 58--58
- []\OT1/cmr/bx/n/17.28 GuideMe 
+Overfull \hbox (48.66998pt too wide) in paragraph at lines 60--60
+ []\OT1/cmr/bx/n/17.28 Exam 
  []
 
 
-Overfull \hbox (6.48pt too wide) in paragraph at lines 58--58
- \OT1/cmr/bx/n/17.28 - 
+Overfull \hbox (103.3899pt too wide) in paragraph at lines 60--60
+ \OT1/cmr/bx/n/17.28 Timetabling 
  []
 
 
-Overfull \hbox (34.08998pt too wide) in paragraph at lines 58--58
- \OT1/cmr/bx/n/17.28 Ser- 
+Overfull \hbox (65.68832pt too wide) in paragraph at lines 63--63
+ []\OT1/cmr/m/n/17.28 MIGUEL 
  []
 
 
-Overfull \hbox (33.16998pt too wide) in paragraph at lines 58--58
- \OT1/cmr/bx/n/17.28 vice 
+Overfull \hbox (23.06508pt too wide) in paragraph at lines 63--63
+ \OT1/cmr/m/n/17.28 DE 
  []
 
 
-Overfull \hbox (23.59998pt too wide) in paragraph at lines 58--58
- \OT1/cmr/bx/n/17.28 for 
+Overfull \hbox (52.70091pt too wide) in paragraph at lines 63--63
+ \OT1/cmr/m/n/17.28 BRITO 
  []
 
 
-Overfull \hbox (41.03996pt too wide) in paragraph at lines 58--58
- \OT1/cmr/bx/n/17.28 Con- 
+Overfull \hbox (10.85547pt too wide) in paragraph at lines 63--63
+ \OT1/cmr/m/n/17.28 E 
  []
 
 
-Overfull \hbox (37.90799pt too wide) in paragraph at lines 58--58
- \OT1/cmr/bx/n/17.28 sult- 
- []
-
-
-Overfull \hbox (31.31996pt too wide) in paragraph at lines 58--58
- \OT1/cmr/bx/n/17.28 ing, 
- []
-
-
-Overfull \hbox (41.35999pt too wide) in paragraph at lines 58--58
- \OT1/cmr/bx/n/17.28 Pub- 
- []
-
-
-Overfull \hbox (17.27998pt too wide) in paragraph at lines 58--58
- \OT1/cmr/bx/n/17.28 li- 
- []
-
-
-Overfull \hbox (24.56999pt too wide) in paragraph at lines 58--58
- \OT1/cmr/bx/n/17.28 ca- 
- []
-
-
-Overfull \hbox (33.47997pt too wide) in paragraph at lines 58--58
- \OT1/cmr/bx/n/17.28 tion 
- []
-
-
-Overfull \hbox (31.04997pt too wide) in paragraph at lines 58--58
- \OT1/cmr/bx/n/17.28 and 
- []
-
-
-Overfull \hbox (38.49pt too wide) in paragraph at lines 58--58
- \OT1/cmr/bx/n/17.28 Rec- 
- []
-
-
-Overfull \hbox (32.39998pt too wide) in paragraph at lines 58--58
- \OT1/cmr/bx/n/17.28 om- 
- []
-
-
-Overfull \hbox (42.34998pt too wide) in paragraph at lines 58--58
- \OT1/cmr/bx/n/17.28 men- 
- []
-
-
-Overfull \hbox (26.72998pt too wide) in paragraph at lines 58--58
- \OT1/cmr/bx/n/17.28 da- 
- []
-
-
-Overfull \hbox (33.47997pt too wide) in paragraph at lines 58--58
- \OT1/cmr/bx/n/17.28 tion 
- []
-
-
-Overfull \hbox (15.65997pt too wide) in paragraph at lines 58--58
- \OT1/cmr/bx/n/17.28 of 
- []
-
-
-Overfull \hbox (59.90794pt too wide) in paragraph at lines 58--58
- \OT1/cmr/bx/n/17.28 Touris- 
- []
-
-
-Overfull \hbox (21.59999pt too wide) in paragraph at lines 58--58
- \OT1/cmr/bx/n/17.28 tic 
- []
-
-
-Overfull \hbox (27.87997pt too wide) in paragraph at lines 58--58
- \OT1/cmr/bx/n/17.28 Lo- 
- []
-
-
-Overfull \hbox (24.56999pt too wide) in paragraph at lines 58--58
- \OT1/cmr/bx/n/17.28 ca- 
- []
-
-
-Overfull \hbox (41.14798pt too wide) in paragraph at lines 58--58
- \OT1/cmr/bx/n/17.28 tions 
- []
-
-
-Overfull \hbox (59.46477pt too wide) in paragraph at lines 61--61
- []\OT1/cmr/m/n/17.28 ARTEM 
- []
-
-
-Overfull \hbox (81.84933pt too wide) in paragraph at lines 61--61
- \OT1/cmr/m/n/17.28 UMANETS 
+Overfull \hbox (55.62457pt too wide) in paragraph at lines 63--63
+ \OT1/cmr/m/n/17.28 NUNES 
  []
 
 Missing character: There is no √ in font cmr12!
 Missing character: There is no ° in font cmr12!
 
-Overfull \hbox (70.69244pt too wide) in paragraph at lines 63--63
+Overfull \hbox (70.69244pt too wide) in paragraph at lines 65--65
  []\OT1/cmr/m/n/14.4 (Licenciado 
  []
 
 
-Overfull \hbox (18.01645pt too wide) in paragraph at lines 63--63
+Overfull \hbox (18.01645pt too wide) in paragraph at lines 65--65
  \OT1/cmr/m/n/14.4 em 
  []
 
 
-Overfull \hbox (22.1264pt too wide) in paragraph at lines 63--63
+Overfull \hbox (22.1264pt too wide) in paragraph at lines 65--65
  \OT1/cmr/m/n/14.4 En- 
  []
 
 
-Overfull \hbox (25.84967pt too wide) in paragraph at lines 63--63
+Overfull \hbox (25.84967pt too wide) in paragraph at lines 65--65
  \OT1/cmr/m/n/14.4 gen- 
  []
 
 
-Overfull \hbox (31.33293pt too wide) in paragraph at lines 63--63
+Overfull \hbox (31.33293pt too wide) in paragraph at lines 65--65
  \OT1/cmr/m/n/14.4 haria 
  []
 
 
-Overfull \hbox (17.6198pt too wide) in paragraph at lines 63--63
+Overfull \hbox (17.6198pt too wide) in paragraph at lines 65--65
  \OT1/cmr/m/n/14.4 In- 
  []
 
 
-Overfull \hbox (50.91602pt too wide) in paragraph at lines 63--63
+Overfull \hbox (50.91602pt too wide) in paragraph at lines 65--65
  \OT1/cmr/m/n/14.4 formtica 
  []
 
 
-Overfull \hbox (6.26659pt too wide) in paragraph at lines 63--63
+Overfull \hbox (6.26659pt too wide) in paragraph at lines 65--65
  \OT1/cmr/m/n/14.4 e 
  []
 
 
-Overfull \hbox (14.09982pt too wide) in paragraph at lines 63--63
+Overfull \hbox (14.09982pt too wide) in paragraph at lines 65--65
  \OT1/cmr/m/n/14.4 de 
  []
 
 
-Overfull \hbox (33.68292pt too wide) in paragraph at lines 63--63
+Overfull \hbox (33.68292pt too wide) in paragraph at lines 65--65
  \OT1/cmr/m/n/14.4 Com- 
  []
 
 
-Overfull \hbox (32.89958pt too wide) in paragraph at lines 63--63
+Overfull \hbox (32.89958pt too wide) in paragraph at lines 65--65
  \OT1/cmr/m/n/14.4 puta- 
  []
 
 
-Overfull \hbox (37.67786pt too wide) in paragraph at lines 63--63
+Overfull \hbox (37.67786pt too wide) in paragraph at lines 65--65
  \OT1/cmr/m/n/14.4 dores) 
  []
 
 Missing character: There is no √ in font cmr12!
 Missing character: There is no £ in font cmr12!
 
-Overfull \hbox (46.02036pt too wide) in paragraph at lines 66--66
+Overfull \hbox (46.02036pt too wide) in paragraph at lines 68--68
  []\OT1/cmr/m/n/12 Trabalho 
  []
 
 
-Overfull \hbox (11.74988pt too wide) in paragraph at lines 66--66
+Overfull \hbox (11.74988pt too wide) in paragraph at lines 68--68
  \OT1/cmr/m/n/12 de 
  []
 
 
-Overfull \hbox (20.88867pt too wide) in paragraph at lines 66--66
+Overfull \hbox (20.88867pt too wide) in paragraph at lines 68--68
  \OT1/cmr/m/n/12 pro- 
  []
 
 
-Overfull \hbox (19.25674pt too wide) in paragraph at lines 66--66
+Overfull \hbox (19.25674pt too wide) in paragraph at lines 68--68
  \OT1/cmr/m/n/12 jeto 
  []
 
 
-Overfull \hbox (13.70819pt too wide) in paragraph at lines 66--66
+Overfull \hbox (13.70819pt too wide) in paragraph at lines 68--68
  \OT1/cmr/m/n/12 re- 
  []
 
 
-Overfull \hbox (13.05542pt too wide) in paragraph at lines 66--66
+Overfull \hbox (13.05542pt too wide) in paragraph at lines 68--68
  \OT1/cmr/m/n/12 al- 
  []
 
 
-Overfull \hbox (26.76361pt too wide) in paragraph at lines 66--66
+Overfull \hbox (26.76361pt too wide) in paragraph at lines 68--68
  \OT1/cmr/m/n/12 izado 
  []
 
 
-Overfull \hbox (22.84698pt too wide) in paragraph at lines 66--66
+Overfull \hbox (22.84698pt too wide) in paragraph at lines 68--68
  \OT1/cmr/m/n/12 para 
  []
 
 
-Overfull \hbox (39.81903pt too wide) in paragraph at lines 66--66
+Overfull \hbox (39.81903pt too wide) in paragraph at lines 68--68
  \OT1/cmr/m/n/12 obtenco 
  []
 
 
-Overfull \hbox (12.40265pt too wide) in paragraph at lines 66--66
+Overfull \hbox (12.40265pt too wide) in paragraph at lines 68--68
  \OT1/cmr/m/n/12 do 
  []
 
 
-Overfull \hbox (22.84698pt too wide) in paragraph at lines 66--66
+Overfull \hbox (22.84698pt too wide) in paragraph at lines 68--68
  \OT1/cmr/m/n/12 grau 
  []
 
 Missing character: There is no √ in font cmr12!
 Missing character: There is no ° in font cmr12!
 
-Overfull \hbox (11.74988pt too wide) in paragraph at lines 66--66
+Overfull \hbox (11.74988pt too wide) in paragraph at lines 68--68
  []\OT1/cmr/m/n/12 de 
  []
 
 
-Overfull \hbox (34.98436pt too wide) in paragraph at lines 66--66
+Overfull \hbox (34.98436pt too wide) in paragraph at lines 68--68
  \OT1/cmr/m/n/12 Mestre 
  []
 
 
-Overfull \hbox (15.01373pt too wide) in paragraph at lines 66--66
+Overfull \hbox (15.01373pt too wide) in paragraph at lines 68--68
  \OT1/cmr/m/n/12 em 
  []
 
 
-Overfull \hbox (18.4387pt too wide) in paragraph at lines 66--66
+Overfull \hbox (18.4387pt too wide) in paragraph at lines 68--68
  \OT1/cmr/m/n/12 En- 
  []
 
 
-Overfull \hbox (21.54144pt too wide) in paragraph at lines 66--66
+Overfull \hbox (21.54144pt too wide) in paragraph at lines 68--68
  \OT1/cmr/m/n/12 gen- 
  []
 
 
-Overfull \hbox (26.11084pt too wide) in paragraph at lines 66--66
+Overfull \hbox (26.11084pt too wide) in paragraph at lines 68--68
  \OT1/cmr/m/n/12 haria 
  []
 
 
-Overfull \hbox (14.68318pt too wide) in paragraph at lines 66--66
+Overfull \hbox (14.68318pt too wide) in paragraph at lines 68--68
  \OT1/cmr/m/n/12 In- 
  []
 
 
-Overfull \hbox (42.43011pt too wide) in paragraph at lines 66--66
+Overfull \hbox (42.43011pt too wide) in paragraph at lines 68--68
  \OT1/cmr/m/n/12 formtica 
  []
 
 
-Overfull \hbox (5.22217pt too wide) in paragraph at lines 66--66
+Overfull \hbox (5.22217pt too wide) in paragraph at lines 68--68
  \OT1/cmr/m/n/12 e 
  []
 
 
-Overfull \hbox (11.74988pt too wide) in paragraph at lines 66--66
+Overfull \hbox (11.74988pt too wide) in paragraph at lines 68--68
  \OT1/cmr/m/n/12 de 
  []
 
 
-Overfull \hbox (28.06915pt too wide) in paragraph at lines 66--66
+Overfull \hbox (28.06915pt too wide) in paragraph at lines 68--68
  \OT1/cmr/m/n/12 Com- 
  []
 
 
-Overfull \hbox (27.41638pt too wide) in paragraph at lines 66--66
+Overfull \hbox (27.41638pt too wide) in paragraph at lines 68--68
  \OT1/cmr/m/n/12 puta- 
  []
 
 
-Overfull \hbox (26.82889pt too wide) in paragraph at lines 66--66
+Overfull \hbox (26.82889pt too wide) in paragraph at lines 68--68
  \OT1/cmr/m/n/12 dores 
  []
 
+Missing character: There is no √ in font cmr17!
+Missing character: There is no ≥ in font cmr17!
 
-Overfull \hbox (51.59003pt too wide) in paragraph at lines 92--93
- []\OT1/cmr/bx/n/10 Novembro 
+Overfull \hbox (55.4966pt too wide) in paragraph at lines 70--71
+ []\OT1/cmr/m/n/17.28 Relatrio 
  []
 
 
-Overfull \hbox (11.65967pt too wide) in paragraph at lines 92--93
+Overfull \hbox (15.84985pt too wide) in paragraph at lines 70--71
+ \OT1/cmr/m/n/17.28 de 
+ []
+
+
+Overfull \hbox (30.11636pt too wide) in paragraph at lines 70--71
+ \OT1/cmr/m/n/17.28 Pro- 
+ []
+
+
+Overfull \hbox (41.41066pt too wide) in paragraph at lines 70--71
+ \OT1/cmr/m/n/17.28 gresso 
+ []
+
+
+Overfull \hbox (46.25674pt too wide) in paragraph at lines 96--97
+ []\OT1/cmr/bx/n/10 Fevereiro 
+ []
+
+
+Overfull \hbox (11.65967pt too wide) in paragraph at lines 96--97
  \OT1/cmr/bx/n/10 de 
  []
 
 
-Overfull \hbox (22.99988pt too wide) in paragraph at lines 92--93
- \OT1/cmr/bx/n/10 2014 
+Overfull \hbox (22.99988pt too wide) in paragraph at lines 96--97
+ \OT1/cmr/bx/n/10 2015 
  []
 
 
@@ -1501,7 +1352,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.94 \end{titlepage}
+l.98 \end{titlepage}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1516,10 +1367,10 @@ or  <return>  to continue without it.
  
 Here is how much of TeX's memory you used:
  29 strings out of 493921
- 576 string characters out of 3144878
- 53031 words of memory out of 3000000
+ 594 string characters out of 3144879
+ 52031 words of memory out of 3000000
  3416 multiletter control sequences out of 15000+200000
  5450 words of font info for 20 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 18i,4n,12p,156b,210s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 18i,4n,12p,154b,210s stack positions out of 5000i,500n,10000p,200000b,50000s
 !  ==> Fatal error occurred, no output PDF file produced!
