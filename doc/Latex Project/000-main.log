@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.11.27)  22 FEB 2015 18:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.19)  22 FEB 2015 22:47
 entering extended mode
 **000-main.tex
 
-("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\00
-0-main.tex"
+("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
+000-main.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -16,8 +16,8 @@ ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
 
-("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\sv
-mono.cls"
+("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
+svmono.cls"
 Document Class: svmono 2006/10/31 v4.17 
 Springer Verlag global LaTeX document class for monographs
 Class Springer-SVMono Info: extra/valid Springer sub-package 
@@ -645,7 +645,7 @@ Package: appendix 2009/09/02 v1.2b extra appendix facilities
 \c@@ppsaveapp=\count122
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\glossaries\base\glossaries.sty"
-Package: glossaries 2014/09/01 v4.11 (NLCT)
+Package: glossaries 2014/11/22 v4.12 (NLCT)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
 Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
@@ -909,8 +909,8 @@ LaTeX Font Info:    Try loading font information for T1+ptm on input line 43.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1ptm.fd"
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
-("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\00
-1-acronyms.tex"
+("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
+001-acronyms.tex"
 \acronymlabelwidth=\skip67
 )
 \glswrite=\write3
@@ -921,14 +921,15 @@ Package glossaries Info: Writing glossary file 000-main.acn on input line 47.
 
 \@input{000-latex-config.aux}
 
-("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\00
-0-latex-config.tex")
+("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
+000-latex-config.tex")
 \@input{000-format-json.aux}
 
-("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\00
-0-format-json.tex" ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bera\bera.sty"
+("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
+000-format-json.tex" ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bera\bera.st
+y"
 Package: bera 2004/01/31 (WaS)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.def"
@@ -1037,12 +1038,12 @@ Package: berasans 2004/01/30 (WaS)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bera\beramono.sty"
 Package: beramono 2004/01/31 (WaS)
 )))
-("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\00
-0-main.aux"
-("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\10
-0-cover.aux")
-("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\20
-0-introduction.aux"))
+("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
+000-main.aux"
+("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
+100-cover.aux")
+("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
+200-introduction.aux"))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
 LaTeX Font Info:    ... okay on input line 53.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
@@ -1158,12 +1159,12 @@ Package caption Info: rotating package is loaded.
 Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
-("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\00
-0-main.glsdefs")
+("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
+000-main.glsdefs")
 \c@lstlisting=\count174
 
-("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\10
-0-cover.tex" <./images/Logo_ISEL2.png, id=1, 809.9058pt x 263.0628pt>
+("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
+100-cover.tex" <./images/Logo_ISEL2.png, id=1, 809.9058pt x 263.0628pt>
 File: ./images/Logo_ISEL2.png Graphic file (type png)
 
 <use ./images/Logo_ISEL2.png>
@@ -1206,75 +1207,75 @@ LaTeX Font Info:    Font shape `T1/fve/b/n' will be
 
 
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <D:/Mike/Documentos/GitHub
-/isel-examtimetabling-2014-2015/doc/Latex Project/images/Logo_ISEL2.png> <D:/Mi
-ke/Documentos/GitHub/isel-examtimetabling-2014-2015/doc/Latex Project/images/gu
-ide_me_logo.jpg>]) [2
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <D:/Miguel/Documentos/GitH
+ub/isel-examtimetabling-2014-2015/doc/Latex Project/images/Logo_ISEL2.png> <D:/
+Miguel/Documentos/GitHub/isel-examtimetabling-2014-2015/doc/Latex Project/image
+s/guide_me_logo.jpg>]) [2
 
 
 
 ]
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 67.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 68.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 67.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 68.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 67.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 68.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 67.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 68.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 67.
+(Font)              <10> on input line 68.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 67.
+(Font)              <7> on input line 68.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 67.
-LaTeX Font Info:    Try loading font information for U+msa on input line 67.
+(Font)              <5> on input line 68.
+LaTeX Font Info:    Try loading font information for U+msa on input line 68.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 67.
+LaTeX Font Info:    Try loading font information for U+msb on input line 68.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\00
-0-main.toc")
+("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
+000-main.toc")
 \tf@toc=\write6
  [3] [4
 
 
 ]
-("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\00
-0-main.lof")
+("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
+000-main.lof")
 \tf@lof=\write7
  [5] [6
 
 
 ]
-("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\00
-0-main.lot")
+("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
+000-main.lot")
 \tf@lot=\write8
  [7] [8
 
 
 ]
-("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\00
-0-main.lol")
+("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
+000-main.lol")
 \tf@lol=\write9
 
 No file 000-main.acr.
@@ -1282,8 +1283,8 @@ No file 000-main.acr.
 
 
 ]
-("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\20
-0-introduction.tex"
+("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
+200-introduction.tex"
 Chapter 1.
 Package newfloat Info: Setting Plan B file extension to `lof'... on input line 
 2.
@@ -1291,11 +1292,6 @@ LaTeX Font Info:    Font shape `T1/fve/m/it' in size <10> not available
 (Font)              Font shape `T1/fve/m/sl' tried instead on input line 12.
 LaTeX Font Info:    Font shape `T1/fve/m/sl' will be
 (Font)              scaled to size 8.99994pt on input line 12.
-
-Underfull \hbox (badness 10000) in paragraph at lines 6--20
-
- []
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 6--20
 
@@ -1324,58 +1320,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--20
 LaTeX Font Info:    Font shape `T1/fve/b/n' will be
 (Font)              scaled to size 10.79993pt on input line 20.
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--34
+Underfull \hbox (badness 10000) in paragraph at lines 22--25
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--34
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 26--34
+Underfull \hbox (badness 10000) in paragraph at lines 27--36
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 40--43
+Underfull \hbox (badness 10000) in paragraph at lines 41--44
 
  []
 
-LaTeX Font Info:    Try loading font information for TS1+fve on input line 44.
+LaTeX Font Info:    Try loading font information for TS1+fve on input line 45.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bera\ts1fve.fd"
 File: ts1fve.fd 2004/09/07 scalable font definitions for TS1/fve.
 )
 LaTeX Font Info:    Font shape `TS1/fve/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 44.
+(Font)              scaled to size 8.99994pt on input line 45.
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--50
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 48--50
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--54
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 52--54
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 56--58
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 56--58
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
 
  []
 
@@ -1385,186 +1356,177 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--60
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--69
+Underfull \hbox (badness 10000) in paragraph at lines 68--69
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--74
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 70--74
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 70--74
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
 
 [4]
+Underfull \hbox (badness 10000) in paragraph at lines 77--78
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--83
+
+ []
+
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
-(Font)              scaled to size 8.09995pt on input line 77.
- <./images/types_of_algorithms.png, id=51, 423.08063pt x 268.75406pt>
+(Font)              scaled to size 8.09995pt on input line 84.
+<./images/types_of_algorithms.png, id=51, 317.2653pt x 196.0926pt>
 File: ./images/types_of_algorithms.png Graphic file (type png)
 
 <use ./images/types_of_algorithms.png>
-Package pdftex.def Info: ./images/types_of_algorithms.png used on input line 79
+Package pdftex.def Info: ./images/types_of_algorithms.png used on input line 86
 .
-(pdftex.def)             Requested size: 423.07959pt x 268.7534pt.
+(pdftex.def)             Requested size: 317.26453pt x 196.09212pt.
 
-Overfull \hbox (4.82591pt too wide) in paragraph at lines 79--80
- [][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 88--90
+Underfull \hbox (badness 10000) in paragraph at lines 95--97
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--90
+Underfull \hbox (badness 10000) in paragraph at lines 95--97
 
  []
 
-[5 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/doc/Latex Project/
-images/types_of_algorithms.png>]
+[5 <D:/Miguel/Documentos/GitHub/isel-examtimetabling-2014-2015/doc/Latex Projec
+t/images/types_of_algorithms.png>]
 LaTeX Font Info:    Font shape `T1/fve/b/it' in size <10> not available
-(Font)              Font shape `T1/fve/b/sl' tried instead on input line 91.
+(Font)              Font shape `T1/fve/b/sl' tried instead on input line 98.
 LaTeX Font Info:    Font shape `T1/fve/b/sl' will be
-(Font)              scaled to size 8.99994pt on input line 91.
+(Font)              scaled to size 8.99994pt on input line 98.
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--109
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 93--109
+Underfull \hbox (badness 10000) in paragraph at lines 100--116
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--109
+Underfull \hbox (badness 10000) in paragraph at lines 100--116
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--109
+Underfull \hbox (badness 10000) in paragraph at lines 100--116
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--109
+Underfull \hbox (badness 10000) in paragraph at lines 100--116
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--109
+Underfull \hbox (badness 10000) in paragraph at lines 100--116
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--109
+Underfull \hbox (badness 10000) in paragraph at lines 100--116
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--109
+Underfull \hbox (badness 10000) in paragraph at lines 100--116
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--109
+Underfull \hbox (badness 10000) in paragraph at lines 100--116
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--116
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 111--130
+Underfull \hbox (badness 10000) in paragraph at lines 118--137
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--130
+Underfull \hbox (badness 10000) in paragraph at lines 118--137
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--130
+Underfull \hbox (badness 10000) in paragraph at lines 118--137
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--130
+Underfull \hbox (badness 10000) in paragraph at lines 118--137
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--130
+Underfull \hbox (badness 10000) in paragraph at lines 118--137
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--130
+Underfull \hbox (badness 10000) in paragraph at lines 118--137
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--130
+Underfull \hbox (badness 10000) in paragraph at lines 118--137
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--130
+Underfull \hbox (badness 10000) in paragraph at lines 118--137
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--130
+Underfull \hbox (badness 10000) in paragraph at lines 118--137
 
  []
 
-[7] <./images/presentation.png, id=64, 454.69875pt x 259.56975pt>
+[7] [8] <./images/presentation.png, id=67, 454.69875pt x 259.56975pt>
 File: ./images/presentation.png Graphic file (type png)
 
 <use ./images/presentation.png>
-Package pdftex.def Info: ./images/presentation.png used on input line 133.
+Package pdftex.def Info: ./images/presentation.png used on input line 140.
 (pdftex.def)             Requested size: 454.69763pt x 259.5691pt.
 
-Overfull \hbox (36.44395pt too wide) in paragraph at lines 133--134
+Overfull \hbox (36.44395pt too wide) in paragraph at lines 140--141
  [][] 
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-) [8] [9 <D:/Mike/Documentos/GitHub/isel-examtimetabling-2014-2015/doc/Latex Pr
-oject/images/presentation.png>] [10
+) [9 <D:/Miguel/Documentos/GitHub/isel-examtimetabling-2014-2015/doc/Latex Proj
+ect/images/presentation.png>] [10
 
 
 
 ]
-("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\00
-0-main.aux"
-("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\10
-0-cover.aux")
-("D:\Mike\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\20
-0-introduction.aux")) ) 
+("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
+000-main.aux"
+("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
+100-cover.aux")
+("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
+200-introduction.aux")) ) 
 Here is how much of TeX's memory you used:
- 13978 strings out of 493921
- 205641 string characters out of 3144878
- 324015 words of memory out of 3000000
- 16906 multiletter control sequences out of 15000+200000
+ 13986 strings out of 493921
+ 205859 string characters out of 3144879
+ 324127 words of memory out of 3000000
+ 16914 multiletter control sequences out of 15000+200000
  60689 words of font info for 58 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 46i,7n,77p,2222b,601s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontn
-ame/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/bera/fveb8a.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/bera/fveb8a.pfb><C:/Program Files (x8
-6)/MiKTeX 2.9/fonts/type1/bera/fver8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
-nts/type1/bera/fver8a.pfb>
-Output written on 000-main.pdf (20 pages, 171968 bytes).
+ 46i,7n,77p,1797b,601s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fon
+tname/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/bera/fveb8a.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/bera/fveb8a.pfb><C:/Program Files (
+x86)/MiKTeX 2.9/fonts/type1/bera/fver8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/
+fonts/type1/bera/fver8a.pfb>
+Output written on 000-main.pdf (20 pages, 185913 bytes).
 PDF statistics:
  91 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
