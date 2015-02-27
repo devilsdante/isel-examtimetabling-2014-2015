@@ -15,6 +15,6 @@
 \contentsline {subsubsection}{\numberline {1.1.2.3}Meta-heuristics}{5}
 \contentsline {paragraph}{Population-based meta-heuristics}{5}
 \contentsline {paragraph}{Single-solution meta-heuristics}{5}
-\contentsline {subsubsection}{\numberline {1.1.2.4}Some approaches applied to the ITC 2007 Examination timetabling problem}{6}
-\contentsline {paragraph}{\textbf {Tomas Muller's approach:}}{6}
-\contentsline {paragraph}{\textbf {Christos Gogos' approach:}}{7}
+\contentsline {subsubsection}{\numberline {1.1.2.4}ITC 2007 Examination timetabling problem: some approaches}{6}
+\contentsline {paragraph}{\textbf {Tomas Muller's approach:}}{7}
+\contentsline {paragraph}{\textbf {Christos Gogos' approach:}}{8}

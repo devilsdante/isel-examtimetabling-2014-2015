@@ -47,6 +47,7 @@ Most of the Meta-heuristic algorithms used belong to one of the three categories
 \end{itemize}
 
 \subsubsection{Exact methods}
+\label{subsection:exactmethods}
 Some approaches may use \textit{exact methods} which may be viewed as tree algorithms and can be proved that it can find the optimal solution (global optimal). Exact methods search for solutions in the whole search space, and they divide the global problem into simpler problems in order to find the solution. This is not always used because these methods require a lot of computing time and they rarely produce results in a reasonable time in complex problems. Some approaches use some of these exact methods, namely: Constraint Programming Based Technique, Integer Linear Programming.\\
 
 \paragraph{Constraint Programming Based Technique}
@@ -88,12 +89,37 @@ The common types of algorithms and how they are organized, are displayed in Figu
    \label{fig:TypesAlgorithms}
 \end{figure}
 
+The Figure ~\ref{fig:TypesAlgorithms} represents the organization of Optimization methods. These methods are divided into \textit{Exact methods} and \textit{Approximate methods}. Exact methods and Heuristic algorithms are explained above in this topic.
 
-\subsubsection{Some approaches applied to the ITC 2007 Examination timetabling problem}
+\subsubsection{ITC 2007 Examination timetabling problem: some approaches}
 \label{subsection:ApprITC2007}
 
-I will briefly describe some techniques used in ITC 2007 - Examination timetabling, as detailed explanations about its techniques are properly presented in its articles which will be referenced below. ITC 2007 Examination timetabling problem consists on submitting a solution which may solve all hard constraints and the quality of each solution is calculated using the soft constraints the the solution didn't solve. Each soft constraint has its weight in the problem's context, and that weight adds points to each other solution. In this case, the more points a solution has, the worse it is. Solutions with zero points are considered optimal solutions, because they were able to solve all hard and soft constraints. Each of these constraints are presented on ITC's site (REF: ITC's site) or it can be read in Tomas Muller's article as he explains each constraints, including for other educational timetabling problems, named \textit{post enrollment based course timetabling}, and \textit{curriculum based course timetabling}\\
+I will briefly describe some techniques used in ITC 2007 - Examination timetabling track, as detailed explanations about these techniques are properly presented in the articles which are referenced below.
 \\
+The ITC 2007 Examination timetabling problem is divided in 3 tracks, which are \textit{Examination timetabling}, \textit{Post Enrolment based Course Timetabling} and \textit{Curriculum based Course Timetabling}. The main focus will be the first track - Examination Timetabling.
+\\
+This problem comprises 12 instances of different degree of complexity. Through the available website, competitors could submit  their solutions for the given benchmark instances. Submitted solutions are evaluated in the following form. First, it is checked if the solution is feasible and a so-called distance to feasibility is computed. If it is feasible, the solution is further evaluated based on the fitness function, which measures the soft constraints penalty. Then, competitors' solutions are ranked based on the distance to feasibility and solution's fitness value. The competitor with lower distance to feasibility value is the winner. In the case of a tie, the competitor's lowest solution fitness value wins. A solution is considered deemed acceptable if the value of distance to feasibility is zero, and so followed all the hard constraints. In order to have an acceptable solution, this must be feasible and so it is required to follow the following set of hard constraints:
+\begin{itemize}
+	\item No student must be elected to be present in more than one exam at the same time;
+	\item The number of students in a class must not exceed the room's limit capacity;
+	\item Exam's length must not surpass the length of the assigned timeslot;
+	\item Exams ordering hard constraints must be followed - E.g. \textit {Exam1} must be scheduled after \textit{exam2};
+	\item Room assignments hard constraints must be followed - E.g. 	\textit{Exam1} must be scheduled in the \textit{room1}.
+\end{itemize}
+
+It is also necessary to compute the fitness value of the solution and so consider the soft constraints that were not obeyed. The soft constraints are listed below:
+\begin{itemize}
+	\item Two exams in a row: A student should not be assigned to be in two directly adjacent exams (straight timeslots) in the same day;
+	\item Two exams in a day: A student should not be assigned to be in two non-directly adjacent exams in the same day;
+	\item Period spread: Reduce the number of times a student is assigned to be in two exams that are \textit{N} timeslots spread apart;
+	\item Mixed durations: Reduce the number of exams with different durations that occur in a room and period;
+	\item Larger exams constraints: Reduce the number of large exams that occur later in the timetable;
+	\item Room penalty: Avoid assigning exams to rooms with penalty;
+	\item Period penalty: Avoid assigning exams to periods with penalty.
+\end{itemize}
+
+To get a detailed explanation on how to compute the values of fitness and distance to feasibility based on the weight of each constraint, please check ITC 2007's website (REF: ITC site examevaluation) and Abdullah's survey (REF: 2013 - Abdullah - A hybrid self-adaptive bees algorithm for examination timetabling problems)
+
 
 \paragraph{\textbf{Tomas Muller's approach:}}
 
