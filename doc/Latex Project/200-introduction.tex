@@ -24,13 +24,11 @@ In this Section, we review the state of the art of problem at hand. We start by 
 %%%%%%%%%%%%%%%%%%%%
 \subsection{Timetabling Problem}
 %%%%%%%%%%%%%%%%%%%%
-Timetabling is a subject that has been a target of research for about 50 years. Its problem may be formulated as a search or optimization problem (REF: 1999 Schaerf). As a search problem, the goal consist on finding a solution (feasible solution) that satisfies all the hard constraints, while ignoring the soft constraints. On the contrary, posing the timetabling problem as an optimization problem, one wants to find the best solution possible with time constraints. That is, one seeks to minimize (considering a minimization problem) the violations of soft constraints while satisfying the hard
+Timetabling is a subject that has been a target of research for about 50 years. Its problem may be formulated as a search or optimization problem [REF: 1999 Schaerf]. As a search problem, the goal consist on finding a solution (feasible solution) that satisfies all the hard constraints, while ignoring the soft constraints. On the contrary, posing the timetabling problem as an optimization problem, one wants to find the best solution possible with time constraints. That is, one seeks to minimize (considering a minimization problem) the violations of soft constraints while satisfying the hard
 constraints. Typically, the optimization is done after using a search procedure for finding an initial feasible solution.
 \\
 %%%%%%%%%%%%%%%
-The basic examination timetabling problem, where only the clash hard constraint is observed, reduces to the graph coloring problem [ref.]. 
-[Definir, resumidamente, o graph coloring problem.]
-This is a well studied hard problem. Deciding whether a solution exists in the Graph Coloring problem is a NP-complete problem [ref. Arora and Barak book titled "Computational Complexity"]. Considering the graph coloring as an optimization problem, it is proven that the task of finding the optimal solution is a NP-Hard problem [ref. Arora and Barak book titled "Computational Complexity"].
+The basic examination timetabling problem, where only the clash hard constraint is observed, reduces to the graph coloring problem [REF: Jensen, Tommy R.; Toft, Bjarne (1995), Graph Coloring Problems, John Wiley and Sons]. This is a well studied hard problem. Deciding whether a solution exists in the Graph Coloring problem is a NP-complete problem [ref. Arora and Barak book titled "Computational Complexity"]. Considering the graph coloring as an optimization problem, it is proven that the task of finding the optimal solution is a NP-Hard problem [ref. Arora and Barak book titled "Computational Complexity"]. Graph Coloring problems are explained further in ~\ref{subsection:graphcoloring}
 \\
 %%%%%%%%%%%%%%%%%%%%
 \subsection{Existing approaches}
@@ -40,7 +38,7 @@ Timetabling solution approaches are usually divided in the following categories 
 
 Real problem instances are usually solved by using both Heuristics and Meta-heuristics algorithms. Heuristic algorithms are problem-dependent, meaning that these are adapted to a specific problem in which take advantage of its details. Heuristics are used to generate a feasible solution, focusing on solving all hard constraints only. Meta-heuristics on the other hand are problem-independent. These are used to, given the feasible solution obtained using heuristic algorithms, generate a better solution focusing on solving as many soft constraints as possible.\\
 \\
-Most of the Meta-heuristic algorithms used belong to one of the three categories: One-Stage algorithms, Two-Stage algorithms and Algorithms that allow relaxations. (REF: 2008 - Rhydian Lewis). 
+Most of the Meta-heuristic algorithms used belong to one of the three categories: One-Stage algorithms, Two-Stage algorithms and Algorithms that allow relaxations. [REF: 2008 - Rhydian Lewis]. 
 \begin{itemize}
   \item The One-Stage algorithm is used to get an initial optimal solution, which the goal is to satisfy both hard and soft constraints at the same time. Approaches using this stage are not very common because it's hard to get proper solutions in a reasonable amount of time trying to satisfy both types of constraints at the same time;
   \item The Two-Stage algorithms are the most used types of approaches because is is divided in two phases (the reason for "Two-Stage" name). The first phase consists in all soft constraints being "discarded" and focus only on solving hard constraints to obtain a feasible solution. The next phase is an attempt to find the best solution, trying to solve the highest number of soft constraints possible given the solution of the first phase.
@@ -57,12 +55,13 @@ The Constraint Programming Based Technique (CPBT) allows direct programming with
 The Integer Linear Programming (ILP) is a mathematical programming technique in which the optimization problem to be solved must be formulated as an Integer Linear Problem, that is, the objective function and the constraints must be linear, and all problem variables are integer valued. If there are some variables that are continuous and other are integer, then the problem is called Mixed-Integer Linear Programming (MILP). Schaerf [REF: 1999 - Schaerf] surveys some approaches using the MILP technique to school, course, and examination timetabling.
 
 \subsubsection{Graph Coloring}
+\label{subsection:graphcoloring}
 The usual approaches start with using heuristics of Graph Coloring to get an initial solution that in most cases is a local optimum. Graph Coloring itself is not an heuristic or meta-heuristic but a method that designates a problem and its variants.\\
 
 \paragraph{Graph Coloring Problems}
 The Graph Coloring (GC) algorithm is divided in two main sub-types, which are \textit{vertex coloring} and \textit{edge coloring}.
 \begin{itemize}
-  \item The vertex coloring algorithm's main goal is to, given a number of vertices and edges, color the vertexes so that no adjacent vertices have the same color. In this algorithm, it's best to find a solution with the lowest number of colors as possible. In examination timetable problem, a basic approach could be to represent the exams as vertices and the hard constraints as edges (considering this is search algorithm, it is good to use optimization algorithms to deal with soft constraints) so that exams with the same color, can be assign to the same timeslot. After coloring, it proceeds to assign the exams into timeslots considering the colors of the solution. (REF: 2009 - Qu Burke)
+  \item The vertex coloring algorithm's main goal is to, given a number of vertices and edges, color the vertexes so that no adjacent vertices have the same color. In this algorithm, it's best to find a solution with the lowest number of colors as possible. In examination timetable problem, a basic approach could be to represent the exams as vertices and the hard constraints as edges (considering this is search algorithm, it is good to use optimization algorithms to deal with soft constraints) so that exams with the same color, can be assign to the same timeslot. After coloring, it proceeds to assign the exams into timeslots considering the colors of the solution. [REF: 2009 - Qu Burke]
   \item The edge coloring algorithm's main goal is equivalent to the vertex coloring algorithm, but this one is about coloring edges, so that no adjacent edges have the same color. As vertex's algorithm, the least colors possible, the better the solution is.
 \end{itemize}
 
@@ -103,8 +102,8 @@ This problem comprises 12 instances of different degree of complexity. Through t
 	\item No student must be elected to be present in more than one exam at the same time;
 	\item The number of students in a class must not exceed the room's limit capacity;
 	\item Exam's length must not surpass the length of the assigned timeslot;
-	\item Exams ordering hard constraints must be followed - E.g. \textit {Exam1} must be scheduled after \textit{exam2};
-	\item Room assignments hard constraints must be followed - E.g. 	\textit{Exam1} must be scheduled in the \textit{room1}.
+	\item Exams ordering hard constraints must be followed - E.g. $Exam_1$ must be scheduled after $Exam_2$;
+	\item Room assignments hard constraints must be followed - E.g. 	$Exam_1$ must be scheduled in the $Room_1$.
 \end{itemize}
 
 It is also necessary to compute the fitness value of the solution and so consider the soft constraints that were not obeyed. The soft constraints are listed below:
@@ -118,57 +117,51 @@ It is also necessary to compute the fitness value of the solution and so conside
 	\item Period penalty: Avoid assigning exams to periods with penalty.
 \end{itemize}
 
-To get a detailed explanation on how to compute the values of fitness and distance to feasibility based on the weight of each constraint, please check ITC 2007's website (REF: ITC site examevaluation) and Abdullah's survey (REF: 2013 - Abdullah - A hybrid self-adaptive bees algorithm for examination timetabling problems)
+To get a detailed explanation on how to compute the values of fitness and distance to feasibility based on the weight of each constraint, please check ITC 2007's website [REF: ITC site examevaluation] and Abdullah's survey (REF: 2013 - Abdullah - A hybrid self-adaptive bees algorithm for examination timetabling problems)\\
+\\
+The designation of the winners is divided in two parts. The first part consists on choosing 5 finalists considering the top 5 results provided by all the competitors, which ran the tests on the first 10 instances (not including the hidden ones) on their machines following a certain set of rules [REF:ITC2007 Background Techreportv2.pdf]. The second part involves the algorithms of these 5 finalists being compared using the competition organizer's machines and running in all 12 instances, including the hidden ones.\\
+\\
+The first part consists on comparing the results provided by the competitors (distance to feasibility and values of fitness) for each of the ten instances, ranking the competitors. While in the second part results were generated by running, for each instance, 10 times each the finalist's algorithm. In total were generated 50 solutions for each of the 12 instances. Each of the 50 solutions were ranked based on the results generated (50 to 1). Considering each algorithm has 10 ranks, the rank of the finalist, for that instance, is given by comparing the average of those ranks generated for their algorithm. The lower the average, the better the rank is.\\
+\\
+The finalists are ranked based their rankings on the instances. For full details on the rankings system, please consult [REF:http://www.cs.qub.ac.uk/itc2007/winner/ITC2007 Background Techreportv2.pdf].\\
+\\
+In this thesis, I'll be reviewing some of the winners approaches. The winners list of the ITC 2007 competition is as follows:
+\begin{itemize}
+	\item 1st Place: Tom\'{a}\v{s} M\"{u}ller
+	\item 2nd Place: Christos Gogos
+	\item 3rd Place:Mitsunori Atsuta, Koji Nonobe, and Toshihide Ibaraki
+	\item 4th Place: Geoffrey De Smet
+	\item 5th Place: Nelishia Pillay
+\end{itemize}
 
+\paragraph{Tom\'{a}\v{s} M\"{u}ller's approach:}
 
-\paragraph{\textbf{Tomas Muller's approach:}}
+Tom\'{a}\v{s} M\"{u}ller's approach [REF: 2009 - Thomas Muller - ITC2007 solver description a hybrid approach] was actually used to solve all three problems established by the ITC 2007 competition. He was able to win two of them and be finalist on the third. For solving the problems, he opted for an hybrid approach, organized in a two-phase algorithm..\\
+\\
+In the first phase, Tom\'{a}\v{s} used Iterative Forward Search (IFS) algorithm [REF: Muller 2005] to obtain feasible solutions and Conflict-based Statistics (Muller et al. 2004) to prevent IFS from looping. The timetabling problems solved were specified as constraint satisfaction problems, where events (exams, courses) are represented by variables. The variables' values are the possible pairs (time slot, room) that don't cause violations in the hard constraints. For each iteration there's an attempt to sign a value to an unassigned variable. If it violates hard constraints, the conflicting variables are unassigned. The variable chosen in each iteration is randomized or parameterized to, for example, assign the most difficult assignable exam first. The Conflict-based Statistics was used to memorize some previously passed conflicts and avoid repeating those for each iteration.\\
+\\
+The second phase consists in using multiple optimization algorithms. These algorithms are applied using this order: HC [REF: Artificial Intelligence: A Modern Approach 2009 - Stuart Russell, Peter Norvig], Great Deluge (GD) [REF: Dueck 1993] and optionally SA [REF: Kirkpatrick et al. 1983].\\
+\\
+HC is used to optimize the first phase solution, resulting on a solution stuck at a local optimum. To leave local optimum area, GD is used in order to try and result in a better solution. For last, SA is used in a loop, keeping the temperature limit unchanged. After not getting a better solution for a limited time, the temperature is reheated (temperature limit gets higher) and HC phase is used again forming a loop in these 3 optimization algorithms.\\
+\\
+\paragraph{Christos Gogos' approach:}
 
-Tomas Muller's approach was actually used to solve all three problems established by ITC 2007 competition. He was able to win two of them and be finalist on the third. For solving the problems, he opted for an hybrid approach. Meaning it has more than one algorithm working at the same time for first (construction) phase and/or for the second (optimization) phase. In this case, he chose to use multiple algorithms to optimize its first solutions.\\
+Gogos was able to reach second place in Examination Timetabling track, right after Muller. Gogos' approach is very different compared to Muller's. His approach, like Muller's, was divided in two phases named \textit{Construction Phase} and \textit{Improvement Phase}, in which the first is used do construct a feasible solution and the second improves the solution found in the first phase, using local search algorithms.\\
 \\
-In the \underline{first phase}, Tomas used Iterative Forward Search algorithm (REF: Muller 2005) to obtain feasible solutions and Conflict-based Statistics (Muller et al. 2004) to prevent Iterative Forward Search from looping. \\
+In the first phase, is starts using a Pre-processing stage. This stage deals with hidden dependencies, which means it adds dependencies to the problem that weren't there at the beginning but they exist and makes sense in the problem itself. For example, one hidden dependency may be one exam $E_1$ having an ordering constraint with exam $E_2$ stating that $E_2$ must be scheduled after exam $E_1$ and exam $E_3$ must be scheduled after exam $E_2$. So a dependency/constraint must be added so exam $E_3$ must be scheduled after exam $E_1$ as well. The key idea is that this pre-process method will be very helpful in the further stages when trying to find solutions.\\
 \\
-Iterative Forward Search algorithm assigns a value to one unassigned variable on each iteration. These variables are exams (in examination timetabling problem) and are only assignable if the result won't cause violations of hard constraints. If it's the case, some precautions may be applied to continue with the algorithm. An assign will result in an exam (the variable assigned) being held in a room X, time Y with Z students. The variable chosen in each iteration is randomized or parameterized to, for example, assign the most difficult assignable exam first. The Conflict-based Statistics was used to memorize some previously passed conflicts and avoid repeating those for each iteration.\\
+After the pre-processing stage, a construction stage takes place. This method is used to create a complete timetable. In this stage, multiple solutions are attempted considering the available time in which only the best solution is passed to the next phase. The solution is constructed by constantly setting an exam and a room to a period until a feasible solution is found.\\
 \\
-The \underline{second phase} consists in using multiple optimization algorithms. These algorithms are applied using this order: Hill Climbing, edited Great Deluge (REF: Dueck 1993) and optionally Simulated Annealing (REF: Kirkpatrick et al. 1983).\\
+In the second phase, HC is used. This algorithm is used to generate neighbor solutions, accepting only better solutions compared to the current one, until reaching a local optimum. It is considered local optimum when HC cannot generate a better solution in a number of tries or time limit.\\
 \\
-Hill Climbing is used to optimize the current solution only, by generating a neighbor solution each iteration. The neighbor solution is only accepted if the "score" of this solution is lower than the one we had before (only soft constraints count now) and no hard constraint is violated. If there is no better solutions for a number of iterations, which is parameterized, this algorithms stops running and the Great Deluge starts doing its job.\\
+The next stage consists in utilizing SA to get out of local maximum. Simulated Annealing stops when it cannot generate better solutions after the specified period of time.\\
 \\
-Great Deluge, used after the solution cannot be improved using the previous algorithm. This method can be seen as a Hill Climbing variation, as it always accepts going up but is also able to go down the Hill as long as it doesn't go lower the water level. This means that it accepts worse neighbor solutions compared to the current solution, but only accepts worse solutions which absolute value is less compared to the value of the Bound, as the Bound is the variable that corresponds to the water level mentioned earlier. The water level is always going up, until reaching a local/global maximum. The initial Bound and the way the Bound decreases (water level going up) is parameterized.\\
+After SA, an Integer Programming (IP) formulation that uses Branch and Bound (BB) is used in a set of sub-problems. This stage is called "IP Sub-Problems Stage". This simply examines all periods trying to discover some possible improvements that can be done, for instance, swapping a room with high penalty with a room with no penalty or having lower penalty that is not currently being used.\\
 \\
-When Simulated Annealing (SA) is used (remember that this method is optional), it is used after Great Deluge reaches his bound lower limit. If this method is not meant to be used, Great Deluge might be running until reaches timeout or a global maximum. SA is a method similar to Hill Climbing, as it accepts neighbor solutions better than the current one. But this method also allows neighbor solutions that are worse than the current one, by establishing a mathematical operation using a variable called Temperature. The result of this operation stands for "how much wrong can the solution become" in order to avoid local maximums. This variable called Temperature is parameterized so as the Cooling Rate variable which is multiplied by the Temperature each iteration, in order to reduce the Temperature. This means that for each iteration, neighbor solutions will get less worse and it is possible to reach a local maximum again. If the local maximum is the same (solution is the same as before running Simulated Annealing), that means the maximum Temperature must get higher in order to avoid the local maximum and/or to possibly get a better solution. As the Temperature gets higher, Simulated Annealing is not repeated, but instead, Hill Climbing takes control again.\\
+The last stage is the Shaking Stage. This method "shakes" the current best solution in order to get equally good solutions and pass it to SA stage. This method is not used if the problem we're solving only has one room or the cost of each room is zero. Two heuristics are used in this stage. The first creates neighbor solutions but a solution is only accepted if the new solution is equally good and the room arrangement is better (total cost of room assignment is lower) as compared to the current best solution. The second heuristic reschedule a set of exams presented on the previous solution. These are first removed from the timetable and then scheduled using the same techniques used in the construction stage. This heuristic will probably generate a worse solution but it is accepted and used next on the SA stage.\\
 \\
-This is the basics and a resume of Muller's approach. More detailed explanations and implementations can be viewed on this article (REF: 2009 - Thomas Muller - ITC2007 solver description a hybrid approach).\\
+Tabu Search (TS) [REF: Talbi - METAHEURISTICS - From Design to Implementation] is also used in this approach, even though it's not used as a standalone method. This one is used along with HC and SA algorithms to prevent them from looping and creating the same results. TS avoids the creation of equal neighbor solutions by not letting the same period be selected for swapping after this being selected once. This period can only be selected again after a certain number of swaps on other periods.\\
 \\
-\paragraph{\textbf{Christos Gogos' approach:}}
-
-Gogos was able to reach second place in Examination Timetabling, right after Muller. Gogos' approach is very different compared to Muller's. His approach, like Muller's, was divided in 2 phases named \textit{Construction Phase} and \textit{Improvement Phase}, which the first is to get a feasible solution and the second is to improve the solution found in the first phase, using local search algorithms.\\
-\\
-In the \underline{first phase}, is starts using a Pre-processing stage. It is called \textit{Pre-processing} because it's a stage that adds additional information to the main problem in order to make it easier to handle in the further steps. This stage deals with hidden dependencies, which means it adds dependencies to the problem that weren't there in the beginning but they exist and makes sense in the problem itself. For example, one hidden dependency may be one exam E1 having an ordering constraint with exam E2 stating that E2 must be scheduled after exam E1 and exam E3 must be scheduled after exam E2. So a dependency/constraint must be added so exam E3 must be scheduled after exam E1 as well. Gogos believes that this pre-process method will be very helpful in the further stages when trying to find solutions.\\
-\\
-After the pre-processing stage, a construction stage takes place. This method is used to create a complete timetable. In this stage, multiple solutions are attempted considering the available time in which only the best solution is passed to the next phase. The solution is constructed by constantly setting an exam and a room to a period until a feasible solution is found. This selection is not random, instead some rules must be applied. This method however is not a very known or common algorithm.\\
-\\
-In the \underline{second phase}, Hill Climbing is used. This algorithm is used to get generate neighbor solutions, accepting only better solutions compared to the current one, until reaching a local maximum. It is considered local maximum when Hill Climbing cannot generate a better solution in a number amount of tries or time limit.\\
-\\
-Next stage consists in utilizing Simulated Annealing to get out of local maximum. Simulated Annealing skipped when it cannot generate better solutions after a set period of time.\\
-\\
-After Simulated Annealing, an Integer Programming formulation that uses Breach and Bound is used in a set of sub-problems. This stage is called "IP Sub-Problems Stage". This simply examines all periods trying to discover some possible improvements that can be done, for example, swapping a room with high penalty with a room with no or low penalty that is not currently being used.\\
-\\
-The last stage is the Shaking Stage. This method "shakes" the current best solution in order to get equally good solutions and pass it to Simulated Annealing stage. This method is not used if the problem we're solving only has 1 room or the cost of each room assign is zero. Two heuristics are used in this stage. The first creates neighbor solutions but a solution is only accepted if the new solution is equally good and the room arrangement is better (total cost of room assignment is lower) compared to the current best solution. The second heuristic reschedule a set of exams presented on the latest solution. These are first removed from the timetable and then scheduled using the same techniques used in the construction stage. This heuristic will probably generate a worse solution but it is accepted and used next on Simulated Annealing stage.\\
-\\
-Tabu Search is also used in this approach, even tho it's not used as a standalone method. This one is used along with Hill Climbing and Simulated Annealing algorithms to prevent them from looping and creating the same results. Tabu Search avoids the creation of equal neighbor solutions by not letting the same period be selected for swapping after this being selected once. This period can only be selected again after a certain number of swaps on other periods.\\
-\\
-This was a brief resume of Gogos' approach. Detailed explanations, implementations, experiments and results are present on this article (REF: 2010 - Gogos et al. - An improved multi-staged algorithmic process for the solution of the examination timetabling problem)\\
-\\
-It is possible to check the results of ITC 2007's Examination challenge in Figure~\ref{fig:Top5itc}, which illustrates these two top competitors on this challenge. Most of the test instances shows that Muller got the least points (black numbers and dots) and so the reason why he ended up winning. Gogo's results were a little worse (orange numbers and dots) compared to Muller's results and beat the other competitors in most of the instances, not including instances 10 and 12 which no valid solutions were found. Calculating the instance's points, Gogo ended up in second place. All the results can be seen on ITC's original site (REF: ITC's site with results) or on Muller's article (REF: 2009 - Thomas Muller - ITC2007 solver description a hybrid approach)
-
-\begin{figure}[h!]
- \centering
-   \includegraphics[scale=1]{./images/presentation.png}
-   \caption{Top 5 results on ITC 2007 Examination Challenge}
-   \label{fig:Top5itc}
-\end{figure}
-
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
