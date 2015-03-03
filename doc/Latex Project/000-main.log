@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.19)  28 FEB 2015 02:19
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.19)  3 MAR 2015 03:28
 entering extended mode
 **000-main.tex
 
@@ -1043,7 +1043,9 @@ Package: beramono 2004/01/31 (WaS)
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
 100-cover.aux")
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
-200-introduction.aux"))
+200-introduction.aux")
+("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
+800-references.aux"))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
 LaTeX Font Info:    ... okay on input line 53.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
@@ -1325,11 +1327,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--25
  []
 
 
+LaTeX Warning: Citation `Schaerf1999' on page 2 undefined on input line 27.
+
+
+LaTeX Warning: Citation `Jensen2001' on page 2 undefined on input line 31.
+
+
+LaTeX Warning: Citation `Arora2009' on page 2 undefined on input line 31.
+
+
+LaTeX Warning: Citation `Arora2009' on page 2 undefined on input line 31.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 27--34
 
  []
 
+
+LaTeX Warning: Citation `Qu2009' on page 2 undefined on input line 37.
+
 [2]
+
+LaTeX Warning: Citation `Lewis2007' on page 3 undefined on input line 41.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 39--42
 
  []
@@ -1346,9 +1367,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--50
  []
 
 
+LaTeX Warning: Citation `Qu2009' on page 3 undefined on input line 52.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
  []
+
+
+LaTeX Warning: Citation `Schaerf1999' on page 3 undefined on input line 55.
 
 [3]
 Underfull \hbox (badness 10000) in paragraph at lines 59--60
@@ -1356,19 +1383,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--60
  []
 
 
+LaTeX Warning: Citation `Qu2009' on page 4 undefined on input line 64.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 68--69
 
  []
+
+
+LaTeX Warning: Citation `Talbi2009' on page 4 undefined on input line 74.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
 
-[4]
+
+LaTeX Warning: Citation `Talbi2009' on page 4 undefined on input line 77.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 77--78
 
  []
+
+[4]
+
+LaTeX Warning: Citation `Talbi2009' on page 5 undefined on input line 80.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 80--83
@@ -1384,8 +1424,30 @@ File: ./images/types_of_algorithms.png Graphic file (type png)
 Package pdftex.def Info: ./images/types_of_algorithms.png used on input line 86
 .
 (pdftex.def)             Requested size: 317.26453pt x 196.09212pt.
- [5 <D:/Miguel/Documentos/GitHub/isel-examtimetabling-2014-2015/doc/Latex Proje
-ct/images/types_of_algorithms.png>]
+
+
+LaTeX Warning: Citation `Talbi2009' on page 5 undefined on input line 87.
+
+
+LaTeX Warning: Citation `Talbi2009' on page 5 undefined on input line 87.
+
+[5 <D:/Miguel/Documentos/GitHub/isel-examtimetabling-2014-2015/doc/Latex Projec
+t/images/types_of_algorithms.png>]
+
+LaTeX Warning: Citation `McCollum2008' on page 6 undefined on input line 120.
+
+
+LaTeX Warning: Citation `Abdullah2013' on page 6 undefined on input line 120.
+
+
+LaTeX Warning: Citation `BarryMcCollum2008' on page 6 undefined on input line 1
+22.
+
+
+LaTeX Warning: Citation `BarryMcCollum2008' on page 6 undefined on input line 1
+26.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 120--129
 
  []
@@ -1406,6 +1468,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 120--129
  []
 
 [6]
+
+LaTeX Warning: Citation `Mueller2009' on page 7 undefined on input line 139.
+
+
+LaTeX Warning: Citation `Mueller2005' on page 7 undefined on input line 141.
+
+
+LaTeX Warning: Citation `Rudova2004' on page 7 undefined on input line 141.
+
+
+LaTeX Warning: Citation `Russell2010' on page 7 undefined on input line 143.
+
+
+LaTeX Warning: Citation `Dueck1993' on page 7 undefined on input line 143.
+
+
+LaTeX Warning: Citation `Kirkpatrick1983' on page 7 undefined on input line 143
+.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 139--147
 
  []
@@ -1430,10 +1512,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 139--147
 
  []
 
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 149--165
 
- []
+LaTeX Warning: Citation `Talbi2009' on page 7 undefined on input line 163.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 149--165
@@ -1475,33 +1555,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 149--165
 
  []
 
-[8]) [9] [10
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--165
+
+ []
+
+[7] [8]) [9] [10
 
 
 
 ]
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
+800-references.tex"
+No file 000-main.bbl.
+)
+("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
 000-main.aux"
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
 100-cover.aux")
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
-200-introduction.aux")) ) 
+200-introduction.aux")
+("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
+800-references.aux"))
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 14129 strings out of 493921
- 207783 string characters out of 3144879
- 323858 words of memory out of 3000000
- 17060 multiletter control sequences out of 15000+200000
+ 14152 strings out of 493921
+ 208567 string characters out of 3144879
+ 326461 words of memory out of 3000000
+ 17075 multiletter control sequences out of 15000+200000
  57247 words of font info for 56 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  46i,6n,77p,1797b,601s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/
-lm-rm.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{
-C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/type1/bera/fveb8a.pfb><C:/Program Files (x86)/MiKTe
-X 2.9/fonts/type1/bera/fver8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
-1/bera/fver8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi
-10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb>
-Output written on 000-main.pdf (20 pages, 183381 bytes).
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files (x86)/
+MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/f
+onts/type1/bera/fveb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/bera/
+fver8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/bera/fver8a.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program File
+s (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb>
+Output written on 000-main.pdf (20 pages, 182879 bytes).
 PDF statistics:
  95 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
