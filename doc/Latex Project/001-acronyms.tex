@@ -1,30 +1,30 @@
-\newlength{\acronymlabelwidth}
-\setlength{\acronymlabelwidth}{0.25\textwidth}
-\newglossarystyle{listwithwidth}{%
-  \renewenvironment{theglossary}%
-    {\begin{description}}{\end{description}}%
-  \renewcommand*{\glossaryheader}{}%
-  \renewcommand*{\glsgroupheading}[1]{}%
-  \renewcommand*{\glossaryentryfield}[5]{%
-    \item[\parbox{\acronymlabelwidth}{\glsentryitem{##1}\glstarget{##1}{##2}}]
-       ##3\glspostdescription\space ##5}%
-  \renewcommand*{\glossarysubentryfield}[6]{%
-    \glssubentryitem{##2}%
-    \glstarget{##2}{\strut}##4\glspostdescription\space ##6.}%
-  \renewcommand*{\glsgroupskip}{\indexspace}%
-}
-
-\begin{titlepage}
-\thispagestyle{empty}
-	\newacronym{ai}{AI}{Artificial Intelligence}
-	\newacronym{itc}{ITC}{International Timetabling Competition}
-	\newacronym{sa}{SA}{Simulated Annealing}
-	\newacronym{cpbt}{CPBT}{Constraint Programming Based Technique}
-	\newacronym{ilp}{ILP}{Integer Linear Programming}
-	\newacronym{ifs]}{IFS}{Iterative Forward Search}
-	\newacronym{hc}{HC}{Hill Climbing}
-	\newacronym{gd}{GD}{Great Deluge}
-	\newacronym{ip}{IP}{Integer Programming}
-	\newacronym{bb}{BB}{Branch and Bound}
-	\newacronym{ts}{TS}{Tabu Search}
-\end{titlepage}
+%\newlength{\acronymlabelwidth}
+%\setlength{\acronymlabelwidth}{0.25\textwidth}
+%\newglossarystyle{listwithwidth}{%
+%  \renewenvironment{theglossary}%
+%    {\begin{description}}{\end{description}}%
+%  \renewcommand*{\glossaryheader}{}%
+%  \renewcommand*{\glsgroupheading}[1]{}%
+%  \renewcommand*{\glossaryentryfield}[5]{%
+%    \item[\parbox{\acronymlabelwidth}{\glsentryitem{##1}\glstarget{##1}{##2}}]
+%       ##3\glspostdescription\space ##5}%
+%  \renewcommand*{\glossarysubentryfield}[6]{%
+%    \glssubentryitem{##2}%
+%    \glstarget{##2}{\strut}##4\glspostdescription\space ##6.}%
+%  \renewcommand*{\glsgroupskip}{\indexspace}%
+%}
+%
+%\begin{titlepage}
+%\thispagestyle{empty}
+%	\newacronym{ai}{AI}{Artificial Intelligence}
+%	\newacronym{itc}{ITC}{International Timetabling Competition}
+%	\newacronym{sa}{SA}{Simulated Annealing}
+%	\newacronym{cpbt}{CPBT}{Constraint Programming Based Technique}
+%	\newacronym{ilp}{ILP}{Integer Linear Programming}
+%	\newacronym{ifs]}{IFS}{Iterative Forward Search}
+%	\newacronym{hc}{HC}{Hill Climbing}
+%	\newacronym{gd}{GD}{Great Deluge}
+%	\newacronym{ip}{IP}{Integer Programming}
+%	\newacronym{bb}{BB}{Branch and Bound}
+%	\newacronym{ts}{TS}{Tabu Search}
+%\end{titlepage}
