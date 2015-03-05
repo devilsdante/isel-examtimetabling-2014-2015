@@ -1,6 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: 000-main.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: 000-main.aux
 A level-1 auxiliary file: 100-cover.aux
 A level-1 auxiliary file: 200-introduction.aux
 A level-1 auxiliary file: 300-theory.aux
@@ -14,45 +12,4 @@ Warning--entry type for "BarryMcCollum2008" isn't style-file defined
 Warning--entry type for "McCollum2008" isn't style-file defined
 --line 124 of file 000-main.bib
 Warning--can't use both author and editor fields in Jensen2001
-You've used 15 entries,
-            2118 wiz_defined-function locations,
-            596 strings with 6250 characters,
-and the built_in function-call counts, 4112 in all, are:
-= -- 388
-> -- 196
-< -- 0
-+ -- 83
-- -- 64
-* -- 263
-:= -- 728
-add.period$ -- 42
-call.type$ -- 15
-change.case$ -- 70
-chr.to.int$ -- 0
-cite$ -- 16
-duplicate$ -- 155
-empty$ -- 329
-format.name$ -- 64
-if$ -- 826
-int.to.chr$ -- 0
-int.to.str$ -- 15
-missing$ -- 15
-newline$ -- 75
-num.names$ -- 30
-pop$ -- 91
-preamble$ -- 1
-purify$ -- 62
-quote$ -- 0
-skip$ -- 104
-stack$ -- 0
-substring$ -- 201
-swap$ -- 16
-text.length$ -- 0
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 52
-warning$ -- 1
-while$ -- 40
-width$ -- 17
-write$ -- 153
 (There were 3 warnings)

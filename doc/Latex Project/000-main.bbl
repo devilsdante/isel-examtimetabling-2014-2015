@@ -81,4 +81,10 @@ El{-}Ghazali Talbi.
 \newblock {\em Metaheuristics - From Design to Implementation}.
 \newblock Wiley, 2009.
 
+\bibitem{Wilson2003}
+James~M. Wilson.
+\newblock Gantt charts: {A} centenary appreciation.
+\newblock {\em European Journal of Operational Research}, 149(2):430--437,
+  2003.
+
 \end{thebibliography}

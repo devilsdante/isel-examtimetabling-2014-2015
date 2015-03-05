@@ -121,7 +121,7 @@ Faculty of Mathematics and Physics},
   Year                     = {2008}
 }
 
-@Other{2008,
+@Other{McCollum2008,
   Author                   = {Dr Barry McCollum},
   Timestamp                = {2015.03.03},
   Url                      = {http://www.cs.qub.ac.uk/itc2007/examtrack/exam_track_index_files/examevaluation.htm},
@@ -202,3 +202,17 @@ Hana Rudová},
   Timestamp                = {Fri, 01 Apr 4457205 12:22:56 +}
 }
 
+@article{DBLP:journals/eor/Wilson03,
+  author    = {James M. Wilson},
+  title     = {Gantt charts: {A} centenary appreciation},
+  journal   = {European Journal of Operational Research},
+  volume    = {149},
+  number    = {2},
+  pages     = {430--437},
+  year      = {2003},
+  url       = {http://dx.doi.org/10.1016/S0377-2217(02)00769-5},
+  doi       = {10.1016/S0377-2217(02)00769-5},
+  timestamp = {Thu, 03 Jan 4431174 06:07:12 +},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/eor/Wilson03},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
