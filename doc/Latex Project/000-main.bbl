@@ -27,6 +27,11 @@ Scott Kirkpatrick, D.~Gelatt Jr., and Mario~P. Vecchi.
 \newblock Optimization by simmulated annealing.
 \newblock {\em Science}, 220(4598):671--680, 1983.
 
+\bibitem{Lee1996}
+Michael W. Carter Gilbert Laporte Sau~Yan Lee.
+\newblock Examination timetabling: Algorithmic strategies and applications.
+\newblock {\em The Journal of the Operational Research Society}, 1996.
+
 \bibitem{Lewis2007}
 Rhydian Lewis.
 \newblock A survey of metaheuristic-based techniques for university timetabling

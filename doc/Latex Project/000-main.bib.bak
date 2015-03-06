@@ -3,8 +3,7 @@
 
 
 @Article{Abdullah2013,
-  Title                    = {A hybrid self-adaptive bees algorithm for examination timetabling
- problems},
+  Title                    = {A Hybrid Self-Ddaptive Bees Algorithm for Examination Timetabling Problems},
   Author                   = {Salwani Abdullah and
  Malek Alzaqebah},
   Journal                  = {Appl. Soft Comput.},
@@ -69,8 +68,20 @@
   Timestamp                = {Sun, 25 Jul 4439965 07:11:28 +ealing}
 }
 
+@Article{Lee1996,
+  Title                    = {Examination Timetabling: Algorithmic Strategies and Applications},
+  Author                   = {Michael W. Carter
+Gilbert Laporte
+Sau Yan Lee},
+  Journal                  = {The Journal of the Operational Research Society},
+  Year                     = {1996},
+
+  Owner                    = {Mike},
+  Timestamp                = {2015.03.05}
+}
+
 @Article{Lewis2007,
-  Title                    = {A survey of metaheuristic-based techniques for University Timetabling problems},
+  Title                    = {A Survey of Metaheuristic-Based Techniques for University Timetabling Problems},
   Author                   = {Rhydian Lewis},
   Journal                  = {OR Spectrum
 Volume 30, Issue 1 , pp 167-190},
@@ -80,7 +91,7 @@ Volume 30, Issue 1 , pp 167-190},
 }
 
 @Article{Mueller2009,
-  Title                    = {{ITC2007} solver description: a hybrid approach},
+  Title                    = {{ITC2007} Solver Description: A Hybrid Approach},
   Author                   = {Tom{\'{a}}s M{\"{u}}ller},
   Journal                  = {Annals {OR}},
   Year                     = {2009},
@@ -96,7 +107,7 @@ Volume 30, Issue 1 , pp 167-190},
 }
 
 @PhdThesis{Mueller2005,
-  Title                    = {Constraint-based timetabling},
+  Title                    = {Constraint-Based Timetabling},
   Author                   = {Tom{\'{a}}s M{\"{u}}ller},
   School                   = {Charles University in Prague
 Faculty of Mathematics and Physics},
@@ -129,8 +140,7 @@ Faculty of Mathematics and Physics},
 }
 
 @Article{Qu2009,
-  Title                    = {A survey of search methodologies and automated system development
- for examination timetabling},
+  Title                    = {A Survey of Search Methodologies and Automated System Development for Examination Timetabling},
   Author                   = {Rong Qu and
  Edmund K. Burke and
  Barry McCollum and
@@ -150,7 +160,7 @@ Faculty of Mathematics and Physics},
 }
 
 @PhdThesis{Rudova2004,
-  Title                    = {Conflict-based Statistics},
+  Title                    = {Conflict-Based Statistics},
   Author                   = {Tom{\'{a}}s M{\"{u}}ller
 Roman Barták
 Hana Rudová},
@@ -202,17 +212,19 @@ Hana Rudová},
   Timestamp                = {Fri, 01 Apr 4457205 12:22:56 +}
 }
 
-@article{DBLP:journals/eor/Wilson03,
-  author    = {James M. Wilson},
-  title     = {Gantt charts: {A} centenary appreciation},
-  journal   = {European Journal of Operational Research},
-  volume    = {149},
-  number    = {2},
-  pages     = {430--437},
-  year      = {2003},
-  url       = {http://dx.doi.org/10.1016/S0377-2217(02)00769-5},
-  doi       = {10.1016/S0377-2217(02)00769-5},
-  timestamp = {Thu, 03 Jan 4431174 06:07:12 +},
-  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/eor/Wilson03},
-  bibsource = {dblp computer science bibliography, http://dblp.org}
+@Article{Wilson2003,
+  Title                    = {Gantt charts: {A} Centenary Appreciation},
+  Author                   = {James M. Wilson},
+  Journal                  = {European Journal of Operational Research},
+  Year                     = {2003},
+  Number                   = {2},
+  Pages                    = {430--437},
+  Volume                   = {149},
+
+  Bibsource                = {dblp computer science bibliography, http://dblp.org},
+  Biburl                   = {http://dblp.uni-trier.de/rec/bib/journals/eor/Wilson03},
+  Doi                      = {10.1016/S0377-2217(02)00769-5},
+  Timestamp                = {Thu, 03 Jan 4431174 06:07:12 +},
+  Url                      = {http://dx.doi.org/10.1016/S0377-2217(02)00769-5}
 }
+

@@ -8,8 +8,8 @@ A level-1 auxiliary file: 800-references.aux
 The style file: plain.bst
 Database file #1: 000-main.bib
 Warning--entry type for "BarryMcCollum2008" isn't style-file defined
---line 108 of file 000-main.bib
+--line 120 of file 000-main.bib
 Warning--entry type for "McCollum2008" isn't style-file defined
---line 124 of file 000-main.bib
+--line 136 of file 000-main.bib
 Warning--can't use both author and editor fields in Jensen2001
 (There were 3 warnings)

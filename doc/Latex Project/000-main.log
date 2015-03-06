@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.19)  5 MAR 2015 00:24
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.19)  6 MAR 2015 01:45
 entering extended mode
 **000-main.tex
 
@@ -910,6 +910,135 @@ LaTeX Font Info:    Try loading font information for T1+ptm on input line 43.
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
+001-acronyms.tex"
+\acronymlabelwidth=\skip67
+)
+\glswrite=\write3
+\glo@main@file=\write4
+Package glossaries Info: Writing glossary file 000-main.glo on input line 47.
+\glo@acronym@file=\write5
+Package glossaries Info: Writing glossary file 000-main.acn on input line 47.
+
+\@input{000-latex-config.aux}
+
+("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
+000-latex-config.tex")
+\@input{000-format-json.aux}
+
+("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
+000-format-json.tex" ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bera\bera.st
+y"
+Package: bera 2004/01/31 (WaS)
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.def"
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\textcomp.sty"
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1enc.def"
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+Now handling font encoding TS1 ...
+... processing UTF-8 mapping file for font encoding TS1
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1enc.dfu"
+File: ts1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+))
+LaTeX Info: Redefining \oldstylenums on input line 266.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 281.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 282.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 283.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 284.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 285.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 286.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 287.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 288.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 289.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 290.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 291.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 292.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 293.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 294.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 295.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 296.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 297.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 298.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 299.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 300.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 301.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 302.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 303.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 304.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 305.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 306.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 311.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 312.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 313.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 314.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 315.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 316.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 317.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 318.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 319.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 320.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 321.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 322.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 323.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 324.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 325.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 326.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 327.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 328.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 329.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 330.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 331.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 332.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 333.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 334.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 335.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 336.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 337.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 338.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bera\beraserif.sty"
+Package: beraserif 2004/01/30 (WaS)
+LaTeX Font Info:    Try loading font information for T1+fve on input line 30.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bera\t1fve.fd"
+File: t1fve.fd 2004/09/07 scalable font definitions for T1/fve.
+)
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 30.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bera\berasans.sty"
+Package: berasans 2004/01/30 (WaS)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bera\beramono.sty"
+Package: beramono 2004/01/31 (WaS)
+)))
+("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
 000-main.aux"
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
 100-cover.aux")
@@ -935,10 +1064,15 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
 LaTeX Font Info:    ... okay on input line 53.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
 LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 53.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
-File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ucs\ucsencs.def"
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 53.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 53.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 53.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ucs\ucsencs.def"
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 
@@ -1038,31 +1172,53 @@ Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count174
 
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
-100-cover.tex" <./images/Logo_ISEL2.png, id=1, 809.9058pt x 263.0628pt>
-File: ./images/Logo_ISEL2.png Graphic file (type png)
+100-cover.tex" <./images/LogoIsel3.png, id=1, 173.448pt x 104.5506pt>
+File: ./images/LogoIsel3.png Graphic file (type png)
 
-<use ./images/Logo_ISEL2.png>
-Package pdftex.def Info: ./images/Logo_ISEL2.png used on input line 4.
-(pdftex.def)             Requested size: 199.16928pt x 64.68977pt.
+<use ./images/LogoIsel3.png>
+Package pdftex.def Info: ./images/LogoIsel3.png used on input line 4.
+(pdftex.def)             Requested size: 199.16928pt x 120.06154pt.
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 12.9599pt on input line 5.
+LaTeX Font Info:    Font shape `T1/fve/b/n' will be
+(Font)              scaled to size 12.9599pt on input line 5.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ucs\uni-0.def"
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
-<./images/guide_me_logo.jpg, id=2, 225.84375pt x 225.84375pt>
+<./images/guide_me_logo.jpg, id=3, 225.84375pt x 225.84375pt>
 File: ./images/guide_me_logo.jpg Graphic file (type jpg)
 
 <use ./images/guide_me_logo.jpg>
 Package pdftex.def Info: ./images/guide_me_logo.jpg used on input line 7.
 (pdftex.def)             Requested size: 99.5852pt x 99.58464pt.
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 16.19989pt on input line 8.
+LaTeX Font Info:    Font shape `T1/fve/b/n' will be
+(Font)              scaled to size 16.19989pt on input line 9.
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 14.3999pt on input line 10.
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 12.59991pt on input line 13.
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 10.79993pt on input line 15.
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 9.89993pt on input line 24.
+LaTeX Font Info:    Font shape `T1/fve/b/n' will be
+(Font)              scaled to size 8.99994pt on input line 45.
  [1
 
 
 
 
+
+
+
+
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <D:/Miguel/Documentos/GitH
-ub/isel-examtimetabling-2014-2015/doc/Latex Project/images/Logo_ISEL2.png> <D:/
-Miguel/Documentos/GitHub/isel-examtimetabling-2014-2015/doc/Latex Project/image
-s/guide_me_logo.jpg>]) [2
+ub/isel-examtimetabling-2014-2015/doc/Latex Project/images/LogoIsel3.png> <D:/M
+iguel/Documentos/GitHub/isel-examtimetabling-2014-2015/doc/Latex Project/images
+/guide_me_logo.jpg>]) [2
 
 
 
@@ -1107,29 +1263,31 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
 000-main.toc")
-\tf@toc=\write3
+\tf@toc=\write6
  [3] [4
 
 
 ]
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
 000-main.lof")
-\tf@lof=\write4
+\tf@lof=\write7
  [5] [6
 
 
 ]
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
 000-main.lot")
-\tf@lot=\write5
+\tf@lot=\write8
  [7] [8
 
 
 ]
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
 000-main.lol")
-\tf@lol=\write6
- [9] [10
+\tf@lol=\write9
+
+No file 000-main.acr.
+[9] [10
 
 
 ]
@@ -1138,57 +1296,108 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 Chapter 1.
 Package newfloat Info: Setting Plan B file extension to `lof'... on input line 
 2.
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 18.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
-File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+LaTeX Font Info:    Font shape `T1/fve/b/n' will be
+(Font)              scaled to size 10.79993pt on input line 11.
+LaTeX Font Info:    Try loading font information for TS1+fve on input line 18.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bera\ts1fve.fd"
+File: ts1fve.fd 2004/09/07 scalable font definitions for TS1/fve.
 )
-LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 18.
- [1
+LaTeX Font Info:    Font shape `TS1/fve/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 18.
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+
+ []
+
+[1
 
 
 
-]) [2] [3]
+]
+LaTeX Font Info:    Font shape `T1/fve/m/it' in size <10> not available
+(Font)              Font shape `T1/fve/m/sl' tried instead on input line 25.
+LaTeX Font Info:    Font shape `T1/fve/m/sl' will be
+(Font)              scaled to size 8.99994pt on input line 25.
+) [2]
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
-300-theory.tex" [4
+300-theory.tex"
+Chapter 2.
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--8
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--17
+
+ []
+
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 8.09995pt on input line 20.
+<./images/typesOfAlgorithms.pdf, id=46, 358.33875pt x 211.79124pt>
+File: ./images/typesOfAlgorithms.pdf Graphic file (type pdf)
+
+<use ./images/typesOfAlgorithms.pdf>
+Package pdftex.def Info: ./images/typesOfAlgorithms.pdf used on input line 22.
+(pdftex.def)             Requested size: 358.33788pt x 211.79073pt.
+ [3
 
 
 
 
 ]
-Chapter 2.
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--16
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--25
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--34
+
+ []
+
+[4 <D:/Miguel/Documentos/GitHub/isel-examtimetabling-2014-2015/doc/Latex Projec
+t/images/typesOfAlgorithms.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 30--33
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--41
-
- []
-
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 43--44
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 50--51
-
- []
-
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 59--60
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
 
  []
 
@@ -1202,127 +1411,105 @@ Underfull \hbox (badness 10000) in paragraph at lines 68--69
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 71--74
-
- []
-
-[8] <./images/typesOfAlgorithms.pdf, id=67, 358.33875pt x 211.79124pt>
-File: ./images/typesOfAlgorithms.pdf Graphic file (type pdf)
-
-<use ./images/typesOfAlgorithms.pdf>
-Package pdftex.def Info: ./images/typesOfAlgorithms.pdf used on input line 77.
-(pdftex.def)             Requested size: 358.33788pt x 211.79073pt.
- [9 <D:/Miguel/Documentos/GitHub/isel-examtimetabling-2014-2015/doc/Latex Proje
-ct/images/typesOfAlgorithms.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 111--120
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--120
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--120
+Underfull \hbox (badness 10000) in paragraph at lines 112--120
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--120
-
- []
-
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 130--138
+Underfull \hbox (badness 10000) in paragraph at lines 112--120
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--138
+Underfull \hbox (badness 10000) in paragraph at lines 112--120
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--138
+Underfull \hbox (badness 10000) in paragraph at lines 112--120
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--138
+Underfull \hbox (badness 10000) in paragraph at lines 112--120
+
+ []
+
+[7])
+Underfull \hbox (badness 10000) in paragraph at lines 122--83
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--138
-
- []
-
-[11])
-Underfull \hbox (badness 10000) in paragraph at lines 140--83
+Underfull \hbox (badness 10000) in paragraph at lines 122--83
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--83
+Underfull \hbox (badness 10000) in paragraph at lines 122--83
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--83
+Underfull \hbox (badness 10000) in paragraph at lines 122--83
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--83
+Underfull \hbox (badness 10000) in paragraph at lines 122--83
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--83
+Underfull \hbox (badness 10000) in paragraph at lines 122--83
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--83
+Underfull \hbox (badness 10000) in paragraph at lines 122--83
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--83
+Underfull \hbox (badness 10000) in paragraph at lines 122--83
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--83
+Underfull \hbox (badness 10000) in paragraph at lines 122--83
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 140--83
-
- []
-
-[12] [13]
+[8] [9]
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
-400-implementation.tex" [14
+400-implementation.tex" [10
 
 
 
 
 ]
 Chapter 3.
-) [15]
+) [11]
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
-600-conclusions.tex" [16
+600-conclusions.tex" [12
 
 
 
 
 ]
 Chapter 4.
-) [17] [18
+) [13] [14
 
 
 
@@ -1330,7 +1517,12 @@ Chapter 4.
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
 800-references.tex"
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
-000-main.bbl")) [19
+000-main.bbl"
+LaTeX Font Info:    Font shape `T1/fve/m/it' in size <9> not available
+(Font)              Font shape `T1/fve/m/sl' tried instead on input line 7.
+LaTeX Font Info:    Font shape `T1/fve/m/sl' will be
+(Font)              scaled to size 8.09995pt on input line 7.
+)) [15
 
 
 
@@ -1350,30 +1542,24 @@ Chapter 4.
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
 800-references.aux")) ) 
 Here is how much of TeX's memory you used:
- 13208 strings out of 493921
- 195887 string characters out of 3144879
- 318725 words of memory out of 3000000
- 16155 multiletter control sequences out of 15000+200000
- 62830 words of font info for 46 fonts, out of 3000000 for 9000
+ 14127 strings out of 493921
+ 209754 string characters out of 3144879
+ 326486 words of memory out of 3000000
+ 17025 multiletter control sequences out of 15000+200000
+ 61921 words of font info for 59 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  46i,6n,77p,1797b,601s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm
--ec.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Pro
-gram Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files 
-(x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}<C:/Program Files (x86)/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 
-2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
-ype1/public/lm/lmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
-/lm/lmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr10.p
-fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Progr
-am Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb><C:/Program Files (x8
-6)/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9
-/fonts/type1/public/lm/lmr9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
-public/lm/lmri10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/l
-mri9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb>
-Output written on 000-main.pdf (29 pages, 421285 bytes).
+-rm.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:
+/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/bera/fveb8a.pfb><C:/Program Files (x86)/MiKTeX 2.
+9/fonts/type1/bera/fver8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/be
+ra/fver8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.p
+fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb>
+Output written on 000-main.pdf (25 pages, 185750 bytes).
 PDF statistics:
- 185 PDF objects out of 1000 (max. 8388607)
+ 150 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
