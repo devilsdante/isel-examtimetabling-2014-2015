@@ -1,21 +1,54 @@
 \begin{thebibliography}{10}
 
-\bibitem{Abdullah2013}
-Salwani Abdullah and Malek Alzaqebah.
-\newblock A hybrid self-adaptive bees algorithm for examination timetabling
-  problems.
-\newblock {\em Appl. Soft Comput.}, 13(8):3608--3620, 2013.
+\bibitem{Abdullah2009}
+Salwani Abdullah, Hamza Turabieh, and Barry McCollum.
+\newblock A hybridization of electromagnetic-like mechanism and great deluge
+  for examination timetabling problems.
+\newblock In Maria~J. Blesa, Christian Blum, Luca~Di Gaspero, Andrea Roli,
+  Michael Sampels, and Andrea Schaerf, editors, {\em Hybrid Metaheuristics, 6th
+  International Workshop, {HM} 2009, Udine, Italy, October 16-17, 2009.
+  Proceedings}, volume 5818 of {\em Lecture Notes in Computer Science}, pages
+  60--72. Springer, 2009.
 
 \bibitem{Arora2009}
 Sanjeev Arora and Boaz Barak.
 \newblock {\em Computational Complexity - {A} Modern Approach}.
 \newblock Cambridge University Press, 2009.
 
+\bibitem{Drools}
+The~JBoss Drools.
+\newblock Drools planner user guide.
+
 \bibitem{Dueck1993}
 Gunter Dueck.
 \newblock New optimization heuristics: The great deluge algorithm and the
   record-to-record travel.
 \newblock {\em Journal of Computational Physics}, 1993.
+
+\bibitem{Gogos2012}
+Christos Gogos, Panayiotis Alefragis, and Efthymios Housos.
+\newblock An improved multi-staged algorithmic process for the solution of the
+  examination timetabling problem.
+\newblock {\em Annals {OR}}, 194(1):203--221, 2012.
+
+\bibitem{Ibaraki2007}
+Mitsunori Atsuta Koji Nonobe~Toshihide Ibaraki.
+\newblock {\em ITC-2007 Track2: An Approach using General CSP Solver}.
+\newblock PhD thesis, Kwansei-Gakuin University, School of Science and
+  Technology, 2-1 Gakuen, Sanda, Japan 669-1337 {ady67525,
+  ibaraki}@kwansei.ac.jp Hosei University, Faculty of Engineering \& Design
+  2-17-1 Fujimi, Chiyoda-ku, Tokyo, Japan 102-8160 nonobe@hosei.ac.jp, 2007.
+
+\bibitem{Javadian2008}
+Nikbakhsh Javadian, Mohsen~Gol Alikhani, and Reza Tavakkoli{-}Moghaddam.
+\newblock A discrete binary version of the electromagnetism-like heuristic for
+  solving traveling salesman problem.
+\newblock In De{-}Shuang Huang, Donald C.~Wunsch II, Daniel~S. Levine, and
+  Kang{-}Hyun Jo, editors, {\em Advanced Intelligent Computing Theories and
+  Applications. With Aspects of Artificial Intelligence, 4th International
+  Conference on Intelligent Computing, {ICIC} 2008, Shanghai, China, September
+  15-18, 2008, Proceedings}, volume 5227 of {\em Lecture Notes in Computer
+  Science}, pages 123--130. Springer, 2008.
 
 \bibitem{Jensen2001}
 Tommy~R. Jensen.
@@ -45,17 +78,18 @@ Barry McCollum, Andrea Schaerf, Ben Paechter, Paul McMullan, Rhyd Lewis,
   international timetabling competition, 2008.
 
 \bibitem{McCollum2008}
-Dr~Barry McCollum, 2008.
+Dr~Barry McCollum.
+\newblock Evaluation function, 2008.
 
 \bibitem{Mueller2005}
 Tom{\'{a}}s M{\"{u}}ller.
-\newblock {\em Constraint-based timetabling}.
+\newblock {\em Constraint-Based Timetabling}.
 \newblock PhD thesis, Charles University in Prague Faculty of Mathematics and
   Physics, 2005.
 
 \bibitem{Mueller2009}
 Tom{\'{a}}s M{\"{u}}ller.
-\newblock {ITC2007} solver description: a hybrid approach.
+\newblock {ITC2007} solver description: A hybrid approach.
 \newblock {\em Annals {OR}}, 172(1):429--446, 2009.
 
 \bibitem{Qu2009}
@@ -66,7 +100,7 @@ Rong Qu, Edmund~K. Burke, Barry McCollum, Liam T.~G. Merlot, and S.~Y. Lee.
 
 \bibitem{Rudova2004}
 Tom{\'{a}}s M{\"{u}}ller Roman Barták~Hana Rudová.
-\newblock {\em Conflict-based Statistics}.
+\newblock {\em Conflict-Based Statistics}.
 \newblock PhD thesis, Faculty of Mathematics and Physics, Charles University
   Malostransk´e n´am. 2/25, Prague, Czech Republic, 2004.
 
@@ -80,6 +114,10 @@ Stuart~J. Russell and Peter Norvig.
 Andrea Schaerf.
 \newblock A survey of automated timetabling.
 \newblock {\em Artif. Intell. Rev.}, 13(2):87--127, 1999.
+
+\bibitem{Smet2007}
+Geoffrey~De Smet.
+\newblock Drools-solver, 2007.
 
 \bibitem{Talbi2009}
 El{-}Ghazali Talbi.

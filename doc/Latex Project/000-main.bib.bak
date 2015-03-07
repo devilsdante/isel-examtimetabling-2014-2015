@@ -2,6 +2,45 @@
 % Encoding: UTF8
 
 
+@InProceedings{Abdullah2009,
+  Title                    = {A Hybridization of Electromagnetic-Like Mechanism and Great Deluge
+ for Examination Timetabling Problems},
+  Author                   = {Salwani Abdullah and
+ Hamza Turabieh and
+ Barry McCollum},
+  Booktitle                = {Hybrid Metaheuristics, 6th International Workshop, {HM} 2009, Udine,
+ Italy, October 16-17, 2009. Proceedings},
+  Year                     = {2009},
+  Pages                    = {60--72},
+
+  Bibsource                = {dblp computer science bibliography, http://dblp.org},
+  Biburl                   = {http://dblp.uni-trier.de/rec/bib/conf/hm/AbdullahTM09},
+  Crossref                 = {DBLP:conf/hm/2009},
+  Doi                      = {10.1007/978-3-642-04918-7_5},
+  Timestamp                = {Mon, 12 Oct 2009 12:41:52 +0200},
+  Url                      = {http://dx.doi.org/10.1007/978-3-642-04918-7_5}
+}
+
+@InProceedings{Javadian2008,
+  Title                    = {A Discrete Binary Version of the Electromagnetism-Like Heuristic for
+ Solving Traveling Salesman Problem},
+  Author                   = {Nikbakhsh Javadian and
+ Mohsen Gol Alikhani and
+ Reza Tavakkoli{-}Moghaddam},
+  Booktitle                = {Advanced Intelligent Computing Theories and Applications. With Aspects
+ of Artificial Intelligence, 4th International Conference on Intelligent
+ Computing, {ICIC} 2008, Shanghai, China, September 15-18, 2008, Proceedings},
+  Year                     = {2008},
+  Pages                    = {123--130},
+
+  Bibsource                = {dblp computer science bibliography, http://dblp.org},
+  Biburl                   = {http://dblp.uni-trier.de/rec/bib/conf/icic/JavadianAT08},
+  Crossref                 = {DBLP:conf/icic/2008-2},
+  Doi                      = {10.1007/978-3-540-85984-0_16},
+  Timestamp                = {Thu, 11 Sep 2008 09:38:46 +0200},
+  Url                      = {http://dx.doi.org/10.1007/978-3-540-85984-0_16}
+}
+
 @Article{Abdullah2013,
   Title                    = {A Hybrid Self-Ddaptive Bees Algorithm for Examination Timetabling Problems},
   Author                   = {Salwani Abdullah and
@@ -33,6 +72,13 @@
   Url                      = {http://www.cambridge.org/catalogue/catalogue.asp?isbn=9780521424264}
 }
 
+@Other{Drools,
+  Title                    = {Drools Planner User Guide},
+  Author                   = {The JBoss Drools},
+  Timestamp                = {2015.03.07},
+  Url                      = {http://docs.jboss.org/drools/release/5.4.0.Final/drools-planner-docs/html_single/}
+}
+
 @Article{Dueck1993,
   Title                    = {New Optimization Heuristics: The Great Deluge Algorithm and the Record-to-Record Travel},
   Author                   = {Gunter Dueck},
@@ -40,6 +86,38 @@
   Year                     = {1993},
 
   Timestamp                = {2015.03.03}
+}
+
+@Article{Gogos2012,
+  Title                    = {An Improved Multi-Staged Algorithmic Process for the Solution of the
+ Examination Timetabling Problem},
+  Author                   = {Christos Gogos and
+ Panayiotis Alefragis and
+ Efthymios Housos},
+  Journal                  = {Annals {OR}},
+  Year                     = {2012},
+  Number                   = {1},
+  Pages                    = {203--221},
+  Volume                   = {194},
+
+  Bibsource                = {dblp computer science bibliography, http://dblp.org},
+  Biburl                   = {http://dblp.uni-trier.de/rec/bib/journals/anor/GogosAH12},
+  Doi                      = {10.1007/s10479-010-0712-3},
+  Timestamp                = {Mon, 09 Sep 4460735 09:36:32 +},
+  Url                      = {http://dx.doi.org/10.1007/s10479-010-0712-3}
+}
+
+@PhdThesis{Ibaraki2007,
+  Title                    = {ITC-2007 Track2: An Approach using General CSP Solver},
+  Author                   = {Mitsunori Atsuta
+Koji Nonobe
+Toshihide Ibaraki},
+  School                   = {Kwansei-Gakuin University, School of Science and Technology, 2-1 Gakuen, Sanda, Japan 669-1337 {ady67525, ibaraki}@kwansei.ac.jp
+Hosei University, Faculty of Engineering \& Design 2-17-1 Fujimi, Chiyoda-ku, Tokyo, Japan 102-8160 nonobe@hosei.ac.jp},
+  Year                     = {2007},
+
+  Timestamp                = {2015.03.07},
+  Url                      = {http://www.cs.qub.ac.uk/itc2007/winner/bestcoursesolutions/Atsuta_et_al.pdf}
 }
 
 @Book{Jensen2001,
@@ -76,7 +154,6 @@ Sau Yan Lee},
   Journal                  = {The Journal of the Operational Research Society},
   Year                     = {1996},
 
-  Owner                    = {Mike},
   Timestamp                = {2015.03.05}
 }
 
@@ -133,6 +210,7 @@ Faculty of Mathematics and Physics},
 }
 
 @Other{McCollum2008,
+  Title                    = {Evaluation Function},
   Author                   = {Dr Barry McCollum},
   Timestamp                = {2015.03.03},
   Url                      = {http://www.cs.qub.ac.uk/itc2007/examtrack/exam_track_index_files/examevaluation.htm},
@@ -200,6 +278,14 @@ Hana Rudová},
   Url                      = {http://dx.doi.org/10.1023/A:1006576209967}
 }
 
+@Other{Smet2007,
+  Title                    = {Drools-solver},
+  Author                   = {Geoffrey De Smet},
+  Timestamp                = {2015.03.07},
+  Url                      = {http://www.cs.qub.ac.uk/itc2007/winner/bestexamsolutions/Geoffrey_De_smet_examination_description.pdf},
+  Year                     = {2007}
+}
+
 @Book{Talbi2009,
   Title                    = {Metaheuristics - From Design to Implementation},
   Author                   = {El{-}Ghazali Talbi},
@@ -226,5 +312,46 @@ Hana Rudová},
   Doi                      = {10.1016/S0377-2217(02)00769-5},
   Timestamp                = {Thu, 03 Jan 4431174 06:07:12 +},
   Url                      = {http://dx.doi.org/10.1016/S0377-2217(02)00769-5}
+}
+
+@Proceedings{DBLP:conf/hm/2009,
+  Title                    = {Hybrid Metaheuristics, 6th International Workshop, {HM} 2009, Udine,
+ Italy, October 16-17, 2009. Proceedings},
+  Year                     = {2009},
+  Editor                   = {Maria J. Blesa and
+ Christian Blum and
+ Luca Di Gaspero and
+ Andrea Roli and
+ Michael Sampels and
+ Andrea Schaerf},
+  Publisher                = {Springer},
+  Series                   = {Lecture Notes in Computer Science},
+  Volume                   = {5818},
+
+  Bibsource                = {dblp computer science bibliography, http://dblp.org},
+  Biburl                   = {http://dblp.uni-trier.de/rec/bib/conf/hm/2009},
+  Doi                      = {10.1007/978-3-642-04918-7},
+  ISBN                     = {978-3-642-04917-0},
+  Timestamp                = {Fri, 14 Mar 4453084 08:53:36 +},
+  Url                      = {http://dx.doi.org/10.1007/978-3-642-04918-7}
+}
+
+@Proceedings{conf/icic/2008-2,
+  Title                    = {Advanced Intelligent Computing Theories and Applications. With Aspects
+ of Artificial Intelligence, 4th International Conference on Intelligent
+ Computing, {ICIC} 2008, Shanghai, China, September 15-18, 2008, Proceedings},
+  Year                     = {2008},
+  Editor                   = {De{-}Shuang Huang and
+ Donald C. Wunsch II and
+ Daniel S. Levine and
+ Kang{-}Hyun Jo},
+  Publisher                = {Springer},
+  Series                   = {Lecture Notes in Computer Science},
+  Volume                   = {5227},
+
+  Bibsource                = {dblp computer science bibliography, http://dblp.org},
+  Biburl                   = {http://dblp.uni-trier.de/rec/bib/conf/icic/2008-2},
+  ISBN                     = {978-3-540-85983-3},
+  Timestamp                = {Tue, 17 Aug 4432066 05:14:08 +}
 }
 

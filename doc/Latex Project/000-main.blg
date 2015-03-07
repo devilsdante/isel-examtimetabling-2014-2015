@@ -7,9 +7,13 @@ A level-1 auxiliary file: 600-conclusions.aux
 A level-1 auxiliary file: 800-references.aux
 The style file: plain.bst
 Database file #1: 000-main.bib
+Warning--entry type for "Drools" isn't style-file defined
+--line 75 of file 000-main.bib
 Warning--entry type for "BarryMcCollum2008" isn't style-file defined
---line 120 of file 000-main.bib
+--line 196 of file 000-main.bib
 Warning--entry type for "McCollum2008" isn't style-file defined
---line 136 of file 000-main.bib
+--line 212 of file 000-main.bib
+Warning--entry type for "Smet2007" isn't style-file defined
+--line 281 of file 000-main.bib
 Warning--can't use both author and editor fields in Jensen2001
-(There were 3 warnings)
+(There were 5 warnings)

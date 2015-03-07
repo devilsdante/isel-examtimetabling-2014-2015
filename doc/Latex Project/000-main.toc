@@ -18,8 +18,13 @@
 \contentsline {paragraph}{Single-solution meta-heuristics}{6}
 \contentsline {paragraph}{Population-based meta-heuristics}{6}
 \contentsline {subsection}{\numberline {2.2.4}ITC 2007 Examination timetabling problem: some approaches}{6}
-\contentsline {paragraph}{Tom\'{a}\v {s} M\"{u}ller's approach:}{8}
-\contentsline {paragraph}{Christos Gogos' approach:}{8}
+\contentsline {paragraph}{Tom\'{a}\v {s} M\"{u}ller's approach}{8}
+\contentsline {paragraph}{Christos Gogos' approach}{8}
+\contentsline {paragraph}{Mitsunori Atsuta, Koji Nonobe and Toshihide Ibaraki's approach}{8}
+\contentsline {paragraph}{Geoffrey De Smet's approach}{8}
+\contentsline {paragraph}{Nelishia pillay's approach}{9}
+\contentsline {subsection}{\numberline {2.2.5}Other approaches}{9}
+\contentsline {paragraph}{(2009) Salwani Abdullah, Hamza Turabieh, and Barry McCollum's Hybridization approach}{9}
 \contentsline {chapter}{\numberline {3}Implementation}{11}
 \contentsline {section}{\numberline {3.1}Loader Module}{11}
 \contentsline {section}{\numberline {3.2}Solution Method}{11}

@@ -4,9 +4,9 @@
 
 In this section, we review the state of the art of problem at hand. We start by describing why timetabling is a rather complex problem, some possible approaches on trying to solve the problem and some of the solutions already taken, specifically for the ITC 2007 benchmarks.
 \\
-%%%%%%%%%%%%%%%%%%%%
+
 \section{Timetabling Problem}
-%%%%%%%%%%%%%%%%%%%%
+
 When solving timetabling problems, it is possible to generate one of multiple types of solutions which are named \textit{feasible solutions}, \textit{non feasible solutions}, \textit{optimal solutions} or \textit{sub-optimal solutions}. A feasible solution is a solution that solves all the mandatory problem constraints, in contrary to non feasible solutions. An optimal solution is the best feasible solution possible considering the problem and its optimal solution value. It's possible for a problem to have multiple optimal solutions. For last, non-optimal solutions are feasible solutions that can't reach the optimal solution value and so are not as good compared to an optimal solutions.\\
 
 Timetabling automation is a subject that has been a target of research for about 50 years. The timetabling problem may be formulated as a search or optimization problem~\cite{Schaerf1999}. As a search problem, the goal consist on finding a solution (feasible solution) that satisfies all the hard constraints, while ignoring the soft constraints. On the contrary, posing the timetabling problem as an optimization problem, one seeks to minimize (considering a minimization problem) the violations of soft constraints while satisfying the hard constraints. Typically, the optimization is done after using a search procedure for finding an initial feasible solution.\\
@@ -29,7 +29,7 @@ The Figure~\ref{fig:TypesAlgorithms} represents the organization of Optimization
 Timetabling solution approaches are usually divided in the following categories~\cite{Qu2009}: \textit{exact algorithms} (Branch-and-Bound, Dynamic Programming), \textit{graph based sequential techniques}, \textit{local search based techniques} (Tabu Search, Simulated Annealing), \textit{population based algorithms} (Evolutionary Algorithms, Memetic algorithms, Ant algorithms, Artificial immune algorithms), \textit{Multi-criteria techniques}, \textit{Hyper-heuristics}, \textit{Decomposition/clustering techniques} and \textit{Hybrid algorithms}, which combine features of several algorithms, comprise the state-of-the-art. Due to its complexity, approaching the examination timetabling problem using exact method approaches can only be done for small size instances. Real problem instances found in practice are usually of large size, making the use of exact methods impracticable. Heuristic solution algorithms have been usually employed to solve this problem.\\
 
 Real problem instances are usually solved by applying algorithms which use both \textit{heuristics} and \textit{meta-heuristics}. Heuristic algorithms are problem-dependent, meaning that these are adapted to a specific problem in which take advantage of its details. Heuristics are used to generate a feasible solution, focusing on solving all hard constraints only. Meta-heuristics on the other hand are problem-independent. These are used to, given the feasible solution obtained using heuristic algorithms, generate a better solution focusing on solving as many soft constraints as possible.\\
-\\
+
 Most of the Meta-heuristic algorithms used belong to one of the three categories: One-Stage algorithms, Two-Stage algorithms and algorithms that allow relaxations~\cite{Lewis2007}. 
 \begin{itemize}
   \item The One-Stage algorithm is used to get an initial optimal solution, which the goal is to satisfy both hard and soft constraints at the same time. Approaches using this stage are not very common because it's hard to get proper solutions in a reasonable amount of time trying to satisfy both types of constraints at the same time;
@@ -102,36 +102,48 @@ In this thesis, I'll be reviewing some of the winners approaches. The winners li
 \begin{itemize}
 	\item 1st Place: Tom\'{a}\v{s} M\"{u}ller
 	\item 2nd Place: Christos Gogos
-	\item 3rd Place:Mitsunori Atsuta, Koji Nonobe, and Toshihide Ibaraki
+	\item 3rd Place: Mitsunori Atsuta, Koji Nonobe, and Toshihide Ibaraki
 	\item 4th Place: Geoffrey De Smet
 	\item 5th Place: Nelishia Pillay
 \end{itemize}
 
-\paragraph{Tom\'{a}\v{s} M\"{u}ller's approach:}
+\paragraph{Tom\'{a}\v{s} M\"{u}ller's approach}
 
-Tom\'{a}\v{s} M\"{u}ller's approach~\cite{Mueller2009} was actually used to solve all three problems established by the ITC 2007 competition. He was able to win two of them and be finalist on the third. For solving the problems, he opted for an hybrid approach, organized in a two-phase algorithm..\\
-\\
-In the first phase, Tom\'{a}\v{s} used Iterative Forward Search (IFS) algorithm~\cite{Mueller2005} to obtain feasible solutions and Conflict-based Statistics~\cite{Rudova2004} to prevent IFS from looping. The timetabling problems solved were specified as constraint satisfaction problems, where events (exams, courses) are represented by variables. The variables' values are the possible pairs (time slot, room) that don't cause violations in the hard constraints. For each iteration there's an attempt to sign a value to an unassigned variable. If it violates hard constraints, the conflicting variables are unassigned. The variable chosen in each iteration is randomized or parameterized to, for example, assign the most difficult assignable exam first. The Conflict-based Statistics was used to memorize some previously passed conflicts and avoid repeating those for each iteration.\\
-\\
+Tom\'{a}\v{s} M\"{u}ller's approach~\cite{Mueller2009} was actually used to solve all three problems established by the ITC 2007 competition. He was able to win two of them and be finalist on the third. For solving the problems, he opted for an hybrid approach, organized in a two-phase algorithm. In the first phase, Tom\'{a}\v{s} used Iterative Forward Search (IFS) algorithm~\cite{Mueller2005} to obtain feasible solutions and Conflict-based Statistics~\cite{Rudova2004} to prevent IFS from looping. 
+	%--The timetabling problems solved were specified as constraint satisfaction problems, where events (exams, courses) are represented by variables. The variables' values are the possible pairs (time slot, room) that don't cause violations in the hard constraints. For each iteration there's an attempt to sign a value to an unassigned variable. If it violates hard constraints, the conflicting variables are unassigned. The variable chosen in each iteration is randomized or parameterized to, for example, assign the most difficult assignable exam first. The Conflict-based Statistics was used to memorize some previously passed conflicts and avoid repeating those for each iteration.\\
 The second phase consists in using multiple optimization algorithms. These algorithms are applied using this order: HC~\cite{Russell2010}, Great Deluge (GD)~\cite{Dueck1993} and optionally SA~\cite{Kirkpatrick1983}.\\
-\\
-HC is used to optimize the first phase solution, resulting on a solution stuck at a local optimum. To leave local optimum area, GD is used in order to try and result in a better solution. For last, SA is used in a loop, keeping the temperature limit unchanged. After not getting a better solution for a limited time, the temperature is reheated (temperature limit gets higher) and HC phase is used again forming a loop in these 3 optimization algorithms.\\
-\\
-\paragraph{Christos Gogos' approach:}
 
-Gogos was able to reach second place in Examination Timetabling track, right after Muller. Gogos' approach is very different compared to Muller's. His approach, like Muller's, was divided in two phases named \textit{Construction Phase} and \textit{Improvement Phase}, in which the first is used do construct a feasible solution and the second improves the solution found in the first phase, using local search algorithms.\\
-\\
-In the first phase, is starts using a Pre-processing stage. This stage deals with hidden dependencies, which means it adds dependencies to the problem that weren't there at the beginning but they exist and makes sense in the problem itself. For example, one hidden dependency may be one exam $E_1$ having an ordering constraint with exam $E_2$ stating that $E_2$ must be scheduled after exam $E_1$ and exam $E_3$ must be scheduled after exam $E_2$. So a dependency/constraint must be added so exam $E_3$ must be scheduled after exam $E_1$ as well. The key idea is that this pre-process method will be very helpful in the further stages when trying to find solutions.\\
-\\
-After the pre-processing stage, a construction stage takes place. This method is used to create a complete timetable. In this stage, multiple solutions are attempted considering the available time in which only the best solution is passed to the next phase. The solution is constructed by constantly setting an exam and a room to a period until a feasible solution is found.\\
-\\
-In the second phase, HC is used. This algorithm is used to generate neighbor solutions, accepting only better solutions compared to the current one, until reaching a local optimum. It is considered local optimum when HC cannot generate a better solution in a number of tries or time limit.\\
-\\
-The next stage consists in utilizing SA to get out of local maximum. Simulated Annealing stops when it cannot generate better solutions after the specified period of time.\\
-\\
-After Simulated Annealing, an IP formulation that uses Branch and Bound (BB) is used in a set of sub-problems. This stage is called "IP Sub-Problems Stage". This simply examines all periods trying to discover some possible improvements that can be done, for instance, swapping a room with high penalty with a room with no penalty or having lower penalty that is not currently being used.\\
-\\
-The last stage is the Shaking Stage. This method "shakes" the current best solution in order to get equally good solutions and pass it to SA stage. This method is not used if the problem we're solving only has one room or the cost of each room is zero. Two heuristics are used in this stage. The first creates neighbor solutions but a solution is only accepted if the new solution is equally good and the room arrangement is better (total cost of room assignment is lower) as compared to the current best solution. The second heuristic reschedule a set of exams presented on the previous solution. These are first removed from the timetable and then scheduled using the same techniques used in the construction stage. This heuristic will probably generate a worse solution but it is accepted and used next on the SA stage.\\
-\\
-Tabu Search (TS)~\cite{Talbi2009} is also used in this approach, even though it's not used as a standalone method. This one is used along with HC and SA algorithms to prevent them from looping and creating the same results. TS avoids the creation of equal neighbor solutions by not letting the same period be selected for swapping after this being selected once. This period can only be selected again after a certain number of swaps on other periods.\\
-\\
+	%--HC is used to optimize the first phase solution, resulting on a solution stuck at a local optimum. To leave local optimum area, GD is used in order to try and result in a better solution. For last, SA is used in a loop, keeping the temperature limit unchanged. After not getting a better solution for a limited time, the temperature is reheated (temperature limit gets higher) and HC phase is used again forming a loop in these 3 optimization algorithms.\\
+
+\paragraph{Christos Gogos' approach}
+
+Gogos was able to reach second place in Examination Timetabling track, right after Muller. Gogos' approach~\cite{Gogos2012}, like M\"{u}ller's, was divided in two phases named \textit{Construction Phase} and \textit{Improvement Phase}, in which the first is used to construct a feasible solution and the second improves that solution, using local search algorithms. In the first phase, is starts using a Pre-processing stage, dealing with hidden dependencies between exams, prior to searching for a solution. 
+	%--This stage deals with hidden dependencies, which means it adds dependencies to the problem that weren't there at the beginning but they exist and makes sense in the problem itself. For example, one hidden dependency may be one exam $E_1$ having an ordering constraint with exam $E_2$ stating that $E_2$ must be scheduled after exam $E_1$ and exam $E_3$ must be scheduled after exam $E_2$. So a dependency/constraint must be added so exam $E_3$ must be scheduled after exam $E_1$ as well. The key idea is that this pre-process method will be very helpful in the further stages when trying to find solutions.\\
+After the pre-processing stage, a construction stage takes place, resulting in the best feasible solution given a limited period of time. 
+	%--This method is used to create a complete timetable. In this stage, multiple solutions are attempted considering the available time in which only the best solution is passed to the next phase. The solution is constructed by constantly setting an exam and a room to a period until a feasible solution is found.\\
+In the second phase, optimization methods are applied in this order: HC, SA, IP that uses Branch and Bound, finishing with the Shaking Stage. Shaking Stage \textit{shakes} the current solution creating an equally good solution that is given to the HC, creating a loop on the used optimization methods.\\
+	%--HC is used until reaching a local optimum. This algorithm is used to generate neighbor solutions, accepting only better solutions compared to the current one, until reaching a local optimum. It is considered local optimum when HC cannot generate a better solution in a number of tries or time limit.\\
+
+	%--The next stage consists in utilizing SA to get out of local optimum. Simulated Annealing stops when it cannot generate better solutions after the specified period of time.
+
+	%--After SA, an IP formulation that uses Branch and Bound (BB) is used in a set of sub-problems. This stage is called "IP Sub-Problems Stage". This simply examines all periods trying to discover some possible improvements that can be done, for instance, swapping a room with high penalty with a room with no penalty or having lower penalty that is not currently being used.\\
+
+	%--The last stage is the Shaking Stage. This method "shakes" the current best solution in order to get equally good solutions and pass it to SA stage. This method is not used if the problem we're solving only has one room or the cost of each room is zero. Two heuristics are used in this stage. The first creates neighbor solutions but a solution is only accepted if the new solution is equally good and the room arrangement is better (total cost of room assignment is lower) as compared to the current best solution. The second heuristic reschedule a set of exams presented on the previous solution. These are first removed from the timetable and then scheduled using the same techniques used in the construction stage. This heuristic will probably generate a worse solution but it is accepted and used next on the SA stage.\\
+
+	%--Tabu Search (TS)~\cite{Talbi2009} is also used in this approach, even though it's not used as a standalone method. This one is used along with HC and SA algorithms to prevent them from looping and creating the same results. TS avoids the creation of equal neighbor solutions by not letting the same period be selected for swapping after this being selected once. This period can only be selected again after a certain number of swaps on other periods.\\
+
+\paragraph{Mitsunori Atsuta, Koji Nonobe and Toshihide Ibaraki's approach}
+
+Mitsunori Atsuta, Koji Nonobe and Toshihide Ibaraki ended up in third place on the Examination Timetabling track and won third and second place on the other tracks as well, utilizing the same approach for all of them. The approach~\cite{Ibaraki2007} consists on applying constraint satisfaction problem solver adopting an hybridization of Tabu Search and Iterated Local Search (modification of local search method), handling weight constraints (?).\\
+
+\paragraph{Geoffrey De Smet's approach}
+Geoffrey De Smet's approach \cite{Smet2007} differs from all others because he decided not to use a known problem-specific heuristic to obtain a feasible solution, but instead used what is called the \textit{Drool's rule engine}, named \textit{drools-solver} \cite{Drools}. By definition, the drools-solver is a combination of optimization heuristics and meta-heuristics with very efficient score calculation. After obtaining a feasible solution, Geoffrey opted to use a local search algorithm to improve the solutions obtained using the drools-solver.\\
+
+\paragraph{Nelishia pillay's approach}
+
+
+\subsection{Other approaches}
+\label{subsection:OtherAppr}
+
+\paragraph{(2009) Salwani Abdullah, Hamza Turabieh, and Barry McCollum's Hybridization approach}
+Salwani Abdullah, Hamza Turabieh, and Barry McCollum's approach \cite{Abdullah2009} consists on using an hybridization of an electromagnetic-like mechanism and the great deluge algorithm. Electromagnetic-like mechanism is a meta-heuristic algorithm using an \textit{attraction-repulsion} mechanism to move the solutions to the optimum \cite{Javadian2008}.\\

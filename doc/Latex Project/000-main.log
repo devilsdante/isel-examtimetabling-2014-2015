@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.19)  6 MAR 2015 01:45
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.19)  7 MAR 2015 02:36
 entering extended mode
 **000-main.tex
 
@@ -1323,7 +1323,7 @@ LaTeX Font Info:    Font shape `T1/fve/m/sl' will be
 300-theory.tex"
 Chapter 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 5--8
+Underfull \hbox (badness 10000) in paragraph at lines 5--7
 
  []
 
@@ -1366,7 +1366,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--30
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--34
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
 
  []
 
@@ -1422,76 +1422,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 99--100
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--120
+Underfull \hbox (badness 10000) in paragraph at lines 112--115
+
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 120--126
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--120
+Underfull \hbox (badness 10000) in paragraph at lines 137--138
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--120
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 112--120
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 112--120
-
- []
-
-[7])
-Underfull \hbox (badness 10000) in paragraph at lines 122--83
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 122--83
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 122--83
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 122--83
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 122--83
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 122--83
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 122--83
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 122--83
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 122--83
-
- []
-
-[8] [9]
+) [8] [9]
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
 400-implementation.tex" [10
 
@@ -1519,14 +1469,14 @@ Chapter 4.
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
 000-main.bbl"
 LaTeX Font Info:    Font shape `T1/fve/m/it' in size <9> not available
-(Font)              Font shape `T1/fve/m/sl' tried instead on input line 7.
+(Font)              Font shape `T1/fve/m/sl' tried instead on input line 8.
 LaTeX Font Info:    Font shape `T1/fve/m/sl' will be
-(Font)              scaled to size 8.09995pt on input line 7.
-)) [15
+(Font)              scaled to size 8.09995pt on input line 8.
+ [15
 
 
 
-]
+])) [16]
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
 000-main.aux"
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
@@ -1540,26 +1490,30 @@ LaTeX Font Info:    Font shape `T1/fve/m/sl' will be
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
 600-conclusions.aux")
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
-800-references.aux")) ) 
+800-references.aux"))
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 14127 strings out of 493921
- 209754 string characters out of 3144879
- 326486 words of memory out of 3000000
- 17025 multiletter control sequences out of 15000+200000
+ 14133 strings out of 493921
+ 209832 string characters out of 3144879
+ 323518 words of memory out of 3000000
+ 17031 multiletter control sequences out of 15000+200000
  61921 words of font info for 59 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  46i,6n,77p,1797b,601s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm
--rm.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:
-/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files
- (x86)/MiKTeX 2.9/fonts/type1/bera/fveb8a.pfb><C:/Program Files (x86)/MiKTeX 2.
-9/fonts/type1/bera/fver8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/be
-ra/fver8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.p
-fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb>
-Output written on 000-main.pdf (25 pages, 185750 bytes).
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files (x86)/
+MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
+ts/type1/bera/fveb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/bera/fv
+er8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/bera/fver8a.pfb><C:/Pro
+gram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files 
+(x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb>
+Output written on 000-main.pdf (26 pages, 187146 bytes).
 PDF statistics:
- 150 PDF objects out of 1000 (max. 8388607)
+ 153 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
