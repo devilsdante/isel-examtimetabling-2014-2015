@@ -2,8 +2,7 @@
 \label{theory}
 \thispagestyle{plain}
 
-In this section, we review the state of the art of problem at hand. We start by describing why timetabling is a rather complex problem, some possible approaches on trying to solve the problem and some of the solutions already taken, specifically for the ITC 2007 benchmarks.
-\\
+In this section, we review the state of the art of problem at hand. We start by describing why timetabling is a rather complex problem, some possible approaches on trying to solve the problem and some of the solutions already taken, specifically for the ITC 2007 benchmarks.\\
 
 \section{Timetabling Problem}
 
@@ -44,7 +43,7 @@ Approximation algorithms like Heuristics and meta-heuristics proceed to enumerat
 The Constraint Programming Based Technique (CPBT) allows direct programming with constraints which gives ease and flexibility in solving problems like timetabling. Two important features about this technique are backtracking and logical variables that facilitate searching for an optimal solution at the expense of time. Constraint programming is different from other types of programming, as in these types it is specified the steps that need to be executed, but in constraint programming it is specified the properties (hard constraints) of the solution or properties that should not be in the solution~\cite{Qu2009}.\\
 
 \paragraph{Integer Programming}
-The Integer Programming (IP) is a mathematical programming technique in which the optimization problem to be solved must be formulated as an Integer Linear Problem, that is, the objective function and the constraints must be linear, and all problem variables are integer valued. If there are some variables that are continuous and other are integer, then the problem is called Mixed-Integer Linear Programming (MILP). Schaerf~\cite{Schaerf1999} surveys some approaches using the MILP technique to school, course, and examination timetabling.
+The \gls{ip} is a mathematical programming technique in which the optimization problem to be solved must be formulated as an Integer Linear Problem, that is, the objective function and the constraints must be linear, and all problem variables are integer valued. If there are some variables that are continuous and other are integer, then the problem is called Mixed-Integer Linear Programming (MILP). Schaerf~\cite{Schaerf1999} surveys some approaches using the MILP technique to school, course, and examination timetabling.
 
 \subsection{Graph Coloring Based Techniques}
 \label{subsection:graphcoloring}
@@ -53,7 +52,7 @@ Timetabling problems can be reduced to a graph coloring problem. The usual appro
 \paragraph{Graph Coloring Problem}
 The Graph Coloring (GC) problems consists about assigning colors to an element type of the graph which corresponds to a constraint. The simplest sub-type is the \textit{vertex coloring}, which the main goal is to, given a number of vertices and edges, color the vertices so that no adjacent vertices have the same color. In this algorithm, it's best to find a solution with the lowest number of colors as possible. In examination timetable problem, a basic approach could be to represent the exams as vertices and the hard constraints as edges (considering this is search algorithm, it is good to use optimization algorithms to deal with soft constraints) so that exams with the same color, can be assign to the same timeslot. After coloring, it proceeds to assign the exams into timeslots considering the colors of the solution~\cite{Qu2009}.\\
 
-Graph Coloring heuristics like \textit{Saturation Degree Ordering} are very commonly used to get the initial solutions. Others like \textit{First Fit}, \textit{Degree Based Ordering}, \textit{Largest Degree Ordering}, \textit{Incident Degree Ordering} are also heuristic techniques for coloring graphs~\cite{Lee1996}.\\
+Graph Coloring heuristics like \textit{Saturation Degree Ordering} are very commonly used to get the initial solutions. Others like \textit{First Fit} and other \textit{Degree Based Ordering} techniques (\textit{Largest Degree Ordering}, \textit{Incidence Degree Ordering}) are also heuristic techniques for coloring graphs~\cite{Lee1996}.\\
 
 %\paragraph{Saturation Degree Ordering}
 %The Saturation Degree Ordering heuristic colors the vertices with more constraints first. The coloring method is as follows: while choosing a vertice to color, the ones with higher saturation degree will be colored first. The saturation degree of one vertice is the number of differently colored vertices adjacent to this vertice or, in another words, the number of different colors of all adjacent vertices. In the case of a tie, the highest saturation vertice with higher number of adjacent vertices is chosen.
@@ -62,7 +61,7 @@ Graph Coloring heuristics like \textit{Saturation Degree Ordering} are very comm
 Meta-heuristics, as mentioned above, usually provide solutions for optimization problems. In timetabling problems, meta-heuristic algorithms are used to optimize the feasible solutions provided by heuristics, like the GC. Meta-heuristics are divided in two main sub-types, which are \textit{Single-solution meta-heuristics} and \textit{Population-based meta-heuristics}~\cite{Talbi2009}.\\
 
 \paragraph{Single-solution meta-heuristics}
-Single-solution meta-heuristics' main goal is to modify and optimize one single solution, maintaining the search focused in local regions. This type of meta-heuristic is therefore exploitation oriented. Some examples of this type are \textit{SA}, \textit{Variable-Neighborhood Search}, \textit{Tabu Search}, \textit{Guided Local Search}~\cite{Talbi2009}. \\
+Single-solution meta-heuristics' main goal is to modify and optimize one single solution, maintaining the search focused in local regions. This type of meta-heuristic is therefore exploitation oriented. Some examples of this type are \textit{\gls{sa}}, \textit{Variable-Neighborhood Search}, \textit{\gls{ts}}, \textit{Guided Local Search}~\cite{Talbi2009}. \\
 
 \paragraph{Population-based meta-heuristics}
 Population-based meta-heuristics' main goal is to modify and optimize multiple candidate solutions, maintaining the search focused in the whole space. This type of meta-heuristic is therefore exploration oriented. Some examples of this type are \textit{Particle Swarm}, \textit{Evolutionary Algorithms}, \textit{Genetic Algorithms}~\cite{Talbi2009}.\\
@@ -111,9 +110,9 @@ In this thesis, I'll be reviewing some of the winners approaches. The winners li
 
 Tom\'{a}\v{s} M\"{u}ller's approach~\cite{Mueller2009} was actually used to solve all three problems established by the ITC 2007 competition. He was able to win two of them and be finalist on the third. For solving the problems, he opted for an hybrid approach, organized in a two-phase algorithm. In the first phase, Tom\'{a}\v{s} used Iterative Forward Search (IFS) algorithm~\cite{Mueller2005} to obtain feasible solutions and Conflict-based Statistics~\cite{Rudova2004} to prevent IFS from looping. 
 	%--The timetabling problems solved were specified as constraint satisfaction problems, where events (exams, courses) are represented by variables. The variables' values are the possible pairs (time slot, room) that don't cause violations in the hard constraints. For each iteration there's an attempt to sign a value to an unassigned variable. If it violates hard constraints, the conflicting variables are unassigned. The variable chosen in each iteration is randomized or parameterized to, for example, assign the most difficult assignable exam first. The Conflict-based Statistics was used to memorize some previously passed conflicts and avoid repeating those for each iteration.\\
-The second phase consists in using multiple optimization algorithms. These algorithms are applied using this order: HC~\cite{Russell2010}, Great Deluge (GD)~\cite{Dueck1993} and optionally SA~\cite{Kirkpatrick1983}.\\
+The second phase consists in using multiple optimization algorithms. These algorithms are applied using this order: HC~\cite{Russell2010}, \gls{gd} \cite{Dueck1993} and optionally \gls{sa}~\cite{Kirkpatrick1983}.\\
 
-	%--HC is used to optimize the first phase solution, resulting on a solution stuck at a local optimum. To leave local optimum area, GD is used in order to try and result in a better solution. For last, SA is used in a loop, keeping the temperature limit unchanged. After not getting a better solution for a limited time, the temperature is reheated (temperature limit gets higher) and HC phase is used again forming a loop in these 3 optimization algorithms.\\
+	%--HC is used to optimize the first phase solution, resulting on a solution stuck at a local optimum. To leave local optimum area, \gls{gd} is used in order to try and result in a better solution. For last, \gls{sa} is used in a loop, keeping the temperature limit unchanged. After not getting a better solution for a limited time, the temperature is reheated (temperature limit gets higher) and HC phase is used again forming a loop in these 3 optimization algorithms.\\
 
 \paragraph{Christos Gogos' approach}
 
@@ -121,29 +120,55 @@ Gogos was able to reach second place in Examination Timetabling track, right aft
 	%--This stage deals with hidden dependencies, which means it adds dependencies to the problem that weren't there at the beginning but they exist and makes sense in the problem itself. For example, one hidden dependency may be one exam $E_1$ having an ordering constraint with exam $E_2$ stating that $E_2$ must be scheduled after exam $E_1$ and exam $E_3$ must be scheduled after exam $E_2$. So a dependency/constraint must be added so exam $E_3$ must be scheduled after exam $E_1$ as well. The key idea is that this pre-process method will be very helpful in the further stages when trying to find solutions.\\
 After the pre-processing stage, a construction stage takes place, resulting in the best feasible solution given a limited period of time. 
 	%--This method is used to create a complete timetable. In this stage, multiple solutions are attempted considering the available time in which only the best solution is passed to the next phase. The solution is constructed by constantly setting an exam and a room to a period until a feasible solution is found.\\
-In the second phase, optimization methods are applied in this order: HC, SA, IP that uses Branch and Bound, finishing with the Shaking Stage. Shaking Stage \textit{shakes} the current solution creating an equally good solution that is given to the HC, creating a loop on the used optimization methods.\\
+In the second phase, optimization methods are applied in this order: HC, \gls{sa}, \gls{ip} that uses Branch and Bound, finishing with the Shaking Stage. Shaking Stage \textit{shakes} the current solution creating an equally good solution that is given to the HC, creating a loop on the used optimization methods.\\
 	%--HC is used until reaching a local optimum. This algorithm is used to generate neighbor solutions, accepting only better solutions compared to the current one, until reaching a local optimum. It is considered local optimum when HC cannot generate a better solution in a number of tries or time limit.\\
 
-	%--The next stage consists in utilizing SA to get out of local optimum. Simulated Annealing stops when it cannot generate better solutions after the specified period of time.
+	%--The next stage consists in utilizing \gls{sa} to get out of local optimum. Simulated Annealing stops when it cannot generate better solutions after the specified period of time.
 
-	%--After SA, an IP formulation that uses Branch and Bound (BB) is used in a set of sub-problems. This stage is called "IP Sub-Problems Stage". This simply examines all periods trying to discover some possible improvements that can be done, for instance, swapping a room with high penalty with a room with no penalty or having lower penalty that is not currently being used.\\
+	%--After \gls{sa}, an \gls{ip} formulation that uses Branch and Bound (BB) is used in a set of sub-problems. This stage is called "\gls{ip} Sub-Problems Stage". This simply examines all periods trying to discover some possible improvements that can be done, for instance, swapping a room with high penalty with a room with no penalty or having lower penalty that is not currently being used.\\
 
-	%--The last stage is the Shaking Stage. This method "shakes" the current best solution in order to get equally good solutions and pass it to SA stage. This method is not used if the problem we're solving only has one room or the cost of each room is zero. Two heuristics are used in this stage. The first creates neighbor solutions but a solution is only accepted if the new solution is equally good and the room arrangement is better (total cost of room assignment is lower) as compared to the current best solution. The second heuristic reschedule a set of exams presented on the previous solution. These are first removed from the timetable and then scheduled using the same techniques used in the construction stage. This heuristic will probably generate a worse solution but it is accepted and used next on the SA stage.\\
+	%--The last stage is the Shaking Stage. This method "shakes" the current best solution in order to get equally good solutions and pass it to \gls{sa} stage. This method is not used if the problem we're solving only has one room or the cost of each room is zero. Two heuristics are used in this stage. The first creates neighbor solutions but a solution is only accepted if the new solution is equally good and the room arrangement is better (total cost of room assignment is lower) as compared to the current best solution. The second heuristic reschedule a set of exams presented on the previous solution. These are first removed from the timetable and then scheduled using the same techniques used in the construction stage. This heuristic will probably generate a worse solution but it is accepted and used next on the \gls{sa} stage.\\
 
-	%--Tabu Search (TS)~\cite{Talbi2009} is also used in this approach, even though it's not used as a standalone method. This one is used along with HC and SA algorithms to prevent them from looping and creating the same results. TS avoids the creation of equal neighbor solutions by not letting the same period be selected for swapping after this being selected once. This period can only be selected again after a certain number of swaps on other periods.\\
+	%--Tabu Search (TS)~\cite{Talbi2009} is also used in this approach, even though it's not used as a standalone method. This one is used along with HC and \gls{sa} algorithms to prevent them from looping and creating the same results. TS avoids the creation of equal neighbor solutions by not letting the same period be selected for swapping after this being selected once. This period can only be selected again after a certain number of swaps on other periods.\\
 
 \paragraph{Mitsunori Atsuta, Koji Nonobe and Toshihide Ibaraki's approach}
-
-Mitsunori Atsuta, Koji Nonobe and Toshihide Ibaraki ended up in third place on the Examination Timetabling track and won third and second place on the other tracks as well, utilizing the same approach for all of them. The approach~\cite{Ibaraki2007} consists on applying constraint satisfaction problem solver adopting an hybridization of Tabu Search and Iterated Local Search (modification of local search method), handling weight constraints (?).\\
+Mitsunori Atsuta, Koji Nonobe and Toshihide Ibaraki ended up in third place on the Examination Timetabling track and won third and second place on the other tracks as well, utilizing the same approach for all of them. The approach~\cite{Ibaraki2007} consists on applying constraint satisfaction problem solver adopting an hybridization of \gls{ts} and Iterated Local Search (modification of local search method), handling weight constraints {\color{red} ?}.\\
 
 \paragraph{Geoffrey De Smet's approach}
 Geoffrey De Smet's approach \cite{Smet2007} differs from all others because he decided not to use a known problem-specific heuristic to obtain a feasible solution, but instead used what is called the \textit{Drool's rule engine}, named \textit{drools-solver} \cite{Drools}. By definition, the drools-solver is a combination of optimization heuristics and meta-heuristics with very efficient score calculation. After obtaining a feasible solution, Geoffrey opted to use a local search algorithm to improve the solutions obtained using the drools-solver.\\
 
-\paragraph{Nelishia pillay's approach}
-
+\paragraph{Nelishia Pillay's approach}
+Nelishia Pillay opted to use a two-phase algorithm variation, using \textit{Developmental Approach based on Cell Biology} \cite{Pillay2007}, which the goal is to form a well-developed organism by the process of creating a cell, proceeding with cell division, cell interaction and cell migration. In this approach, each cell represents a timeslot. The first phase represents the creating of the first cell, cell division and cell interaction, and the second phase represents the cell migration.
 
 \subsection{Other approaches}
 \label{subsection:OtherAppr}
 
-\paragraph{(2009) Salwani Abdullah, Hamza Turabieh, and Barry McCollum's Hybridization approach}
-Salwani Abdullah, Hamza Turabieh, and Barry McCollum's approach \cite{Abdullah2009} consists on using an hybridization of an electromagnetic-like mechanism and the great deluge algorithm. Electromagnetic-like mechanism is a meta-heuristic algorithm using an \textit{attraction-repulsion} mechanism to move the solutions to the optimum \cite{Javadian2008}.\\
+\paragraph{(2009) Abdullah et al.'s approach}
+Salwani Abdullah, Hamza Turabieh, and Barry McCollum's approach \cite{Abdullah2009} consists on using an hybridization of an electromagnetic-like mechanism and the great deluge algorithm. In this approach, the electromagnetism-like mechanism starts with a population of timetables randomly generated. Electromagnetic-like mechanism is a meta-heuristic algorithm using an \textit{attraction-repulsion} mechanism \cite{Javadian2008} to move the solutions to the optimum.\\
+
+\paragraph{(2009) Gogos et al.' approach}
+Christos Gogos, George Goulas, Panayiotis Alefragis and Efthymios Housos' approach \cite{Gogos2009} also used the two-phase algorithm. The first phase consists on creating the timetable using a greedy randomized positioning, with the use of a backtracking mechanism to help creating the solution. This construction phase is repeated and only the best solutions pass to the second phase. The second phase utilizes local search, \gls{sa}, shaking and \gls{ip} to improve the solutions. As mentioned by the author, this approach produced very good results  and can be compared to Tom\'{a}\v{s} M\"{u}ller's results in his approached used to win ITC 2007 competition.\\
+
+\paragraph{(2009) McCollum et al.'s approach}
+B. McCollum, P.J. McMullan, A. J. Parkes, E.K. Burke and S. Abdullah's two phased approach \cite{McCollum2009} use an adaptive ordering heuristic from \cite{Burke2004}, proceeding with an \textit{extended version} of \gls{gd}. As the author stated, this approach is robust and general considering the results obtained on the benchmark datasets from ITC 2007 using this approach.\\
+
+\paragraph{(2011) Malek Alzaqebah and Salwani Abdullah's approach}
+Malek Alzaqebah and Salwani Abdullah's two phased approach \cite{Alzaqebah2011} starts by using a graph coloring heuristic (largest degree ordering) to generate the initial solution and ends by utilizing the \textit{Artificial Bee Colony} search algorithm to optimize the solution.\\
+
+\paragraph{(2011) Hamza Turabieh and Salwani Abdullah's approach}
+Hamza Turabieh and SalwaniAbdullah's approach \cite{Turabieh2011} utilize two phase algorithm. The first phase consists on constructing initial solutions by using an hybridization of graph coloring heuristics (least saturation degree, largest degree first and largest enrollment {\color{red} ?} first). The second phase utilizes an hybridization of electromagnetic-like mechanism and great deluge algorithm, just like in (2009) Abdullah et al.'s approach.
+
+\paragraph{(2012) Hamza Turabieh and Salwani Abdullah's approach}
+Hamza Turabieh and Salwani Abdullah created another approach in 2012 \cite{Abdullah2012}. It utilizes a Tabu-based memetic algorithm which consists on an hybridization of a genetic algorithm with a TS algorithm. The author states that this approach produces some of the best results when tested on ITC 2007's datasets.
+
+\paragraph{(2012) Demeester et al.'s approach}
+P. Demeester, B. Bilgin, P. De Causmaecker and G. V. Berghe used an hyper-heuristic approach \cite{Demeester2012}. The heuristics utilized are 'improved or equal' {\color{red} (hill climbing?)}, \gls{sa}, \gls{gd} and an adapted version of the \textit{late acceptance} strategy \cite{Burke2008}. These heuristics are used on already-created initial solutions. Initial solutions are constructed using an algorithm which does not guarantee the feasibility of the solution.
+
+\paragraph{(2012) McCollum et al.'s approach}
+B. McCollum, P.J. McMullan, A. J. Parkes, E.K. Burke and S. Abdullah's 2012 approach \cite{McCollum2012} to ITC 2007 problem was based on \gls{ip} formulation. This approach though, was not capable of solving the competition instances.
+
+\paragraph{•}
+
+\paragraph{•}
+
+\paragraph{•}

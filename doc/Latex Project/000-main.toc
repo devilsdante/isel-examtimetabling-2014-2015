@@ -22,9 +22,19 @@
 \contentsline {paragraph}{Christos Gogos' approach}{8}
 \contentsline {paragraph}{Mitsunori Atsuta, Koji Nonobe and Toshihide Ibaraki's approach}{8}
 \contentsline {paragraph}{Geoffrey De Smet's approach}{8}
-\contentsline {paragraph}{Nelishia pillay's approach}{9}
+\contentsline {paragraph}{Nelishia Pillay's approach}{8}
 \contentsline {subsection}{\numberline {2.2.5}Other approaches}{9}
-\contentsline {paragraph}{(2009) Salwani Abdullah, Hamza Turabieh, and Barry McCollum's Hybridization approach}{9}
+\contentsline {paragraph}{(2009) Abdullah et al.'s approach}{9}
+\contentsline {paragraph}{(2009) Gogos et al.' approach}{9}
+\contentsline {paragraph}{(2009) McCollum et al.'s approach}{9}
+\contentsline {paragraph}{(2011) Malek Alzaqebah and Salwani Abdullah's approach}{9}
+\contentsline {paragraph}{(2011) Hamza Turabieh and Salwani Abdullah's approach}{9}
+\contentsline {paragraph}{(2012) Hamza Turabieh and Salwani Abdullah's approach}{10}
+\contentsline {paragraph}{(2012) Demeester et al.'s approach}{10}
+\contentsline {paragraph}{(2012) McCollum et al.'s approach}{10}
+\contentsline {paragraph}{\IeC {\textbullet }}{10}
+\contentsline {paragraph}{\IeC {\textbullet }}{10}
+\contentsline {paragraph}{\IeC {\textbullet }}{10}
 \contentsline {chapter}{\numberline {3}Implementation}{11}
 \contentsline {section}{\numberline {3.1}Loader Module}{11}
 \contentsline {section}{\numberline {3.2}Solution Method}{11}

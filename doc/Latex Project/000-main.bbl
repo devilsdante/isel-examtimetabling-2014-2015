@@ -1,133 +1,168 @@
 \begin{thebibliography}{10}
 
-\bibitem{Abdullah2009}
-Salwani Abdullah, Hamza Turabieh, and Barry McCollum.
-\newblock A hybridization of electromagnetic-like mechanism and great deluge
-  for examination timetabling problems.
-\newblock In Maria~J. Blesa, Christian Blum, Luca~Di Gaspero, Andrea Roli,
-  Michael Sampels, and Andrea Schaerf, editors, {\em Hybrid Metaheuristics, 6th
-  International Workshop, {HM} 2009, Udine, Italy, October 16-17, 2009.
-  Proceedings}, volume 5818 of {\em Lecture Notes in Computer Science}, pages
-  60--72. Springer, 2009.
+\bibitem{Talbi2009}
+E.~Talbi, {\em Metaheuristics - From Design to Implementation}.
+\newblock Wiley, 2009.
+
+\bibitem{Wilson2003}
+J.~M. Wilson, ``Gantt charts: {A} centenary appreciation,'' {\em European
+  Journal of Operational Research}, vol.~149, no.~2, pp.~430--437, 2003.
+
+\bibitem{Schaerf1999}
+A.~Schaerf, ``A survey of automated timetabling,'' {\em Artif. Intell. Rev.},
+  vol.~13, no.~2, pp.~87--127, 1999.
+
+\bibitem{Jensen2001}
+T.~R. Jensen, {\em Graph Coloring Problems}.
+\newblock John Wiley \& Sons, Inc., 2001.
 
 \bibitem{Arora2009}
-Sanjeev Arora and Boaz Barak.
-\newblock {\em Computational Complexity - {A} Modern Approach}.
+S.~Arora and B.~Barak, {\em Computational Complexity - {A} Modern Approach}.
 \newblock Cambridge University Press, 2009.
 
-\bibitem{Drools}
-The~JBoss Drools.
-\newblock Drools planner user guide.
+\bibitem{Qu2009}
+R.~Qu, E.~K. Burke, B.~McCollum, L.~T.~G. Merlot, and S.~Y. Lee, ``A survey of
+  search methodologies and automated system development for examination
+  timetabling,'' {\em J. Scheduling}, vol.~12, no.~1, pp.~55--89, 2009.
+
+\bibitem{Lewis2007}
+R.~Lewis, ``A survey of metaheuristic-based techniques for university
+  timetabling problems,'' {\em OR Spectrum Volume 30, Issue 1 , pp 167-190},
+  2007.
+
+\bibitem{Lee1996}
+M.~W. C. G. L. S.~Y. Lee, ``Examination timetabling: Algorithmic strategies and
+  applications,'' {\em The Journal of the Operational Research Society}, 1996.
+
+\bibitem{McCollum2008}
+D.~B. McCollum, ``Evaluation function,'' 2008.
+
+\bibitem{BarryMcCollum2008}
+B.~McCollum, A.~Schaerf, B.~Paechter, P.~McMullan, R.~Lewis, A.~J. Parkes,
+  L.~D. Gaspero, R.~Qu, and E.~K. Burke, ``Setting the research agenda in
+  automated timetabling: The second international timetabling competition,''
+  2008.
+
+\bibitem{Mueller2009}
+T.~M{\"{u}}ller, ``{ITC2007} solver description: A hybrid approach,'' {\em
+  Annals {OR}}, vol.~172, no.~1, pp.~429--446, 2009.
+
+\bibitem{Mueller2005}
+T.~M{\"{u}}ller, {\em Constraint-Based Timetabling}.
+\newblock PhD thesis, Charles University in Prague Faculty of Mathematics and
+  Physics, 2005.
+
+\bibitem{Rudova2004}
+T.~M. R. B.~H. Rudová, {\em Conflict-Based Statistics}.
+\newblock PhD thesis, Faculty of Mathematics and Physics, Charles University
+  Malostransk´e n´am. 2/25, Prague, Czech Republic, 2004.
+
+\bibitem{Russell2010}
+S.~J. Russell and P.~Norvig, {\em Artificial Intelligence - {A} Modern Approach
+  {(3.} internat. ed.)}.
+\newblock Pearson Education, 2010.
 
 \bibitem{Dueck1993}
-Gunter Dueck.
-\newblock New optimization heuristics: The great deluge algorithm and the
-  record-to-record travel.
-\newblock {\em Journal of Computational Physics}, 1993.
+G.~Dueck, ``New optimization heuristics: The great deluge algorithm and the
+  record-to-record travel,'' {\em Journal of Computational Physics}, 1993.
+
+\bibitem{Kirkpatrick1983}
+S.~Kirkpatrick, D.~G. Jr., and M.~P. Vecchi, ``Optimization by simmulated
+  annealing,'' {\em Science}, vol.~220, no.~4598, pp.~671--680, 1983.
 
 \bibitem{Gogos2012}
-Christos Gogos, Panayiotis Alefragis, and Efthymios Housos.
-\newblock An improved multi-staged algorithmic process for the solution of the
-  examination timetabling problem.
-\newblock {\em Annals {OR}}, 194(1):203--221, 2012.
+C.~Gogos, P.~Alefragis, and E.~Housos, ``An improved multi-staged algorithmic
+  process for the solution of the examination timetabling problem,'' {\em
+  Annals {OR}}, vol.~194, no.~1, pp.~203--221, 2012.
 
 \bibitem{Ibaraki2007}
-Mitsunori Atsuta Koji Nonobe~Toshihide Ibaraki.
-\newblock {\em ITC-2007 Track2: An Approach using General CSP Solver}.
+M.~A. K. N.~T. Ibaraki, {\em ITC-2007 Track2: An Approach using General CSP
+  Solver}.
 \newblock PhD thesis, Kwansei-Gakuin University, School of Science and
   Technology, 2-1 Gakuen, Sanda, Japan 669-1337 {ady67525,
   ibaraki}@kwansei.ac.jp Hosei University, Faculty of Engineering \& Design
   2-17-1 Fujimi, Chiyoda-ku, Tokyo, Japan 102-8160 nonobe@hosei.ac.jp, 2007.
 
-\bibitem{Javadian2008}
-Nikbakhsh Javadian, Mohsen~Gol Alikhani, and Reza Tavakkoli{-}Moghaddam.
-\newblock A discrete binary version of the electromagnetism-like heuristic for
-  solving traveling salesman problem.
-\newblock In De{-}Shuang Huang, Donald C.~Wunsch II, Daniel~S. Levine, and
-  Kang{-}Hyun Jo, editors, {\em Advanced Intelligent Computing Theories and
-  Applications. With Aspects of Artificial Intelligence, 4th International
-  Conference on Intelligent Computing, {ICIC} 2008, Shanghai, China, September
-  15-18, 2008, Proceedings}, volume 5227 of {\em Lecture Notes in Computer
-  Science}, pages 123--130. Springer, 2008.
-
-\bibitem{Jensen2001}
-Tommy~R. Jensen.
-\newblock {\em Graph Coloring Problems}.
-\newblock John Wiley \& Sons, Inc., 2001.
-
-\bibitem{Kirkpatrick1983}
-Scott Kirkpatrick, D.~Gelatt Jr., and Mario~P. Vecchi.
-\newblock Optimization by simmulated annealing.
-\newblock {\em Science}, 220(4598):671--680, 1983.
-
-\bibitem{Lee1996}
-Michael W. Carter Gilbert Laporte Sau~Yan Lee.
-\newblock Examination timetabling: Algorithmic strategies and applications.
-\newblock {\em The Journal of the Operational Research Society}, 1996.
-
-\bibitem{Lewis2007}
-Rhydian Lewis.
-\newblock A survey of metaheuristic-based techniques for university timetabling
-  problems.
-\newblock {\em OR Spectrum Volume 30, Issue 1 , pp 167-190}, 2007.
-
-\bibitem{BarryMcCollum2008}
-Barry McCollum, Andrea Schaerf, Ben Paechter, Paul McMullan, Rhyd Lewis,
-  Andrew~J. Parkes, Luca~Di Gaspero, Rong Qu, and Edmund~K. Burke.
-\newblock Setting the research agenda in automated timetabling: The second
-  international timetabling competition, 2008.
-
-\bibitem{McCollum2008}
-Dr~Barry McCollum.
-\newblock Evaluation function, 2008.
-
-\bibitem{Mueller2005}
-Tom{\'{a}}s M{\"{u}}ller.
-\newblock {\em Constraint-Based Timetabling}.
-\newblock PhD thesis, Charles University in Prague Faculty of Mathematics and
-  Physics, 2005.
-
-\bibitem{Mueller2009}
-Tom{\'{a}}s M{\"{u}}ller.
-\newblock {ITC2007} solver description: A hybrid approach.
-\newblock {\em Annals {OR}}, 172(1):429--446, 2009.
-
-\bibitem{Qu2009}
-Rong Qu, Edmund~K. Burke, Barry McCollum, Liam T.~G. Merlot, and S.~Y. Lee.
-\newblock A survey of search methodologies and automated system development for
-  examination timetabling.
-\newblock {\em J. Scheduling}, 12(1):55--89, 2009.
-
-\bibitem{Rudova2004}
-Tom{\'{a}}s M{\"{u}}ller Roman Barták~Hana Rudová.
-\newblock {\em Conflict-Based Statistics}.
-\newblock PhD thesis, Faculty of Mathematics and Physics, Charles University
-  Malostransk´e n´am. 2/25, Prague, Czech Republic, 2004.
-
-\bibitem{Russell2010}
-Stuart~J. Russell and Peter Norvig.
-\newblock {\em Artificial Intelligence - {A} Modern Approach {(3.} internat.
-  ed.)}.
-\newblock Pearson Education, 2010.
-
-\bibitem{Schaerf1999}
-Andrea Schaerf.
-\newblock A survey of automated timetabling.
-\newblock {\em Artif. Intell. Rev.}, 13(2):87--127, 1999.
-
 \bibitem{Smet2007}
-Geoffrey~De Smet.
-\newblock Drools-solver, 2007.
+G.~D. Smet, ``Drools-solver,'' 2007.
 
-\bibitem{Talbi2009}
-El{-}Ghazali Talbi.
-\newblock {\em Metaheuristics - From Design to Implementation}.
-\newblock Wiley, 2009.
+\bibitem{Drools}
+T.~J. Drools, ``Drools planner user guide.''
 
-\bibitem{Wilson2003}
-James~M. Wilson.
-\newblock Gantt charts: {A} centenary appreciation.
-\newblock {\em European Journal of Operational Research}, 149(2):430--437,
-  2003.
+\bibitem{Pillay2007}
+N.~Pillay, ``A developmental approach to the examination timetabling problem,''
+  2007.
+
+\bibitem{Abdullah2009}
+S.~Abdullah, H.~Turabieh, and B.~McCollum, ``A hybridization of
+  electromagnetic-like mechanism and great deluge for examination timetabling
+  problems,'' in {\em Hybrid Metaheuristics, 6th International Workshop, {HM}
+  2009, Udine, Italy, October 16-17, 2009. Proceedings} (M.~J. Blesa, C.~Blum,
+  L.~D. Gaspero, A.~Roli, M.~Sampels, and A.~Schaerf, eds.), vol.~5818 of {\em
+  Lecture Notes in Computer Science}, pp.~60--72, Springer, 2009.
+
+\bibitem{Javadian2008}
+N.~Javadian, M.~G. Alikhani, and R.~Tavakkoli{-}Moghaddam, ``A discrete binary
+  version of the electromagnetism-like heuristic for solving traveling salesman
+  problem,'' in {\em Advanced Intelligent Computing Theories and Applications.
+  With Aspects of Artificial Intelligence, 4th International Conference on
+  Intelligent Computing, {ICIC} 2008, Shanghai, China, September 15-18, 2008,
+  Proceedings} (D.~Huang, D.~C.~W. II, D.~S. Levine, and K.~Jo, eds.),
+  vol.~5227 of {\em Lecture Notes in Computer Science}, pp.~123--130, Springer,
+  2008.
+
+\bibitem{Gogos2009}
+C.~Gogos, G.~Goulas, P.~Alefragis, and E.~Housos, ``Pursuit of better results
+  for the examination timetabling problem using grid resources,'' in {\em 2009
+  {IEEE} Symposium on Computational Intelligence in Scheduling, CISched 2009,
+  Nashville, TN, USA, April 1-2, 2009}, pp.~48--53, {IEEE}, 2009.
+
+\bibitem{McCollum2009}
+B.~McCollum, P.~J. McMullan, A.~J. Parkes, E.~K. Burke, and S.~Abdullah, ``An
+  extended great deluge approach to the examination timetabling problem,'' in
+  {\em Proceedings of the 4th Multidisciplinary International Scheduling
+  Conference: Theory and Applications (MISTA 2009), 10-12 Aug 2009, Dublin,
+  Ireland} (J.~Blazewicz, M.~Drozdowski, G.~Kendall, and B.~McCollum, eds.),
+  pp.~424--434, 2009.
+\newblock Paper.
+
+\bibitem{Burke2004}
+E.~K. Burke and J.~P. Newall, ``Solving examination timetabling problems
+  through adaption of heuristic orderings,'' {\em Annals {OR}}, vol.~129,
+  no.~1-4, pp.~107--134, 2004.
+
+\bibitem{Alzaqebah2011}
+M.~Alzaqebah and S.~Abdullah, ``Hybrid artificial bee colony search algorithm
+  based on disruptive selection for examination timetabling problems,'' in {\em
+  Combinatorial Optimization and Applications - 5th International Conference,
+  {COCOA} 2011, Zhangjiajie, China, August 4-6, 2011. Proceedings} (W.~Wang,
+  X.~Zhu, and D.~Du, eds.), vol.~6831 of {\em Lecture Notes in Computer
+  Science}, pp.~31--45, Springer, 2011.
+
+\bibitem{Turabieh2011}
+H.~Turabieh and S.~Abdullah, ``An integrated hybrid approach to the examination
+  timetabling problem,'' {\em Omega}, vol.~39, no.~6, pp.~598 -- 607, 2011.
+
+\bibitem{Abdullah2012}
+S.~Abdullah and H.~Turabieh, ``On the use of multi neighbourhood structures
+  within a tabu-based memetic approach to university timetabling problems,''
+  {\em Information Sciences}, vol.~191, no.~0, pp.~146 -- 168, 2012.
+\newblock Data Mining for Software Trustworthiness.
+
+\bibitem{Demeester2012}
+P.~Demeester, B.~Bilgin, P.~D. Causmaecker, and G.~V. Berghe, ``A
+  hyperheuristic approach to examination timetabling problems: benchmarks and a
+  new problem from practice,'' {\em J. Scheduling}, vol.~15, no.~1,
+  pp.~83--103, 2012.
+
+\bibitem{Burke2008}
+E.~K. Burke and Y.~Bykov, ``A late acceptance strategy in hill-climbing for
+  examination timetabling problems,'' in {\em In Proceedings of the conference
+  on the Practice and Theory of Automated Timetabling(PATAT}, 2008.
+
+\bibitem{McCollum2012}
+B.~McCollum, P.~McMullan, A.~J. Parkes, E.~K. Burke, and R.~Qu, ``A new model
+  for automated examination timetabling,'' {\em Annals {OR}}, vol.~194, no.~1,
+  pp.~291--315, 2012.
 
 \end{thebibliography}
