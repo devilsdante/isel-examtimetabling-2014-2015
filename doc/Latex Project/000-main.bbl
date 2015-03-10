@@ -165,4 +165,29 @@ B.~McCollum, P.~McMullan, A.~J. Parkes, E.~K. Burke, and R.~Qu, ``A new model
   for automated examination timetabling,'' {\em Annals {OR}}, vol.~194, no.~1,
   pp.~291--315, 2012.
 
+\bibitem{Sabar2012}
+N.~R. Sabar, M.~Ayob, R.~Qu, and G.~Kendall, ``A graph coloring constructive
+  hyper-heuristic for examination timetabling problems,'' {\em Appl. Intell.},
+  vol.~37, no.~1, pp.~1--11, 2012.
+
+\bibitem{Sabar2012a}
+N.~R. Sabar, M.~Ayob, G.~Kendall, and R.~Qu, ``A honey-bee mating optimization
+  algorithm for educational timetabling problems,'' {\em European Journal of
+  Operational Research}, vol.~216, no.~3, pp.~533--543, 2012.
+
+\bibitem{Abdullah2013}
+S.~Abdullah and M.~Alzaqebah, ``A hybrid self-ddaptive bees algorithm for
+  examination timetabling problems,'' {\em Appl. Soft Comput.}, vol.~13, no.~8,
+  pp.~3608--3620, 2013.
+
+\bibitem{Alzaqebah2014}
+M.~Alzaqebah and S.~Abdullah, ``An adaptive artificial bee colony and
+  late-acceptance hill-climbing algorithm for examination timetabling,'' {\em
+  J. Scheduling}, vol.~17, no.~3, pp.~249--262, 2014.
+
+\bibitem{Burke2014}
+E.~K. Burke, R.~Qu, and A.~Soghier, ``Adaptive selection of heuristics for
+  improving exam timetables,'' {\em Annals {OR}}, vol.~218, no.~1,
+  pp.~129--145, 2014.
+
 \end{thebibliography}

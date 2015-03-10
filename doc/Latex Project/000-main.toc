@@ -32,14 +32,18 @@
 \contentsline {paragraph}{(2012) Hamza Turabieh and Salwani Abdullah's approach}{10}
 \contentsline {paragraph}{(2012) Demeester et al.'s approach}{10}
 \contentsline {paragraph}{(2012) McCollum et al.'s approach}{10}
-\contentsline {paragraph}{\IeC {\textbullet }}{10}
-\contentsline {paragraph}{\IeC {\textbullet }}{10}
-\contentsline {paragraph}{\IeC {\textbullet }}{10}
-\contentsline {chapter}{\numberline {3}Implementation}{11}
-\contentsline {section}{\numberline {3.1}Loader Module}{11}
-\contentsline {section}{\numberline {3.2}Solution Method}{11}
-\contentsline {subsection}{\numberline {3.2.1}Simulated Annealing}{11}
-\contentsline {subsection}{\numberline {3.2.2}Neighbourhood Operators}{11}
-\contentsline {section}{\numberline {3.3}Planning}{11}
-\contentsline {chapter}{\numberline {4}Conclusions}{13}
-\contentsline {chapter}{References}{15}
+\contentsline {paragraph}{(2012) Sabar et al.'s hyper-heuristic of hybridizations approach}{10}
+\contentsline {paragraph}{(2012) Sabar et al.'s honey-bee approach}{10}
+\contentsline {paragraph}{(2013) Salwani Abdullah and Malek Alzaqebah's approach}{10}
+\contentsline {paragraph}{(2014) Salwani Abdullah and Malek Alzaqebah's approach}{11}
+\contentsline {paragraph}{(2014) E. K. Burke, R. Qu and A. Soghier's approach}{11}
+\contentsline {paragraph}{\IeC {\textbullet }}{11}
+\contentsline {paragraph}{\IeC {\textbullet }}{11}
+\contentsline {chapter}{\numberline {3}Implementation}{13}
+\contentsline {section}{\numberline {3.1}Loader Module}{13}
+\contentsline {section}{\numberline {3.2}Solution Method}{13}
+\contentsline {subsection}{\numberline {3.2.1}Simulated Annealing}{13}
+\contentsline {subsection}{\numberline {3.2.2}Neighbourhood Operators}{13}
+\contentsline {section}{\numberline {3.3}Planning}{13}
+\contentsline {chapter}{\numberline {4}Conclusions}{15}
+\contentsline {chapter}{References}{17}

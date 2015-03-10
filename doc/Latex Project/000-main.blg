@@ -8,14 +8,14 @@ A level-1 auxiliary file: 800-references.aux
 The style file: ieeetr.bst
 Database file #1: 000-main.bib
 Warning--entry type for "Drools" isn't style-file defined
---line 174 of file 000-main.bib
+--line 210 of file 000-main.bib
 Warning--entry type for "BarryMcCollum2008" isn't style-file defined
---line 330 of file 000-main.bib
+--line 366 of file 000-main.bib
 Warning--entry type for "McCollum2008" isn't style-file defined
---line 346 of file 000-main.bib
+--line 382 of file 000-main.bib
 Warning--entry type for "Pillay2007" isn't style-file defined
---line 354 of file 000-main.bib
+--line 390 of file 000-main.bib
 Warning--entry type for "Smet2007" isn't style-file defined
---line 423 of file 000-main.bib
+--line 499 of file 000-main.bib
 Warning--can't use both author and editor fields in Jensen2001
 (There were 6 warnings)
