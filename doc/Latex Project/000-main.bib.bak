@@ -169,6 +169,24 @@
   Url                      = {http://dx.doi.org/10.1023/B:ANOR.0000030684.30824.08}
 }
 
+@Article{Burke2014,
+  Title                    = {Adaptive selection of heuristics for improving exam timetables},
+  Author                   = {Edmund K. Burke and
+ Rong Qu and
+ Amr Soghier},
+  Journal                  = {Annals {OR}},
+  Year                     = {2014},
+  Number                   = {1},
+  Pages                    = {129--145},
+  Volume                   = {218},
+
+  Bibsource                = {dblp computer science bibliography, http://dblp.org},
+  Biburl                   = {http://dblp.uni-trier.de/rec/bib/journals/anor/BurkeQS14},
+  Doi                      = {10.1007/s10479-012-1140-3},
+  Timestamp                = {Tue, 08 Apr 4429332 08:04:48 +},
+  Url                      = {http://dx.doi.org/10.1007/s10479-012-1140-3}
+}
+
 @Article{Demeester2012,
   Title                    = {A hyperheuristic approach to examination timetabling problems: benchmarks
  and a new problem from practice},
@@ -369,6 +387,29 @@ Faculty of Mathematics and Physics},
   Year                     = {2008}
 }
 
+@Article{McCollum2014,
+  Title                    = {Directed Selection using Reinforcement Learning for the Examination Timetabling Problem},
+  Author                   = {Ryan Hamilton-Bryce
+Paul McMullan
+Barry McCollum},
+  Journal                  = {(?)},
+  Year                     = {2014},
+
+  Owner                    = {Mike},
+  Timestamp                = {2015.03.13}
+}
+
+@Article{Mouhoub2014,
+  Title                    = {A Multi-Phase Hybrid Metaheuristics Approach for the Exam Timetabling},
+  Author                   = {Ali Hmer
+Malek Mouhoub},
+  Journal                  = {(?)Department of Computer Science University of Regina Regina, Canada {fhmer200a,mouhoubmg}@cs.uregina.ca},
+  Year                     = {2014},
+
+  Owner                    = {Mike},
+  Timestamp                = {2015.03.13}
+}
+
 @Other{Pillay2007,
   Title                    = {A Developmental Approach to the Examination Timetabling Problem},
   Author                   = {Nelishia Pillay},
@@ -395,6 +436,27 @@ Faculty of Mathematics and Physics},
   Doi                      = {10.1007/s10951-008-0077-5},
   Timestamp                = {Tue, 08 Jan 4434380 22:28:32 +},
   Url                      = {http://dx.doi.org/10.1007/s10951-008-0077-5}
+}
+
+@Article{Rahman2014,
+  Title                    = {A constructive approach to examination timetabling based on adaptive
+ decomposition and ordering},
+  Author                   = {Syariza Abdul Rahman and
+ Edmund K. Burke and
+ Andrzej Bargiela and
+ Barry McCollum and
+ Ender {\"{O}}zcan},
+  Journal                  = {Annals {OR}},
+  Year                     = {2014},
+  Number                   = {1},
+  Pages                    = {3--21},
+  Volume                   = {218},
+
+  Bibsource                = {dblp computer science bibliography, http://dblp.org},
+  Biburl                   = {http://dblp.uni-trier.de/rec/bib/journals/anor/RahmanBBMO14},
+  Doi                      = {10.1007/s10479-011-0999-8},
+  Timestamp                = {Sun, 23 Jul 4445443 17:51:28 +},
+  Url                      = {http://dx.doi.org/10.1007/s10479-011-0999-8}
 }
 
 @PhdThesis{Rudova2004,
@@ -602,19 +664,23 @@ Hana Rudová},
   Url                      = {http://ieeexplore.ieee.org/xpl/mostRecentIssue.jsp?punumber=4911214}
 }
 
-@article{DBLP:journals/anor/BurkeQS14,
-  author    = {Edmund K. Burke and
-               Rong Qu and
-               Amr Soghier},
-  title     = {Adaptive selection of heuristics for improving exam timetables},
-  journal   = {Annals {OR}},
-  volume    = {218},
-  number    = {1},
-  pages     = {129--145},
+@article{DBLP:journals/eor/RahmanBBOMM14,
+  author    = {Syariza Abdul Rahman and
+               Andrzej Bargiela and
+               Edmund K. Burke and
+               Ender {\"{O}}zcan and
+               Barry McCollum and
+               Paul McMullan},
+  title     = {Adaptive linear combination of heuristic orderings in constructing
+               examination timetables},
+  journal   = {European Journal of Operational Research},
+  volume    = {232},
+  number    = {2},
+  pages     = {287--297},
   year      = {2014},
-  url       = {http://dx.doi.org/10.1007/s10479-012-1140-3},
-  doi       = {10.1007/s10479-012-1140-3},
-  timestamp = {Tue, 08 Apr 4429332 08:04:48 +},
-  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/anor/BurkeQS14},
+  url       = {http://dx.doi.org/10.1016/j.ejor.2013.06.052},
+  doi       = {10.1016/j.ejor.2013.06.052},
+  timestamp = {Fri, 24 Sep 4446771 01:15:12 +},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/eor/RahmanBBOMM14},
   bibsource = {dblp computer science bibliography, http://dblp.org}
 }

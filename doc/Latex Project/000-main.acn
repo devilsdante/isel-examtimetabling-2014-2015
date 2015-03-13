@@ -18,8 +18,10 @@
 \glossaryentry{IP?\glossentry{ip}|setentrycounter[]{page}\glsnumberformat}{8}
 \glossaryentry{HC?\glossentry{hc}|setentrycounter[]{page}\glsnumberformat}{8}
 \glossaryentry{TS?\glossentry{ts}|setentrycounter[]{page}\glsnumberformat}{8}
+\glossaryentry{GD?\glossentry{gd}|setentrycounter[]{page}\glsnumberformat}{9}
 \glossaryentry{SA?\glossentry{sa}|setentrycounter[]{page}\glsnumberformat}{9}
 \glossaryentry{IP?\glossentry{ip}|setentrycounter[]{page}\glsnumberformat}{9}
+\glossaryentry{GD?\glossentry{gd}|setentrycounter[]{page}\glsnumberformat}{9}
 \glossaryentry{GD?\glossentry{gd}|setentrycounter[]{page}\glsnumberformat}{9}
 \glossaryentry{SA?\glossentry{sa}|setentrycounter[]{page}\glsnumberformat}{10}
 \glossaryentry{GD?\glossentry{gd}|setentrycounter[]{page}\glsnumberformat}{10}
@@ -27,3 +29,7 @@
 \glossaryentry{SA?\glossentry{sa}|setentrycounter[]{page}\glsnumberformat}{10}
 \glossaryentry{HC?\glossentry{hc}|setentrycounter[]{page}\glsnumberformat}{10}
 \glossaryentry{HC?\glossentry{hc}|setentrycounter[]{page}\glsnumberformat}{11}
+\glossaryentry{TS?\glossentry{ts}|setentrycounter[]{page}\glsnumberformat}{11}
+\glossaryentry{HC?\glossentry{hc}|setentrycounter[]{page}\glsnumberformat}{11}
+\glossaryentry{SA?\glossentry{sa}|setentrycounter[]{page}\glsnumberformat}{11}
+\glossaryentry{GD?\glossentry{gd}|setentrycounter[]{page}\glsnumberformat}{11}

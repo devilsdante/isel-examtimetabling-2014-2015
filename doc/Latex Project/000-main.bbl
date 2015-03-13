@@ -190,4 +190,25 @@ E.~K. Burke, R.~Qu, and A.~Soghier, ``Adaptive selection of heuristics for
   improving exam timetables,'' {\em Annals {OR}}, vol.~218, no.~1,
   pp.~129--145, 2014.
 
+\bibitem{Mouhoub2014}
+A.~H.~M. Mouhoub, ``A multi-phase hybrid metaheuristics approach for the exam
+  timetabling,'' {\em (?)Department of Computer Science University of Regina
+  Regina, Canada {fhmer200a,mouhoubmg}@cs.uregina.ca}, 2014.
+
+\bibitem{McCollum2014}
+R.~H.-B. P. M.~B. McCollum, ``Directed selection using reinforcement learning
+  for the examination timetabling problem,'' {\em (?)}, 2014.
+
+\bibitem{Rahman2014}
+S.~A. Rahman, E.~K. Burke, A.~Bargiela, B.~McCollum, and E.~{\"{O}}zcan, ``A
+  constructive approach to examination timetabling based on adaptive
+  decomposition and ordering,'' {\em Annals {OR}}, vol.~218, no.~1, pp.~3--21,
+  2014.
+
+\bibitem{Rahman2014a}
+S.~A. Rahman, A.~Bargiela, E.~K. Burke, E.~{\"{O}}zcan, B.~McCollum, and
+  P.~McMullan, ``Adaptive linear combination of heuristic orderings in
+  constructing examination timetables,'' {\em European Journal of Operational
+  Research}, vol.~232, no.~2, pp.~287--297, 2014.
+
 \end{thebibliography}
