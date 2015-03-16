@@ -8,16 +8,16 @@
 \contentsline {section}{\numberline {1.3}Document Organization}{2}
 \contentsline {chapter}{\numberline {2}State of the Art}{3}
 \contentsline {section}{\numberline {2.1}Timetabling Problem}{3}
-\contentsline {section}{\numberline {2.2}Existing approaches}{4}
+\contentsline {section}{\numberline {2.2}Existing Approaches}{4}
 \contentsline {subsection}{\numberline {2.2.1}Exact methods}{5}
-\contentsline {paragraph}{Constraint Programming Based Technique}{5}
-\contentsline {paragraph}{Integer Programming}{5}
+\contentsline {subsubsection}{Programming Based Technique}{5}
+\contentsline {subsubsection}{Integer Programming}{5}
 \contentsline {subsection}{\numberline {2.2.2}Graph Coloring Based Techniques}{5}
-\contentsline {paragraph}{Graph Coloring Problem}{6}
+\contentsline {subsubsection}{Graph Coloring Problem}{6}
 \contentsline {subsection}{\numberline {2.2.3}Meta-heuristics}{6}
-\contentsline {paragraph}{Single-solution meta-heuristics}{6}
-\contentsline {paragraph}{Population-based meta-heuristics}{6}
-\contentsline {subsection}{\numberline {2.2.4}ITC 2007 Examination timetabling problem: some approaches}{6}
+\contentsline {subsubsection}{Single-solution meta-heuristics}{6}
+\contentsline {subsubsection}{Population-based meta-heuristics}{6}
+\contentsline {subsection}{\numberline {2.2.4}ITC 2007 Examination timetabling problem: some approaches}{7}
 \contentsline {paragraph}{Tom\'{a}\v {s} M\"{u}ller's approach}{8}
 \contentsline {paragraph}{Christos Gogos' approach}{8}
 \contentsline {paragraph}{Mitsunori Atsuta, Koji Nonobe and Toshihide Ibaraki's approach}{8}
@@ -39,9 +39,9 @@
 \contentsline {paragraph}{(2014) Burke et al.'s approach}{11}
 \contentsline {paragraph}{(2014) Ali Hmer and Malek Mouhoub's approach}{11}
 \contentsline {paragraph}{(2014) Ryan Hamilton-Bryce et al.'s approach}{11}
-\contentsline {paragraph}{(2014) Syariza Rahman et al.'s constructive approach}{11}
+\contentsline {paragraph}{(2014) Syariza Rahman et al.'s constructive approach}{12}
 \contentsline {paragraph}{(2014) Syariza Rahman et al.'s adaptive linear combination approach}{12}
-\contentsline {paragraph}{\IeC {\textbullet }}{12}
+\contentsline {paragraph}{(2014) Nuno Leite et al.'s approach}{12}
 \contentsline {chapter}{\numberline {3}Implementation}{13}
 \contentsline {section}{\numberline {3.1}Loader Module}{13}
 \contentsline {section}{\numberline {3.2}Solution Method}{13}

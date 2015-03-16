@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.19)  13 MAR 2015 22:06
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.19)  16 MAR 2015 00:33
 entering extended mode
 **000-main.tex
 
@@ -888,7 +888,312 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
-Package caption Info: We need package `newfloat' on input line 37.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\chronology\chronology.sty"
+Package: chronology 2010/6/12 v1.0 Horizontal timeline
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\calc.sty"
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count168
+\calc@Bcount=\count169
+\calc@Adimen=\dimen177
+\calc@Bdimen=\dimen178
+\calc@Askip=\skip67
+\calc@Bskip=\skip68
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
+\calc@Ccount=\count170
+\calc@Cskip=\skip69
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\frontendlayer\tikz.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgf.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\utilities\pgfrcs.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common.te
+x"
+\pgfutil@everybye=\toks44
+\pgfutil@tempdima=\dimen179
+\pgfutil@tempdimb=\dimen180
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common-li
+sts.tex"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-latex.def
+"
+\pgfutil@abb=\box64
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ms\everyshi.sty"
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfrcs.code.tex"
+Package: pgfrcs 2013/12/20 v3.0.0 (rcs-revision 1.28)
+))
+Package: pgf 2013/12/18 v3.0.0 (rcs-revision 1.14)
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgfcore.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\systemlayer\pgfsys.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys.code.tex
+"
+Package: pgfsys 2013/11/30 v3.0.0 (rcs-revision 1.47)
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex
+"
+\pgfkeys@pathtoks=\toks45
+\pgfkeys@temptoks=\toks46
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeysfiltered.c
+ode.tex"
+\pgfkeys@tmptoks=\toks47
+))
+\pgf@x=\dimen181
+\pgf@y=\dimen182
+\pgf@xa=\dimen183
+\pgf@ya=\dimen184
+\pgf@xb=\dimen185
+\pgf@yb=\dimen186
+\pgf@xc=\dimen187
+\pgf@yc=\dimen188
+\w@pgf@writea=\write3
+\r@pgf@reada=\read1
+\c@pgf@counta=\count171
+\c@pgf@countb=\count172
+\c@pgf@countc=\count173
+\c@pgf@countd=\count174
+\t@pgf@toka=\toks48
+\t@pgf@tokb=\toks49
+\t@pgf@tokc=\toks50
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgf.cfg"
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys-pdftex.d
+ef"
+File: pgfsys-pdftex.def 2013/07/18  (rcs-revision 1.33)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys-common-p
+df.def"
+File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
+)))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsyssoftpath.
+code.tex"
+File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
+\pgfsyssoftpath@smallbuffer@items=\count175
+\pgfsyssoftpath@bigbuffer@items=\count176
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsysprotocol.
+code.tex"
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcore.code.tex
+"
+Package: pgfcore 2010/04/11 v3.0.0 (rcs-revision 1.7)
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathcalc.code.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathutil.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathparser.code.tex
+"
+\pgfmath@dimen=\dimen189
+\pgfmath@count=\count177
+\pgfmath@box=\box65
+\pgfmath@toks=\toks51
+\pgfmath@stack@operand=\toks52
+\pgfmath@stack@operation=\toks53
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.code.
+tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.basic
+.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.trigo
+nometric.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.rando
+m.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.compa
+rison.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.base.
+code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.round
+.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.misc.
+code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.integ
+erarithmetics.code.tex")))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfloat.code.tex"
+\c@pgfmathroundto@lastzeros=\count178
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepoints.co
+de.tex"
+File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
+\pgf@picminx=\dimen190
+\pgf@picmaxx=\dimen191
+\pgf@picminy=\dimen192
+\pgf@picmaxy=\dimen193
+\pgf@pathminx=\dimen194
+\pgf@pathmaxx=\dimen195
+\pgf@pathminy=\dimen196
+\pgf@pathmaxy=\dimen197
+\pgf@xx=\dimen198
+\pgf@xy=\dimen199
+\pgf@yx=\dimen200
+\pgf@yy=\dimen201
+\pgf@zx=\dimen202
+\pgf@zy=\dimen203
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathconst
+ruct.code.tex"
+File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
+\pgf@path@lastx=\dimen204
+\pgf@path@lasty=\dimen205
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathusage
+.code.tex"
+File: pgfcorepathusage.code.tex 2013/12/13  (rcs-revision 1.23)
+\pgf@shorten@end@additional=\dimen206
+\pgf@shorten@start@additional=\dimen207
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorescopes.co
+de.tex"
+File: pgfcorescopes.code.tex 2013/10/09  (rcs-revision 1.44)
+\pgfpic=\box66
+\pgf@hbox=\box67
+\pgf@layerbox@main=\box68
+\pgf@picture@serial@count=\count179
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoregraphicst
+ate.code.tex"
+File: pgfcoregraphicstate.code.tex 2013/09/19  (rcs-revision 1.11)
+\pgflinewidth=\dimen208
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretransform
+ations.code.tex"
+File: pgfcoretransformations.code.tex 2013/10/10  (rcs-revision 1.17)
+\pgf@pt@x=\dimen209
+\pgf@pt@y=\dimen210
+\pgf@pt@temp=\dimen211
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorequick.cod
+e.tex"
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreobjects.c
+ode.tex"
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathproce
+ssing.code.tex"
+File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorearrows.co
+de.tex"
+File: pgfcorearrows.code.tex 2013/11/07  (rcs-revision 1.40)
+\pgfarrowsep=\dimen212
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreshade.cod
+e.tex"
+File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
+\pgf@max=\dimen213
+\pgf@sys@shading@range@num=\count180
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreimage.cod
+e.tex"
+File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreexternal.
+code.tex"
+File: pgfcoreexternal.code.tex 2013/07/15  (rcs-revision 1.20)
+\pgfexternal@startupbox=\box69
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorelayers.co
+de.tex"
+File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretranspare
+ncy.code.tex"
+File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepatterns.
+code.tex"
+File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
+)))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleshapes.cod
+e.tex"
+File: pgfmoduleshapes.code.tex 2013/10/31  (rcs-revision 1.34)
+\pgfnodeparttextbox=\box70
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleplot.code.
+tex"
+File: pgfmoduleplot.code.tex 2013/07/31  (rcs-revision 1.12)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version
+-0-65.sty"
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.0 (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen214
+\pgf@nodesepend=\dimen215
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version
+-1-18.sty"
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.0 (rcs-revision 1.1)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\utilities\pgffor.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\utilities\pgfkeys.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex"
+)) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\math\pgfmath.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgffor.code.tex"
+Package: pgffor 2013/12/13 v3.0.0 (rcs-revision 1.25)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex")
+\pgffor@iter=\dimen216
+\pgffor@skip=\dimen217
+\pgffor@stack=\toks54
+\pgffor@toks=\toks55
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\tikz.cod
+e.tex"
+Package: tikz 2013/12/13 v3.0.0 (rcs-revision 1.142)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryplothan
+dlers.code.tex"
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.0 (rcs-revision 1.20)
+\pgf@plot@mark@count=\count181
+\pgfplotmarksize=\dimen218
+)
+\tikz@lastx=\dimen219
+\tikz@lasty=\dimen220
+\tikz@lastxsaved=\dimen221
+\tikz@lastysaved=\dimen222
+\tikzleveldistance=\dimen223
+\tikzsiblingdistance=\dimen224
+\tikz@figbox=\box71
+\tikz@figbox@bg=\box72
+\tikz@tempbox=\box73
+\tikz@tempbox@bg=\box74
+\tikztreelevel=\count182
+\tikznumberofchildren=\count183
+\tikznumberofcurrentchild=\count184
+\tikz@fig@count=\count185
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\modules\pgfmodulematrix.cod
+e.tex"
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+\pgfmatrixcurrentrow=\count186
+\pgfmatrixcurrentcolumn=\count187
+\pgf@matrix@numberofcolumns=\count188
+)
+\tikz@expandcount=\count189
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
+s\tikzlibrarytopaths.code.tex"
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.0 (rcs-revision 1.2)
+)))
+\c@step=\count190
+\c@stepstart=\count191
+\c@stepstop=\count192
+\c@yearstart=\count193
+\c@yearstop=\count194
+\c@deltayears=\count195
+\xstart=\skip70
+\xstop=\skip71
+\unit=\skip72
+\timelinewidth=\skip73
+\timelinebox=\box75
+)
+Package caption Info: We need package `newfloat' on input line 38.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\newfloat.sty"
 Package: newfloat 2013/05/11 v1.1-91 Defining new floating environments (AR)
@@ -904,20 +1209,20 @@ age [\@makechapterhead {#2}]\else \@makechapterhead {#2}\@afterheading \fi .
 Package newfloat Info: \Hy@org@chapter = undefined.
 Package newfloat Info: Trying Plan B...
 )
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 43.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 44.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1ptm.fd"
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
 001-acronyms.tex"
-\acronymlabelwidth=\skip67
+\acronymlabelwidth=\skip74
 )
-\glswrite=\write3
-\glo@main@file=\write4
-Package glossaries Info: Writing glossary file 000-main.glo on input line 47.
-\glo@acronym@file=\write5
-Package glossaries Info: Writing glossary file 000-main.acn on input line 47.
+\glswrite=\write4
+\glo@main@file=\write5
+Package glossaries Info: Writing glossary file 000-main.glo on input line 48.
+\glo@acronym@file=\write6
+Package glossaries Info: Writing glossary file 000-main.acn on input line 48.
 
 \@input{000-latex-config.aux}
 
@@ -1052,25 +1357,25 @@ Package: beramono 2004/01/31 (WaS)
 600-conclusions.aux")
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
 800-references.aux"))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 53.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 53.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 54.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 54.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    ... okay on input line 54.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ucs\ucsencs.def"
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
@@ -1091,7 +1396,7 @@ Package ucs Warning: ***************************
 (ucs)                ***************************
 (ucs)                Activating compatibility mode.
 (ucs)                ***************************
-(ucs)                 on input line 53.
+(ucs)                 on input line 54.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ucs\utf8x.def"
 File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
@@ -1132,17 +1437,17 @@ File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count168
-\scratchdimen=\dimen177
-\scratchbox=\box64
-\nofMPsegments=\count169
-\nofMParguments=\count170
-\everyMPshowfont=\toks44
-\MPscratchCnt=\count171
-\MPscratchDim=\dimen178
-\MPnumerator=\count172
-\makeMPintoPDFobject=\count173
-\everyMPtoPDFconversion=\toks45
+\scratchcounter=\count196
+\scratchdimen=\dimen225
+\scratchbox=\box76
+\nofMPsegments=\count197
+\nofMParguments=\count198
+\everyMPshowfont=\toks56
+\MPscratchCnt=\count199
+\MPscratchDim=\dimen226
+\MPnumerator=\count200
+\makeMPintoPDFobject=\count201
+\everyMPtoPDFconversion=\toks57
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: Incompatible package detected (regarding \@caption).
@@ -1169,24 +1474,24 @@ Package caption Info: End \AtBeginDocument code.
 
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
 000-main.glsdefs")
-\c@lstlisting=\count174
-
+\c@lstlisting=\count202
+ ABD: EveryShipout initializing macros
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
-100-cover.tex" <./images/LogoIsel3.png, id=1, 173.448pt x 104.5506pt>
+100-cover.tex" <./images/LogoIsel3.png, id=4, 173.448pt x 104.5506pt>
 File: ./images/LogoIsel3.png Graphic file (type png)
 
 <use ./images/LogoIsel3.png>
 Package pdftex.def Info: ./images/LogoIsel3.png used on input line 4.
 (pdftex.def)             Requested size: 199.16928pt x 120.06154pt.
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
-(Font)              scaled to size 12.9599pt on input line 5.
+(Font)              scaled to size 12.9599pt on input line 6.
 LaTeX Font Info:    Font shape `T1/fve/b/n' will be
-(Font)              scaled to size 12.9599pt on input line 5.
+(Font)              scaled to size 12.9599pt on input line 6.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ucs\uni-0.def"
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
-<./images/guide_me_logo.jpg, id=3, 225.84375pt x 225.84375pt>
+<./images/guide_me_logo.jpg, id=6, 225.84375pt x 225.84375pt>
 File: ./images/guide_me_logo.jpg Graphic file (type jpg)
 
 <use ./images/guide_me_logo.jpg>
@@ -1223,68 +1528,68 @@ iguel/Documentos/GitHub/isel-examtimetabling-2014-2015/doc/Latex Project/images
 
 
 ]
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 68.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 69.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 68.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 69.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 68.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 69.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 68.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 69.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 68.
+(Font)              <10> on input line 69.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 68.
+(Font)              <7> on input line 69.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 68.
-LaTeX Font Info:    Try loading font information for U+msa on input line 68.
+(Font)              <5> on input line 69.
+LaTeX Font Info:    Try loading font information for U+msa on input line 69.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 68.
+LaTeX Font Info:    Try loading font information for U+msb on input line 69.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
-000-main.toc")
-\tf@toc=\write6
- [3] [4
-
-
-]
+000-main.toc" [3])
+\tf@toc=\write7
+ [4]
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
 000-main.lof")
-\tf@lof=\write7
- [5] [6
+\tf@lof=\write8
+ [5
+
+
+] [6
 
 
 ]
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
 000-main.lot")
-\tf@lot=\write8
+\tf@lot=\write9
  [7] [8
 
 
 ]
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
 000-main.lol")
-\tf@lol=\write9
+\tf@lol=\write10
 
 No file 000-main.acr.
 [9] [10
@@ -1344,7 +1649,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--16
 
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
 (Font)              scaled to size 8.09995pt on input line 19.
-<./images/typesOfAlgorithms.pdf, id=46, 358.33875pt x 211.79124pt>
+<./images/typesOfAlgorithms.pdf, id=49, 358.33875pt x 211.79124pt>
 File: ./images/typesOfAlgorithms.pdf Graphic file (type pdf)
 
 <use ./images/typesOfAlgorithms.pdf>
@@ -1386,12 +1691,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 50--51
 
  []
 
-
+[5]
 Underfull \hbox (badness 10000) in paragraph at lines 53--54
 
  []
 
-[5]
+
 Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
  []
@@ -1412,22 +1717,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 67--68
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 98--99
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 111--114
+Underfull \hbox (badness 10000) in paragraph at lines 108--111
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 119--125
+Underfull \hbox (badness 10000) in paragraph at lines 116--122
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
  []
 
@@ -1436,12 +1741,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 135--136
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 138--139
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
 
  []
 
-[8]
+
 Underfull \hbox (badness 10000) in paragraph at lines 147--148
 
  []
@@ -1466,12 +1771,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 159--160
 
  []
 
-
+[9]
 Underfull \hbox (badness 10000) in paragraph at lines 162--163
 
  []
 
-[9]
+
 Underfull \hbox (badness 10000) in paragraph at lines 165--166
 
  []
@@ -1482,7 +1787,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 168--169
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 171--172
+Underfull \hbox (badness 10000) in paragraph at lines 172--173
 
  []
 
@@ -1496,20 +1801,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 178--179
 
  []
 
-
+[10]
 Underfull \hbox (badness 10000) in paragraph at lines 181--182
 
  []
 
-[10] [11] ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ucs\uni-32.def"
-File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-)
-LaTeX Font Info:    Font shape `TS1/fve/m/it' in size <10> not available
-(Font)              Font shape `TS1/fve/m/sl' tried instead on input line 198.
-LaTeX Font Info:    Font shape `TS1/fve/m/sl' will be
-(Font)              scaled to size 8.99994pt on input line 198.
-)
-[12]
+
+Underfull \hbox (badness 10000) in paragraph at lines 184--185
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 187--188
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 190--191
+
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 193--194
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 196--197
+
+ []
+
+) [12]
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
 400-implementation.tex"
 Chapter 3.
@@ -1544,13 +1866,10 @@ LaTeX Font Info:    Font shape `T1/fve/m/sl' will be
 
 
 
-]
-Underfull \hbox (badness 7397) in paragraph at lines 194--197
-[]\T1/fve/m/n/9 A. H. M. Mouhoub, ``A multi-phase hy-brid meta-heuris-tics ap-p
-roach for the exam
- []
-
-[18])) [19]
+] [18]
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ucs\uni-1.def"
+File: uni-1.def 2013/05/13 UCS: Unicode data U+0100..U+01FF
+))) [19]
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
 000-main.aux"
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
@@ -1566,13 +1885,13 @@ roach for the exam
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
 800-references.aux")) ) 
 Here is how much of TeX's memory you used:
- 14399 strings out of 493921
- 212891 string characters out of 3144879
- 324596 words of memory out of 3000000
- 17293 multiletter control sequences out of 15000+200000
- 62262 words of font info for 60 fonts, out of 3000000 for 9000
+ 24305 strings out of 493921
+ 424315 string characters out of 3144879
+ 499440 words of memory out of 3000000
+ 26991 multiletter control sequences out of 15000+200000
+ 61921 words of font info for 59 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 46i,6n,77p,1797b,601s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,7n,77p,1797b,616s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm
 -rm.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:
 /Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Fil
@@ -1581,9 +1900,9 @@ es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files
 9/fonts/type1/bera/fver8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/be
 ra/fver8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.p
 fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb>
-Output written on 000-main.pdf (29 pages, 199383 bytes).
+Output written on 000-main.pdf (29 pages, 202423 bytes).
 PDF statistics:
- 162 PDF objects out of 1000 (max. 8388607)
+ 165 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 28 words of extra memory for PDF output out of 10000 (max. 10000000)
 
