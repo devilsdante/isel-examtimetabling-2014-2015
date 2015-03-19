@@ -1,0 +1,59 @@
+\setcounter{secnumdepth}{2}
+\chapter{Introduction}
+\label{introduction}
+\thispagestyle{plain}
+
+Many people believe that AI (Artificial Intelligence) was created to imitate human behavior and the way humans think and act. Even though people are not wrong, AI was also created to solve problems that humans are unable to solve, or to solve them in a shorter time window, with a better solution. Humans may take days to find a solution, or may not find a solution that fits their needs. Optimization algorithms may deliver a very good solution in minutes, hours or days, depending on how much time the human is willing to use in order to get a better solution.\\
+\\
+A concrete example of this scenario is the creation of timetables. Timetables can be used for educational purposes, sports scheduling, transportation timetabling, among other applications. The timetabling problem consists in scheduling a set of events (e.g., exams, people, trains) to a specified set of time slots, while respecting a predefined set of rules constraints. In some cases the search space is so limited by the constraints that one is forced to relax them in order to find a solution. 
+
+
+\section{Timetabling Problems}
+
+Timetabling problems consists in scheduling classes, lectures or exams on a school or university depending on the timetabling type. These types of timetabling may include scheduling classes, lectures, exams, teachers and rooms in a predefined set of timeslots which are scheduled considering a set of rules. These rules can be, for example, a student can't be present in two classes at the same time, a student can't have two exams in the same day or even an exam must be scheduled before another.\\
+\\
+Timetabling is divided into various types, depending on the institution type and if we're scheduling classes/lectures or exams. Timetabling is divided in tree main types:
+
+\begin{itemize}
+	\item Examination timetabling: consists on scheduling university exams depending on different courses, avoiding the overlap of exams containing students from the same course and spreading the exams as much as possible in the timetable;
+	\item Course timetabling: consists on scheduling lectures considering the multiple university courses, avoiding the overlap of lectures with common students;
+	\item School timetabling: consists on scheduling all classes in a school, avoiding the need of students being present at multiple classes at the same time.
+\end{itemize}
+
+In this project, the main focus is the examination timetabling problem. \\
+
+The process of creating a timetable requires that the final solution follows a set of constraints. These sets differ depending on the timetabling type and problem specifications. Constraints are divided in two groups: \textit{hard constraints} and \textit{soft constraints}. Hard constraints are a set of rules which must be followed in order to get a working solution. On the other hand, soft constraints represent the views of the different interested players (e.g. institution, students, nurses, train operators) in the resulting timetable. The satisfaction of these type of constraints is not mandatory as is the case of the hard constraints. In the timetabling problem, the goal is usually to optimize a function with a weighted combination of the different soft constraints, while satisfying the set of hard constraints. 
+
+\section{Objectives}
+\label{section:Objts}
+
+This project's main objective is the production of a prototype application which serves as a examination timetabling generator tool. The problem at hand focus on the specifications submitted on International Timetabling Competition 2007 (ITC 2007), \textit{First track}, which includes 12 benchmark instances. In ITC 2007's specifications, the examination timetabling problem considers a set of periods, room assignment, and the existence of constraints considering real problems.\\
+\\
+The application's features are as follows:
+
+\begin{itemize}
+	\item Automated generation of examination timetabling, considering the ITC 2007's specifications (\textit{mandatory});
+	\item Graphical User Interface to allow the user to edit generated solutions and to optimize user's edited solutions (\textit{optional});
+	\item Validation (correction and quality) of a timetable provided by the user (\textit{mandatory});
+	\item The creating of an extension to ITC 2007 in order to support two or more exam periods;
+\end{itemize}
+
+This project is divided in two main phases. The first phase consists on studying some techniques and solutions for this problem emphasizing meta-heuristics like: Genetic Algorithms,Simulated Annealing, Taby Search, and some of its hybridizations. The second phase is based on developing, rating and comparison of solution problems, using ITC 2007 data e real data from the 6 courses taught in my university.
+
+%The goal of the present project is to create an examination timetable generator using the ITC 2007 specification. The solutions will be validated using a validator developed for this purpose in order to assess the quality of the solution. It is also required that the developed prototype may work with two exam epochs which can be considered an extension to the ITC-2007 formulation. In the end an (optional) Graphical User Interface will be created in order to allow the user to edit the current solution to fit the users needs and and to allow the optimization of the edited solution. The generator will be tested using data from ITC-2007 and some actual data from six different programs lectured at ISEL.
+
+\section{Planning}
+
+The main objective of the first part of this thesis is to familiarize me about the problem, and so keeping me up-to-date on what exists on the state-of-art considering various problems and solutions. While studying articles and papers about this subject, it was required the development of this thesis so that the first two topics (\ref{introduction} Introduction and \ref{stateofart} State-of-Art) would be complete and resumed in order to be committed as a \textit{progress report}.\\
+\\
+The second part's main goal is to develop solutions to ITC 2007 problem. These solutions include developing a \textit{Loader} to load all the information to be considered while creating the timetables. One of the approaches to be developed will use a local search algorithm (e.g. Simulated Annealing) to improve the solution obtained using a graph coloring heuristic. The results of this approach will be compared to another approaches applied to ITC 2007's timetabling problem, namely the first five winners. Another approach may be implemented with the same heuristics as mentioned before, but instead of a single solution based method, it will be implemented as a population-based algorithm. In the end after comparing results and taking conclusions, a GUI to edit generated solutions may be created, as an optional feature.\\
+
+The GANTT diagram presented below shows a detailed planning for the development of all the main topics of this project until the end of the year including both phases mentioned above.
+
+GANTT
+
+The planning shown on the GANTT diagram may not be accurate. Some topics and features may take less time or may take longer than specified. The developing order or certain features may change depending on the necessity of these to implement others already in development.
+
+\section{Document Organization}
+
+This document starts by explaining the problems of timetabling and its types in the Introduction, following by the objectives of this project. After the Introduction, the State-of-the-Art is introduced specifying the timetabling problem focusing on examination timetabling and existing approaches including ITC 2007s. In the existing approaches, some of the most used heuristics are mentioned and explained. It follows by explaining the implementation, organization and modeling of the solutions, including the loader and the used heuristic methods. This implementation topic ends by explaining the planning for the implementation of all this project's features and which features takes more time and effort than others, by demonstrating a Gantt chart~\cite{Wilson2003}. This thesis ends by explaining the conclusions taken after implementing all the project's features and comparing the results with others approaches.

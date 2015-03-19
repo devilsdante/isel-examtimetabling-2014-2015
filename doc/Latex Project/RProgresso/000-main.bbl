@@ -1,0 +1,91 @@
+\begin{thebibliography}{10}
+
+\bibitem{Talbi2009}
+E.~Talbi, {\em Metaheuristics - From Design to Implementation}.
+\newblock Wiley, 2009.
+
+\bibitem{Wilson2003}
+J.~M. Wilson, ``Gantt charts: {A} centenary appreciation,'' {\em European
+  Journal of Operational Research}, vol.~149, no.~2, pp.~430--437, 2003.
+
+\bibitem{Schaerf1999}
+A.~Schaerf, ``A survey of automated timetabling,'' {\em Artif. Intell. Rev.},
+  vol.~13, no.~2, pp.~87--127, 1999.
+
+\bibitem{Jensen2001}
+T.~R. Jensen, {\em Graph Coloring Problems}.
+\newblock John Wiley \& Sons, Inc., 2001.
+
+\bibitem{Arora2009}
+S.~Arora and B.~Barak, {\em Computational Complexity - {A} Modern Approach}.
+\newblock Cambridge University Press, 2009.
+
+\bibitem{Qu2009}
+R.~Qu, E.~K. Burke, B.~McCollum, L.~T.~G. Merlot, and S.~Y. Lee, ``A survey of
+  search methodologies and automated system development for examination
+  timetabling,'' {\em J. Scheduling}, vol.~12, no.~1, pp.~55--89, 2009.
+
+\bibitem{Lewis2007}
+R.~Lewis, ``A survey of metaheuristic-based techniques for university
+  timetabling problems,'' {\em OR Spectrum Volume 30, Issue 1 , pp 167-190},
+  2007.
+
+\bibitem{Carter1996}
+M.~W. Carter, G.~Laporte, and S.~Y. Lee, ``Examination timetabling: Algorithmic
+  strategies and applications,'' {\em The Journal of the Operational Research
+  Society}, 1996.
+
+\bibitem{McCollum2008}
+D.~B. McCollum, ``Evaluation function,'' 2008.
+
+\bibitem{Mueller2009}
+T.~M{\"{u}}ller, ``{ITC2007} solver description: A hybrid approach,'' {\em
+  Annals {OR}}, vol.~172, no.~1, pp.~429--446, 2009.
+
+\bibitem{Mueller2005}
+T.~M{\"{u}}ller, {\em Constraint-Based Timetabling}.
+\newblock PhD thesis, Charles University in Prague Faculty of Mathematics and
+  Physics, 2005.
+
+\bibitem{Mueller2004}
+T.~M{\"{u}}ller, R.~Barták, and H.~Rudová, {\em Conflict-Based Statistics}.
+\newblock PhD thesis, Faculty of Mathematics and Physics, Charles University
+  Malostransk´e n´am. 2/25, Prague, Czech Republic, 2004.
+
+\bibitem{Russell2010}
+S.~J. Russell and P.~Norvig, {\em Artificial Intelligence - {A} Modern Approach
+  {(3.} internat. ed.)}.
+\newblock Pearson Education, 2010.
+
+\bibitem{Dueck1993}
+G.~Dueck, ``New optimization heuristics: The great deluge algorithm and the
+  record-to-record travel,'' {\em Journal of Computational Physics}, 1993.
+
+\bibitem{Kirkpatrick1983}
+S.~Kirkpatrick, D.~G. Jr., and M.~P. Vecchi, ``Optimization by simmulated
+  annealing,'' {\em Science}, vol.~220, no.~4598, pp.~671--680, 1983.
+
+\bibitem{Gogos2012}
+C.~Gogos, P.~Alefragis, and E.~Housos, ``An improved multi-staged algorithmic
+  process for the solution of the examination timetabling problem,'' {\em
+  Annals {OR}}, vol.~194, no.~1, pp.~203--221, 2012.
+
+\bibitem{Atsuta2007}
+M.~Atsuta, K.~Nonobe, and T.~Ibaraki, {\em ITC-2007 Track2: An Approach using
+  General CSP Solver}.
+\newblock PhD thesis, Kwansei-Gakuin University, School of Science and
+  Technology, 2-1 Gakuen, Sanda, Japan 669-1337 {ady67525,
+  ibaraki}@kwansei.ac.jp Hosei University, Faculty of Engineering \& Design
+  2-17-1 Fujimi, Chiyoda-ku, Tokyo, Japan 102-8160 nonobe@hosei.ac.jp, 2007.
+
+\bibitem{Smet2007}
+G.~D. Smet, ``Drools-solver,'' 2007.
+
+\bibitem{Drools}
+T.~J. Drools, ``Drools planner user guide.''
+
+\bibitem{Pillay2007}
+N.~Pillay, ``A developmental approach to the examination timetabling problem,''
+  2007.
+
+\end{thebibliography}
