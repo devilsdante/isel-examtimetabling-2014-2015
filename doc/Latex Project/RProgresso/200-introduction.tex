@@ -47,12 +47,108 @@ This project is divided in two main phases. The first phase consists on studying
 The main objective of the first part of this thesis is to familiarize me about the problem, and so keeping me up-to-date on what exists on the state-of-art considering various problems and solutions. While studying articles and papers about this subject, it was required the development of this thesis so that the first two topics (\ref{introduction} Introduction and \ref{stateofart} State-of-Art) would be complete and resumed in order to be committed as a \textit{progress report}.\\
 \\
 The second part's main goal is to develop solutions to ITC 2007 problem. These solutions include developing a \textit{Loader} to load all the information to be considered while creating the timetables. One of the approaches to be developed will use a local search algorithm (e.g. Simulated Annealing) to improve the solution obtained using a graph coloring heuristic. The results of this approach will be compared to another approaches applied to ITC 2007's timetabling problem, namely the first five winners. Another approach may be implemented with the same heuristics as mentioned before, but instead of a single solution based method, it will be implemented as a population-based algorithm. In the end after comparing results and taking conclusions, a GUI to edit generated solutions may be created, as an optional feature.\\
+\\
+The GANTT diagram presented on \ref{fig:planning} shows a detailed planning for the development of all the main topics of this project until the end of the year including both phases mentioned above.\\
 
-The GANTT diagram presented below shows a detailed planning for the development of all the main topics of this project until the end of the year including both phases mentioned above.
+\begin{figure}[t!]
+\centering
+\begin{ganttchart}[%Specs
+     y unit title=0.5cm,
+     y unit chart=1.0cm,
+     vgrid,hgrid,
+     bar label font=\scriptsize{}, %\tiny
+     bar label node/.append style=%
+		{align=left},
+     title height=1
+    ]{1}{26}
+    %labels
+    \gantttitle[
+    ]{2014}{8}
+    \gantttitle[]{2015}{18} 
+    \\              
+    \definecolor{foobarblue}{RGB}{0,153,255}
+    \definecolor{foobargreen}{RGB}{50,200,50}
+    \gantttitle{09}{2}
+    \gantttitle{10}{2}
+    \gantttitle{11}{2}
+    \gantttitle{12}{2}
+    \gantttitle{01}{2}
+    \gantttitle{02}{2}
+    \gantttitle{03}{2}
+    \gantttitle{04}{2}
+    \gantttitle{05}{2}
+    \gantttitle{06}{2}
+    \gantttitle{07}{2}
+    \gantttitle{08}{2}
+    \gantttitle{09}{2}
+    \\
+    \ganttbar[bar/.append style={fill=foobargreen!60}]
+    	{Report\\development}{6}{7}
+    \ganttbar[bar/.append style={fill=foobargreen!60}]{}{12}{14}
+    \ganttbar[bar/.append style={fill=foobarblue!60}]{}{15}{26}
+    \\
+    \ganttbar[bar/.append style={fill=foobargreen!60}]
+    	{Discussion of the\\ proposed idea}{5}{6}
+   	\ganttbar[bar/.append style={fill=foobargreen!60}]{}{14}{14}
+    \\
+    \ganttbar[bar/.append style={fill=foobargreen!60}]
+    	{Study of \\ heuristic \\algorithms}{5}{7}
+    \ganttbar[bar/.append style={fill=foobargreen!60}]{}{12}{13}
+    \\
+    \ganttbar[bar/.append style={fill=foobargreen!60}]
+    	{Study of the \\ state of art}{6}{7}
+    \ganttbar[bar/.append style={fill=foobargreen!60}]{}{12}{14}
+    \ganttbar[bar/.append style={fill=foobarblue!60}]{}{15}{26}
+    \\
+    \ganttbar[bar/.append style={fill=foobargreen!60}]
+    	{Progress report \\development}{13}{14}
+    \\
+    \ganttbar[bar/.append style={fill=foobargreen!60}]
+    	{Progress report \\ revision and \\ submission}{14}{14}
+    \\
+    \ganttbar[bar/.append style={fill=foobargreen!60}]
+    	{Definition of \\ project's \\ architecture}{14}{14}
+    \\
+    \ganttbar[bar/.append style={fill=foobargreen!60}]
+    	{Loader \\ development}{14}{14}
+    \ganttbar[bar/.append style={fill=foobarblue!60}]{}{15}{15}
+    \\
+    \ganttbar[bar/.append style={fill=foobarblue!60}]
+    	{Single solution \\ development}{1}{1}
+    \\
+    \ganttbar[bar/.append style={fill=foobarblue!60}]
+    	{Single solution \\ results comparison}{1}{1}
+    \\
+    \ganttbar[bar/.append style={fill=foobarblue!60}]
+    	{Populated solution \\ development}{1}{1}
+    \\
+    \ganttbar[bar/.append style={fill=foobarblue!60}]
+    	{Populated solution \\ results comparison}{1}{1}
+    \\
+    \ganttbar[bar/.append style={fill=foobarblue!60}]
+    	{Drawing \\ conclusions}{1}{1}
+    \\
+    \ganttbar[bar/.append style={fill=yellow!60}]
+    	{Optional GUI \\ implementation}{1}{1}
+    \\
+    \ganttbar[bar/.append style={fill=foobarblue!60}]
+    	{Thesis revision \\ and submission}{1}{1}
+    \\
+   	\ganttbar[bar/.append style={fill=foobarblue!60}]
+    	{...}{1}{1}
+    \\
+    \ganttbar[bar/.append style={fill=foobarblue!60}]
+    	{...}{1}{1}
+    \\
+    \ganttbar[bar/.append style={fill=foobarblue!60}]
+    	{...}{1}{1}
+\end{ganttchart}
 
-GANTT
+\caption{GANTT Diagram project's plans}
+   \label{fig:planning}
+\end{figure}
 
-The planning shown on the GANTT diagram may not be accurate. Some topics and features may take less time or may take longer than specified. The developing order or certain features may change depending on the necessity of these to implement others already in development.
+The planning shown on the GANTT diagram may not be accurate. Some topics and features may take less or more time than specified. The developing order of certain features may change depending on the necessity of these to implement others already in development.
 
 \section{Document Organization}
 

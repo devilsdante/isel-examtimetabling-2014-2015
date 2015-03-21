@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.19)  19 MAR 2015 01:03
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.19)  21 MAR 2015 03:58
 entering extended mode
 **000-main.tex
 
@@ -1193,9 +1193,72 @@ File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.0 (rcs-revision 1.2)
 \timelinewidth=\skip73
 \timelinebox=\box75
 )
-Package caption Info: We need package `newfloat' on input line 38.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgfgantt\pgfgantt.sty"
+Package: pgfgantt 2013/06/01 v4.0 Draw Gantt diagrams with TikZ
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\newfloat.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
+s\tikzlibraryarrows.code.tex"
+File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryarrows.
+code.tex"
+File: pgflibraryarrows.code.tex 2013/09/23 v3.0.0 (rcs-revision 1.16)
+\arrowsize=\dimen225
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
+s\tikzlibrarybackgrounds.code.tex"
+File: tikzlibrarybackgrounds.code.tex 2013/07/18 v3.0.0 (rcs-revision 1.3)
+\pgf@layerbox@background=\box76
+\pgf@layerboxsaved@background=\box77
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
+s\tikzlibrarycalc.code.tex"
+File: tikzlibrarycalc.code.tex 2013/07/15 v3.0.0 (rcs-revision 1.9)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
+s\tikzlibrarypatterns.code.tex"
+File: tikzlibrarypatterns.code.tex 2008/01/15 v3.0.0 (rcs-revision 1.2)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibrarypattern
+s.code.tex"
+File: pgflibrarypatterns.code.tex 2008/03/03 v3.0.0 (rcs-revision 1.13)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
+s\tikzlibrarypositioning.code.tex"
+File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.0 (rcs-revision 1.7)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
+s\tikzlibraryshapes.geometric.code.tex"
+File: tikzlibraryshapes.geometric.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
+
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\shapes\pgflibrary
+shapes.geometric.code.tex"
+File: pgflibraryshapes.geometric.code.tex 2008/06/26 v3.0.0 (rcs-revision 1.1)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\utilities\pgfcalendar.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfcalendar.code.
+tex"
+File: pgfcalendar.code.tex 2007/07/23 v3.0.0 (rcs-revision 1.11)
+\pgfcalendarcurrentjulian=\count196
+))
+\gtt@currentline=\count197
+\gtt@lasttitleline=\count198
+\gtt@currgrid=\count199
+\gtt@chartwidth=\count200
+\gtt@lasttitleslot=\count201
+\gtt@elementid=\count202
+\gtt@today@slot=\count203
+\gtt@startjulian=\count204
+\gtt@endjulian=\count205
+\gtt@calendar@slots=\count206
+\gtt@calendar@weeknumber=\count207
+\gtt@calendar@startofweek=\count208
+\gtt@left@slot=\count209
+\gtt@right@slot=\count210
+)
+Package caption Info: We need package `newfloat' on input line 38.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\newfloat.sty"
 Package: newfloat 2013/05/11 v1.1-91 Defining new floating environments (AR)
 Package newfloat Info: Unsupported document class, or \@chapter 
 (newfloat)             was already redefined by another package.
@@ -1434,16 +1497,16 @@ File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count196
-\scratchdimen=\dimen225
-\scratchbox=\box76
-\nofMPsegments=\count197
-\nofMParguments=\count198
+\scratchcounter=\count211
+\scratchdimen=\dimen226
+\scratchbox=\box78
+\nofMPsegments=\count212
+\nofMParguments=\count213
 \everyMPshowfont=\toks56
-\MPscratchCnt=\count199
-\MPscratchDim=\dimen226
-\MPnumerator=\count200
-\makeMPintoPDFobject=\count201
+\MPscratchCnt=\count214
+\MPscratchDim=\dimen227
+\MPnumerator=\count215
+\makeMPintoPDFobject=\count216
 \everyMPtoPDFconversion=\toks57
 )
 Package caption Info: Begin \AtBeginDocument code.
@@ -1471,7 +1534,7 @@ Package caption Info: End \AtBeginDocument code.
 
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
 RProgresso\000-main.glsdefs")
-\c@lstlisting=\count202
+\c@lstlisting=\count217
  ABD: EveryShipout initializing macros
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
 RProgresso\100-cover.tex"
@@ -1636,23 +1699,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--33
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--50
+Underfull \hbox (badness 10000) in paragraph at lines 47--52
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--50
+Underfull \hbox (badness 10000) in paragraph at lines 47--52
 
  []
 
-[2]) [3]
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--52
+
+ []
+
+[2]
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 8.09995pt on input line 53.
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 6.29996pt on input line 86.
+
+Overfull \hbox (18.43349pt too wide) in paragraph at lines 145--146
+ [][] 
+ []
+
+) [3]
+
+LaTeX Warning: Text page 4 contains only floats.
+
+[4]
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
-RProgresso\300-theory.tex" [4
-
-
-
-
-]
+RProgresso\300-theory.tex"
 Chapter 2.
 
 Underfull \hbox (badness 10000) in paragraph at lines 5--6
@@ -1674,15 +1751,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--16
 
  []
 
-LaTeX Font Info:    Font shape `T1/fve/m/n' will be
-(Font)              scaled to size 8.09995pt on input line 19.
 <./images/typesOfAlgorithms.pdf, id=56, 358.33875pt x 211.79124pt>
 File: ./images/typesOfAlgorithms.pdf Graphic file (type pdf)
 
 <use ./images/typesOfAlgorithms.pdf>
 Package pdftex.def Info: ./images/typesOfAlgorithms.pdf used on input line 21.
 (pdftex.def)             Requested size: 358.33788pt x 211.79073pt.
- [5]
+ [5
+
+
+
+
+]
 Underfull \hbox (badness 10000) in paragraph at lines 26--33
 
  []
@@ -1792,13 +1872,13 @@ RProgresso\300-theory.aux")
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
 RProgresso\800-references.aux")) ) 
 Here is how much of TeX's memory you used:
- 23519 strings out of 493921
- 414001 string characters out of 3144879
- 497887 words of memory out of 3000000
- 26222 multiletter control sequences out of 15000+200000
- 61921 words of font info for 59 fonts, out of 3000000 for 9000
+ 25817 strings out of 493921
+ 473607 string characters out of 3144879
+ 566226 words of memory out of 3000000
+ 28481 multiletter control sequences out of 15000+200000
+ 65161 words of font info for 61 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 62i,6n,77p,1797b,605s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,9n,77p,1797b,909s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/
 dvips/lm/lm-rm.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mat
 hit.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/
@@ -1808,7 +1888,7 @@ ogram Files (x86)/MiKTeX 2.9/fonts/type1/bera/fveb8a.pfb><C:/Program Files (x86
 ts/type1/bera/fver8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
 lm/lmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb
 >
-Output written on 000-main.pdf (23 pages, 186060 bytes).
+Output written on 000-main.pdf (23 pages, 189085 bytes).
 PDF statistics:
  146 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
