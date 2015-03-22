@@ -24,4 +24,4 @@
 \contentsline {paragraph}{Mitsunori Atsuta, Koji Nonobe and Toshihide Ibaraki's approach}{10}
 \contentsline {paragraph}{Geoffrey De Smet's approach}{10}
 \contentsline {paragraph}{Nelishia Pillay's approach}{10}
-\contentsline {chapter}{References}{13}
+\contentsline {chapter}{References}{11}

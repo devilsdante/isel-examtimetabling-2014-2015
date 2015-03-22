@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.19)  21 MAR 2015 03:58
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.19)  22 MAR 2015 03:16
 entering extended mode
 **000-main.tex
 
@@ -1719,15 +1719,11 @@ LaTeX Font Info:    Font shape `T1/fve/m/n' will be
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
 (Font)              scaled to size 6.29996pt on input line 86.
 
-Overfull \hbox (18.43349pt too wide) in paragraph at lines 145--146
+Overfull \hbox (18.43349pt too wide) in paragraph at lines 143--144
  [][] 
  []
 
-) [3]
-
-LaTeX Warning: Text page 4 contains only floats.
-
-[4]
+) [3] [4]
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
 RProgresso\300-theory.tex"
 Chapter 2.
@@ -1829,25 +1825,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 108--111
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 116--122
+Underfull \hbox (badness 10000) in paragraph at lines 116--117
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--133
+Underfull \hbox (badness 10000) in paragraph at lines 119--120
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--136
+Underfull \hbox (badness 10000) in paragraph at lines 122--123
 
  []
 
-) [10] [11] [12
-
-
-
-]
+) [10]
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
 RProgresso\800-references.tex"
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
@@ -1856,7 +1848,10 @@ LaTeX Font Info:    Font shape `T1/fve/m/it' in size <9> not available
 (Font)              Font shape `T1/fve/m/sl' tried instead on input line 4.
 LaTeX Font Info:    Font shape `T1/fve/m/sl' will be
 (Font)              scaled to size 8.09995pt on input line 4.
-)) [13
+)) [11
+
+
+
 
 
 
@@ -1872,10 +1867,10 @@ RProgresso\300-theory.aux")
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
 RProgresso\800-references.aux")) ) 
 Here is how much of TeX's memory you used:
- 25817 strings out of 493921
- 473607 string characters out of 3144879
- 566226 words of memory out of 3000000
- 28481 multiletter control sequences out of 15000+200000
+ 25829 strings out of 493921
+ 473843 string characters out of 3144879
+ 566507 words of memory out of 3000000
+ 28493 multiletter control sequences out of 15000+200000
  65161 words of font info for 61 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  62i,9n,77p,1797b,909s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1888,9 +1883,9 @@ ogram Files (x86)/MiKTeX 2.9/fonts/type1/bera/fveb8a.pfb><C:/Program Files (x86
 ts/type1/bera/fver8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
 lm/lmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb
 >
-Output written on 000-main.pdf (23 pages, 189085 bytes).
+Output written on 000-main.pdf (21 pages, 188071 bytes).
 PDF statistics:
- 146 PDF objects out of 1000 (max. 8388607)
+ 140 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  28 words of extra memory for PDF output out of 10000 (max. 10000000)
 

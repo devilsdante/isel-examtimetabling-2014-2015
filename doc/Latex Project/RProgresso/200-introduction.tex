@@ -48,7 +48,7 @@ The main objective of the first part of this thesis is to familiarize me about t
 \\
 The second part's main goal is to develop solutions to ITC 2007 problem. These solutions include developing a \textit{Loader} to load all the information to be considered while creating the timetables. One of the approaches to be developed will use a local search algorithm (e.g. Simulated Annealing) to improve the solution obtained using a graph coloring heuristic. The results of this approach will be compared to another approaches applied to ITC 2007's timetabling problem, namely the first five winners. Another approach may be implemented with the same heuristics as mentioned before, but instead of a single solution based method, it will be implemented as a population-based algorithm. In the end after comparing results and taking conclusions, a GUI to edit generated solutions may be created, as an optional feature.\\
 \\
-The GANTT diagram presented on \ref{fig:planning} shows a detailed planning for the development of all the main topics of this project until the end of the year including both phases mentioned above.\\
+The GANTT diagram presented on \ref{fig:planning} shows a detailed planning for the development of all the main topics of this project until the end of the year including both phases mentioned above. The colors presented on the diagram are green, blue and yellow. Green and blue designate the first and second phase, respectively. The yellow color designates the optional topics.\\
 
 \begin{figure}[t!]
 \centering
@@ -108,43 +108,41 @@ The GANTT diagram presented on \ref{fig:planning} shows a detailed planning for 
     \\
     \ganttbar[bar/.append style={fill=foobargreen!60}]
     	{Definition of \\ project's \\ architecture}{14}{14}
+     \ganttbar[bar/.append style={fill=foobarblue!60}]{}{16}{16}
+     \ganttbar[bar/.append style={fill=foobarblue!60}]{}{19}{19}
+     \ganttbar[bar/.append style={fill=yellow!60}]{}{24}{24}
     \\
     \ganttbar[bar/.append style={fill=foobargreen!60}]
     	{Loader \\ development}{14}{14}
     \ganttbar[bar/.append style={fill=foobarblue!60}]{}{15}{15}
     \\
     \ganttbar[bar/.append style={fill=foobarblue!60}]
-    	{Single solution \\ development}{1}{1}
+    	{Single solution \\ development}{16}{17}
     \\
     \ganttbar[bar/.append style={fill=foobarblue!60}]
-    	{Single solution \\ results comparison}{1}{1}
+    	{Validator \\ implementation}{17}{18}
     \\
     \ganttbar[bar/.append style={fill=foobarblue!60}]
-    	{Populated solution \\ development}{1}{1}
+    	{Single solution \\ results comparison}{18}{19}
     \\
     \ganttbar[bar/.append style={fill=foobarblue!60}]
-    	{Populated solution \\ results comparison}{1}{1}
+    	{Populated solution \\ development}{20}{21}
     \\
     \ganttbar[bar/.append style={fill=foobarblue!60}]
-    	{Drawing \\ conclusions}{1}{1}
+    	{Populated solution \\ results comparison}{21}{22}
+    \\
+    \ganttbar[bar/.append style={fill=foobarblue!60}]
+    	{Drawing \\ conclusions}{23}{24}
     \\
     \ganttbar[bar/.append style={fill=yellow!60}]
-    	{Optional GUI \\ implementation}{1}{1}
+    	{GUI \\ implementation}{24}{24}
     \\
     \ganttbar[bar/.append style={fill=foobarblue!60}]
-    	{Thesis revision \\ and submission}{1}{1}
-    \\
-   	\ganttbar[bar/.append style={fill=foobarblue!60}]
-    	{...}{1}{1}
-    \\
-    \ganttbar[bar/.append style={fill=foobarblue!60}]
-    	{...}{1}{1}
-    \\
-    \ganttbar[bar/.append style={fill=foobarblue!60}]
-    	{...}{1}{1}
+    	{Thesis revision \\ and submission}{25}{26}
+
 \end{ganttchart}
 
-\caption{GANTT Diagram project's plans}
+\caption{GANTT Diagram for project planning. }
    \label{fig:planning}
 \end{figure}
 
