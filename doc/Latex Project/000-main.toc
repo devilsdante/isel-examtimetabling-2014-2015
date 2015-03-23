@@ -5,48 +5,49 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \contentsline {section}{\numberline {1.1}Timetabling Problems}{1}
 \contentsline {section}{\numberline {1.2}Objectives}{2}
-\contentsline {section}{\numberline {1.3}Document Organization}{2}
-\contentsline {chapter}{\numberline {2}State of the Art}{3}
-\contentsline {section}{\numberline {2.1}Timetabling Problem}{3}
-\contentsline {section}{\numberline {2.2}Existing Approaches}{4}
-\contentsline {subsection}{\numberline {2.2.1}Exact methods}{5}
-\contentsline {subsubsection}{Programming Based Technique}{5}
-\contentsline {subsubsection}{Integer Programming}{5}
-\contentsline {subsection}{\numberline {2.2.2}Graph Coloring Based Techniques}{5}
-\contentsline {subsubsection}{Graph Coloring Problem}{6}
-\contentsline {subsection}{\numberline {2.2.3}Meta-heuristics}{6}
-\contentsline {subsubsection}{Single-solution meta-heuristics}{6}
-\contentsline {subsubsection}{Population-based meta-heuristics}{6}
-\contentsline {subsection}{\numberline {2.2.4}ITC 2007 Examination timetabling problem: some approaches}{7}
-\contentsline {paragraph}{Tom\'{a}\v {s} M\"{u}ller's approach}{8}
-\contentsline {paragraph}{Christos Gogos' approach}{8}
-\contentsline {paragraph}{Mitsunori Atsuta, Koji Nonobe and Toshihide Ibaraki's approach}{8}
-\contentsline {paragraph}{Geoffrey De Smet's approach}{8}
-\contentsline {paragraph}{Nelishia Pillay's approach}{8}
-\contentsline {subsection}{\numberline {2.2.5}Other approaches}{9}
-\contentsline {paragraph}{(2009) Abdullah et al.'s approach}{9}
-\contentsline {paragraph}{(2009) Gogos et al.' approach}{9}
-\contentsline {paragraph}{(2009) McCollum et al.'s approach}{9}
-\contentsline {paragraph}{(2011) Malek Alzaqebah and Salwani Abdullah's approach}{9}
-\contentsline {paragraph}{(2011) Hamza Turabieh and Salwani Abdullah's approach}{9}
-\contentsline {paragraph}{(2012) Hamza Turabieh and Salwani Abdullah's approach}{10}
-\contentsline {paragraph}{(2012) Demeester et al.'s approach}{10}
-\contentsline {paragraph}{(2012) McCollum et al.'s approach}{10}
-\contentsline {paragraph}{(2012) Sabar et al.'s hyper-heuristic of hybridizations approach}{10}
-\contentsline {paragraph}{(2012) Sabar et al.'s honey-bee approach}{10}
-\contentsline {paragraph}{(2013) Salwani Abdullah and Malek Alzaqebah's approach}{10}
-\contentsline {paragraph}{(2014) Salwani Abdullah and Malek Alzaqebah's approach}{11}
-\contentsline {paragraph}{(2014) Burke et al.'s approach}{11}
-\contentsline {paragraph}{(2014) Ali Hmer and Malek Mouhoub's approach}{11}
-\contentsline {paragraph}{(2014) Ryan Hamilton-Bryce et al.'s approach}{11}
-\contentsline {paragraph}{(2014) Syariza Rahman et al.'s constructive approach}{12}
-\contentsline {paragraph}{(2014) Syariza Rahman et al.'s adaptive linear combination approach}{12}
-\contentsline {paragraph}{(2014) Nuno Leite et al.'s approach}{12}
-\contentsline {chapter}{\numberline {3}Implementation}{13}
-\contentsline {section}{\numberline {3.1}Loader Module}{13}
-\contentsline {section}{\numberline {3.2}Solution Method}{13}
-\contentsline {subsection}{\numberline {3.2.1}Simulated Annealing}{13}
-\contentsline {subsection}{\numberline {3.2.2}Neighbourhood Operators}{13}
-\contentsline {section}{\numberline {3.3}Planning}{13}
-\contentsline {chapter}{\numberline {4}Conclusions}{15}
-\contentsline {chapter}{References}{17}
+\contentsline {section}{\numberline {1.3}Planning}{2}
+\contentsline {section}{\numberline {1.4}Document Organization}{3}
+\contentsline {chapter}{\numberline {2}State of the Art}{5}
+\contentsline {section}{\numberline {2.1}Timetabling Problem}{5}
+\contentsline {section}{\numberline {2.2}Existing Approaches}{6}
+\contentsline {subsection}{\numberline {2.2.1}Exact methods}{7}
+\contentsline {subsubsection}{Programming Based Technique}{7}
+\contentsline {subsubsection}{Integer Programming}{7}
+\contentsline {subsection}{\numberline {2.2.2}Graph Coloring Based Techniques}{7}
+\contentsline {subsubsection}{Graph Coloring Problem}{8}
+\contentsline {subsection}{\numberline {2.2.3}Meta-heuristics}{8}
+\contentsline {subsubsection}{Single-solution meta-heuristics}{8}
+\contentsline {subsubsection}{Population-based meta-heuristics}{8}
+\contentsline {subsection}{\numberline {2.2.4}ITC 2007 Examination timetabling problem: some approaches}{9}
+\contentsline {paragraph}{Tom\'{a}\v {s} M\"{u}ller's approach}{10}
+\contentsline {paragraph}{Christos Gogos' approach}{10}
+\contentsline {paragraph}{Mitsunori Atsuta, Koji Nonobe and Toshihide Ibaraki's approach}{10}
+\contentsline {paragraph}{Geoffrey De Smet's approach}{10}
+\contentsline {paragraph}{Nelishia Pillay's approach}{10}
+\contentsline {subsection}{\numberline {2.2.5}Other approaches}{11}
+\contentsline {paragraph}{(2009) Abdullah et al.'s approach}{11}
+\contentsline {paragraph}{(2009) Gogos et al.' approach}{11}
+\contentsline {paragraph}{(2009) McCollum et al.'s approach}{11}
+\contentsline {paragraph}{(2011) Malek Alzaqebah and Salwani Abdullah's approach}{11}
+\contentsline {paragraph}{(2011) Hamza Turabieh and Salwani Abdullah's approach}{11}
+\contentsline {paragraph}{(2012) Hamza Turabieh and Salwani Abdullah's approach}{11}
+\contentsline {paragraph}{(2012) Demeester et al.'s approach}{12}
+\contentsline {paragraph}{(2012) McCollum et al.'s approach}{12}
+\contentsline {paragraph}{(2012) Sabar et al.'s hyper-heuristic of hybridizations approach}{12}
+\contentsline {paragraph}{(2012) Sabar et al.'s honey-bee approach}{12}
+\contentsline {paragraph}{(2013) Salwani Abdullah and Malek Alzaqebah's approach}{12}
+\contentsline {paragraph}{(2014) Salwani Abdullah and Malek Alzaqebah's approach}{12}
+\contentsline {paragraph}{(2014) Burke et al.'s approach}{13}
+\contentsline {paragraph}{(2014) Ali Hmer and Malek Mouhoub's approach}{13}
+\contentsline {paragraph}{(2014) Ryan Hamilton-Bryce et al.'s approach}{13}
+\contentsline {paragraph}{(2014) Syariza Rahman et al.'s constructive approach}{13}
+\contentsline {paragraph}{(2014) Syariza Rahman et al.'s adaptive linear combination approach}{14}
+\contentsline {paragraph}{(2014) Nuno Leite et al.'s approach}{14}
+\contentsline {chapter}{\numberline {3}Implementation}{15}
+\contentsline {section}{\numberline {3.1}Loader Module}{15}
+\contentsline {section}{\numberline {3.2}Solution Method}{15}
+\contentsline {subsection}{\numberline {3.2.1}Simulated Annealing}{15}
+\contentsline {subsection}{\numberline {3.2.2}Neighbourhood Operators}{15}
+\contentsline {section}{\numberline {3.3}Planning}{15}
+\contentsline {chapter}{\numberline {4}Conclusions}{17}
+\contentsline {chapter}{References}{19}
