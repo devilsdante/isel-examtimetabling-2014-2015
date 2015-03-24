@@ -1,5 +1,5 @@
 \chapter{State of the Art}
-\label{theory}
+\label{stateofart}
 \thispagestyle{plain}
 
 In this section, we review the state of the art of the problem at hand. We start by describing why timetabling is a rather complex problem, some possible approaches on trying to solve it and some of the solutions already taken, specifically for the ITC 2007 benchmarks.\\
@@ -105,7 +105,7 @@ In this thesis, we review some of the winners approaches. The winners list of th
 
 \paragraph{Tom\'{a}\v{s} M\"{u}ller's approach}
 
-Tom\'{a}\v{s} M\"{u}ller's approach~\cite{Mueller2009} was actually used to solve all three problems established by the ITC 2007 competition. He was able to win two of them and be finalist on the third. For solving the problems, he opted for an hybrid approach, organized in a two-phase algorithm. In the first phase, Tom\'{a}\v{s} used Iterative Forward Search (IFS) algorithm~\cite{Mueller2005} to obtain feasible solutions and Conflict-based Statistics~\cite{Mueller2004} to prevent IFS from looping. 
+Tom\'{a}\v{s} M\"{u}ller's approach~\cite{Mueller2009} was actually used to solve all three problems established by the ITC 2007 competition. He was able to win two of them and be finalist on the third. For solving the problems, he opted for an hybrid approach, organized in a two-phase algorithm. In the first phase, Tom\'{a}\v{s} used \gls{ifs} algorithm~\cite{Mueller2005} to obtain feasible solutions and Conflict-based Statistics~\cite{Mueller2004} to prevent \gls{ifs} from looping. 
 	%--The timetabling problems solved were specified as constraint satisfaction problems, where events (exams, courses) are represented by variables. The variables' values are the possible pairs (time slot, room) that don't cause violations in the hard constraints. For each iteration there's an attempt to sign a value to an unassigned variable. If it violates hard constraints, the conflicting variables are unassigned. The variable chosen in each iteration is randomized or parameterized to, for example, assign the most difficult assignable exam first. The Conflict-based Statistics was used to memorize some previously passed conflicts and avoid repeating those for each iteration.\\
 The second phase consists in using multiple optimization algorithms. These algorithms are applied using this order: \gls{hc} \cite{Russell2010}, \gls{gd} \cite{Dueck1993} and optionally \gls{sa}~\cite{Kirkpatrick1983}.\\
 
@@ -113,7 +113,7 @@ The second phase consists in using multiple optimization algorithms. These algor
 
 \paragraph{Christos Gogos' approach}
 
-Gogos was able to reach second place in Examination Timetabling track, right after Muller. Gogos' approach~\cite{Gogos2012}, like M\"{u}ller's, is a two-phase approach. In the first phase, is starts using a Pre-processing stage, dealing with hidden dependencies between exams, prior to searching for a solution. After the pre-processing stage, a construction stage takes place, resulting in the best feasible solution given a limited period of time. In the second phase, optimization methods are applied in this order: \gls{hc}, \gls{sa}, \gls{ip} that uses Branch and Bound, finishing with the Shaking Stage. Shaking Stage \textit{shakes} the current solution creating an equally good solution that is given to the \gls{hc}, creating a loop on the used optimization methods.\\
+Gogos was able to reach second place in Examination Timetabling track, right after Muller. Gogos' approach~\cite{Gogos2012}, like M\"{u}ller's, is a two-phase approach but with a pre-processing stage. In the first phase, is starts using a Pre-processing stage, dealing with hidden dependencies between exams, prior to searching for a solution. After the pre-processing stage, a construction stage takes place, using a meta-heuristic called \textit{greedy randomized adaptive search procedure}. In the second phase, optimization methods are applied in this order: \gls{hc}, \gls{sa}, \gls{ip} that uses Branch and Bound, finishing with the Shaking Stage. Shaking Stage \textit{shakes} the current solution creating an equally good solution that is given to the \gls{hc}, creating a loop on the used optimization methods.\\
 	%--\gls{hc} is used until reaching a local optimum. This algorithm is used to generate neighbor solutions, accepting only better solutions compared to the current one, until reaching a local optimum. It is considered local optimum when \gls{hc} cannot generate a better solution in a number of tries or time limit.\\
 
 	%--The next stage consists in utilizing \gls{sa} to get out of local optimum. Simulated Annealing stops when it cannot generate better solutions after the specified period of time.
@@ -128,7 +128,7 @@ Gogos was able to reach second place in Examination Timetabling track, right aft
 Mitsunori Atsuta, Koji Nonobe and Toshihide Ibaraki ended up in third place on the Examination Timetabling track and won third and second place on the other tracks as well, utilizing the same approach for all of them. The approach~\cite{Atsuta2007} consists on applying constraint satisfaction problem solver adopting an hybridization of \gls{ts} and Iterated Local Search (modification of local search method), handling weight constraints {\color{red} ?}.\\
 
 \paragraph{Geoffrey De Smet's approach}
-Geoffrey De Smet's approach \cite{Smet2007} differs from all others because he decided not to use a known problem-specific heuristic to obtain a feasible solution, but instead used what is called the \textit{Drool's rule engine}, named \textit{drools-solver} \cite{Drools}. By definition, the drools-solver is a combination of optimization heuristics and meta-heuristics with very efficient score calculation. After obtaining a feasible solution, Geoffrey opted to use a local search algorithm to improve the solutions obtained using the drools-solver.\\
+Geoffrey De Smet's approach \cite{Smet2007} differs from all others because he decided not to use a known problem-specific heuristic to obtain a feasible solution, but instead used what is called the \textit{Drool's rule engine}, named \textit{drools-solver} \cite{Drools}. By definition, the drools-solver is a combination of optimization heuristics and meta-heuristics with very efficient score calculation. After obtaining a feasible solution, Geoffrey opted to use a local search algorithm (TS) to improve the solutions obtained using the drools-solver.\\
 
 \paragraph{Nelishia Pillay's approach}
 Nelishia Pillay opted to use a two-phase algorithm variation, using \textit{Developmental Approach based on Cell Biology} \cite{Pillay2007}, which the goal is to form a well-developed organism by the process of creating a cell, proceeding with cell division, cell interaction and cell migration. In this approach, each cell represents a timeslot. The first phase represents the creating of the first cell, cell division and cell interaction, and the second phase represents the cell migration.
@@ -140,7 +140,7 @@ Nelishia Pillay opted to use a two-phase algorithm variation, using \textit{Deve
 Salwani Abdullah, Hamza Turabieh, and Barry McCollum's approach \cite{Abdullah2009} consists on using an hybridization of an electromagnetic-like mechanism and the \gls{gd} algorithm. In this approach, the electromagnetism-like mechanism starts with a population of timetables randomly generated. Electromagnetic-like mechanism is a meta-heuristic algorithm using an \textit{attraction-repulsion} mechanism \cite{Javadian2008} to move the solutions to the optimum.\\
 
 \paragraph{(2009) Gogos et al.' approach}
-Christos Gogos, George Goulas, Panayiotis Alefragis and Efthymios Housos' approach \cite{Gogos2009} also used the two-phase algorithm. The first phase consists on creating the timetable using a greedy randomized positioning, with the use of a backtracking mechanism to help creating the solution. This construction phase is repeated and only the best solutions pass to the second phase. The second phase utilizes local search, \gls{sa}, shaking and \gls{ip} to improve the solutions. As mentioned by the author, this approach produced very good results  and can be compared to Tom\'{a}\v{s} M\"{u}ller's results in his approached used to win ITC 2007 competition.\\
+Christos Gogos, George Goulas, Panayiotis Alefragis and Efthymios Housos' approach \cite{Gogos2009} also used the two-phase algorithm. The first phase consists on creating the timetable using a greedy randomized positioning, with the use of a backtracking mechanism to help creating the solution. This construction phase is repeated and only the best solutions pass to the second phase. The second phase utilizes local search ({\color{red} Isto não é um tipo?}), \gls{sa}, shaking and \gls{ip} to improve the solutions. As mentioned by the author, this approach produced very good results  and can be compared to Tom\'{a}\v{s} M\"{u}ller's results in his approached used to win ITC 2007 competition.\\
 
 \paragraph{(2009) McCollum et al.'s approach}
 B. McCollum, P.J. McMullan, A. J. Parkes, E.K. Burke and S. Abdullah's two phased approach \cite{McCollum2009} use an adaptive ordering heuristic from \cite{Burke2004}, proceeding with an \textit{extended version} of \gls{gd}. As the author stated, this approach is robust and general considering the results obtained on the benchmark datasets from ITC 2007 using this approach.\\
@@ -189,9 +189,38 @@ S. A. Rahman, E. K. Burke, A. Bargiela, B. McCollum and E. Özcan's approach \ci
 Syariza A. Rahman, Andrzej Bargiela, Edmund K. Burke, Ender Özcan, Barry McCollum and Paul McMullan's approach \cite{Rahman2014a} utilizes adaptive linear combinations of graph coloring heuristics (largest degree and saturation degree) with heuristic modifier. These adaptive linear combinations allows the attribution of difficulty scores to examinations depending on how hard their scheduling is. The ones with higher score, and so harder to schedule, are scheduled using two strategies: using single or multiple heuristics and with or without heuristic modifier. The authors conclude that multiple heuristics with heuristic modifier offers good quality solutions, and the presented adaptive linear combination is a highly effective method.\\
 
 \paragraph{(2014) Nuno Leite et al.'s approach}
-Nuno Leite, Fernando Melício and Agostinho C. Rosa's approach \cite{Leite2014} tries to solve not only the well-studied single epoch problem, but also an extension to that problem with two examination epochs. This approach utilizes a Memetic Algorithm to solve the problem. Memetic algorithms are hybridizations of a population-based meta-heuristic and a single-solution based meta-heuristic. The Memetic algorithm used is the hybridization of the \textit{Shuffled Complex Evolution Algorithm} and the Great Deluge algorithm. Shuffled Complex Evolution Algorithm is a Evolutionary Algorithm. Great Deluge algorithm is a variant of the local search \gls{sa}.\\
+Nuno Leite, Fernando Melício and Agostinho C. Rosa's approach \cite{Leite2014} tries to solve not only the well-studied single epoch problem, but also an extension to that problem with two examination epochs. This approach utilizes a Memetic Algorithm to solve the problem. Memetic algorithms are hybridizations of a population-based meta-heuristic and a single-solution based meta-heuristic. The Memetic algorithm used is the hybridization of the \textit{Shuffled Complex Evolution Algorithm} and the \gls{gd} algorithm. Shuffled Complex Evolution Algorithm is a Evolutionary Algorithm. \gls{gd} algorithm is a variant of the local search \gls{sa}.\\
 
-\begin{chronology}[5]{2008}{2015}{10cm}[7cm]
-\event{2009}{teste1}
-\event{2009}{teste2}
-\end{chronology}
+\begin{table}
+\renewcommand\arraystretch{1.4}\arrayrulecolor{LightSteelBlue3}
+\captionsetup{singlelinecheck=false, font=blue, labelfont=sc, labelsep=quad}
+\caption{Timeline}\vskip -1.5ex
+\begin{tabular}{@{\,}r <{\hskip 2pt} !{\foo} >{\raggedright\arraybackslash}p{15cm}}
+\toprule
+\addlinespace[1.5ex]
+2007	& Atsuta et al. - Constraint satisfaction problem solver using an hybridization of TS and iterater local search\\
+		& Smet - drool's solver with \gls{ts}\\
+		& Pillay - Two phase approach using Developmental Approach based on Cell Biology, which the first phase consists on creating the first cell, cell division an cell iteration, and the second phase represents cell migrations\\
+2009 	& M\"{u}ller - Two-phase approach with hybridization, which the first phase includes \gls{ifs} and Conflict-based Statistics, and the second phase is composed of \gls{hc}, \gls{gd} and optionally \gls{sa}\\
+		& Abdullah et al. - Hybridization of electromagnetic-like mechanism and \gls{gd} algorithm\\
+		& Gogos et al. - Two phase approach, which the first phase consists on using a greedy randomized positioning with backtrack mechanism, and the second phase utilizes local search {\color{red} (?)}, \gls{sa}, shaking and \gls{ip}\\
+		& McCollum et al. - Two phase approach, which first phase consists on using adaptive ordering heuristic, and the second phase utilizes an \textit{extended version} of \gls{gd}\\
+2011	& Alzaqebah and Abdullah - Two phase approach, which the first phase uses the largest degree ordering, and the second phase utilizes an Artificial Bee Colony search algorithm\\
+		& Turabeih and Abdullah - Two phase approach, which the first phase utilizes an hybridization of graph coloring heuristics, and the second phase uses an hybridization of electromagnetic-like mechanism and \gls{gd} algorithm\\
+2012	& Gogos - Considered a two-phase approach with a pre-processing stage for hidden dependencies. The first phase uses the \textit{greedy randomized adaptive search procedure}, and the second phase is composed of \gls{hc}, \gls{sa}, \gls{ip} with Branch and Bound, finishing with a shaking stage.\\
+		& Turabieh and Abdullah - Tabu-based memetic algorithm which is an hybridization of a genetic algorithm with \gls{ts}\\
+		& Demeester et al. - Hyper-heuristic approach of 'improved or equal', \gls{sa}, \gls{gd} and late acceptance strategy applied on already created solutions\\
+		& McCollum et al. - Approach based on \gls{ip} formulation (problem was not solved)\\
+		& Sabar et al. - Graph coloring hyper-heuristic approach using last degree, saturation degree, largest colored degree and largest enrollment\\
+		& Sabar et al. - Two phase approach, which the first phase is composed of an hybridization of graph coloring heuristics and the second phase uses an honey-bee algorithm\\
+2013	& Abdullah and Alzaqebah - Hybridization approach with a modified bee algorithm and local search algorithms like SA and late acceptance \gls{hc}\\
+2014	& Abdullah and Alzaqebah - Hybridization approach with a modified artificial bee colony with local search algorithm like late acceptance \gls{hc}\\
+		& Burke et al. - Approach uses an hyper-heuristic with hybridization of low level heuristics (neighbor operations) like, thereafter uses an hyper-heuristic with hybridization of exam ordering methods\\
+		& Hmer and Mouhoub - Multi-phase hybridization of meta-heuristics. A two phase approach with pre-processing phase. First phase uses a variant of TS, and the second phase utilzies an hybridization of \gls{hc}, \gls{sa} and an extended version of \gls{gd} algorithm\\
+		& Brice et al. - Approach with 3 phases. First phase uses a Squeaky Wheel constructor, second phase utilizes the weighted list created in the first phase for the neighbor search process, and the third phase uses a weighted list based on the solutions' soft constraints penalty\\
+		& Rahman et al. - Constructive approach that divides examinations into easy and hard sets\\
+		& Rahman et al. - Approach utilizes adaptive linear combinations of graph coloring heuristics, like largest degree and saturation degree, with heuristic modifier\\
+		& Nuno Leite et al. - Memetic algorithm approach. Hybridization of Shuffled Complex Evolution algorithm and the \gls{gd} algorithm\\
+		
+\end{tabular}
+\end{table}

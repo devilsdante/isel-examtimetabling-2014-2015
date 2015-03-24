@@ -19,7 +19,7 @@
 \usepackage{url}
 \linespread{1.2}
 \usepackage{color}
-\usepackage{array}
+\usepackage{array, booktabs}
 \usepackage[toc,page]{appendix}
 \usepackage[acronym]{glossaries}
 \usepackage{glossaries}
@@ -31,10 +31,20 @@
 \usepackage{algorithmic}
 
 
-\usepackage[rgb]{xcolor}
+\usepackage[rgb,x11names]{xcolor}
 \definecolor{Highlight}{rgb}{0.84,0.47,0.10} 
 \usepackage{chronology}
 \usepackage{pgfgantt}
+%*
+%\usepackage{fourier, heuristica}
+\usepackage{colortbl}
+\DeclareCaptionFont{blue}{\color{LightSteelBlue3}}
+\newcommand{\foo}{\color{LightSteelBlue3}\makebox[0pt]{\textbullet}\hskip-0.5pt\vrule width 1pt\hspace{\labelsep}}
+
+%*
+%\usepackage[pdftex]{graphicx}
+
+%\newcommand{\foo}{\hspace{-2.3pt}$\bullet$ \hspace{5pt}}
 
 \captionsetup{compatibility=false,figurename=Figure}
 

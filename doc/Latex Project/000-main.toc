@@ -30,24 +30,24 @@
 \contentsline {paragraph}{(2009) McCollum et al.'s approach}{11}
 \contentsline {paragraph}{(2011) Malek Alzaqebah and Salwani Abdullah's approach}{11}
 \contentsline {paragraph}{(2011) Hamza Turabieh and Salwani Abdullah's approach}{11}
-\contentsline {paragraph}{(2012) Hamza Turabieh and Salwani Abdullah's approach}{11}
+\contentsline {paragraph}{(2012) Hamza Turabieh and Salwani Abdullah's approach}{12}
 \contentsline {paragraph}{(2012) Demeester et al.'s approach}{12}
 \contentsline {paragraph}{(2012) McCollum et al.'s approach}{12}
 \contentsline {paragraph}{(2012) Sabar et al.'s hyper-heuristic of hybridizations approach}{12}
 \contentsline {paragraph}{(2012) Sabar et al.'s honey-bee approach}{12}
 \contentsline {paragraph}{(2013) Salwani Abdullah and Malek Alzaqebah's approach}{12}
-\contentsline {paragraph}{(2014) Salwani Abdullah and Malek Alzaqebah's approach}{12}
+\contentsline {paragraph}{(2014) Salwani Abdullah and Malek Alzaqebah's approach}{13}
 \contentsline {paragraph}{(2014) Burke et al.'s approach}{13}
 \contentsline {paragraph}{(2014) Ali Hmer and Malek Mouhoub's approach}{13}
 \contentsline {paragraph}{(2014) Ryan Hamilton-Bryce et al.'s approach}{13}
-\contentsline {paragraph}{(2014) Syariza Rahman et al.'s constructive approach}{13}
+\contentsline {paragraph}{(2014) Syariza Rahman et al.'s constructive approach}{14}
 \contentsline {paragraph}{(2014) Syariza Rahman et al.'s adaptive linear combination approach}{14}
 \contentsline {paragraph}{(2014) Nuno Leite et al.'s approach}{14}
-\contentsline {chapter}{\numberline {3}Implementation}{15}
-\contentsline {section}{\numberline {3.1}Loader Module}{15}
-\contentsline {section}{\numberline {3.2}Solution Method}{15}
-\contentsline {subsection}{\numberline {3.2.1}Simulated Annealing}{15}
-\contentsline {subsection}{\numberline {3.2.2}Neighbourhood Operators}{15}
-\contentsline {section}{\numberline {3.3}Planning}{15}
-\contentsline {chapter}{\numberline {4}Conclusions}{17}
-\contentsline {chapter}{References}{19}
+\contentsline {chapter}{\numberline {3}Implementation}{17}
+\contentsline {section}{\numberline {3.1}Loader Module}{17}
+\contentsline {section}{\numberline {3.2}Solution Method}{17}
+\contentsline {subsection}{\numberline {3.2.1}Simulated Annealing}{17}
+\contentsline {subsection}{\numberline {3.2.2}Neighbourhood Operators}{17}
+\contentsline {section}{\numberline {3.3}Planning}{17}
+\contentsline {chapter}{\numberline {4}Conclusions}{19}
+\contentsline {chapter}{References}{21}
