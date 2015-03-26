@@ -1,0 +1,4 @@
+d:\miguel\documentos\visual studio 2013\Projects\ExaminationTimetabling\DAL\bin\Debug\DAL.dll
+d:\miguel\documentos\visual studio 2013\Projects\ExaminationTimetabling\DAL\bin\Debug\DAL.pdb
+d:\miguel\documentos\visual studio 2013\Projects\ExaminationTimetabling\DAL\obj\Debug\DAL.dll
+d:\miguel\documentos\visual studio 2013\Projects\ExaminationTimetabling\DAL\obj\Debug\DAL.pdb

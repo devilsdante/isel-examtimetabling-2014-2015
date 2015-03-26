@@ -1,0 +1,7 @@
+d:\miguel\documentos\visual studio 2013\Projects\ExaminationTimetabling\Business\obj\Debug\Business.csprojResolveAssemblyReference.cache
+d:\miguel\documentos\visual studio 2013\Projects\ExaminationTimetabling\Business\bin\Debug\Business.dll
+d:\miguel\documentos\visual studio 2013\Projects\ExaminationTimetabling\Business\bin\Debug\Business.pdb
+d:\miguel\documentos\visual studio 2013\Projects\ExaminationTimetabling\Business\bin\Debug\DAL.dll
+d:\miguel\documentos\visual studio 2013\Projects\ExaminationTimetabling\Business\bin\Debug\DAL.pdb
+d:\miguel\documentos\visual studio 2013\Projects\ExaminationTimetabling\Business\obj\Debug\Business.dll
+d:\miguel\documentos\visual studio 2013\Projects\ExaminationTimetabling\Business\obj\Debug\Business.pdb
