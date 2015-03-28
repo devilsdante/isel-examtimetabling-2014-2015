@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.19)  28 MAR 2015 01:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.19)  28 MAR 2015 03:56
 entering extended mode
 **000-main.tex
 
@@ -1680,15 +1680,16 @@ File: ts1fve.fd 2004/09/07 scalable font definitions for TS1/fve.
 )
 LaTeX Font Info:    Font shape `TS1/fve/m/n' will be
 (Font)              scaled to size 8.99994pt on input line 18.
- [1
 
-
-
-]
 Underfull \hbox (badness 10000) in paragraph at lines 23--24
 
  []
 
+[1
+
+
+
+]
 LaTeX Font Info:    Font shape `T1/fve/m/it' in size <10> not available
 (Font)              Font shape `T1/fve/m/sl' tried instead on input line 25.
 LaTeX Font Info:    Font shape `T1/fve/m/sl' will be
@@ -1698,23 +1699,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--33
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 46--51
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 46--51
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ucs\uni-32.def"
+File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
+)
+Underfull \hbox (badness 10000) in paragraph at lines 46--50
 
  []
 
 [2]
-LaTeX Font Info:    Font shape `T1/fve/m/n' will be
-(Font)              scaled to size 8.09995pt on input line 52.
-LaTeX Font Info:    Font shape `T1/fve/m/n' will be
-(Font)              scaled to size 6.29996pt on input line 85.
+Underfull \hbox (badness 10000) in paragraph at lines 51--54
 
-Overfull \hbox (22.61665pt too wide) in paragraph at lines 140--141
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--54
+
+ []
+
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 8.09995pt on input line 55.
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 6.29996pt on input line 88.
+
+Overfull \hbox (30.57979pt too wide) in paragraph at lines 140--141
  [][] 
  []
 
@@ -1788,42 +1795,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
  []
 
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 49.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 49.
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--52
+Underfull \hbox (badness 10000) in paragraph at lines 49--54
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--52
+Underfull \hbox (badness 10000) in paragraph at lines 49--54
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--54
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 57--58
+Underfull \hbox (badness 10000) in paragraph at lines 59--60
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--61
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--64
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 89--90
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--107
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
 
  []
 
@@ -1858,6 +1866,10 @@ File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
 )
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
 (Font)              scaled to size 8.09995pt on input line 36.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 36.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 36.
 
 Underfull \hbox (badness 2961) in paragraph at lines 35--38
 []\T1/fve/m/n/9 B. Mc-Col-lum, ``Eval-u-a-tion func-tion.'' $\T1/fvm/m/n/9 http
@@ -1889,10 +1901,10 @@ RProgresso\300-theory.aux")
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
 RProgresso\800-references.aux")) ) 
 Here is how much of TeX's memory you used:
- 25887 strings out of 493921
- 474558 string characters out of 3144879
- 563871 words of memory out of 3000000
- 28540 multiletter control sequences out of 15000+200000
+ 26241 strings out of 493921
+ 478920 string characters out of 3144879
+ 568855 words of memory out of 3000000
+ 28891 multiletter control sequences out of 15000+200000
  73805 words of font info for 73 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  62i,9n,77p,1797b,909s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1904,11 +1916,10 @@ ogram Files (x86)/MiKTeX 2.9/fonts/type1/bera/fveb8a.pfb><C:/Program Files (x86
 )/MiKTeX 2.9/fonts/type1/bera/fver8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
 ts/type1/bera/fver8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/bera/fv
 mr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb>
-Output written on 000-main.pdf (22 pages, 208367 bytes).
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb>
+Output written on 000-main.pdf (22 pages, 193143 bytes).
 PDF statistics:
- 151 PDF objects out of 1000 (max. 8388607)
+ 147 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  28 words of extra memory for PDF output out of 10000 (max. 10000000)
 
