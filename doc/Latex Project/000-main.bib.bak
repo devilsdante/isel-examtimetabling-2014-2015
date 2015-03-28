@@ -316,7 +316,7 @@ Barry McCollum},
   Timestamp                = {Sun, 25 Jul 4439965 07:11:28 +ealing}
 }
 
-@Article{,
+@Article{Leite2014,
   Title                    = {A Shuffled Complex Evolution Based Algorithm for Examination Timetabling: Benchmarks and a New Problem Focusing Two Epochs},
   Author                   = {Nuno Leite and
  Fernando Melíıcio and
@@ -575,12 +575,14 @@ Hana Rudová},
   Url                      = {http://dx.doi.org/10.1023/A:1006576209967}
 }
 
-@Other{Smet2007,
+@Misc{Smet2007,
   Title                    = {Drools-solver},
+
   Author                   = {Geoffrey De Smet},
-  Timestamp                = {2015.03.07},
-  Url                      = {http://www.cs.qub.ac.uk/itc2007/winner/bestexamsolutions/Geoffrey_De_smet_examination_description.pdf},
-  Year                     = {2007}
+  HowPublished             = {\url{http://www.cs.qub.ac.uk/itc2007/winner/bestexamsolutions/Geoffrey_De_smet_examination_description.pdf}},
+  Year                     = {2007},
+
+  Timestamp                = {2015.03.07}
 }
 
 @Book{Talbi2009,

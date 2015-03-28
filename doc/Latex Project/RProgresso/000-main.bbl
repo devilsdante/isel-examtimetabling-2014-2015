@@ -4,16 +4,12 @@
 E.~Talbi, {\em Metaheuristics - From Design to Implementation}.
 \newblock Wiley, 2009.
 
-\bibitem{Wilson2003}
-J.~M. Wilson, ``Gantt charts: {A} centenary appreciation,'' {\em European
-  Journal of Operational Research}, vol.~149, no.~2, pp.~430--437, 2003.
-
 \bibitem{Schaerf1999}
 A.~Schaerf, ``A survey of automated timetabling,'' {\em Artif. Intell. Rev.},
   vol.~13, no.~2, pp.~87--127, 1999.
 
 \bibitem{Jensen2001}
-T.~R. Jensen, {\em Graph Coloring Problems}.
+T.~Jensen, {\em Graph Coloring Problems}.
 \newblock John Wiley \& Sons, Inc., 2001.
 
 \bibitem{Arora2009}
@@ -21,9 +17,9 @@ S.~Arora and B.~Barak, {\em Computational Complexity - {A} Modern Approach}.
 \newblock Cambridge University Press, 2009.
 
 \bibitem{Qu2009}
-R.~Qu, E.~K. Burke, B.~McCollum, L.~T.~G. Merlot, and S.~Y. Lee, ``A survey of
-  search methodologies and automated system development for examination
-  timetabling,'' {\em J. Scheduling}, vol.~12, no.~1, pp.~55--89, 2009.
+R.~Qu, E.~Burke, B.~McCollum, L.~Merlot, and S.~Lee, ``A survey of search
+  methodologies and automated system development for examination timetabling,''
+  {\em J. Scheduling}, vol.~12, no.~1, pp.~55--89, 2009.
 
 \bibitem{Lewis2007}
 R.~Lewis, ``A survey of metaheuristic-based techniques for university
@@ -31,12 +27,14 @@ R.~Lewis, ``A survey of metaheuristic-based techniques for university
   2007.
 
 \bibitem{Carter1996}
-M.~W. Carter, G.~Laporte, and S.~Y. Lee, ``Examination timetabling: Algorithmic
+M.~Carter, G.~Laporte, and S.~Lee, ``Examination timetabling: Algorithmic
   strategies and applications,'' {\em The Journal of the Operational Research
   Society}, 1996.
 
 \bibitem{McCollum2008}
-D.~B. McCollum, ``Evaluation function,'' 2008.
+B.~McCollum, ``Evaluation function.''
+  \url{http://www.cs.qub.ac.uk/itc2007/examtrack/exam_track_index_files/examevaluation.htm},
+  2008.
 
 \bibitem{Mueller2009}
 T.~M{\"{u}}ller, ``{ITC2007} solver description: A hybrid approach,'' {\em
@@ -53,7 +51,7 @@ T.~M{\"{u}}ller, R.~Barták, and H.~Rudová, {\em Conflict-Based Statistics}.
   Malostransk´e n´am. 2/25, Prague, Czech Republic, 2004.
 
 \bibitem{Russell2010}
-S.~J. Russell and P.~Norvig, {\em Artificial Intelligence - {A} Modern Approach
+S.~Russell and P.~Norvig, {\em Artificial Intelligence - {A} Modern Approach
   {(3.} internat. ed.)}.
 \newblock Pearson Education, 2010.
 
@@ -62,7 +60,7 @@ G.~Dueck, ``New optimization heuristics: The great deluge algorithm and the
   record-to-record travel,'' {\em Journal of Computational Physics}, 1993.
 
 \bibitem{Kirkpatrick1983}
-S.~Kirkpatrick, D.~G. Jr., and M.~P. Vecchi, ``Optimization by simmulated
+S.~Kirkpatrick, D.~Gelatt, and M.~Vecchi, ``Optimization by simmulated
   annealing,'' {\em Science}, vol.~220, no.~4598, pp.~671--680, 1983.
 
 \bibitem{Gogos2012}
@@ -79,13 +77,17 @@ M.~Atsuta, K.~Nonobe, and T.~Ibaraki, {\em ITC-2007 Track2: An Approach using
   2-17-1 Fujimi, Chiyoda-ku, Tokyo, Japan 102-8160 nonobe@hosei.ac.jp, 2007.
 
 \bibitem{Smet2007}
-G.~D. Smet, ``Drools-solver,'' 2007.
+G.~Smet, ``Drools-solver.''
+  \url{http://www.cs.qub.ac.uk/itc2007/winner/bestexamsolutions/Geoffrey_De_smet_examination_description.pdf},
+  2007.
 
 \bibitem{Drools}
-T.~J. Drools, ``Drools planner user guide.''
+J.~Drools, ``Drools planner user guide.''
+  \url{http://docs.jboss.org/drools/release/5.4.0.Final/drools-planner-docs/html_single/}.
 
 \bibitem{Pillay2007}
-N.~Pillay, ``A developmental approach to the examination timetabling problem,''
+N.~Pillay, ``A developmental approach to the examination timetabling problem.''
+  \url{http://www.cs.qub.ac.uk/itc2007/winner/bestexamsolutions/pillay.pdf},
   2007.
 
 \end{thebibliography}
