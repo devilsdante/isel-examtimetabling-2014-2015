@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.19)  28 MAR 2015 03:56
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.19)  29 MAR 2015 22:56
 entering extended mode
 **000-main.tex
 
@@ -1721,7 +1721,7 @@ LaTeX Font Info:    Font shape `T1/fve/m/n' will be
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
 (Font)              scaled to size 6.29996pt on input line 88.
 
-Overfull \hbox (30.57979pt too wide) in paragraph at lines 140--141
+Overfull \hbox (33.54707pt too wide) in paragraph at lines 140--141
  [][] 
  []
 
@@ -1903,7 +1903,7 @@ RProgresso\800-references.aux")) )
 Here is how much of TeX's memory you used:
  26241 strings out of 493921
  478920 string characters out of 3144879
- 568855 words of memory out of 3000000
+ 568859 words of memory out of 3000000
  28891 multiletter control sequences out of 15000+200000
  73805 words of font info for 73 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -1917,7 +1917,7 @@ ogram Files (x86)/MiKTeX 2.9/fonts/type1/bera/fveb8a.pfb><C:/Program Files (x86
 ts/type1/bera/fver8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/bera/fv
 mr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb>
-Output written on 000-main.pdf (22 pages, 193143 bytes).
+Output written on 000-main.pdf (22 pages, 193186 bytes).
 PDF statistics:
  147 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
