@@ -2,7 +2,7 @@
 \label{stateofart}
 \thispagestyle{plain}
 
-In this section, we review the state-of-the-art of the problem at hand. We start by describing why timetabling is a rather complex problem, some possible approaches to solve it and some of the solutions already taken, specifically for the ITC 2007 benchmarks.\\
+In this section, we review the state-of-the-art of the problem at hand. We start by describing why timetabling is a rather complex problem, some possible approaches to solve it and some of the existing solutions, specifically for the ITC 2007 benchmarks.\\
 
 \section{Timetabling Problem}
 
@@ -19,7 +19,7 @@ The basic examination timetabling problem, where only the \textit{clash} hard co
 \begin{figure}[h!]
  \centering
    \includegraphics{./images/typesOfAlgorithms}
-   \caption{Optimization methods (adapted from \cite{Talbi2009}).}
+   \caption{Optimization methods: taxonomy and organization (adapted from \cite{Talbi2009}).}
    \label{fig:TypesAlgorithms}
 \end{figure}
 
@@ -27,9 +27,9 @@ Figure~\ref{fig:TypesAlgorithms} depicts a taxonomy for the known optimization m
 \\
 Timetabling solution approaches are usually divided into the following categories~\cite{Qu2009}: \textit{exact algorithms} (Branch-and-Bound, Dynamic Programming), \textit{graph based sequential techniques}, \textit{local search based techniques} (Tabu Search, Simulated Annealing, Great Deluge), \textit{population based algorithms} (Evolutionary Algorithms, Memetic algorithms, Ant Colony algorithms, Artificial immune algorithms), \textit{Multi-criteria techniques}, \textit{Hyper-heuristics}, \textit{Decomposition/clustering techniques}. Hybrid algorithms, which combine features of several algorithms, comprise the state-of-the-art. Due to its complexity, approaching the examination timetabling problem using exact method approaches can only be done for small size instances. Real problem instances found in practice are usually of large size, making the use of exact methods impracticable. Heuristic solution algorithms have been usually employed to solve this problem.\\
 \\
-Real problem instances are usually solved by applying algorithms which use both \textit{heuristics} and \textit{meta-heuristics}. Heuristic algorithms are problem-dependent, meaning that these are adapted to a specific problem in in which one can take advantage of its details. Heuristics are used to generate a feasible solution, focusing on solving all hard constraints only. Meta-heuristics, on the other hand, are problem-independent. These are used to, given the feasible solution obtained using heuristic algorithms, generate a better solution focusing on satisfying as many soft constraints as possible.\\
+Real problem instances are usually solved by applying algorithms which use both \textit{heuristics} and \textit{meta-heuristics}. Heuristic algorithms are problem-dependent, meaning that these are adapted to a specific problem in which one can take advantage of its details. Heuristics are used to generate a feasible solution, focusing on solving all hard constraints only. Meta-heuristics, on the other hand, are problem-independent. These are used to, given the feasible solution obtained using heuristic algorithms, generate a better solution focusing on satisfying as many soft constraints as possible.\\
 \\
-Most of the existing meta-heuristic algorithms belong to one of the following three categories: One-Stage algorithms, Two-Stage algorithms and algorithms that allow relaxations~\cite{Lewis2007}. The One-Stage algorithm is used to get a solution, which the goal is to satisfy both hard and soft constraints at the same time. The Two-Stage algorithms are the most used types of approaches. This category is divided in two phases: the first phase consists in not considering the soft constraints and focusing on solving hard constraints to obtain a feasible solution; the second phase is an attempt to find the best solution, trying to solve the largest number of soft constraints as possible, given the solution of the first phase. Algorithms that allow relaxation are algorithms that can weaken some constraints in order to solve the \textit{relaxed problem} while considering the elimination the used relaxations.
+Most of the existing meta-heuristic algorithms belong to one of the following three categories: One-Stage algorithms, Two-Stage algorithms and algorithms that allow relaxations~\cite{Lewis2007}. The One-Stage algorithm is used to get a solution, which the goal is to satisfy both hard and soft constraints at the same time. The Two-Stage algorithms are the most used types of approaches. This category is divided in two phases: the first phase consists in not considering the soft constraints and focusing on solving hard constraints to obtain a feasible solution; the second phase is an attempt to find the best solution, trying to solve the largest number of soft constraints as possible, given the solution of the first phase. Algorithms that allow relaxation can weaken some constraints in order to solve the \textit{relaxed problem}, while considering the elimination the used relaxations.
 
 \subsection{Exact methods}
 \label{subsection:exactmethods}
@@ -39,7 +39,7 @@ Approximation algorithms like heuristics and meta-heuristics proceed to enumerat
 The Constraint Programming Based Technique (CPBT) allows direct programming with constraints which gives ease and flexibility in solving problems like timetabling. Two important features about this technique are the use of backtracking and logical variables. Constraint programming is different from other types of programming, as in these types it is specified the steps that need to be executed, but in constraint programming only the properties (hard constraints) of the solution, or the properties that should not be in the solution, are specified \cite{Qu2009}.\\
 
 \subsubsection{Integer Programming}
-The \gls{ip} is a mathematical programming technique in which the optimization problem to be solved must be formulated as an Integer Problem. If the objective function and the constraints must be linear, and all problem variables are integer valued, then the \gls{ip} problem is termed \gls{ilp}. If there are some variables that are continuous and other are integer, then the problem is called \gls{milp}. Schaerf~\cite{Schaerf1999} surveys some approaches using the \gls{milp} technique to school, course, and examination timetabling.
+The \gls{ip} is a mathematical programming technique in which the optimization problem to be solved must be formulated as an Integer Problem. If the objective function and the constraints must be linear, and all problem variables are integer valued, then the \gls{ip} problem is termed \gls{ilp}. In the presence of both integer and continuous variables, then the problem is called \gls{milp}. Schaerf~\cite{Schaerf1999} surveys some approaches using the \gls{milp} technique to school, course, and examination timetabling.\\
 
 \subsection{Graph Coloring Based Techniques}
 \label{subsection:graphcoloring}
@@ -48,7 +48,7 @@ As mentioned previously, timetabling problems can be reduced to a graph coloring
 \subsubsection{Graph Coloring Problem}
 The \gls{gc} problem consists in assigning colors to an element type of a graph which must follow certain constraints. The simplest sub-type is the \textit{vertex coloring}, which the main goal is to, given a number of vertices and edges, color the vertices so that no adjacent vertices have the same color. In this case the goal is to find a solution with the lowest number of colors as possible.\\
 \\
-The examination timetabling problem can be transformed into a graph coloring problem in the following way. The exams corresponds to vertices and there exists an edge connecting each pair of conflicting exams (exams that have students in common). With this mapping only the clash hard constraint is take into consideration. Thus, soft constraints are ignored. \cite{Qu2009}.\\
+The examination timetabling problem can be transformed into a graph coloring problem as follows. The exams corresponds to vertices and there exists an edge connecting each pair of conflicting exams (exams that have students in common). With this mapping only the clash hard constraint is take into consideration. Thus, soft constraints are ignored \cite{Qu2009}.\\
 \\
 Given the mapping between the \gls{gc} problem and the examination timetabling problem, \gls{gc} heuristics like \textit{Saturation Degree Ordering} are very commonly used to get the initial solutions. Others like \textit{First Fit} and other \textit{Degree Based Ordering} techniques (\textit{Largest Degree Ordering}, \textit{Incidence Degree Ordering}) are also heuristic techniques for coloring graphs~\cite{Carter1996}.\\
 
@@ -59,16 +59,16 @@ Given the mapping between the \gls{gc} problem and the examination timetabling p
 Meta-heuristics, as mentioned above, usually provide solutions for optimization problems. In timetabling problems, meta-heuristic algorithms are used to optimize the feasible solutions provided by heuristics, like the \gls{gc} heuristics. Meta-heuristics are divided in two main sub-types, which are \textit{Single-solution meta-heuristics} and \textit{Population-based meta-heuristics}~\cite{Talbi2009}.\\
 
 \subsubsection{Single-solution meta-heuristics}
-Single-solution meta-heuristics' main goal is to modify and to optimize one single solution, maintaining the search focused on local regions. This type of meta-heuristic is therefore exploitation oriented. Some examples of this type are \textit{\gls{sa}}, \textit{Variable-Neighborhood Search}, \textit{\gls{ts}}, and \textit{Guided Local Search}~\cite{Talbi2009}. \\
+Single-solution meta-heuristics main goal is to modify and to optimize one single solution, maintaining the search focused on local regions. This type of meta-heuristic is therefore exploitation oriented. Some examples of this type are \textit{\gls{sa}}, \textit{Variable-Neighborhood Search}, \textit{\gls{ts}}, and \textit{Guided Local Search}~\cite{Talbi2009}. \\
 
 \subsubsection{Population-based meta-heuristics}
-Population-based meta-heuristics' main goal is to modify and to optimize multiple candidate solutions, maintaining the search focused in the whole space. This type of meta-heuristic is therefore exploration oriented. Some examples of this type are \textit{Particle Swarm}, \textit{Evolutionary Algorithms}, and \textit{Genetic Algorithms}~\cite{Talbi2009}.\\
+Population-based meta-heuristics main goal is to modify and to optimize multiple candidate solutions, maintaining the search focused in the whole space. This type of meta-heuristic is therefore exploration oriented. Some examples of this type are \textit{Particle Swarm}, \textit{Evolutionary Algorithms}, and \textit{Genetic Algorithms}~\cite{Talbi2009}.\\
 
 
 \subsection{ITC 2007 Examination timetabling problem: some approaches}
 \label{subsection:ApprITC2007}
 
-In this section, the five ITC 2007 - Examination timetabling track - finalists' approaches are described. This timetabling problem comprises 12 instances of different degree of complexity. Through the available website, competitors could submit their solutions for the given benchmark instances. Submitted solutions were evaluated as follows. First, it is checked if the solution is feasible and a so-called distance to the feasibility is computed. If it is feasible, the solution is further evaluated based on the fitness function, which measures the soft constraints total penalty. Then, competitors' solutions are ranked based on the distance to feasibility and solution's fitness value. The competitor's method achieving the lower distance to feasibility value is the winner. In the case of a tie, the competitor's solution with the lowest fitness value wins. A solution is considered feasible if the value of distance to feasibility is zero. The set of hard constraints is the following:
+In this section, the five ITC 2007 - Examination timetabling track - finalists approaches are described. This timetabling problem comprises 12 instances of different degree of complexity. Through the available website, competitors could submit their solutions for the given benchmark instances. Submitted solutions were evaluated as follows. First, it is checked if the solution is feasible and a so-called distance to the feasibility is computed. If it is feasible, the solution is further evaluated based on the fitness function, which measures the soft constraints total penalty. Then, competitors' solutions are ranked based on the distance to feasibility and solution's fitness value. The method achieving the lower distance to feasibility value is the winner. In the case of a tie, the competitor's solution with the lowest fitness value wins. A solution is considered feasible if the value of distance to feasibility is zero. The set of hard constraints is the following:
 \begin{itemize}
 	\item no student must be elected to be present in more than one exam at the same time;
 	\item the number of students in a class must not exceed the room's capacity;
@@ -92,7 +92,7 @@ To get a detailed explanation on how to compute the values of fitness and distan
 
 %The finalists are ranked based their rankings on the instances. For full details on the rankings system, please consult~\cite{BarryMcCollum2008}.\\
 
-Next we review the ITC 2007's five winners approaches. The winners list of the ITC 2007 competition is as follows:
+We now review the ITC 2007's five winners approaches. The winners list of the ITC 2007 competition is as follows:
 \begin{itemize}
 	\item 1st Place - Tom\'{a}\v{s} M\"{u}ller
 	\item 2nd Place - Christos Gogos
@@ -103,11 +103,11 @@ Next we review the ITC 2007's five winners approaches. The winners list of the I
 
 We now briefly describe these approaches.
 
-Tom\'{a}\v{s} M\"{u}ller's approach~\cite{Mueller2009} was actually used to solve all three problems established by the ITC 2007 competition. He was able to win two of them and to be finalist on the third. For solving the problems, he opted for an hybrid approach, organized in a two-phase algorithm. In the first phase, Tom\'{a}\v{s} used the Iterative Forward Search (IFS) algorithm~\cite{Mueller2005} to obtain feasible solutions and Conflict-based Statistics~\cite{Mueller2004} to prevent IFS from looping. The second phase consists in using multiple optimization algorithms. These algorithms are applied using this order: \gls{hc} \cite{Russell2010}, \gls{gd} \cite{Dueck1993}, and optionally \gls{sa}~\cite{Kirkpatrick1983}.\\
+Tom\'{a}\v{s} M\"{u}ller's approach~\cite{Mueller2009} was actually used to solve all three problems established by the ITC 2007 competition. He was able to win two of them and to be finalist on the third. For solving the problems, he opted for an hybrid approach, organized in a two-phase algorithm. In the first phase, Tom\'{a}\v{s} used the Iterative Forward Search (IFS) algorithm~\cite{Mueller2005} to obtain feasible solutions and Conflict-based Statistics~\cite{Mueller2004} to prevent IFS from looping. The second phase consists in using multiple optimization algorithms. These algorithms are applied in this order: \gls{hc} \cite{Russell2010}, \gls{gd} \cite{Dueck1993}, and optionally \gls{sa}~\cite{Kirkpatrick1983}.\\
 
 	%--\gls{hc} is used to optimize the first phase solution, resulting on a solution stuck at a local optimum. To leave local optimum area, \gls{gd} is used in order to try and result in a better solution. For last, \gls{sa} is used in a loop, keeping the temperature limit unchanged. After not getting a better solution for a limited time, the temperature is reheated (temperature limit gets higher) and \gls{hc} phase is used again forming a loop in these 3 optimization algorithms.\\
 
-Gogos was able to reach second place in Examination Timetabling track, right after M\"{u}ller. Gogos' approach~\cite{Gogos2012}, like M\"{u}ller's, is a two-phase approach but with a pre-processing stage. The first phase starts by the application of a Pre-processing stage, in which the hidden dependencies between exams are discovered in order to speed up the optimization phase. After the pre-processing stage, a construction stage takes place, using a meta-heuristic called \textit{\gls{grasp}}. In the second phase, optimization methods are applied in this order: \gls{hc}, \gls{sa}, \gls{ip} (the Branch and Bound procedure), finishing with the so-called Shaking Stage. Shaking Stage \textit{shakes} the current solution creating an equally good solution that is given to the \gls{hc}, creating a loop on the used optimization methods.\\
+Gogos was able to reach second place in Examination Timetabling track, right after M\"{u}ller. Gogos' approach~\cite{Gogos2012}, like M\"{u}ller's, is a two-phase approach but with a pre-processing stage. The first phase starts by the application of a pre-processing stage, in which the hidden dependencies between exams are discovered in order to speed up the optimization phase. After the pre-processing stage, a construction stage takes place, using a meta-heuristic called \textit{\gls{grasp}}. In the second phase, optimization methods are applied in this order: \gls{hc}, \gls{sa}, \gls{ip} (the Branch and Bound procedure), finishing with the so-called Shaking Stage, which is only used on certain conditions. Shaking Stage \textit{shakes} the current solution creating an equally good solution, which is given to the \gls{sa}. The objective of this stage to make \gls{sa} restart with more promising solutions and generate better results.\\
 
 Mitsunori Atsuta, Koji Nonobe and Toshihide Ibaraki ended up in third place on the Examination Timetabling track and won third and second place on the other tracks as well, with the same approach for all of them. The approach~\cite{Atsuta2007} consists on applying a constraint satisfaction problem solver adopting an hybridization of \gls{ts} and Iterated Local Search.\\
 

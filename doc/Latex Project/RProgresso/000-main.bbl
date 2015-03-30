@@ -38,7 +38,7 @@ B.~McCollum, ``Evaluation function.''
 
 \bibitem{Mueller2009}
 T.~M{\"{u}}ller, ``{ITC2007} solver description: A hybrid approach,'' {\em
-  Annals {OR}}, vol.~172, no.~1, pp.~429--446, 2009.
+  Annals of Operations Research}, vol.~172, no.~1, pp.~429--446, 2009.
 
 \bibitem{Mueller2005}
 T.~M{\"{u}}ller, {\em Constraint-Based Timetabling}.
@@ -48,7 +48,7 @@ T.~M{\"{u}}ller, {\em Constraint-Based Timetabling}.
 \bibitem{Mueller2004}
 T.~M{\"{u}}ller, R.~Barták, and H.~Rudová, {\em Conflict-Based Statistics}.
 \newblock PhD thesis, Faculty of Mathematics and Physics, Charles University
-  Malostransk´e n´am. 2/25, Prague, Czech Republic, 2004.
+  Malostranské nám. 2/25, Prague, Czech Republic, 2004.
 
 \bibitem{Russell2010}
 S.~Russell and P.~Norvig, {\em Artificial Intelligence - {A} Modern Approach
@@ -66,15 +66,13 @@ S.~Kirkpatrick, D.~Gelatt, and M.~Vecchi, ``Optimization by simmulated
 \bibitem{Gogos2012}
 C.~Gogos, P.~Alefragis, and E.~Housos, ``An improved multi-staged algorithmic
   process for the solution of the examination timetabling problem,'' {\em
-  Annals {OR}}, vol.~194, no.~1, pp.~203--221, 2012.
+  Annals Operations Research}, vol.~194, no.~1, pp.~203--221, 2012.
 
 \bibitem{Atsuta2007}
 M.~Atsuta, K.~Nonobe, and T.~Ibaraki, {\em ITC-2007 Track2: An Approach using
   General CSP Solver}.
 \newblock PhD thesis, Kwansei-Gakuin University, School of Science and
-  Technology, 2-1 Gakuen, Sanda, Japan 669-1337 {ady67525,
-  ibaraki}@kwansei.ac.jp Hosei University, Faculty of Engineering \& Design
-  2-17-1 Fujimi, Chiyoda-ku, Tokyo, Japan 102-8160 nonobe@hosei.ac.jp, 2007.
+  Technology, Tokyo, Japan, 2007.
 
 \bibitem{Smet2007}
 G.~Smet, ``Drools-solver.''
@@ -82,7 +80,7 @@ G.~Smet, ``Drools-solver.''
   2007.
 
 \bibitem{Drools}
-J.~Drools, ``Drools planner user guide.''
+T.~J. Drools, ``Drools planner user guide.''
   \url{http://docs.jboss.org/drools/release/5.4.0.Final/drools-planner-docs/html_single/}.
 
 \bibitem{Pillay2007}

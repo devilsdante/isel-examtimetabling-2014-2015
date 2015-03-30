@@ -1,7 +1,5 @@
 \contentsline {chapter}{List of Figures}{v}
-\contentsline {chapter}{List of Tables}{vii}
-\contentsline {chapter}{List of Code Listings}{ix}
-\contentsline {chapter}{List of Acronyms}{ix}
+\contentsline {chapter}{List of Acronyms}{v}
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \contentsline {section}{\numberline {1.1}Educational Timetabling Problems}{1}
 \contentsline {section}{\numberline {1.2}Objectives}{2}
@@ -18,5 +16,5 @@
 \contentsline {subsection}{\numberline {2.2.3}Meta-heuristics}{8}
 \contentsline {subsubsection}{Single-solution meta-heuristics}{8}
 \contentsline {subsubsection}{Population-based meta-heuristics}{8}
-\contentsline {subsection}{\numberline {2.2.4}ITC 2007 Examination timetabling problem: some approaches}{9}
+\contentsline {subsection}{\numberline {2.2.4}ITC 2007 Examination timetabling problem: some approaches}{8}
 \contentsline {chapter}{References}{11}

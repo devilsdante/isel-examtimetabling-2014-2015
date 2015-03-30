@@ -63,7 +63,7 @@
   Title                    = {A Discrete Binary Version of the Electromagnetism-Like Heuristic for
  Solving Traveling Salesman Problem},
   Author                   = {Nikbakhsh Javadian and
- Mohsen Gol Alikhani and
+ Mohsen Alikhani and
  Reza Tavakkoli{-}Moghaddam},
   Booktitle                = {Advanced Intelligent Computing Theories and Applications. With Aspects
  of Artificial Intelligence, 4th International Conference on Intelligent
@@ -160,7 +160,7 @@ Hosei University, Faculty of Engineering \& Design 2-17-1 Fujimi, Chiyoda-ku, To
 
 @InProceedings{Burke2008,
   Title                    = {A late acceptance strategy in hill-climbing for examination timetabling problems},
-  Author                   = {Edmund K. Burke and Yuri Bykov},
+  Author                   = {Edmund Burke and Yuri Bykov},
   Booktitle                = {In Proceedings of the conference on the Practice and Theory of Automated Timetabling(PATAT},
   Year                     = {2008}
 }
@@ -168,9 +168,9 @@ Hosei University, Faculty of Engineering \& Design 2-17-1 Fujimi, Chiyoda-ku, To
 @Article{Burke2004,
   Title                    = {Solving Examination Timetabling Problems through Adaption of Heuristic
  Orderings},
-  Author                   = {Edmund K. Burke and
- James P. Newall},
-  Journal                  = {Annals {OR}},
+  Author                   = {Edmund Burke and
+ James Newall},
+  Journal                  = {Annals of Operations Research},
   Year                     = {2004},
   Number                   = {1-4},
   Pages                    = {107--134},
@@ -185,10 +185,10 @@ Hosei University, Faculty of Engineering \& Design 2-17-1 Fujimi, Chiyoda-ku, To
 
 @Article{Burke2014,
   Title                    = {Adaptive selection of heuristics for improving exam timetables},
-  Author                   = {Edmund K. Burke and
+  Author                   = {Edmund Burke and
  Rong Qu and
  Amr Soghier},
-  Journal                  = {Annals {OR}},
+  Journal                  = {Annals of Operations Research},
   Year                     = {2014},
   Number                   = {1},
   Pages                    = {129--145},
@@ -203,9 +203,9 @@ Hosei University, Faculty of Engineering \& Design 2-17-1 Fujimi, Chiyoda-ku, To
 
 @Article{Carter1996,
   Title                    = {Examination Timetabling: Algorithmic Strategies and Applications},
-  Author                   = {Michael W. Carter and
+  Author                   = {Michael Carter and
 Gilbert Laporte and
-Sau Yan Lee},
+Sau Lee},
   Journal                  = {The Journal of the Operational Research Society},
   Year                     = {1996},
 
@@ -217,8 +217,8 @@ Sau Yan Lee},
  and a new problem from practice},
   Author                   = {Peter Demeester and
  Burak Bilgin and
- Patrick De Causmaecker and
- Greet Vanden Berghe},
+ Patrick Causmaecker and
+ Greet Berghe},
   Journal                  = {J. Scheduling},
   Year                     = {2012},
   Number                   = {1},
@@ -232,11 +232,13 @@ Sau Yan Lee},
   Url                      = {http://dx.doi.org/10.1007/s10951-011-0258-5}
 }
 
-@Other{Drools,
+@Misc{Drools,
   Title                    = {Drools Planner User Guide},
+
   Author                   = {The JBoss Drools},
-  Timestamp                = {2015.03.07},
-  Url                      = {http://docs.jboss.org/drools/release/5.4.0.Final/drools-planner-docs/html_single/}
+  HowPublished             = {\url{http://docs.jboss.org/drools/release/5.4.0.Final/drools-planner-docs/html_single/}},
+
+  Timestamp                = {2015.03.07}
 }
 
 @Article{Dueck1993,
@@ -254,7 +256,7 @@ Sau Yan Lee},
   Author                   = {Christos Gogos and
  Panayiotis Alefragis and
  Efthymios Housos},
-  Journal                  = {Annals {OR}},
+  Journal                  = {Annals of Operations Research},
   Year                     = {2012},
   Number                   = {1},
   Pages                    = {203--221},
@@ -303,8 +305,8 @@ Barry McCollum},
 @Article{Kirkpatrick1983,
   Title                    = {Optimization by Simmulated Annealing},
   Author                   = {Scott Kirkpatrick and
- D. Gelatt Jr. and
- Mario P. Vecchi},
+ D. Gelatt and
+ Mario Vecchi},
   Journal                  = {Science},
   Year                     = {1983},
   Number                   = {4598},
@@ -320,7 +322,7 @@ Barry McCollum},
   Title                    = {A Shuffled Complex Evolution Based Algorithm for Examination Timetabling: Benchmarks and a New Problem Focusing Two Epochs},
   Author                   = {Nuno Leite and
  Fernando Melíıcio and
- Agostinho C. Rosa},
+ Agostinho Rosa},
   Journal                  = {Proceedings of the 6th International Joint Conference on Computational Intelligence (IJCCI-ECTA 2014)},
   Year                     = {2014},
 
@@ -341,7 +343,7 @@ Volume 30, Issue 1 , pp 167-190},
 @Article{Mueller2009,
   Title                    = {{ITC2007} Solver Description: A Hybrid Approach},
   Author                   = {Tom{\'{a}}s M{\"{u}}ller},
-  Journal                  = {Annals {OR}},
+  Journal                  = {Annals of Operations Research},
   Year                     = {2009},
   Number                   = {1},
   Pages                    = {429--446},
@@ -369,35 +371,25 @@ Faculty of Mathematics and Physics},
   Author                   = {Tom{\'{a}}s M{\"{u}}ller and
 Roman Barták and
 Hana Rudová},
-  School                   = {Faculty of Mathematics and Physics, Charles University Malostransk´e n´am. 2/25, Prague, Czech Republic},
+  School                   = {Faculty of Mathematics and Physics, Charles University Malostranské nám. 2/25, Prague, Czech Republic},
   Year                     = {2004},
 
   Timestamp                = {2015.03.03}
 }
 
-@Article{McCollum2012,
-  Title                    = {A new model for automated examination timetabling},
-  Author                   = {Barry McCollum and
- Paul McMullan and
- Andrew J. Parkes and
- Edmund K. Burke and
- Rong Qu},
-  Journal                  = {Annals {OR}},
-  Year                     = {2012},
-  Number                   = {1},
-  Pages                    = {291--315},
-  Volume                   = {194},
+@Misc{McCollum2008,
+  Title                    = {Evaluation Function},
 
-  Bibsource                = {dblp computer science bibliography, http://dblp.org},
-  Biburl                   = {http://dblp.uni-trier.de/rec/bib/journals/anor/McCollumMPBQ12},
-  Doi                      = {10.1007/s10479-011-0997-x},
-  Timestamp                = {Wed, 03 Mar 4449086 11:46:24 +},
-  Url                      = {http://dx.doi.org/10.1007/s10479-011-0997-x}
+  Author                   = {Barry McCollum},
+  HowPublished             = {\url{http://www.cs.qub.ac.uk/itc2007/examtrack/exam_track_index_files/examevaluation.htm}},
+  Year                     = {2008},
+
+  Timestamp                = {2015.03.03}
 }
 
 @InProceedings{McCollum2009,
   Title                    = {An Extended Great Deluge Approach to the Examination Timetabling Problem},
-  Author                   = {B. McCollum and P. J. McMullan and A. J. Parkes and E. K. Burke and S. Abdullah},
+  Author                   = {B. McCollum and P. McMullan and A. Parkes and E. Burke and S. Abdullah},
   Booktitle                = {Proceedings of the 4th Multidisciplinary International Scheduling Conference: Theory and Applications (MISTA 2009), 10-12 Aug 2009, Dublin, Ireland},
   Year                     = {2009},
   Editor                   = {J. Blazewicz and M. Drozdowski and G. Kendall and B. McCollum},
@@ -410,45 +402,61 @@ Hana Rudová},
   Webpdf                   = {2009-424-434-P.pdf}
 }
 
-@Other{BarryMcCollum2008,
+@Article{McCollum2012,
+  Title                    = {A new model for automated examination timetabling},
+  Author                   = {Barry McCollum and
+ Paul McMullan and
+ Andrew Parkes and
+ Edmund Burke and
+ Rong Qu},
+  Journal                  = {Annals of Operations Research},
+  Year                     = {2012},
+  Number                   = {1},
+  Pages                    = {291--315},
+  Volume                   = {194},
+
+  Bibsource                = {dblp computer science bibliography, http://dblp.org},
+  Biburl                   = {http://dblp.uni-trier.de/rec/bib/journals/anor/McCollumMPBQ12},
+  Doi                      = {10.1007/s10479-011-0997-x},
+  Timestamp                = {Wed, 03 Mar 4449086 11:46:24 +},
+  Url                      = {http://dx.doi.org/10.1007/s10479-011-0997-x}
+}
+
+@Misc{BarryMcCollum2008,
   Title                    = {Setting the Research Agenda in Automated Timetabling: The Second International Timetabling Competition},
+
   Author                   = {Barry McCollum and
  Andrea Schaerf and 
  Ben Paechter and 
  Paul McMullan and
  Rhyd Lewis and
- Andrew J. Parkes and
- Luca Di Gaspero and
+ Andrew Parkes and
+ Luca Gaspero and
  Rong Qu and
- Edmund K. Burke},
-  Url                      = {http://www.cs.qub.ac.uk/itc2007/winner/ITC2007_Background_Techreportv2.pdf},
-  Urldate                  = {2015-03-03},
-  Year                     = {2008}
+ Edmund Burke},
+  HowPublished             = {\url{http://www.cs.qub.ac.uk/itc2007/winner/ITC2007_Background_Techreportv2.pdf}},
+  Year                     = {2008},
+
+  Urldate                  = {2015-03-03}
 }
 
-@Other{McCollum2008,
-  Title                    = {Evaluation Function},
-  Author                   = {Dr Barry McCollum},
-  Timestamp                = {2015.03.03},
-  Url                      = {http://www.cs.qub.ac.uk/itc2007/examtrack/exam_track_index_files/examevaluation.htm},
-  Year                     = {2008}
-}
-
-@Other{Pillay2007,
+@Misc{Pillay2007,
   Title                    = {A Developmental Approach to the Examination Timetabling Problem},
+
   Author                   = {Nelishia Pillay},
-  Timestamp                = {2015.03.08},
-  Url                      = {http://www.cs.qub.ac.uk/itc2007/winner/bestexamsolutions/pillay.pdf},
-  Year                     = {2007}
+  HowPublished             = {\url{http://www.cs.qub.ac.uk/itc2007/winner/bestexamsolutions/pillay.pdf}},
+  Year                     = {2007},
+
+  Timestamp                = {2015.03.08}
 }
 
 @Article{Qu2009,
   Title                    = {A Survey of Search Methodologies and Automated System Development for Examination Timetabling},
   Author                   = {Rong Qu and
- Edmund K. Burke and
+ Edmund Burke and
  Barry McCollum and
- Liam T. G. Merlot and
- S. Y. Lee},
+ Liam Merlot and
+ S. Lee},
   Journal                  = {J. Scheduling},
   Year                     = {2009},
   Number                   = {1},
@@ -465,9 +473,9 @@ Hana Rudová},
 @Article{Rahman2014a,
   Title                    = {Adaptive linear combination of heuristic orderings in constructing
  examination timetables},
-  Author                   = {Syariza Abdul Rahman and
+  Author                   = {Syariza Rahman and
  Andrzej Bargiela and
- Edmund K. Burke and
+ Edmund Burke and
  Ender {\"{O}}zcan and
  Barry McCollum and
  Paul McMullan},
@@ -487,12 +495,12 @@ Hana Rudová},
 @Article{Rahman2014,
   Title                    = {A constructive approach to examination timetabling based on adaptive
  decomposition and ordering},
-  Author                   = {Syariza Abdul Rahman and
- Edmund K. Burke and
+  Author                   = {Syariza Rahman and
+ Edmund Burke and
  Andrzej Bargiela and
  Barry McCollum and
  Ender {\"{O}}zcan},
-  Journal                  = {Annals {OR}},
+  Journal                  = {Annals of Operations Research},
   Year                     = {2014},
   Number                   = {1},
   Pages                    = {3--21},
@@ -522,7 +530,7 @@ Hana Rudová},
 @Article{Sabar2012a,
   Title                    = {A honey-bee mating optimization algorithm for educational timetabling
  problems},
-  Author                   = {Nasser R. Sabar and
+  Author                   = {Nasser Sabar and
  Masri Ayob and
  Graham Kendall and
  Rong Qu},
@@ -542,7 +550,7 @@ Hana Rudová},
 @Article{Sabar2012,
   Title                    = {A graph coloring constructive hyper-heuristic for examination timetabling
  problems},
-  Author                   = {Nasser R. Sabar and
+  Author                   = {Nasser Sabar and
  Masri Ayob and
  Rong Qu and
  Graham Kendall},
@@ -578,7 +586,7 @@ Hana Rudová},
 @Misc{Smet2007,
   Title                    = {Drools-solver},
 
-  Author                   = {Geoffrey De Smet},
+  Author                   = {Geoffrey Smet},
   HowPublished             = {\url{http://www.cs.qub.ac.uk/itc2007/winner/bestexamsolutions/Geoffrey_De_smet_examination_description.pdf}},
   Year                     = {2007},
 
@@ -614,7 +622,7 @@ Hana Rudová},
 
 @Article{Wilson2003,
   Title                    = {Gantt charts: {A} Centenary Appreciation},
-  Author                   = {James M. Wilson},
+  Author                   = {James Wilson},
   Journal                  = {European Journal of Operational Research},
   Year                     = {2003},
   Number                   = {2},
