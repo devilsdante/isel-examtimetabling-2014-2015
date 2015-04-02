@@ -58,5 +58,10 @@ namespace DAL
             else
                 return null;
         }
+
+        public int EntryCount()
+        {
+            return map.Count;
+        }
     }
 }

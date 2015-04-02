@@ -10,28 +10,28 @@ namespace Business
 {
     public class RoomHardConstraints
     {
-        IRepository<RoomHardConstraint> _roomhardconstraints;
+        IRepository<RoomHardConstraint> room_hard_constraints_repo;
 
         public RoomHardConstraints()
         {
-            _roomhardconstraints = Repository<RoomHardConstraint>.Instance;
+            room_hard_constraints_repo = Repository<RoomHardConstraint>.Instance;
         }
 
         public void Insert(RoomHardConstraint exam)
         {
-            _roomhardconstraints.Insert(exam);
+            room_hard_constraints_repo.Insert(exam);
         }
         public void Delete(RoomHardConstraint exam)
         {
-            _roomhardconstraints.Delete(exam);
+            room_hard_constraints_repo.Delete(exam);
         }
         public IEnumerable<RoomHardConstraint> GetAll()
         {
-            return _roomhardconstraints.GetAll();
+            return room_hard_constraints_repo.GetAll();
         }
         public RoomHardConstraint GetById(int id)
         {
-            return _roomhardconstraints.GetById(id);
+            return room_hard_constraints_repo.GetById(id);
         }
     }
 }

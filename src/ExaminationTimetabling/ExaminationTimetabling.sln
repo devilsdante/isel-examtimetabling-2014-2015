@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{A073288D-F301-4D77-A8FC-9A3EBD474124}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heuristics", "Heuristics\Heuristics.csproj", "{4A2F573C-1232-42CA-AD79-28DA3256FAC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{D6D663C3-EEAE-471B-AC96-F5C1B18DA2A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{A073288D-F301-4D77-A8FC-9A3EBD474124}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A073288D-F301-4D77-A8FC-9A3EBD474124}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A073288D-F301-4D77-A8FC-9A3EBD474124}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A2F573C-1232-42CA-AD79-28DA3256FAC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A2F573C-1232-42CA-AD79-28DA3256FAC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A2F573C-1232-42CA-AD79-28DA3256FAC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A2F573C-1232-42CA-AD79-28DA3256FAC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6D663C3-EEAE-471B-AC96-F5C1B18DA2A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6D663C3-EEAE-471B-AC96-F5C1B18DA2A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6D663C3-EEAE-471B-AC96-F5C1B18DA2A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6D663C3-EEAE-471B-AC96-F5C1B18DA2A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

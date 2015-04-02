@@ -5,3 +5,10 @@ d:\miguel\documentos\visual studio 2013\Projects\ExaminationTimetabling\Business
 d:\miguel\documentos\visual studio 2013\Projects\ExaminationTimetabling\Business\bin\Debug\DAL.pdb
 d:\miguel\documentos\visual studio 2013\Projects\ExaminationTimetabling\Business\obj\Debug\Business.dll
 d:\miguel\documentos\visual studio 2013\Projects\ExaminationTimetabling\Business\obj\Debug\Business.pdb
+D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimetabling\Business\obj\Debug\Business.csprojResolveAssemblyReference.cache
+D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimetabling\Business\obj\Debug\Business.dll
+D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimetabling\Business\obj\Debug\Business.pdb
+D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimetabling\Business\bin\Debug\Business.dll
+D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimetabling\Business\bin\Debug\Business.pdb
+D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimetabling\Business\bin\Debug\DAL.dll
+D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimetabling\Business\bin\Debug\DAL.pdb

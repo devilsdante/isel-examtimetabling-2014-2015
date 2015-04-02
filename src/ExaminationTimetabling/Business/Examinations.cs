@@ -10,29 +10,44 @@ namespace Business
 {
     public class Examinations
     {
-        IRepository<Examination> _examinations;
+        IRepository<Examination> examinations_repo;
 
         public Examinations()
         {
-            _examinations = Repository<Examination>.Instance;
+            examinations_repo = Repository<Examination>.Instance;
         }
 
         public void Insert(Examination exam)
         {
-            _examinations.Insert(exam);
+            examinations_repo.Insert(exam);
         }
         public void Delete(Examination exam)
         {
-            _examinations.Delete(exam);
+            examinations_repo.Delete(exam);
         }
         public IEnumerable<Examination> GetAll()
         {
-            return _examinations.GetAll();
+            return examinations_repo.GetAll();
         }
         public Examination GetById(int id)
         {
-            return _examinations.GetById(id);
+            return examinations_repo.GetById(id);
         }
 
+        public int EntryCount()
+        {
+            return examinations_repo.EntryCount();
+        }
+
+        public bool Conflict(int x, int y)
+        {
+            Examination ex1 = GetById(x);
+            Examination ex2 = GetById(y);
+
+            foreach (int student in ex1.students)
+                if (ex2.students.Contains(student))
+                    return true;
+            return false;
+        }
     }
 }

@@ -10,28 +10,28 @@ namespace Business
 {
     public class PeriodHardConstraints
     {
-        IRepository<PeriodHardConstraint> _periodhardconstraints;
+        IRepository<PeriodHardConstraint> period_hard_constraints_repo;
 
         public PeriodHardConstraints()
         {
-            _periodhardconstraints = Repository<PeriodHardConstraint>.Instance;
+            period_hard_constraints_repo = Repository<PeriodHardConstraint>.Instance;
         }
 
         public void Insert(PeriodHardConstraint exam)
         {
-            _periodhardconstraints.Insert(exam);
+            period_hard_constraints_repo.Insert(exam);
         }
         public void Delete(PeriodHardConstraint exam)
         {
-            _periodhardconstraints.Delete(exam);
+            period_hard_constraints_repo.Delete(exam);
         }
         public IEnumerable<PeriodHardConstraint> GetAll()
         {
-            return _periodhardconstraints.GetAll();
+            return period_hard_constraints_repo.GetAll();
         }
         public PeriodHardConstraint GetById(int id)
         {
-            return _periodhardconstraints.GetById(id);
+            return period_hard_constraints_repo.GetById(id);
         }
     }
 }

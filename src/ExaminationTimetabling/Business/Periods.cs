@@ -10,29 +10,29 @@ namespace Business
 {
     public class Periods
     {
-        IRepository<Period> _periods;
+        IRepository<Period> periods_repo;
 
         public Periods()
         {
-            _periods = Repository<Period>.Instance;
+            periods_repo = Repository<Period>.Instance;
         }
 
 
         public void Insert(Period exam)
         {
-            _periods.Insert(exam);
+            periods_repo.Insert(exam);
         }
         public void Delete(Period exam)
         {
-            _periods.Delete(exam);
+            periods_repo.Delete(exam);
         }
         public IEnumerable<Period> GetAll()
         {
-            return _periods.GetAll();
+            return periods_repo.GetAll();
         }
         public Period GetById(int id)
         {
-            return _periods.GetById(id);
+            return periods_repo.GetById(id);
         }
     }
 }

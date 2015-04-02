@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace DAL.Models
 {
-    public static class InstitutionalModelWeightings
+    public class InstitutionalModelWeightings
     {
-        static int two_in_a_row;
-        static int two_in_a_day;
-        static int period_spread;
-        static int front_load;
-        static int non_mixed_durations;
+        public int two_in_a_row;
+        public int two_in_a_day;
+        public int period_spread;
+        public int front_load;
+        public int non_mixed_durations;
     }
 }

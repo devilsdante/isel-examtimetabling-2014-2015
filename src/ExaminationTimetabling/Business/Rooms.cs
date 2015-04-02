@@ -10,28 +10,28 @@ namespace Business
 {
     public class Rooms
     {
-        IRepository<Room> _rooms;
+        IRepository<Room> rooms_repo;
 
         public Rooms()
         {
-            _rooms = Repository<Room>.Instance;
+            rooms_repo = Repository<Room>.Instance;
         }
 
         public void Insert(Room exam)
         {
-            _rooms.Insert(exam);
+            rooms_repo.Insert(exam);
         }
         public void Delete(Room exam)
         {
-            _rooms.Delete(exam);
+            rooms_repo.Delete(exam);
         }
         public IEnumerable<Room> GetAll()
         {
-            return _rooms.GetAll();
+            return rooms_repo.GetAll();
         }
         public Room GetById(int id)
         {
-            return _rooms.GetById(id);
+            return rooms_repo.GetById(id);
         }
     }
 }

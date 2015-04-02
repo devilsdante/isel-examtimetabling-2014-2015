@@ -12,5 +12,6 @@ namespace DAL
         void Delete(T entity);
         IEnumerable<T> GetAll();
         T GetById(int id);
+        int EntryCount();
     }
 }
