@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Business;
 using DAL;
+using DAL.Models;
 using Heuristics;
 
 namespace Tests
@@ -15,6 +16,34 @@ namespace Tests
         {
             //testing
             Examinations examinations = new Examinations();
+            PeriodHardConstraints period_hard_constraints = new PeriodHardConstraints();
+            GraphColoring gc = new GraphColoring(examinations, period_hard_constraints, null, null, null, null);
+
+            AddDataExaminations(examinations);
+            AddDataPeriodHardConstraints(period_hard_constraints);
+
+            PrintExaminationCoincidences(period_hard_constraints);
+            gc.Work();
+            PrintExaminationCoincidences(period_hard_constraints);
+            PrintConflictMatrix(gc);
+            Console.ReadKey();
+        }
+
+        private static void AddDataPeriodHardConstraints(PeriodHardConstraints period_hard_constraints)
+        {
+            PeriodHardConstraint phc = new PeriodHardConstraint(1, 2, PeriodHardConstraint.types.EXCLUSION, 3);
+            PeriodHardConstraint phc1 = new PeriodHardConstraint(2, 3, PeriodHardConstraint.types.EXCLUSION, 4);
+            period_hard_constraints.Insert(phc);
+            period_hard_constraints.Insert(phc1);
+
+            phc = new PeriodHardConstraint(3, 4, PeriodHardConstraint.types.EXAM_COINCIDENCE, 5);
+            phc1 = new PeriodHardConstraint(4, 4, PeriodHardConstraint.types.EXAM_COINCIDENCE, 2); //shall be deleted
+            period_hard_constraints.Insert(phc);
+            period_hard_constraints.Insert(phc1);
+        }
+
+        public static void AddDataExaminations(Examinations examinations)
+        {
             for (int i = 0; i < 8; i++)
             {
                 var ex1 = new Examination(i, 200);
@@ -72,11 +101,10 @@ namespace Tests
             list = new LinkedList<int>();
             list.AddLast(2);
             a1.students = list;
+        }
 
-            GraphColoring gc = new GraphColoring(examinations, null, null, null, null, null);
-
-            gc.Work();
-
+        public static void PrintConflictMatrix(GraphColoring gc)
+        {
             for (int x = 0; x < gc.conflict_matrix.GetLength(0); x += 1)
             {
                 for (int y = 0; y < gc.conflict_matrix.GetLength(1); y += 1)
@@ -85,8 +113,18 @@ namespace Tests
                 }
                 Console.WriteLine();
             }
+            foreach (var conf in gc.conflicts)
+            {
+                Console.Write(conf+" ");
+            }
+        }
 
-            Console.ReadKey();
+        private static void PrintExaminationCoincidences(PeriodHardConstraints period_hard_constraints)
+        {
+            foreach (PeriodHardConstraint coincidence in period_hard_constraints.GetByType(PeriodHardConstraint.types.EXAM_COINCIDENCE))
+            {
+                Console.WriteLine(coincidence.ex1 + " " + coincidence.type.ToString() + " " + coincidence.ex2);
+            }
         }
     }
 }

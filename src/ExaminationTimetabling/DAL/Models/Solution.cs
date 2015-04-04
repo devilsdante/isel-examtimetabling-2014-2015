@@ -9,12 +9,12 @@ namespace DAL.Models
     public class Solution : IEntity
     {
         public int id { get; set; }
-        public IDictionary<Period, ExaminationRoomRel> periods_map { get; set; }
+        public IDictionary<Period, List<ExaminationRoomRel>> periods_map { get; set; }
 
         public Solution(int id)
         {
             this.id = id;
-            periods_map = new Dictionary<Period, ExaminationRoomRel>();
+            periods_map = new Dictionary<Period, List<ExaminationRoomRel>>();
         }
     }
 

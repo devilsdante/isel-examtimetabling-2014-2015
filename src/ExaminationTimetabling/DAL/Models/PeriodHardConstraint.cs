@@ -9,17 +9,17 @@ namespace DAL.Models
     public class PeriodHardConstraint : IEntity
     {
         public int id { get; set; }
-        public int p1 { get; set; }
+        public int ex1 { get; set; }
         public enum types { AFTER, EXAM_COINCIDENCE, EXCLUSION };
-        public int type { get; set; }
-        public int p2 { get; set; }
+        public types type { get; set; }
+        public int ex2 { get; set; }
 
-        public PeriodHardConstraint(int id, int p1, int type, int p2)
+        public PeriodHardConstraint(int id, int ex1, types type, int ex2)
         {
             this.id = id;
-            this.p1 = p1;
+            this.ex1 = ex1;
             this.type = type;
-            this.p2 = p2;
+            this.ex2 = ex2;
         }
     }
 }
