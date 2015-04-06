@@ -21,6 +21,9 @@ namespace Heuristics
 
         public bool[,] conflict_matrix;
         public int[] conflicts;
+        public Solution solution;
+        public List<Examination> unassigned_examinations;
+        public List<Examination> assigned_examinations;
 
         public GraphColoring(Examinations examinations, PeriodHardConstraints period_hard_constraints,
             Periods periods, RoomHardConstraints room_hard_constraints, Rooms rooms, Solutions solutions)
@@ -42,6 +45,8 @@ namespace Heuristics
             PopulateConflictMatrix();
 
             EraseCoincidenceHCWithConflict();
+
+            SolutionInitialization();
 
             PeriodSelection();
 
@@ -94,14 +99,80 @@ namespace Heuristics
                 }
             }
         }
+        private void SolutionInitialization()
+        {
+            solution = new Solution(1); //1 to change TODO
+            foreach (Period period in periods.GetAll())
+            {
+                solution.periods_map.Add(period, new List<ExaminationRoomRel>());
+            }
+        }
         private void PeriodSelection()
         {
+            unassigned_examinations = examinations.GetAll().ToList();
+            assigned_examinations = new List<Examination>();
 
+            while (unassigned_examinations.Any())
+            {
+                List<Period> possible_periods;
+                Examination exam_to_assign = unassigned_examinations.First();
+
+                foreach (Examination exam in unassigned_examinations)
+                {
+                    if (conflicts[exam.id] > conflicts[exam_to_assign.id])
+                    {
+                        exam_to_assign = exam;
+                    }
+                }
+
+                // Most common option
+                if (!period_hard_constraints.GetByTypeWithExamId(PeriodHardConstraint.types.AFTER, exam_to_assign.id).Any()
+                    &&
+                    !period_hard_constraints.GetByTypeWithExamId(PeriodHardConstraint.types.EXAM_COINCIDENCE, exam_to_assign.id).Any())
+                {
+                    possible_periods = periods.GetAllThatFitsDuration(exam_to_assign.id).ToList();
+
+                    if (GetPeriodsWithoutStudentOrExclusiveConflicts(exam_to_assign, possible_periods).Any())
+                    {
+                        //Examination can be assign TODO
+                    }
+                    else
+                    {
+                        //Examination can not be assign TODO
+                    }
+                }
+                // With AFTER and/or EXAM_COINCIDENCE Constraints TODO
+                else
+                {
+                    
+                }
+
+                
+            }
+            
         }
 
         private void RoomSelection()
         {
 
+        }
+
+        private bool HaveConflicts(Examination exam1, Examination exam2)
+        {
+
+            return true;
+        }
+
+        private List<Period> GetPeriodsWithoutStudentOrExclusiveConflicts(Examination exam_to_assign, IEnumerable<Period> periods)
+        {
+            List<Period> to_return = periods.ToList();
+
+            foreach (Period period in periods.Where(period => solution.periods_map[period].Any(exam_room => HaveConflicts(exam_to_assign, exam_room.exam))))
+            {
+                to_return.Remove(period);
+            }
+            
+            return to_return;
         }
     }
 }

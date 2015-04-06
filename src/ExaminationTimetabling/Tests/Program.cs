@@ -51,55 +51,55 @@ namespace Tests
             }
 
             var a1 = examinations.GetById(0);
-            var list = new LinkedList<int>();
-            list.AddLast(1);
-            list.AddLast(2);
-            list.AddLast(3);
-            list.AddLast(4);
+            var list = new List<int>();
+            list.Add(1);
+            list.Add(2);
+            list.Add(3);
+            list.Add(4);
             a1.students = list;
 
             a1 = examinations.GetById(1);
-            list = new LinkedList<int>();
-            list.AddLast(3);
-            list.AddLast(2);
-            list.AddLast(8);
+            list = new List<int>();
+            list.Add(3);
+            list.Add(2);
+            list.Add(8);
             a1.students = list;
 
             a1 = examinations.GetById(2);
-            list = new LinkedList<int>();
-            list.AddLast(1);
-            list.AddLast(8);
-            list.AddLast(10);
+            list = new List<int>();
+            list.Add(1);
+            list.Add(8);
+            list.Add(10);
             a1.students = list;
 
             a1 = examinations.GetById(3);
-            list = new LinkedList<int>();
-            list.AddLast(1);
-            list.AddLast(3);
-            list.AddLast(11);
+            list = new List<int>();
+            list.Add(1);
+            list.Add(3);
+            list.Add(11);
             a1.students = list;
 
             a1 = examinations.GetById(4);
-            list = new LinkedList<int>();
-            list.AddLast(20);
-            list.AddLast(21);
-            list.AddLast(8);
+            list = new List<int>();
+            list.Add(20);
+            list.Add(21);
+            list.Add(8);
             a1.students = list;
 
             a1 = examinations.GetById(5);
-            list = new LinkedList<int>();
-            list.AddLast(22);
+            list = new List<int>();
+            list.Add(22);
             a1.students = list;
 
             a1 = examinations.GetById(6);
-            list = new LinkedList<int>();
-            list.AddLast(23);
-            list.AddLast(1);
+            list = new List<int>();
+            list.Add(23);
+            list.Add(1);
             a1.students = list;
 
             a1 = examinations.GetById(7);
-            list = new LinkedList<int>();
-            list.AddLast(2);
+            list = new List<int>();
+            list.Add(2);
             a1.students = list;
         }
 

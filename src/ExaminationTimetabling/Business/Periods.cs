@@ -34,5 +34,10 @@ namespace Business
         {
             return periods_repo.GetById(id);
         }
+
+        public IEnumerable<Period> GetAllThatFitsDuration(int duration)
+        {
+            return GetAll().Where(p => p.duration >= duration).OrderBy(p => p.duration);
+        }
     }
 }
