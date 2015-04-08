@@ -23,9 +23,9 @@ namespace Tests
             AddDataPeriodHardConstraints(period_hard_constraints);
 
             PrintExaminationCoincidences(period_hard_constraints);
-            gc.Work();
-            PrintExaminationCoincidences(period_hard_constraints);
-            PrintConflictMatrix(gc);
+            //gc.Work();
+            //PrintExaminationCoincidences(period_hard_constraints);
+            //PrintConflictMatrix(gc);
             Console.ReadKey();
         }
 
