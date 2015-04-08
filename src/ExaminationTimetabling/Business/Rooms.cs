@@ -12,9 +12,9 @@ namespace Business
     {
         IRepository<Room> rooms_repo;
 
-        public Rooms()
+        public Rooms(int size)
         {
-            rooms_repo = Repository<Room>.Instance;
+            rooms_repo = Repository<Room>.Instance(size);
         }
 
         public void Insert(Room exam)

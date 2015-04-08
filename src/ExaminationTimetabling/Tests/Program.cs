@@ -15,8 +15,8 @@ namespace Tests
         static void Main()
         {
             //testing
-            Examinations examinations = new Examinations();
-            PeriodHardConstraints period_hard_constraints = new PeriodHardConstraints();
+            Examinations examinations = new Examinations(8);
+            PeriodHardConstraints period_hard_constraints = new PeriodHardConstraints(4);
             GraphColoring gc = new GraphColoring(examinations, period_hard_constraints, null, null, null, null);
 
             AddDataExaminations(examinations);
@@ -31,13 +31,13 @@ namespace Tests
 
         private static void AddDataPeriodHardConstraints(PeriodHardConstraints period_hard_constraints)
         {
-            PeriodHardConstraint phc = new PeriodHardConstraint(1, 2, PeriodHardConstraint.types.EXCLUSION, 3);
-            PeriodHardConstraint phc1 = new PeriodHardConstraint(2, 3, PeriodHardConstraint.types.EXCLUSION, 4);
+            PeriodHardConstraint phc = new PeriodHardConstraint(0, 2, PeriodHardConstraint.types.EXCLUSION, 3);
+            PeriodHardConstraint phc1 = new PeriodHardConstraint(1, 3, PeriodHardConstraint.types.EXCLUSION, 4);
             period_hard_constraints.Insert(phc);
             period_hard_constraints.Insert(phc1);
 
-            phc = new PeriodHardConstraint(3, 4, PeriodHardConstraint.types.EXAM_COINCIDENCE, 5);
-            phc1 = new PeriodHardConstraint(4, 4, PeriodHardConstraint.types.EXAM_COINCIDENCE, 2); //shall be deleted
+            phc = new PeriodHardConstraint(2, 4, PeriodHardConstraint.types.EXAM_COINCIDENCE, 5);
+            phc1 = new PeriodHardConstraint(3, 4, PeriodHardConstraint.types.EXAM_COINCIDENCE, 2); //shall be deleted
             period_hard_constraints.Insert(phc);
             period_hard_constraints.Insert(phc1);
         }

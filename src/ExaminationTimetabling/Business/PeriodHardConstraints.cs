@@ -3,6 +3,7 @@ using DAL.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,9 +13,9 @@ namespace Business
     {
         IRepository<PeriodHardConstraint> period_hard_constraints_repo;
 
-        public PeriodHardConstraints()
+        public PeriodHardConstraints(int size)
         {
-            period_hard_constraints_repo = Repository<PeriodHardConstraint>.Instance;
+            period_hard_constraints_repo = Repository<PeriodHardConstraint>.Instance(size);
         }
 
         public void Insert(PeriodHardConstraint exam)

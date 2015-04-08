@@ -15,53 +15,47 @@ namespace DAL
 
         private static Repository<T> instance;
 
-        public static Repository<T> Instance
+        public static Repository<T> Instance(int size)
         {
-            get
-            {
                 if (instance == null)
                 {
-                    instance = new Repository<T>();
+                    instance = new Repository<T>(size);
                 }
                 return instance;
-            }
         }
 
         /*******************/
 
-        protected IDictionary<int, T> map;
+        protected List<T> list;
 
-        private Repository()
+        private Repository(int size)
         {
-            map = new Dictionary<int, T>();
+            list = new List<T>(size);
         }
 
         public void Insert(T entity)
         {
-            map.Add(entity.id, entity);
+            list.Insert(entity.id, entity);
         }
 
         public void Delete(T entity)
         {
-            map.Remove(entity.id);
+            list.RemoveAt(entity.id);
         }
 
         public IEnumerable<T> GetAll()
         {
-            return map.Values.ToList();
+            return list.ToList();
         }
 
         public T GetById(int id)
         {
-            if (map.ContainsKey(id))
-                return map[id];
-            else
-                return null;
+            return list[id];
         }
 
         public int EntryCount()
         {
-            return map.Count;
+            return list.Count;
         }
     }
 }

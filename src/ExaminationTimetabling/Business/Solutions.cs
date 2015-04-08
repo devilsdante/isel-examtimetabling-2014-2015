@@ -12,9 +12,9 @@ namespace Business
     {
         IRepository<Solution> solutions_repo;
 
-        public Solutions()
+        public Solutions(int size)
         {
-            solutions_repo = Repository<Solution>.Instance;
+            solutions_repo = Repository<Solution>.Instance(size);
         }
 
         public void Insert(Solution solution)

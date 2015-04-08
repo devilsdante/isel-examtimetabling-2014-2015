@@ -12,9 +12,9 @@ namespace Business
     {
         IRepository<Period> periods_repo;
 
-        public Periods()
+        public Periods(int size)
         {
-            periods_repo = Repository<Period>.Instance;
+            periods_repo = Repository<Period>.Instance(size);
         }
 
 

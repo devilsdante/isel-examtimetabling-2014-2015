@@ -12,9 +12,9 @@ namespace Business
     {
         IRepository<RoomHardConstraint> room_hard_constraints_repo;
 
-        public RoomHardConstraints()
+        public RoomHardConstraints(int size)
         {
-            room_hard_constraints_repo = Repository<RoomHardConstraint>.Instance;
+            room_hard_constraints_repo = Repository<RoomHardConstraint>.Instance(size);
         }
 
         public void Insert(RoomHardConstraint exam)
