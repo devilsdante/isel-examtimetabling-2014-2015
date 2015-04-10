@@ -25,8 +25,8 @@ namespace Heuristics
         public List<Examination> unassigned_examinations;
         public List<Examination> assigned_examinations;
 
-        public GraphColoring(Examinations examinations, PeriodHardConstraints period_hard_constraints,
-            Periods periods, RoomHardConstraints room_hard_constraints, Rooms rooms, Solutions solutions)
+        public GraphColoring(Examinations examinations, PeriodHardConstraints period_hard_constraints, Periods periods, RoomHardConstraints room_hard_constraints, 
+            Rooms rooms, Solutions solutions)
         {
             this.examinations = examinations;
             this.period_hard_constraints = period_hard_constraints;
@@ -98,20 +98,53 @@ namespace Heuristics
             }
         }
 
-        private int isFeasiblePeriod(int exam, int period)
+        private int IsFeasiblePeriod(int exam_to_assign, int period)
         {
-            if (periods.GetById(period).duration > examinations.GetById(exam).duration)
-                return -1;
-            for (int j = 0; j < solution.timetable_container.GetLength(1); j++)
+            if (periods.GetById(period).duration > examinations.GetById(exam_to_assign).duration)
             {
-                int room_capacity = rooms.GetById(j).capacity;
-                for (int k = 0; k < solution.timetable_container.GetLength(2); k++)
+                return -1; //exam_to_assign doesn't fit the period
+            }
+
+            // TODO COINCIDENCE
+
+            for (int x = 0; x < conflict_matrix.GetLength(0); x += 1)
+            {
+                if (conflict_matrix[x, exam_to_assign] && solution.epr_associasion[x,0] == period)
                 {
-                    if (solution.timetable_container[period, j, k])
-                        room_capacity -= examinations.GetById(k).students.Count();
+                    return -1; //exam_to_assign has conflict(s) with another examination(s) on this period
                 }
-                if (examinations.GetById(exam).students.Count() < room_capacity)
-                    return j;
+            }
+
+            foreach (PeriodHardConstraint phc in period_hard_constraints.GetByTypeWithExamId(PeriodHardConstraint.types.AFTER, exam_to_assign))
+            {
+                if (phc.ex2 == exam_to_assign && solution.epr_associasion[phc.ex1, 0] <= period)
+                {
+                    return -1; //exam_to_assign cannot occur AFTER another
+                }
+
+                if (phc.ex1 == exam_to_assign && solution.epr_associasion[phc.ex2, 0] >= period)
+                {
+                    return -1; //another examination cannot occur AFTER exam_to_assign
+                }
+
+            }
+
+            for (int room = 0; room < solution.timetable_container.GetLength(1); room++)
+            {
+                int room_capacity = rooms.GetById(room).capacity;
+                
+                for (int exam = 0; exam < solution.timetable_container.GetLength(2); exam++)
+                {
+                    if (solution.timetable_container[period, room, exam])
+                        room_capacity -= examinations.GetById(exam).students.Count();
+                }
+
+                if (examinations.GetById(exam_to_assign).students.Count() > room_capacity)
+                    continue; //exam_to_assign's students don't fit the classroom's capacity
+
+                return room; //exam_to_assign can be assign
+
+
             }
             return -1;
         }

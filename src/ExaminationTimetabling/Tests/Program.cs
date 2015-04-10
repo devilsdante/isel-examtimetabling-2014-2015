@@ -46,7 +46,7 @@ namespace Tests
         {
             for (int i = 0; i < 8; i++)
             {
-                var ex1 = new Examination(i, 200);
+                var ex1 = new Examination(i, 200, 5);
                 examinations.Insert(ex1);
             }
 

@@ -13,10 +13,10 @@ namespace DAL
         public int duration { get; set; }
         public IEnumerable<int> students { get; set; }
 
-        public Examination(int id, int duration)
+        public Examination(int id, int duration, int students_count)
         {
             this.id = id;
-            this.students = new LinkedList<int>();
+            this.students = new List<int>(students_count);
             this.duration = duration;
         }
 
