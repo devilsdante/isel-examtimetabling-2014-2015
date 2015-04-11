@@ -11,9 +11,9 @@ namespace DAL.Models
         public int id { get; set; }
         public int examination { get; set; }
         public enum types { ROOM_EXCLUSIVE };
-        public int type { get; set; }
+        public types type { get; set; }
 
-        public RoomHardConstraint(int id, int examination, int type)
+        public RoomHardConstraint(int id, int examination, types type)
         {
             this.id = id;
             this.examination = examination;

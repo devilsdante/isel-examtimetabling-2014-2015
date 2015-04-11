@@ -46,9 +46,11 @@ namespace Heuristics
 
             EraseCoincidenceHCWithConflict();
 
-            //SolutionInitialization();
-
-            //PeriodSelection();
+            //TODO Varrimento dos periodos para assignment de exames a um periodo e sala.
+            //TODO Talvez retornar diferentes números negativos para indicar o tipo de HC violada
+            //TODO Se não conseguir fazer assign do exame em nenhum periodo, forçar o assignment num aleatório, correndo o IsFeasible,
+            //TODO -- retirando todos os exames que estão em conflito (talvez com verificação directa seja mais fácil e eficaz)
+            //TODO Lista de exames a fazer assign, por ordem de conflitos (AFTER, COINCIDENCE e no fim o número de conflitos baseado na matrix
         }
 
         private void PopulateConflictMatrix()
@@ -102,16 +104,26 @@ namespace Heuristics
         {
             if (periods.GetById(period).duration > examinations.GetById(exam_to_assign).duration)
             {
-                return -1; //exam_to_assign doesn't fit the period
+                return -1; //exam_to_assign's length cannot surpass the period's length
             }
 
-            // TODO COINCIDENCE
+            foreach (
+                PeriodHardConstraint phc in
+                    period_hard_constraints.GetByTypeWithExamId(PeriodHardConstraint.types.EXAM_COINCIDENCE,
+                        exam_to_assign))
+            {
+                if (phc.ex1 == exam_to_assign && solution.epr_associasion[phc.ex2, 0] != period
+                    || phc.ex2 == exam_to_assign && solution.epr_associasion[phc.ex1, 0] != period)
+                {
+                    return -1; //exam_to_assign has COINCIDENCE conflicts with another examination
+                }
+            }
 
             for (int x = 0; x < conflict_matrix.GetLength(0); x += 1)
             {
                 if (conflict_matrix[x, exam_to_assign] && solution.epr_associasion[x,0] == period)
                 {
-                    return -1; //exam_to_assign has conflict(s) with another examination(s) on this period
+                    return -1; //exam_to_assign has STUDENT or EXCLUSION conflicts with another examination
                 }
             }
 
@@ -119,12 +131,12 @@ namespace Heuristics
             {
                 if (phc.ex2 == exam_to_assign && solution.epr_associasion[phc.ex1, 0] <= period)
                 {
-                    return -1; //exam_to_assign cannot occur AFTER another
+                    return -1; //exam_to_assign must occur AFTER another
                 }
 
                 if (phc.ex1 == exam_to_assign && solution.epr_associasion[phc.ex2, 0] >= period)
                 {
-                    return -1; //another examination cannot occur AFTER exam_to_assign
+                    return -1; //another examination must occur AFTER exam_to_assign
                 }
 
             }
@@ -139,8 +151,12 @@ namespace Heuristics
                         room_capacity -= examinations.GetById(exam).students.Count();
                 }
 
+                if (room_hard_constraints.HasRoomExclusivesWithExam(exam_to_assign) &&
+                    room_capacity == rooms.GetById(room).capacity)
+                    continue; //exam_to_assign needs room EXCLUSIVITY
+
                 if (examinations.GetById(exam_to_assign).students.Count() > room_capacity)
-                    continue; //exam_to_assign's students don't fit the classroom's capacity
+                    continue; //exam_to_assign's number of students must surpass the CLASSROOM's CAPACITY
 
                 return room; //exam_to_assign can be assign
 
@@ -148,59 +164,6 @@ namespace Heuristics
             }
             return -1;
         }
-        //private void SolutionInitialization()
-        //{
-        //    solution = new Solution(1,1,1,1); //1 to change TODO
-        //    foreach (Period period in periods.GetAll())
-        //    {
-        //        solution.periods_map.Add(period, new List<ExaminationRoomRel>());
-        //    }
-        //}
-        //private void PeriodSelection()
-        //{
-        //    unassigned_examinations = examinations.GetAll().ToList();
-        //    assigned_examinations = new List<Examination>();
-
-        //    while (unassigned_examinations.Any())
-        //    {
-        //        List<Period> possible_periods;
-        //        Examination exam_to_assign = unassigned_examinations.First();
-
-        //        foreach (Examination exam in unassigned_examinations)
-        //        {
-        //            if (conflicts[exam.id] > conflicts[exam_to_assign.id])
-        //            {
-        //                exam_to_assign = exam;
-        //            }
-        //        }
-
-        //        // Most common option
-        //        if (!period_hard_constraints.GetByTypeWithExamId(PeriodHardConstraint.types.AFTER, exam_to_assign.id).Any()
-        //            &&
-        //            !period_hard_constraints.GetByTypeWithExamId(PeriodHardConstraint.types.EXAM_COINCIDENCE, exam_to_assign.id).Any())
-        //        {
-        //            possible_periods = periods.GetAllThatFitsDuration(exam_to_assign.id).ToList();
-
-        //            if (GetPeriodsWithoutStudentOrExclusiveConflicts(exam_to_assign, possible_periods).Any())
-        //            {
-        //                //Examination can be assign TODO
-        //            }
-        //            else
-        //            {
-        //                //Examination can not be assign TODO
-        //            }
-        //        }
-        //        // With AFTER and/or EXAM_COINCIDENCE Constraints TODO
-        //        else
-        //        {
-                    
-        //        }
-
-
-        //    }
-
-        //}
-
 
     }
 }
