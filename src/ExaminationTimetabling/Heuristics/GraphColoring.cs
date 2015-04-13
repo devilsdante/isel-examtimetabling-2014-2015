@@ -20,9 +20,11 @@ namespace Heuristics
 
 
         public bool[,] conflict_matrix;
-        public int[] conflicts;
         public Solution solution;
         public List<Examination> unassigned_examinations;
+        public List<Examination> unassigned_examinations_with_after;
+        public List<Examination> unassigned_examinations_with_coincidence;
+        public List<Examination> unassigned_examinations_with_exclusive;
         public List<Examination> assigned_examinations;
 
         public GraphColoring(Examinations examinations, PeriodHardConstraints period_hard_constraints, Periods periods, RoomHardConstraints room_hard_constraints, 
@@ -40,17 +42,64 @@ namespace Heuristics
         {
             conflict_matrix = new bool[examinations.EntryCount(), examinations.EntryCount()];
 
-            conflicts = new int[examinations.EntryCount()];
-
             PopulateConflictMatrix();
 
             EraseCoincidenceHCWithConflict();
 
-            //TODO Varrimento dos periodos para assignment de exames a um periodo e sala.
-            //TODO Talvez retornar diferentes números negativos para indicar o tipo de HC violada
-            //TODO Se não conseguir fazer assign do exame em nenhum periodo, forçar o assignment num aleatório, correndo o IsFeasible,
-            //TODO -- retirando todos os exames que estão em conflito (talvez com verificação directa seja mais fácil e eficaz)
-            //TODO Lista de exames a fazer assign, por ordem de conflitos (AFTER, COINCIDENCE e no fim o número de conflitos baseado na matrix
+            PopulateAndSortAssignmentLists();
+
+            while (assigned_examinations.Count != examinations.EntryCount())
+            {
+                List<Examination> list_to_use;
+                Examination exam_to_assign;
+
+                if (unassigned_examinations_with_exclusive.Any())
+                    list_to_use = unassigned_examinations_with_exclusive;
+                else if (unassigned_examinations_with_after.Any())
+                    list_to_use = unassigned_examinations_with_after;
+                else if (unassigned_examinations_with_coincidence.Any())
+                    list_to_use = unassigned_examinations_with_coincidence;
+                else
+                    list_to_use = unassigned_examinations;
+
+                exam_to_assign = list_to_use.Last();
+                list_to_use.RemoveAt(unassigned_examinations_with_exclusive.Count - 1);
+
+                
+                if (CheckIfExaminationCanBeAssignToAnyPeriod(exam_to_assign))
+                {
+                    ExaminationNormalAssignment(exam_to_assign);
+                }
+                else
+                {
+                    ExaminationForcingAssignment(exam_to_assign);
+                }
+                
+            }
+        }
+
+        private bool CheckIfExaminationCanBeAssignToAnyPeriod(Examination exam_to_assign)
+        {
+            return periods.GetAll().Any(period => IsFeasiblePeriod(exam_to_assign.id, period.id) >= 0);
+        }
+
+        private void PopulateAndSortAssignmentLists()
+        {
+            foreach (Examination exam in examinations.GetAll())
+            {
+                if (room_hard_constraints.HasRoomExclusivesWithExam(exam.id))
+                    unassigned_examinations_with_exclusive.Add(exam);
+                else if(period_hard_constraints.GetByTypeWithExamId(PeriodHardConstraint.types.AFTER, exam.id).Any())
+                    unassigned_examinations_with_after.Add(exam);
+                else if(period_hard_constraints.GetByTypeWithExamId(PeriodHardConstraint.types.EXAM_COINCIDENCE, exam.id).Any())
+                    unassigned_examinations_with_coincidence.Add(exam);
+                else
+                    unassigned_examinations.Add(exam);
+            }
+            unassigned_examinations_with_exclusive = unassigned_examinations_with_exclusive.OrderBy(ex => ex.conflict).ToList();
+            unassigned_examinations_with_after = unassigned_examinations_with_after.OrderBy(ex => ex.conflict).ToList();
+            unassigned_examinations_with_coincidence = unassigned_examinations_with_coincidence.OrderBy(ex => ex.conflict).ToList();
+            unassigned_examinations = unassigned_examinations.OrderBy(ex => ex.conflict).ToList();
         }
 
         private void PopulateConflictMatrix()
@@ -67,8 +116,8 @@ namespace Heuristics
                     else if (examinations.Conflict(x, y))
                     {
                         conflict_matrix[x, y] = true;
-                        conflicts[x] += 1;
-                        conflicts[y] += 1;
+                        examinations.GetById(x).conflict += 1;
+                        examinations.GetById(y).conflict += 1;
                     }
                     else
                         conflict_matrix[x, y] = false;
@@ -84,8 +133,8 @@ namespace Heuristics
                     conflict_matrix[phc.ex1, phc.ex2] = true;
                     conflict_matrix[phc.ex2, phc.ex1] = true;
 
-                    conflicts[phc.ex1] += 1;
-                    conflicts[phc.ex2] += 1;
+                    examinations.GetById(phc.ex1).conflict += 1;
+                    examinations.GetById(phc.ex2).conflict += 1;
                 }
             }
         }
@@ -143,27 +192,81 @@ namespace Heuristics
 
             for (int room = 0; room < solution.timetable_container.GetLength(1); room++)
             {
-                int room_capacity = rooms.GetById(room).capacity;
-                
-                for (int exam = 0; exam < solution.timetable_container.GetLength(2); exam++)
-                {
-                    if (solution.timetable_container[period, room, exam])
-                        room_capacity -= examinations.GetById(exam).students.Count();
-                }
-
-                if (room_hard_constraints.HasRoomExclusivesWithExam(exam_to_assign) &&
-                    room_capacity == rooms.GetById(room).capacity)
-                    continue; //exam_to_assign needs room EXCLUSIVITY
-
-                if (examinations.GetById(exam_to_assign).students.Count() > room_capacity)
-                    continue; //exam_to_assign's number of students must surpass the CLASSROOM's CAPACITY
-
-                return room; //exam_to_assign can be assign
-
-
+                if (IsFeasibleRoom(exam_to_assign, period, room))
+                    return room;
             }
             return -1;
         }
 
+        private bool IsFeasibleRoom(int exam_to_assign, int period, int room)
+        {
+            int room_capacity = rooms.GetById(room).capacity;
+
+            for (int exam = 0; exam < solution.timetable_container.GetLength(2); exam++)
+            {
+                if (solution.timetable_container[period, room, exam])
+                    room_capacity -= examinations.GetById(exam).students.Count();
+            }
+
+            if (room_hard_constraints.HasRoomExclusivesWithExam(exam_to_assign) &&
+                room_capacity == rooms.GetById(room).capacity)
+                return false; //exam_to_assign needs room EXCLUSIVITY
+
+            if (examinations.GetById(exam_to_assign).students.Count() > room_capacity)
+                return false; //exam_to_assign's number of students must surpass the CLASSROOM's CAPACITY
+
+            return true; //exam_to_assign can be assign
+        }
+
+        private void ExaminationNormalAssignment(Examination exam_to_assign)
+        {
+            int n_of_feasibles = periods.GetAll().Count(period => IsFeasiblePeriod(exam_to_assign.id, period.id) >= 0);
+            Random random = new Random();
+            int random_assignable = random.Next(n_of_feasibles);
+            Period period_to_assign = null;
+
+            foreach (Period period in periods.GetAll())
+            {
+                if (IsFeasiblePeriod(exam_to_assign.id, period.id) >= 0)
+                {
+                    if (--random_assignable < 0)
+                    {
+                        period_to_assign = period;
+                        break;
+                    }
+                }
+            }
+
+            if(period_to_assign == null)
+                throw new NullReferenceException();      //Never happens
+
+            n_of_feasibles = rooms.GetAll().Count(room => IsFeasibleRoom(exam_to_assign.id, period_to_assign.id, room.id));
+            random_assignable = random.Next(n_of_feasibles);
+            Room room_to_assign = null;
+
+            foreach (Room room in rooms.GetAll())
+            {
+                if (IsFeasibleRoom(exam_to_assign.id, period_to_assign.id, room.id))
+                {
+                    if (--random_assignable < 0)
+                    {
+                        room_to_assign = room;
+                        break;
+                    }
+                }
+            }
+
+            if (room_to_assign == null)
+                throw new NullReferenceException();      //Never happens
+
+            solution.timetable_container[period_to_assign.id, room_to_assign.id, exam_to_assign.id] = true;
+            solution.epr_associasion[exam_to_assign.id, 0] = period_to_assign.id;
+            solution.epr_associasion[exam_to_assign.id, 1] = room_to_assign.id;
+        }
+
+        private void ExaminationForcingAssignment(Examination exam_to_assign)
+        {
+            
+        }
     }
 }

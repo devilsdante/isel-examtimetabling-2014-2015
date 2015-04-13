@@ -12,12 +12,14 @@ namespace DAL
         public int id { get; set; }
         public int duration { get; set; }
         public IEnumerable<int> students { get; set; }
+        public int conflict;
 
         public Examination(int id, int duration, int students_count)
         {
             this.id = id;
             this.students = new List<int>(students_count);
             this.duration = duration;
+            this.conflict = 0;
         }
 
     }
