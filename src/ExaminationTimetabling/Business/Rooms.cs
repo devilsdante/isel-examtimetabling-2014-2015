@@ -33,5 +33,9 @@ namespace Business
         {
             return rooms_repo.GetById(id);
         }
+        public int EntryCount()
+        {
+            return rooms_repo.EntryCount();
+        }
     }
 }

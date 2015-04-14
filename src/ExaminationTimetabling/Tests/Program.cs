@@ -25,7 +25,7 @@ namespace Tests
             PrintExaminationCoincidences(period_hard_constraints);
             //gc.Work();
             //PrintExaminationCoincidences(period_hard_constraints);
-            //PrintConflictMatrix(gc);
+            //PrintConflictMatrix(gc, examinations);
             Console.ReadKey();
         }
 
@@ -103,7 +103,7 @@ namespace Tests
             a1.students = list;
         }
 
-        public static void PrintConflictMatrix(GraphColoring gc)
+        public static void PrintConflictMatrix(GraphColoring gc, Examinations examinations)
         {
             for (int x = 0; x < gc.conflict_matrix.GetLength(0); x += 1)
             {
@@ -113,9 +113,9 @@ namespace Tests
                 }
                 Console.WriteLine();
             }
-            foreach (var conf in gc.conflicts)
+            foreach (var exam in examinations.GetAll().OrderBy(ex => ex.id))
             {
-                Console.Write(conf+" ");
+                Console.Write(exam.conflict+ " ");
             }
         }
 

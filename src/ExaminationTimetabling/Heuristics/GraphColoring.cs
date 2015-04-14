@@ -266,7 +266,27 @@ namespace Heuristics
 
         private void ExaminationForcingAssignment(Examination exam_to_assign)
         {
-            
+            Random random = new Random();
+            int random_room;
+            int random_period;
+
+            while (true)
+            {
+                random_room = random.Next(rooms.EntryCount());
+                if (rooms.GetById(random_room).capacity >=
+                    examinations.GetById(exam_to_assign.id).students.Count())
+                    break;
+            }
+
+            while (true)
+            {
+                random_period = random.Next(periods.EntryCount());
+                if (periods.GetById(random_period).duration >=
+                    examinations.GetById(exam_to_assign.id).duration)
+                    break;
+            }
+
+            //..
         }
     }
 }

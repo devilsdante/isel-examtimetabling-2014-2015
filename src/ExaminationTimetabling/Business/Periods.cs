@@ -39,5 +39,10 @@ namespace Business
         {
             return GetAll().Where(p => p.duration >= duration).OrderBy(p => p.duration);
         }
+
+        public int EntryCount()
+        {
+            return periods_repo.EntryCount();
+        }
     }
 }
