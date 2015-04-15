@@ -20,6 +20,12 @@ namespace DAL.Models
 
             timetable_container = new bool[period_count, room_count, examination_count];
             epr_associasion = new int[examination_count,2];
+
+            for(int i = 0; i < examination_count; i++)
+            {
+                epr_associasion[i, 0] = -1;
+                epr_associasion[i, 1] = -1;
+            }
         }
 
 

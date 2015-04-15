@@ -42,5 +42,36 @@ namespace Business
         {
             return GetAll().Where(p => p.type == type && (p.ex1 == exam_id || p.ex2 == exam_id));
         }
+
+        public IEnumerable<int> GetAllExaminationsWithChainingCoincidence(int exam_id)
+        {
+            if (!GetByTypeWithExamId(PeriodHardConstraint.types.EXAM_COINCIDENCE, exam_id).Any())
+                return null;
+            List<int> list = new List<int> {exam_id};
+            GetAllExaminationsWithChainingCoincidenceAux(list);
+            return list;
+        }
+
+        private void GetAllExaminationsWithChainingCoincidenceAux(List<int> exams)
+        {
+            int init_count = exams.Count;
+
+            foreach (int exam_id in exams)
+            {
+                foreach (
+                    PeriodHardConstraint phc in
+                        GetByTypeWithExamId(PeriodHardConstraint.types.EXAM_COINCIDENCE, exam_id))
+                {
+                    int exam2 = phc.ex1 == exam_id ? phc.ex2 : phc.ex1;
+
+                    if (exams.Contains(exam2))
+                        continue;
+                    exams.Add(exam_id);
+                }
+            }
+
+            if (init_count != exams.Count)
+                GetAllExaminationsWithChainingCoincidenceAux(exams);
+        }
     }
 }

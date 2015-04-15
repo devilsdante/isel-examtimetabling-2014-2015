@@ -39,11 +39,8 @@ namespace Business
             return examinations_repo.EntryCount();
         }
 
-        public bool Conflict(int x, int y)
+        public bool Conflict(Examination ex1, Examination ex2)
         {
-            Examination ex1 = GetById(x);
-            Examination ex2 = GetById(y);
-
             foreach (int student in ex1.students)
                 if (ex2.students.Contains(student))
                     return true;
