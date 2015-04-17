@@ -271,8 +271,8 @@ namespace Heuristics
         private void ExaminationForcingAssignment(Examination exam_to_assign)
         {
             Random random = new Random();
-            int random_room;
-            int random_period;
+            int random_room = -1;
+            int random_period = -1;
 
             //Default room's capacity must be higher than the examination's number of students
             while (true)
@@ -283,17 +283,34 @@ namespace Heuristics
                     break;
             }
 
-            //Period's length fitting examination's duration and all its coincidences
+            
             List<int> exam_ids = (List<int>)period_hard_constraints.GetAllExaminationsWithChainingCoincidence(exam_to_assign.id);
-            while (true)
-            {
-                random_period = random.Next(periods.EntryCount());
 
-                if (
-                    exam_ids.All(
-                        exam_id => periods.GetById(random_period).duration >= examinations.GetById(exam_id).duration))
+            //If there's a coincident examination, the exam_to_assign will be forced to be put on the same period
+            foreach (int exam_id in exam_ids)
+            {
+                if (solution.epr_associasion[exam_id, 0] != -1)
+                {
+                    random_period = solution.epr_associasion[exam_id, 0];
                     break;
+                }
+                    
             }
+
+            //If not - Period's length must fit examination's duration and all its coincidences
+            if(random_period != -1)
+            {
+                while (true)
+                {
+                    random_period = random.Next(periods.EntryCount());
+
+                    if (
+                        exam_ids.All(
+                            exam_id => periods.GetById(random_period).duration >= examinations.GetById(exam_id).duration))
+                        break;
+                }
+            }
+            
 
             //Unassigning all examinations conflicting with the new assignment (students and EXCLUSION) on the period
             for (int room = 0; room < rooms.EntryCount(); room++)
@@ -306,7 +323,51 @@ namespace Heuristics
                 }
             }
 
+            //If exam_to_assign needs room exclusivity, unassign all examinations taking place in the random_period at the random_room
+            if (room_hard_constraints.HasRoomExclusivesWithExam(exam_to_assign.id))
+            {
+                for (int exam_id = 0; exam_id < examinations.EntryCount(); exam_id++)
+                {
+                    if (solution.timetable_container[random_period, random_room, exam_id])
+                    {
+                        UnassignExaminationAndCoincidences(examinations.GetById(exam_id));
+                    }
+                }
+            }
+            else
+            {
+                //All examinations taking place in the random_period at the random_room that needs room exclusivity, must be unassigned
+                for (int exam_id = 0; exam_id < examinations.EntryCount(); exam_id++)
+                {
+                    if (solution.timetable_container[random_period, random_room, exam_id] && room_hard_constraints.HasRoomExclusivesWithExam(exam_id))
+                    {
+                        UnassignExaminationAndCoincidences(examinations.GetById(exam_id));
+                    }
+                }
+            }
 
+            //All examinations with AFTER conflicts with exam_to_assign, must be unassigned
+            foreach (
+                PeriodHardConstraint phc in
+                    period_hard_constraints.GetByTypeWithExamId(PeriodHardConstraint.types.AFTER, exam_to_assign.id))
+            {
+                if (phc.ex1 == exam_to_assign.id 
+                    && solution.epr_associasion[phc.ex2, 0] != -1
+                    && solution.epr_associasion[phc.ex2, 1] != -1
+                    && solution.epr_associasion[phc.ex2, 0] >=  solution.epr_associasion[phc.ex1, 0])
+                {
+                    UnassignExaminationAndCoincidences(examinations.GetById(phc.ex2));
+                }
+                else if (phc.ex2 == exam_to_assign.id
+                    && solution.epr_associasion[phc.ex1, 0] != -1
+                    && solution.epr_associasion[phc.ex1, 1] != -1
+                    && solution.epr_associasion[phc.ex1, 0] <= solution.epr_associasion[phc.ex2, 0])
+                {
+                    UnassignExaminationAndCoincidences(examinations.GetById(phc.ex2));
+                }
+            }
+
+            //.. Classroom's capacity
         }
 
         private void UnassignExamination(Examination exam)
