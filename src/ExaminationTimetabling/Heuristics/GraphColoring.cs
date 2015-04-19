@@ -220,7 +220,7 @@ namespace Heuristics
                 return false; //exam_to_assign needs room EXCLUSIVITY
 
             if (exam_to_assign.students.Count() > room_capacity)
-                return false; //exam_to_assign's number of students must surpass the CLASSROOM's CAPACITY
+                return false; //exam_to_assign's number of students must not surpass the CLASSROOM's CAPACITY
 
             return true; //exam_to_assign can be assign
         }
