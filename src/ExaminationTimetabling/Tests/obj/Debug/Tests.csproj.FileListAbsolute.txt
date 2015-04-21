@@ -10,3 +10,5 @@ D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimeta
 D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimetabling\Tests\obj\Debug\Tests.csprojResolveAssemblyReference.cache
 D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimetabling\Tests\obj\Debug\Tests.exe
 D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimetabling\Tests\obj\Debug\Tests.pdb
+D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimetabling\Tests\bin\Debug\Tools.dll
+D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimetabling\Tests\bin\Debug\Tools.pdb
