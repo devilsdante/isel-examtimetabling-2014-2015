@@ -40,8 +40,8 @@ namespace Tools
                     period_hard_constraints.GetByTypeWithExamId(PeriodHardConstraint.types.EXAM_COINCIDENCE,
                         exam_to_assign.id))
             {
-                if (phc.ex1 == exam_to_assign.id && solution.epr_associasion[phc.ex2, 0] != period.id
-                    || phc.ex2 == exam_to_assign.id && solution.epr_associasion[phc.ex1, 0] != period.id)
+                if (phc.ex1 == exam_to_assign.id && solution.epr_associasion[phc.ex2, 0] != period.id && solution.epr_associasion[phc.ex2, 0] != -1
+                    || phc.ex2 == exam_to_assign.id && solution.epr_associasion[phc.ex1, 0] != period.id && solution.epr_associasion[phc.ex1, 0] != -1)
                 {
                     return false; //exam_to_assign has COINCIDENCE conflicts with another examination
                 }

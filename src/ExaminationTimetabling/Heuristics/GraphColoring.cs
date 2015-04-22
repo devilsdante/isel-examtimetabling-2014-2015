@@ -51,8 +51,13 @@ namespace Heuristics
 
             PopulateAndSortAssignmentLists();
 
+            solution = new Solution(0, periods.EntryCount(), rooms.EntryCount(), examinations.EntryCount());
+
+            int count = 0;
             while (assigned_examinations.Count != examinations.EntryCount())
             {
+                if(++count % 5000 == 0)
+                    Console.WriteLine(count);
                 List<Examination> list_to_use;
                 Examination exam_to_assign;
 
@@ -66,8 +71,7 @@ namespace Heuristics
                     list_to_use = unassigned_examinations;
 
                 exam_to_assign = list_to_use.Last();
-                list_to_use.RemoveAt(unassigned_examinations_with_exclusive.Count - 1);
-
+                list_to_use.RemoveAt(list_to_use.Count - 1);
                 
                 if (CheckIfExaminationCanBeAssignToAnyPeriod(exam_to_assign))
                 {
@@ -97,6 +101,12 @@ namespace Heuristics
 
         private void PopulateAndSortAssignmentLists()
         {
+            unassigned_examinations = new List<Examination>();
+            unassigned_examinations_with_after = new List<Examination>();
+            unassigned_examinations_with_coincidence = new List<Examination>();
+            unassigned_examinations_with_exclusive = new List<Examination>();
+            assigned_examinations = new List<Examination>();
+
             foreach (Examination exam in examinations.GetAll())
             {
                 if (room_hard_constraints.HasRoomExclusivesWithExam(exam.id))
@@ -168,6 +178,7 @@ namespace Heuristics
 
         private void ExaminationNormalAssignment(Examination exam_to_assign)
         {
+            Console.WriteLine("Normal!");
             int n_of_feasibles = periods.GetAll().Count(period => feasibility_tester.IsFeasiblePeriod(solution, exam_to_assign, period));
             Random random = new Random();
             int random_assignable = random.Next(n_of_feasibles);
@@ -212,6 +223,7 @@ namespace Heuristics
 
         private void ExaminationForcingAssignment(Examination exam_to_assign)
         {
+            Console.WriteLine("Forced!");
             Random random = new Random();
             int random_room = -1;
             int random_period = -1;
@@ -239,17 +251,15 @@ namespace Heuristics
             //If there's a coincident examination assigned, the exam_to_assign will be forced to be put on the same period as its coincident
             foreach (int exam_id in exam_ids)
             {
-                if (solution.epr_associasion[exam_id, 0] != -1)
+                if (exam_id != exam_to_assign.id && solution.epr_associasion[exam_id, 0] != -1 && solution.epr_associasion[exam_id, 1] != -1)
                 {
                     random_period = solution.epr_associasion[exam_id, 0];
                     period_to_assign = periods.GetById(random_period);
                     break;
                 }
-                    
             }
-
             //If not - Period's length must fit examination's duration and all its coincidences
-            if(random_period != -1)
+            if(random_period == -1)
             {
                 while (true)
                 {
@@ -271,13 +281,20 @@ namespace Heuristics
             
 
             //Unassigning all examinations conflicting with the new assignment (students and EXCLUSION) on the period
-            for (int room = 0; room < rooms.EntryCount(); room++)
+        //for (int room = 0; room < rooms.EntryCount(); room++)
+        //{
+        //    for (int exam = 0; exam < examinations.EntryCount(); exam++)
+        //    {
+        //        if (solution.timetable_container[random_period, room, exam] &&
+        //            conflict_matrix[exam_to_assign.id, exam])
+        //                UnassignExaminationAndCoincidences(examinations.GetById(exam));
+        //    }
+        //}
+            for (int exam_id = 0; exam_id < conflict_matrix.GetLength(0); exam_id += 1)
             {
-                for (int exam = 0; exam < examinations.EntryCount(); exam++)
+                if (conflict_matrix[exam_id, exam_to_assign.id] && solution.epr_associasion[exam_id, 0] == period_to_assign.id)
                 {
-                    if (solution.timetable_container[random_period, room, exam] &&
-                        conflict_matrix[exam_to_assign.id, exam])
-                            UnassignExaminationAndCoincidences(examinations.GetById(exam));
+                    UnassignExaminationAndCoincidences(examinations.GetById(exam_id));
                 }
             }
 
@@ -330,26 +347,28 @@ namespace Heuristics
                 feasibility_tester.RoomCurrentCapacityOnPeriod(solution, period_to_assign, room_to_assign);
             int n_of_examinations_in_period_and_room = 0;
 
-            while (room_to_assign_curr_capacity < exam_to_assign.students.Count())
+            if (room_to_assign_curr_capacity < exam_to_assign.students.Count())
             {
-                if (n_of_examinations_in_period_and_room == 0)
-                {
-                    for (int exam_id = 0; exam_id < examinations.EntryCount(); exam_id++)
+                for (int exam_id = 0; exam_id < examinations.EntryCount(); exam_id++)
                     {
                         if (solution.timetable_container[random_period, random_room, exam_id])
                         {
                             ++n_of_examinations_in_period_and_room;
                         }
                     }
-                }
-                
+            }
+
+            while (room_to_assign_curr_capacity < exam_to_assign.students.Count())
+            {
                 int random_examination_unassignment = random.Next(n_of_examinations_in_period_and_room);
                 for (int exam_id = 0; exam_id < examinations.EntryCount(); exam_id++)
                 {
-                    if (--random_examination_unassignment < 0)
+                    if (solution.timetable_container[random_period, random_room, exam_id] 
+                        && --random_examination_unassignment < 0)
                     {
                         --n_of_examinations_in_period_and_room;
-                        room_to_assign_curr_capacity += examinations.GetById(exam_id).students.Count();
+                        room_to_assign_curr_capacity +=
+                            GetStudentCountFromExaminationAndCoincidences(examinations.GetById(exam_id));//examinations.GetById(exam_id).students.Count();
                         UnassignExaminationAndCoincidences(examinations.GetById(exam_id));
                         break;
                     }
@@ -366,6 +385,10 @@ namespace Heuristics
 
         private void UnassignExamination(Examination exam)
         {
+            if (solution.timetable_container[
+                solution.epr_associasion[exam.id, 0], solution.epr_associasion[exam.id, 1], exam.id] == false)
+                return;
+
             solution.timetable_container[
                 solution.epr_associasion[exam.id, 0], solution.epr_associasion[exam.id, 1], exam.id] = false;
 
@@ -392,16 +415,21 @@ namespace Heuristics
 
         private void UnassignExaminationAndCoincidences(Examination exam)
         {
-            UnassignExamination(exam);
+            //UnassignExamination(exam);
 
-            foreach (
-                PeriodHardConstraint phc in
-                    period_hard_constraints.GetByTypeWithExamId(PeriodHardConstraint.types.EXAM_COINCIDENCE, exam.id))
+            //foreach (
+            //    PeriodHardConstraint phc in
+            //        period_hard_constraints.GetByTypeWithExamId(PeriodHardConstraint.types.EXAM_COINCIDENCE, exam.id))
+            //{
+            //    int exam2 = phc.ex1 == exam.id ? phc.ex2 : phc.ex1;
+
+            //    if (solution.epr_associasion[exam2, 0] != -1 || solution.epr_associasion[exam2, 1] != -1)
+            //        UnassignExaminationAndCoincidences(examinations.GetById(exam2));
+            //}
+
+            foreach (int exam_id in period_hard_constraints.GetAllExaminationsWithChainingCoincidence(exam.id))
             {
-                int exam2 = phc.ex1 == exam.id ? phc.ex2 : phc.ex1;
-
-                if (solution.epr_associasion[exam2, 0] != -1 || solution.epr_associasion[exam2, 1] != -1)
-                    UnassignExaminationAndCoincidences(examinations.GetById(exam2));
+                UnassignExamination(examinations.GetById(exam_id));
             }
         }
 
@@ -417,6 +445,9 @@ namespace Heuristics
             assigned_examinations.Add(exam);
         }
 
-        
+        private int GetStudentCountFromExaminationAndCoincidences(Examination exam)
+        {
+            return period_hard_constraints.GetAllExaminationsWithChainingCoincidence(exam.id).Sum(exam_id => examinations.GetById(exam_id).students.Count());
+        }
     }
 }

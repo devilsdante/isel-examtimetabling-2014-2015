@@ -45,32 +45,31 @@ namespace Business
 
         public IEnumerable<int> GetAllExaminationsWithChainingCoincidence(int exam_id)
         {
+            List<int> list = new List<int> { exam_id };
             if (!GetByTypeWithExamId(PeriodHardConstraint.types.EXAM_COINCIDENCE, exam_id).Any())
-                return null;
-            List<int> list = new List<int> {exam_id};
+                return list;
             GetAllExaminationsWithChainingCoincidenceAux(list);
             return list;
         }
 
         private void GetAllExaminationsWithChainingCoincidenceAux(List<int> exams)
         {
-            int init_count = exams.Count;
+            List<int> exams_aux = exams.ToList();
 
-            foreach (int exam_id in exams)
+            foreach (int exam_id in exams_aux)
             {
                 foreach (
                     PeriodHardConstraint phc in
                         GetByTypeWithExamId(PeriodHardConstraint.types.EXAM_COINCIDENCE, exam_id))
                 {
-                    int exam2 = phc.ex1 == exam_id ? phc.ex2 : phc.ex1;
+                    int exam_id2 = phc.ex1 == exam_id ? phc.ex2 : phc.ex1;
 
-                    if (exams.Contains(exam2))
-                        continue;
-                    exams.Add(exam_id);
+                    if (!exams.Contains(exam_id2))
+                        exams.Add(exam_id2);
                 }
             }
 
-            if (init_count != exams.Count)
+            if (exams.Count != exams_aux.Count)
                 GetAllExaminationsWithChainingCoincidenceAux(exams);
         }
     }

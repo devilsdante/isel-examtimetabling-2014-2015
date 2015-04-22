@@ -13,9 +13,9 @@ namespace DAL.Models
         public int duration { get; set; }
         public int penalty { get; set; }
 
-        public Period(int id1, DateTime date, int duration, int penalty)
+        public Period(int id, DateTime date, int duration, int penalty)
         {
-            id = id1;
+            this.id = id;
             this.date = date;
             this.duration = duration;
             this.penalty = penalty;

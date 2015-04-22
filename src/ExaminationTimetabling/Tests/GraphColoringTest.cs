@@ -10,23 +10,62 @@ using Heuristics;
 
 namespace Tests
 {
-    class Program
+    class GraphColoringTest
     {
         static void Main()
         {
             //testing
-            Examinations examinations = new Examinations(8);
+            Examinations examinations = new Examinations(10);
             PeriodHardConstraints period_hard_constraints = new PeriodHardConstraints(4);
-            GraphColoring gc = new GraphColoring(examinations, period_hard_constraints, null, null, null, null);
+            Periods periods = new Periods(5);
+            RoomHardConstraints room_hard_constraints = new RoomHardConstraints(0);
+            Rooms rooms = new Rooms(3);
+            Solutions solutions = new Solutions(1);
 
+            GraphColoring gc = new GraphColoring(examinations, period_hard_constraints, periods, room_hard_constraints, rooms, solutions);
+
+            AddDataRooms(rooms);
+            AddDataPeriods(periods);
             AddDataExaminations(examinations);
             AddDataPeriodHardConstraints(period_hard_constraints);
 
             PrintExaminationCoincidences(period_hard_constraints);
-            //gc.Work();
-            //PrintExaminationCoincidences(period_hard_constraints);
-            //PrintConflictMatrix(gc, examinations);
+            gc.Work();
+            PrintExaminationCoincidences(period_hard_constraints);
+            PrintConflictMatrix(gc, examinations);
+            PrintToFile("..//..//output.txt", gc.solution);
             Console.ReadKey();
+        }
+
+        private static void PrintToFile(string output_txt, Solution solution)
+        {
+            Tools.OutputFormatting.Format(output_txt, solution);
+        }
+
+        private static void AddDataRooms(Rooms rooms)
+        {
+            Room room0 = new Room(0, 5, 0);
+            Room room1 = new Room(1, 7, 0);
+            Room room2 = new Room(2, 7, 0);
+
+            rooms.Insert(room0);
+            rooms.Insert(room1);
+            //rooms.Insert(room2);
+        }
+
+        private static void AddDataPeriods(Periods periods)
+        {
+            Period period0 = new Period(0, new DateTime(2005, 04, 15, 9, 30, 0), 210, 0);
+            Period period1 = new Period(1, new DateTime(2005, 04, 15, 14, 0, 0), 210, 0);
+            Period period2 = new Period(2, new DateTime(2005, 04, 18, 9, 30, 0), 210, 0);
+            Period period3 = new Period(3, new DateTime(2005, 04, 18, 14, 0, 0), 210, 70);
+            Period period4 = new Period(4, new DateTime(2005, 04, 19, 9, 30, 0), 210, 50);
+
+            periods.Insert(period0);
+            periods.Insert(period1);
+            periods.Insert(period2);
+            periods.Insert(period3);
+           periods.Insert(period4);
         }
 
         private static void AddDataPeriodHardConstraints(PeriodHardConstraints period_hard_constraints)
@@ -44,63 +83,52 @@ namespace Tests
 
         public static void AddDataExaminations(Examinations examinations)
         {
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < 10; i++)
             {
                 var ex1 = new Examination(i, 200, 5);
                 examinations.Insert(ex1);
             }
 
             var a1 = examinations.GetById(0);
-            var list = new List<int>();
-            list.Add(1);
-            list.Add(2);
-            list.Add(3);
-            list.Add(4);
+            var list = new List<int> {1, 2, 3, 4};
             a1.students = list;
 
             a1 = examinations.GetById(1);
-            list = new List<int>();
-            list.Add(3);
-            list.Add(2);
-            list.Add(8);
+            list = new List<int> {3, 2, 8};
             a1.students = list;
 
             a1 = examinations.GetById(2);
-            list = new List<int>();
-            list.Add(1);
-            list.Add(8);
-            list.Add(10);
+            list = new List<int> {1, 8, 10};
             a1.students = list;
 
             a1 = examinations.GetById(3);
-            list = new List<int>();
-            list.Add(1);
-            list.Add(3);
-            list.Add(11);
+            list = new List<int> {1, 3, 11};
             a1.students = list;
 
             a1 = examinations.GetById(4);
-            list = new List<int>();
-            list.Add(20);
-            list.Add(21);
-            list.Add(8);
+            list = new List<int> {20, 21, 8};
             a1.students = list;
 
             a1 = examinations.GetById(5);
-            list = new List<int>();
-            list.Add(22);
+            list = new List<int> {22};
             a1.students = list;
 
             a1 = examinations.GetById(6);
-            list = new List<int>();
-            list.Add(23);
-            list.Add(1);
+            list = new List<int> {23, 1};
             a1.students = list;
 
             a1 = examinations.GetById(7);
-            list = new List<int>();
-            list.Add(2);
+            list = new List<int> {2};
             a1.students = list;
+
+            a1 = examinations.GetById(8);
+            list = new List<int> {20, 23, 22, 1, 10};
+            a1.students = list;
+
+            a1 = examinations.GetById(9);
+            list = new List<int> { 20, 23, 22, 90};
+            a1.students = list;
+            //a1.duration = 100;
         }
 
         public static void PrintConflictMatrix(GraphColoring gc, Examinations examinations)
