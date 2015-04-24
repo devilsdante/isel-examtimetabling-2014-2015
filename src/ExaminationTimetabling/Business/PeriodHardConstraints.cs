@@ -36,11 +36,11 @@ namespace Business
         }
         public IEnumerable<PeriodHardConstraint> GetByType(PeriodHardConstraint.types type)
         {
-            return GetAll().Where(p => p.type == type);
+            return GetAll().Where(phc => phc.type == type);
         }
         public IEnumerable<PeriodHardConstraint> GetByTypeWithExamId(PeriodHardConstraint.types type, int exam_id)
         {
-            return GetAll().Where(p => p.type == type && (p.ex1 == exam_id || p.ex2 == exam_id));
+            return GetAll().Where(phc => phc.type == type && (phc.ex1 == exam_id || phc.ex2 == exam_id));
         }
 
         public IEnumerable<int> GetAllExaminationsWithChainingCoincidence(int exam_id)

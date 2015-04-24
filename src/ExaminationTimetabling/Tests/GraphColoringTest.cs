@@ -7,6 +7,7 @@ using Business;
 using DAL;
 using DAL.Models;
 using Heuristics;
+using Tools;
 
 namespace Tests
 {
@@ -24,6 +25,8 @@ namespace Tests
 
             GraphColoring gc = new GraphColoring(examinations, period_hard_constraints, periods, room_hard_constraints, rooms, solutions);
 
+            EvaluationFunction evaluation = new EvaluationFunction(examinations, period_hard_constraints, room_hard_constraints, rooms, periods);
+
             AddDataRooms(rooms);
             AddDataPeriods(periods);
             AddDataExaminations(examinations);
@@ -34,6 +37,8 @@ namespace Tests
             PrintExaminationCoincidences(period_hard_constraints);
             PrintConflictMatrix(gc, examinations);
             PrintToFile("..//..//output.txt", gc.solution);
+            Console.WriteLine("Valid: "+evaluation.IsValid(gc.solution));
+            Console.WriteLine("Distance To Feasibility: "+evaluation.DistanceToFeasibility(gc.solution));
             Console.ReadKey();
         }
 
@@ -65,7 +70,7 @@ namespace Tests
             periods.Insert(period1);
             periods.Insert(period2);
             periods.Insert(period3);
-           periods.Insert(period4);
+            periods.Insert(period4);
         }
 
         private static void AddDataPeriodHardConstraints(PeriodHardConstraints period_hard_constraints)
@@ -145,6 +150,7 @@ namespace Tests
             {
                 Console.Write(exam.conflict+ " ");
             }
+            Console.WriteLine();
         }
 
         private static void PrintExaminationCoincidences(PeriodHardConstraints period_hard_constraints)
