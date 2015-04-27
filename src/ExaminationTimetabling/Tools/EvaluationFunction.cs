@@ -17,16 +17,19 @@ namespace Tools
         private readonly RoomHardConstraints room_hard_constraints;
         private readonly Rooms rooms;
         private readonly Periods periods;
+        private readonly ModelWeightings model_weightings;
+
 
 
         public EvaluationFunction(Examinations examinations, PeriodHardConstraints period_hard_constraints, RoomHardConstraints room_hard_constraints,
-            Rooms rooms, Periods periods)
+            Rooms rooms, Periods periods, ModelWeightings model_weightings)
         {
             this.examinations = examinations;
             this.period_hard_constraints = period_hard_constraints;
             this.room_hard_constraints = room_hard_constraints;
             this.rooms = rooms;
             this.periods = periods;
+            this.model_weightings = model_weightings;
             PopulateConflictMatrix();
         }
 
@@ -149,12 +152,172 @@ namespace Tools
                 }
             }
 
-            return exam_after_hc + exam_coincidence_hc + exam_exclusion_hc + period_lengths_hc + room_capacity_hc + room_exclusivity_hc + student_conflicts_hc;
+            return student_conflicts_hc + exam_after_hc + exam_coincidence_hc + exam_exclusion_hc + period_lengths_hc +
+                   room_capacity_hc + room_exclusivity_hc;
         }
 
         public int Fitness(Solution solution)
         {
-            return -1;
+            int two_exams_in_a_row = 0;
+            int two_exams_in_a_day = 0;
+            int period_spread = 0;
+            int mixed_durations = 0;
+            int front_load = 0;
+            int room_penalty = 0;
+            int period_penalty = 0;
+
+
+            // Two examinations in a row
+            for (int period_id = 0; period_id < solution.timetable_container.GetLength(0) - 1; ++period_id)
+            {
+                if (periods.GetById(period_id).date.Day != periods.GetById(period_id + 1).date.Day)
+                    continue;
+                for (int room_id = 0; room_id < solution.timetable_container.GetLength(1); ++room_id)
+                {
+                    for (int exam_id = 0; exam_id < solution.timetable_container.GetLength(2); ++exam_id)
+                    {
+                        if (solution.timetable_container[period_id, room_id, exam_id])
+                        {
+                            int period2_id = period_id + 1;
+
+                            for (int room2_id = 0; room2_id < solution.timetable_container.GetLength(1); ++room2_id)
+                            {
+                                for (int exam2_id = 0;
+                                    exam2_id < solution.timetable_container.GetLength(2);
+                                    ++exam2_id)
+                                {
+                                    if (solution.timetable_container[period2_id, room2_id, exam2_id])
+                                    {
+                                        if (examinations.Conflict(examinations.GetById(exam_id),
+                                            examinations.GetById(exam2_id)))
+                                        {
+                                            two_exams_in_a_row += model_weightings.Get().two_in_a_row;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            // Two examinations in a day
+            for (int period_id = 0; period_id < solution.timetable_container.GetLength(0) - 2; ++period_id)
+            {
+                if (periods.GetById(period_id).date.Day != periods.GetById(period_id + 2).date.Day)
+                    continue;
+
+                for (int room_id = 0; room_id < solution.timetable_container.GetLength(1); ++room_id)
+                {
+                    for (int exam_id = 0; exam_id < solution.timetable_container.GetLength(2); ++exam_id)
+                    {
+                        if (solution.timetable_container[period_id, room_id, exam_id])
+                        {
+                            for (int period2_id = period_id + 2;
+                                period2_id < solution.timetable_container.GetLength(0) && periods.GetById(period_id).date.Day == periods.GetById(period2_id).date.Day;
+                                ++period2_id)
+                            {
+                                for (int room2_id = 0; room2_id < solution.timetable_container.GetLength(1); ++room2_id)
+                                {
+                                    for (int exam2_id = 0;
+                                        exam2_id < solution.timetable_container.GetLength(2);
+                                        ++exam2_id)
+                                    {
+                                        if (solution.timetable_container[period2_id, room2_id, exam2_id])
+                                        {
+                                            if (examinations.Conflict(examinations.GetById(exam_id),
+                                                examinations.GetById(exam2_id)))
+                                            {
+                                                two_exams_in_a_day += model_weightings.Get().two_in_a_day;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Period Spread
+            for (int period_id = 0; period_id < solution.timetable_container.GetLength(0) - 1; ++period_id)
+            {
+                for (int room_id = 0; room_id < solution.timetable_container.GetLength(1); ++room_id)
+                {
+                    for (int exam_id = 0; exam_id < solution.timetable_container.GetLength(2); ++exam_id)
+                    {
+                        if (solution.timetable_container[period_id, room_id, exam_id])
+                        {
+                            for (int period2_id = period_id + 1;
+                                period2_id < solution.timetable_container.GetLength(0) && period2_id <= period_id + model_weightings.Get().period_spread; 
+                                ++period2_id)
+                            {
+                                for (int room2_id = 0; room2_id < solution.timetable_container.GetLength(1); ++room2_id)
+                                {
+                                    for (int exam2_id = 0;
+                                        exam2_id < solution.timetable_container.GetLength(2);
+                                        ++exam2_id)
+                                    {
+                                        if (solution.timetable_container[period2_id, room2_id, exam2_id])
+                                        {
+                                            period_spread += examinations.NoOfConflicts(examinations.GetById(exam_id),
+                                                examinations.GetById(exam2_id));
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Mixed Durations
+            for (int period_id = 0; period_id < solution.timetable_container.GetLength(0) - 1; ++period_id)
+            {
+                for (int room_id = 0; room_id < solution.timetable_container.GetLength(1); ++room_id)
+                {
+                    List<int> sizes = new List<int>();
+
+                    for (int exam_id = 0; exam_id < solution.timetable_container.GetLength(2); ++exam_id)
+                    {
+                        if (solution.timetable_container[period_id, room_id, exam_id])
+                        {
+                            int curr_size = examinations.GetById(exam_id).students.Count();
+                            if(!sizes.Contains(curr_size))
+                                sizes.Add(curr_size);
+                        }
+                    }
+                    mixed_durations += (sizes.Count() - 1)*model_weightings.Get().non_mixed_durations;
+                }
+            }
+
+            // Front Load
+            List<Examination> exams_front_load =
+                examinations.GetAll()
+                    .OrderByDescending(ex => ex.students.Count())
+                    .ToList()
+                    .GetRange(0, model_weightings.Get().front_load[0]);
+            List<Period> periods_from_load = periods.GetAll()
+                .OrderByDescending(pe => pe.id)
+                .ToList()
+                .GetRange(0, model_weightings.Get().front_load[1]);
+
+            foreach (Examination exam in exams_front_load)
+            {
+                if (periods_from_load.Contains(periods.GetById(solution.epr_associasion[exam.id, 0])))
+                    front_load += model_weightings.Get().front_load[2];
+            }
+
+            //Room Penalty & Period Penalty
+            for (int exam_id = 0; exam_id < solution.epr_associasion.GetLength(0); ++exam_id)
+            {
+                room_penalty += rooms.GetById(solution.epr_associasion[exam_id, 1]).penalty;
+                period_penalty += periods.GetById(solution.epr_associasion[exam_id, 0]).penalty;
+            }
+
+            return two_exams_in_a_row + two_exams_in_a_day + period_spread + mixed_durations + front_load + room_penalty +
+                   period_penalty;
         }
 
         public bool IsValid(Solution solution)

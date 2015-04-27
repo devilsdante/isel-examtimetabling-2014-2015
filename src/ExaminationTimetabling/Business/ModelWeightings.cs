@@ -7,15 +7,24 @@ using System.Threading.Tasks;
 
 namespace Business
 {
-    class ModelWeightings
+    public class ModelWeightings
     {
-        public InstitutionalModelWeightings imw;
+        private InstitutionalModelWeightings imw;
 
         public ModelWeightings(){
-            imw = new InstitutionalModelWeightings();
         }
 
         public ModelWeightings(InstitutionalModelWeightings imw)
+        {
+            this.imw = imw;
+        }
+
+        public InstitutionalModelWeightings Get()
+        {
+            return imw;
+        }
+
+        public void Set(InstitutionalModelWeightings imw)
         {
             this.imw = imw;
         }

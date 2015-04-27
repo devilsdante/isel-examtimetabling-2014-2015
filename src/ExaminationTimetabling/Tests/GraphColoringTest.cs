@@ -22,10 +22,13 @@ namespace Tests
             RoomHardConstraints room_hard_constraints = new RoomHardConstraints(0);
             Rooms rooms = new Rooms(3);
             Solutions solutions = new Solutions(1);
+            ModelWeightings mws = new ModelWeightings();
+            InstitutionalModelWeightings imw = new InstitutionalModelWeightings(5, 3, 2, new []{2,2,2}, 2);
+            mws.Set(imw);
 
             GraphColoring gc = new GraphColoring(examinations, period_hard_constraints, periods, room_hard_constraints, rooms, solutions);
 
-            EvaluationFunction evaluation = new EvaluationFunction(examinations, period_hard_constraints, room_hard_constraints, rooms, periods);
+            EvaluationFunction evaluation = new EvaluationFunction(examinations, period_hard_constraints, room_hard_constraints, rooms, periods, mws);
 
             AddDataRooms(rooms);
             AddDataPeriods(periods);
@@ -39,6 +42,7 @@ namespace Tests
             PrintToFile("..//..//output.txt", gc.solution);
             Console.WriteLine("Valid: "+evaluation.IsValid(gc.solution));
             Console.WriteLine("Distance To Feasibility: "+evaluation.DistanceToFeasibility(gc.solution));
+            Console.WriteLine("Fitness: "+evaluation.Fitness(gc.solution));
             Console.ReadKey();
         }
 

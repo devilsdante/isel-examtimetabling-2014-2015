@@ -41,10 +41,44 @@ namespace Business
 
         public bool Conflict(Examination ex1, Examination ex2)
         {
-            foreach (int student in ex1.students)
-                if (ex2.students.Contains(student))
-                    return true;
+            //foreach (int student in ex1.students)
+            //    if (ex2.students.Contains(student))
+            //        return true;
+            //return false;
+
+            foreach (int student1 in ex1.students)
+            {
+                foreach (int student2 in ex2.students)
+                {
+                    if (student1 > student2)
+                        break;
+                    if (student1 == student2)
+                    {
+                        return true;
+                    }
+                }
+                
+            }
             return false;
+        }
+
+        public int NoOfConflicts(Examination ex1, Examination ex2)
+        {
+            int count = 0;
+
+            foreach (int student1 in ex1.students)
+            {
+                foreach (int student2 in ex2.students)
+                {
+                    if (student1 > student2)
+                        break;
+                    if (student1 == student2) {
+                        ++count; break;
+                    }
+                }
+            }
+
+            return count;
         }
     }
 }
