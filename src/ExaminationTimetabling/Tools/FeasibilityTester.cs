@@ -15,16 +15,14 @@ namespace Tools
         private readonly PeriodHardConstraints period_hard_constraints;
         private readonly RoomHardConstraints room_hard_constraints;
         private readonly Rooms rooms;
-        private readonly bool[,] conflict_matrix;
 
         public FeasibilityTester(Examinations examinations, PeriodHardConstraints period_hard_constraints, RoomHardConstraints room_hard_constraints,
-            Rooms rooms, bool[,] conflict_matrix)
+            Rooms rooms)
         {
             this.examinations = examinations;
             this.period_hard_constraints = period_hard_constraints;
             this.room_hard_constraints = room_hard_constraints;
             this.rooms = rooms;
-            this.conflict_matrix = conflict_matrix;
         }
 
         public bool IsFeasiblePeriod(Solution solution, Examination exam_to_assign, Period period)
@@ -47,9 +45,9 @@ namespace Tools
                 }
             }
 
-            for (int exam_id = 0; exam_id < conflict_matrix.GetLength(0); exam_id += 1)
+            for (int exam_id = 0; exam_id < solution.conflict_matrix.GetLength(0); exam_id += 1)
             {
-                if (conflict_matrix[exam_id, exam_to_assign.id] && solution.epr_associasion[exam_id, 0] == period.id)
+                if (solution.conflict_matrix[exam_id, exam_to_assign.id] && solution.epr_associasion[exam_id, 0] == period.id)
                 {
                     return false; //exam_to_assign has STUDENT or EXCLUSION conflicts with another examination
                 }

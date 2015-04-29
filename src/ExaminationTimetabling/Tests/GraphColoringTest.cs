@@ -26,7 +26,8 @@ namespace Tests
             InstitutionalModelWeightings imw = new InstitutionalModelWeightings(5, 3, 2, new []{2,2,2}, 2);
             mws.Set(imw);
 
-            GraphColoring gc = new GraphColoring(examinations, period_hard_constraints, periods, room_hard_constraints, rooms, solutions);
+            GraphColoring gc = new GraphColoring(examinations, period_hard_constraints, periods, room_hard_constraints, rooms);
+            SimulatedAnnealing sa = new SimulatedAnnealing(examinations, period_hard_constraints, periods, room_hard_constraints, rooms, mws);
 
             EvaluationFunction evaluation = new EvaluationFunction(examinations, period_hard_constraints, room_hard_constraints, rooms, periods, mws);
 
@@ -35,14 +36,35 @@ namespace Tests
             AddDataExaminations(examinations);
             AddDataPeriodHardConstraints(period_hard_constraints);
 
-            PrintExaminationCoincidences(period_hard_constraints);
-            gc.Work();
-            PrintExaminationCoincidences(period_hard_constraints);
-            PrintConflictMatrix(gc, examinations);
-            PrintToFile("..//..//output.txt", gc.solution);
-            Console.WriteLine("Valid: "+evaluation.IsValid(gc.solution));
-            Console.WriteLine("Distance To Feasibility: "+evaluation.DistanceToFeasibility(gc.solution));
-            Console.WriteLine("Fitness: "+evaluation.Fitness(gc.solution));
+            Solution solution = gc.Exec();
+
+            Console.WriteLine("GC Fitness: " + evaluation.Fitness(solution));
+
+            Solution final = sa.Exec(solution, 100, 0);
+
+
+
+            while (true)
+            {
+                
+
+                //Console.WriteLine("GC Valid: " + evaluation.IsValid(solution));
+                //Console.WriteLine("GC Distance To Feasibility: " + evaluation.DistanceToFeasibility(solution));
+                //Console.WriteLine("GC Fitness: " + evaluation.Fitness(solution));
+
+                //PrintToFile("..//..//output.txt", solution);
+
+                final = sa.Exec(final, 100, 0);
+
+                //Console.WriteLine("SA Valid: " + evaluation.IsValid(final));
+                //Console.WriteLine("SA Distance To Feasibility: " + evaluation.DistanceToFeasibility(final));
+                Console.WriteLine("SA Fitness: " + evaluation.Fitness(final));
+
+                //PrintToFile("..//..//outout_final.txt", final);
+            }
+
+            
+
             Console.ReadKey();
         }
 
@@ -54,12 +76,22 @@ namespace Tests
         private static void AddDataRooms(Rooms rooms)
         {
             Room room0 = new Room(0, 5, 0);
-            Room room1 = new Room(1, 7, 0);
-            Room room2 = new Room(2, 7, 0);
+            Room room1 = new Room(1, 7, 10);
+            Room room2 = new Room(2, 7, 50);
+            Room room3 = new Room(3, 7, 500);
+            Room room4 = new Room(4, 7, 1000);
+            Room room5 = new Room(5, 7, 2000);
+            Room room6 = new Room(6, 7, 70);
+            Room room7 = new Room(7, 7, 100);
 
             rooms.Insert(room0);
             rooms.Insert(room1);
-            //rooms.Insert(room2);
+            rooms.Insert(room2);
+            rooms.Insert(room3);
+            rooms.Insert(room4);
+            rooms.Insert(room5);
+            rooms.Insert(room6);
+            rooms.Insert(room7);
         }
 
         private static void AddDataPeriods(Periods periods)
@@ -67,8 +99,8 @@ namespace Tests
             Period period0 = new Period(0, new DateTime(2005, 04, 15, 9, 30, 0), 210, 0);
             Period period1 = new Period(1, new DateTime(2005, 04, 15, 14, 0, 0), 210, 0);
             Period period2 = new Period(2, new DateTime(2005, 04, 18, 9, 30, 0), 210, 0);
-            Period period3 = new Period(3, new DateTime(2005, 04, 18, 14, 0, 0), 210, 70);
-            Period period4 = new Period(4, new DateTime(2005, 04, 19, 9, 30, 0), 210, 50);
+            Period period3 = new Period(3, new DateTime(2005, 04, 18, 14, 0, 0), 210, 0);
+            Period period4 = new Period(4, new DateTime(2005, 04, 19, 9, 30, 0), 210, 0);
 
             periods.Insert(period0);
             periods.Insert(period1);
@@ -140,13 +172,13 @@ namespace Tests
             //a1.duration = 100;
         }
 
-        public static void PrintConflictMatrix(GraphColoring gc, Examinations examinations)
+        public static void PrintConflictMatrix(Solution solution, Examinations examinations)
         {
-            for (int x = 0; x < gc.conflict_matrix.GetLength(0); x += 1)
+            for (int x = 0; x < solution.conflict_matrix.GetLength(0); x += 1)
             {
-                for (int y = 0; y < gc.conflict_matrix.GetLength(1); y += 1)
+                for (int y = 0; y < solution.conflict_matrix.GetLength(1); y += 1)
                 {
-                    Console.Write(gc.conflict_matrix[x, y] + " ");
+                    Console.Write(solution.conflict_matrix[x, y] + " ");
                 }
                 Console.WriteLine();
             }
