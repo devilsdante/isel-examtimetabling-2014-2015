@@ -8,6 +8,7 @@ using Business;
 using DAL;
 using DAL.Models;
 using Tools;
+using Tools.Neighborhood;
 
 namespace Heuristics
 {
@@ -48,12 +49,12 @@ namespace Heuristics
                 int loops = 100;
                 while (loops > 0)
                 {
-                    Solution neighbor = GenerateNeighbor(solution);
+                    INeighbor neighbor = GenerateNeighbor(solution);
 
                     int DeltaE = evaluation.Fitness(neighbor) - evaluation.Fitness(solution);
 
                     if (DeltaE <= 0)
-                        solution = neighbor;
+                        solution = neighbor.Accept();
                         
                     else
                     {
@@ -67,7 +68,7 @@ namespace Heuristics
                         }
 
                         if (random <= acceptance_probability)
-                            solution = neighbor;
+                            solution = neighbor.Accept();
                     }
                     loops--;
                 }
@@ -76,12 +77,16 @@ namespace Heuristics
             return solution;
         }
 
-        private Solution GenerateNeighbor(Solution solution)
+        private INeighbor GenerateNeighbor(Solution solution)
         {
-            Solution to_return = null;
+            INeighbor to_return;
+            int random = new Random().Next(2);
             do
             {
-                to_return = neighbor_selection.RoomMove(solution);
+                if(random == 0)
+                    to_return = neighbor_selection.PeriodMove(solution);
+                else
+                    to_return = neighbor_selection.RoomMove(solution);
             } while (to_return == null);
             return to_return;
         }

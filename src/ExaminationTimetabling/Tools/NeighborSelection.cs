@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Business;
 using DAL;
 using DAL.Models;
+using Tools.Neighborhood;
 
 namespace Tools
 {
@@ -30,7 +31,7 @@ namespace Tools
 
         }
 
-        public Solution RoomMove(Solution solution)
+        public INeighbor RoomMove(Solution solution)
         {
             Examination random_examination = examinations.GetById(new Random((int) DateTime.Now.Ticks).Next(examinations.EntryCount()));
             Period period = periods.GetById(solution.epr_associasion[random_examination.id, 0]);
@@ -43,28 +44,43 @@ namespace Tools
                 if (random_examination.students.Count() > random_room.capacity)
                     continue;
                 if (feasibilityTester.IsFeasibleRoom(solution, random_examination, period, random_room))
-                    return ReplaceRoom(solution, random_examination, period, random_room);
+                    return new RoomChangeNeighbor(solution, random_examination.id, period.id, random_room.id);
             }
             return null;
         }
 
-        private Solution ReplaceRoom(Solution solution, Examination examination, Period period, Room new_room)
+        private INeighbor ReplaceRoom(Solution solution, Examination examination, Period period, Room new_room)
         {
-            Solution neighbor = solution.Copy();
-            neighbor.timetable_container[period.id, solution.epr_associasion[examination.id, 1], examination.id] = false;
+            //Solution neighbor = solution.Copy();
+            //neighbor.timetable_container[period.id, solution.epr_associasion[examination.id, 1], examination.id] = false;
 
-            neighbor.timetable_container[period.id, new_room.id, examination.id] = true;
-            neighbor.epr_associasion[examination.id, 1] = new_room.id;
-            return neighbor;
+            //neighbor.timetable_container[period.id, new_room.id, examination.id] = true;
+            //neighbor.epr_associasion[examination.id, 1] = new_room.id;
+            //return neighbor;
+
+            return new RoomChangeNeighbor(solution, examination.id, period.id, new_room.id);
         }
 
-        public Solution ExaminationSwap(Solution solution)
+        public INeighbor PeriodSwap(Solution solution)
         {
             return null;
         }
 
-        public Solution PeriodMove(Solution solution)
+        public INeighbor PeriodMove(Solution solution)
         {
+            Examination random_examination = examinations.GetById(new Random((int)DateTime.Now.Ticks).Next(examinations.EntryCount()));
+            Room room = rooms.GetById(solution.epr_associasion[random_examination.id, 1]);
+            int random_period_id = new Random((int)DateTime.Now.Ticks).Next(periods.EntryCount());
+
+
+            for (int period_id = 0; period_id < periods.EntryCount(); ++period_id)
+            {
+                Period random_period = periods.GetById((period_id + random_period_id) % periods.EntryCount());
+                if (solution.epr_associasion[random_examination.id, 0] == random_period.id)
+                    continue;
+                if(feasibilityTester.IsFeasiblePeriod(solution, random_examination, random_period))
+                    return new PeriodChangeNeighbor (solution, random_examination.id, random_period.id, room.id);
+            }
             return null;
         }
     }

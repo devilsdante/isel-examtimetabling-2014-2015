@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Business;
 using DAL;
 using DAL.Models;
+using Tools.Neighborhood;
 
 namespace Tools
 {
@@ -358,6 +359,14 @@ namespace Tools
                         conflict_matrix[exam1_id, exam2_id] = false;
                 }
             }
+        }
+
+        public int Fitness(INeighbor neighbor)
+        {
+            Solution new_solution = neighbor.Accept();
+            int fitness = Fitness(new_solution);
+            neighbor.Reverse();
+            return fitness;
         }
     }
 }
