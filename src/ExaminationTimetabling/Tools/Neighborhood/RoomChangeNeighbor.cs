@@ -15,12 +15,12 @@ namespace Tools.Neighborhood
         private readonly int period_id;
         private readonly int old_room_id;
 
-        public RoomChangeNeighbor(Solution solution, int examination_id, int period_id, int new_room_id)
+        public RoomChangeNeighbor(Solution solution, int examination_id, int new_room_id)
         {
             this.solution = solution;
             this.new_room_id = new_room_id;
             this.examination_id = examination_id;
-            this.period_id = period_id;
+            this.period_id = solution.epr_associasion[examination_id, 0];
             this.old_room_id = solution.epr_associasion[examination_id, 1];
         }
 

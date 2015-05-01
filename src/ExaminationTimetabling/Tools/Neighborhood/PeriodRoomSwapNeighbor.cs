@@ -7,7 +7,7 @@ using DAL.Models;
 
 namespace Tools.Neighborhood
 {
-    public class PeriodSwapNeighbor : INeighbor
+    class PeriodRoomSwapNeighbor:INeighbor
     {
         private readonly Solution solution;
         private readonly int examination1_id;
@@ -17,7 +17,7 @@ namespace Tools.Neighborhood
         private readonly int room1_id;
         private readonly int room2_id;
 
-        public PeriodSwapNeighbor(Solution solution, int examination1_id, int examination2_id)
+        public PeriodRoomSwapNeighbor(Solution solution, int examination1_id, int examination2_id)
         {
             this.solution = solution;
             this.examination1_id = examination1_id;
@@ -33,11 +33,13 @@ namespace Tools.Neighborhood
             solution.timetable_container[examination1_id, period1_id, room1_id] = false;
             solution.timetable_container[examination2_id, period2_id, room2_id] = false;
 
-            solution.timetable_container[examination1_id, period2_id, room1_id] = true;
-            solution.timetable_container[examination2_id, period1_id, room2_id] = true;
+            solution.timetable_container[examination1_id, period2_id, room2_id] = true;
+            solution.timetable_container[examination2_id, period1_id, room1_id] = true;
 
             solution.epr_associasion[examination1_id, 0] = period2_id;
             solution.epr_associasion[examination2_id, 0] = period1_id;
+            solution.epr_associasion[examination1_id, 1] = room2_id;
+            solution.epr_associasion[examination2_id, 1] = room1_id;
             return solution;
         }
 
@@ -46,11 +48,13 @@ namespace Tools.Neighborhood
             solution.timetable_container[examination1_id, period1_id, room1_id] = true;
             solution.timetable_container[examination2_id, period2_id, room2_id] = true;
 
-            solution.timetable_container[examination1_id, period2_id, room1_id] = false;
-            solution.timetable_container[examination2_id, period1_id, room2_id] = false;
+            solution.timetable_container[examination1_id, period2_id, room2_id] = false;
+            solution.timetable_container[examination2_id, period1_id, room1_id] = false;
 
             solution.epr_associasion[examination1_id, 0] = period1_id;
             solution.epr_associasion[examination2_id, 0] = period2_id;
+            solution.epr_associasion[examination1_id, 1] = room1_id;
+            solution.epr_associasion[examination2_id, 1] = room2_id;
             return solution;
         }
     }

@@ -84,9 +84,9 @@ namespace Heuristics
             do
             {
                 if(random == 0)
-                    to_return = neighbor_selection.PeriodMove(solution);
+                    to_return = neighbor_selection.PeriodChange(solution);
                 else
-                    to_return = neighbor_selection.RoomMove(solution);
+                    to_return = neighbor_selection.RoomChange(solution);
             } while (to_return == null);
             return to_return;
         }

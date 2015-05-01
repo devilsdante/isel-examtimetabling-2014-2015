@@ -40,7 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FeasibilityTester.cs" />
-    <Compile Include="Neighborhood\ExamSwapNeighbor.cs" />
+    <Compile Include="Neighborhood\PeriodRoomSwapNeighbor.cs" />
     <Compile Include="Neighborhood\PeriodChangeNeighbor.cs" />
     <Compile Include="Neighborhood\PeriodRoomChangeNeighbor.cs" />
     <Compile Include="Neighborhood\PeriodSwapNeighbor.cs" />
