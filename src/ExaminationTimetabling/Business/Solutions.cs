@@ -10,11 +10,27 @@ namespace Business
 {
     public class Solutions
     {
+        private static Solutions instance;
+
+        public static Solutions Instance(int size)
+        {
+            if (instance == null)
+                instance = new Solutions(size);
+            return instance;
+        }
+
+        public static Solutions Instance()
+        {
+            return instance;
+        }
+
+        /*******************/
+
         IRepository<Solution> solutions_repo;
 
-        public Solutions(int size)
+        private Solutions(int size)
         {
-            solutions_repo = Repository<Solution>.Instance(size);
+            solutions_repo = new Repository<Solution>(size);
         }
 
         public void Insert(Solution solution)

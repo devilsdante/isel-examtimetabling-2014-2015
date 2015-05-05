@@ -17,38 +17,26 @@ namespace Heuristics
 
         public FeasibilityTester feasibility_tester;
         private Solution solution;
-        private readonly Examinations examinations;
-        private readonly PeriodHardConstraints period_hard_constraints;
-        private readonly Periods periods;
-        private readonly RoomHardConstraints room_hard_constraints;
-        private readonly Rooms rooms;
-        private readonly ModelWeightings model_weightings;
         private readonly EvaluationFunction evaluation;
         private readonly NeighborSelection neighbor_selection;
 
 
-        public SimulatedAnnealing(Examinations examinations, PeriodHardConstraints period_hard_constraints, Periods periods, RoomHardConstraints room_hard_constraints,
-            Rooms rooms, ModelWeightings model_weightings)
+        public SimulatedAnnealing()
         {
-            this.examinations = examinations;
-            this.period_hard_constraints = period_hard_constraints;
-            this.periods = periods;
-            this.room_hard_constraints = room_hard_constraints;
-            this.rooms = rooms;
-            this.model_weightings = model_weightings;
-            evaluation = new EvaluationFunction(examinations, period_hard_constraints, room_hard_constraints, rooms, periods, model_weightings);
-            neighbor_selection = new NeighborSelection(examinations, period_hard_constraints, room_hard_constraints, rooms, periods);
+            evaluation = new EvaluationFunction();
+            neighbor_selection = new NeighborSelection();
         }
 
         public Solution Exec(Solution solution, int TMax, int TMin)
         {
             int T = TMax;
-
+            
             while (T > TMin)
             {
-                int loops = 100;
+                int loops = 200;
                 while (loops > 0)
                 {
+                    //Console.WriteLine("DTF " + evaluation.DistanceToFeasibility(solution));
                     INeighbor neighbor = GenerateNeighbor(solution);
 
                     int DeltaE = evaluation.Fitness(neighbor) - evaluation.Fitness(solution);
@@ -70,6 +58,11 @@ namespace Heuristics
                         if (random <= acceptance_probability)
                             solution = neighbor.Accept();
                     }
+                    int dtf = evaluation.DistanceToFeasibility(solution);
+                    if (dtf != 0)
+                    {
+                        throw new Exception("Distance to feasibility is not zero! DTF: "+dtf);
+                    }
                     loops--;
                 }
                 T--;
@@ -80,13 +73,15 @@ namespace Heuristics
         private INeighbor GenerateNeighbor(Solution solution)
         {
             INeighbor to_return;
-            int random = new Random().Next(2);
+            int random = new Random().Next(3);
             do
             {
                 if(random == 0)
-                    to_return = neighbor_selection.PeriodChange(solution);
-                else
+                    to_return = neighbor_selection.PeriodRoomChange(solution);
+                else if(random == 1)
                     to_return = neighbor_selection.RoomChange(solution);
+                else
+                    to_return = neighbor_selection.PeriodChange(solution);
             } while (to_return == null);
             return to_return;
         }

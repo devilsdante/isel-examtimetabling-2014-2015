@@ -11,11 +11,27 @@ namespace Business
 {
     public class PeriodHardConstraints
     {
+        private static PeriodHardConstraints instance;
+
+        public static PeriodHardConstraints Instance(int size)
+        {
+            if (instance == null)
+                instance = new PeriodHardConstraints(size);
+            return instance;
+        }
+
+        public static PeriodHardConstraints Instance()
+        {
+            return instance;
+        }
+
+        /*******************/
+
         IRepository<PeriodHardConstraint> period_hard_constraints_repo;
 
-        public PeriodHardConstraints(int size)
+        private PeriodHardConstraints(int size)
         {
-            period_hard_constraints_repo = Repository<PeriodHardConstraint>.Instance(size);
+            period_hard_constraints_repo = new Repository<PeriodHardConstraint>(size);
         }
 
         public void Insert(PeriodHardConstraint exam)

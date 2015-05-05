@@ -10,11 +10,27 @@ namespace Business
 {
     public class RoomHardConstraints
     {
+        private static RoomHardConstraints instance;
+
+        public static RoomHardConstraints Instance(int size)
+        {
+            if (instance == null)
+                instance = new RoomHardConstraints(size);
+            return instance;
+        }
+
+        public static RoomHardConstraints Instance()
+        {
+            return instance;
+        }
+
+        /*******************/
+
         IRepository<RoomHardConstraint> room_hard_constraints_repo;
 
-        public RoomHardConstraints(int size)
+        private RoomHardConstraints(int size)
         {
-            room_hard_constraints_repo = Repository<RoomHardConstraint>.Instance(size);
+            room_hard_constraints_repo = new Repository<RoomHardConstraint>(size);
         }
 
         public void Insert(RoomHardConstraint exam)

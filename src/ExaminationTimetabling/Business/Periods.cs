@@ -10,11 +10,27 @@ namespace Business
 {
     public class Periods
     {
+        private static Periods instance;
+
+        public static Periods Instance(int size)
+        {
+            if (instance == null)
+                instance = new Periods(size);
+            return instance;
+        }
+
+        public static Periods Instance()
+        {
+            return instance;
+        }
+
+        /*******************/
+
         IRepository<Period> periods_repo;
 
-        public Periods(int size)
+        private Periods(int size)
         {
-            periods_repo = Repository<Period>.Instance(size);
+            periods_repo = new Repository<Period>(size);
         }
 
 

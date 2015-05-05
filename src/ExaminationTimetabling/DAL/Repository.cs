@@ -13,22 +13,22 @@ namespace DAL
          * Singleton Pattern
          */
 
-        private static Repository<T> instance;
+        //private static Repository<T> instance;
 
-        public static Repository<T> Instance(int size)
-        {
-                if (instance == null)
-                {
-                    instance = new Repository<T>(size);
-                }
-                return instance;
-        }
+        //public static Repository<T> Instance(int size)
+        //{
+        //    if (instance == null)
+        //    {
+        //        instance = new Repository<T>(size);
+        //    }
+        //    return instance;
+        //}
 
         /*******************/
 
         protected List<T> list;
 
-        private Repository(int size)
+        public Repository(int size)
         {
             list = new List<T>(size);
         }

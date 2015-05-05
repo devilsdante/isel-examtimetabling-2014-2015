@@ -29,11 +29,11 @@ namespace Tools.Neighborhood
         }
         public Solution Accept()
         {
-            solution.timetable_container[examination1_id, period1_id, room1_id] = false;
-            solution.timetable_container[examination2_id, period2_id, room2_id] = false;
+            solution.timetable_container[period1_id, room1_id, examination1_id] = false;
+            solution.timetable_container[period2_id, room2_id, examination2_id] = false;
 
-            solution.timetable_container[examination1_id, period1_id, room2_id] = true;
-            solution.timetable_container[examination2_id, period2_id, room1_id] = true;
+            solution.timetable_container[period1_id, room2_id, examination1_id] = true;
+            solution.timetable_container[period2_id, room1_id, examination2_id] = true;
 
             solution.epr_associasion[examination1_id, 1] = room2_id;
             solution.epr_associasion[examination2_id, 1] = room1_id;
@@ -42,11 +42,11 @@ namespace Tools.Neighborhood
 
         public Solution Reverse()
         {
-            solution.timetable_container[examination1_id, period1_id, room1_id] = true;
-            solution.timetable_container[examination2_id, period2_id, room2_id] = true;
+            solution.timetable_container[period1_id, room1_id, examination1_id] = true;
+            solution.timetable_container[period2_id, room2_id, examination2_id] = true;
 
-            solution.timetable_container[examination1_id, period1_id, room2_id] = false;
-            solution.timetable_container[examination2_id, period2_id, room1_id] = false;
+            solution.timetable_container[period1_id, room2_id, examination1_id] = false;
+            solution.timetable_container[period2_id, room1_id, examination2_id] = false;
 
             solution.epr_associasion[examination1_id, 1] = room1_id;
             solution.epr_associasion[examination2_id, 1] = room2_id;

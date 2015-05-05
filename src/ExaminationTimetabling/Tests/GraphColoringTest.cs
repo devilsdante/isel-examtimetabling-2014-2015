@@ -16,25 +16,28 @@ namespace Tests
         static void Main()
         {
             //testing
-            Examinations examinations = new Examinations(10);
-            PeriodHardConstraints period_hard_constraints = new PeriodHardConstraints(4);
-            Periods periods = new Periods(5);
-            RoomHardConstraints room_hard_constraints = new RoomHardConstraints(0);
-            Rooms rooms = new Rooms(3);
-            Solutions solutions = new Solutions(1);
-            ModelWeightings mws = new ModelWeightings();
-            InstitutionalModelWeightings imw = new InstitutionalModelWeightings(5, 3, 2, new []{2,2,2}, 2);
-            mws.Set(imw);
-
-            GraphColoring gc = new GraphColoring(examinations, period_hard_constraints, periods, room_hard_constraints, rooms);
-            SimulatedAnnealing sa = new SimulatedAnnealing(examinations, period_hard_constraints, periods, room_hard_constraints, rooms, mws);
-
-            EvaluationFunction evaluation = new EvaluationFunction(examinations, period_hard_constraints, room_hard_constraints, rooms, periods, mws);
+            Examinations examinations = Examinations.Instance(10);
+            PeriodHardConstraints period_hard_constraints = PeriodHardConstraints.Instance(4);
+            Periods periods = Periods.Instance(5);
+            RoomHardConstraints room_hard_constraints = RoomHardConstraints.Instance(0);
+            Rooms rooms = Rooms.Instance(3);
+            Solutions solutions = Solutions.Instance(1);
+            ModelWeightings model_weightings = ModelWeightings.Instance(new InstitutionalModelWeightings(5, 3, 2, new []{2,2,2}, 2));
 
             AddDataRooms(rooms);
             AddDataPeriods(periods);
             AddDataExaminations(examinations);
             AddDataPeriodHardConstraints(period_hard_constraints);
+
+            NeighborSelection neighbor_selection = new NeighborSelection();
+            EvaluationFunction evaluation = new EvaluationFunction();
+
+            GraphColoring gc = new GraphColoring();
+            SimulatedAnnealing sa = new SimulatedAnnealing();
+
+            
+
+            
 
             Solution solution = gc.Exec();
 
@@ -54,7 +57,7 @@ namespace Tests
 
                 //PrintToFile("..//..//output.txt", solution);
 
-                final = sa.Exec(final, 100, 0);
+                final = sa.Exec(final, 200, 0);
 
                 //Console.WriteLine("SA Valid: " + evaluation.IsValid(final));
                 //Console.WriteLine("SA Distance To Feasibility: " + evaluation.DistanceToFeasibility(final));

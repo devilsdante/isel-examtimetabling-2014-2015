@@ -10,11 +10,27 @@ namespace Business
 {
     public class Examinations
     {
+        private static Examinations instance;
+
+        public static Examinations Instance(int size)
+        {
+            if(instance == null)
+                instance = new Examinations(size);
+            return instance;
+        }
+
+        public static Examinations Instance()
+        {
+            return instance;
+        }
+
+        /*******************/
+
         IRepository<Examination> examinations_repo;
 
-        public Examinations(int size)
+        private Examinations(int size)
         {
-            examinations_repo = Repository<Examination>.Instance(size);
+            examinations_repo = new Repository<Examination>(size);
         }
 
         public void Insert(Examination exam)

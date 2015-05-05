@@ -16,13 +16,12 @@ namespace Tools
         private readonly RoomHardConstraints room_hard_constraints;
         private readonly Rooms rooms;
 
-        public FeasibilityTester(Examinations examinations, PeriodHardConstraints period_hard_constraints, RoomHardConstraints room_hard_constraints,
-            Rooms rooms)
+        public FeasibilityTester()
         {
-            this.examinations = examinations;
-            this.period_hard_constraints = period_hard_constraints;
-            this.room_hard_constraints = room_hard_constraints;
-            this.rooms = rooms;
+            examinations = Examinations.Instance();
+            rooms = Rooms.Instance();
+            room_hard_constraints = RoomHardConstraints.Instance();
+            period_hard_constraints = PeriodHardConstraints.Instance();
         }
 
         public bool IsFeasiblePeriod(Solution solution, Examination exam_to_assign, Period period)

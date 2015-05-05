@@ -9,12 +9,33 @@ namespace Business
 {
     public class ModelWeightings
     {
-        private InstitutionalModelWeightings imw;
 
-        public ModelWeightings(){
+        private static ModelWeightings instance;
+
+        public static ModelWeightings Instance()
+        {
+            if(instance == null)
+                instance = new ModelWeightings();
+            return instance;
         }
 
-        public ModelWeightings(InstitutionalModelWeightings imw)
+        public static ModelWeightings Instance(InstitutionalModelWeightings imw)
+        {
+            if (instance == null)
+                instance = new ModelWeightings(imw);
+            return instance;
+        }
+
+        /*******************/
+
+        private InstitutionalModelWeightings imw;
+
+        private ModelWeightings()
+        {
+
+        }
+
+        private ModelWeightings(InstitutionalModelWeightings imw)
         {
             this.imw = imw;
         }

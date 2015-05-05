@@ -10,11 +10,27 @@ namespace Business
 {
     public class Rooms
     {
+        private static Rooms instance;
+
+        public static Rooms Instance(int size)
+        {
+            if (instance == null)
+                instance = new Rooms(size);
+            return instance;
+        }
+
+        public static Rooms Instance()
+        {
+            return instance;
+        }
+
+        /*******************/
+
         IRepository<Room> rooms_repo;
 
-        public Rooms(int size)
+        private Rooms(int size)
         {
-            rooms_repo = Repository<Room>.Instance(size);
+            rooms_repo = new Repository<Room>(size);
         }
 
         public void Insert(Room exam)

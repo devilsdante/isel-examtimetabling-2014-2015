@@ -19,7 +19,7 @@ namespace Heuristics
         private readonly Rooms rooms;
         
         
-        public FeasibilityTester feasibility_tester;
+        private FeasibilityTester feasibility_tester;
         //public bool[,] conflict_matrix;
         private Solution solution;
         private List<Examination> unassigned_examinations;
@@ -29,21 +29,20 @@ namespace Heuristics
         private List<Examination> assigned_examinations;
 
 
-        public GraphColoring(Examinations examinations, PeriodHardConstraints period_hard_constraints, Periods periods, RoomHardConstraints room_hard_constraints, 
-            Rooms rooms)
+        public GraphColoring()
         {
-            this.examinations = examinations;
-            this.period_hard_constraints = period_hard_constraints;
-            this.periods = periods;
-            this.room_hard_constraints = room_hard_constraints;
-            this.rooms = rooms;
+            examinations = Examinations.Instance();
+            period_hard_constraints = PeriodHardConstraints.Instance();
+            periods = Periods.Instance();
+            room_hard_constraints = RoomHardConstraints.Instance();
+            rooms = Rooms.Instance();
         }
 
         public Solution Exec()
         {
             solution = new Solution(0, periods.EntryCount(), rooms.EntryCount(), examinations.EntryCount());
 
-            feasibility_tester = new FeasibilityTester(examinations, period_hard_constraints, room_hard_constraints, rooms);
+            feasibility_tester = new FeasibilityTester();
 
             PopulateConflictMatrix();
 

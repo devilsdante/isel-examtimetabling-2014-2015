@@ -28,9 +28,9 @@ namespace Tools.Neighborhood
 
         public Solution Accept()
         {
-            solution.timetable_container[examination_id, old_period_id, old_room_id] = false;
+            solution.timetable_container[old_period_id, old_room_id, examination_id] = false;
 
-            solution.timetable_container[examination_id, new_period_id, new_room_id] = true;
+            solution.timetable_container[new_period_id, new_room_id, examination_id] = true;
             solution.epr_associasion[examination_id, 0] = new_period_id;
             solution.epr_associasion[examination_id, 1] = new_room_id;
             return solution;
@@ -38,9 +38,9 @@ namespace Tools.Neighborhood
 
         public Solution Reverse()
         {
-            solution.timetable_container[examination_id, old_period_id, old_room_id] = true;
+            solution.timetable_container[old_period_id, old_room_id, examination_id] = true;
 
-            solution.timetable_container[examination_id, new_period_id, new_room_id] = false;
+            solution.timetable_container[new_period_id, new_room_id, examination_id] = false;
             solution.epr_associasion[examination_id, 0] = old_period_id;
             solution.epr_associasion[examination_id, 1] = old_room_id;
             return solution;

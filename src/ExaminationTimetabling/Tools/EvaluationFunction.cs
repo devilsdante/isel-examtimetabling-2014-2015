@@ -20,29 +20,36 @@ namespace Tools
         private readonly Periods periods;
         private readonly ModelWeightings model_weightings;
 
+        public int student_conflicts_hc;
+        public int period_lengths_hc;
+        public int exam_coincidence_hc;
+        public int exam_exclusion_hc;
+        public int exam_after_hc;
+        public int room_exclusivity_hc;
+        public int room_capacity_hc;
 
 
-        public EvaluationFunction(Examinations examinations, PeriodHardConstraints period_hard_constraints, RoomHardConstraints room_hard_constraints,
-            Rooms rooms, Periods periods, ModelWeightings model_weightings)
+
+        public EvaluationFunction()
         {
-            this.examinations = examinations;
-            this.period_hard_constraints = period_hard_constraints;
-            this.room_hard_constraints = room_hard_constraints;
-            this.rooms = rooms;
-            this.periods = periods;
-            this.model_weightings = model_weightings;
+            examinations = Examinations.Instance();
+            period_hard_constraints = PeriodHardConstraints.Instance();
+            periods = Periods.Instance();
+            room_hard_constraints = RoomHardConstraints.Instance();
+            rooms = Rooms.Instance();
+            model_weightings = ModelWeightings.Instance();
             PopulateConflictMatrix();
         }
 
         public int DistanceToFeasibility(Solution solution)
         {
-            int student_conflicts_hc = 0;
-            int period_lengths_hc = 0;
-            int exam_coincidence_hc = 0;
-            int exam_exclusion_hc = 0;
-            int exam_after_hc = 0;
-            int room_exclusivity_hc = 0;
-            int room_capacity_hc = 0;
+            student_conflicts_hc = 0;
+            period_lengths_hc = 0;
+            exam_coincidence_hc = 0;
+            exam_exclusion_hc = 0;
+            exam_after_hc = 0;
+            room_exclusivity_hc = 0;
+            room_capacity_hc = 0;
 
             if (!IsValid(solution))
                 return -1;
@@ -52,6 +59,7 @@ namespace Tools
             for (int exam1_id = 0; exam1_id < conflict_matrix.GetLength(0); ++exam1_id)
             {
                 for (int exam2_id = exam1_id + 1; exam2_id < conflict_matrix.GetLength(1); ++exam2_id)
+                //for (int exam2_id = 0; exam2_id < conflict_matrix.GetLength(1); ++exam2_id)
                 {
                     if (conflict_matrix[exam1_id, exam2_id] && solution.epr_associasion[exam1_id, 0] == solution.epr_associasion[exam2_id, 0])
                     {
@@ -284,12 +292,13 @@ namespace Tools
                     {
                         if (solution.timetable_container[period_id, room_id, exam_id])
                         {
-                            int curr_size = examinations.GetById(exam_id).students.Count();
-                            if(!sizes.Contains(curr_size))
-                                sizes.Add(curr_size);
+                            int curr_duration = examinations.GetById(exam_id).duration;
+                            if (!sizes.Contains(curr_duration))
+                                sizes.Add(curr_duration);
                         }
                     }
-                    mixed_durations += (sizes.Count() - 1)*model_weightings.Get().non_mixed_durations;
+                    if(sizes.Count != 0)
+                        mixed_durations += (sizes.Count() - 1)*model_weightings.Get().non_mixed_durations;
                 }
             }
 
