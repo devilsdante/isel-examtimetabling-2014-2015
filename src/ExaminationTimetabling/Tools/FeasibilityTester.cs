@@ -78,12 +78,12 @@ namespace Tools
         {
             int room_capacity = RoomCurrentCapacityOnPeriod(solution, period, room);
 
+            if (exam_to_assign.students.Count() > room_capacity)
+                return false; //exam_to_assign's number of students must not surpass the CLASSROOM's CAPACITY
+
             if (room_hard_constraints.HasRoomExclusivesWithExam(exam_to_assign.id) &&
                 room_capacity != room.capacity)
                 return false; //exam_to_assign needs room EXCLUSIVITY
-
-            if (exam_to_assign.students.Count() > room_capacity)
-                return false; //exam_to_assign's number of students must not surpass the CLASSROOM's CAPACITY
 
             return true; //exam_to_assign can be assign
         }

@@ -172,7 +172,7 @@ namespace Heuristics
 
         private void ExaminationNormalAssignment(Examination exam_to_assign)
         {
-            Console.WriteLine("Normal!");
+            //Console.WriteLine("Normal!");
             int n_of_feasibles = periods.GetAll().Count(period => feasibility_tester.IsFeasiblePeriod(solution, exam_to_assign, period));
             Random random = new Random();
             int random_assignable = random.Next(n_of_feasibles);
@@ -217,7 +217,7 @@ namespace Heuristics
 
         private void ExaminationForcingAssignment(Examination exam_to_assign)
         {
-            Console.WriteLine("Forced!");
+            //Console.WriteLine("Forced!");
             Random random = new Random();
             int random_room = -1;
             int random_period = -1;
@@ -362,7 +362,7 @@ namespace Heuristics
                     {
                         --n_of_examinations_in_period_and_room;
                         room_to_assign_curr_capacity +=
-                            GetStudentCountFromExaminationAndCoincidences(examinations.GetById(exam_id));//examinations.GetById(exam_id).students.Count();
+                            GetStudentCountFromExaminationAndCoincidences(examinations.GetById(exam_id));
                         UnassignExaminationAndCoincidences(examinations.GetById(exam_id));
                         break;
                     }
@@ -409,18 +409,6 @@ namespace Heuristics
 
         private void UnassignExaminationAndCoincidences(Examination exam)
         {
-            //UnassignExamination(exam);
-
-            //foreach (
-            //    PeriodHardConstraint phc in
-            //        period_hard_constraints.GetByTypeWithExamId(PeriodHardConstraint.types.EXAM_COINCIDENCE, exam.id))
-            //{
-            //    int exam2 = phc.ex1 == exam.id ? phc.ex2 : phc.ex1;
-
-            //    if (solution.epr_associasion[exam2, 0] != -1 || solution.epr_associasion[exam2, 1] != -1)
-            //        UnassignExaminationAndCoincidences(examinations.GetById(exam2));
-            //}
-
             foreach (int exam_id in period_hard_constraints.GetAllExaminationsWithChainingCoincidence(exam.id))
             {
                 UnassignExamination(examinations.GetById(exam_id));

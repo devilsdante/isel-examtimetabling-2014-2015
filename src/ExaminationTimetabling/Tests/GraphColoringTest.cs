@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,7 +23,7 @@ namespace Tests
             RoomHardConstraints room_hard_constraints = RoomHardConstraints.Instance(0);
             Rooms rooms = Rooms.Instance(3);
             Solutions solutions = Solutions.Instance(1);
-            ModelWeightings model_weightings = ModelWeightings.Instance(new InstitutionalModelWeightings(5, 3, 2, new []{2,2,2}, 2));
+            ModelWeightings model_weightings = ModelWeightings.Instance(new InstitutionalModelWeightings(5, 3, 2, new []{2,2,20000}, 2));
 
             AddDataRooms(rooms);
             AddDataPeriods(periods);
@@ -43,27 +44,29 @@ namespace Tests
 
             Console.WriteLine("GC Fitness: " + evaluation.Fitness(solution));
 
-            Solution final = sa.Exec(solution, 100, 0);
+            Solution final;
 
 
 
             while (true)
             {
-                
 
+                var watch = Stopwatch.StartNew();
                 //Console.WriteLine("GC Valid: " + evaluation.IsValid(solution));
                 //Console.WriteLine("GC Distance To Feasibility: " + evaluation.DistanceToFeasibility(solution));
                 //Console.WriteLine("GC Fitness: " + evaluation.Fitness(solution));
 
                 //PrintToFile("..//..//output.txt", solution);
 
-                final = sa.Exec(final, 200, 0);
+                final = sa.Exec(solution, 1095, 0);
 
                 //Console.WriteLine("SA Valid: " + evaluation.IsValid(final));
                 //Console.WriteLine("SA Distance To Feasibility: " + evaluation.DistanceToFeasibility(final));
                 Console.WriteLine("SA Fitness: " + evaluation.Fitness(final));
 
-                //PrintToFile("..//..//outout_final.txt", final);
+                watch.Stop();
+                Console.WriteLine("Time: " + watch.ElapsedMilliseconds / 60000);
+                PrintToFile("..//..//outout_final.txt", final);
             }
 
             

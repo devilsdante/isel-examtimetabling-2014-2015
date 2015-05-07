@@ -33,7 +33,7 @@ namespace Heuristics
             
             while (T > TMin)
             {
-                int loops = 200;
+                int loops = 1095;
                 while (loops > 0)
                 {
                     //Console.WriteLine("DTF " + evaluation.DistanceToFeasibility(solution));
@@ -73,15 +73,21 @@ namespace Heuristics
         private INeighbor GenerateNeighbor(Solution solution)
         {
             INeighbor to_return;
-            int random = new Random().Next(3);
+            int random = new Random().Next(6);
             do
             {
                 if(random == 0)
-                    to_return = neighbor_selection.PeriodRoomChange(solution);
-                else if(random == 1)
                     to_return = neighbor_selection.RoomChange(solution);
-                else
+                else if(random == 1)
                     to_return = neighbor_selection.PeriodChange(solution);
+                else if (random == 2)
+                    to_return = neighbor_selection.PeriodRoomChange(solution);
+                else if (random == 3)
+                    to_return = neighbor_selection.RoomSwap(solution);
+                else if (random == 4)
+                    to_return = neighbor_selection.PeriodSwap(solution);
+                else
+                    to_return = neighbor_selection.PeriodRoomSwap(solution);
             } while (to_return == null);
             return to_return;
         }

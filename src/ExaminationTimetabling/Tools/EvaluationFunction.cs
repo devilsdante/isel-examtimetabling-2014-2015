@@ -377,5 +377,13 @@ namespace Tools
             neighbor.Reverse();
             return fitness;
         }
+
+        public int DistanceToFeasibility(INeighbor neighbor)
+        {
+            Solution new_solution = neighbor.Accept();
+            int dtf = DistanceToFeasibility(new_solution);
+            neighbor.Reverse();
+            return dtf;
+        }
     }
 }

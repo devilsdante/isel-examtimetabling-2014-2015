@@ -62,18 +62,29 @@ namespace Business
             //        return true;
             //return false;
 
-            foreach (int student1 in ex1.students)
+            //foreach (int student1 in ex1.students)
+            //{
+            //    foreach (int student2 in ex2.students)
+            //    {
+            //        if (student1 > student2)
+            //            break;
+            //        if (student1 == student2)
+            //        {
+            //            return true;
+            //        }
+            //    }
+            //}
+            //return false;
+
+            int i = 0, j = 0;
+            while (i < ex1.students.Count() && j < ex2.students.Count())
             {
-                foreach (int student2 in ex2.students)
-                {
-                    if (student1 > student2)
-                        break;
-                    if (student1 == student2)
-                    {
-                        return true;
-                    }
-                }
-                
+                if (ex1.students.ElementAt(i) == ex2.students.ElementAt(j))
+                    return true;
+                if (ex1.students.ElementAt(i) < ex2.students.ElementAt(j))
+                    ++i;
+                else
+                    ++j;
             }
             return false;
         }
