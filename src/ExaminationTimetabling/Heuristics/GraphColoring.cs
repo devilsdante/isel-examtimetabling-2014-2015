@@ -20,7 +20,6 @@ namespace Heuristics
         
         
         private FeasibilityTester feasibility_tester;
-        //public bool[,] conflict_matrix;
         private Solution solution;
         private List<Examination> unassigned_examinations;
         private List<Examination> unassigned_examinations_with_after;

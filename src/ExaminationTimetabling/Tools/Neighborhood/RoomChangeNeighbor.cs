@@ -9,6 +9,7 @@ namespace Tools.Neighborhood
 {
     public class RoomChangeNeighbor : INeighbor
     {
+        public int fitness { get; set; }
         private readonly Solution solution;
         private readonly int new_room_id;
         private readonly int examination_id;
@@ -17,6 +18,7 @@ namespace Tools.Neighborhood
 
         public RoomChangeNeighbor(Solution solution, int examination_id, int new_room_id)
         {
+            this.fitness = -1;
             this.solution = solution;
             this.new_room_id = new_room_id;
             this.examination_id = examination_id;

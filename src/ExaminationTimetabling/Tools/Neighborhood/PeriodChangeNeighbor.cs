@@ -9,6 +9,7 @@ namespace Tools.Neighborhood
 {
     public class PeriodChangeNeighbor : INeighbor
     {
+        public int fitness { get; set; }
         private readonly Solution solution;
         private readonly int examination_id;
         private readonly int room_id;
@@ -17,6 +18,7 @@ namespace Tools.Neighborhood
 
         public PeriodChangeNeighbor(Solution solution, int examination_id, int new_period_id)
         {
+            this.fitness = -1;
             this.solution = solution;
             this.new_period_id = new_period_id;
             this.examination_id = examination_id;

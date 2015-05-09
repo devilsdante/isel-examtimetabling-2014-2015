@@ -46,27 +46,29 @@ namespace Tests
 
             Solution final;
 
-
-
             while (true)
             {
+                sa = new SimulatedAnnealing();
+                final = solution.Copy();
 
-                var watch = Stopwatch.StartNew();
-                //Console.WriteLine("GC Valid: " + evaluation.IsValid(solution));
-                //Console.WriteLine("GC Distance To Feasibility: " + evaluation.DistanceToFeasibility(solution));
-                //Console.WriteLine("GC Fitness: " + evaluation.Fitness(solution));
+                final = sa.ExecTimer(final, 1095, 0, 1000 * 60, SimulatedAnnealing.types.RANDOM);
 
-                //PrintToFile("..//..//output.txt", solution);
+                Console.WriteLine("SARa Fitness: " + evaluation.Fitness(final));
+//
+                sa = new SimulatedAnnealing();
+                final = solution.Copy();
 
-                final = sa.Exec(solution, 1095, 0);
+                final = sa.ExecTimer(final, 1095, 0, 1000 * 60, SimulatedAnnealing.types.GUIDED1);
 
-                //Console.WriteLine("SA Valid: " + evaluation.IsValid(final));
-                //Console.WriteLine("SA Distance To Feasibility: " + evaluation.DistanceToFeasibility(final));
-                Console.WriteLine("SA Fitness: " + evaluation.Fitness(final));
+                Console.WriteLine("SAG1 Fitness: " + evaluation.Fitness(final));
+                //PrintToFile("..//..//outout_final.txt", final);
+//
+                sa = new SimulatedAnnealing();
+                final = solution.Copy();
 
-                watch.Stop();
-                Console.WriteLine("Time: " + watch.ElapsedMilliseconds / 60000);
-                PrintToFile("..//..//outout_final.txt", final);
+                final = sa.ExecTimer(final, 1095, 0, 1000 * 60, SimulatedAnnealing.types.GUIDED2);
+
+                Console.WriteLine("SAG2 Fitness: " + evaluation.Fitness(final));
             }
 
             

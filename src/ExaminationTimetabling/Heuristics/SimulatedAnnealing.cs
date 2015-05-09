@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -20,6 +21,15 @@ namespace Heuristics
         private readonly EvaluationFunction evaluation;
         private readonly NeighborSelection neighbor_selection;
 
+        public enum types { RANDOM, GUIDED1, GUIDED2 };
+
+        private int room_change;
+        private int period_change;
+        private int period_room_change;
+        private int room_swap;
+        private int period_swap;
+        private int period_room_swap;
+
 
         public SimulatedAnnealing()
         {
@@ -27,50 +37,105 @@ namespace Heuristics
             neighbor_selection = new NeighborSelection();
         }
 
-        public Solution Exec(Solution solution, int TMax, int TMin)
+        public Solution Exec(Solution solution, int TMax, int TMin, int loops, types type)
         {
-            int T = TMax;
-            
-            while (T > TMin)
-            {
-                int loops = 1095;
-                while (loops > 0)
-                {
-                    //Console.WriteLine("DTF " + evaluation.DistanceToFeasibility(solution));
-                    INeighbor neighbor = GenerateNeighbor(solution);
+            InitVals(type);
 
-                    int DeltaE = evaluation.Fitness(neighbor) - evaluation.Fitness(solution);
+            for (int T = TMax; T > TMin; --T)
+            {
+                for (int loop = loops; loop > 0; --loop)
+                {
+                    INeighbor neighbor = null;
+                    if(type == types.RANDOM)
+                        neighbor = GenerateRandomNeighbor(solution);
+                    else if (type == types.GUIDED1)
+                        neighbor = GenerateGuidedNeighbor1(solution);
+                    else
+                        neighbor = GenerateGuidedNeighbor2(solution);
+
+                    neighbor.fitness = (neighbor.fitness == -1) ? evaluation.Fitness(neighbor) : neighbor.fitness;
+                    solution.fitness = (solution.fitness == -1) ? evaluation.Fitness(solution) : solution.fitness;
+
+                    int DeltaE = neighbor.fitness - solution.fitness;
 
                     if (DeltaE <= 0)
+                    {
                         solution = neighbor.Accept();
-                        
+                        solution.fitness = neighbor.fitness;
+                    }
                     else
                     {
-                        double acceptance_probability = Math.Pow(Math.E, (-(float)DeltaE)/T);
-                        double random = new Random((int) DateTime.Now.Ticks).NextDouble();
-
-                        if (T % 1 == 0 || T < 10)
-                        {
-                            //Console.WriteLine("so-----------------------" + evaluation.Fitness(solution));
-                            //Console.WriteLine("acceptance_probability:--" + acceptance_probability*100);
-                        }
+                        double acceptance_probability = Math.Pow(Math.E, (-(float)DeltaE) / T);
+                        double random = new Random((int)DateTime.Now.Ticks).NextDouble();
 
                         if (random <= acceptance_probability)
+                        {
                             solution = neighbor.Accept();
+                            solution.fitness = neighbor.fitness;
+                        }
+
+                        else
+                            continue;
                     }
                     int dtf = evaluation.DistanceToFeasibility(solution);
                     if (dtf != 0)
                     {
-                        throw new Exception("Distance to feasibility is not zero! DTF: "+dtf);
+                        throw new Exception("Distance to feasibility is not zero! DTF: " + dtf);
                     }
-                    loops--;
                 }
-                T--;
             }
             return solution;
         }
 
-        private INeighbor GenerateNeighbor(Solution solution)
+        public Solution ExecTimer(Solution solution, int TMax, int TMin, long miliseconds, types type)
+        {
+            Stopwatch watch = Stopwatch.StartNew();
+            InitVals(type);
+
+            for (int T = TMax; T > TMin; T = TMax - (int)((watch.ElapsedMilliseconds * (TMax - TMin) / miliseconds) + TMin))
+            {
+                INeighbor neighbor = null;
+                if (type == types.RANDOM)
+                    neighbor = GenerateRandomNeighbor(solution);
+                else if (type == types.GUIDED1)
+                    neighbor = GenerateGuidedNeighbor1(solution);
+                else
+                    neighbor = GenerateGuidedNeighbor2(solution);
+                
+                neighbor.fitness = (neighbor.fitness == -1) ? evaluation.Fitness(neighbor) : neighbor.fitness;
+                solution.fitness = (solution.fitness == -1) ? evaluation.Fitness(solution) : solution.fitness;
+
+                int DeltaE = neighbor.fitness - solution.fitness;
+
+                if (DeltaE <= 0)
+                {
+                    solution = neighbor.Accept();
+                    solution.fitness = neighbor.fitness;
+                }
+                else
+                {
+                    double acceptance_probability = Math.Pow(Math.E, (-(float)DeltaE) / T);
+                    double random = new Random((int)DateTime.Now.Ticks).NextDouble();
+
+                    if (random <= acceptance_probability)
+                    {
+                        solution = neighbor.Accept();
+                        solution.fitness = neighbor.fitness;
+                    }
+                        
+                    else
+                        continue;
+                }
+                int dtf = evaluation.DistanceToFeasibility(solution);
+                if (dtf != 0)
+                {
+                    throw new Exception("Distance to feasibility is not zero! DTF: " + dtf);
+                }
+            }
+            return solution;
+        }
+
+        private INeighbor GenerateRandomNeighbor(Solution solution)
         {
             INeighbor to_return;
             int random = new Random().Next(6);
@@ -90,6 +155,188 @@ namespace Heuristics
                     to_return = neighbor_selection.PeriodRoomSwap(solution);
             } while (to_return == null);
             return to_return;
+        }
+
+        //Succeeded neighbor moviments are more likely to be used
+        private INeighbor GenerateGuidedNeighbor1(Solution solution)
+        {
+            INeighbor to_return;
+            int total = room_change + period_change + period_room_change + room_swap + period_swap + period_room_swap;
+            int random = new Random((int)DateTime.Now.Ticks).Next(total);
+            solution.fitness = (solution.fitness == -1) ? evaluation.Fitness(solution) : solution.fitness;
+
+            while (true)
+            {
+                if (random < room_change)
+                {
+                    to_return = neighbor_selection.RoomChange(solution);
+                    if (to_return != null)
+                    {
+                        to_return.fitness = (to_return.fitness == -1) ? evaluation.Fitness(to_return) : to_return.fitness;
+                        if (to_return.fitness < solution.fitness)
+                            ++room_change;
+                        break;
+                    }
+                }
+                else if (random < room_change + period_change)
+                {
+                    to_return = neighbor_selection.PeriodChange(solution);
+                    if (to_return != null)
+                    {
+                        to_return.fitness = (to_return.fitness == -1) ? evaluation.Fitness(to_return) : to_return.fitness;
+                        if (to_return.fitness < solution.fitness)
+                            ++period_change;
+                        break;
+                    }
+                }
+                else if (random < room_change + period_change + period_room_change)
+                {
+                    to_return = neighbor_selection.PeriodRoomChange(solution);
+                    if (to_return != null)
+                    {
+                        to_return.fitness = (to_return.fitness == -1) ? evaluation.Fitness(to_return) : to_return.fitness;
+                        if (to_return.fitness < solution.fitness)
+                            ++period_room_change;
+                        break;
+                    }
+                }
+                else if (random < room_change + period_change + period_room_change + room_swap)
+                {
+                    to_return = neighbor_selection.RoomSwap(solution);
+                    if (to_return != null)
+                    {
+                        to_return.fitness = (to_return.fitness == -1) ? evaluation.Fitness(to_return) : to_return.fitness;
+                        if (to_return.fitness < solution.fitness)
+                            ++room_swap;
+                        break;
+                    }
+                }
+                else if (random < room_change + period_change + period_room_change + room_swap + period_swap)
+                {
+                    to_return = neighbor_selection.PeriodSwap(solution);
+                    if (to_return != null)
+                    {
+                        to_return.fitness = (to_return.fitness == -1) ? evaluation.Fitness(to_return) : to_return.fitness;
+                        if (to_return.fitness < solution.fitness)
+                            ++period_swap;
+                        break;
+                    }
+                }
+                else
+                {
+                    to_return = neighbor_selection.PeriodRoomSwap(solution);
+                    if (to_return != null)
+                    {
+                        to_return.fitness = (to_return.fitness == -1) ? evaluation.Fitness(to_return) : to_return.fitness;
+                        if (to_return.fitness < solution.fitness)
+                            ++period_room_swap;
+                        break;
+                    }
+                }
+            }
+            return to_return;
+        }
+
+        //Succeeded neighbor moviments are less likely to be used
+        private INeighbor GenerateGuidedNeighbor2(Solution solution)
+        {
+            INeighbor to_return;
+            int total = room_change + period_change + period_room_change + room_swap + period_swap + period_room_swap;
+            int random = new Random((int)DateTime.Now.Ticks).Next(total);
+            solution.fitness = (solution.fitness == -1) ? evaluation.Fitness(solution) : solution.fitness;
+
+            while (true)
+            {
+                if (random < room_change)
+                {
+                    to_return = neighbor_selection.RoomChange(solution);
+                    if (to_return != null)
+                    {
+                        to_return.fitness = (to_return.fitness == -1) ? evaluation.Fitness(to_return) : to_return.fitness;
+                        if (to_return.fitness < solution.fitness)
+                            --room_change;
+                        break;
+                    }
+                }
+                else if (random < room_change + period_change)
+                {
+                    to_return = neighbor_selection.PeriodChange(solution);
+                    if (to_return != null)
+                    {
+                        to_return.fitness = (to_return.fitness == -1) ? evaluation.Fitness(to_return) : to_return.fitness;
+                        if (to_return.fitness < solution.fitness)
+                            --period_change;
+                        break;
+                    }
+                }
+                else if (random < room_change + period_change + period_room_change)
+                {
+                    to_return = neighbor_selection.PeriodRoomChange(solution);
+                    if (to_return != null)
+                    {
+                        to_return.fitness = (to_return.fitness == -1) ? evaluation.Fitness(to_return) : to_return.fitness;
+                        if (to_return.fitness < solution.fitness)
+                            --period_room_change;
+                        break;
+                    }
+                }
+                else if (random < room_change + period_change + period_room_change + room_swap)
+                {
+                    to_return = neighbor_selection.RoomSwap(solution);
+                    if (to_return != null)
+                    {
+                        to_return.fitness = (to_return.fitness == -1) ? evaluation.Fitness(to_return) : to_return.fitness;
+                        if (to_return.fitness < solution.fitness)
+                            --room_swap;
+                        break;
+                    }
+                }
+                else if (random < room_change + period_change + period_room_change + room_swap + period_swap)
+                {
+                    to_return = neighbor_selection.PeriodSwap(solution);
+                    if (to_return != null)
+                    {
+                        to_return.fitness = (to_return.fitness == -1) ? evaluation.Fitness(to_return) : to_return.fitness;
+                        if (to_return.fitness < solution.fitness)
+                            --period_swap;
+                        break;
+                    }
+                }
+                else
+                {
+                    to_return = neighbor_selection.PeriodRoomSwap(solution);
+                    if (to_return != null)
+                    {
+                        to_return.fitness = (to_return.fitness == -1) ? evaluation.Fitness(to_return) : to_return.fitness;
+                        if (to_return.fitness < solution.fitness)
+                            --period_room_swap;
+                        break;
+                    }
+                }
+            }
+            return to_return;
+        }
+
+        private void InitVals(types type)
+        {
+            if (type == types.RANDOM)
+            {
+                room_change = 0;
+                period_change = 0;
+                period_room_change = 0;
+                room_swap = 0;
+                period_swap = 0;
+                period_room_swap = 0;
+            }
+            else
+            {
+                room_change = 100000;
+                period_change = 100000;
+                period_room_change = 100000;
+                room_swap = 100000;
+                period_swap = 100000;
+                period_room_swap = 100000;
+            }
         }
     }
 }

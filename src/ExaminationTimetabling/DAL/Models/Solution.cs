@@ -12,12 +12,13 @@ namespace DAL.Models
         public bool[,,] timetable_container { get; set; }
         public int[,] epr_associasion; //idx = exam; 0 = period; 1 = room
         public bool[,] conflict_matrix;
+        public int fitness;
 
 
         public Solution(int id, int period_count, int room_count, int examination_count)
         {
             this.id = id;
-            //timetable_container = new List<List<List<bool>>>();
+            fitness = -1;
 
             timetable_container = new bool[period_count, room_count, examination_count];
             conflict_matrix = new bool[examination_count, examination_count];
