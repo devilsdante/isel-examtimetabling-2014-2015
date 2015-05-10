@@ -1,18 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Business;
 using DAL;
 using DAL.Models;
 using Heuristics;
 using Tools;
 
-namespace Tests
+namespace Tests.SimulatedAnnealingTest
 {
-    class GraphColoringTest
+    class Main1
     {
         static void Main()
         {
@@ -54,7 +51,7 @@ namespace Tests
                 final = sa.ExecTimer(final, 1095, 0, 1000 * 60, SimulatedAnnealing.types.RANDOM);
 
                 Console.WriteLine("SARa Fitness: " + evaluation.Fitness(final));
-//
+                //
                 sa = new SimulatedAnnealing();
                 final = solution.Copy();
 
@@ -62,7 +59,7 @@ namespace Tests
 
                 Console.WriteLine("SAG1 Fitness: " + evaluation.Fitness(final));
                 //PrintToFile("..//..//outout_final.txt", final);
-//
+                //
                 sa = new SimulatedAnnealing();
                 final = solution.Copy();
 

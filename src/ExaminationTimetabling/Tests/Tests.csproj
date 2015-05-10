@@ -41,9 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GraphColoringTest.cs" />
-    <Compile Include="OutputFormattingTest.cs" />
+    <Compile Include="GraphColoringTest\Main1.cs" />
+    <Compile Include="SimulatedAnnealingTest\Main0.cs" />
+    <Compile Include="OutputFormattingTest\Main1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimulatedAnnealingSimpleTest\EvaluationFunctionSimple.cs" />
+    <Compile Include="SimulatedAnnealingSimpleTest\Main1.cs" />
+    <Compile Include="SimulatedAnnealingSimpleTest\Neighborhood\FlipBitNeighbor.cs" />
+    <Compile Include="SimulatedAnnealingSimpleTest\Neighborhood\INeighborSimple.cs" />
+    <Compile Include="SimulatedAnnealingSimpleTest\NeighborSelectionSimple.cs" />
+    <Compile Include="SimulatedAnnealingSimpleTest\SimulatedAnnealingSimple.cs" />
+    <Compile Include="SimulatedAnnealingSimpleTest\SolutionSimple.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

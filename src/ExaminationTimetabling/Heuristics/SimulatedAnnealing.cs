@@ -15,9 +15,6 @@ namespace Heuristics
 {
     public class SimulatedAnnealing
     {
-
-        public FeasibilityTester feasibility_tester;
-        private Solution solution;
         private readonly EvaluationFunction evaluation;
         private readonly NeighborSelection neighbor_selection;
 
