@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CoolingSchedule.cs" />
     <Compile Include="FeasibilityTester.cs" />
     <Compile Include="Neighborhood\PeriodRoomSwapNeighbor.cs" />
     <Compile Include="Neighborhood\PeriodChangeNeighbor.cs" />

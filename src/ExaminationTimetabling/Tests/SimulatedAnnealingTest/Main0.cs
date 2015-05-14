@@ -5,6 +5,7 @@ using Business;
 using DAL;
 using DAL.Models;
 using Heuristics;
+using Heuristics.SimulatedAnnealing;
 using Tools;
 
 namespace Tests.SimulatedAnnealingTest
@@ -48,14 +49,14 @@ namespace Tests.SimulatedAnnealingTest
                 sa = new SimulatedAnnealing();
                 final = solution.Copy();
 
-                final = sa.ExecTimer(final, 1095, 0, 1000 * 60, SimulatedAnnealing.types.RANDOM);
+                final = sa.ExecLinearTimer(final, 1095, 0, 1000 * 10, SimulatedAnnealing.types.RANDOM);
 
                 Console.WriteLine("SARa Fitness: " + evaluation.Fitness(final));
                 //
                 sa = new SimulatedAnnealing();
                 final = solution.Copy();
 
-                final = sa.ExecTimer(final, 1095, 0, 1000 * 60, SimulatedAnnealing.types.GUIDED1);
+                final = sa.ExecLinearTimer(final, 1095, 0, 1000 * 10, SimulatedAnnealing.types.GUIDED1);
 
                 Console.WriteLine("SAG1 Fitness: " + evaluation.Fitness(final));
                 //PrintToFile("..//..//outout_final.txt", final);
@@ -63,7 +64,33 @@ namespace Tests.SimulatedAnnealingTest
                 sa = new SimulatedAnnealing();
                 final = solution.Copy();
 
-                final = sa.ExecTimer(final, 1095, 0, 1000 * 60, SimulatedAnnealing.types.GUIDED2);
+                final = sa.ExecLinearTimer(final, 1095, 0, 1000 * 10, SimulatedAnnealing.types.GUIDED2);
+
+                Console.WriteLine("SAG2 Fitness: " + evaluation.Fitness(final));
+
+
+
+
+
+                sa = new SimulatedAnnealing();
+                final = solution.Copy();
+
+                final = sa.ExecTimer(final, 1000 * 10, SimulatedAnnealing.types.RANDOM);
+
+                Console.WriteLine("SARa Fitness: " + evaluation.Fitness(final));
+                //
+                sa = new SimulatedAnnealing();
+                final = solution.Copy();
+
+                final = sa.ExecTimer(final, 1000 * 10, SimulatedAnnealing.types.GUIDED1);
+
+                Console.WriteLine("SAG1 Fitness: " + evaluation.Fitness(final));
+                //PrintToFile("..//..//outout_final.txt", final);
+                //
+                sa = new SimulatedAnnealing();
+                final = solution.Copy();
+
+                final = sa.ExecTimer(final, 1000 * 10, SimulatedAnnealing.types.GUIDED2);
 
                 Console.WriteLine("SAG2 Fitness: " + evaluation.Fitness(final));
             }

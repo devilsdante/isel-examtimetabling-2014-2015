@@ -41,7 +41,11 @@
   <ItemGroup>
     <Compile Include="GraphColoring.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SimulatedAnnealing.cs" />
+    <Compile Include="SimulatedAnnealing\CoolingScheduleLogarithmic.cs" />
+    <Compile Include="SimulatedAnnealing\CoolingScheduleLinear.cs" />
+    <Compile Include="SimulatedAnnealing\ICoolingSchedule.cs" />
+    <Compile Include="SimulatedAnnealing\CoolingScheduleGeometric.cs" />
+    <Compile Include="SimulatedAnnealing\SimulatedAnnealing.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Business\Business.csproj">

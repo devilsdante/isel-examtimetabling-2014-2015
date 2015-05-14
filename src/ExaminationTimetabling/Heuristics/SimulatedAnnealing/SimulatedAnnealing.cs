@@ -1,22 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-using Business;
-using DAL;
 using DAL.Models;
 using Tools;
 using Tools.Neighborhood;
 
-namespace Heuristics
+namespace Heuristics.SimulatedAnnealing
 {
     public class SimulatedAnnealing
     {
         private readonly EvaluationFunction evaluation;
         private readonly NeighborSelection neighbor_selection;
+        private ICoolingSchedule cooling_schedule;
 
         public enum types { RANDOM, GUIDED1, GUIDED2 };
 
@@ -36,24 +30,19 @@ namespace Heuristics
 
         public Solution Exec(Solution solution, int TMax, int TMin, int loops, types type)
         {
+            cooling_schedule = new CoolingScheduleLinear(TMax, TMin, 1);
             InitVals(type);
 
-            for (int T = TMax; T > TMin; --T)
+            for (double T = TMax; T > TMin; T = cooling_schedule.G(T))
             {
                 for (int loop = loops; loop > 0; --loop)
                 {
-                    INeighbor neighbor = null;
-                    if(type == types.RANDOM)
-                        neighbor = GenerateRandomNeighbor(solution);
-                    else if (type == types.GUIDED1)
-                        neighbor = GenerateGuidedNeighbor1(solution);
-                    else
-                        neighbor = GenerateGuidedNeighbor2(solution);
+                    INeighbor neighbor = GenerateNeighbor(solution, type);
 
                     neighbor.fitness = (neighbor.fitness == -1) ? evaluation.Fitness(neighbor) : neighbor.fitness;
                     solution.fitness = (solution.fitness == -1) ? evaluation.Fitness(solution) : solution.fitness;
 
-                    int DeltaE = neighbor.fitness - solution.fitness;
+                    double DeltaE = neighbor.fitness - solution.fitness;
 
                     if (DeltaE <= 0)
                     {
@@ -62,7 +51,7 @@ namespace Heuristics
                     }
                     else
                     {
-                        double acceptance_probability = Math.Pow(Math.E, (-(float)DeltaE) / T);
+                        double acceptance_probability = Math.Pow(Math.E, (-DeltaE) / T);
                         double random = new Random((int)DateTime.Now.Ticks).NextDouble();
 
                         if (random <= acceptance_probability)
@@ -84,20 +73,56 @@ namespace Heuristics
             return solution;
         }
 
-        public Solution ExecTimer(Solution solution, int TMax, int TMin, long miliseconds, types type)
+        public Solution ExecTimer(Solution solution, long miliseconds, types type)
+        {
+            Stopwatch watch = Stopwatch.StartNew();
+            InitVals(type);
+
+            while (watch.ElapsedMilliseconds < miliseconds)
+            {
+                INeighbor neighbor = GenerateNeighbor(solution, type);
+
+                neighbor.fitness = (neighbor.fitness == -1) ? evaluation.Fitness(neighbor) : neighbor.fitness;
+                solution.fitness = (solution.fitness == -1) ? evaluation.Fitness(solution) : solution.fitness;
+
+                int DeltaE = neighbor.fitness - solution.fitness;
+
+                if (DeltaE <= 0)
+                {
+                    solution = neighbor.Accept();
+                    solution.fitness = neighbor.fitness;
+                }
+                else
+                {
+                    double acceptance_probability = Math.Pow(Math.E, (-(float)DeltaE*miliseconds) / (watch.ElapsedMilliseconds));
+                    double random = new Random((int)DateTime.Now.Ticks).NextDouble();
+
+                    if (random <= acceptance_probability)
+                    {
+                        solution = neighbor.Accept();
+                        solution.fitness = neighbor.fitness;
+                    }
+
+                    else
+                        continue;
+                }
+                int dtf = evaluation.DistanceToFeasibility(solution);
+                if (dtf != 0)
+                {
+                    throw new Exception("Distance to feasibility is not zero! DTF: " + dtf);
+                }
+            }
+            return solution;
+        }
+
+        public Solution ExecLinearTimer(Solution solution, int TMax, int TMin, long miliseconds, types type)
         {
             Stopwatch watch = Stopwatch.StartNew();
             InitVals(type);
 
             for (int T = TMax; T > TMin; T = TMax - (int)((watch.ElapsedMilliseconds * (TMax - TMin) / miliseconds) + TMin))
             {
-                INeighbor neighbor = null;
-                if (type == types.RANDOM)
-                    neighbor = GenerateRandomNeighbor(solution);
-                else if (type == types.GUIDED1)
-                    neighbor = GenerateGuidedNeighbor1(solution);
-                else
-                    neighbor = GenerateGuidedNeighbor2(solution);
+                INeighbor neighbor = GenerateNeighbor(solution, type);
                 
                 neighbor.fitness = (neighbor.fitness == -1) ? evaluation.Fitness(neighbor) : neighbor.fitness;
                 solution.fitness = (solution.fitness == -1) ? evaluation.Fitness(solution) : solution.fitness;
@@ -130,6 +155,15 @@ namespace Heuristics
                 }
             }
             return solution;
+        }
+
+        private INeighbor GenerateNeighbor(Solution solution, types type)
+        {
+            if (type == types.RANDOM)
+                return GenerateRandomNeighbor(solution);
+            if (type == types.GUIDED1)
+                return GenerateGuidedNeighbor1(solution);
+            return GenerateGuidedNeighbor2(solution);
         }
 
         private INeighbor GenerateRandomNeighbor(Solution solution)
@@ -171,7 +205,9 @@ namespace Heuristics
                     {
                         to_return.fitness = (to_return.fitness == -1) ? evaluation.Fitness(to_return) : to_return.fitness;
                         if (to_return.fitness < solution.fitness)
-                            ++room_change;
+                            room_change = room_change < 10 ? room_change + 1 : room_change;
+                        else
+                            room_change = 1;
                         break;
                     }
                 }
@@ -182,7 +218,9 @@ namespace Heuristics
                     {
                         to_return.fitness = (to_return.fitness == -1) ? evaluation.Fitness(to_return) : to_return.fitness;
                         if (to_return.fitness < solution.fitness)
-                            ++period_change;
+                            period_change = period_change < 10 ? period_change + 1 : period_change;
+                        else
+                            period_change = 1;
                         break;
                     }
                 }
@@ -193,7 +231,9 @@ namespace Heuristics
                     {
                         to_return.fitness = (to_return.fitness == -1) ? evaluation.Fitness(to_return) : to_return.fitness;
                         if (to_return.fitness < solution.fitness)
-                            ++period_room_change;
+                            period_room_change = period_room_change < 10 ? period_room_change + 1 : period_room_change;
+                        else
+                            period_room_change = 1;
                         break;
                     }
                 }
@@ -204,7 +244,9 @@ namespace Heuristics
                     {
                         to_return.fitness = (to_return.fitness == -1) ? evaluation.Fitness(to_return) : to_return.fitness;
                         if (to_return.fitness < solution.fitness)
-                            ++room_swap;
+                            room_swap = room_swap < 10 ? room_swap + 1 : room_swap;
+                        else
+                            room_swap = 1;
                         break;
                     }
                 }
@@ -215,7 +257,9 @@ namespace Heuristics
                     {
                         to_return.fitness = (to_return.fitness == -1) ? evaluation.Fitness(to_return) : to_return.fitness;
                         if (to_return.fitness < solution.fitness)
-                            ++period_swap;
+                            period_swap = period_swap < 10 ? period_swap + 1 : period_swap;
+                        else
+                            period_swap = 1;
                         break;
                     }
                 }
@@ -226,7 +270,9 @@ namespace Heuristics
                     {
                         to_return.fitness = (to_return.fitness == -1) ? evaluation.Fitness(to_return) : to_return.fitness;
                         if (to_return.fitness < solution.fitness)
-                            ++period_room_swap;
+                            period_room_swap = period_room_swap < 10 ? period_room_swap + 1 : period_room_swap;
+                        else
+                            period_room_swap = 1;
                         break;
                     }
                 }
@@ -251,7 +297,9 @@ namespace Heuristics
                     {
                         to_return.fitness = (to_return.fitness == -1) ? evaluation.Fitness(to_return) : to_return.fitness;
                         if (to_return.fitness < solution.fitness)
-                            --room_change;
+                            room_change = room_change > 1 ? room_change + 1 : room_change;
+                        else
+                            room_change = 10;
                         break;
                     }
                 }
@@ -262,7 +310,9 @@ namespace Heuristics
                     {
                         to_return.fitness = (to_return.fitness == -1) ? evaluation.Fitness(to_return) : to_return.fitness;
                         if (to_return.fitness < solution.fitness)
-                            --period_change;
+                            period_change = period_change > 1 ? period_change + 1 : period_change;
+                        else
+                            period_change = 10;
                         break;
                     }
                 }
@@ -273,7 +323,9 @@ namespace Heuristics
                     {
                         to_return.fitness = (to_return.fitness == -1) ? evaluation.Fitness(to_return) : to_return.fitness;
                         if (to_return.fitness < solution.fitness)
-                            --period_room_change;
+                            period_room_change = period_room_change > 1 ? period_room_change + 1 : period_room_change;
+                        else
+                            period_room_change = 10;
                         break;
                     }
                 }
@@ -284,7 +336,9 @@ namespace Heuristics
                     {
                         to_return.fitness = (to_return.fitness == -1) ? evaluation.Fitness(to_return) : to_return.fitness;
                         if (to_return.fitness < solution.fitness)
-                            --room_swap;
+                            room_swap = room_swap > 1 ? room_swap + 1 : room_swap;
+                        else
+                            room_swap = 10;
                         break;
                     }
                 }
@@ -295,7 +349,9 @@ namespace Heuristics
                     {
                         to_return.fitness = (to_return.fitness == -1) ? evaluation.Fitness(to_return) : to_return.fitness;
                         if (to_return.fitness < solution.fitness)
-                            --period_swap;
+                            period_swap = period_swap > 1 ? period_swap + 1 : period_swap;
+                        else
+                            period_swap = 10;
                         break;
                     }
                 }
@@ -306,7 +362,9 @@ namespace Heuristics
                     {
                         to_return.fitness = (to_return.fitness == -1) ? evaluation.Fitness(to_return) : to_return.fitness;
                         if (to_return.fitness < solution.fitness)
-                            --period_room_swap;
+                            period_room_swap = period_room_swap > 1 ? period_room_swap + 1 : period_room_swap;
+                        else
+                            period_room_swap = 10;
                         break;
                     }
                 }
@@ -316,23 +374,23 @@ namespace Heuristics
 
         private void InitVals(types type)
         {
-            if (type == types.RANDOM)
+            if (type == types.GUIDED1)
             {
-                room_change = 0;
-                period_change = 0;
-                period_room_change = 0;
-                room_swap = 0;
-                period_swap = 0;
-                period_room_swap = 0;
+                room_change = 1;
+                period_change = 1;
+                period_room_change = 1;
+                room_swap = 1;
+                period_swap = 1;
+                period_room_swap = 1;
             }
             else
             {
-                room_change = 100000;
-                period_change = 100000;
-                period_room_change = 100000;
-                room_swap = 100000;
-                period_swap = 100000;
-                period_room_swap = 100000;
+                room_change = 10;
+                period_change = 10;
+                period_room_change = 10;
+                room_swap = 10;
+                period_swap = 10;
+                period_room_swap = 10;
             }
         }
     }
