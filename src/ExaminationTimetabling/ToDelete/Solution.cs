@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DAL.Models;
 
-namespace DAL.Models
+namespace ToDelete
 {
-    public class Solution : IEntity
+    public class Solution : ISolution
     {
         public int id { get; set; }
-        public bool[,,] timetable_container { get; set; }
+        public bool[, ,] timetable_container { get; set; }
         public int[,] epr_associasion; //idx = exam; 0 = period; 1 = room
         public bool[,] conflict_matrix;
         public int fitness { get; set; }
@@ -22,9 +23,9 @@ namespace DAL.Models
 
             timetable_container = new bool[period_count, room_count, examination_count];
             conflict_matrix = new bool[examination_count, examination_count];
-            epr_associasion = new int[examination_count,2];
+            epr_associasion = new int[examination_count, 2];
 
-            for(int i = 0; i < examination_count; i++)
+            for (int i = 0; i < examination_count; i++)
             {
                 epr_associasion[i, 0] = -1;
                 epr_associasion[i, 1] = -1;
@@ -34,9 +35,9 @@ namespace DAL.Models
         public Solution Copy()
         {
             Solution solution = new Solution(id, timetable_container.GetLength(0), timetable_container.GetLength(1), timetable_container.GetLength(2));
-            solution.timetable_container = (bool[,,]) timetable_container.Clone();
-            solution.epr_associasion = (int[,]) epr_associasion.Clone();
-            solution.conflict_matrix = (bool[,]) conflict_matrix.Clone();
+            solution.timetable_container = (bool[, ,])timetable_container.Clone();
+            solution.epr_associasion = (int[,])epr_associasion.Clone();
+            solution.conflict_matrix = (bool[,])conflict_matrix.Clone();
             return solution;
         }
 
