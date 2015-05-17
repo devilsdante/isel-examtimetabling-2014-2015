@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Heuristics.SimulatedAnnealing;
+using Heuristics.SimulatedAnnealing.Timetabling;
 
 namespace Tests.GraphColoringTest
 {
@@ -40,11 +41,9 @@ namespace Tests.GraphColoringTest
                 AddDataExaminations(examinations);
                 AddDataPeriodHardConstraints(period_hard_constraints);
 
-                NeighborSelection neighbor_selection = new NeighborSelection();
-                EvaluationFunction evaluation = new EvaluationFunction();
+                EvaluationFunctionTimetabling evaluation = new EvaluationFunctionTimetabling();
 
                 GraphColoring gc = new GraphColoring();
-                SimulatedAnnealing sa = new SimulatedAnnealing();
 
                 Solution solution = gc.Exec();
 

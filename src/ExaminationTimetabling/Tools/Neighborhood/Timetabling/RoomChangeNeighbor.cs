@@ -43,5 +43,15 @@ namespace Tools.Neighborhood
             solution.epr_associasion[examination_id, 1] = old_room_id;
             return solution;
         }
+
+        ISolution INeighbor.Accept()
+        {
+            return Accept();
+        }
+
+        ISolution INeighbor.Reverse()
+        {
+            return Reverse();
+        }
     }
 }

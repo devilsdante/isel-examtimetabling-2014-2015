@@ -40,17 +40,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FeasibilityTester.cs" />
-    <Compile Include="Neighborhood\PeriodRoomSwapNeighbor.cs" />
-    <Compile Include="Neighborhood\PeriodChangeNeighbor.cs" />
-    <Compile Include="Neighborhood\PeriodRoomChangeNeighbor.cs" />
-    <Compile Include="Neighborhood\PeriodSwapNeighbor.cs" />
+    <Compile Include="EvaluationFunction\IEvaluationFunction.cs" />
+    <Compile Include="Neighborhood\Timetabling\PeriodRoomSwapNeighbor.cs" />
+    <Compile Include="Neighborhood\Timetabling\PeriodChangeNeighbor.cs" />
+    <Compile Include="Neighborhood\Timetabling\PeriodRoomChangeNeighbor.cs" />
+    <Compile Include="Neighborhood\Timetabling\PeriodSwapNeighbor.cs" />
     <Compile Include="Neighborhood\INeighbor.cs" />
     <Compile Include="NeighborSelection.cs" />
-    <Compile Include="Neighborhood\RoomChangeNeighbor.cs" />
-    <Compile Include="Neighborhood\RoomSwapNeighbor.cs" />
+    <Compile Include="Neighborhood\Timetabling\RoomChangeNeighbor.cs" />
+    <Compile Include="Neighborhood\Timetabling\RoomSwapNeighbor.cs" />
     <Compile Include="OutputFormatting.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="EvaluationFunction.cs" />
+    <Compile Include="EvaluationFunction\Timetabling\EvaluationFunctionTimetabling.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Business\Business.csproj">

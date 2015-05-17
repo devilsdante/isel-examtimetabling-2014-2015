@@ -10,7 +10,7 @@ using Tools.Neighborhood;
 
 namespace Tools
 {
-    public class EvaluationFunction
+    public class EvaluationFunctionTimetabling : IEvaluationFunction
     {
         private bool[,] conflict_matrix;
         private readonly Examinations examinations;
@@ -30,7 +30,7 @@ namespace Tools
 
 
 
-        public EvaluationFunction()
+        public EvaluationFunctionTimetabling()
         {
             examinations = Examinations.Instance();
             period_hard_constraints = PeriodHardConstraints.Instance();
@@ -343,6 +343,7 @@ namespace Tools
 
             return true;
         }
+
         private void PopulateConflictMatrix()
         {
             conflict_matrix = new bool[examinations.EntryCount(), examinations.EntryCount()];
@@ -372,7 +373,7 @@ namespace Tools
 
         public int Fitness(INeighbor neighbor)
         {
-            Solution new_solution = neighbor.Accept();
+            ISolution new_solution = neighbor.Accept();
             int fitness = Fitness(new_solution);
             neighbor.Reverse();
             return fitness;
@@ -380,10 +381,25 @@ namespace Tools
 
         public int DistanceToFeasibility(INeighbor neighbor)
         {
-            Solution new_solution = neighbor.Accept();
+            ISolution new_solution = neighbor.Accept();
             int dtf = DistanceToFeasibility(new_solution);
             neighbor.Reverse();
             return dtf;
+        }
+
+        public int DistanceToFeasibility(ISolution solution)
+        {
+            return DistanceToFeasibility((Solution) solution);
+        }
+
+        public int Fitness(ISolution solution)
+        {
+            return Fitness((Solution)solution);
+        }
+
+        public bool IsValid(ISolution solution)
+        {
+            return IsValid((Solution)solution);
         }
     }
 }

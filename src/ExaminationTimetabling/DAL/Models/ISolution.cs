@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ToDelete
+namespace DAL.Models
 {
-    public interface INeighbor
+    public interface ISolution : IEntity
     {
         int fitness { get; set; }
-        ISolution Accept();
-        ISolution Reverse();
+        ISolution Copy();
+        bool Equals(ISolution solution);
     }
 }

@@ -13,8 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tools", "Tools\Tools.csproj", "{01955388-10E1-4846-8DF9-AF46E521C501}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDelete", "ToDelete\ToDelete.csproj", "{C1A7D14E-F71F-46AF-9D39-5ABCD87B4206}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,10 +39,6 @@ Global
 		{01955388-10E1-4846-8DF9-AF46E521C501}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01955388-10E1-4846-8DF9-AF46E521C501}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01955388-10E1-4846-8DF9-AF46E521C501}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C1A7D14E-F71F-46AF-9D39-5ABCD87B4206}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C1A7D14E-F71F-46AF-9D39-5ABCD87B4206}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C1A7D14E-F71F-46AF-9D39-5ABCD87B4206}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C1A7D14E-F71F-46AF-9D39-5ABCD87B4206}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

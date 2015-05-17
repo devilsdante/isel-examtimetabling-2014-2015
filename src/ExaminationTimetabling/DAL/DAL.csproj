@@ -43,6 +43,7 @@
     <Compile Include="Models\Examination.cs" />
     <Compile Include="Models\IEntity.cs" />
     <Compile Include="Models\InstitutionalModelWeightings.cs" />
+    <Compile Include="Models\ISolution.cs" />
     <Compile Include="Models\Period.cs" />
     <Compile Include="Models\PeriodHardConstraint.cs" />
     <Compile Include="Models\Room.cs" />

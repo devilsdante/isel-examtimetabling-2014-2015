@@ -62,7 +62,7 @@ namespace ToDelete
             return solution;
         }
 
-        public Solution ExecTimer(Solution solution, long miliseconds, int type)
+        public ISolution ExecTimer(ISolution solution, long miliseconds, int type)
         {
             Stopwatch watch = Stopwatch.StartNew();
             InitVals(type);
@@ -104,7 +104,7 @@ namespace ToDelete
             return solution;
         }
 
-        public Solution ExecLinearTimer(Solution solution, int TMax, int TMin, long miliseconds, int type)
+        public ISolution ExecLinearTimer(ISolution solution, int TMax, int TMin, long miliseconds, int type)
         {
             Stopwatch watch = Stopwatch.StartNew();
             InitVals(type);

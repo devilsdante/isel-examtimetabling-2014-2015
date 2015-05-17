@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Models
 {
-    public class Solution : IEntity
+    public class Solution : ISolution
     {
         public int id { get; set; }
         public bool[,,] timetable_container { get; set; }
@@ -31,13 +31,18 @@ namespace DAL.Models
             }
         }
 
-        public Solution Copy()
+        public ISolution Copy()
         {
             Solution solution = new Solution(id, timetable_container.GetLength(0), timetable_container.GetLength(1), timetable_container.GetLength(2));
             solution.timetable_container = (bool[,,]) timetable_container.Clone();
             solution.epr_associasion = (int[,]) epr_associasion.Clone();
             solution.conflict_matrix = (bool[,]) conflict_matrix.Clone();
             return solution;
+        }
+
+        public bool Equals(ISolution solution)
+        {
+            return Equals((Solution)solution);
         }
 
         public bool Equals(Solution obj)

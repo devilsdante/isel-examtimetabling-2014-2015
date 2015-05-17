@@ -16,7 +16,7 @@ namespace Tools
         private readonly Rooms rooms;
         private readonly Periods periods;
         private readonly FeasibilityTester feasibility_tester;
-        private readonly EvaluationFunction evaluation_function;
+        private readonly EvaluationFunctionTimetabling _evaluationFunctionTimetabling;
 
         public NeighborSelection()
         {
@@ -24,7 +24,7 @@ namespace Tools
             rooms = Rooms.Instance();
             periods = Periods.Instance();
             feasibility_tester = new FeasibilityTester();
-            evaluation_function = new EvaluationFunction();
+            _evaluationFunctionTimetabling = new EvaluationFunctionTimetabling();
 
         }
 
@@ -49,7 +49,7 @@ namespace Tools
                         continue;
                     INeighbor neighbor = new RoomSwapNeighbor(solution, random_examination.id, exam_id);
 
-                    if (evaluation_function.DistanceToFeasibility(neighbor) == 0)
+                    if (_evaluationFunctionTimetabling.DistanceToFeasibility(neighbor) == 0)
                     {
                         return neighbor;
                     }
@@ -80,7 +80,7 @@ namespace Tools
                         continue;
 
                     INeighbor neighbor = new PeriodSwapNeighbor(solution, random_examination.id, exam_id);
-                    if (evaluation_function.DistanceToFeasibility(neighbor) == 0)
+                    if (_evaluationFunctionTimetabling.DistanceToFeasibility(neighbor) == 0)
                         return neighbor;
                 }
 
@@ -117,7 +117,7 @@ namespace Tools
                             continue;
                         INeighbor neighbor = new PeriodRoomSwapNeighbor(solution, random_examination.id, exam_id);
 
-                        if (evaluation_function.DistanceToFeasibility(neighbor) == 0)
+                        if (_evaluationFunctionTimetabling.DistanceToFeasibility(neighbor) == 0)
                             return neighbor;
                     }
                 }
@@ -181,7 +181,7 @@ namespace Tools
                         return new PeriodRoomChangeNeighbor(solution, random_examination.id, random_period.id, random_room.id);
                     //PeriodRoomChangeNeighbor prc_neighbor = new PeriodRoomChangeNeighbor(solution, random_examination.id, random_period.id, random_room.id);
                     //prc_neighbor.Accept();
-                    //if (evaluation_function.DistanceToFeasibility(solution) == 0)
+                    //if (_evaluationFunctionTimetabling.DistanceToFeasibility(solution) == 0)
                     //{
                     //    prc_neighbor.Reverse();
                     //    return prc_neighbor;
