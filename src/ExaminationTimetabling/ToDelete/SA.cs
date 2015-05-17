@@ -13,16 +13,11 @@ namespace ToDelete
 {
     public abstract class SA
     {
-        protected abstract IEFunction<ISolution> evaluation { get; set; }
+        protected abstract IEFunction evaluation { get; set; }
         private ICoolingSchedule cooling_schedule;
 
-        public enum types { RANDOM, GUIDED1, GUIDED2 };
 
-        public SA()
-        {
-        }
-
-        public ISolution Exec(ISolution solution, int TMax, int TMin, int loops, types type)
+        public ISolution Exec(ISolution solution, int TMax, int TMin, int loops, int type)
         {
             cooling_schedule = new CoolingScheduleLinear(TMax, TMin, 1);
             InitVals(type);
@@ -67,7 +62,7 @@ namespace ToDelete
             return solution;
         }
 
-        public Solution ExecTimer(Solution solution, long miliseconds, types type)
+        public Solution ExecTimer(Solution solution, long miliseconds, int type)
         {
             Stopwatch watch = Stopwatch.StartNew();
             InitVals(type);
@@ -109,7 +104,7 @@ namespace ToDelete
             return solution;
         }
 
-        public Solution ExecLinearTimer(Solution solution, int TMax, int TMin, long miliseconds, types type)
+        public Solution ExecLinearTimer(Solution solution, int TMax, int TMin, long miliseconds, int type)
         {
             Stopwatch watch = Stopwatch.StartNew();
             InitVals(type);
@@ -151,8 +146,8 @@ namespace ToDelete
             return solution;
         }
 
-        protected abstract INeighbor GenerateNeighbor(ISolution solution, types type);
+        protected abstract INeighbor GenerateNeighbor(ISolution solution, int type);
 
-        protected abstract void InitVals(types type);
+        protected abstract void InitVals(int type);
     }
 }

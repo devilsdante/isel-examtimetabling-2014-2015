@@ -10,7 +10,7 @@ using Tools.Neighborhood;
 
 namespace ToDelete
 {
-    public class EvaluationFunctionExaminations : IEFunction<Solution>
+    public class EvaluationFunctionExaminations : IEFunction
     {
         private bool[,] conflict_matrix;
         private readonly Examinations examinations;
@@ -372,18 +372,33 @@ namespace ToDelete
 
         public int Fitness(INeighbor neighbor)
         {
-            //Solution new_solution = neighbor.Accept();
-            //int fitness = Fitness(new_solution);
-            //neighbor.Reverse();
+            Solution new_solution = neighbor.Accept();
+            int fitness = Fitness(new_solution);
+            neighbor.Reverse();
             return 1;
         }
 
         public int DistanceToFeasibility(INeighbor neighbor)
         {
-            //Solution new_solution = neighbor.Accept();
-            //int dtf = DistanceToFeasibility(new_solution);
-            //neighbor.Reverse();
+            Solution new_solution = neighbor.Accept();
+            int dtf = DistanceToFeasibility(new_solution);
+            neighbor.Reverse();
             return 1;
+        }
+
+        public int DistanceToFeasibility(ISolution solution)
+        {
+            return DistanceToFeasibility((Solution) solution);
+        }
+
+        public int Fitness(ISolution solution)
+        {
+            return Fitness((Solution)solution);
+        }
+
+        public bool IsValid(ISolution solution)
+        {
+            return IsValid((Solution)solution);
         }
     }
 }

@@ -7,11 +7,11 @@ using Tools.Neighborhood;
 
 namespace ToDelete
 {
-    public interface IEFunction <T> where T : class, ISolution
+    public interface IEFunction
     {
-        int DistanceToFeasibility(T solution);
-        int Fitness(T solution);
-        bool IsValid(T solution);
+        int DistanceToFeasibility(ISolution solution);
+        int Fitness(ISolution solution);
+        bool IsValid(ISolution solution);
         int Fitness(INeighbor neighbor);
         int DistanceToFeasibility(INeighbor neighbor);
     }
