@@ -1,4 +1,4 @@
-﻿namespace Heuristics.SimulatedAnnealing
+﻿namespace Heuristics.SimulatedAnnealing.CoolingSchedule
 {
     public interface ICoolingSchedule
     {

@@ -1,16 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Business;
 using DAL;
 using DAL.Models;
+using DAL.Models.Solution;
+using DAL.Models.Solution.Timetabling;
 using Tools.Neighborhood;
 
-namespace Tools
+namespace Tools.EvaluationFunction.Timetable
 {
-    public class EvaluationFunctionTimetabling : IEvaluationFunction
+    public class EvaluationFunctionTimetable : IEvaluationFunction
     {
         private bool[,] conflict_matrix;
         private readonly Examinations examinations;
@@ -30,7 +29,7 @@ namespace Tools
 
 
 
-        public EvaluationFunctionTimetabling()
+        public EvaluationFunctionTimetable()
         {
             examinations = Examinations.Instance();
             period_hard_constraints = PeriodHardConstraints.Instance();

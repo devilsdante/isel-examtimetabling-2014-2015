@@ -41,12 +41,13 @@
   <ItemGroup>
     <Compile Include="GraphColoring.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimulatedAnnealing\BitFlip\SimulatedAnnealingBitFlip.cs" />
     <Compile Include="SimulatedAnnealing\CoolingSchedule\CoolingScheduleLogarithmic.cs" />
     <Compile Include="SimulatedAnnealing\CoolingSchedule\CoolingScheduleLinear.cs" />
     <Compile Include="SimulatedAnnealing\CoolingSchedule\ICoolingSchedule.cs" />
     <Compile Include="SimulatedAnnealing\CoolingSchedule\CoolingScheduleGeometric.cs" />
     <Compile Include="SimulatedAnnealing\SimulatedAnnealing.cs" />
-    <Compile Include="SimulatedAnnealing\Timetabling\SimulatedAnnealingTimetabling.cs" />
+    <Compile Include="SimulatedAnnealing\Timetable\SimulatedAnnealingTimetable.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Business\Business.csproj">

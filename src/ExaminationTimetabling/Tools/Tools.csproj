@@ -39,19 +39,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EvaluationFunction\BitFlip\EvaluationFunctionBitFlip.cs" />
     <Compile Include="FeasibilityTester.cs" />
     <Compile Include="EvaluationFunction\IEvaluationFunction.cs" />
-    <Compile Include="Neighborhood\Timetabling\PeriodRoomSwapNeighbor.cs" />
-    <Compile Include="Neighborhood\Timetabling\PeriodChangeNeighbor.cs" />
-    <Compile Include="Neighborhood\Timetabling\PeriodRoomChangeNeighbor.cs" />
-    <Compile Include="Neighborhood\Timetabling\PeriodSwapNeighbor.cs" />
+    <Compile Include="Neighborhood\BitFlip\BitFlipNeighbor.cs" />
+    <Compile Include="Neighborhood\Timetable\PeriodRoomSwapNeighbor.cs" />
+    <Compile Include="Neighborhood\Timetable\PeriodChangeNeighbor.cs" />
+    <Compile Include="Neighborhood\Timetable\PeriodRoomChangeNeighbor.cs" />
+    <Compile Include="Neighborhood\Timetable\PeriodSwapNeighbor.cs" />
     <Compile Include="Neighborhood\INeighbor.cs" />
-    <Compile Include="NeighborSelection.cs" />
-    <Compile Include="Neighborhood\Timetabling\RoomChangeNeighbor.cs" />
-    <Compile Include="Neighborhood\Timetabling\RoomSwapNeighbor.cs" />
+    <Compile Include="NeighborSelection\BitFlip\NeighborSelectionBitFlip.cs" />
+    <Compile Include="NeighborSelection\Timetable\NeighborSelectionTimetable.cs" />
+    <Compile Include="Neighborhood\Timetable\RoomChangeNeighbor.cs" />
+    <Compile Include="Neighborhood\Timetable\RoomSwapNeighbor.cs" />
     <Compile Include="OutputFormatting.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="EvaluationFunction\Timetabling\EvaluationFunctionTimetabling.cs" />
+    <Compile Include="EvaluationFunction\Timetable\EvaluationFunctionTimetable.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Business\Business.csproj">
@@ -63,6 +66,7 @@
       <Name>DAL</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

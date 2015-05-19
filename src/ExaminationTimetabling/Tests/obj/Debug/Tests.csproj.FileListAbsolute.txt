@@ -1,3 +1,4 @@
+D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimetabling\Tests\obj\Debug\Tests.csprojResolveAssemblyReference.cache
 D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimetabling\Tests\bin\Debug\Tests.exe.config
 D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimetabling\Tests\bin\Debug\Tests.exe
 D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimetabling\Tests\bin\Debug\Tests.pdb
@@ -9,6 +10,5 @@ D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimeta
 D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimetabling\Tests\bin\Debug\DAL.pdb
 D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimetabling\Tests\bin\Debug\Heuristics.pdb
 D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimetabling\Tests\bin\Debug\Tools.pdb
-D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimetabling\Tests\obj\Debug\Tests.csprojResolveAssemblyReference.cache
 D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimetabling\Tests\obj\Debug\Tests.exe
 D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimetabling\Tests\obj\Debug\Tests.pdb

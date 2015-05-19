@@ -43,12 +43,13 @@
     <Compile Include="Models\Examination.cs" />
     <Compile Include="Models\IEntity.cs" />
     <Compile Include="Models\InstitutionalModelWeightings.cs" />
-    <Compile Include="Models\ISolution.cs" />
+    <Compile Include="Models\Solution\BitFlip\SolutionBitFlip.cs" />
+    <Compile Include="Models\Solution\ISolution.cs" />
     <Compile Include="Models\Period.cs" />
     <Compile Include="Models\PeriodHardConstraint.cs" />
     <Compile Include="Models\Room.cs" />
     <Compile Include="Models\RoomHardConstraint.cs" />
-    <Compile Include="Models\Solution.cs" />
+    <Compile Include="Models\Solution\Timetabling\Solution.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository.cs" />
   </ItemGroup>

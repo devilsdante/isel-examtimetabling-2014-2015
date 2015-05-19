@@ -4,35 +4,38 @@ using System.Linq;
 using Business;
 using DAL;
 using DAL.Models;
+using DAL.Models.Solution;
+using DAL.Models.Solution.Timetabling;
 using Heuristics;
 using Heuristics.SimulatedAnnealing;
-using Heuristics.SimulatedAnnealing.Timetabling;
+using Heuristics.SimulatedAnnealing.Timetable;
 using Tools;
+using Tools.EvaluationFunction.Timetable;
 
 namespace Tests.SimulatedAnnealingTest
 {
     class Main1
     {
-        static void Main()
+        static void Main_()
         {
             //testing
             Examinations examinations = Examinations.Instance(10);
             PeriodHardConstraints period_hard_constraints = PeriodHardConstraints.Instance(4);
             Periods periods = Periods.Instance(5);
-            RoomHardConstraints room_hard_constraints = RoomHardConstraints.Instance(0);
+            RoomHardConstraints.Instance(0);
             Rooms rooms = Rooms.Instance(3);
-            Solutions solutions = Solutions.Instance(1);
-            ModelWeightings model_weightings = ModelWeightings.Instance(new InstitutionalModelWeightings(5, 3, 2, new []{2,2,20000}, 2));
+            Solutions.Instance(1);
+            ModelWeightings.Instance(new InstitutionalModelWeightings(5, 3, 2, new []{2,2,20000}, 2));
 
             AddDataRooms(rooms);
             AddDataPeriods(periods);
             AddDataExaminations(examinations);
             AddDataPeriodHardConstraints(period_hard_constraints);
 
-            EvaluationFunctionTimetabling evaluation = new EvaluationFunctionTimetabling();
+            EvaluationFunctionTimetable evaluation = new EvaluationFunctionTimetable();
 
             GraphColoring gc = new GraphColoring();
-            SimulatedAnnealing sa = new SimulatedAnnealingTimetabling();
+            SimulatedAnnealing sa = new SimulatedAnnealingTimetable();
 
             
 
@@ -48,20 +51,20 @@ namespace Tests.SimulatedAnnealingTest
             {
                 final = solution.Copy();
 
-                final = sa.ExecLinearTimer(final, 1095, 0, 1000 * 10, SimulatedAnnealingTimetabling.type_random, true);
+                final = sa.ExecLinearTimer(final, 1095, 0, 1000 * 10, SimulatedAnnealingTimetable.type_random, true);
 
                 Console.WriteLine("SARa Fitness: " + evaluation.Fitness(final));
 
                 final = solution.Copy();
 
-                final = sa.ExecLinearTimer(final, 1095, 0, 1000 * 10, SimulatedAnnealingTimetabling.type_guided1, true);
+                final = sa.ExecLinearTimer(final, 1095, 0, 1000 * 10, SimulatedAnnealingTimetable.type_guided1, true);
 
                 Console.WriteLine("SAG1 Fitness: " + evaluation.Fitness(final));
                 //PrintToFile("..//..//outout_final.txt", final);
                 //
                 final = solution.Copy();
 
-                final = sa.ExecLinearTimer(final, 1095, 0, 1000 * 10, SimulatedAnnealingTimetabling.type_guided2, true);
+                final = sa.ExecLinearTimer(final, 1095, 0, 1000 * 10, SimulatedAnnealingTimetable.type_guided2, true);
 
                 Console.WriteLine("SAG2 Fitness: " + evaluation.Fitness(final));
 
@@ -71,20 +74,20 @@ namespace Tests.SimulatedAnnealingTest
 
                 final = solution.Copy();
 
-                final = sa.ExecTimer(final, 1000 * 10, SimulatedAnnealingTimetabling.type_random, true);
+                final = sa.ExecTimer(final, 1000 * 10, SimulatedAnnealingTimetable.type_random, true);
 
                 Console.WriteLine("SARa Fitness: " + evaluation.Fitness(final));
                 //
                 final = solution.Copy();
 
-                final = sa.ExecTimer(final, 1000 * 10, SimulatedAnnealingTimetabling.type_guided1, true);
+                final = sa.ExecTimer(final, 1000 * 10, SimulatedAnnealingTimetable.type_guided1, true);
 
                 Console.WriteLine("SAG1 Fitness: " + evaluation.Fitness(final));
                 //PrintToFile("..//..//outout_final.txt", final);
                 //
                 final = solution.Copy();
 
-                final = sa.ExecTimer(final, 1000 * 10, SimulatedAnnealingTimetabling.type_guided2, true);
+                final = sa.ExecTimer(final, 1000 * 10, SimulatedAnnealingTimetable.type_guided2, true);
 
                 Console.WriteLine("SAG2 Fitness: " + evaluation.Fitness(final));
             }

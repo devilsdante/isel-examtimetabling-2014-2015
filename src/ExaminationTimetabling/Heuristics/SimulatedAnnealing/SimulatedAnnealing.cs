@@ -1,7 +1,11 @@
 ﻿using System;
 using System.Diagnostics;
 using DAL.Models;
+using DAL.Models.Solution;
+using DAL.Models.Solution.BitFlip;
+using Heuristics.SimulatedAnnealing.CoolingSchedule;
 using Tools;
+using Tools.EvaluationFunction;
 using Tools.Neighborhood;
 
 namespace Heuristics.SimulatedAnnealing
@@ -14,7 +18,7 @@ namespace Heuristics.SimulatedAnnealing
 
         public ISolution Exec(ISolution solution, int TMax, int TMin, int loops, int type, bool minimize)
         {
-            cooling_schedule = new CoolingScheduleLinear(TMax, TMin, 1);
+            cooling_schedule = new CoolingScheduleGeometric(0.9);
             InitVals(type);
 
             for (double T = TMax; T > TMin; T = cooling_schedule.G(T))

@@ -1,30 +1,29 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Business;
 using DAL;
 using DAL.Models;
+using DAL.Models.Solution.Timetabling;
+using Tools.EvaluationFunction.Timetable;
 using Tools.Neighborhood;
+using Tools.Neighborhood.Timetable;
 
-namespace Tools
+namespace Tools.NeighborSelection.Timetable
 {
-    public class NeighborSelection
+    public class NeighborSelectionTimetable
     {
         private readonly Examinations examinations;
         private readonly Rooms rooms;
         private readonly Periods periods;
         private readonly FeasibilityTester feasibility_tester;
-        private readonly EvaluationFunctionTimetabling _evaluationFunctionTimetabling;
+        private readonly EvaluationFunctionTimetable _evaluationFunctionTimetable;
 
-        public NeighborSelection()
+        public NeighborSelectionTimetable()
         {
             examinations = Examinations.Instance();
             rooms = Rooms.Instance();
             periods = Periods.Instance();
             feasibility_tester = new FeasibilityTester();
-            _evaluationFunctionTimetabling = new EvaluationFunctionTimetabling();
+            _evaluationFunctionTimetable = new EvaluationFunctionTimetable();
 
         }
 
@@ -49,7 +48,7 @@ namespace Tools
                         continue;
                     INeighbor neighbor = new RoomSwapNeighbor(solution, random_examination.id, exam_id);
 
-                    if (_evaluationFunctionTimetabling.DistanceToFeasibility(neighbor) == 0)
+                    if (_evaluationFunctionTimetable.DistanceToFeasibility(neighbor) == 0)
                     {
                         return neighbor;
                     }
@@ -80,7 +79,7 @@ namespace Tools
                         continue;
 
                     INeighbor neighbor = new PeriodSwapNeighbor(solution, random_examination.id, exam_id);
-                    if (_evaluationFunctionTimetabling.DistanceToFeasibility(neighbor) == 0)
+                    if (_evaluationFunctionTimetable.DistanceToFeasibility(neighbor) == 0)
                         return neighbor;
                 }
 
@@ -117,7 +116,7 @@ namespace Tools
                             continue;
                         INeighbor neighbor = new PeriodRoomSwapNeighbor(solution, random_examination.id, exam_id);
 
-                        if (_evaluationFunctionTimetabling.DistanceToFeasibility(neighbor) == 0)
+                        if (_evaluationFunctionTimetable.DistanceToFeasibility(neighbor) == 0)
                             return neighbor;
                     }
                 }
@@ -181,7 +180,7 @@ namespace Tools
                         return new PeriodRoomChangeNeighbor(solution, random_examination.id, random_period.id, random_room.id);
                     //PeriodRoomChangeNeighbor prc_neighbor = new PeriodRoomChangeNeighbor(solution, random_examination.id, random_period.id, random_room.id);
                     //prc_neighbor.Accept();
-                    //if (_evaluationFunctionTimetabling.DistanceToFeasibility(solution) == 0)
+                    //if (_evaluationFunctionTimetable.DistanceToFeasibility(solution) == 0)
                     //{
                     //    prc_neighbor.Reverse();
                     //    return prc_neighbor;
