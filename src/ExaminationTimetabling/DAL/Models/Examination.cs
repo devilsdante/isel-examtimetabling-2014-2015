@@ -14,6 +14,22 @@ namespace DAL
         public IEnumerable<int> students { get; set; }
         public int conflict;
 
+        public Examination(int id)
+        {
+            this.id = id;
+            this.duration = -1;
+            this.students = null;
+            this.conflict = 0;
+        }
+
+        public Examination(int id, int duration, IEnumerable<int> students)
+        {
+            this.id = id;
+            this.students = students;
+            this.duration = duration;
+            this.conflict = 0;
+        }
+
         public Examination(int id, int duration, int students_count)
         {
             this.id = id;
@@ -21,6 +37,5 @@ namespace DAL
             this.duration = duration;
             this.conflict = 0;
         }
-
     }
 }

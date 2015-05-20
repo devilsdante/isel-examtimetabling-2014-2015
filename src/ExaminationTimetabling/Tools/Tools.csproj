@@ -42,6 +42,8 @@
     <Compile Include="EvaluationFunction\BitFlip\EvaluationFunctionBitFlip.cs" />
     <Compile Include="FeasibilityTester.cs" />
     <Compile Include="EvaluationFunction\IEvaluationFunction.cs" />
+    <Compile Include="Loader\Loader.cs" />
+    <Compile Include="Loader\Timetable\LoaderTimetable.cs" />
     <Compile Include="Neighborhood\BitFlip\BitFlipNeighbor.cs" />
     <Compile Include="Neighborhood\Timetable\PeriodRoomSwapNeighbor.cs" />
     <Compile Include="Neighborhood\Timetable\PeriodChangeNeighbor.cs" />
