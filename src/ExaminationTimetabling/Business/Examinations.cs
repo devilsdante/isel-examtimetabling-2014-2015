@@ -26,7 +26,7 @@ namespace Business
 
         /*******************/
 
-        IRepository<Examination> examinations_repo;
+        readonly IRepository<Examination> examinations_repo;
 
         private Examinations(int size)
         {

@@ -23,5 +23,10 @@ namespace DAL.Models
             this.front_load = front_load;
             this.non_mixed_durations = non_mixed_durations;
         }
+
+        public InstitutionalModelWeightings()
+        {
+            
+        }
     }
 }

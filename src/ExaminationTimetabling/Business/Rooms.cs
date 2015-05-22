@@ -26,20 +26,20 @@ namespace Business
 
         /*******************/
 
-        IRepository<Room> rooms_repo;
+        readonly IRepository<Room> rooms_repo;
 
         private Rooms(int size)
         {
             rooms_repo = new Repository<Room>(size);
         }
 
-        public void Insert(Room exam)
+        public void Insert(Room room)
         {
-            rooms_repo.Insert(exam);
+            rooms_repo.Insert(room);
         }
-        public void Delete(Room exam)
+        public void Delete(Room room)
         {
-            rooms_repo.Delete(exam);
+            rooms_repo.Delete(room);
         }
         public IEnumerable<Room> GetAll()
         {

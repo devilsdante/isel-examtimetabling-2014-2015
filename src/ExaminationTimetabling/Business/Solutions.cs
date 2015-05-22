@@ -27,7 +27,7 @@ namespace Business
 
         /*******************/
 
-        IRepository<Solution> solutions_repo;
+        readonly IRepository<Solution> solutions_repo;
 
         private Solutions(int size)
         {

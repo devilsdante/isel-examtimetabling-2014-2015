@@ -27,20 +27,20 @@ namespace Business
 
         /*******************/
 
-        IRepository<PeriodHardConstraint> period_hard_constraints_repo;
+        readonly IRepository<PeriodHardConstraint> period_hard_constraints_repo;
 
         private PeriodHardConstraints(int size)
         {
             period_hard_constraints_repo = new Repository<PeriodHardConstraint>(size);
         }
 
-        public void Insert(PeriodHardConstraint exam)
+        public void Insert(PeriodHardConstraint phc)
         {
-            period_hard_constraints_repo.Insert(exam);
+            period_hard_constraints_repo.Insert(phc);
         }
-        public void Delete(PeriodHardConstraint exam)
+        public void Delete(PeriodHardConstraint phc)
         {
-            period_hard_constraints_repo.Delete(exam);
+            period_hard_constraints_repo.Delete(phc);
         }
         public IEnumerable<PeriodHardConstraint> GetAll()
         {

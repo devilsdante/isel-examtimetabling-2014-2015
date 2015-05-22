@@ -26,7 +26,7 @@ namespace Business
 
         /*******************/
 
-        IRepository<Period> periods_repo;
+        readonly IRepository<Period> periods_repo;
 
         private Periods(int size)
         {
@@ -34,13 +34,13 @@ namespace Business
         }
 
 
-        public void Insert(Period exam)
+        public void Insert(Period period)
         {
-            periods_repo.Insert(exam);
+            periods_repo.Insert(period);
         }
-        public void Delete(Period exam)
+        public void Delete(Period period)
         {
-            periods_repo.Delete(exam);
+            periods_repo.Delete(period);
         }
         public IEnumerable<Period> GetAll()
         {

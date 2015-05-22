@@ -26,20 +26,20 @@ namespace Business
 
         /*******************/
 
-        IRepository<RoomHardConstraint> room_hard_constraints_repo;
+        readonly IRepository<RoomHardConstraint> room_hard_constraints_repo;
 
         private RoomHardConstraints(int size)
         {
             room_hard_constraints_repo = new Repository<RoomHardConstraint>(size);
         }
 
-        public void Insert(RoomHardConstraint exam)
+        public void Insert(RoomHardConstraint rhc)
         {
-            room_hard_constraints_repo.Insert(exam);
+            room_hard_constraints_repo.Insert(rhc);
         }
-        public void Delete(RoomHardConstraint exam)
+        public void Delete(RoomHardConstraint rhc)
         {
-            room_hard_constraints_repo.Delete(exam);
+            room_hard_constraints_repo.Delete(rhc);
         }
         public IEnumerable<RoomHardConstraint> GetAll()
         {

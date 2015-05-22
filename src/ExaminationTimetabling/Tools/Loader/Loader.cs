@@ -16,11 +16,13 @@ namespace Tools.Loader
         private string[] tokens;
         private int idx;
         private StreamReader file;
+        private string curr_token;
 
         public Loader(string path)
         {
             idx = 0;
             this.path = path;
+            this.curr_token = null;
             if (!File.Exists(path))
             {
                 throw new Exception("File to load does not exist.");
@@ -39,14 +41,20 @@ namespace Tools.Loader
             phrase = file.ReadLine();
             if (phrase == null) 
                 return false;
-            tokens = Regex.Split(phrase, ", ");
+            tokens = Regex.Split(phrase, ",");
             idx = 0;
+            curr_token = null;
             return true;
         }
 
-        public string ReadToken()
+        public string ReadNextToken()
         {
-            return idx < tokens.Length ? tokens[idx++] : null;
+            return idx < tokens.Length ? curr_token = tokens[idx++].Trim() : null;
+        }
+
+        public string ReadCurrToken()
+        {
+            return curr_token;
         }
     }
 }
