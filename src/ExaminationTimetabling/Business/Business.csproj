@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConflictMatrix.cs" />
     <Compile Include="Examinations.cs" />
     <Compile Include="ModelWeightings.cs" />
     <Compile Include="PeriodHardConstraints.cs" />

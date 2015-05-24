@@ -54,10 +54,10 @@ namespace Business
             return
                 GetAll().Any(rhc => rhc.type == RoomHardConstraint.types.ROOM_EXCLUSIVE && rhc.examination == exam_id);
         }
-        public IEnumerable<RoomHardConstraint> GetByTypeWithExamId(RoomHardConstraint.types type, int exam_id)
-        {
-            return GetAll().Where(rhc => rhc.type == type && rhc.examination == exam_id);
-        }
+        //public IEnumerable<RoomHardConstraint> GetByTypeWithExamId(RoomHardConstraint.types type, int exam_id)
+        //{
+        //    return GetAll().Where(rhc => rhc.type == type && rhc.examination == exam_id);
+        //}
 
         public IEnumerable<RoomHardConstraint> GetByType(RoomHardConstraint.types type)
         {

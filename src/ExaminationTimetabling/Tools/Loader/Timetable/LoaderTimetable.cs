@@ -19,7 +19,7 @@ namespace Tools.Loader.Timetable
         private RoomHardConstraints room_hard_constraints;
         private Rooms rooms;
         private ModelWeightings model_weightings;
-        private Solutions solutions;
+        private ConflictMatrix conflict_matrix;
 
         private readonly Loader loader;
 
@@ -73,6 +73,7 @@ namespace Tools.Loader.Timetable
             }
 
             InitSolutions();
+            InitConflictMatrix();
         }
 
         private void InitSolutions()
@@ -211,6 +212,37 @@ namespace Tools.Loader.Timetable
                 }
                 examinations.Insert(new Examination(exam_id, duration, students));
             }
+        }
+
+        private void InitConflictMatrix()
+        {
+            conflict_matrix = ConflictMatrix.Instance();
+
+            bool[,] matrix = new bool[examinations.EntryCount(), examinations.EntryCount()];
+
+            // student conflicts //
+            for (int exam1_id = 0; exam1_id < matrix.GetLength(0); exam1_id += 1)
+            {
+                for (int exam2_id = 0; exam2_id < matrix.GetLength(1); exam2_id += 1)
+                {
+                    Examination exam1 = examinations.GetById(exam1_id);
+                    Examination exam2 = examinations.GetById(exam2_id);
+                    if (exam1_id == exam2_id)
+                        matrix[exam1_id, exam2_id] = false;
+                    else if (exam1_id > exam2_id)
+                        matrix[exam1_id, exam2_id] = matrix[exam2_id, exam1_id];
+                    else if (examinations.Conflict(exam1, exam2))
+                    {
+                        matrix[exam1_id, exam2_id] = true;
+                        exam1.conflict += 1;
+                        exam2.conflict += 1;
+                    }
+                    else
+                        matrix[exam1_id, exam2_id] = false;
+                }
+            }
+
+            conflict_matrix.Set(matrix);
         }
     }
 }

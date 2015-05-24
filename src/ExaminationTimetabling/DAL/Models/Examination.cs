@@ -11,7 +11,7 @@ namespace DAL
     {
         public int id { get; set; }
         public int duration { get; set; }
-        public IEnumerable<int> students { get; set; }
+        public List<int> students { get; set; }
         public int conflict;
 
         public Examination(int id)
@@ -22,7 +22,7 @@ namespace DAL
             this.conflict = 0;
         }
 
-        public Examination(int id, int duration, IEnumerable<int> students)
+        public Examination(int id, int duration, List<int> students)
         {
             this.id = id;
             this.students = students;

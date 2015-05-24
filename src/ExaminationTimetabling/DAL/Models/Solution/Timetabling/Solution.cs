@@ -5,7 +5,6 @@
         public int id { get; set; }
         public bool[,,] timetable_container { get; set; }
         public int[,] epr_associasion; //idx = exam; 0 = period; 1 = room
-        public bool[,] conflict_matrix;
         public int fitness { get; set; }
 
 
@@ -15,7 +14,6 @@
             fitness = -1;
 
             timetable_container = new bool[period_count, room_count, examination_count];
-            conflict_matrix = new bool[examination_count, examination_count];
             epr_associasion = new int[examination_count,2];
 
             for(int i = 0; i < examination_count; i++)
@@ -30,7 +28,6 @@
             Solution solution = new Solution(id, timetable_container.GetLength(0), timetable_container.GetLength(1), timetable_container.GetLength(2));
             solution.timetable_container = (bool[,,]) timetable_container.Clone();
             solution.epr_associasion = (int[,]) epr_associasion.Clone();
-            solution.conflict_matrix = (bool[,]) conflict_matrix.Clone();
             return solution;
         }
 
@@ -53,15 +50,6 @@
                         if (timetable_container[i, j, h] != obj.timetable_container[i, j, h])
                             return false;
                     }
-                }
-            }
-
-            for (int i = 0; i < conflict_matrix.GetLength(0); i++)
-            {
-                for (int j = 0; j < conflict_matrix.GetLength(1); j++)
-                {
-                    if (conflict_matrix[i, j] != obj.conflict_matrix[i, j])
-                        return false;
                 }
             }
 

@@ -11,7 +11,7 @@ namespace Tools.Loader
 {
     public class Loader
     {
-        private string path;
+        private readonly string path;
         private string phrase;
         private string[] tokens;
         private int idx;

@@ -9,7 +9,7 @@ namespace Tests.LoaderTest
 {
     public class Main1
     {
-        public static void Main()
+        public static void Main_()
         {
             LoaderTimetable loader = new LoaderTimetable("..//..//exam_comp_set8.exam");
             loader.Exec();

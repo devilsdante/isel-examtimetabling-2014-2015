@@ -26,7 +26,9 @@ namespace Tests.SimulatedAnnealingTest
             Rooms rooms = Rooms.Instance(3);
             Solutions.Instance(1);
             ModelWeightings.Instance(new InstitutionalModelWeightings(5, 3, 2, new []{2,2,20000}, 2));
+            ConflictMatrix conflict_matrix = ConflictMatrix.Instance();
 
+            InitConflictMatrix(examinations, conflict_matrix);
             AddDataRooms(rooms);
             AddDataPeriods(periods);
             AddDataExaminations(examinations);
@@ -201,13 +203,13 @@ namespace Tests.SimulatedAnnealingTest
             //a1.duration = 100;
         }
 
-        public static void PrintConflictMatrix(Solution solution, Examinations examinations)
+        public static void PrintConflictMatrix(bool[,] conflict_matrix, Examinations examinations)
         {
-            for (int x = 0; x < solution.conflict_matrix.GetLength(0); x += 1)
+            for (int x = 0; x < conflict_matrix.GetLength(0); x += 1)
             {
-                for (int y = 0; y < solution.conflict_matrix.GetLength(1); y += 1)
+                for (int y = 0; y < conflict_matrix.GetLength(1); y += 1)
                 {
-                    Console.Write(solution.conflict_matrix[x, y] + " ");
+                    Console.Write(conflict_matrix[x, y] + " ");
                 }
                 Console.WriteLine();
             }
@@ -224,6 +226,35 @@ namespace Tests.SimulatedAnnealingTest
             {
                 Console.WriteLine(coincidence.ex1 + " " + coincidence.type.ToString() + " " + coincidence.ex2);
             }
+        }
+
+        private static void InitConflictMatrix(Examinations examinations, ConflictMatrix conflict_matrix)
+        {
+            bool[,] matrix = new bool[examinations.EntryCount(), examinations.EntryCount()];
+
+            // student conflicts //
+            for (int exam1_id = 0; exam1_id < matrix.GetLength(0); exam1_id += 1)
+            {
+                for (int exam2_id = 0; exam2_id < matrix.GetLength(1); exam2_id += 1)
+                {
+                    Examination exam1 = examinations.GetById(exam1_id);
+                    Examination exam2 = examinations.GetById(exam2_id);
+                    if (exam1_id == exam2_id)
+                        matrix[exam1_id, exam2_id] = false;
+                    else if (exam1_id > exam2_id)
+                        matrix[exam1_id, exam2_id] = matrix[exam2_id, exam1_id];
+                    else if (examinations.Conflict(exam1, exam2))
+                    {
+                        matrix[exam1_id, exam2_id] = true;
+                        exam1.conflict += 1;
+                        exam2.conflict += 1;
+                    }
+                    else
+                        matrix[exam1_id, exam2_id] = false;
+                }
+            }
+
+            conflict_matrix.Set(matrix);
         }
     }
 }

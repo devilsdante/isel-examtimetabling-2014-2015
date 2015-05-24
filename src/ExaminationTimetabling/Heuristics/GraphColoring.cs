@@ -18,8 +18,8 @@ namespace Heuristics
         private readonly Periods periods;
         private readonly RoomHardConstraints room_hard_constraints;
         private readonly Rooms rooms;
-        
-        
+
+        private readonly bool[,] conflict_matrix;
         private FeasibilityTester feasibility_tester;
         private Solution solution;
         private List<Examination> unassigned_examinations;
@@ -36,6 +36,7 @@ namespace Heuristics
             periods = Periods.Instance();
             room_hard_constraints = RoomHardConstraints.Instance();
             rooms = Rooms.Instance();
+            conflict_matrix = ConflictMatrix.Instance().Get();
         }
 
         public Solution Exec()
@@ -44,7 +45,7 @@ namespace Heuristics
 
             feasibility_tester = new FeasibilityTester();
 
-            PopulateConflictMatrix();
+            AddExclusionToConflictMatrix();
 
             EraseCoincidenceHCWithConflict();
 
@@ -71,10 +72,12 @@ namespace Heuristics
                 
                 if (CheckIfExaminationCanBeAssignToAnyPeriod(exam_to_assign))
                 {
+                    //Console.WriteLine("Normal Assignment");
                     ExaminationNormalAssignment(exam_to_assign);
                 }
                 else
                 {
+                    Console.WriteLine("Forcing Assignment");
                     ExaminationForcingAssignment(exam_to_assign);
                 }
                 
@@ -120,38 +123,16 @@ namespace Heuristics
             unassigned_examinations = unassigned_examinations.OrderBy(ex => ex.conflict).ToList();
         }
 
-        private void PopulateConflictMatrix()
+        private void AddExclusionToConflictMatrix()
         {
-            // student conflicts //
-            for (int exam1_id = 0; exam1_id < solution.conflict_matrix.GetLength(0); exam1_id += 1)
-            {
-                for (int exam2_id = 0; exam2_id < solution.conflict_matrix.GetLength(1); exam2_id += 1)
-                {
-                    Examination exam1 = examinations.GetById(exam1_id);
-                    Examination exam2 = examinations.GetById(exam2_id);
-                    if (exam1_id == exam2_id)
-                        solution.conflict_matrix[exam1_id, exam2_id] = false;
-                    else if (exam1_id > exam2_id)
-                        solution.conflict_matrix[exam1_id, exam2_id] = solution.conflict_matrix[exam2_id, exam1_id];
-                    else if (examinations.Conflict(exam1, exam2))
-                    {
-                        solution.conflict_matrix[exam1_id, exam2_id] = true;
-                        exam1.conflict += 1;
-                        exam2.conflict += 1;
-                    }
-                    else
-                        solution.conflict_matrix[exam1_id, exam2_id] = false;
-                }
-            }
-
             // exclusion hard constraints //
             IEnumerable<PeriodHardConstraint> exclusions = period_hard_constraints.GetByType(PeriodHardConstraint.types.EXCLUSION);
             foreach (PeriodHardConstraint phc in exclusions)
             {
-                if (solution.conflict_matrix[phc.ex1, phc.ex2] == false)
+                if (conflict_matrix[phc.ex1, phc.ex2] == false)
                 {
-                    solution.conflict_matrix[phc.ex1, phc.ex2] = true;
-                    solution.conflict_matrix[phc.ex2, phc.ex1] = true;
+                    conflict_matrix[phc.ex1, phc.ex2] = true;
+                    conflict_matrix[phc.ex2, phc.ex1] = true;
 
                     examinations.GetById(phc.ex1).conflict += 1;
                     examinations.GetById(phc.ex2).conflict += 1;
@@ -163,7 +144,7 @@ namespace Heuristics
         {
             foreach (PeriodHardConstraint coincidence in period_hard_constraints.GetByType(PeriodHardConstraint.types.EXAM_COINCIDENCE))
             {
-                if (solution.conflict_matrix[coincidence.ex1, coincidence.ex2])
+                if (conflict_matrix[coincidence.ex1, coincidence.ex2])
                 {
                     period_hard_constraints.Delete(coincidence);
                 }
@@ -217,7 +198,6 @@ namespace Heuristics
 
         private void ExaminationForcingAssignment(Examination exam_to_assign)
         {
-            //Console.WriteLine("Forced!");
             Random random = new Random();
             int random_room = -1;
             int random_period = -1;
@@ -284,9 +264,9 @@ namespace Heuristics
         //                UnassignExaminationAndCoincidences(examinations.GetById(exam));
         //    }
         //}
-            for (int exam_id = 0; exam_id < solution.conflict_matrix.GetLength(0); exam_id += 1)
+            for (int exam_id = 0; exam_id < conflict_matrix.GetLength(0); exam_id += 1)
             {
-                if (solution.conflict_matrix[exam_id, exam_to_assign.id] && solution.epr_associasion[exam_id, 0] == period_to_assign.id)
+                if (conflict_matrix[exam_id, exam_to_assign.id] && solution.epr_associasion[exam_id, 0] == period_to_assign.id)
                 {
                     UnassignExaminationAndCoincidences(examinations.GetById(exam_id));
                 }
@@ -320,19 +300,19 @@ namespace Heuristics
                 PeriodHardConstraint phc in
                     period_hard_constraints.GetByTypeWithExamId(PeriodHardConstraint.types.AFTER, exam_to_assign.id))
             {
-                if (phc.ex1 == exam_to_assign.id 
+                if (phc.ex1 == exam_to_assign.id
                     && solution.epr_associasion[phc.ex2, 0] != -1
                     && solution.epr_associasion[phc.ex2, 1] != -1
-                    && solution.epr_associasion[phc.ex2, 0] >=  solution.epr_associasion[phc.ex1, 0])
+                    && solution.epr_associasion[phc.ex2, 0] >= period_to_assign.id)
                 {
                     UnassignExaminationAndCoincidences(examinations.GetById(phc.ex2));
                 }
                 else if (phc.ex2 == exam_to_assign.id
                     && solution.epr_associasion[phc.ex1, 0] != -1
                     && solution.epr_associasion[phc.ex1, 1] != -1
-                    && solution.epr_associasion[phc.ex1, 0] <= solution.epr_associasion[phc.ex2, 0])
+                    && solution.epr_associasion[phc.ex1, 0] <= period_to_assign.id)
                 {
-                    UnassignExaminationAndCoincidences(examinations.GetById(phc.ex2));
+                    UnassignExaminationAndCoincidences(examinations.GetById(phc.ex1));
                 }
             }
 
@@ -379,8 +359,7 @@ namespace Heuristics
 
         private void UnassignExamination(Examination exam)
         {
-            if (solution.timetable_container[
-                solution.epr_associasion[exam.id, 0], solution.epr_associasion[exam.id, 1], exam.id] == false)
+            if (solution.epr_associasion[exam.id, 0] == -1 || solution.epr_associasion[exam.id, 1] == -1)
                 return;
 
             solution.timetable_container[

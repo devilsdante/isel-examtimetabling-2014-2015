@@ -11,7 +11,7 @@ namespace Tools.EvaluationFunction.Timetable
 {
     public class EvaluationFunctionTimetable : IEvaluationFunction
     {
-        private bool[,] conflict_matrix;
+        private readonly bool[,] conflict_matrix;
         private readonly Examinations examinations;
         private readonly PeriodHardConstraints period_hard_constraints;
         private readonly RoomHardConstraints room_hard_constraints;
@@ -37,7 +37,7 @@ namespace Tools.EvaluationFunction.Timetable
             room_hard_constraints = RoomHardConstraints.Instance();
             rooms = Rooms.Instance();
             model_weightings = ModelWeightings.Instance();
-            PopulateConflictMatrix();
+            conflict_matrix = ConflictMatrix.Instance().Get();
         }
 
         public int DistanceToFeasibility(Solution solution)
@@ -196,11 +196,7 @@ namespace Tools.EvaluationFunction.Timetable
                                 {
                                     if (solution.timetable_container[period2_id, room2_id, exam2_id])
                                     {
-                                        if (examinations.Conflict(examinations.GetById(exam_id),
-                                            examinations.GetById(exam2_id)))
-                                        {
-                                            two_exams_in_a_row += model_weightings.Get().two_in_a_row;
-                                        }
+                                        two_exams_in_a_row += examinations.NoOfConflicts(examinations.GetById(exam_id), examinations.GetById(exam2_id)) * model_weightings.Get().two_in_a_row;
                                     }
                                 }
                             }
@@ -234,11 +230,7 @@ namespace Tools.EvaluationFunction.Timetable
                                     {
                                         if (solution.timetable_container[period2_id, room2_id, exam2_id])
                                         {
-                                            if (examinations.Conflict(examinations.GetById(exam_id),
-                                                examinations.GetById(exam2_id)))
-                                            {
-                                                two_exams_in_a_day += model_weightings.Get().two_in_a_day;
-                                            }
+                                            two_exams_in_a_day += examinations.NoOfConflicts(examinations.GetById(exam_id), examinations.GetById(exam2_id)) * model_weightings.Get().two_in_a_day;
                                         }
                                     }
                                 }
@@ -343,32 +335,7 @@ namespace Tools.EvaluationFunction.Timetable
             return true;
         }
 
-        private void PopulateConflictMatrix()
-        {
-            conflict_matrix = new bool[examinations.EntryCount(), examinations.EntryCount()];
-
-            // student conflicts //
-            for (int exam1_id = 0; exam1_id < conflict_matrix.GetLength(0); exam1_id += 1)
-            {
-                for (int exam2_id = 0; exam2_id < conflict_matrix.GetLength(1); exam2_id += 1)
-                {
-                    Examination exam1 = examinations.GetById(exam1_id);
-                    Examination exam2 = examinations.GetById(exam2_id);
-                    if (exam1_id == exam2_id)
-                        conflict_matrix[exam1_id, exam2_id] = false;
-                    else if (exam1_id > exam2_id)
-                        conflict_matrix[exam1_id, exam2_id] = conflict_matrix[exam2_id, exam1_id];
-                    else if (examinations.Conflict(exam1, exam2))
-                    {
-                        conflict_matrix[exam1_id, exam2_id] = true;
-                        exam1.conflict += 1;
-                        exam2.conflict += 1;
-                    }
-                    else
-                        conflict_matrix[exam1_id, exam2_id] = false;
-                }
-            }
-        }
+        
 
         public int Fitness(INeighbor neighbor)
         {

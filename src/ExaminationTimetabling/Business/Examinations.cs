@@ -57,31 +57,15 @@ namespace Business
 
         public bool Conflict(Examination ex1, Examination ex2)
         {
-            //foreach (int student in ex1.students)
-            //    if (ex2.students.Contains(student))
-            //        return true;
-            //return false;
-
-            //foreach (int student1 in ex1.students)
-            //{
-            //    foreach (int student2 in ex2.students)
-            //    {
-            //        if (student1 > student2)
-            //            break;
-            //        if (student1 == student2)
-            //        {
-            //            return true;
-            //        }
-            //    }
-            //}
-            //return false;
-
             int i = 0, j = 0;
-            while (i < ex1.students.Count() && j < ex2.students.Count())
+            List<int> students1 = (List<int>) ex1.students;
+            List<int> students2 = (List<int>) ex2.students;
+
+            while (i < students1.Count() && j < students2.Count())
             {
-                if (ex1.students.ElementAt(i) == ex2.students.ElementAt(j))
+                if (students1[i] == students2[j])
                     return true;
-                if (ex1.students.ElementAt(i) < ex2.students.ElementAt(j))
+                if (students1[i] < students2[j])
                     ++i;
                 else
                     ++j;
@@ -93,16 +77,18 @@ namespace Business
         {
             int count = 0;
 
-            foreach (int student1 in ex1.students)
+            int i = 0, j = 0;
+            List<int> students1 = (List<int>)ex1.students;
+            List<int> students2 = (List<int>)ex2.students;
+
+            while (i < students1.Count() && j < students2.Count())
             {
-                foreach (int student2 in ex2.students)
-                {
-                    if (student1 > student2)
-                        break;
-                    if (student1 == student2) {
-                        ++count; break;
-                    }
-                }
+                if (students1[i] == students2[j])
+                    count++;
+                if (students1[i] < students2[j])
+                    ++i;
+                else
+                    ++j;
             }
 
             return count;
