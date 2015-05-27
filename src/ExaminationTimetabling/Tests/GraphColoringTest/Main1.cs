@@ -25,28 +25,41 @@ namespace Tests.GraphColoringTest
             //AddDataPeriods(periods);
             //AddDataExaminations(examinations);
             //AddDataPeriodHardConstraints(period_hard_constraints);
-
+            int SET;
             Stopwatch watch = Stopwatch.StartNew();
+            Solution solution = null;
 
-            new LoaderTimetable("..//..//exam_comp_set2.exam").Exec();
-            Console.WriteLine("Time LoaderTimetable: " + watch.ElapsedMilliseconds);
-            EvaluationFunctionTimetable evaluation = new EvaluationFunctionTimetable();
+            for (SET = 5; SET <= 8; SET++)
+            {
+                Console.WriteLine("**SET** " + SET);
+                LoaderTimetable loader = new LoaderTimetable("..//..//exam_comp_set"+SET+".exam");
+                loader.Unload();
+                loader.Load();
 
-            GraphColoring gc = new GraphColoring();
-            watch.Restart();
+                Console.WriteLine("Time LoaderTimetable: " + watch.ElapsedMilliseconds);
+                var evaluation = new EvaluationFunctionTimetable();
+                for (int i = 0; i < 10; i++)
+                {
+                    GraphColoring gc = new GraphColoring();
+                    watch.Restart();
 
-            Solution solution = gc.Exec();
-            Console.WriteLine("Time GraphColoring: " + watch.ElapsedMilliseconds);
-            watch.Restart();
-            Console.WriteLine("GC DTF: " + evaluation.DistanceToFeasibility(solution));
-            Console.WriteLine("GC Fitness: " + evaluation.Fitness(solution));
-            Console.WriteLine("Time Fitness: " + watch.ElapsedMilliseconds);
+                    solution = gc.Exec();
+                    Console.WriteLine("Time GraphColoring: " + watch.ElapsedMilliseconds);
+                    watch.Restart();
+                    Console.WriteLine("GC DTF: " + evaluation.DistanceToFeasibility(solution));
+                    Console.WriteLine("GC Fitness: " + evaluation.Fitness(solution));
+                    Console.WriteLine("Time Fitness: " + watch.ElapsedMilliseconds);
+                }
+                PrintToFile("..//..//output"+SET+".txt", solution);
+            }
+            
+            
             
 
 
             Console.ReadKey();
 
-            PrintToFile("..//..//output.txt", solution);
+            //PrintToFile("..//..//output.txt", solution);
         }
 
         private static void PrintToFile(string output_txt, Solution solution)

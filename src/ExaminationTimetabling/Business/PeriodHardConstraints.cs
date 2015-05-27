@@ -25,6 +25,11 @@ namespace Business
             return instance;
         }
 
+        public static void Kill()
+        {
+            instance = null;
+        }
+
         /*******************/
 
         readonly IRepository<PeriodHardConstraint> period_hard_constraints_repo;

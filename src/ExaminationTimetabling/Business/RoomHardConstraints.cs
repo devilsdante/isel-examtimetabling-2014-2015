@@ -24,6 +24,11 @@ namespace Business
             return instance;
         }
 
+        public static void Kill()
+        {
+            instance = null;
+        }
+
         /*******************/
 
         readonly IRepository<RoomHardConstraint> room_hard_constraints_repo;

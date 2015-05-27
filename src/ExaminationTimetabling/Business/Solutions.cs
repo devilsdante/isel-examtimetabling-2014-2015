@@ -25,6 +25,11 @@ namespace Business
             return instance;
         }
 
+        public static void Kill()
+        {
+            instance = null;
+        }
+
         /*******************/
 
         readonly IRepository<Solution> solutions_repo;

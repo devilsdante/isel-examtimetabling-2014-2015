@@ -26,6 +26,11 @@ namespace Business
             return instance;
         }
 
+        public static void Kill()
+        {
+            instance = null;
+        }
+
         /*******************/
 
         private InstitutionalModelWeightings imw;

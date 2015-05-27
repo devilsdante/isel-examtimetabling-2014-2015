@@ -12,7 +12,7 @@ namespace Tests.LoaderTest
         public static void Main_()
         {
             LoaderTimetable loader = new LoaderTimetable("..//..//exam_comp_set8.exam");
-            loader.Exec();
+            loader.Load();
             Console.WriteLine("Press any key to continue.");
             Console.ReadKey();
         }

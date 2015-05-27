@@ -302,7 +302,7 @@ namespace Tools.EvaluationFunction.Timetable
             List<Period> periods_from_load = periods.GetAll()
                 .OrderByDescending(pe => pe.id)
                 .ToList()
-                .GetRange(0, model_weightings.Get().front_load[1]);
+                .GetRange(0, model_weightings.Get().front_load[1] < periods.EntryCount() ? model_weightings.Get().front_load[1] : periods.EntryCount());
 
             foreach (Examination exam in exams_front_load)
             {
