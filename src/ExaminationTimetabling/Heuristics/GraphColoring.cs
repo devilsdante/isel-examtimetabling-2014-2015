@@ -3,6 +3,7 @@ using DAL;
 using DAL.Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -52,6 +53,11 @@ namespace Heuristics
             PopulateAndSortAssignmentLists();
 
             int count = 0;
+            //TODO Only for testing
+            Stopwatch watch = Stopwatch.StartNew();
+
+            int count_average = 0;
+
             while (assigned_examinations.Count != examinations.EntryCount())
             {
                 if(++count % 5000 == 0)
@@ -69,16 +75,20 @@ namespace Heuristics
 
                 var exam_to_assign = list_to_use.Last();
                 list_to_use.RemoveAt(list_to_use.Count - 1);
-                
-                if (CheckIfExaminationCanBeAssignToAnyPeriod(exam_to_assign))
+                if (IsExaminationAssignable(exam_to_assign))
                 {
                     //Console.WriteLine("Normal Assignment");
+                    watch.Restart();
                     ExaminationNormalAssignment(exam_to_assign);
+                    count_average++;
+                    Console.WriteLine("Normal Assignment: " + watch.ElapsedMilliseconds);
                 }
                 else
                 {
                     //Console.WriteLine("Forcing Assignment");
+                    watch.Restart();
                     ExaminationForcingAssignment(exam_to_assign);
+                    Console.WriteLine("Forcing Assignment: " + watch.ElapsedMilliseconds);
                 }
                 
                 if(unassigned_examinations.Count() 
@@ -89,18 +99,13 @@ namespace Heuristics
                     != examinations.EntryCount())
                     throw new Exception("Examinations lists size mismatch");
             }
-
+            Console.WriteLine("Average: "+(watch.ElapsedMilliseconds/count_average));
             return solution;
         }
 
-        private bool CheckIfExaminationCanBeAssignToAnyPeriod(Examination exam_to_assign)
+        private bool IsExaminationAssignable(Examination exam_to_assign)
         {
-            bool to_return = periods.GetAll().Any(period => feasibility_tester.IsFeasiblePeriod(solution, exam_to_assign, period));
-            //if(feasibility_tester.error_period != -1)
-            //    Console.WriteLine("period error:" + feasibility_tester.error_period);
-            //if (feasibility_tester.error_room != -1)
-            //    Console.WriteLine("period error:" + feasibility_tester.error_room);
-            return to_return;
+            return periods.GetAll().Any(period => feasibility_tester.IsFeasiblePeriod(solution, exam_to_assign, period));
         }
 
         private void PopulateAndSortAssignmentLists()
@@ -158,42 +163,36 @@ namespace Heuristics
 
         private void ExaminationNormalAssignment(Examination exam_to_assign)
         {
-            //Console.WriteLine("Normal!");
-            int n_of_feasibles = periods.GetAll().Count(period => feasibility_tester.IsFeasiblePeriod(solution, exam_to_assign, period));
+            List<Period> possible_examinations = periods.GetAll().Where(period => feasibility_tester.IsFeasiblePeriod(solution, exam_to_assign, period)).ToList();
             Random random = new Random();
-            int random_assignable = random.Next(n_of_feasibles);
+            int random_assignable = random.Next(possible_examinations.Count);
             Period period_to_assign = null;
 
-            foreach (Period period in periods.GetAll())
+            foreach (Period period in possible_examinations)
             {
-                if (feasibility_tester.IsFeasiblePeriod(solution, exam_to_assign, period))
+                if (--random_assignable < 0)
                 {
-                    if (--random_assignable < 0)
-                    {
-                        period_to_assign = period;
-                        break;
-                    }
+                    period_to_assign = period;
+                    break;
                 }
             }
 
             if(period_to_assign == null)
                 throw new NullReferenceException("Period was not successfully assigned");
 
-            n_of_feasibles = rooms.GetAll().Count(room => feasibility_tester.IsFeasibleRoom(solution, exam_to_assign, period_to_assign, room));
-            random_assignable = random.Next(n_of_feasibles);
+            List<Room> possible_rooms = rooms.GetAll().Where(room => feasibility_tester.IsFeasibleRoom(solution, exam_to_assign, period_to_assign, room)).ToList();
+            random_assignable = random.Next(possible_rooms.Count);
             Room room_to_assign = null;
 
-            foreach (Room room in rooms.GetAll())
+            foreach (Room room in possible_rooms)
             {
-                if (feasibility_tester.IsFeasibleRoom(solution, exam_to_assign, period_to_assign, room))
+                if (--random_assignable < 0)
                 {
-                    if (--random_assignable < 0)
-                    {
-                        room_to_assign = room;
-                        break;
-                    }
+                    room_to_assign = room;
+                    break;
                 }
             }
+
 
             if (room_to_assign == null)
                 throw new NullReferenceException("Room was not successfully assigned");
@@ -280,6 +279,7 @@ namespace Heuristics
                     }
                 }
             }
+
             //All examinations taking place in the period at the room that needs room exclusivity, must be unassigned
             else
             {
@@ -356,14 +356,14 @@ namespace Heuristics
                     }
                 }
             }
-            //TODO remover, só para testes
-            if (feasibility_tester.RoomCurrentCapacityOnPeriod(solution, period_to_assign, room_to_assign) != room_to_assign_curr_capacity)
-                throw new Exception("Period and room are not feasible but should've been");
+            ////TODO remover, só para testes
+            //if (feasibility_tester.RoomCurrentCapacityOnPeriod(solution, period_to_assign, room_to_assign) != room_to_assign_curr_capacity)
+            //    throw new Exception("Period and room are not feasible but should've been");
 
-            //TODO remover, só para testes
-            if (!feasibility_tester.IsFeasiblePeriod(solution, exam_to_assign, period_to_assign) ||
-                !feasibility_tester.IsFeasibleRoom(solution, exam_to_assign, period_to_assign, room_to_assign))
-                throw new Exception("Period and room are not feasible but should've been");
+            ////TODO remover, só para testes
+            //if (!feasibility_tester.IsFeasiblePeriod(solution, exam_to_assign, period_to_assign) ||
+            //    !feasibility_tester.IsFeasibleRoom(solution, exam_to_assign, period_to_assign, room_to_assign))
+            //    throw new Exception("Period and room are not feasible but should've been");
 
 
             AssignExamination(period_to_assign, room_to_assign, exam_to_assign);

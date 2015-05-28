@@ -29,7 +29,7 @@ namespace Tests.GraphColoringTest
             Stopwatch watch = Stopwatch.StartNew();
             Solution solution = null;
 
-            for (SET = 5; SET <= 8; SET++)
+            for (SET = 1; SET <= 1; SET++)
             {
                 Console.WriteLine("**SET** " + SET);
                 LoaderTimetable loader = new LoaderTimetable("..//..//exam_comp_set"+SET+".exam");
