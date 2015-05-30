@@ -20,34 +20,30 @@ namespace Tools.Neighborhood.Timetable
             this.solution = solution;
             this.examination1_id = examination1_id;
             this.examination2_id = examination2_id;
-            this.period1_id = solution.epr_associasion[examination1_id, 0];
-            this.period2_id = solution.epr_associasion[examination2_id, 0];
-            this.room1_id = solution.epr_associasion[examination1_id, 1];
-            this.room2_id = solution.epr_associasion[examination2_id, 1];
+            this.period1_id = solution.GetPeriodFrom(examination1_id);
+            this.period2_id = solution.GetPeriodFrom(examination2_id);
+            this.room1_id = solution.GetRoomFrom(examination1_id);
+            this.room2_id = solution.GetRoomFrom(examination2_id);
         }
         public Solution Accept()
         {
-            solution.timetable_container[period1_id, room1_id, examination1_id] = false;
-            solution.timetable_container[period2_id, room2_id, examination2_id] = false;
+            solution.UnsetExam(period1_id, room1_id, examination1_id);
+            solution.UnsetExam(period2_id, room2_id, examination2_id);
 
-            solution.timetable_container[period1_id, room2_id, examination1_id] = true;
-            solution.timetable_container[period2_id, room1_id, examination2_id] = true;
+            solution.SetExam(period1_id, room2_id, examination1_id);
+            solution.SetExam(period2_id, room1_id, examination2_id);
 
-            solution.epr_associasion[examination1_id, 1] = room2_id;
-            solution.epr_associasion[examination2_id, 1] = room1_id;
             return solution;
         }
 
         public Solution Reverse()
         {
-            solution.timetable_container[period1_id, room1_id, examination1_id] = true;
-            solution.timetable_container[period2_id, room2_id, examination2_id] = true;
+            solution.UnsetExam(period1_id, room2_id, examination1_id);
+            solution.UnsetExam(period2_id, room1_id, examination2_id);
 
-            solution.timetable_container[period1_id, room2_id, examination1_id] = false;
-            solution.timetable_container[period2_id, room1_id, examination2_id] = false;
+            solution.SetExam(period1_id, room1_id, examination1_id);
+            solution.SetExam(period2_id, room2_id, examination2_id);
 
-            solution.epr_associasion[examination1_id, 1] = room1_id;
-            solution.epr_associasion[examination2_id, 1] = room2_id;
             return solution;
         }
 

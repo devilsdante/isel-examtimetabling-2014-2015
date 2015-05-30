@@ -14,9 +14,9 @@ namespace Tools
         {
             System.IO.StreamWriter file = new System.IO.StreamWriter(path);
 
-            for (int i = 0; i < solution.epr_associasion.GetLength(0); i++)
+            for (int exam_id = 0; exam_id < solution.ExaminationCount(); exam_id++)
             {
-                file.Write(solution.epr_associasion[i, 0] + ", " + solution.epr_associasion[i, 1] + "\r\n");
+                file.Write(solution.GetPeriodFrom(exam_id) + ", " + solution.GetRoomFrom(exam_id) + "\r\n");
             }
 
             file.Close();

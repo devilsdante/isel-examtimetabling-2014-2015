@@ -18,25 +18,23 @@ namespace Tools.Neighborhood.Timetable
             this.solution = solution;
             this.new_room_id = new_room_id;
             this.examination_id = examination_id;
-            this.period_id = solution.epr_associasion[examination_id, 0];
-            this.old_room_id = solution.epr_associasion[examination_id, 1];
+            this.period_id = solution.GetPeriodFrom(examination_id);
+            this.old_room_id = solution.GetRoomFrom(examination_id);
         }
 
         public Solution Accept()
         {
-            solution.timetable_container[period_id, old_room_id, examination_id] = false;
+            solution.UnsetExam(period_id, old_room_id, examination_id);
 
-            solution.timetable_container[period_id, new_room_id, examination_id] = true;
-            solution.epr_associasion[examination_id, 1] = new_room_id;
+            solution.SetExam(period_id, new_room_id, examination_id);
             return solution;
         }
 
         public Solution Reverse()
         {
-            solution.timetable_container[period_id, old_room_id, examination_id] = true;
+            solution.UnsetExam(period_id, new_room_id, examination_id);
 
-            solution.timetable_container[period_id, new_room_id, examination_id] = false;
-            solution.epr_associasion[examination_id, 1] = old_room_id;
+            solution.SetExam(period_id, old_room_id, examination_id);
             return solution;
         }
 

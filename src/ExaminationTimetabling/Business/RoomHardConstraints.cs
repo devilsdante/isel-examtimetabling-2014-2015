@@ -54,7 +54,7 @@ namespace Business
         {
             return room_hard_constraints_repo.GetById(id);
         }
-        public bool HasRoomExclusivesWithExam(int exam_id)
+        public bool HasRoomExclusivity(int exam_id)
         {
             return
                 GetAll().Any(rhc => rhc.type == RoomHardConstraint.types.ROOM_EXCLUSIVE && rhc.examination == exam_id);

@@ -1,4 +1,3 @@
-D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimetabling\Heuristics\obj\Debug\Heuristics.csprojResolveAssemblyReference.cache
 D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimetabling\Heuristics\bin\Debug\Heuristics.dll
 D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimetabling\Heuristics\bin\Debug\Heuristics.pdb
 D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimetabling\Heuristics\bin\Debug\Business.dll
@@ -7,5 +6,6 @@ D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimeta
 D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimetabling\Heuristics\bin\Debug\Business.pdb
 D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimetabling\Heuristics\bin\Debug\DAL.pdb
 D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimetabling\Heuristics\bin\Debug\Tools.pdb
+D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimetabling\Heuristics\obj\Debug\Heuristics.csprojResolveAssemblyReference.cache
 D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimetabling\Heuristics\obj\Debug\Heuristics.dll
 D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimetabling\Heuristics\obj\Debug\Heuristics.pdb

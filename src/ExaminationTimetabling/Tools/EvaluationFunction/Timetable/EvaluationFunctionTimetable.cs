@@ -60,7 +60,7 @@ namespace Tools.EvaluationFunction.Timetable
                 for (int exam2_id = exam1_id + 1; exam2_id < conflict_matrix.GetLength(1); ++exam2_id)
                 //for (int exam2_id = 0; exam2_id < conflict_matrix.GetLength(1); ++exam2_id)
                 {
-                    if (conflict_matrix[exam1_id, exam2_id] && solution.epr_associasion[exam1_id, 0] == solution.epr_associasion[exam2_id, 0])
+                    if (conflict_matrix[exam1_id, exam2_id] && solution.GetPeriodFrom(exam1_id) == solution.GetPeriodFrom(exam2_id))
                     {
                         ++student_conflicts_hc;
                     }
@@ -73,7 +73,7 @@ namespace Tools.EvaluationFunction.Timetable
             for(int exam_id = 0; exam_id < examinations.EntryCount(); exam_id++)
             {
                 if (examinations.GetById(exam_id).duration >
-                    periods.GetById(solution.epr_associasion[exam_id, 0]).duration)
+                    periods.GetById(solution.GetPeriodFrom(exam_id)).duration)
                 {
                     ++period_lengths_hc;
                 }
@@ -86,7 +86,7 @@ namespace Tools.EvaluationFunction.Timetable
                 PeriodHardConstraint phc in
                     period_hard_constraints.GetByType(PeriodHardConstraint.types.EXAM_COINCIDENCE))
             {
-                if (solution.epr_associasion[phc.ex1, 0] != solution.epr_associasion[phc.ex2, 0])
+                if (solution.GetPeriodFrom(phc.ex1) != solution.GetPeriodFrom(phc.ex2))
                 {
                     ++exam_coincidence_hc;
                 }
@@ -99,7 +99,7 @@ namespace Tools.EvaluationFunction.Timetable
                 PeriodHardConstraint phc in
                     period_hard_constraints.GetByType(PeriodHardConstraint.types.EXCLUSION))
             {
-                if (solution.epr_associasion[phc.ex1, 0] == solution.epr_associasion[phc.ex2, 0])
+                if (solution.GetPeriodFrom(phc.ex1) == solution.GetPeriodFrom(phc.ex2))
                 {
                     ++exam_exclusion_hc;
                 }
@@ -111,7 +111,7 @@ namespace Tools.EvaluationFunction.Timetable
                 PeriodHardConstraint phc in
                     period_hard_constraints.GetByType(PeriodHardConstraint.types.AFTER))
             {
-                if (periods.GetById(solution.epr_associasion[phc.ex1, 0]).date <= periods.GetById(solution.epr_associasion[phc.ex2, 0]).date)
+                if (periods.GetById(solution.GetPeriodFrom(phc.ex1)).date <= periods.GetById(solution.GetPeriodFrom(phc.ex2)).date)
                 {
                     ++exam_after_hc;
                 }
@@ -121,12 +121,12 @@ namespace Tools.EvaluationFunction.Timetable
 
             foreach (RoomHardConstraint rhc in room_hard_constraints.GetByType(RoomHardConstraint.types.ROOM_EXCLUSIVE))
             {
-                int period_id = solution.epr_associasion[rhc.examination, 0];
-                int room_id = solution.epr_associasion[rhc.examination, 1];
+                int period_id = solution.GetPeriodFrom(rhc.examination);
+                int room_id = solution.GetRoomFrom(rhc.examination);
 
-                for (int exam_id = 0; exam_id < solution.timetable_container.GetLength(2); ++exam_id)
+                for (int exam_id = 0; exam_id < solution.ExaminationCount(); ++exam_id)
                 {
-                    if (solution.timetable_container[period_id, room_id, exam_id] &&
+                    if (solution.IsExamSetTo(period_id, room_id, exam_id) &&
                         rhc.examination != exam_id)
                     {
                         ++room_exclusivity_hc;
@@ -137,16 +137,16 @@ namespace Tools.EvaluationFunction.Timetable
 
             // Room Capacities
 
-            for (int period_id = 0; period_id < solution.timetable_container.GetLength(0); ++period_id)
+            for (int period_id = 0; period_id < solution.PeriodCount(); ++period_id)
             {
-                for (int room_id = 0; room_id < solution.timetable_container.GetLength(1); ++room_id)
+                for (int room_id = 0; room_id < solution.RoomCount(); ++room_id)
                 {
                     int room_capacity_sum = 0;
                     int room_capacity = rooms.GetById(room_id).capacity;
 
-                    for (int exam_id = 0; exam_id < solution.timetable_container.GetLength(2); ++exam_id)
+                    for (int exam_id = 0; exam_id < solution.ExaminationCount(); ++exam_id)
                     {
-                        if (solution.timetable_container[period_id, room_id, exam_id])
+                        if (solution.IsExamSetTo(period_id, room_id, exam_id))
                         {
                             room_capacity_sum += examinations.GetById(exam_id).students.Count();
 
@@ -176,25 +176,25 @@ namespace Tools.EvaluationFunction.Timetable
 
 
             // Two examinations in a row
-            for (int period_id = 0; period_id < solution.timetable_container.GetLength(0) - 1; ++period_id)
+            for (int period_id = 0; period_id < solution.PeriodCount() - 1; ++period_id)
             {
                 if (periods.GetById(period_id).date.Day != periods.GetById(period_id + 1).date.Day)
                     continue;
-                for (int room_id = 0; room_id < solution.timetable_container.GetLength(1); ++room_id)
+                for (int room_id = 0; room_id < solution.RoomCount(); ++room_id)
                 {
-                    for (int exam_id = 0; exam_id < solution.timetable_container.GetLength(2); ++exam_id)
+                    for (int exam_id = 0; exam_id < solution.ExaminationCount(); ++exam_id)
                     {
-                        if (solution.timetable_container[period_id, room_id, exam_id])
+                        if (solution.IsExamSetTo(period_id, room_id, exam_id))
                         {
                             int period2_id = period_id + 1;
 
-                            for (int room2_id = 0; room2_id < solution.timetable_container.GetLength(1); ++room2_id)
+                            for (int room2_id = 0; room2_id < solution.RoomCount(); ++room2_id)
                             {
                                 for (int exam2_id = 0;
-                                    exam2_id < solution.timetable_container.GetLength(2);
+                                    exam2_id < solution.ExaminationCount();
                                     ++exam2_id)
                                 {
-                                    if (solution.timetable_container[period2_id, room2_id, exam2_id])
+                                    if (solution.IsExamSetTo(period2_id, room2_id, exam2_id))
                                     {
                                         two_exams_in_a_row += examinations.NoOfConflicts(examinations.GetById(exam_id), examinations.GetById(exam2_id)) * model_weightings.Get().two_in_a_row;
                                     }
@@ -207,28 +207,28 @@ namespace Tools.EvaluationFunction.Timetable
 
 
             // Two examinations in a day
-            for (int period_id = 0; period_id < solution.timetable_container.GetLength(0) - 2; ++period_id)
+            for (int period_id = 0; period_id < solution.PeriodCount() - 2; ++period_id)
             {
                 if (periods.GetById(period_id).date.Day != periods.GetById(period_id + 2).date.Day)
                     continue;
 
-                for (int room_id = 0; room_id < solution.timetable_container.GetLength(1); ++room_id)
+                for (int room_id = 0; room_id < solution.RoomCount(); ++room_id)
                 {
-                    for (int exam_id = 0; exam_id < solution.timetable_container.GetLength(2); ++exam_id)
+                    for (int exam_id = 0; exam_id < solution.ExaminationCount(); ++exam_id)
                     {
-                        if (solution.timetable_container[period_id, room_id, exam_id])
+                        if (solution.IsExamSetTo(period_id, room_id, exam_id))
                         {
                             for (int period2_id = period_id + 2;
-                                period2_id < solution.timetable_container.GetLength(0) && periods.GetById(period_id).date.Day == periods.GetById(period2_id).date.Day;
+                                period2_id < solution.PeriodCount() && periods.GetById(period_id).date.Day == periods.GetById(period2_id).date.Day;
                                 ++period2_id)
                             {
-                                for (int room2_id = 0; room2_id < solution.timetable_container.GetLength(1); ++room2_id)
+                                for (int room2_id = 0; room2_id < solution.RoomCount(); ++room2_id)
                                 {
                                     for (int exam2_id = 0;
-                                        exam2_id < solution.timetable_container.GetLength(2);
+                                        exam2_id < solution.ExaminationCount();
                                         ++exam2_id)
                                     {
-                                        if (solution.timetable_container[period2_id, room2_id, exam2_id])
+                                        if (solution.IsExamSetTo(period2_id, room2_id, exam2_id))
                                         {
                                             two_exams_in_a_day += examinations.NoOfConflicts(examinations.GetById(exam_id), examinations.GetById(exam2_id)) * model_weightings.Get().two_in_a_day;
                                         }
@@ -241,25 +241,25 @@ namespace Tools.EvaluationFunction.Timetable
             }
 
             // Period Spread
-            for (int period_id = 0; period_id < solution.timetable_container.GetLength(0) - 1; ++period_id)
+            for (int period_id = 0; period_id < solution.PeriodCount() - 1; ++period_id)
             {
-                for (int room_id = 0; room_id < solution.timetable_container.GetLength(1); ++room_id)
+                for (int room_id = 0; room_id < solution.RoomCount(); ++room_id)
                 {
-                    for (int exam_id = 0; exam_id < solution.timetable_container.GetLength(2); ++exam_id)
+                    for (int exam_id = 0; exam_id < solution.ExaminationCount(); ++exam_id)
                     {
-                        if (solution.timetable_container[period_id, room_id, exam_id])
+                        if (solution.IsExamSetTo(period_id, room_id, exam_id))
                         {
                             for (int period2_id = period_id + 1;
-                                period2_id < solution.timetable_container.GetLength(0) && period2_id <= period_id + model_weightings.Get().period_spread; 
+                                period2_id < solution.PeriodCount() && period2_id <= period_id + model_weightings.Get().period_spread; 
                                 ++period2_id)
                             {
-                                for (int room2_id = 0; room2_id < solution.timetable_container.GetLength(1); ++room2_id)
+                                for (int room2_id = 0; room2_id < solution.RoomCount(); ++room2_id)
                                 {
                                     for (int exam2_id = 0;
-                                        exam2_id < solution.timetable_container.GetLength(2);
+                                        exam2_id < solution.ExaminationCount();
                                         ++exam2_id)
                                     {
-                                        if (solution.timetable_container[period2_id, room2_id, exam2_id])
+                                        if (solution.IsExamSetTo(period2_id, room2_id, exam2_id))
                                         {
                                             period_spread += examinations.NoOfConflicts(examinations.GetById(exam_id),
                                                 examinations.GetById(exam2_id));
@@ -273,15 +273,15 @@ namespace Tools.EvaluationFunction.Timetable
             }
 
             // Mixed Durations
-            for (int period_id = 0; period_id < solution.timetable_container.GetLength(0) - 1; ++period_id)
+            for (int period_id = 0; period_id < solution.PeriodCount(); ++period_id)
             {
-                for (int room_id = 0; room_id < solution.timetable_container.GetLength(1); ++room_id)
+                for (int room_id = 0; room_id < solution.RoomCount(); ++room_id)
                 {
                     List<int> sizes = new List<int>();
 
-                    for (int exam_id = 0; exam_id < solution.timetable_container.GetLength(2); ++exam_id)
+                    for (int exam_id = 0; exam_id < solution.ExaminationCount(); ++exam_id)
                     {
-                        if (solution.timetable_container[period_id, room_id, exam_id])
+                        if (solution.IsExamSetTo(period_id, room_id, exam_id))
                         {
                             int curr_duration = examinations.GetById(exam_id).duration;
                             if (!sizes.Contains(curr_duration))
@@ -306,15 +306,15 @@ namespace Tools.EvaluationFunction.Timetable
 
             foreach (Examination exam in exams_front_load)
             {
-                if (periods_from_load.Contains(periods.GetById(solution.epr_associasion[exam.id, 0])))
+                if (periods_from_load.Contains(periods.GetById(solution.GetPeriodFrom(exam.id))))
                     front_load += model_weightings.Get().front_load[2];
             }
 
             //Room Penalty & Period Penalty
-            for (int exam_id = 0; exam_id < solution.epr_associasion.GetLength(0); ++exam_id)
+            for (int exam_id = 0; exam_id < solution.ExaminationCount(); ++exam_id)
             {
-                room_penalty += rooms.GetById(solution.epr_associasion[exam_id, 1]).penalty;
-                period_penalty += periods.GetById(solution.epr_associasion[exam_id, 0]).penalty;
+                room_penalty += rooms.GetById(solution.GetRoomFrom(exam_id)).penalty;
+                period_penalty += periods.GetById(solution.GetPeriodFrom(exam_id)).penalty;
             }
 
             return two_exams_in_a_row + two_exams_in_a_day + period_spread + mixed_durations + front_load + room_penalty +
@@ -323,12 +323,12 @@ namespace Tools.EvaluationFunction.Timetable
 
         public bool IsValid(Solution solution)
         {
-            if (solution.epr_associasion.GetLength(0) != examinations.EntryCount())
+            if (solution.ExaminationCount() != examinations.EntryCount())
                 return false;
 
-            for (int exam_id = 0; exam_id < solution.epr_associasion.GetLength(0); ++exam_id)
+            for (int exam_id = 0; exam_id < solution.PeriodCount(); ++exam_id)
             {
-                if (solution.epr_associasion[exam_id, 0] == -1 || solution.epr_associasion[exam_id, 0] == -1)
+                if (solution.GetPeriodFrom(exam_id) == -1 || solution.GetRoomFrom(exam_id) == -1)
                     return false;
             }
 

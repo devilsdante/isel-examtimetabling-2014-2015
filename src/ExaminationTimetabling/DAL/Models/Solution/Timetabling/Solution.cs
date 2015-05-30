@@ -3,10 +3,13 @@
     public class Solution : ISolution
     {
         public int id { get; set; }
-        public bool[,,] timetable_container { get; set; }
-        public int[,] epr_associasion; //idx = exam; 0 = period; 1 = room
+        private bool[,,] timetable_container { get; set; }
+        private int[,] epr_associasion; //idx = exam; 0 = period; 1 = room
         public int fitness { get; set; }
 
+        private int period_count;
+        private int room_count;
+        private int examination_count;
 
         public Solution(int id, int period_count, int room_count, int examination_count)
         {
@@ -21,6 +24,54 @@
                 epr_associasion[i, 0] = -1;
                 epr_associasion[i, 1] = -1;
             }
+
+            this.period_count = period_count;
+            this.room_count = room_count;
+            this.examination_count = examination_count;
+        }
+
+        public int ExaminationCount()
+        {
+            return examination_count;
+        }
+
+        public int RoomCount()
+        {
+            return room_count;
+        }
+
+        public int PeriodCount()
+        {
+            return period_count;
+        }
+
+        public void SetExam(int period_id, int room_id, int exam_id)
+        {
+            timetable_container[period_id, room_id, exam_id] = true;
+            epr_associasion[exam_id, 0] = period_id;
+            epr_associasion[exam_id, 1] = room_id;
+        }
+
+        public void UnsetExam(int period_id, int room_id, int exam_id)
+        {
+            timetable_container[period_id, room_id, exam_id] = false;
+            epr_associasion[exam_id, 0] = -1;
+            epr_associasion[exam_id, 1] = -1;
+        }
+
+        public int GetPeriodFrom(int exam_id)
+        {
+            return epr_associasion[exam_id, 0];
+        }
+
+        public int GetRoomFrom(int exam_id)
+        {
+            return epr_associasion[exam_id, 1];
+        }
+
+        public bool IsExamSetTo(int period_id, int room_id, int exam_id)
+        {
+            return timetable_container[period_id, room_id, exam_id];
         }
 
         public ISolution Copy()
