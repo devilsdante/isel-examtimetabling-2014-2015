@@ -1,4 +1,6 @@
-﻿namespace DAL.Models.Solution.Timetabling
+﻿using System.Collections.Generic;
+
+namespace DAL.Models.Solution.Timetabling
 {
     public class Solution : ISolution
     {
@@ -7,14 +9,16 @@
         private int[,] epr_associasion; //idx = exam; 0 = period; 1 = room
         public int fitness { get; set; }
 
-        private int period_count;
-        private int room_count;
-        private int examination_count;
+        private readonly int period_count;
+        private readonly int room_count;
+        private readonly int examination_count;
+
+        public readonly List<int> assigned_examinations;
 
         public Solution(int id, int period_count, int room_count, int examination_count)
         {
             this.id = id;
-            fitness = -1;
+            this.fitness = -1;
 
             timetable_container = new bool[period_count, room_count, examination_count];
             epr_associasion = new int[examination_count,2];
@@ -28,6 +32,12 @@
             this.period_count = period_count;
             this.room_count = room_count;
             this.examination_count = examination_count;
+            this.assigned_examinations = new List<int>(examination_count);
+        }
+
+        public int AssignedExaminations()
+        {
+            return assigned_examinations.Count;
         }
 
         public int ExaminationCount()
@@ -50,6 +60,8 @@
             timetable_container[period_id, room_id, exam_id] = true;
             epr_associasion[exam_id, 0] = period_id;
             epr_associasion[exam_id, 1] = room_id;
+
+            assigned_examinations.Add(exam_id);
         }
 
         public void UnsetExam(int period_id, int room_id, int exam_id)
@@ -57,6 +69,8 @@
             timetable_container[period_id, room_id, exam_id] = false;
             epr_associasion[exam_id, 0] = -1;
             epr_associasion[exam_id, 1] = -1;
+
+            assigned_examinations.Remove(exam_id);
         }
 
         public int GetPeriodFrom(int exam_id)

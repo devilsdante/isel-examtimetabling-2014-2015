@@ -29,7 +29,7 @@ namespace Tests.GraphColoringTest
             Stopwatch watch = Stopwatch.StartNew();
             Solution solution = null;
 
-            for (SET = 1; SET <= 1; SET++)
+            for (SET = 4; SET <= 4; SET++)
             {
                 Console.WriteLine("**SET** " + SET);
                 LoaderTimetable loader = new LoaderTimetable("..//..//exam_comp_set"+SET+".exam");
@@ -38,19 +38,23 @@ namespace Tests.GraphColoringTest
 
                 Console.WriteLine("Time LoaderTimetable: " + watch.ElapsedMilliseconds);
                 var evaluation = new EvaluationFunctionTimetable();
-                for (int i = 0; i < 10; i++)
+                long total_time = 0;
+                for (int i = 0; i < 1; i++)
                 {
                     GraphColoring gc = new GraphColoring();
                     watch.Restart();
 
                     solution = gc.Exec();
-                    Console.WriteLine("Time GraphColoring: " + watch.ElapsedMilliseconds);
+                    long time = watch.ElapsedMilliseconds;
+                    total_time += time;
+                    Console.WriteLine("Time GraphColoring: " + time);
                     watch.Restart();
                     Console.WriteLine("GC DTF: " + evaluation.DistanceToFeasibility(solution));
                     Console.WriteLine("GC Fitness: " + evaluation.Fitness(solution));
                     Console.WriteLine("Time Fitness: " + watch.ElapsedMilliseconds);
                 }
                 PrintToFile("..//..//output"+SET+".txt", solution);
+                //Console.WriteLine("Average GC Time: " + total_time/10);
             }
             
             

@@ -51,13 +51,22 @@ namespace Tools
                 }
             }
 
-            for (int exam_id = 0; exam_id < conflict_matrix.GetLength(0); exam_id += 1)
+            //for (int exam_id = 0; exam_id < conflict_matrix.GetLength(0); exam_id += 1)
+            //{
+            //    if (conflict_matrix[exam_id, exam_to_assign.id] && solution.GetPeriodFrom(exam_id) == period.id)
+            //    {
+            //        error_period = 3;
+            //        return false; //exam_to_assign has STUDENT or EXCLUSION conflicts with another examination
+            //    }
+            //}
+
+            foreach (int exam_id in solution.assigned_examinations)
             {
-                if (conflict_matrix[exam_id, exam_to_assign.id] && solution.GetPeriodFrom(exam_id) == period.id)
-                {
-                    error_period = 3;
-                    return false; //exam_to_assign has STUDENT or EXCLUSION conflicts with another examination
-                }
+                 if (conflict_matrix[exam_id, exam_to_assign.id] && solution.GetPeriodFrom(exam_id) == period.id)
+                 {
+                     error_period = 3;
+                     return false; //exam_to_assign has STUDENT or EXCLUSION conflicts with another examination
+                 }
             }
 
             foreach (PeriodHardConstraint phc in period_hard_constraints.GetByTypeWithExamId(PeriodHardConstraint.types.AFTER, exam_to_assign.id))
