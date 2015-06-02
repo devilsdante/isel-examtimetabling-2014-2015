@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using Business;
 using DAL;
@@ -118,7 +120,7 @@ namespace Tools.EvaluationFunction.Timetable
             }
 
             // Examination Room Exclusives
-
+            
             foreach (RoomHardConstraint rhc in room_hard_constraints.GetByType(RoomHardConstraint.types.ROOM_EXCLUSIVE))
             {
                 int period_id = solution.GetPeriodFrom(rhc.examination);
@@ -137,27 +139,23 @@ namespace Tools.EvaluationFunction.Timetable
 
             // Room Capacities
 
-            for (int period_id = 0; period_id < solution.PeriodCount(); ++period_id)
+            int[,] rooms_usage = new int[rooms.EntryCount(), periods.EntryCount()];
+            for (int exam_id = 0; exam_id < solution.ExaminationCount(); ++exam_id)
             {
-                for (int room_id = 0; room_id < solution.RoomCount(); ++room_id)
+                rooms_usage[solution.GetRoomFrom(exam_id), solution.GetPeriodFrom(exam_id)] += examinations.GetById(exam_id).students.Count;
+            }
+
+            for (int room_id = 0; room_id < rooms.EntryCount(); room_id++)
+            {
+                for (int period_id = 0; period_id < periods.EntryCount(); period_id++)
                 {
-                    int room_capacity_sum = 0;
-                    int room_capacity = rooms.GetById(room_id).capacity;
-
-                    for (int exam_id = 0; exam_id < solution.ExaminationCount(); ++exam_id)
+                    if (rooms_usage[room_id, period_id] > rooms.GetById(room_id).capacity)
                     {
-                        if (solution.IsExamSetTo(period_id, room_id, exam_id))
-                        {
-                            room_capacity_sum += examinations.GetById(exam_id).students.Count();
-
-                            if (room_capacity_sum > room_capacity)
-                            {
-                                ++room_capacity_hc;
-                                break;
-                            }
-                        }
+                        ++room_capacity_hc;
                     }
+                        
                 }
+                    
             }
 
             return student_conflicts_hc + exam_after_hc + exam_coincidence_hc + exam_exclusion_hc + period_lengths_hc +
@@ -316,6 +314,15 @@ namespace Tools.EvaluationFunction.Timetable
                 room_penalty += rooms.GetById(solution.GetRoomFrom(exam_id)).penalty;
                 period_penalty += periods.GetById(solution.GetPeriodFrom(exam_id)).penalty;
             }
+
+            //TODO só para testes
+            //Console.WriteLine("Two in a row: " + two_exams_in_a_row);
+            //Console.WriteLine("Two in a day: " + two_exams_in_a_day);
+            //Console.WriteLine("Period spread: " + period_spread);
+            //Console.WriteLine("Mixed durations: " + mixed_durations);
+            //Console.WriteLine("Front load: " + front_load);
+            //Console.WriteLine("Room penalty: " + room_penalty);
+            //Console.WriteLine("Period penalty: " + period_penalty);
 
             return two_exams_in_a_row + two_exams_in_a_day + period_spread + mixed_durations + front_load + room_penalty +
                    period_penalty;

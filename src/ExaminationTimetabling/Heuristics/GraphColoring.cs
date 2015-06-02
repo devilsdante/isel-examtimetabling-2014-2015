@@ -90,7 +90,7 @@ namespace Heuristics
                 else
                 {
                     count_average++;
-                    Console.WriteLine("Normal Assignment: " + watch.ElapsedMilliseconds);
+                    //Console.WriteLine("Normal Assignment: " + watch.ElapsedMilliseconds);
                 }
                     
                 /**/
@@ -102,7 +102,7 @@ namespace Heuristics
                     != examinations.EntryCount())
                     throw new Exception("Examinations lists size mismatch");
             }
-            Console.WriteLine("Average: "+(watch2.ElapsedMilliseconds/count_average));
+            //Console.WriteLine("Average: "+(watch2.ElapsedMilliseconds/count_average));
             return solution;
         }
 
