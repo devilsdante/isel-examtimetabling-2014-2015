@@ -12,6 +12,8 @@ namespace Tools
     {
         public static void Format(string path, Solution solution)
         {
+            if (solution == null) return;
+
             System.IO.StreamWriter file = new System.IO.StreamWriter(path);
 
             for (int exam_id = 0; exam_id < solution.ExaminationCount(); exam_id++)

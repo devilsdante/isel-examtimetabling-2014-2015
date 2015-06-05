@@ -18,7 +18,7 @@ namespace Business
             return instance;
         }
 
-        public static ConflictMatrix Instance(bool[,] conflict_matrix)
+        public static ConflictMatrix Instance(int[,] conflict_matrix)
         {
             if (instance == null)
                 instance = new ConflictMatrix(conflict_matrix);
@@ -32,9 +32,9 @@ namespace Business
 
         /*******************/
 
-        private bool[,] conflict_matrix;
+        private int[,] conflict_matrix;
 
-        public ConflictMatrix(bool[,] conflict_matrix)
+        public ConflictMatrix(int[,] conflict_matrix)
         {
             this.conflict_matrix = conflict_matrix;
         }
@@ -44,12 +44,12 @@ namespace Business
             
         }
 
-        public bool[,] Get()
+        public int[,] Get()
         {
             return conflict_matrix;
         }
 
-        public void Set(bool[,] conflict_matrix)
+        public void Set(int[,] conflict_matrix)
         {
             this.conflict_matrix = conflict_matrix;
         }

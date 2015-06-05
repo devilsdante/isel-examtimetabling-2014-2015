@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Management.Instrumentation;
 using System.Text;
@@ -232,31 +233,33 @@ namespace Tools.Loader.Timetable
         {
             conflict_matrix = ConflictMatrix.Instance();
 
-            bool[,] matrix = new bool[examinations.EntryCount(), examinations.EntryCount()];
+            //Stopwatch watch = new Stopwatch();
+            //watch.Restart();
+
+            int[,] matrix = new int[examinations.EntryCount(), examinations.EntryCount()];
 
             // student conflicts //
-            for (int exam1_id = 0; exam1_id < matrix.GetLength(0); exam1_id += 1)
+            for (int exam1_id = 0; exam1_id < examinations.EntryCount(); exam1_id += 1)
             {
-                for (int exam2_id = 0; exam2_id < matrix.GetLength(1); exam2_id += 1)
+                for (int exam2_id = exam1_id; exam2_id < examinations.EntryCount(); exam2_id += 1)
                 {
-                    Examination exam1 = examinations.GetById(exam1_id);
-                    Examination exam2 = examinations.GetById(exam2_id);
                     if (exam1_id == exam2_id)
-                        matrix[exam1_id, exam2_id] = false;
-                    else if (exam1_id > exam2_id)
-                        matrix[exam1_id, exam2_id] = matrix[exam2_id, exam1_id];
-                    else if (examinations.Conflict(exam1, exam2))
-                    {
-                        matrix[exam1_id, exam2_id] = true;
-                        exam1.conflict += 1;
-                        exam2.conflict += 1;
-                    }
+                        matrix[exam1_id, exam2_id] = 0;
                     else
-                        matrix[exam1_id, exam2_id] = false;
+                    {
+                        Examination exam1 = examinations.GetById(exam1_id);
+                        Examination exam2 = examinations.GetById(exam2_id);
+                        int conflicts = examinations.NoOfConflicts(exam1, exam2);
+                        matrix[exam1_id, exam2_id] += conflicts;
+                        matrix[exam2_id, exam1_id] += conflicts;
+                        exam1.conflict += conflicts;
+                        exam2.conflict += conflicts;
+                    }
                 }
             }
-
+            
             conflict_matrix.Set(matrix);
+            //Console.WriteLine("Conflict Matrix: " + watch.ElapsedMilliseconds);
         }
     }
 }

@@ -13,7 +13,7 @@ namespace Tools.EvaluationFunction.Timetable
 {
     public class EvaluationFunctionTimetable : IEvaluationFunction
     {
-        private readonly bool[,] conflict_matrix;
+        private readonly int[,] conflict_matrix;
         private readonly Examinations examinations;
         private readonly PeriodHardConstraints period_hard_constraints;
         private readonly RoomHardConstraints room_hard_constraints;
@@ -60,9 +60,8 @@ namespace Tools.EvaluationFunction.Timetable
             for (int exam1_id = 0; exam1_id < conflict_matrix.GetLength(0); ++exam1_id)
             {
                 for (int exam2_id = exam1_id + 1; exam2_id < conflict_matrix.GetLength(1); ++exam2_id)
-                //for (int exam2_id = 0; exam2_id < conflict_matrix.GetLength(1); ++exam2_id)
                 {
-                    if (conflict_matrix[exam1_id, exam2_id] && solution.GetPeriodFrom(exam1_id) == solution.GetPeriodFrom(exam2_id))
+                    if (conflict_matrix[exam1_id, exam2_id] > 0 && solution.GetPeriodFrom(exam1_id) == solution.GetPeriodFrom(exam2_id))
                     {
                         ++student_conflicts_hc;
                     }
@@ -206,7 +205,7 @@ namespace Tools.EvaluationFunction.Timetable
                     for (int exam2_index = 0; exam2_index < period_examinations[period2_id].Count; ++exam2_index)
                     {
                         int exam2_id = period_examinations[period2_id][exam2_index];
-                        int no_conflicts = examinations.NoOfConflicts(examinations.GetById(exam1_id), examinations.GetById(exam2_id)) ;
+                        int no_conflicts = conflict_matrix[exam1_id, exam2_id];
 
                         two_exams_in_a_row += no_conflicts * model_weightings.Get().two_in_a_row;
 
@@ -229,7 +228,7 @@ namespace Tools.EvaluationFunction.Timetable
                         for (int exam2_index = 0; exam2_index < period_examinations[period2_id].Count; ++exam2_index)
                         {
                             int exam2_id = period_examinations[period2_id][exam2_index];
-                            int no_conflicts = examinations.NoOfConflicts(examinations.GetById(exam1_id), examinations.GetById(exam2_id));
+                            int no_conflicts = conflict_matrix[exam1_id, exam2_id];
 
                             two_exams_in_a_day += no_conflicts * model_weightings.Get().two_in_a_day;
 
@@ -240,7 +239,7 @@ namespace Tools.EvaluationFunction.Timetable
                     }
                 }
             }
-            Console.WriteLine("Time1&2: " + watch.ElapsedMilliseconds);
+            //Console.WriteLine("Time1&2: " + watch.ElapsedMilliseconds);
             watch.Restart();
 
             // Period Spread (in other days)
@@ -262,14 +261,14 @@ namespace Tools.EvaluationFunction.Timetable
                         for (int exam2_index = 0; exam2_index < period_examinations[period2_id].Count; ++exam2_index)
                         {
                             int exam2_id = period_examinations[period2_id][exam2_index];
-                            int no_conflicts = examinations.NoOfConflicts(examinations.GetById(exam1_id), examinations.GetById(exam2_id));
+                            int no_conflicts = conflict_matrix[exam1_id, exam2_id];
 
                             period_spread += no_conflicts;
                         }
                     }
                 }
             }
-            Console.WriteLine("Time3: " + watch.ElapsedMilliseconds);
+            //Console.WriteLine("Time3: " + watch.ElapsedMilliseconds);
             watch.Restart();
 
             // Mixed Durations
@@ -292,7 +291,7 @@ namespace Tools.EvaluationFunction.Timetable
                         mixed_durations += (sizes.Count() - 1)*model_weightings.Get().non_mixed_durations;
                 }
             }
-            Console.WriteLine("Time4: " + watch.ElapsedMilliseconds);
+            //Console.WriteLine("Time4: " + watch.ElapsedMilliseconds);
             watch.Restart();
 
             // Front Load
@@ -312,7 +311,7 @@ namespace Tools.EvaluationFunction.Timetable
                     front_load += model_weightings.Get().front_load[2];
             }
 
-            Console.WriteLine("Time5: " + watch.ElapsedMilliseconds);
+            //Console.WriteLine("Time5: " + watch.ElapsedMilliseconds);
             watch.Restart();
 
             //Room Penalty & Period Penalty
@@ -322,7 +321,7 @@ namespace Tools.EvaluationFunction.Timetable
                 period_penalty += periods.GetById(solution.GetPeriodFrom(exam_id)).penalty;
             }
 
-            Console.WriteLine("Time6: " + watch.ElapsedMilliseconds);
+            //Console.WriteLine("Time6: " + watch.ElapsedMilliseconds);
             watch.Restart();
 
             //TODO só para testes

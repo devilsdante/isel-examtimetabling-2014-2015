@@ -2,6 +2,7 @@
 using DAL.Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -63,8 +64,8 @@ namespace Business
         public bool Conflict(Examination ex1, Examination ex2)
         {
             int i = 0, j = 0;
-            List<int> students1 = (List<int>) ex1.students;
-            List<int> students2 = (List<int>) ex2.students;
+            List<int> students1 = ex1.students;
+            List<int> students2 = ex2.students;
 
             while (i < students1.Count() && j < students2.Count())
             {
@@ -83,8 +84,8 @@ namespace Business
             int count = 0;
 
             int i = 0, j = 0;
-            List<int> students1 = (List<int>)ex1.students;
-            List<int> students2 = (List<int>)ex2.students;
+            List<int> students1 = ex1.students;
+            List<int> students2 = ex2.students;
 
             while (i < students1.Count() && j < students2.Count())
             {

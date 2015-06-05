@@ -47,7 +47,7 @@ namespace Heuristics.SimulatedAnnealing.Timetable
 
         private INeighbor GenerateRandomNeighbor(Solution solution)
         {
-            INeighbor to_return = null;
+            INeighbor to_return;
             int random = new Random().Next(3);
             do
             {

@@ -21,7 +21,7 @@ namespace Heuristics
         private readonly RoomHardConstraints room_hard_constraints;
         private readonly Rooms rooms;
 
-        private readonly bool[,] conflict_matrix;
+        private readonly int[,] conflict_matrix;
         private FeasibilityTester feasibility_tester;
         private Solution solution;
         private List<Examination> unassigned_examinations;
@@ -59,11 +59,15 @@ namespace Heuristics
             Stopwatch watch2 = Stopwatch.StartNew();
 
             int count_average = 0;
+            int [] normal_assignments = new int[examinations.EntryCount()];
 
             while (solution.AssignedExaminations() != examinations.EntryCount())
             {
-                if(++count % 5000 == 0)
+                if (++count%5000 == 0)
+                {
                     Console.WriteLine(count);
+                }
+                    
                 List<Examination> list_to_use;
 
                 if (unassigned_examinations_with_exclusive.Any())
@@ -81,6 +85,7 @@ namespace Heuristics
                 /**/
                 //Console.WriteLine("Normal Assignment");
                 watch.Restart();
+
                 if (!ExaminationNormalAssignment(exam_to_assign))
                 {
                     watch.Restart();
@@ -90,6 +95,7 @@ namespace Heuristics
                 else
                 {
                     count_average++;
+                    normal_assignments[exam_to_assign.id] += 1;
                     //Console.WriteLine("Normal Assignment: " + watch.ElapsedMilliseconds);
                 }
                     
@@ -136,10 +142,10 @@ namespace Heuristics
             IEnumerable<PeriodHardConstraint> exclusions = period_hard_constraints.GetByType(PeriodHardConstraint.types.EXCLUSION);
             foreach (PeriodHardConstraint phc in exclusions)
             {
-                if (conflict_matrix[phc.ex1, phc.ex2] == false)
+                if (conflict_matrix[phc.ex1, phc.ex2] == 0)
                 {
-                    conflict_matrix[phc.ex1, phc.ex2] = true;
-                    conflict_matrix[phc.ex2, phc.ex1] = true;
+                    conflict_matrix[phc.ex1, phc.ex2] += 1;
+                    conflict_matrix[phc.ex2, phc.ex1] += 1;
 
                     examinations.GetById(phc.ex1).conflict += 1;
                     examinations.GetById(phc.ex2).conflict += 1;
@@ -151,7 +157,7 @@ namespace Heuristics
         {
             foreach (PeriodHardConstraint coincidence in period_hard_constraints.GetByType(PeriodHardConstraint.types.EXAM_COINCIDENCE))
             {
-                if (conflict_matrix[coincidence.ex1, coincidence.ex2])
+                if (conflict_matrix[coincidence.ex1, coincidence.ex2] > 0)
                 {
                     period_hard_constraints.Delete(coincidence);
                 }
@@ -213,9 +219,19 @@ namespace Heuristics
             {
                 if (exam_id != exam_to_assign.id && solution.GetPeriodFrom(exam_id) != -1 && solution.GetRoomFrom(exam_id) != -1)
                 {
-                    random_period = solution.GetPeriodFrom(exam_id);
-                    period_to_assign = periods.GetById(random_period);
-                    break;
+                    //To avoid loops in SET 6
+                    if (random.Next(4) != 0)
+                    {
+                        random_period = solution.GetPeriodFrom(exam_id);
+                        period_to_assign = periods.GetById(random_period);
+                        break;
+                    }
+                    else
+                    {
+                        //Console.WriteLine("HAPPENED!!!!!!!!!!!!!!!!!!");
+                        UnassignExaminations(exam_ids);
+                        break;
+                    }
                 }
             }
 
@@ -239,10 +255,11 @@ namespace Heuristics
 
             if (period_to_assign == null)
                 throw new NullReferenceException("Period was not successfully assigned");
-            
+
+            //Unassigning all examinations conflicting with the new assignment (students and EXCLUSION) on the period
             foreach (int exam_id in solution.assigned_examinations.ToList())
             {
-                if (conflict_matrix[exam_id, exam_to_assign.id] && solution.GetPeriodFrom(exam_id) == period_to_assign.id)
+                if (conflict_matrix[exam_id, exam_to_assign.id] > 0 && solution.GetPeriodFrom(exam_id) == period_to_assign.id)
                 {
                     UnassignExaminationAndCoincidences(examinations.GetById(exam_id));
                 }
@@ -360,7 +377,7 @@ namespace Heuristics
             solution.UnsetExam(solution.GetPeriodFrom(exam.id), solution.GetRoomFrom(exam.id), exam.id);
 
             //Why not random?
-            Random random = new Random();
+            //Random random = new Random();
             if (room_hard_constraints.HasRoomExclusivity(exam.id))
             {
                 //unassigned_examinations_with_exclusive.Insert(
@@ -412,6 +429,14 @@ namespace Heuristics
             else if (unassigned_examinations_with_after.Remove(exam)) {}
             else if (unassigned_examinations_with_coincidence.Remove(exam)) {}
             else unassigned_examinations_with_exclusive.Remove(exam);
+        }
+
+        private void UnassignExaminations(List<int> exams_to_unassign)
+        {
+            foreach (int exam in exams_to_unassign)
+            {
+                UnassignExamination(examinations.GetById(exam));
+            }
         }
     }
 }

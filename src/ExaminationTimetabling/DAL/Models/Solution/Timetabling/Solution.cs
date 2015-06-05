@@ -13,7 +13,7 @@ namespace DAL.Models.Solution.Timetabling
         private readonly int room_count;
         private readonly int examination_count;
 
-        public readonly List<int> assigned_examinations;
+        public List<int> assigned_examinations;
 
         public Solution(int id, int period_count, int room_count, int examination_count)
         {
@@ -90,9 +90,12 @@ namespace DAL.Models.Solution.Timetabling
 
         public ISolution Copy()
         {
-            Solution solution = new Solution(id, timetable_container.GetLength(0), timetable_container.GetLength(1), timetable_container.GetLength(2));
+            Solution solution = new Solution(id, period_count, room_count, examination_count);
             solution.timetable_container = (bool[,,]) timetable_container.Clone();
             solution.epr_associasion = (int[,]) epr_associasion.Clone();
+            solution.assigned_examinations = assigned_examinations;
+            solution.fitness = fitness;
+
             return solution;
         }
 

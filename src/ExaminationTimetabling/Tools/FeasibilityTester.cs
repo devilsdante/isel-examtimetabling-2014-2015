@@ -18,7 +18,7 @@ namespace Tools
         private readonly PeriodHardConstraints period_hard_constraints;
         private readonly RoomHardConstraints room_hard_constraints;
         private readonly Rooms rooms;
-        private readonly bool[,] conflict_matrix;
+        private readonly int[,] conflict_matrix;
 
         public FeasibilityTester()
         {
@@ -32,6 +32,7 @@ namespace Tools
         public bool IsFeasiblePeriod(Solution solution, Examination exam_to_assign, Period period)
         {
             List<int> exam_ids = period_hard_constraints.GetAllExaminationsWithChainingCoincidence(exam_to_assign.id).ToList();
+
             if (
                 !exam_ids.All(
                     exam_id => period.duration >= examinations.GetById(exam_id).duration))
@@ -39,8 +40,8 @@ namespace Tools
                 error_period = 1;
                 return false; //exam_to_assign or his coincidences' length cannot surpass the period's length
             }
-                
-            foreach (int exam_id in period_hard_constraints.GetAllExaminationsWithChainingCoincidence(exam_to_assign.id))
+
+            foreach (int exam_id in exam_ids)
             {
                 if (exam_id == exam_to_assign.id)
                     continue;
@@ -53,7 +54,7 @@ namespace Tools
 
             foreach (int exam_id in solution.assigned_examinations)
             {
-                 if (conflict_matrix[exam_id, exam_to_assign.id] && solution.GetPeriodFrom(exam_id) == period.id)
+                 if (conflict_matrix[exam_id, exam_to_assign.id] > 0 && solution.GetPeriodFrom(exam_id) == period.id)
                  {
                      error_period = 3;
                      return false; //exam_to_assign has STUDENT or EXCLUSION conflicts with another examination
@@ -83,7 +84,6 @@ namespace Tools
                     error_period = -1;
                     return true;
                 }
-                    
             }
 
             error_period = 6;
@@ -100,14 +100,12 @@ namespace Tools
                 return false; //exam_to_assign's number of students must not surpass the CLASSROOM's CAPACITY
             }
 
-
             if (room_hard_constraints.HasRoomExclusivity(exam_to_assign.id) &&
                 room_capacity != room.capacity)
             {
                 error_room = 2;
                 return false; //exam_to_assign needs room EXCLUSIVITY
             }
-                
 
             foreach (RoomHardConstraint rhc in room_hard_constraints.GetByType(RoomHardConstraint.types.ROOM_EXCLUSIVE))
             {
