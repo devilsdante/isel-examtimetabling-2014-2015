@@ -172,8 +172,8 @@ namespace Tools.EvaluationFunction.Timetable
             int period_penalty = 0;
 
 
-            Stopwatch watch = new Stopwatch();
-            watch.Start();
+            //Stopwatch watch = new Stopwatch();
+            //watch.Start();
 
             List<int>[] period_examinations = new List<int>[periods.EntryCount()];
 
@@ -240,7 +240,7 @@ namespace Tools.EvaluationFunction.Timetable
                 }
             }
             //Console.WriteLine("Time1&2: " + watch.ElapsedMilliseconds);
-            watch.Restart();
+            //watch.Restart();
 
             // Period Spread (in other days)
 
@@ -269,7 +269,7 @@ namespace Tools.EvaluationFunction.Timetable
                 }
             }
             //Console.WriteLine("Time3: " + watch.ElapsedMilliseconds);
-            watch.Restart();
+            //watch.Restart();
 
             // Mixed Durations
             for (int period_id = 0; period_id < solution.PeriodCount(); ++period_id)
@@ -292,7 +292,7 @@ namespace Tools.EvaluationFunction.Timetable
                 }
             }
             //Console.WriteLine("Time4: " + watch.ElapsedMilliseconds);
-            watch.Restart();
+            //watch.Restart();
 
             // Front Load
             List<Examination> exams_front_load =
@@ -312,7 +312,7 @@ namespace Tools.EvaluationFunction.Timetable
             }
 
             //Console.WriteLine("Time5: " + watch.ElapsedMilliseconds);
-            watch.Restart();
+            //watch.Restart();
 
             //Room Penalty & Period Penalty
             for (int exam_id = 0; exam_id < solution.ExaminationCount(); ++exam_id)
@@ -322,7 +322,7 @@ namespace Tools.EvaluationFunction.Timetable
             }
 
             //Console.WriteLine("Time6: " + watch.ElapsedMilliseconds);
-            watch.Restart();
+            //watch.Restart();
 
             //TODO só para testes
             //Console.WriteLine("Two in a row: " + two_exams_in_a_row);

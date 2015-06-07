@@ -11,13 +11,13 @@ namespace Tests.GraphColoringTest
 {
     class Main1
     {
-        static void Main()
+        static void Main_()
         {
             int SET;
             Stopwatch watch = Stopwatch.StartNew();
             Solution solution = null;
 
-            for (SET = 2; SET <= 2; SET++)
+            for (SET = 1; SET <= 8; SET++)
             {
                 if (SET == 4)
                     continue;
@@ -27,10 +27,10 @@ namespace Tests.GraphColoringTest
                 loader.Unload();
                 loader.Load();
 
-                //Console.WriteLine("Time LoaderTimetable: " + watch.ElapsedMilliseconds);
+                Console.WriteLine("Time LoaderTimetable: " + watch.ElapsedMilliseconds);
                 watch.Restart();
                 var evaluation = new EvaluationFunctionTimetable();
-                for (int i = 0; i < 10; i++)
+                for (int i = 0; i < 0; i++)
                 {
                     GraphColoring gc = new GraphColoring();
                     watch.Restart();

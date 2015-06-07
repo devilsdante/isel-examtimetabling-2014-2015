@@ -18,7 +18,7 @@ namespace Tests.SimulatedAnnealingTest
 {
     class Main1
     {
-        static void Main_()
+        static void Main()
         {
             int SET;
 
@@ -45,18 +45,20 @@ namespace Tests.SimulatedAnnealingTest
                 solution.fitness = evaluation.Fitness(solution);
                 Console.WriteLine("GC Fitness: " + solution.fitness);
 
-                SA_Solution = (Solution) solution.Copy();
-                SimulatedAnnealingTimetable sa = new SimulatedAnnealingTimetable();
-                sa.ExecTimer(SA_Solution, 221000, SimulatedAnnealingTimetable.type_random, true);
-                Console.WriteLine("SA Random Fitness: " + SA_Solution.fitness);
-
                 SA_Solution = (Solution)solution.Copy();
-                sa.ExecTimer(SA_Solution, 221000, SimulatedAnnealingTimetable.type_guided1, true);
+                SimulatedAnnealingTimetable sa = new SimulatedAnnealingTimetable();
+                //sa.ExecTimer(SA_Solution, 221000, SimulatedAnnealingTimetable.type_random, true);
+                //Console.WriteLine("SA Random Fitness: " + SA_Solution.fitness);
+
+                //SA_Solution = (Solution)solution.Copy();
+                sa.ExecTimer(SA_Solution, 5000, SimulatedAnnealingTimetable.type_guided1, true);
                 Console.WriteLine("SA Guided1 Fitness: " + SA_Solution.fitness);
 
-                SA_Solution = (Solution)solution.Copy();
-                sa.ExecTimer(SA_Solution, 221000, SimulatedAnnealingTimetable.type_guided2, true);
-                Console.WriteLine("SA Guided2 Fitness: " + SA_Solution.fitness);
+                //SA_Solution = (Solution)solution.Copy();
+                //sa.ExecTimer(SA_Solution, 221000, SimulatedAnnealingTimetable.type_guided2, true);
+                //Console.WriteLine("SA Guided2 Fitness: " + SA_Solution.fitness);
+
+                Console.ReadKey();
             }
 
             PrintToFile("..//..//output" + SET + ".txt", SA_Solution);

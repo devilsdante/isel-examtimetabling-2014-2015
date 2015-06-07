@@ -223,7 +223,7 @@ namespace Tools.Loader.Timetable
                 {
                     students.Add(Convert.ToInt32(token));
                 }
-                //There are so exceptions in some examination files in which student ordering 'rule' is not accomplished
+                //There are exceptions in some examination files in which student ordering 'rule' is not accomplished
                 students.Sort();
                 examinations.Insert(new Examination(exam_id, duration, students));
             }
@@ -233,8 +233,8 @@ namespace Tools.Loader.Timetable
         {
             conflict_matrix = ConflictMatrix.Instance();
 
-            //Stopwatch watch = new Stopwatch();
-            //watch.Restart();
+            Stopwatch watch = new Stopwatch();
+            watch.Restart();
 
             int[,] matrix = new int[examinations.EntryCount(), examinations.EntryCount()];
 
@@ -259,7 +259,7 @@ namespace Tools.Loader.Timetable
             }
             
             conflict_matrix.Set(matrix);
-            //Console.WriteLine("Conflict Matrix: " + watch.ElapsedMilliseconds);
+            Console.WriteLine("Conflict Matrix: " + watch.ElapsedMilliseconds);
         }
     }
 }

@@ -73,6 +73,15 @@ namespace DAL.Models.Solution.Timetabling
             assigned_examinations.Remove(exam_id);
         }
 
+        public void UnsetExam(int exam_id)
+        {
+            timetable_container[epr_associasion[exam_id, 0], epr_associasion[exam_id, 1], exam_id] = false;
+            epr_associasion[exam_id, 0] = -1;
+            epr_associasion[exam_id, 1] = -1;
+
+            assigned_examinations.Remove(exam_id);
+        }
+
         public int GetPeriodFrom(int exam_id)
         {
             return epr_associasion[exam_id, 0];

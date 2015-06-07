@@ -3,6 +3,7 @@ using DAL;
 using DAL.Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -74,7 +75,6 @@ namespace Tools
                     error_period = 5;
                     return false; //another examination must occur AFTER exam_to_assign
                 }
-
             }
 
             for (int room_id = 0; room_id < solution.RoomCount(); room_id++)
@@ -119,6 +119,57 @@ namespace Tools
             }
             error_room = -1;
             return true; //exam_to_assign can be assign
+        }
+
+        public bool IsFeasiblePeriodRoom(Solution solution, Examination exam_to_assign, Period period, Room room)
+        {
+            List<int> exam_ids = period_hard_constraints.GetAllExaminationsWithChainingCoincidence(exam_to_assign.id).ToList();
+
+            if (
+                !exam_ids.All(
+                    exam_id => period.duration >= examinations.GetById(exam_id).duration))
+            {
+                error_period = 1;
+                return false; //exam_to_assign or his coincidences' length cannot surpass the period's length
+            }
+
+            foreach (int exam_id in exam_ids)
+            {
+                if (exam_id == exam_to_assign.id)
+                    continue;
+                if (solution.GetPeriodFrom(exam_id) != period.id && solution.GetRoomFrom(exam_id) != -1)
+                {
+                    error_period = 2;
+                    return false; //exam_to_assign has COINCIDENCE conflicts with another examination, which is assigned to another period
+                }
+            }
+
+            foreach (int exam_id in solution.assigned_examinations)
+            {
+                if (conflict_matrix[exam_id, exam_to_assign.id] > 0 && solution.GetPeriodFrom(exam_id) == period.id)
+                {
+                    error_period = 3;
+                    return false; //exam_to_assign has STUDENT or EXCLUSION conflicts with another examination
+                }
+            }
+
+            foreach (PeriodHardConstraint phc in period_hard_constraints.GetByTypeWithExamId(PeriodHardConstraint.types.AFTER, exam_to_assign.id))
+            {
+                if (phc.ex2 == exam_to_assign.id && solution.GetPeriodFrom(phc.ex1) != -1 && solution.GetPeriodFrom(phc.ex1) <= period.id)
+                {
+                    error_period = 4;
+                    return false; //exam_to_assign must occur AFTER another
+                }
+
+                if (phc.ex1 == exam_to_assign.id && solution.GetPeriodFrom(phc.ex2) != -1 && solution.GetPeriodFrom(phc.ex2) >= period.id)
+                {
+                    error_period = 5;
+                    return false; //another examination must occur AFTER exam_to_assign
+                }
+            }
+            error_period = -1;
+
+            return IsFeasibleRoom(solution, exam_to_assign, period, room);
         }
 
         public int RoomCurrentCapacityOnPeriod(Solution solution, Period period, Room room)

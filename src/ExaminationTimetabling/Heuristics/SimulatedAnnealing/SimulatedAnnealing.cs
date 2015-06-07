@@ -1,5 +1,7 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Diagnostics;
+using System.Security.Permissions;
 using DAL.Models;
 using DAL.Models.Solution;
 using DAL.Models.Solution.BitFlip;
@@ -14,7 +16,6 @@ namespace Heuristics.SimulatedAnnealing
     {
         protected abstract IEvaluationFunction evaluation_function { get; set; }
         private ICoolingSchedule cooling_schedule;
-
 
         public ISolution Exec(ISolution solution, int TMax, int TMin, int loops, int type, bool minimize)
         {
@@ -68,7 +69,10 @@ namespace Heuristics.SimulatedAnnealing
 
             while (watch.ElapsedMilliseconds < miliseconds)
             {
+                TimerPrinter(watch.ElapsedMilliseconds, miliseconds);
+                //watch.Restart();
                 INeighbor neighbor = GenerateNeighbor(solution, type);
+                //Console.WriteLine("GenerateNeighbor: " + watch.ElapsedMilliseconds);
 
                 neighbor.fitness = (neighbor.fitness == -1) ? evaluation_function.Fitness(neighbor) : neighbor.fitness;
                 solution.fitness = (solution.fitness == -1) ? evaluation_function.Fitness(solution) : solution.fitness;
@@ -148,5 +152,37 @@ namespace Heuristics.SimulatedAnnealing
         protected abstract INeighbor GenerateNeighbor(ISolution solution, int type);
 
         protected abstract void InitVals(int type);
+
+
+        private const int timer = 5;
+        private int counter = 1;
+        private bool loading_printed = false;
+
+        private void TimerPrinter(long elapsed_milliseconds, long total)
+        {
+            if (elapsed_milliseconds < timer*1000)
+            {
+                if (!loading_printed)
+                {
+                    loading_printed = true;
+                    Console.Write("Loading");
+                }
+                if(counter != -1)
+                    counter = 1;
+                return;
+            }
+            if (counter*timer*1000 < elapsed_milliseconds)
+            {
+                counter++;
+                Console.Write(".");
+                if (total - elapsed_milliseconds < timer * 1000)
+                {
+                    Console.WriteLine();
+                    loading_printed = false;
+                }
+                    
+            }
+            
+        }
     }
 }

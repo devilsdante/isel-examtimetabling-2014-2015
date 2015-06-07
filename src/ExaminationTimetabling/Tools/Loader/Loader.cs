@@ -56,5 +56,14 @@ namespace Tools.Loader
         {
             return curr_token;
         }
+
+        public List<string> ReadNextLine()
+        {
+            phrase = file.ReadLine();
+            if (phrase == null)
+                return null;
+            tokens = Regex.Split(phrase, ",");
+            return tokens.ToList();
+        } 
     }
 }
