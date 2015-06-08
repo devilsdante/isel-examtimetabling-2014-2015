@@ -46,20 +46,46 @@ namespace Tools.NeighborSelection.Timetable
                 if (feasibility_tester.IsFeasibleRoom(solution, random_examination, period, random_room))
                     return new RoomChangeNeighbor(solution, random_examination.id, random_room.id);
 
-                for (int exam_id = 0; exam_id < examinations.EntryCount(); ++exam_id)
+                for (int exam_to_swap_id = 0; exam_to_swap_id < examinations.EntryCount(); ++exam_to_swap_id)
                 {
-                    if (!solution.IsExamSetTo(period.id, random_room.id, exam_id))
+                    if (!solution.IsExamSetTo(period.id, random_room.id, exam_to_swap_id))
                         continue;
-                    INeighbor neighbor = new RoomSwapNeighbor(solution, random_examination.id, exam_id);
 
-                    if (_evaluationFunctionTimetable.DistanceToFeasibility(neighbor) == 0)
+                    INeighbor neighbor = new RoomSwapNeighbor(solution, random_examination.id, exam_to_swap_id);
+                    neighbor.Accept();
+
+                    Period random_examination_period = period;
+                    Room random_examination_room = rooms.GetById(solution.GetRoomFrom(random_examination.id));
+
+                    Period exam_to_swap_period = period;
+                    Room exam_to_swap_room = rooms.GetById(solution.GetRoomFrom(exam_to_swap_id));
+
+                    solution.UnsetExam(random_examination.id);
+                    bool is_feasible = feasibility_tester.IsFeasibleRoom(solution, random_examination,
+                        random_examination_period, random_examination_room);
+                    solution.SetExam(random_examination_period.id, random_examination_room.id, random_examination.id);
+
+                    if (!is_feasible)
                     {
-                        Console.WriteLine("1 worked: " + watch.ElapsedMilliseconds);
-                        return neighbor;
+                        neighbor.Reverse();
+                        continue;
                     }
+
+                    solution.UnsetExam(exam_to_swap_id);
+                    is_feasible = feasibility_tester.IsFeasibleRoom(solution, examinations.GetById(exam_to_swap_id),
+                            exam_to_swap_period, exam_to_swap_room);
+                    solution.SetExam(exam_to_swap_period.id, exam_to_swap_room.id, exam_to_swap_id);
+
+                    if (!is_feasible)
+                    {
+                        neighbor.Reverse();
+                        continue;
+                    }
+                    neighbor.Reverse();
+
+                    return neighbor;
                 }
             }
-            Console.WriteLine("1 didn't work: " + watch.ElapsedMilliseconds);
             return null;
         }
 
@@ -87,40 +113,41 @@ namespace Tools.NeighborSelection.Timetable
                     if (!solution.IsExamSetTo(random_period.id, room.id, exam_to_swap_id))
                         continue;
 
-
-                    INeighbor dummy1 = new PeriodChangeNeighbor(solution, random_examination.id, random_period.id);
-                    int exam_to_swap_period = solution.GetPeriodFrom(exam_to_swap_id);
-                    int exam_to_swap_room = solution.GetRoomFrom(exam_to_swap_id);
-
-                    INeighbor dummy2 = new PeriodChangeNeighbor(solution, exam_to_swap_id, solution.GetPeriodFrom(random_examination.id));
-                    int random_examination_period = solution.GetPeriodFrom(random_examination.id);
-                    int random_examination_room = solution.GetRoomFrom(random_examination.id);
-
-                    dummy1.Accept();
-                    solution.UnsetExam(random_examination.id);
-                    bool is_feasible = feasibility_tester.IsFeasiblePeriodRoom(solution, examinations.GetById(exam_to_swap_id), periods.GetById(random_examination_period), room);
-                    solution.SetExam(random_examination_period, random_examination_room, random_examination.id);
-                    dummy1.Reverse();
-
-                    if (!is_feasible)
-                        continue;
-
-                    dummy2.Accept();
-                    solution.UnsetExam(exam_to_swap_id);
-                    is_feasible = feasibility_tester.IsFeasiblePeriodRoom(solution, random_examination, random_period, room);
-                    solution.SetExam(exam_to_swap_period, exam_to_swap_room, exam_to_swap_id);
-                    dummy2.Reverse();
-
-                    if (!is_feasible)
-                        continue;
-
                     INeighbor neighbor = new PeriodSwapNeighbor(solution, random_examination.id, exam_to_swap_id);
-                    Console.WriteLine("2 worked: " + watch.ElapsedMilliseconds);
+                    neighbor.Accept();
+
+                    Period random_examination_period = periods.GetById(solution.GetPeriodFrom(random_examination.id));
+                    Room random_examination_room = room;
+
+                    Period exam_to_swap_period = periods.GetById(solution.GetPeriodFrom(exam_to_swap_id));
+                    Room exam_to_swap_room = room;
+
+                    solution.UnsetExam(random_examination.id);
+                    bool is_feasible = feasibility_tester.IsFeasiblePeriodRoom(solution, random_examination,
+                        random_examination_period, random_examination_room);
+                    solution.SetExam(random_examination_period.id, random_examination_room.id, random_examination.id);
+
+                    if (!is_feasible)
+                    {
+                        neighbor.Reverse();
+                        continue;
+                    }
+
+                    solution.UnsetExam(exam_to_swap_id);
+                    is_feasible = feasibility_tester.IsFeasiblePeriodRoom(solution, examinations.GetById(exam_to_swap_id),
+                            exam_to_swap_period, exam_to_swap_room);
+                    solution.SetExam(exam_to_swap_period.id, exam_to_swap_room.id, exam_to_swap_id);
+
+                    if (!is_feasible)
+                    {
+                        neighbor.Reverse();
+                        continue;
+                    }
+                    neighbor.Reverse();
+                    
                     return neighbor;
                 }
-
             }
-            Console.WriteLine("2 didn't work: " + watch.ElapsedMilliseconds);
             return null;
         }
 
@@ -150,23 +177,46 @@ namespace Tools.NeighborSelection.Timetable
                         return new PeriodRoomChangeNeighbor(solution, random_examination.id, random_period.id, random_room.id);
                         
 
-                    for (int exam_id = 0; exam_id < examinations.EntryCount(); ++exam_id)
+                    for (int exam_to_swap_id = 0; exam_to_swap_id < examinations.EntryCount(); ++exam_to_swap_id)
                     {
-                        if (!solution.IsExamSetTo(random_period.id, random_room.id, exam_id))
+                        if (!solution.IsExamSetTo(random_period.id, random_room.id, exam_to_swap_id))
                             continue;
-                        INeighbor neighbor = new PeriodRoomSwapNeighbor(solution, random_examination.id, exam_id);
+                        INeighbor neighbor = new PeriodRoomSwapNeighbor(solution, random_examination.id, exam_to_swap_id);
+                        neighbor.Accept();
 
-                        if (_evaluationFunctionTimetable.DistanceToFeasibility(neighbor) == 0)
+                        Period random_examination_period = periods.GetById(solution.GetPeriodFrom(random_examination.id));
+                        Room random_examination_room = rooms.GetById(solution.GetRoomFrom(random_examination.id));
+
+                        Period exam_to_swap_period = periods.GetById(solution.GetPeriodFrom(exam_to_swap_id)); ;
+                        Room exam_to_swap_room = rooms.GetById(solution.GetRoomFrom(exam_to_swap_id));
+
+                        solution.UnsetExam(random_examination.id);
+                        bool is_feasible = feasibility_tester.IsFeasiblePeriodRoom(solution, random_examination,
+                            random_examination_period, random_examination_room);
+                        solution.SetExam(random_examination_period.id, random_examination_room.id, random_examination.id);
+
+                        if (!is_feasible)
                         {
-                            Console.WriteLine("3 worked: " + watch.ElapsedMilliseconds);
-                            return neighbor;
+                            neighbor.Reverse();
+                            continue;
                         }
-                            
+
+                        solution.UnsetExam(exam_to_swap_id);
+                        is_feasible = feasibility_tester.IsFeasiblePeriodRoom(solution, examinations.GetById(exam_to_swap_id),
+                                exam_to_swap_period, exam_to_swap_room);
+                        solution.SetExam(exam_to_swap_period.id, exam_to_swap_room.id, exam_to_swap_id);
+
+                        if (!is_feasible)
+                        {
+                            neighbor.Reverse();
+                            continue;
+                        }
+                        neighbor.Reverse();
+                        return neighbor;
                     }
                 }
             }
 
-            Console.WriteLine("3 didnt work: " + watch.ElapsedMilliseconds);
             return null;
         }
 

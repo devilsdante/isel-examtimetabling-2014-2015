@@ -30,6 +30,8 @@ namespace Heuristics.SimulatedAnnealing.Timetable
         private int period_swap;
         private int period_room_swap;
 
+        public int generated_neighbors;
+
         public SimulatedAnnealingTimetable()
         {
             evaluation_function = new EvaluationFunctionTimetable();
@@ -38,17 +40,19 @@ namespace Heuristics.SimulatedAnnealing.Timetable
 
         protected INeighbor GenerateNeighbor(Solution solution, int type)
         {
+            generated_neighbors++;
             if (type == type_random)
                 return GenerateRandomNeighbor(solution);
             if (type == type_guided1)
                 return GenerateGuidedNeighbor1(solution);
             return GenerateGuidedNeighbor2(solution);
+
         }
 
         private INeighbor GenerateRandomNeighbor(Solution solution)
         {
             INeighbor to_return;
-            int random = new Random().Next(3);
+            int random = new Random().Next(6);
             do
             {
                 if (random == 0)
@@ -64,6 +68,7 @@ namespace Heuristics.SimulatedAnnealing.Timetable
                 else
                     to_return = _neighborSelectionTimetable.PeriodRoomSwap(solution);
             } while (to_return == null);
+
             return to_return;
         }
 
@@ -74,6 +79,7 @@ namespace Heuristics.SimulatedAnnealing.Timetable
             int total = room_change + period_change + period_room_change + room_swap + period_swap + period_room_swap;
             int random = new Random((int)DateTime.Now.Ticks).Next(total);
             solution.fitness = (solution.fitness == -1) ? evaluation_function.Fitness(solution) : solution.fitness;
+            const int chance_incrementation = 10;
 
             while (true)
             {
@@ -84,9 +90,11 @@ namespace Heuristics.SimulatedAnnealing.Timetable
                     {
                         to_return.fitness = (to_return.fitness == -1) ? evaluation_function.Fitness(to_return) : to_return.fitness;
                         if (to_return.fitness < solution.fitness)
-                            room_change = room_change < 10 ? room_change + 1 : room_change;
+                            room_change = room_change <= 20 ? room_change + chance_incrementation : room_change;
+                            //room_change += chance_incrementation;
                         else
-                            room_change = 1;
+                            //room_change = 1;
+                            room_change = room_change > chance_incrementation ? room_change - chance_incrementation : room_change;
                         break;
                     }
                 }
@@ -97,9 +105,11 @@ namespace Heuristics.SimulatedAnnealing.Timetable
                     {
                         to_return.fitness = (to_return.fitness == -1) ? evaluation_function.Fitness(to_return) : to_return.fitness;
                         if (to_return.fitness < solution.fitness)
-                            period_change = period_change < 10 ? period_change + 1 : period_change;
+                            period_change = period_change < 20 ? period_change + chance_incrementation : period_change;
+                            //period_change += chance_incrementation;
                         else
-                            period_change = 1;
+                            //period_change = 1;
+                            period_change = period_change > chance_incrementation ? period_change - chance_incrementation : period_change;
                         break;
                     }
                 }
@@ -110,9 +120,11 @@ namespace Heuristics.SimulatedAnnealing.Timetable
                     {
                         to_return.fitness = (to_return.fitness == -1) ? evaluation_function.Fitness(to_return) : to_return.fitness;
                         if (to_return.fitness < solution.fitness)
-                            period_room_change = period_room_change < 10 ? period_room_change + 1 : period_room_change;
+                            period_room_change = period_room_change < 20 ? period_room_change + chance_incrementation : period_room_change;
+                            //period_room_change += chance_incrementation;
                         else
-                            period_room_change = 1;
+                            //period_room_change = 1;
+                            period_room_change = period_room_change > chance_incrementation ? period_room_change - chance_incrementation : period_room_change;
                         break;
                     }
                 }
@@ -123,9 +135,11 @@ namespace Heuristics.SimulatedAnnealing.Timetable
                     {
                         to_return.fitness = (to_return.fitness == -1) ? evaluation_function.Fitness(to_return) : to_return.fitness;
                         if (to_return.fitness < solution.fitness)
-                            room_swap = room_swap < 10 ? room_swap + 1 : room_swap;
+                            room_swap = room_swap < 20 ? room_swap + chance_incrementation : room_swap;
+                            //room_swap += chance_incrementation;
                         else
-                            room_swap = 1;
+                            //room_swap = 1;
+                            room_swap = room_swap > chance_incrementation ? room_swap - chance_incrementation : room_swap;
                         break;
                     }
                 }
@@ -136,9 +150,11 @@ namespace Heuristics.SimulatedAnnealing.Timetable
                     {
                         to_return.fitness = (to_return.fitness == -1) ? evaluation_function.Fitness(to_return) : to_return.fitness;
                         if (to_return.fitness < solution.fitness)
-                            period_swap = period_swap < 10 ? period_swap + 1 : period_swap;
+                            period_swap = period_swap < 20 ? period_swap + chance_incrementation : period_swap;
+                            //period_swap += chance_incrementation;
                         else
-                            period_swap = 1;
+                            //period_swap = 1;
+                            period_swap = period_swap > chance_incrementation ? period_swap - chance_incrementation : period_swap;
                         break;
                     }
                 }
@@ -149,9 +165,11 @@ namespace Heuristics.SimulatedAnnealing.Timetable
                     {
                         to_return.fitness = (to_return.fitness == -1) ? evaluation_function.Fitness(to_return) : to_return.fitness;
                         if (to_return.fitness < solution.fitness)
-                            period_room_swap = period_room_swap < 10 ? period_room_swap + 1 : period_room_swap;
+                            period_room_swap = period_room_swap < 20 ? period_room_swap + chance_incrementation : period_room_swap;
+                            //period_room_swap += chance_incrementation;
                         else
-                            period_room_swap = 1;
+                            //period_room_swap = 1;
+                            period_room_swap = period_room_swap > chance_incrementation ? period_room_swap - chance_incrementation : period_room_swap;
                         break;
                     }
                 }

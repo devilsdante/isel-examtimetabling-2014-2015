@@ -47,22 +47,28 @@ namespace Tests.SimulatedAnnealingTest
 
                 SA_Solution = (Solution)solution.Copy();
                 SimulatedAnnealingTimetable sa = new SimulatedAnnealingTimetable();
-                //sa.ExecTimer(SA_Solution, 221000, SimulatedAnnealingTimetable.type_random, true);
-                //Console.WriteLine("SA Random Fitness: " + SA_Solution.fitness);
+                sa.ExecTimer(SA_Solution, 10000, SimulatedAnnealingTimetable.type_random, true);
+                Console.WriteLine("SA Random Fitness: " + SA_Solution.fitness);
+                Console.WriteLine("generated_neighbors: " + sa.generated_neighbors);
+                sa.generated_neighbors = 0;
 
                 //SA_Solution = (Solution)solution.Copy();
-                sa.ExecTimer(SA_Solution, 5000, SimulatedAnnealingTimetable.type_guided1, true);
-                Console.WriteLine("SA Guided1 Fitness: " + SA_Solution.fitness);
+                //sa.ExecTimer(SA_Solution, 221000, SimulatedAnnealingTimetable.type_guided1, true);
+                //Console.WriteLine("SA Guided1 Fitness: " + SA_Solution.fitness);
+                //Console.WriteLine("generated_neighbors: " + sa.generated_neighbors);
+                //sa.generated_neighbors = 0;
 
+                ////221000
                 //SA_Solution = (Solution)solution.Copy();
-                //sa.ExecTimer(SA_Solution, 221000, SimulatedAnnealingTimetable.type_guided2, true);
+                //sa.ExecTimer(SA_Solution, 5000, SimulatedAnnealingTimetable.type_guided2, true);
                 //Console.WriteLine("SA Guided2 Fitness: " + SA_Solution.fitness);
+                //Console.WriteLine("generated_neighbors: " + sa.generated_neighbors);
+                //sa.generated_neighbors = 0;
+
+                PrintToFile("..//..//output" + SET + ".txt", SA_Solution);
 
                 Console.ReadKey();
             }
-
-            PrintToFile("..//..//output" + SET + ".txt", SA_Solution);
-
             Console.ReadKey();
 
             //PrintToFile("..//..//output.txt", solution);

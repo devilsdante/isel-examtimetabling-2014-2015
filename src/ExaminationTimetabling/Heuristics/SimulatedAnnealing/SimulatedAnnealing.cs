@@ -73,7 +73,7 @@ namespace Heuristics.SimulatedAnnealing
                 //watch.Restart();
                 INeighbor neighbor = GenerateNeighbor(solution, type);
                 //Console.WriteLine("GenerateNeighbor: " + watch.ElapsedMilliseconds);
-
+                
                 neighbor.fitness = (neighbor.fitness == -1) ? evaluation_function.Fitness(neighbor) : neighbor.fitness;
                 solution.fitness = (solution.fitness == -1) ? evaluation_function.Fitness(solution) : solution.fitness;
 
@@ -81,16 +81,19 @@ namespace Heuristics.SimulatedAnnealing
 
                 if (DeltaE <= 0)
                 {
+                    //Console.WriteLine("fitness: " + neighbor.fitness);
                     solution = neighbor.Accept();
                     solution.fitness = neighbor.fitness;
                 }
                 else
                 {
-                    double acceptance_probability = Math.Pow(Math.E, ((-DeltaE) * miliseconds) / (watch.ElapsedMilliseconds));
+                    double acceptance_probability = Math.Pow(Math.E, ((-DeltaE) * miliseconds) / (miliseconds - watch.ElapsedMilliseconds));
+                    Console.WriteLine("" + acceptance_probability);
                     double random = new Random((int)DateTime.Now.Ticks).NextDouble();
 
                     if (random <= acceptance_probability)
                     {
+                        //Console.WriteLine("fitness: " + neighbor.fitness);
                         solution = neighbor.Accept();
                         solution.fitness = neighbor.fitness;
                     }
@@ -98,11 +101,11 @@ namespace Heuristics.SimulatedAnnealing
                     else
                         continue;
                 }
-                int dtf = evaluation_function.DistanceToFeasibility(solution);
-                if (dtf != 0)
-                {
-                    throw new Exception("Distance to feasibility is not zero! DTF: " + dtf);
-                }
+                //int dtf = evaluation_function.DistanceToFeasibility(solution);
+                //if (dtf != 0)
+                //{
+                //    throw new Exception("Distance to feasibility is not zero! DTF: " + dtf);
+                //}
             }
             return solution;
         }
@@ -133,6 +136,7 @@ namespace Heuristics.SimulatedAnnealing
 
                     if (random <= acceptance_probability)
                     {
+                        Console.WriteLine("fitness: " + neighbor.fitness);
                         solution = neighbor.Accept();
                         solution.fitness = neighbor.fitness;
                     }
