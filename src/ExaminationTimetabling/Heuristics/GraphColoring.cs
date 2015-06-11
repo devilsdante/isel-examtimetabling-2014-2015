@@ -166,18 +166,20 @@ namespace Heuristics
 
         private bool ExaminationNormalAssignment(Examination exam_to_assign)
         {
-            List<Period> possible_examinations = periods.GetAll().Where(period => feasibility_tester.IsFeasiblePeriod(solution, exam_to_assign, period)).ToList();
-            if (!possible_examinations.Any())
+            List<Period> possible_periods = periods.GetAll().Where(period => feasibility_tester.IsFeasiblePeriod(solution, exam_to_assign, period)).ToList();
+
+            if (!possible_periods.Any())
                 return false;
 
             Random random = new Random();
-            int random_assignable = random.Next(possible_examinations.Count);
-            Period period_to_assign = possible_examinations[random_assignable];
+            int random_assignable = random.Next(possible_periods.Count);
+            Period period_to_assign = possible_periods[random_assignable];
 
             if(period_to_assign == null)
                 throw new NullReferenceException("Period was not successfully assigned");
 
             List<Room> possible_rooms = rooms.GetAll().Where(room => feasibility_tester.IsFeasibleRoom(solution, exam_to_assign, period_to_assign, room)).ToList();
+
             random_assignable = random.Next(possible_rooms.Count);
             Room room_to_assign = possible_rooms[random_assignable];
 
@@ -202,7 +204,7 @@ namespace Heuristics
             {
                 random_room = random.Next(rooms.EntryCount());
                 if (rooms.GetById(random_room).capacity >=
-                    examinations.GetById(exam_to_assign.id).students.Count())
+                    examinations.GetById(exam_to_assign.id).students_count)
                 {
                     room_to_assign = rooms.GetById(random_room);
                     break;
@@ -257,9 +259,9 @@ namespace Heuristics
                 throw new NullReferenceException("Period was not successfully assigned");
 
             //Unassigning all examinations conflicting with the new assignment (students and EXCLUSION) on the period
-            foreach (int exam_id in solution.assigned_examinations.ToList())
+            foreach (int exam_id in solution.GetExaminationsFrom(period_to_assign.id))
             {
-                if (conflict_matrix[exam_id, exam_to_assign.id] > 0 && solution.GetPeriodFrom(exam_id) == period_to_assign.id)
+                if (conflict_matrix[exam_id, exam_to_assign.id] > 0)
                 {
                     UnassignExaminationAndCoincidences(examinations.GetById(exam_id));
                 }
@@ -268,9 +270,9 @@ namespace Heuristics
             //If exam_to_assign needs room exclusivity, unassign all examinations taking place in the period at the room
             if (room_hard_constraints.HasRoomExclusivity(exam_to_assign.id))
             {
-                foreach (int exam_id in solution.assigned_examinations.ToList())
+                foreach (int exam_id in solution.GetExaminationsFrom(period_to_assign.id, room_to_assign.id))
                 {
-                     if (solution.IsExamSetTo(random_period, random_room, exam_id))
+                    if (solution.IsExamSetTo(period_to_assign.id, room_to_assign.id, exam_id))
                      {
                          UnassignExaminationAndCoincidences(examinations.GetById(exam_id));
                      }
@@ -280,9 +282,9 @@ namespace Heuristics
             //All examinations taking place in the period at the room that needs room exclusivity, must be unassigned
             else
             {
-                foreach (int exam_id in solution.assigned_examinations.ToList())
+                foreach (int exam_id in solution.GetExaminationsFrom(period_to_assign.id, room_to_assign.id))
                 {
-                    if (solution.IsExamSetTo(random_period, random_room, exam_id) && room_hard_constraints.HasRoomExclusivity(exam_id))
+                    if (room_hard_constraints.HasRoomExclusivity(exam_id))
                     {
                         UnassignExaminationAndCoincidences(examinations.GetById(exam_id));
                     }
@@ -314,41 +316,25 @@ namespace Heuristics
             //Removes examinations from period and room, until the room has enough capacity for the new examination to take place
             int room_to_assign_curr_capacity =
                 feasibility_tester.RoomCurrentCapacityOnPeriod(solution, period_to_assign, room_to_assign);
-            int n_of_examinations_in_period_and_room = 0;
+            int n_of_examinations_in_period_and_room = solution.GetExaminationsFrom(period_to_assign.id, room_to_assign.id).Count;
 
-            if (room_to_assign_curr_capacity < exam_to_assign.students.Count())
-            {
-                foreach (int exam_id in solution.assigned_examinations)
-                {
-                    if (solution.IsExamSetTo(random_period, random_room, exam_id))
-                    {
-                        ++n_of_examinations_in_period_and_room;
-                    }
-                }
-            }
-
-            while (room_to_assign_curr_capacity < exam_to_assign.students.Count())
+            while (room_to_assign_curr_capacity < exam_to_assign.students_count)
             {
                 int random_examination_unassignment = random.Next(n_of_examinations_in_period_and_room);
 
-                foreach (int exam_id in solution.assigned_examinations.ToList())
-                {
-                    if (solution.IsExamSetTo(random_period, random_room, exam_id) 
-                        && --random_examination_unassignment < 0)
-                    {
-                        List<int> exams_to_unassign =
-                            period_hard_constraints.GetAllExaminationsWithChainingCoincidence(exam_id)
+                int random_examination =
+                    solution.GetExaminationsFrom(period_to_assign.id, room_to_assign.id)[random_examination_unassignment];
+
+                List<int> exams_to_unassign =
+                            period_hard_constraints.GetAllExaminationsWithChainingCoincidence(random_examination)
                                 .Where(
                                     ex_id =>
-                                        solution.GetPeriodFrom(ex_id) == random_period &&
-                                        solution.GetRoomFrom(ex_id) == random_room).ToList();
-                        n_of_examinations_in_period_and_room -= exams_to_unassign.Count;
-                        room_to_assign_curr_capacity +=
-                            exams_to_unassign.Sum(ex_id => examinations.GetById(ex_id).students.Count);
-                        UnassignExaminationsAndCoincidences(exams_to_unassign);
-                        break;
-                    }
-                }
+                                        solution.GetPeriodFrom(ex_id) == period_to_assign.id &&
+                                        solution.GetRoomFrom(ex_id) == room_to_assign.id).ToList();
+                n_of_examinations_in_period_and_room -= exams_to_unassign.Count;
+                room_to_assign_curr_capacity +=
+                    exams_to_unassign.Sum(ex_id => examinations.GetById(ex_id).students_count);
+                UnassignExaminations(exams_to_unassign);
             }
             ////TODO remover, só para testes
             //if (feasibility_tester.RoomCurrentCapacityOnPeriod(solution, period_to_assign, room_to_assign) != room_to_assign_curr_capacity)

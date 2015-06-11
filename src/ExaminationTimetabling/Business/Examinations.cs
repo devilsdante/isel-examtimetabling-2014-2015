@@ -61,43 +61,43 @@ namespace Business
             return examinations_repo.EntryCount();
         }
 
-        public bool Conflict(Examination ex1, Examination ex2)
-        {
-            int i = 0, j = 0;
-            List<int> students1 = ex1.students;
-            List<int> students2 = ex2.students;
+        //public bool Conflict(Examination ex1, Examination ex2)
+        //{
+        //    int i = 0, j = 0;
+        //    List<int> students1 = ex1.students;
+        //    List<int> students2 = ex2.students;
 
-            while (i < students1.Count() && j < students2.Count())
-            {
-                if (students1[i] == students2[j])
-                    return true;
-                if (students1[i] < students2[j])
-                    ++i;
-                else
-                    ++j;
-            }
-            return false;
-        }
+        //    while (i < students1.Count() && j < students2.Count())
+        //    {
+        //        if (students1[i] == students2[j])
+        //            return true;
+        //        if (students1[i] < students2[j])
+        //            ++i;
+        //        else
+        //            ++j;
+        //    }
+        //    return false;
+        //}
 
-        public int NoOfConflicts(Examination ex1, Examination ex2)
-        {
-            int count = 0;
+        //public int NoOfConflicts(Examination ex1, Examination ex2)
+        //{
+        //    int count = 0;
 
-            int i = 0, j = 0;
-            List<int> students1 = ex1.students;
-            List<int> students2 = ex2.students;
+        //    int i = 0, j = 0;
+        //    List<int> students1 = ex1.students;
+        //    List<int> students2 = ex2.students;
 
-            while (i < students1.Count() && j < students2.Count())
-            {
-                if (students1[i] == students2[j])
-                    count++;
-                if (students1[i] < students2[j])
-                    ++i;
-                else
-                    ++j;
-            }
+        //    while (i < students1.Count() && j < students2.Count())
+        //    {
+        //        if (students1[i] == students2[j])
+        //            count++;
+        //        if (students1[i] < students2[j])
+        //            ++i;
+        //        else
+        //            ++j;
+        //    }
 
-            return count;
-        }
+        //    return count;
+        //}
     }
 }

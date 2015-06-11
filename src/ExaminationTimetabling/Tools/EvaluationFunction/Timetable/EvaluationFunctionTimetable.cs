@@ -141,7 +141,7 @@ namespace Tools.EvaluationFunction.Timetable
             int[,] rooms_usage = new int[rooms.EntryCount(), periods.EntryCount()];
             for (int exam_id = 0; exam_id < solution.ExaminationCount(); ++exam_id)
             {
-                rooms_usage[solution.GetRoomFrom(exam_id), solution.GetPeriodFrom(exam_id)] += examinations.GetById(exam_id).students.Count;
+                rooms_usage[solution.GetRoomFrom(exam_id), solution.GetPeriodFrom(exam_id)] += examinations.GetById(exam_id).students_count;
             }
 
             for (int room_id = 0; room_id < rooms.EntryCount(); room_id++)
@@ -171,7 +171,6 @@ namespace Tools.EvaluationFunction.Timetable
             int room_penalty = 0;
             int period_penalty = 0;
 
-
             //Stopwatch watch = new Stopwatch();
             //watch.Start();
 
@@ -179,13 +178,7 @@ namespace Tools.EvaluationFunction.Timetable
 
             for (int period_id = 0; period_id < periods.EntryCount(); period_id++)
             {
-                period_examinations[period_id] = new List<int>();
-            }
-
-            for (int exam_id = 0; exam_id < examinations.EntryCount(); ++exam_id)
-            {
-                List<int> list = period_examinations[solution.GetPeriodFrom(exam_id)];
-                list.Add(exam_id);
+                period_examinations[period_id] = solution.GetExaminationsFrom(period_id);
             }
 
             // Two examinations in a row/day
@@ -206,6 +199,15 @@ namespace Tools.EvaluationFunction.Timetable
                     {
                         int exam2_id = period_examinations[period2_id][exam2_index];
                         int no_conflicts = conflict_matrix[exam1_id, exam2_id];
+
+                        if (no_conflicts == 1)
+                        {
+                            if (period_hard_constraints.GetByType(PeriodHardConstraint.types.EXCLUSION).Any(phc => phc.ex1 == exam1_id && phc.ex2 == exam2_id ||
+                                                                                                                   phc.ex1 == exam2_id && phc.ex2 == exam1_id))
+                            {
+                                --no_conflicts;
+                            }
+                        }
 
                         two_exams_in_a_row += no_conflicts * model_weightings.Get().two_in_a_row;
 
@@ -229,6 +231,15 @@ namespace Tools.EvaluationFunction.Timetable
                         {
                             int exam2_id = period_examinations[period2_id][exam2_index];
                             int no_conflicts = conflict_matrix[exam1_id, exam2_id];
+
+                            if (no_conflicts == 1)
+                            {
+                                if (period_hard_constraints.GetByType(PeriodHardConstraint.types.EXCLUSION).Any(phc => phc.ex1 == exam1_id && phc.ex2 == exam2_id ||
+                                                                                                                       phc.ex1 == exam2_id && phc.ex2 == exam1_id))
+                                {
+                                    --no_conflicts;
+                                }
+                            }
 
                             two_exams_in_a_day += no_conflicts * model_weightings.Get().two_in_a_day;
 
@@ -263,6 +274,15 @@ namespace Tools.EvaluationFunction.Timetable
                             int exam2_id = period_examinations[period2_id][exam2_index];
                             int no_conflicts = conflict_matrix[exam1_id, exam2_id];
 
+                            if (no_conflicts == 1)
+                            {
+                                if (period_hard_constraints.GetByType(PeriodHardConstraint.types.EXCLUSION).Any(phc => phc.ex1 == exam1_id && phc.ex2 == exam2_id ||
+                                                                                                                       phc.ex1 == exam2_id && phc.ex2 == exam1_id))
+                                {
+                                    --no_conflicts;
+                                }
+                            }
+
                             period_spread += no_conflicts;
                         }
                     }
@@ -278,14 +298,11 @@ namespace Tools.EvaluationFunction.Timetable
                 {
                     List<int> sizes = new List<int>();
                     
-                    for (int exam_id = 0; exam_id < solution.ExaminationCount(); ++exam_id)
+                    foreach (int exam_id in solution.GetExaminationsFrom(period_id, room_id))
                     {
-                        if (solution.IsExamSetTo(period_id, room_id, exam_id))
-                        {
-                            int curr_duration = examinations.GetById(exam_id).duration;
-                            if (!sizes.Contains(curr_duration))
-                                sizes.Add(curr_duration);
-                        }
+                        int curr_duration = examinations.GetById(exam_id).duration;
+                        if (!sizes.Contains(curr_duration))
+                            sizes.Add(curr_duration);
                     }
                     if(sizes.Count != 0)
                         mixed_durations += (sizes.Count() - 1)*model_weightings.Get().non_mixed_durations;
@@ -297,7 +314,7 @@ namespace Tools.EvaluationFunction.Timetable
             // Front Load
             List<Examination> exams_front_load =
                 examinations.GetAll()
-                    .OrderByDescending(ex => ex.students.Count())
+                    .OrderByDescending(ex => ex.students_count)
                     .ToList()
                     .GetRange(0, model_weightings.Get().front_load[0]);
             List<Period> periods_from_load = periods.GetAll()

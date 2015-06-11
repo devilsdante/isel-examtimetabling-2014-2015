@@ -53,10 +53,10 @@ namespace Tools
                 }
             }
 
-            foreach (int exam_id in solution.assigned_examinations)
+            foreach (int exam_id in solution.GetExaminationsFrom(period.id))
             {
-                 if (conflict_matrix[exam_id, exam_to_assign.id] > 0 && solution.GetPeriodFrom(exam_id) == period.id)
-                 {
+                if (conflict_matrix[exam_id, exam_to_assign.id] > 0)
+                {
                      error_period = 3;
                      return false; //exam_to_assign has STUDENT or EXCLUSION conflicts with another examination
                  }
@@ -94,7 +94,7 @@ namespace Tools
         {
             int room_capacity = RoomCurrentCapacityOnPeriod(solution, period, room);
 
-            if (exam_to_assign.students.Count() > room_capacity)
+            if (exam_to_assign.students_count > room_capacity)
             {
                 error_room = 1;
                 return false; //exam_to_assign's number of students must not surpass the CLASSROOM's CAPACITY
@@ -109,9 +109,9 @@ namespace Tools
 
             foreach (RoomHardConstraint rhc in room_hard_constraints.GetByType(RoomHardConstraint.types.ROOM_EXCLUSIVE))
             {
-                if (solution.GetPeriodFrom(rhc.examination) == period.id &&
-                    solution.GetRoomFrom(rhc.examination) == room.id)
+                if (solution.IsExamSetTo(period.id, room.id, rhc.examination))
                 {
+                    if(solution.IsExamSetTo(period.id, room.id, rhc.examination))
                     error_room = 3;
                     return false; //there's an exam that needs EXCLUSIVITY in this period and room
                 }
@@ -144,9 +144,9 @@ namespace Tools
                 }
             }
 
-            foreach (int exam_id in solution.assigned_examinations)
+            foreach (int exam_id in solution.GetExaminationsFrom(period.id))
             {
-                if (conflict_matrix[exam_id, exam_to_assign.id] > 0 && solution.GetPeriodFrom(exam_id) == period.id)
+                if (conflict_matrix[exam_id, exam_to_assign.id] > 0)
                 {
                     error_period = 3;
                     return false; //exam_to_assign has STUDENT or EXCLUSION conflicts with another examination
@@ -176,11 +176,8 @@ namespace Tools
         {
             int room_capacity = room.capacity;
 
-            for (int exam_id = 0; exam_id < solution.ExaminationCount(); exam_id++)
-            {
-                if (solution.IsExamSetTo(period.id, room.id, exam_id))
-                    room_capacity -= examinations.GetById(exam_id).students.Count();
-            }
+            foreach(int exam_id in solution.GetExaminationsFrom(period.id, room.id))
+                room_capacity -= examinations.GetById(exam_id).students_count;
 
             return room_capacity;
         }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -21,13 +22,13 @@ namespace Tools.Loader.Timetable
         private Rooms rooms;
         private ModelWeightings model_weightings;
         private ConflictMatrix conflict_matrix;
+        private Dictionary<int, List<int>> student_examinations;
 
         private readonly Loader loader;
 
         public LoaderTimetable(string path)
         {
             loader = new Loader(path);
-
         }
 
         public void Unload()
@@ -212,53 +213,56 @@ namespace Tools.Loader.Timetable
             int n_exams = Convert.ToInt32(n_exams_s);
             
             examinations = Examinations.Instance(n_exams);
+            student_examinations = new Dictionary<int, List<int>>();
 
             for (int exam_id = 0; loader.NextLine() && exam_id < n_exams; exam_id++)
             {
                 token = loader.ReadNextToken();
                 int duration = Convert.ToInt32(token);
-                List<int> students = new List<int>();
+                int student_count = 0;
 
                 while ((token = loader.ReadNextToken()) != null)
                 {
-                    students.Add(Convert.ToInt32(token));
+                    int id = Convert.ToInt32(token);
+                    if (!student_examinations.ContainsKey(id))
+                    {
+                        student_examinations.Add(id, new List<int>{exam_id});
+                    }
+                    else
+                    {
+                        student_examinations[id].Add(exam_id);
+                    }
+                    student_count++;
                 }
-                //There are exceptions in some examination files in which student ordering 'rule' is not accomplished
-                students.Sort();
-                examinations.Insert(new Examination(exam_id, duration, students));
+
+                examinations.Insert(new Examination(exam_id, duration, student_count));
+            
             }
         }
 
         private void InitConflictMatrix()
         {
-            conflict_matrix = ConflictMatrix.Instance();
-
             Stopwatch watch = new Stopwatch();
             watch.Restart();
 
+            conflict_matrix = ConflictMatrix.Instance();
             int[,] matrix = new int[examinations.EntryCount(), examinations.EntryCount()];
 
-            // student conflicts //
-            for (int exam1_id = 0; exam1_id < examinations.EntryCount(); exam1_id += 1)
+            foreach (KeyValuePair<int, List<int>> entry in student_examinations)
             {
-                for (int exam2_id = exam1_id; exam2_id < examinations.EntryCount(); exam2_id += 1)
+                // do something with entry.Value or entry.Key
+                List<int> exams = entry.Value;
+                for (int i = 0; i < exams.Count; i++)
                 {
-                    if (exam1_id == exam2_id)
-                        matrix[exam1_id, exam2_id] = 0;
-                    else
+                    for (int j = i + 1; j < exams.Count; j++)
                     {
-                        Examination exam1 = examinations.GetById(exam1_id);
-                        Examination exam2 = examinations.GetById(exam2_id);
-                        int conflicts = examinations.NoOfConflicts(exam1, exam2);
-                        matrix[exam1_id, exam2_id] += conflicts;
-                        matrix[exam2_id, exam1_id] += conflicts;
-                        exam1.conflict += conflicts;
-                        exam2.conflict += conflicts;
+                        matrix[exams[i], exams[j]]++;
+                        matrix[exams[j], exams[i]]++;
                     }
                 }
             }
-            
             conflict_matrix.Set(matrix);
+
             Console.WriteLine("Conflict Matrix: " + watch.ElapsedMilliseconds);
         }
     }

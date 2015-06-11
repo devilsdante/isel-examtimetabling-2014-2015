@@ -78,7 +78,7 @@ namespace Heuristics.SimulatedAnnealing
                 solution.fitness = (solution.fitness == -1) ? evaluation_function.Fitness(solution) : solution.fitness;
 
                 double DeltaE = minimize ? neighbor.fitness - solution.fitness : solution.fitness - neighbor.fitness;
-
+                
                 if (DeltaE <= 0)
                 {
                     //Console.WriteLine("fitness: " + neighbor.fitness);
@@ -88,7 +88,7 @@ namespace Heuristics.SimulatedAnnealing
                 else
                 {
                     double acceptance_probability = Math.Pow(Math.E, ((-DeltaE) * miliseconds) / (miliseconds - watch.ElapsedMilliseconds));
-                    Console.WriteLine("" + acceptance_probability);
+                    //Console.WriteLine("" + acceptance_probability);
                     double random = new Random((int)DateTime.Now.Ticks).NextDouble();
 
                     if (random <= acceptance_probability)
