@@ -25,42 +25,49 @@ namespace Tests.SimulatedAnnealingTest
             Solution solution = null;
             Solution SA_Solution = null;
 
-            for (SET = 1; SET <= 8; SET++)
+            for (SET = 1; SET <= 1; SET++)
             {
                 if (SET == 4)
                     continue;
-                
+
+                Stopwatch watch = new Stopwatch();
+                Stopwatch watch2 = new Stopwatch();
+                watch2.Start();
 
                 Console.WriteLine("**SET** " + SET);
                 LoaderTimetable loader = new LoaderTimetable("..//..//exam_comp_set" + SET + ".exam");
                 loader.Unload();
-                Stopwatch watch = new Stopwatch();
+                
                 watch.Start();
                 loader.Load();
 
-                Console.WriteLine("Loader: " + watch.ElapsedMilliseconds);
+                //Console.WriteLine("Loader: " + watch.ElapsedMilliseconds);
 
                 var evaluation = new EvaluationFunctionTimetable();
 
                 GraphColoring gc = new GraphColoring();
                 watch.Restart();
                 solution = gc.Exec();
-                Console.WriteLine("GraphColoring Time -------------: " + watch.ElapsedMilliseconds);
-                Console.WriteLine("GC DTF: " + evaluation.DistanceToFeasibility(solution));
+                //Console.WriteLine("GraphColoring Time -------------: " + watch.ElapsedMilliseconds);
+                //Console.WriteLine("GC DTF: " + evaluation.DistanceToFeasibility(solution));
                 watch.Restart();
                 solution.fitness = evaluation.Fitness(solution);
-                Console.WriteLine("Fitness Time: " + watch.ElapsedMilliseconds);
+                //Console.WriteLine("Fitness Time: " + watch.ElapsedMilliseconds);
                 Console.WriteLine("GC Fitness: " + solution.fitness);
 
-                //SA_Solution = (Solution)solution.Copy();
-                //SimulatedAnnealingTimetable sa = new SimulatedAnnealingTimetable();
-                //sa.ExecTimer(SA_Solution, 30000, SimulatedAnnealingTimetable.type_random, true);
-                //Console.WriteLine("SA Random Fitness: " + SA_Solution.fitness);
+                SA_Solution = (Solution)solution.Copy();
+                SimulatedAnnealingTimetable sa = new SimulatedAnnealingTimetable();
+                watch.Restart();
+                sa.Exec2(SA_Solution, 0.01, Math.Pow(Math.E, -18), 5, 0.001, SimulatedAnnealingTimetable.type_random, true);
+                Console.WriteLine("SA Time: " + watch.ElapsedMilliseconds);
+                Console.WriteLine("SA Random Fitness: " + SA_Solution.fitness);
                 //Console.WriteLine("generated_neighbors: " + sa.generated_neighbors);
-                //sa.generated_neighbors = 0;
+                sa.generated_neighbors = 0;
 
                 ////SA_Solution = (Solution)solution.Copy();
-                ////sa.ExecTimer(SA_Solution, 221000, SimulatedAnnealingTimetable.type_guided1, true);
+                sa.ExecTimer(SA_Solution, 221000 - watch2.ElapsedMilliseconds, SimulatedAnnealingTimetable.type_random, true);
+                Console.WriteLine("SA Total Time: " + watch2.ElapsedMilliseconds);
+                Console.WriteLine("SA Random Fitness: " + SA_Solution.fitness);
                 ////Console.WriteLine("SA Guided1 Fitness: " + SA_Solution.fitness);
                 ////Console.WriteLine("generated_neighbors: " + sa.generated_neighbors);
                 ////sa.generated_neighbors = 0;
@@ -76,7 +83,7 @@ namespace Tests.SimulatedAnnealingTest
 
                 //Console.ReadKey();
             }
-            Console.ReadKey();
+            while (Console.ReadKey().Key != ConsoleKey.NumPad7) ;
 
             //PrintToFile("..//..//output.txt", solution);
         }

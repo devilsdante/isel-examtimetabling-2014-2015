@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.19)  31 MAR 2015 00:02
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.19)  13 JUN 2015 00:08
 entering extended mode
 **000-main.tex
 
@@ -2002,21 +2002,26 @@ LaTeX Warning: Float too large for page by 104.07907pt on input line 190.
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
 400-implementation.tex"
 Chapter 3.
-) [15
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+
+ []
+
+[15
 
 
 
 
-]
+]) [16]
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
-600-conclusions.tex" [16
-
-
-
-
-]
+600-conclusions.tex"
 Chapter 4.
-) [17] [18
+) [17
+
+
+
+
+] [18
 
 
 
@@ -2072,7 +2077,7 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Here is how much of TeX's memory you used:
  27308 strings out of 493921
  492747 string characters out of 3144879
- 591973 words of memory out of 3000000
+ 591974 words of memory out of 3000000
  29931 multiletter control sequences out of 15000+200000
  74120 words of font info for 74 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -2086,7 +2091,7 @@ er8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/bera/fver8a.pfb><C:/Pro
 gram Files (x86)/MiKTeX 2.9/fonts/type1/bera/fvmr8a.pfb><C:/Program Files (x86)
 /MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9
 /fonts/type1/public/lm/lmr7.pfb>
-Output written on 000-main.pdf (31 pages, 213431 bytes).
+Output written on 000-main.pdf (31 pages, 214654 bytes).
 PDF statistics:
  176 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

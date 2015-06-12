@@ -6,3 +6,4 @@ D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimeta
 D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimetabling\DAL\bin\Debug\DAL.pdb
 D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimetabling\DAL\obj\Debug\DAL.dll
 D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimetabling\DAL\obj\Debug\DAL.pdb
+D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\src\ExaminationTimetabling\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache

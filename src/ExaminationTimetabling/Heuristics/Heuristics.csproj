@@ -42,6 +42,7 @@
     <Compile Include="GraphColoring.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SimulatedAnnealing\BitFlip\SimulatedAnnealingBitFlip.cs" />
+    <Compile Include="SimulatedAnnealing\CoolingSchedule\CoolingScheduleExponencial.cs" />
     <Compile Include="SimulatedAnnealing\CoolingSchedule\CoolingScheduleLogarithmic.cs" />
     <Compile Include="SimulatedAnnealing\CoolingSchedule\CoolingScheduleLinear.cs" />
     <Compile Include="SimulatedAnnealing\CoolingSchedule\ICoolingSchedule.cs" />

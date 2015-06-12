@@ -62,6 +62,61 @@ namespace Heuristics.SimulatedAnnealing
             return solution;
         }
 
+        public ISolution Exec2(ISolution solution, double TMax, double TMin, int loops, double rate, int type, bool minimize)
+        {
+            InitVals(type);
+            cooling_schedule = new CoolingScheduleExponencial(rate, TMax);
+            Stopwatch watch = Stopwatch.StartNew();
+            watch.Start();
+
+            for (double T = TMax; T > TMin; T = cooling_schedule.G(T))
+            {
+                for (int loop = loops; loop > 0; --loop)
+                {
+                    INeighbor neighbor = GenerateNeighbor(solution, type);
+
+                    neighbor.fitness = (neighbor.fitness == -1) ? evaluation_function.Fitness(neighbor) : neighbor.fitness;
+                    solution.fitness = (solution.fitness == -1) ? evaluation_function.Fitness(solution) : solution.fitness;
+                    //Console.WriteLine("fitness: " + solution.fitness);
+                    double DeltaE = minimize ? neighbor.fitness - solution.fitness : solution.fitness - neighbor.fitness;
+
+                    if (DeltaE <= 0)
+                    {
+                        if (watch.ElapsedMilliseconds > 1000)
+                        {
+                            Console.WriteLine("fitness: " + neighbor.fitness);
+                            watch.Restart();
+                        }
+                        solution = neighbor.Accept();
+                        solution.fitness = neighbor.fitness;
+                    }
+                    else
+                    {
+                        double acceptance_probability = Math.Pow(Math.E, (-DeltaE) / (T * solution.fitness));
+                        double random = new Random((int)DateTime.Now.Ticks).NextDouble();
+
+                        if (random <= acceptance_probability)
+                        {
+                            if (watch.ElapsedMilliseconds > 1000)
+                            {
+                                Console.WriteLine("fitness: " + neighbor.fitness);
+                                watch.Restart();
+                            }
+                                
+                            solution = neighbor.Accept();
+                            solution.fitness = neighbor.fitness;
+                        }
+                        else
+                        {
+                            continue;
+                        }
+
+                    }
+                }
+            }
+            return solution;
+        }
+
         public ISolution ExecTimer(ISolution solution, long miliseconds, int type, bool minimize)
         {
             Stopwatch watch = Stopwatch.StartNew();
@@ -81,7 +136,11 @@ namespace Heuristics.SimulatedAnnealing
                 
                 if (DeltaE <= 0)
                 {
-                    //Console.WriteLine("fitness: " + neighbor.fitness);
+                    if (watch.ElapsedMilliseconds > 1000)
+                    {
+                        Console.WriteLine("fitness: " + neighbor.fitness);
+                        watch.Restart();
+                    }
                     solution = neighbor.Accept();
                     solution.fitness = neighbor.fitness;
                 }
@@ -93,7 +152,11 @@ namespace Heuristics.SimulatedAnnealing
 
                     if (random <= acceptance_probability)
                     {
-                        //Console.WriteLine("fitness: " + neighbor.fitness);
+                        if (watch.ElapsedMilliseconds > 1000)
+                        {
+                            Console.WriteLine("fitness: " + neighbor.fitness);
+                            watch.Restart();
+                        }
                         solution = neighbor.Accept();
                         solution.fitness = neighbor.fitness;
                     }
@@ -101,11 +164,6 @@ namespace Heuristics.SimulatedAnnealing
                     else
                         continue;
                 }
-                //int dtf = evaluation_function.DistanceToFeasibility(solution);
-                //if (dtf != 0)
-                //{
-                //    throw new Exception("Distance to feasibility is not zero! DTF: " + dtf);
-                //}
             }
             return solution;
         }

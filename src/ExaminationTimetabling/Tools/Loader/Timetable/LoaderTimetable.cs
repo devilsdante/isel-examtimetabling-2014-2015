@@ -242,9 +242,6 @@ namespace Tools.Loader.Timetable
 
         private void InitConflictMatrix()
         {
-            Stopwatch watch = new Stopwatch();
-            watch.Restart();
-
             conflict_matrix = ConflictMatrix.Instance();
             int[,] matrix = new int[examinations.EntryCount(), examinations.EntryCount()];
 
@@ -262,8 +259,6 @@ namespace Tools.Loader.Timetable
                 }
             }
             conflict_matrix.Set(matrix);
-
-            Console.WriteLine("Conflict Matrix: " + watch.ElapsedMilliseconds);
         }
     }
 }
