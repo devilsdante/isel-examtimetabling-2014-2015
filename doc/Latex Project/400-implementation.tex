@@ -2,17 +2,39 @@
 \label{implementation}
 \thispagestyle{plain}
 
-This project is meant to participate in the ITC2007. Comparing the approach and the results with the finalists of the competition is one of the main objectives of this project. Thus, it is ideal to develop an organized program with the best performance possible, so the implemented code can be easily understandable, extensible and so afford the best scores possible when creating timetable solutions. Taking that into account, this section is reserved to the description of the architecture and explanation of the most important decisions taken regarding this subject.
+This project is meant to participate in the ~cite{itc2007}. Comparing the approach and the results with the finalists of the competition is one of the main objectives of this project. Thus, it is ideal to develop an organized program with the best performance possible, so the implemented code can be easily understandable, extensible and so afford the best scores possible when creating timetable solutions. Taking that into account, this section is reserved to the description of the architecture and explanation of the most important decisions taken regarding this subject.
 
 \section{System Arquitecture}
 
-The architecture of this project is divided in multiple layers. These are independent from one another and each of them has its unique features considering the objectives of this project. The layers presented in the project are named \textit{Data Layer}, \textit{Data Access Layer}, \textit{Business Layer}, \textit{Heuristics Layer}, \textit{Tools Layer} and \textit{Presentation Layer}. \\
+The architecture of this project is divided in multiple layers. These are independent from one another and each of them has its unique features considering the objectives of this project. The layers presented in the project are named \textit{\gls{dl}}, \textit{\gls{dal}}, \textit{\gls{bl}}, \textit{\gls{hl}}, \textit{\gls{tl}} and \textit{\gls{pl}}. \\
 
 The assortment, dependencies and the main classes of each layer can be seen in Figure X.
 
+**Figure X**
+
 \subsection{Data Layer}
+
+The \gls{dl} is the layer where all entities are stored. Considering the fact that these entities must always be obtained from a file presented in \gls{itc2007}'s website (REF), it does not make sense to keep these entities after the program is completed. So, the entities are store in volatile memory all the time and are discarded after the program is run.
+
 \subsection{Data Access Layer}
+
+The \gls{dal} is the layer that allow access to the data stored in the \gls{dl} and provide the signatures of all entities. This layer provides repositories of each type of entity. The repository was implemented in a way that it's signature  is generic, and so can only be created with objects that implement IEntity. This is mandatory because the generic repository's implementation uses the identification presented in IEntity. \\
+
+The majority of the entities are stored in a list inside the entity's repository, which index corresponds to the entity's identifier. Some of them are unique, and so are stored alone, like the Institutional Model Weightings. The repositories provide basic CRUD functions to access and edit the entities stored. The signature of the entities and the generic repository can be seen in the Figure X.\\
+
+**Figure X**
+
 \subsection{Business Layer}
+
+The \gls{bl} provides access to the repositories explained above by affording its CRUD functions and more that depend on the type of the repository's entity. These last functions are very useful to use in the lower layers. One example is to get all the room hard constraints that belongs to a certain type.\\
+
+Entities that are stored alone, do not need a repository. And so no CRUD functions are provided, just a set and get function. The conflict matrix, which provide the number of conflicts of each pair of examinations, can be accessed in this layer. The reason is, even though it's not an entity derived from IEntity, it is something that must be easily accessed in the lower layers and it's unique in all the project, because there's only one conflict matrix for each SET. So, when the set is loaded, the matrix is created and populated.\\
+
+All the classes presented in this layer and the methods in each class can be seen in the figure X.\\
+
+**Figure X**
+
+
 \subsection{Heuristics Layer}
 \subsection{Tools Layer}
 \subsection{Presentation Layer}

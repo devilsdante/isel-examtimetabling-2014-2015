@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.19)  13 JUN 2015 00:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.19)  13 JUN 2015 20:03
 entering extended mode
 **000-main.tex
 
@@ -2007,21 +2007,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
+
+ []
+
 [15
 
 
 
 
-]) [16]
+]
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
+
+ []
+
+) [16] [17]
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
-600-conclusions.tex"
+600-conclusions.tex" [18
+
+
+
+
+]
 Chapter 4.
-) [17
-
-
-
-
-] [18
+) [19] [20
 
 
 
@@ -2048,14 +2073,14 @@ Underfull \hbox (badness 5504) in paragraph at lines 78--81
 . qub . ac . uk / itc2007 / winner / bestexamsolutions /$
  []
 
-[19
+[21
 
 
 
-] [20] ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ucs\uni-1.def"
+] [22] ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ucs\uni-1.def"
 File: uni-1.def 2013/05/13 UCS: Unicode data U+0100..U+01FF
 )))
-[21]
+[23]
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
 000-main.aux"
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
@@ -2075,10 +2100,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 27308 strings out of 493921
- 492747 string characters out of 3144879
- 591974 words of memory out of 3000000
- 29931 multiletter control sequences out of 15000+200000
+ 27488 strings out of 493921
+ 495315 string characters out of 3144879
+ 593654 words of memory out of 3000000
+ 30111 multiletter control sequences out of 15000+200000
  74120 words of font info for 74 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  62i,11n,77p,1797b,909s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2091,9 +2116,9 @@ er8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/bera/fver8a.pfb><C:/Pro
 gram Files (x86)/MiKTeX 2.9/fonts/type1/bera/fvmr8a.pfb><C:/Program Files (x86)
 /MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9
 /fonts/type1/public/lm/lmr7.pfb>
-Output written on 000-main.pdf (31 pages, 214654 bytes).
+Output written on 000-main.pdf (33 pages, 217480 bytes).
 PDF statistics:
- 176 PDF objects out of 1000 (max. 8388607)
+ 182 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  28 words of extra memory for PDF output out of 10000 (max. 10000000)
 

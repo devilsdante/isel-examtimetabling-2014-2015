@@ -2,7 +2,7 @@
 \label{stateofart}
 \thispagestyle{plain}
 
-In this section, we review the state-of-the-art of the problem at hand. We start by describing why timetabling is a rather complex problem, some possible approaches to solve it and some of the existing solutions, specifically for the ITC 2007 benchmarks.\\
+In this section, we review the state-of-the-art of the problem at hand. We start by describing why timetabling is a rather complex problem, some possible approaches to solve it and some of the existing solutions, specifically for the \gls{itc2007} benchmarks.\\
 
 \section{Timetabling Problem}
 
@@ -36,7 +36,7 @@ Most of the existing meta-heuristic algorithms belong to one of the following th
 Approximation algorithms like heuristics and meta-heuristics proceed to enumerate partially the search space and, for that reason, they can't guarantee finding the optimal solution. Exact approaches perform a complete enumeration of the search space and thus guarantee that the encountered solution is optimal. A negative aspect is the time taken to find the solution. If the decision problem is very difficult (e.g. NP-Complete), in practical scenarios, given large size problem instances, using this approach may not be possible due to the long execution time.\\
 
 \subsubsection{Constraint-Programming Based Technique}
-The Constraint Programming Based Technique (CPBT) allows direct programming with constraints which gives ease and flexibility in solving problems like timetabling. Two important features about this technique are the use of backtracking and logical variables. Constraint programming is different from other types of programming, as in these types it is specified the steps that need to be executed, but in constraint programming only the properties (hard constraints) of the solution, or the properties that should not be in the solution, are specified \cite{Qu2009}.\\
+The gls{cpbt} allows direct programming with constraints which gives ease and flexibility in solving problems like timetabling. Two important features about this technique are the use of backtracking and logical variables. Constraint programming is different from other types of programming, as in these types it is specified the steps that need to be executed, but in constraint programming only the properties (hard constraints) of the solution, or the properties that should not be in the solution, are specified \cite{Qu2009}.\\
 
 \subsubsection{Integer Programming}
 The \gls{ip} is a mathematical programming technique in which the optimization problem to be solved must be formulated as an Integer Problem. If the objective function and the constraints must be linear, and all problem variables are integer valued, then the \gls{ip} problem is termed \gls{ilp}. In the presence of both integer and continuous variables, then the problem is called \gls{milp}. Schaerf~\cite{Schaerf1999} surveys some approaches using the \gls{milp} technique to school, course, and examination timetabling.\\
@@ -65,10 +65,10 @@ Single-solution meta-heuristics main goal is to modify and to optimize one singl
 Population-based meta-heuristics main goal is to modify and to optimize multiple candidate solutions, maintaining the search focused in the whole space. This type of meta-heuristic is therefore exploration oriented. Some examples of this type are \textit{Particle Swarm}, \textit{Evolutionary Algorithms}, and \textit{Genetic Algorithms}~\cite{Talbi2009}.\\
 
 
-\subsection{ITC 2007 Examination timetabling problem: some approaches}
+\subsection{\gls{itc2007} Examination timetabling problem: some approaches}
 \label{subsection:ApprITC2007}
 
-In this section, the five ITC 2007 - Examination timetabling track - finalists approaches are described. This timetabling problem comprises 12 instances of different degree of complexity. Through the available website, competitors could submit their solutions for the given benchmark instances. Submitted solutions were evaluated as follows. First, it is checked if the solution is feasible and a so-called distance to the feasibility is computed. If it is feasible, the solution is further evaluated based on the fitness function, which measures the soft constraints total penalty. Then, competitors' solutions are ranked based on the distance to feasibility and solution's fitness value. The method achieving the lower distance to feasibility value is the winner. In the case of a tie, the competitor's solution with the lowest fitness value wins. A solution is considered feasible if the value of distance to feasibility is zero. The set of hard constraints is the following:
+In this section, the five \gls{itc2007} - Examination timetabling track - finalists approaches are described. This timetabling problem comprises 12 instances of different degree of complexity. Through the available website, competitors could submit their solutions for the given benchmark instances. Submitted solutions were evaluated as follows. First, it is checked if the solution is feasible and a so-called distance to the feasibility is computed. If it is feasible, the solution is further evaluated based on the fitness function, which measures the soft constraints total penalty. Then, competitors' solutions are ranked based on the distance to feasibility and solution's fitness value. The method achieving the lower distance to feasibility value is the winner. In the case of a tie, the competitor's solution with the lowest fitness value wins. A solution is considered feasible if the value of distance to feasibility is zero. The set of hard constraints is the following:
 \begin{itemize}
 	\item no student must be elected to be present in more than one exam at the same time;
 	\item the number of students in a class must not exceed the room's capacity;
@@ -88,11 +88,11 @@ It is also necessary to compute the fitness value of the solution which is calcu
 	\item period penalty - avoid assigning exams to periods with penalty.
 \end{itemize}
 
-To get a detailed explanation on how to compute the values of fitness and distance to feasibility based on the weight of each constraint, please check the ITC 2007 website~\cite{McCollum2008}.\\
+To get a detailed explanation on how to compute the values of fitness and distance to feasibility based on the weight of each constraint, please check the \gls{itc2007} website~\cite{McCollum2008}.\\
 
 %The finalists are ranked based their rankings on the instances. For full details on the rankings system, please consult~\cite{BarryMcCollum2008}.\\
 
-We now review the ITC 2007's five winners approaches. The winners list of the ITC 2007 competition is as follows:
+We now review the \gls{itc2007}'s five winners approaches. The winners list of the \gls{itc2007} competition is as follows:
 \begin{itemize}
 	\item 1st Place - Tom\'{a}\v{s} M\"{u}ller
 	\item 2nd Place - Christos Gogos
@@ -103,7 +103,7 @@ We now review the ITC 2007's five winners approaches. The winners list of the IT
 
 We now briefly describe these approaches.
 
-Tom\'{a}\v{s} M\"{u}ller's approach~\cite{Mueller2009} was actually used to solve all three problems established by the ITC 2007 competition. He was able to win two of them and to be finalist on the third. For solving the problems, he opted for an hybrid approach, organized in a two-phase algorithm. In the first phase, Tom\'{a}\v{s} used the Iterative Forward Search (IFS) algorithm~\cite{Mueller2005} to obtain feasible solutions and Conflict-based Statistics~\cite{Mueller2004} to prevent IFS from looping. The second phase consists in using multiple optimization algorithms. These algorithms are applied in this order: \gls{hc} \cite{Russell2010}, \gls{gd} \cite{Dueck1993}, and optionally \gls{sa}~\cite{Kirkpatrick1983}.\\
+Tom\'{a}\v{s} M\"{u}ller's approach~\cite{Mueller2009} was actually used to solve all three problems established by the \gls{itc2007} competition. He was able to win two of them and to be finalist on the third. For solving the problems, he opted for an hybrid approach, organized in a two-phase algorithm. In the first phase, Tom\'{a}\v{s} used the Iterative Forward Search (IFS) algorithm~\cite{Mueller2005} to obtain feasible solutions and Conflict-based Statistics~\cite{Mueller2004} to prevent IFS from looping. The second phase consists in using multiple optimization algorithms. These algorithms are applied in this order: \gls{hc} \cite{Russell2010}, \gls{gd} \cite{Dueck1993}, and optionally \gls{sa}~\cite{Kirkpatrick1983}.\\
 
 	%--\gls{hc} is used to optimize the first phase solution, resulting on a solution stuck at a local optimum. To leave local optimum area, \gls{gd} is used in order to try and result in a better solution. For last, \gls{sa} is used in a loop, keeping the temperature limit unchanged. After not getting a better solution for a limited time, the temperature is reheated (temperature limit gets higher) and \gls{hc} phase is used again forming a loop in these 3 optimization algorithms.\\
 
@@ -120,21 +120,21 @@ Nelishia Pillay opted to use a two-phase algorithm variation, using \textit{Deve
 
 Salwani Abdullah, Hamza Turabieh, and Barry McCollum's 2009 approach \cite{Abdullah2009} consists on using an hybridization of an electromagnetic-like mechanism and the \gls{gd} algorithm. In this approach, the electromagnetism-like mechanism starts with a population of timetables randomly generated. Electromagnetic-like mechanism is a meta-heuristic algorithm using an \textit{attraction-repulsion} mechanism \cite{Javadian2008} to move the solutions to the optimum.\\
 
-Christos Gogos, George Goulas, Panayiotis Alefragis and Efthymios Housos' 2009 approach \cite{Gogos2009} also used the two-phase algorithm. The first phase consists on creating the timetable using a greedy randomized positioning, with the use of a backtracking mechanism to help creating the solution. This construction phase is repeated and only the best solutions pass to the second phase. The second phase utilizes local search ({\color{red} Isto não é um tipo?}), \gls{sa}, shaking and \gls{ip} to improve the solutions. As mentioned by the author, this approach produced very good results  and can be compared to Tom\'{a}\v{s} M\"{u}ller's results in his approached used to win ITC 2007 competition.\\
+Christos Gogos, George Goulas, Panayiotis Alefragis and Efthymios Housos' 2009 approach \cite{Gogos2009} also used the two-phase algorithm. The first phase consists on creating the timetable using a greedy randomized positioning, with the use of a backtracking mechanism to help creating the solution. This construction phase is repeated and only the best solutions pass to the second phase. The second phase utilizes local search ({\color{red} Isto não é um tipo?}), \gls{sa}, shaking and \gls{ip} to improve the solutions. As mentioned by the author, this approach produced very good results  and can be compared to Tom\'{a}\v{s} M\"{u}ller's results in his approached used to win \gls{itc2007} competition.\\
 
-B. McCollum, P.J. McMullan, A. J. Parkes, E.K. Burke and S. Abdullah's 2009 two phased approach \cite{McCollum2009} use an adaptive ordering heuristic from \cite{Burke2004}, proceeding with an \textit{extended version} of \gls{gd}. As the author stated, this approach is robust and general considering the results obtained on the benchmark datasets from ITC 2007 using this approach.\\
+B. McCollum, P.J. McMullan, A. J. Parkes, E.K. Burke and S. Abdullah's 2009 two phased approach \cite{McCollum2009} use an adaptive ordering heuristic from \cite{Burke2004}, proceeding with an \textit{extended version} of \gls{gd}. As the author stated, this approach is robust and general considering the results obtained on the benchmark datasets from \gls{itc2007} using this approach.\\
 
 Malek Alzaqebah and Salwani Abdullah's 2011 two phased approach \cite{Alzaqebah2011} starts by using a graph coloring heuristic (largest degree ordering) to generate the initial solution and ends by utilizing the \textit{Artificial Bee Colony} search algorithm to optimize the solution.\\
 
 Hamza Turabieh and SalwaniAbdullah's 2011 approach \cite{Turabieh2011} utilize two phase algorithm. The first phase consists on constructing initial solutions by using an hybridization of graph coloring heuristics (least saturation degree, largest degree first and largest enrollment {\color{red} ?} first). The second phase utilizes an hybridization of electromagnetic-like mechanism and \gls{gd} algorithm, just like in 2009 Abdullah et al.'s approach.\\
 
-Hamza Turabieh and Salwani Abdullah created another approach in 2012 \cite{Abdullah2012}. It utilizes a Tabu-based memetic algorithm which consists on an hybridization of a genetic algorithm with a Tabu Search algorithm. The author states that this approach produces some of the best results when tested on ITC 2007's datasets.\\
+Hamza Turabieh and Salwani Abdullah created another approach in 2012 \cite{Abdullah2012}. It utilizes a Tabu-based memetic algorithm which consists on an hybridization of a genetic algorithm with a Tabu Search algorithm. The author states that this approach produces some of the best results when tested on \gls{itc2007}'s datasets.\\
 
 P. Demeester, B. Bilgin, P. De Causmaecker and G. V. Berghe in 2012 created an hyper-heuristic approach \cite{Demeester2012}. The heuristics utilized are 'improved or equal' {\color{red} (hill climbing?)}, \gls{sa}, \gls{gd} and an adapted version of the \textit{late acceptance} strategy \cite{Burke2008}. These heuristics are used on already-created initial solutions. Initial solutions are constructed using an algorithm which does not guarantee the feasibility of the solution.\\
 
-B. McCollum, P.J. McMullan, A. J. Parkes, E.K. Burke and S. Abdullah's 2012 approach \cite{McCollum2012} to ITC 2007 problem was based on \gls{ip} formulation. This approach though, was not capable of solving the competition instances.\\
+B. McCollum, P.J. McMullan, A. J. Parkes, E.K. Burke and S. Abdullah's 2012 approach \cite{McCollum2012} to \gls{itc2007} problem was based on \gls{ip} formulation. This approach though, was not capable of solving the competition instances.\\
 
-N. R. Sabar, M. Ayob, R. Qu and G. Kendall utilized a graphical coloring hyper-heuristic on its approach in 2012 \cite{Sabar2012}. This hyper-heuristic is composed of four hybridizations of these four methods: last degree, saturation degree, largest colored degree and largest enrollment. This approach seems to compete with the winners' approaches from ITC 2007, considering the benchmark results.\\
+N. R. Sabar, M. Ayob, R. Qu and G. Kendall utilized a graphical coloring hyper-heuristic on its approach in 2012 \cite{Sabar2012}. This hyper-heuristic is composed of four hybridizations of these four methods: last degree, saturation degree, largest colored degree and largest enrollment. This approach seems to compete with the winners' approaches from \gls{itc2007}, considering the benchmark results.\\
 
 
 N. R. Sabar, M. Ayob, G. Kendall, R. Qub's 2012 approach \cite{Sabar2012a} utilizes a two phase algorithm. Starts by using an hybridization of graph coloring heuristics to obtain feasible solutions and a variant of honey-bee algorithm for optimization. The hybridization is composed of least saturation degree, largest degree first, largest enrollment first applied in this order.\\
