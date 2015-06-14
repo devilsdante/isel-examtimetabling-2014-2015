@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.19)  14 JUN 2015 03:14
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.19)  14 JUN 2015 21:59
 entering extended mode
 **000-main.tex
 
@@ -1444,7 +1444,17 @@ Package: beramono 2004/01/31 (WaS)
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
 300-theory.aux")
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
-400-implementation.aux")
+400-architecture.aux")
+("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
+500-loader-solution-init.aux")
+("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
+500-local-search.aux"
+
+LaTeX Warning: Label `implementation' multiply defined.
+
+)
+("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
+500-genetic.aux")
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
 600-conclusions.aux")
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
@@ -2000,7 +2010,7 @@ LaTeX Warning: Float too large for page by 104.07907pt on input line 190.
 
 ) [13] [14]
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
-400-implementation.tex"
+400-architecture.tex"
 Chapter 3.
 
 Underfull \hbox (badness 10000) in paragraph at lines 9--10
@@ -2062,16 +2072,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
+
+ []
+
 ) [17]
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
-600-conclusions.tex" [18
+500-loader-solution-init.tex" [18
 
 
 
 
 ]
 Chapter 4.
-) [19] [20
+) [19]
+("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
+500-local-search.tex" [20
+
+
+
+
+]
+Chapter 5.
+) [21]
+("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
+500-genetic.tex")
+("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
+600-conclusions.tex" [22
+
+
+
+
+
+
+]
+Chapter 6.
+) [23] [24
 
 
 
@@ -2098,14 +2140,14 @@ Underfull \hbox (badness 5504) in paragraph at lines 78--81
 . qub . ac . uk / itc2007 / winner / bestexamsolutions /$
  []
 
-[21
+[25
 
 
 
-] [22] ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ucs\uni-1.def"
+] [26] ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ucs\uni-1.def"
 File: uni-1.def 2013/05/13 UCS: Unicode data U+0100..U+01FF
 )))
-[23]
+[27]
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
 000-main.aux"
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
@@ -2115,7 +2157,13 @@ File: uni-1.def 2013/05/13 UCS: Unicode data U+0100..U+01FF
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
 300-theory.aux")
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
-400-implementation.aux")
+400-architecture.aux")
+("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
+500-loader-solution-init.aux")
+("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
+500-local-search.aux")
+("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
+500-genetic.aux")
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
 600-conclusions.aux")
 ("D:\Miguel\Documentos\GitHub\isel-examtimetabling-2014-2015\doc\Latex Project\
@@ -2123,12 +2171,15 @@ File: uni-1.def 2013/05/13 UCS: Unicode data U+0100..U+01FF
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 27488 strings out of 493921
- 495315 string characters out of 3144879
- 593652 words of memory out of 3000000
- 30111 multiletter control sequences out of 15000+200000
+ 27513 strings out of 493921
+ 497188 string characters out of 3144879
+ 595817 words of memory out of 3000000
+ 30115 multiletter control sequences out of 15000+200000
  74120 words of font info for 74 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  62i,11n,77p,1797b,909s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2141,9 +2192,9 @@ er8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/bera/fver8a.pfb><C:/Pro
 gram Files (x86)/MiKTeX 2.9/fonts/type1/bera/fvmr8a.pfb><C:/Program Files (x86)
 /MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9
 /fonts/type1/public/lm/lmr7.pfb>
-Output written on 000-main.pdf (33 pages, 219088 bytes).
+Output written on 000-main.pdf (37 pages, 222447 bytes).
 PDF statistics:
- 182 PDF objects out of 1000 (max. 8388607)
+ 197 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  28 words of extra memory for PDF output out of 10000 (max. 10000000)
 

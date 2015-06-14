@@ -25,7 +25,7 @@ namespace Tests.SimulatedAnnealingTest
             Solution solution = null;
             Solution SA_Solution = null;
 
-            for (SET = 1; SET <= 1; SET++)
+            for (SET = 6; SET <= 6; SET++)
             {
                 if (SET == 4)
                     continue;
@@ -48,12 +48,14 @@ namespace Tests.SimulatedAnnealingTest
                 GraphColoring gc = new GraphColoring();
                 watch.Restart();
                 solution = gc.Exec();
-                //Console.WriteLine("GraphColoring Time -------------: " + watch.ElapsedMilliseconds);
+                Console.WriteLine("GraphColoring Time: " + watch.ElapsedMilliseconds);
                 //Console.WriteLine("GC DTF: " + evaluation.DistanceToFeasibility(solution));
                 watch.Restart();
                 solution.fitness = evaluation.Fitness(solution);
-                //Console.WriteLine("Fitness Time: " + watch.ElapsedMilliseconds);
+                Console.WriteLine("Fitness Time: " + watch.ElapsedMilliseconds);
                 Console.WriteLine("GC Fitness: " + solution.fitness);
+
+                continue;
 
                 SA_Solution = (Solution)solution.Copy();
                 SimulatedAnnealingTimetable sa = new SimulatedAnnealingTimetable();

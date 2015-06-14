@@ -1,10 +1,10 @@
-\chapter{Implementation}
-\label{implementation}
+\chapter{Architecture}
+\label{Architecture}
 \thispagestyle{plain}
 
 This project is meant to participate in the \gls{itc2007}. Comparing the approach and the results with the finalists of the competition is one of the main objectives of this project. Thus, it is ideal to develop an organized program with the best performance possible, so the implemented code can be easily understandable, extensible and so afford the best scores possible when creating timetable solutions. Taking that into account, this section is reserved to the description of the architecture and explanation of the most important decisions taken regarding this subject.
 
-\section{System Arquitecture}
+\section{System Architecture}
 
 The architecture of this project is divided in multiple layers. These are independent from one another and each of them has its unique features considering the objectives of this project. The layers presented in the project are named \textit{\gls{dl}}, \textit{\gls{dal}}, \textit{\gls{bl}}, \textit{\gls{hl}}, \textit{\gls{tl}} and \textit{\gls{pl}}. \\
 
@@ -49,28 +49,19 @@ The OutputFormatting tool is used to create the output file given the final solu
 
 \subsection{Heuristics Layer}
 
+The \gls{hl} offers access to all the implemented heuristics. These are the \gls{gc}, \gls{sa}, and \gls{hc}. All these heuristics are used to create the best timetable possible given a limited time. Heuristics like \gls{sa} and \gls{hc} make use of neighbor solutions, and so, utilize the NeighborSelection tool for this effect. They also use tools like FeasibilityTester and EvaluationFunction to help build the initial solution and check the fitness while improving the current solution, respectively.\\
+
+Extensive explanation about these heuristics will be given in the {\color{red}section **X**}.
+
 \subsection{Presentation Layer}
 
+The \gls{pl}, in this phase, works mainly as a debugger to run the all the project functionalities and to check the final results. It's in this layer that all the tests are made, like checking execution timings and changing input parameters on \gls{sa} and \gls{hc} to check if better results can be achieved.\\
+
+It is planned to be implemented by the final phase, another version of the presentation layer that includes the possibility of visualization of the final and best timetable generated.
 
 
-\section{Loader Module}
-
-- Analysis of benchmark data, constraints, ....
-
-Class diagram
 
 
-\section{Solution Method}
-
-\subsection{Graph Coloring}
-
-\subsection{Simulated Annealing}
-
-SEE Lecture Notes
-
-\subsection{Neighborhood Operators}
-
-SEE Muller
 
 
 

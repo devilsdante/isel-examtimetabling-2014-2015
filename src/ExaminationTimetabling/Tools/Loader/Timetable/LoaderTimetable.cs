@@ -247,7 +247,6 @@ namespace Tools.Loader.Timetable
 
             foreach (KeyValuePair<int, List<int>> entry in student_examinations)
             {
-                // do something with entry.Value or entry.Key
                 List<int> exams = entry.Value;
                 for (int i = 0; i < exams.Count; i++)
                 {
@@ -255,6 +254,8 @@ namespace Tools.Loader.Timetable
                     {
                         matrix[exams[i], exams[j]]++;
                         matrix[exams[j], exams[i]]++;
+                        examinations.GetById(exams[i]).conflict++;
+                        examinations.GetById(exams[j]).conflict++;
                     }
                 }
             }
