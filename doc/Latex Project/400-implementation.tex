@@ -2,27 +2,27 @@
 \label{implementation}
 \thispagestyle{plain}
 
-This project is meant to participate in the ~cite{itc2007}. Comparing the approach and the results with the finalists of the competition is one of the main objectives of this project. Thus, it is ideal to develop an organized program with the best performance possible, so the implemented code can be easily understandable, extensible and so afford the best scores possible when creating timetable solutions. Taking that into account, this section is reserved to the description of the architecture and explanation of the most important decisions taken regarding this subject.
+This project is meant to participate in the \gls{itc2007}. Comparing the approach and the results with the finalists of the competition is one of the main objectives of this project. Thus, it is ideal to develop an organized program with the best performance possible, so the implemented code can be easily understandable, extensible and so afford the best scores possible when creating timetable solutions. Taking that into account, this section is reserved to the description of the architecture and explanation of the most important decisions taken regarding this subject.
 
 \section{System Arquitecture}
 
 The architecture of this project is divided in multiple layers. These are independent from one another and each of them has its unique features considering the objectives of this project. The layers presented in the project are named \textit{\gls{dl}}, \textit{\gls{dal}}, \textit{\gls{bl}}, \textit{\gls{hl}}, \textit{\gls{tl}} and \textit{\gls{pl}}. \\
 
-The assortment, dependencies and the main classes of each layer can be seen in Figure X.
+The assortment, dependencies and the main classes of each layer can be seen in {\color{red}Figure X}.
 
-**Figure X**
+{\color{red}**Figure X**}
 
 \subsection{Data Layer}
 
-The \gls{dl} is the layer where all entities are stored. Considering the fact that these entities must always be obtained from a file presented in \gls{itc2007}'s website (REF), it does not make sense to keep these entities after the program is completed. So, the entities are store in volatile memory all the time and are discarded after the program is run.
+The \gls{dl} is the layer where all entities are stored. Considering the fact that these entities must always be obtained from a file presented in \gls{itc2007}'s website {\color{red}(REF)}, it does not make sense to keep these entities after the program runs. So, the entities are stored in volatile memory all the time and are discarded after the program is finished.
 
 \subsection{Data Access Layer}
 
 The \gls{dal} is the layer that allow access to the data stored in the \gls{dl} and provide the signatures of all entities. This layer provides repositories of each type of entity. The repository was implemented in a way that it's signature  is generic, and so can only be created with objects that implement IEntity. This is mandatory because the generic repository's implementation uses the identification presented in IEntity. \\
 
-The majority of the entities are stored in a list inside the entity's repository, which index corresponds to the entity's identifier. Some of them are unique, and so are stored alone, like the Institutional Model Weightings. The repositories provide basic CRUD functions to access and edit the entities stored. The signature of the entities and the generic repository can be seen in the Figure X.\\
+The majority of the entities are stored in a list inside the entity's repository, which index corresponds to the entity's identifier. Some of them are unique, and so are stored alone, like the Institutional Model Weightings. The repositories provide basic CRUD functions to access and edit the entities stored. The signature of the entities and the generic repository can be seen in the {\color{red}Figure X}.\\
 
-**Figure X**
+{\color{red}**Figure X**}
 
 \subsection{Business Layer}
 
@@ -30,13 +30,25 @@ The \gls{bl} provides access to the repositories explained above by affording it
 
 Entities that are stored alone, do not need a repository. And so no CRUD functions are provided, just a set and get function. The conflict matrix, which provide the number of conflicts of each pair of examinations, can be accessed in this layer. The reason is, even though it's not an entity derived from IEntity, it is something that must be easily accessed in the lower layers and it's unique in all the project, because there's only one conflict matrix for each SET. So, when the set is loaded, the matrix is created and populated.\\
 
-All the classes presented in this layer and the methods in each class can be seen in the figure X.\\
+All the classes presented in this layer and the methods in each class can be seen in the {\color{red}Figure X}.\\
 
-**Figure X**
+{\color{red}**Figure X**}
 
+\subsection{Tools Layer}
+The \gls{tl} represents the layer that contains all the tools used by the \gls{hl} and by the lower layers, while using the \gls{bl} to access all the stored entities. These tools are named EvaluationFunction, Loader, NeighborSelection, FeasibilityTester and OutputFormatting.\\
+
+EvaluationFunction is a tool that allows the computation of the validation, fitness and distance to feasibility for a given solution. A solution is only valid if the examinations are all set, even if the solution is not feasible. The distance to feasibility determines the number of violated hard constraints and the fitness determines the score of the solution depending on the violated soft constraints and its penalty values. The distance to feasibility is used by the \gls{gc} heuristic to guarantee that the end solution is feasible, while the fitness is used by the \gls{sa} to compare the score of the current solution and the generated neighbors.\\
+
+The Loader loads all the information presented in a file SET into the repositories. This tool is the first to be run allowing the heuristics and other tools to use the entities through the repositories. More information about this tool will be given in the {\color{red}section **X**}.\\
+
+The NeighborSelection is a tool that provides functions that verifies if a certain neighbor function can be applied in the current solution, if so, it returns a Neighbor object. A Neighbor object does not represent a neighbor solution, but the changes that need to be applied to the current solution if this neighbor is to be accepted. Details about this tool will be explained in the {\color{red}section **X**}.\\
+
+The FeasibilityTester is a tool that provides functions, which efficiently checks if a certain examination can be placed in a certain period, room or simultaneously period and room. This tool is used by both \gls{gc} and \gls{sa}, even though it only works if the examination to check is not yet set in the solution provided.\\
+
+The OutputFormatting tool is used to create the output file given the final solution. This file obeys the output file rules represented in the \gls{itc2007}'s site {\color{red}(REF)} in order to be able to submit the solution {\color{red}(REF)}. Submitting the solution allows to check all violated hard constraints, soft constraints, distance to feasibility and fitness values on the site's page.
 
 \subsection{Heuristics Layer}
-\subsection{Tools Layer}
+
 \subsection{Presentation Layer}
 
 
