@@ -13,13 +13,13 @@
 \contentsline {subsection}{\numberline {2.2.1}Exact methods}{7}
 \contentsline {subsubsection}{Constraint-Programming Based Technique}{7}
 \contentsline {subsubsection}{Integer Programming}{7}
-\contentsline {subsection}{\numberline {2.2.2}Graph Coloring Based Techniques}{7}
+\contentsline {subsection}{\numberline {2.2.2}Graph Coloring Based Techniques}{8}
 \contentsline {subsubsection}{Graph Coloring Problem}{8}
 \contentsline {subsection}{\numberline {2.2.3}Meta-heuristics}{8}
 \contentsline {subsubsection}{Single-solution meta-heuristics}{8}
 \contentsline {subsubsection}{Population-based meta-heuristics}{8}
-\contentsline {subsection}{\numberline {2.2.4}\gls {itc2007} Examination timetabling problem: some approaches}{8}
-\contentsline {subsection}{\numberline {2.2.5}Other approaches}{10}
+\contentsline {subsection}{\numberline {2.2.4}\gls {itc2007} Examination timetabling problem: some approaches}{9}
+\contentsline {subsection}{\numberline {2.2.5}Other approaches}{11}
 \contentsline {chapter}{\numberline {3}Architecture}{15}
 \contentsline {section}{\numberline {3.1}System Architecture}{15}
 \contentsline {subsection}{\numberline {3.1.1}Data Layer}{15}
@@ -28,6 +28,7 @@
 \contentsline {subsection}{\numberline {3.1.4}Tools Layer}{16}
 \contentsline {subsection}{\numberline {3.1.5}Heuristics Layer}{17}
 \contentsline {subsection}{\numberline {3.1.6}Presentation Layer}{17}
+\contentsline {section}{\numberline {3.2}Component Diagram}{18}
 \contentsline {chapter}{\numberline {4}Loader and solution initialization}{19}
 \contentsline {section}{\numberline {4.1}Loader Module}{19}
 \contentsline {section}{\numberline {4.2}Graph Coloring}{19}

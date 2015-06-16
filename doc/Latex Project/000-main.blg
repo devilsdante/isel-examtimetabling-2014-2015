@@ -2,7 +2,10 @@ This is BibTeX, Version 0.99dThe top-level auxiliary file: 000-main.aux
 A level-1 auxiliary file: 100-cover.aux
 A level-1 auxiliary file: 200-introduction.aux
 A level-1 auxiliary file: 300-theory.aux
-A level-1 auxiliary file: 400-implementation.aux
+A level-1 auxiliary file: 400-architecture.aux
+A level-1 auxiliary file: 500-loader-solution-init.aux
+A level-1 auxiliary file: 500-local-search.aux
+A level-1 auxiliary file: 500-genetic.aux
 A level-1 auxiliary file: 600-conclusions.aux
 A level-1 auxiliary file: 800-references.aux
 The style file: ieeetr.bst

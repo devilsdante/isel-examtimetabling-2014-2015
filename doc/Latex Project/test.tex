@@ -1,0 +1,13 @@
+\section{Component Diagram}
+
+\begin{tikzpicture} 
+\begin{umlpackage}[x=0,y=0]{Heuristics Layer} 
+\umlclass[]{Simulated Annealing}{ 
+}{} 
+\umlclass[x = 4]{Graph Coloring}{ 
+}{} 
+\umlclass[x = 8, y = -4]{Hill Climbing}{ 
+}{} 
+\end{umlpackage} 
+\umlassoc[geometry=-|-]{Simulated Annealing}{Hill Climbing} 
+\end{tikzpicture}
