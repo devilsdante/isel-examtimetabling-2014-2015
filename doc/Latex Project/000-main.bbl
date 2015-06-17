@@ -31,10 +31,10 @@ M.~Carter, G.~Laporte, and S.~Lee, ``Examination timetabling: Algorithmic
   strategies and applications,'' {\em The Journal of the Operational Research
   Society}, 1996.
 
-\bibitem{McCollum2008}
-B.~McCollum, ``Evaluation function.''
+\bibitem{McCollum2007}
+B.~McCollum, ``Examination evaluation function.''
   \url{http://www.cs.qub.ac.uk/itc2007/examtrack/exam_track_index_files/examevaluation.htm},
-  2008.
+  2007.
 
 \bibitem{Mueller2009}
 T.~M{\"{u}}ller, ``{ITC2007} solver description: A hybrid approach,'' {\em
@@ -211,5 +211,9 @@ N.~Leite, F.~Melíıcio, and A.~Rosa, ``A shuffled complex evolution based
   algorithm for examination timetabling: Benchmarks and a new problem focusing
   two epochs,'' {\em Proceedings of the 6th International Joint Conference on
   Computational Intelligence (IJCCI-ECTA 2014)}, 2014.
+
+\bibitem{McCollum2007a}
+B.~McCollum, ``Examination timetabling datasets.''
+  \url{http://www.cs.qub.ac.uk/itc2007/Login/SecretPage.php}, 2007.
 
 \end{thebibliography}

@@ -8,27 +8,135 @@ This project is meant to participate in the \gls{itc2007}. Comparing the approac
 
 The architecture of this project is divided in multiple layers. These are independent from one another and each of them has its unique features considering the objectives of this project. The layers presented in the project are named \textit{\gls{dl}}, \textit{\gls{dal}}, \textit{\gls{bl}}, \textit{\gls{hl}}, \textit{\gls{tl}} and \textit{\gls{pl}}. \\
 
-The assortment, dependencies and the main classes of each layer can be seen in {\color{red}Figure X}.
+The assortment, dependencies and the main classes of each layer can be seen in \ref{fig:SystemArchitecture}.
 
-{\color{red}**Figure X**}
+\begin{figure}[t!]
+\centering
+\begin{tikzpicture}
+\begin{umlpackage}[x = 4, y = 0]{Data Layer} 
+
+\end{umlpackage}
+
+\begin{umlpackage}[x = 0, y=-3]{Data Access Layer}
+\begin{umlpackage}[x = -0.9]{Models}
+\end{umlpackage}
+\umlinterface[x = 3]{IRepository}{}{}
+\umlclass[x = 6]{Repository}{}{}
+\end{umlpackage}
+
+\begin{umlpackage}[y=-6]{Business Layer} 
+\umlclass[x = 0]{PeriodHardConstraints}{}{}
+\umlclass[x = 3.5]{Solutions}{}{}
+\umlclass[x = 6]{Periods}{}{}
+\umlclass[x = 8.5]{ConflictMatrix}{}{}
+\umlclass[x = 12]{ModelWeightings}{}{}
+\umlclass[x = -0.7, y = -1.5]{Examinations}{}{}
+\umlclass[x = 3, y = -1.5]{RoomHardConstraints}{}{}
+\umlclass[x = 6, y = -1.5]{Rooms}{}{}
+\end{umlpackage}
+
+\begin{umlpackage}[x = -0.2, y=-10.5]{Heuristics Layer}
+\umlclass[x = 0]{Simulated Annealing}{}{}
+\umlclass[x = 3.7]{Graph Coloring}{}{}
+\umlclass[x = -0.6, y = -1.5]{Hill Climbing}{}{}
+\end{umlpackage}
+
+\begin{umlpackage}[x = 7.5, y=-10.5]{Tools Layer}
+\umlclass[x = -0.1]{NeighborSelection}{}{}
+\umlclass[x = 2.55]{Loader}{}{}
+\umlclass[x = 5.3]{OutputFormatting}{}{}
+\umlclass[x = 0, y = -1.5]{EvaluationFunction}{}{}
+\umlclass[x = 3.7, y = -1.5]{FeasibilityTester}{}{}
+\end{umlpackage}
+
+\begin{umlpackage}[x = 2.5,y = -15]{Presentation Layer}
+\umlclass[x = 0]{GraphColoringTest}{}{}
+\umlclass[x = 4]{SimulatedAnnealingTest}{}{}
+\end{umlpackage}
+
+\umlassoc[geometry=-|-, anchor1 = -139, anchor2 = 60]{Data Layer}{Data Access Layer}
+\umlassoc[geometry=-|-, anchor1 = -37, anchor2 = 135]{Data Access Layer}{Business Layer}
+\umlassoc[geometry=-|-, anchor1 = 37, anchor2 = -143]{Heuristics Layer}{Business Layer}
+\umlassoc[geometry=-|-, anchor1 = 143, anchor2 = -37]{Tools Layer}{Business Layer}
+\umlassoc[geometry=-|-, anchor1 = 18, anchor2 = -149]{Presentation Layer}{Tools Layer}
+\umlassoc[geometry=-|-, anchor1 = 152, anchor2 = -44]{Presentation Layer}{Heuristics Layer}
+\end{tikzpicture}
+
+\caption{System Architecture} \label{fig:SystemArchitecture}
+\end{figure}
 
 \subsection{Data Layer}
 
-The \gls{dl} is the layer where all entities are stored. Considering the fact that these entities must always be obtained from a file presented in \gls{itc2007}'s website {\color{red}(REF)}, it does not make sense to keep these entities after the program runs. So, the entities are stored in volatile memory all the time and are discarded after the program is finished.
+The \gls{dl} is the layer where all entities are stored. Considering the fact that these entities must always be obtained from a file presented in \gls{itc2007}'s website \cite{McCollum2007a}, it does not make sense to keep these entities after the program runs. So, the entities are stored in volatile memory all the time and are discarded after the program is finished.
 
 \subsection{Data Access Layer}
 
 The \gls{dal} is the layer that allow access to the data stored in the \gls{dl} and provide the signatures of all entities. This layer provides repositories of each type of entity. The repository was implemented in a way that it's signature  is generic, and so can only be created with objects that implement IEntity. This is mandatory because the generic repository's implementation uses the identification presented in IEntity. \\
 
-The majority of the entities are stored in a list inside the entity's repository, which index corresponds to the entity's identifier. Some of them are unique, and so are stored alone, like the Institutional Model Weightings. The repositories provide basic CRUD functions to access and edit the entities stored. The signature of the entities and the generic repository can be seen in the {\color{red}Figure X}.\\
+The majority of the entities are stored in a list inside the entity's repository, which index corresponds to the entity's identifier. Some of them are unique, and so are stored alone, like the Institutional Model Weightings. The repositories provide basic CRUD functions to access and edit the entities stored. The signature of the entities and all the specifications of the generic repository can be seen in the \ref{fig:DataAccessLayer}.\\
 
-{\color{red}**Figure X**}
+\begin{figure}[h!]
+\centering
+
+\begin{tikzpicture}
+
+\begin{umlpackage}[x = 0, y=-3]{Data Access Layer}
+\begin{umlpackage}[x = -0.9]{Models}
+\umlinterface[x = -10, y = 0]{IEntity}{}{}
+\umlinterface[x = -10, y = -5.5]{ISolution}{}{}
+\umlclass[x = -10, y = -7.5]{Solution}{}{}
+\umlclass[x = -8, y = -5.5]{Period}{}{}
+\umlclass[x = -5.7, y = -5.5]{Examination}{}{}
+\umlclass[x = -3.5, y = -5.5]{Room}{}{}
+\umlclass[x = -0.5, y = -4.5]{PeriodHardConstraint}{}{}
+\umlclass[x = -0.5, y = -3]{RoomHardConstraint}{}{}
+\umlclass[x = -1.2, y = -1.5]{InstitutionalModelWeightings}{}{}
+\end{umlpackage}
+\umlinterface[x = 3, y = 0]{IRepository<T>}
+{}
+{
+	+Insert(entity : T) : void\\
+	+Delete(entity : T) : void\\
+	+GetAll() : IEnumerable<T>\\
+	+GetById(id : int) : T\\
+	+EntryCount() : int
+}
+\umlclass[x = 3, y = -5]{Repository<T>}
+{
+	\#list : List<T>
+}
+{
+	+Insert(entity : T) : void\\
+	+Delete(entity : T) : void\\
+	+GetAll() : IEnumerable<T>\\
+	+GetById(id : int) : T\\
+	+EntryCount() : int
+}
+
+\end{umlpackage}
+
+
+\umlimpl{ISolution}{IEntity}
+\umlimpl{Solution}{ISolution}
+\umlimpl[geometry=|-|]{Period}{IEntity}
+\umlimpl[geometry=|-|]{Examination}{IEntity}
+\umlimpl[geometry=|-|]{Room}{IEntity}
+\umlimpl[geometry=-|]{PeriodHardConstraint}{IEntity}
+\umlimpl[geometry=-|]{RoomHardConstraint}{IEntity}
+\umlimpl[geometry=-|]{InstitutionalModelWeightings}{IEntity}
+\umlimpl{Repository<T>}{IRepository<T>}
+\end{tikzpicture}
+
+\caption{Data Access Layer} \label{fig:DataAccessLayer}
+\end{figure}
 
 \subsection{Business Layer}
 
 The \gls{bl} provides access to the repositories explained above by affording its CRUD functions and more that depend on the type of the repository's entity. These last functions are very useful to use in the lower layers. One example is to get all the room hard constraints that belongs to a certain type.\\
 
 Entities that are stored alone, do not need a repository. And so no CRUD functions are provided, just a set and get function. The conflict matrix, which provide the number of conflicts of each pair of examinations, can be accessed in this layer. The reason is, even though it's not an entity derived from IEntity, it is something that must be easily accessed in the lower layers and it's unique in all the project, because there's only one conflict matrix for each SET. So, when the set is loaded, the matrix is created and populated.\\
+
+{\color{red}FALAR DO PADRÃO SINGLETON!!!}
 
 All the classes presented in this layer and the methods in each class can be seen in the {\color{red}Figure X}.\\
 
@@ -45,7 +153,7 @@ The NeighborSelection is a tool that provides functions that verifies if a certa
 
 The FeasibilityTester is a tool that provides functions, which efficiently checks if a certain examination can be placed in a certain period, room or simultaneously period and room. This tool is used by both \gls{gc} and \gls{sa}, even though it only works if the examination to check is not yet set in the solution provided.\\
 
-The OutputFormatting tool is used to create the output file given the final solution. This file obeys the output file rules represented in the \gls{itc2007}'s site {\color{red}(REF)} in order to be able to submit the solution {\color{red}(REF)}. Submitting the solution allows to check all violated hard constraints, soft constraints, distance to feasibility and fitness values on the site's page.
+The OutputFormatting tool is used to create the output file given the final solution. This file obeys the output file rules represented in the \gls{itc2007}'s site \cite{McCollum2007b} in order to be able to submit the solution \cite{McCollum2007c}. Submitting the solution allows to check all violated hard constraints, soft constraints, distance to feasibility and fitness values on the site's page.
 
 \subsection{Heuristics Layer}
 
