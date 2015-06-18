@@ -32,7 +32,7 @@ namespace Tools
 
         public bool IsFeasiblePeriod(Solution solution, Examination exam_to_assign, Period period)
         {
-            List<int> exam_ids = period_hard_constraints.GetAllExaminationsWithChainingCoincidence(exam_to_assign.id).ToList();
+            List<int> exam_ids = period_hard_constraints.GetExamsWithChainingCoincidence(exam_to_assign.id).ToList();
 
             if (
                 !exam_ids.All(
@@ -123,7 +123,7 @@ namespace Tools
 
         public bool IsFeasiblePeriodRoom(Solution solution, Examination exam_to_assign, Period period, Room room)
         {
-            List<int> exam_ids = period_hard_constraints.GetAllExaminationsWithChainingCoincidence(exam_to_assign.id).ToList();
+            List<int> exam_ids = period_hard_constraints.GetExamsWithChainingCoincidence(exam_to_assign.id).ToList();
 
             if (
                 !exam_ids.All(

@@ -31,29 +31,33 @@ namespace Business
 
         /*******************/
 
-        readonly IRepository<RoomHardConstraint> room_hard_constraints_repo;
+        readonly IRepository<RoomHardConstraint> rhc_repo;
 
         private RoomHardConstraints(int size)
         {
-            room_hard_constraints_repo = new Repository<RoomHardConstraint>(size);
+            rhc_repo = new Repository<RoomHardConstraint>(size);
         }
 
         public void Insert(RoomHardConstraint rhc)
         {
-            room_hard_constraints_repo.Insert(rhc);
+            rhc_repo.Insert(rhc);
         }
+
         public void Delete(RoomHardConstraint rhc)
         {
-            room_hard_constraints_repo.Delete(rhc);
+            rhc_repo.Delete(rhc);
         }
+
         public IEnumerable<RoomHardConstraint> GetAll()
         {
-            return room_hard_constraints_repo.GetAll();
+            return rhc_repo.GetAll();
         }
+
         public RoomHardConstraint GetById(int id)
         {
-            return room_hard_constraints_repo.GetById(id);
+            return rhc_repo.GetById(id);
         }
+
         public bool HasRoomExclusivity(int exam_id)
         {
             return

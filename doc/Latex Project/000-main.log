@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.16)  18 JUN 2015 00:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.16)  19 JUN 2015 00:43
 entering extended mode
 **000-main.tex
 (000-main.tex
@@ -1908,8 +1908,11 @@ Package: beramono 2004/01/31 (WaS)
 \tikzscale@accuracy=\skip105
 
 (000-main.aux (100-cover.aux) (200-introduction.aux) (300-theory.aux)
-(400-architecture.aux) (test.aux) (500-loader-solution-init.aux)
-(500-local-search.aux
+(400-architecture.aux) (test.aux
+
+LaTeX Warning: Label `fig:BusinessLayer' multiply defined.
+
+) (500-loader-solution-init.aux) (500-local-search.aux
 
 LaTeX Warning: Label `implementation' multiply defined.
 
@@ -2664,97 +2667,108 @@ Overfull \hbox (88.36165pt too wide) in paragraph at lines 128--129
  [][] 
  []
 
-[16]
+
 Underfull \hbox (badness 10000) in paragraph at lines 135--136
 
  []
 
-
+[16]
 Underfull \hbox (badness 10000) in paragraph at lines 137--138
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 141--142
+Underfull \hbox (badness 10000) in paragraph at lines 139--140
 
  []
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 146--147
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
+
+ []
+
+Missing character: There is no B in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no B in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+
+Overfull \hbox (32.15245pt too wide) in paragraph at lines 270--271
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 54.36844pt on input line 272.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 275--276
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 148--149
+Underfull \hbox (badness 10000) in paragraph at lines 277--278
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--151
+Underfull \hbox (badness 10000) in paragraph at lines 279--280
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 152--153
+Underfull \hbox (badness 10000) in paragraph at lines 281--282
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--155
+Underfull \hbox (badness 10000) in paragraph at lines 283--284
 
  []
 
 
-LaTeX Warning: Citation `McCollum2007b' on page 18 undefined on input line 156.
+LaTeX Warning: Citation `McCollum2007b' on page 18 undefined on input line 285.
 
 
 
-LaTeX Warning: Citation `McCollum2007c' on page 18 undefined on input line 156.
+LaTeX Warning: Citation `McCollum2007c' on page 18 undefined on input line 285.
 
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--161
+Underfull \hbox (badness 10000) in paragraph at lines 289--290
 
  []
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 166--167
+Underfull \hbox (badness 10000) in paragraph at lines 295--296
 
  []
 
-) [19] (test.tex
-Missing character: There is no B in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no L in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no B in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no L in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-) [20
-
-
-] (500-loader-solution-init.tex
+) [19] [20] (test.tex) (500-loader-solution-init.tex
 Chapter 4.
 ) [21
+
+
 
 
 
@@ -2818,10 +2832,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 36530 strings out of 493671
- 714477 string characters out of 3141423
- 959452 words of memory out of 3000000
- 39077 multiletter control sequences out of 15000+200000
+ 36534 strings out of 493671
+ 714543 string characters out of 3141423
+ 959340 words of memory out of 3000000
+ 39081 multiletter control sequences out of 15000+200000
  77493 words of font info for 76 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  62i,14n,84p,10409b,1271s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2834,7 +2848,7 @@ er8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/bera/fver8a.pfb><C:/Pro
 gram Files (x86)/MiKTeX 2.9/fonts/type1/bera/fvmr8a.pfb><C:/Program Files (x86)
 /MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9
 /fonts/type1/public/lm/lmr7.pfb>
-Output written on 000-main.pdf (39 pages, 240108 bytes).
+Output written on 000-main.pdf (39 pages, 242485 bytes).
 PDF statistics:
  227 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

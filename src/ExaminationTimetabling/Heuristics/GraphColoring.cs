@@ -214,7 +214,7 @@ namespace Heuristics
             if (room_to_assign == null)
                 throw new NullReferenceException("Room was not successfully assigned");
 
-            List<int> exam_ids = period_hard_constraints.GetAllExaminationsWithChainingCoincidence(exam_to_assign.id).ToList();
+            List<int> exam_ids = period_hard_constraints.GetExamsWithChainingCoincidence(exam_to_assign.id).ToList();
 
             //If there's a coincident examination assigned, the exam_to_assign will be forced to be put on the same period as its coincident
             foreach (int exam_id in exam_ids)
@@ -326,7 +326,7 @@ namespace Heuristics
                     solution.GetExaminationsFrom(period_to_assign.id, room_to_assign.id)[random_examination_unassignment];
 
                 List<int> exams_to_unassign =
-                            period_hard_constraints.GetAllExaminationsWithChainingCoincidence(random_examination)
+                            period_hard_constraints.GetExamsWithChainingCoincidence(random_examination)
                                 .Where(
                                     ex_id =>
                                         solution.GetPeriodFrom(ex_id) == period_to_assign.id &&
@@ -402,7 +402,7 @@ namespace Heuristics
 
         private void UnassignExaminationAndCoincidences(Examination exam)
         {
-            foreach (int exam_id in period_hard_constraints.GetAllExaminationsWithChainingCoincidence(exam.id))
+            foreach (int exam_id in period_hard_constraints.GetExamsWithChainingCoincidence(exam.id))
             {
                 UnassignExamination(examinations.GetById(exam_id));
             }
