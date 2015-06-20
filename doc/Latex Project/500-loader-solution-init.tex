@@ -14,7 +14,7 @@ This tool not only loads all the data to its corresponding repositories, but als
 
 It is very important to know each set by its difficulty. A set can be easy to find a feasible solution, but others no so much. Each set has different content, and so, some content may turn the set much harder than others. What turns some sets harder than others are the elevated number of students and examinations, which must be set in a rather limited number of rooms and time slots. A high conflict density is very problematic to create feasible solutions. Another aspect that makes sets harder is the number of hard constraints that much be followed. One example of hard set is the set 4, which has high conflict density and very limited number of rooms and time slots (in this case, only 1 room is available).\\
 
-[TODO]All the specifications and benchmark data from the first 12 data sets 
+All the specifications and benchmark data from the 12 data sets of the ITC 2007 timetabling problem are shown in the Figure \ref{tab:ITC2007Datasets}.
 
 \begin{table}
 \centering
@@ -55,15 +55,18 @@ Instance 12  & 1653 	 & 78 	& 50 & 0.18 	 & 12 \\
 
 \end{tabular}
 
-\caption{[TODO]Specifications of the 12 data sets of the ITC 2007 examination timetabling
-problem}
+\caption{Specifications of the 12 data sets of the ITC 2007 examination timetabling problem.}
 \label{tab:ITC2007Datasets}
 
 \end{table}
 
 \subsection{Implementation}
 
+The development of the Loader tool is divided into two main parts: the implementation of the loading part, which loads the set file into the repositories using the business layer, and the creation and population of the conflict matrix.\\
 
+First off, The Loader was implemented using the Loader base class, in which the LoaderTimetable extends. The Loader class implements functions to make it easier to run through a file. It uses StreamReader \cite{Microsoft2015} to go through every line of the file and Regex \cite{Microsoft2015a} class to slit the phrases into tokens given a pattern. Methods like \textit{NextLine}, \textit{ReadNextToken}, \textit{ReadCurrToken}, etc, are pretty useful to use right away in the LoaderTimetable class. \\
+
+Unlike the Loader, LoaderTimetable depends on the structure of the set files. This class will use the Loader functions to go through a set file, and so, populate the repositories depending on the information read by the Loader class. LoaderTimetable offers the following operations: 
 
 \section{Graph Coloring}
 

@@ -34,9 +34,4 @@
 \contentsline {subsection}{\numberline {4.1.2}Implementation}{22}
 \contentsline {section}{\numberline {4.2}Graph Coloring}{22}
 \contentsline {section}{\numberline {4.3}Experimental Evaluation/Results}{22}
-\contentsline {chapter}{\numberline {5}Approach 1 - Local Search}{23}
-\contentsline {section}{\numberline {5.1}Simulated Annealing}{23}
-\contentsline {section}{\numberline {5.2}Hill Climbing}{23}
-\contentsline {section}{\numberline {5.3}Neighborhood Operators}{23}
-\contentsline {section}{\numberline {5.4}Experimental Evaluation/Results}{23}
-\contentsline {chapter}{\numberline {6}Conclusions}{25}
+\contentsline {chapter}{References}{23}

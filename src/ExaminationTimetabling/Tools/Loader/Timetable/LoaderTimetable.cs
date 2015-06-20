@@ -13,7 +13,7 @@ using DAL.Models;
 
 namespace Tools.Loader.Timetable
 {
-    public class LoaderTimetable
+    public class LoaderTimetable : Loader
     {
         private Examinations examinations;
         private PeriodHardConstraints period_hard_constraints;
@@ -24,11 +24,11 @@ namespace Tools.Loader.Timetable
         private ConflictMatrix conflict_matrix;
         private Dictionary<int, List<int>> student_examinations;
 
-        private readonly Loader loader;
+        //rivate readonly Loader loader;
 
-        public LoaderTimetable(string path)
+        public LoaderTimetable(string path) : base(path)
         {
-            loader = new Loader(path);
+            
         }
 
         public void Unload()
@@ -44,11 +44,11 @@ namespace Tools.Loader.Timetable
 
         public void Load()
         {
-            loader.NextLine();
+            NextLine();
 
             while (true)
             {
-                string token = loader.ReadCurrToken() ?? loader.ReadNextToken();
+                string token = ReadCurrToken() ?? ReadNextToken();
                 if (token == null)
                     break;
                 if (token.Contains("Exams"))
@@ -82,7 +82,7 @@ namespace Tools.Loader.Timetable
                     continue;
                 }
 
-                if (!loader.NextLine())
+                if (!NextLine())
                     break;
             }
 
@@ -101,10 +101,10 @@ namespace Tools.Loader.Timetable
 
             string token;
             InstitutionalModelWeightings imws = new InstitutionalModelWeightings();
-            while (loader.NextLine() && !(token = loader.ReadNextToken()).StartsWith("["))
+            while (NextLine() && !(token = ReadNextToken()).StartsWith("["))
             {
                 string type = token;
-                token = loader.ReadNextToken();
+                token = ReadNextToken();
 
                 if (type.Equals("TWOINAROW"))
                     imws.two_in_a_row = Convert.ToInt32(token);
@@ -115,7 +115,7 @@ namespace Tools.Loader.Timetable
                 else if (type.Equals("NONMIXEDDURATIONS"))
                     imws.non_mixed_durations = Convert.ToInt32(token);
                 else if (type.Equals("FRONTLOAD"))
-                    imws.front_load = new [] { Convert.ToInt32(token), Convert.ToInt32(loader.ReadNextToken()), Convert.ToInt32(loader.ReadNextToken()) };
+                    imws.front_load = new [] { Convert.ToInt32(token), Convert.ToInt32(ReadNextToken()), Convert.ToInt32(ReadNextToken()) };
             }
 
             model_weightings.Set(imws);
@@ -126,11 +126,11 @@ namespace Tools.Loader.Timetable
             room_hard_constraints = RoomHardConstraints.Instance(10);
 
             string token;
-            for (int id = 0; loader.NextLine() && !(token = loader.ReadNextToken()).StartsWith("["); id++)
+            for (int id = 0; NextLine() && !(token = ReadNextToken()).StartsWith("["); id++)
             {
                 int examination = Convert.ToInt32(token);
 
-                token = loader.ReadNextToken();
+                token = ReadNextToken();
                 RoomHardConstraint.types rhc_type = default(RoomHardConstraint.types);
                 foreach (RoomHardConstraint.types type in (Enum.GetValues(typeof(RoomHardConstraint.types))).Cast<RoomHardConstraint.types>().Where(type => token.Equals(type.ToString())))
                 {
@@ -147,14 +147,14 @@ namespace Tools.Loader.Timetable
             period_hard_constraints = PeriodHardConstraints.Instance(10);
 
             string token;
-            for (int id = 0; loader.NextLine() && !(token = loader.ReadNextToken()).StartsWith("["); id++)
+            for (int id = 0; NextLine() && !(token = ReadNextToken()).StartsWith("["); id++)
             {
                 int exam1 = Convert.ToInt32(token);
 
-                token = loader.ReadNextToken();
+                token = ReadNextToken();
                 PeriodHardConstraint.types phc_type = (Enum.GetValues(typeof (PeriodHardConstraint.types))).Cast<PeriodHardConstraint.types>().FirstOrDefault(type => token.Equals(type.ToString()));
 
-                token = loader.ReadNextToken();
+                token = ReadNextToken();
                 int exam2 = Convert.ToInt32(token);
 
                 period_hard_constraints.Insert(new PeriodHardConstraint(id, exam1, phc_type, exam2));
@@ -164,18 +164,18 @@ namespace Tools.Loader.Timetable
 
         private void InitRooms()
         {
-            string token = loader.ReadCurrToken();
+            string token = ReadCurrToken();
             string n_rooms_s = new Regex("\\d+").Match(token).Captures[0].Value;
             int n_rooms = Convert.ToInt32(n_rooms_s);
 
             rooms = Rooms.Instance(n_rooms);
 
-            for (int room_id = 0; loader.NextLine() && room_id < n_rooms; room_id++)
+            for (int room_id = 0; NextLine() && room_id < n_rooms; room_id++)
             {
-                token = loader.ReadNextToken();
+                token = ReadNextToken();
                 int capacity = Convert.ToInt32(token);
 
-                token = loader.ReadNextToken();
+                token = ReadNextToken();
                 int penalty = Convert.ToInt32(token);
                 
                 rooms.Insert(new Room(room_id, capacity, penalty));
@@ -184,22 +184,22 @@ namespace Tools.Loader.Timetable
 
         private void InitPeriods()
         {
-            string token = loader.ReadCurrToken();
+            string token = ReadCurrToken();
             string n_periods_s = new Regex("\\d+").Match(token).Captures[0].Value;
             int n_periods = Convert.ToInt32(n_periods_s);
 
             periods = Periods.Instance(n_periods);
 
-            for (int period_id = 0; loader.NextLine() && period_id < n_periods; period_id++)
+            for (int period_id = 0; NextLine() && period_id < n_periods; period_id++)
             {
-                token = loader.ReadNextToken().Replace(':', '/');
-                token += " " + loader.ReadNextToken();
+                token = ReadNextToken().Replace(':', '/');
+                token += " " + ReadNextToken();
                 DateTime date = Convert.ToDateTime(token);
 
-                token = loader.ReadNextToken();
+                token = ReadNextToken();
                 int duration = Convert.ToInt32(token);
 
-                token = loader.ReadNextToken();
+                token = ReadNextToken();
                 int penalty = Convert.ToInt32(token);
 
                 periods.Insert(new Period(period_id, date, duration, penalty));
@@ -208,20 +208,20 @@ namespace Tools.Loader.Timetable
 
         public void InitExaminations()
         {
-            string token = loader.ReadCurrToken();
+            string token = ReadCurrToken();
             string n_exams_s = new Regex("\\d+").Match(token).Captures[0].Value;
             int n_exams = Convert.ToInt32(n_exams_s);
             
             examinations = Examinations.Instance(n_exams);
             student_examinations = new Dictionary<int, List<int>>();
 
-            for (int exam_id = 0; loader.NextLine() && exam_id < n_exams; exam_id++)
+            for (int exam_id = 0; NextLine() && exam_id < n_exams; exam_id++)
             {
-                token = loader.ReadNextToken();
+                token = ReadNextToken();
                 int duration = Convert.ToInt32(token);
                 int student_count = 0;
 
-                while ((token = loader.ReadNextToken()) != null)
+                while ((token = ReadNextToken()) != null)
                 {
                     int id = Convert.ToInt32(token);
                     if (!student_examinations.ContainsKey(id))

@@ -41,7 +41,7 @@ namespace Tests.SimulatedAnnealingTest
                 watch.Start();
                 loader.Load();
 
-                //Console.WriteLine("Loader: " + watch.ElapsedMilliseconds);
+                Console.WriteLine("Loader: " + watch.ElapsedMilliseconds);
 
                 var evaluation = new EvaluationFunctionTimetable();
 
