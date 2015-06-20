@@ -30,12 +30,13 @@
 \contentsline {subsection}{\numberline {3.1.6}Presentation Layer}{19}
 \contentsline {chapter}{\numberline {4}Loader and solution initialization}{21}
 \contentsline {section}{\numberline {4.1}Loader Module}{21}
-\contentsline {section}{\numberline {4.2}Graph Coloring}{21}
-\contentsline {section}{\numberline {4.3}Experimental Evaluation/Results}{21}
+\contentsline {subsection}{\numberline {4.1.1}Analysis of benchmark data}{21}
+\contentsline {subsection}{\numberline {4.1.2}Implementation}{22}
+\contentsline {section}{\numberline {4.2}Graph Coloring}{22}
+\contentsline {section}{\numberline {4.3}Experimental Evaluation/Results}{22}
 \contentsline {chapter}{\numberline {5}Approach 1 - Local Search}{23}
 \contentsline {section}{\numberline {5.1}Simulated Annealing}{23}
 \contentsline {section}{\numberline {5.2}Hill Climbing}{23}
 \contentsline {section}{\numberline {5.3}Neighborhood Operators}{23}
 \contentsline {section}{\numberline {5.4}Experimental Evaluation/Results}{23}
 \contentsline {chapter}{\numberline {6}Conclusions}{25}
-\contentsline {chapter}{References}{27}

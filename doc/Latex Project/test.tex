@@ -1,0 +1,90 @@
+\documentclass[10pt]{article}
+
+
+%////////////// ADDED PACKAGES //////////////////
+\PassOptionsToPackage{hyphens}{url} % For processing correctly underscores in URL
+\usepackage{hyperref} 
+\usepackage{subfigure}
+\usepackage{calc}
+\usepackage{amssymb}
+%% The amsthm package provides extended theorem environments
+%% \usepackage{amsthm}
+\usepackage{amstext}
+\usepackage{amsmath}
+\usepackage{textcomp} % degree symbol 
+\usepackage{graphicx}
+% Algorithm package
+\usepackage{algorithm}
+\usepackage{algpseudocode} % Typesetting using the algorithmicx package
+\renewcommand{\algorithmiccomment}[1]{\bgroup\hfill//~#1\egroup} % Algorithm comment
+\usepackage{etoolbox,siunitx} % For floating point columns
+% For bold cells using siunitx
+\newcommand{\boldentry}[2]{%
+  \multicolumn{1}{S[table-format=#1,
+                    mode=text,
+                    text-rm=\fontseries{b}\selectfont
+                   ]}{#2}}
+
+
+
+\usepackage{booktabs} % Professional tables
+% Use in coloured tables
+\usepackage{cancel}
+\usepackage[table]{xcolor}
+%To tweak the space between columns (LaTeX will by default choose very tight columns), one can alter the column separation: \setlength{\tabcolsep}{5pt}. The default value is 6pt.
+\setlength{\tabcolsep}{5pt}
+%\setlength{\tabcolsep}{1.7pt}
+\usepackage{todonotes}
+%\usepackage{rotating}
+\usepackage{multirow}
+\usepackage{stfloats} % TA plots
+\usepackage{pdflscape}
+%////////////////////////////////////////////////
+
+
+\begin{document}
+
+
+\begin{table}
+
+
+
+\begin{tabular}{%
+	 l%
+     S[table-figures-integer=6]%
+     S[table-figures-integer=4]%
+     S[table-figures-integer=3]%
+     S%
+     S[table-figures-integer=3]%
+    }
+
+\toprule
+
+       & \multicolumn{1}{c}{\#} & \multicolumn{1}{c}{\#} & \multicolumn{1}{c}{\#} & \multicolumn{1}{l}{conflict} & \multicolumn{1}{l}{\# time} \\
+       &	 \multicolumn{1}{c}{students} & \multicolumn{1}{c}{exams} & \multicolumn{1}{c}{rooms} & \multicolumn{1}{l}{matrix}   & \multicolumn{1}{l}{slots}  \\
+       &		   	     & 		    & 		  & \multicolumn{1}{l}{density}  &\multicolumn{1}{l}{}\\ %HERE parece que ele ñ gosta de &\\ tive de alterar para &\multicolumn{1}{l}{}\\
+       
+\midrule
+
+Instance 1 	 & 7891 	 & 607	& 7 	 & 0.05 	 & 54 \\
+Instance 2	 & 12743 & 870	& 49 & 0.01 	 & 40 \\
+Instance 3 	 & 16439 & 934	& 48 & 0.03 	 & 36 \\
+Instance 4	 & 5045  & 273 	& 1 	 & 0.15 	 & 21 \\
+Instance 5 	 & 9253 	 & 1018 	& 3 	 & 0.009 & 42 \\
+Instance 6 	 & 7909 	 & 242 	& 8 	 & 0.06  & 16 \\
+Instance 7	 & 14676	 & 1096 	& 15 & 0.02  & 80 \\
+Instance 8 	 & 7718 	 & 598 	& 8 	 & 0.05 	 & 80 \\
+Instance 9 	 & 655 	 & 169 	& 3  & 0.08 	 & 25 \\
+Instance 10	 & 1577 	 & 214 	& 48 & 0.05 	 & 32 \\
+Instance 11	 & 16439 & 934 	& 40 & 0.03 	 & 26 \\
+Instance 12  & 1653 	 & 78 	& 50 & 0.18 	 & 12 \\ 
+
+\bottomrule
+
+\end{tabular}
+\end{table}
+
+
+
+
+\end{document}

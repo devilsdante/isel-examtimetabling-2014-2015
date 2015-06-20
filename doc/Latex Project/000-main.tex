@@ -26,13 +26,13 @@
 \usepackage{listings}
 \usepackage{longtable}
 \usepackage{subcaption}
-\usepackage{etoolbox}% http://ctan.org/pkg/etoolbox
+\usepackage{etoolbox,siunitx}% http://ctan.org/pkg/etoolbox
 \usepackage{algorithm}
 \usepackage{algorithmic}
 \usepackage{emp}
 \usepackage[shellescape]{gmp}
 
-\usepackage[rgb,x11names]{xcolor}
+\usepackage[rgb,x11names,table]{xcolor}
 \definecolor{Highlight}{rgb}{0.84,0.47,0.10} 
 \usepackage{chronology}
 \usepackage{pgfgantt}
@@ -40,6 +40,10 @@
 \usepackage{tikz}
 \usepackage{tikzscale}
 \usepackage{tikz-uml}
+
+%\usepackage{multirow}
+%\usepackage{amstext}
+%\usepackage{textcomp}
 
 
 \usepackage{colortbl}
@@ -96,7 +100,7 @@
 \include{200-introduction}
 \include{300-theory}
 \include{400-architecture}
-\include{test}
+%\include{test}
 \include{500-loader-solution-init}
 \include{500-local-search}
 \include{500-genetic}

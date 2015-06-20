@@ -2,14 +2,71 @@
 \label{implementation}
 \thispagestyle{plain}
 
+The Loader and the solution initializer (heuristic) are the first tools used in this project. It is extremely necessary that the development of every tool and heuristic take in consideration the performance of its run. The less time a tool uses to execute, the more time other tools will use to do its job, and so may obtain better results. The Loader and Graph Coloring heuristic (solution initializer) will only be executed once so the major of the execution time will be used by the meta-heuristic(s).
+
 \section{Loader Module}
 
-- Analysis of benchmark data, constraints, ....
+The Loader module is the first tool to be used, above all. Its job is to load all the information presented in the set files. Each set file includes information about examinations and the students participating in each of it, the periods and the their penalties, the rooms and their penalties, period hard constraints, room hard constraints, and the information about the soft constraints, named Institutional Weightings. The presence of period and room hard constraints are optional.\\
 
-Class diagram
+This tool not only loads all the data to its corresponding repositories, but also creates and populates the conflict matrix depending on the data obtained previously. The conflict matrix is a matrix that has the information about the conflicts of each pair of examinations. This matrix is symmetric, for each pair of examinations has a conflict value regardless of its ordination, and so the conflict value of [i, j] is the same as [j, i]. This makes the population of the matrix twice as fast, because there's only needed to calculate the conflict once for each pair.
+
+\subsection{Analysis of benchmark data}
+
+It is very important to know each set by its difficulty. A set can be easy to find a feasible solution, but others no so much. Each set has different content, and so, some content may turn the set much harder than others. What turns some sets harder than others are the elevated number of students and examinations, which must be set in a rather limited number of rooms and time slots. A high conflict density is very problematic to create feasible solutions. Another aspect that makes sets harder is the number of hard constraints that much be followed. One example of hard set is the set 4, which has high conflict density and very limited number of rooms and time slots (in this case, only 1 room is available).\\
+
+[TODO]All the specifications and benchmark data from the first 12 data sets 
+
+\begin{table}
+\centering
+
+\sisetup{table-alignment=center,table-figures-decimal=3}
+
+\begin{tabular}{%
+	 l%
+     S[table-figures-integer=6]%
+     S[table-figures-integer=4]%
+     S[table-figures-integer=3]%
+     S%
+     S[table-figures-integer=3]%
+    }
+
+\toprule
+
+       & \multicolumn{1}{c}{\#} & \multicolumn{1}{c}{\#} & \multicolumn{1}{c}{\#} & \multicolumn{1}{l}{conflict} & \multicolumn{1}{l}{\# time} \\
+       &	 \multicolumn{1}{c}{students} & \multicolumn{1}{c}{exams} & \multicolumn{1}{c}{rooms} & \multicolumn{1}{l}{matrix}   & \multicolumn{1}{l}{slots}  \\
+       &		   	     & 		    & 		  & \multicolumn{1}{l}{density}  &\multicolumn{1}{l}{}\\ %HERE parece que ele ñ gosta de &\\ tive de alterar para &\multicolumn{1}{l}{}\\
+       
+\midrule
+
+Instance 1 	 & 7891 	 & 607	& 7 	 & 0.05 	 & 54 \\
+Instance 2	 & 12743 & 870	& 49 & 0.01 	 & 40 \\
+Instance 3 	 & 16439 & 934	& 48 & 0.03 	 & 36 \\
+Instance 4	 & 5045  & 273 	& 1 	 & 0.15 	 & 21 \\
+Instance 5 	 & 9253 	 & 1018 	& 3 	 & 0.009 & 42 \\
+Instance 6 	 & 7909 	 & 242 	& 8 	 & 0.06  & 16 \\
+Instance 7	 & 14676	 & 1096 	& 15 & 0.02  & 80 \\
+Instance 8 	 & 7718 	 & 598 	& 8 	 & 0.05 	 & 80 \\
+Instance 9 	 & 655 	 & 169 	& 3  & 0.08 	 & 25 \\
+Instance 10	 & 1577 	 & 214 	& 48 & 0.05 	 & 32 \\
+Instance 11	 & 16439 & 934 	& 40 & 0.03 	 & 26 \\
+Instance 12  & 1653 	 & 78 	& 50 & 0.18 	 & 12 \\ 
+
+\bottomrule
+
+\end{tabular}
+
+\caption{[TODO]Specifications of the 12 data sets of the ITC 2007 examination timetabling
+problem}
+\label{tab:ITC2007Datasets}
+
+\end{table}
+
+\subsection{Implementation}
+
 
 
 \section{Graph Coloring}
 
+- Largest degree ordering (LDO)
 
 \section{Experimental Evaluation/Results}

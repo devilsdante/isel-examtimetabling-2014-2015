@@ -136,9 +136,9 @@ The \gls{bl} provides access to the repositories explained above by, in each of 
 
 Business classes afford CRUD functions if the objective is to store multiple instances of a certain type of entity. If that's the case, it uses a Repository instance of that type of entity. Thus, business classes that only store one instance, do not provide CRUD functions, just a \textit{set} and \textit{get} function. This makes sense, considering it only stores one instance of an entity, instead of multiple entity instances, not needing the use of a Repository. One example of these classes is the ConflictMatrix. \\
 
-The ConflictMatrix provides the number of conflicts of each pair of examinations. Even though it's not an entity that implements IEntity, it must be easily accessed in the lower layers. There's only one instance of this class because there's only one conflict matrix for each SET. Each SET must be loaded using the Loader if that SET is to be tested.\\
+The ConflictMatrix provides the number of conflicts of each pair of examinations. Even though it's not an entity that implements IEntity, it must be easily accessed in the lower layers. There's only one instance of this class because there's only one conflict matrix for each set. Each set must be loaded using the Loader if that set is to be tested.\\
 
-All the business classes implement the Singleton pattern. This decision was made because it makes sense to keep only one repository of each entity since they must be populated using the Loader each time a SET is tested. Another reason is to avoid passing the instances references of the business classes to all the heuristics and tools that use them, and so, the instances can be easily be accessed statically.\\
+All the business classes implement the Singleton pattern. This decision was made because it makes sense to keep only one repository of each entity since they must be populated using the Loader each time a set is tested. Another reason is to avoid passing the instances references of the business classes to all the heuristics and tools that use them, and so, the instances can be easily be accessed statically.\\
 
 \begin{figure}[t!]
 \centering

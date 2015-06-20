@@ -72,7 +72,7 @@ In this section, the five \gls{itc2007} - Examination timetabling track - finali
 \begin{itemize}
 	\item no student must be elected to be present in more than one exam at the same time;
 	\item the number of students in a class must not exceed the room's capacity;
-	\item exam's length must not surpass the length of the assigned timeslot;
+	\item exam's length must not surpass the length of the assigned time slot;
 	\item exams ordering hard constraints must be followed; e.g., $Exam_1$ must be scheduled after $Exam_2$;
 	\item room assignments hard constraints must be followed; e.g., 	$Exam_1$ must be scheduled in $Room_1$.
 \end{itemize}
@@ -81,7 +81,7 @@ It is also necessary to compute the fitness value of the solution which is calcu
 \begin{itemize}
 	\item two exams in a row - a student should not be assigned to be in two adjacent exams in the same day;
 	\item two exams in a day - a student should not be assigned to be in two non adjacent exams in the same day;
-	\item period spread - reduce the number of times a student is assigned to be in two exams that are \textit{N} timeslots apart;
+	\item period spread - reduce the number of times a student is assigned to be in two exams that are \textit{N} time slots apart;
 	\item mixed durations - reduce the number of exams with different durations that occur in the same room and period;
 	\item larger exams constraints - reduce the number of large exams that occur later in the timetable;
 	\item room penalty - avoid assigning exams to rooms with penalty;
@@ -113,7 +113,7 @@ Mitsunori Atsuta, Koji Nonobe and Toshihide Ibaraki ended up in third place on t
 
 Geoffrey De Smet's approach \cite{Smet2007} differs from all others because he decided not to use a known problem-specific heuristic to obtain a feasible solution, but instead used what is called the \textit{Drool's rule engine}, named \textit{drools-solver} \cite{Drools}. By definition, the drools-solver is a combination of optimization heuristics and meta-heuristics with very efficient score calculation. A solution's score is the sum of the weight of the constraints being broken. After obtaining a feasible solution, Geoffrey opted to use a local search algorithm to improve the solutions obtained using the drools-solver.\\
 
-Nelishia Pillay opted to use a two-phase algorithm variation, using \textit{Developmental Approach based on Cell Biology} \cite{Pillay2007}, which the goal consists in forming a well-developed organism by the process of creating a cell, proceeding with cell division, cell interaction and cell migration. In this approach, each cell represents a timeslot. The first phase represents the process of creating the first cell, cell division and cell interaction. The second phase represents the cell migration.
+Nelishia Pillay opted to use a two-phase algorithm variation, using \textit{Developmental Approach based on Cell Biology} \cite{Pillay2007}, which the goal consists in forming a well-developed organism by the process of creating a cell, proceeding with cell division, cell interaction and cell migration. In this approach, each cell represents a time slot. The first phase represents the process of creating the first cell, cell division and cell interaction. The second phase represents the cell migration.
 
 \subsection{Other approaches}
 \label{subsection:OtherAppr}
@@ -143,7 +143,7 @@ Salwani Abdullah and Malek Alzaqebah opted to create an hybridization approach i
 
 Salwani Abdullah and Malek Alzaqebah in 2014 constructed an approach \cite{Alzaqebah2014} that utilizes an hybridization of a modified artificial bee colony with local search algorithm (i.e. late acceptance \gls{hc}).\\
 
-Edmund K. Burke, Rong Qu and Amr Soghier's 2014 approach \cite{Burke2014} uses an hyper-heuristic with hybridization of low level heuristics (neighbor operations) to improve the solutions. The low level heuristics are \textit{move exam}, \textit{swap exam}, \textit{kempe chain move} and \textit{swap timeslot}. After applying this hyper-heuristic with the hybridizations, the hybridization with the best results will be tested with multiple exam ordering methods, applying another hyper-heuristic with hybridizations. The heuristics applied are \textit{largest degree}, \textit{largest weighted degree}, \textit{saturation degree}, \textit{largest penalty} and \textit{random ordering}.\\
+Edmund K. Burke, Rong Qu and Amr Soghier's 2014 approach \cite{Burke2014} uses an hyper-heuristic with hybridization of low level heuristics (neighbor operations) to improve the solutions. The low level heuristics are \textit{move exam}, \textit{swap exam}, \textit{kempe chain move} and \textit{swap times lot}. After applying this hyper-heuristic with the hybridizations, the hybridization with the best results will be tested with multiple exam ordering methods, applying another hyper-heuristic with hybridizations. The heuristics applied are \textit{largest degree}, \textit{largest weighted degree}, \textit{saturation degree}, \textit{largest penalty} and \textit{random ordering}.\\
 
 Ali Hmer and Malek Mouhoub's approach \cite{Mouhoub2014} uses a multi-phase hybridization of meta-heuristics. Works like the two phase algorithm but includes a pre-processing phase before the construction phase. This pre-processing phase is divided in two phases: the propagation of ordering constraints and implicit constraints discovery. The construction phase utilizes a variant of \gls{ts}. The optimization phase uses hybridization of \gls{hc}, \gls{sa} and an extended version of \gls{gd} algorithm.\\
 
