@@ -10,7 +10,7 @@ namespace Tests.LoaderTest
 {
     public class Main1
     {
-        public static void Main()
+        public static void _Main()
         {
             for (int SET = 1; SET <= 8; SET++)
             {

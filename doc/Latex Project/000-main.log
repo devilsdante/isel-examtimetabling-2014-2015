@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.16)  21 JUN 2015 00:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.16)  21 JUN 2015 23:18
 entering extended mode
 **000-main.tex
 (000-main.tex
@@ -2306,11 +2306,7 @@ LaTeX Font Info:    Font shape `T1/fve/b/n' will be
 ]
 (000-main.toc [3])
 \tf@toc=\write10
- [4] (000-main.lof
-
-LaTeX Warning: Citation `Talbi2009' on page v undefined on input line 4.
-
-)
+ [4] (000-main.lof)
 \tf@lof=\write11
  [5
 
@@ -2323,7 +2319,8 @@ LaTeX Warning: Citation `Talbi2009' on page v undefined on input line 4.
  [7] [8
 
 
-] (000-main.lol)
+]
+(000-main.lol)
 \tf@lol=\write13
 
 No file 000-main.acr.
@@ -2401,18 +2398,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
  []
 
 
-LaTeX Warning: Citation `Schaerf1999' on page 5 undefined on input line 11.
-
-
-LaTeX Warning: Citation `Jensen2001' on page 5 undefined on input line 13.
-
-
-LaTeX Warning: Citation `Arora2009' on page 5 undefined on input line 13.
-
-
-LaTeX Warning: Citation `Arora2009' on page 5 undefined on input line 13.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 9--16
 
  []
@@ -2433,19 +2418,6 @@ File: ./images/typesOfAlgorithms.pdf Graphic file (type pdf)
 <use ./images/typesOfAlgorithms.pdf>
 Package pdftex.def Info: ./images/typesOfAlgorithms.pdf used on input line 21.
 (pdftex.def)             Requested size: 418.25368pt x 247.21951pt.
-
-
-LaTeX Warning: Citation `Talbi2009' on page 5 undefined on input line 22.
-
-
-LaTeX Warning: Citation `Talbi2009' on page 5 undefined on input line 22.
-
-
-LaTeX Warning: Citation `Qu2009' on page 5 undefined on input line 28.
-
-
-LaTeX Warning: Citation `Lewis2007' on page 5 undefined on input line 32.
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 26--33
 
@@ -2472,15 +2444,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--37
  []
 
 
-LaTeX Warning: Citation `Qu2009' on page 7 undefined on input line 39.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 39--40
 
  []
-
-
-LaTeX Warning: Citation `Schaerf1999' on page 7 undefined on input line 42.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 42--43
@@ -2493,13 +2459,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 46--47
  []
 
 [7]
-
-LaTeX Warning: Citation `Qu2009' on page 8 undefined on input line 51.
-
-
-LaTeX Warning: Citation `Carter1996' on page 8 undefined on input line 53.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 49--54
 
  []
@@ -2513,9 +2472,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--54
 Underfull \hbox (badness 10000) in paragraph at lines 49--54
 
  []
-
-
-LaTeX Warning: Citation `Talbi2009' on page 8 undefined on input line 59.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 59--60
@@ -2523,15 +2479,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--60
  []
 
 
-LaTeX Warning: Citation `Talbi2009' on page 8 undefined on input line 62.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 62--63
 
  []
-
-
-LaTeX Warning: Citation `Talbi2009' on page 8 undefined on input line 65.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 65--66
@@ -2539,41 +2489,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--66
  []
 
 [8]
-
-LaTeX Warning: Citation `McCollum2007' on page 9 undefined on input line 91.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
  []
 
 [9]
-
-LaTeX Warning: Citation `Mueller2009' on page 10 undefined on input line 106.
-
-
-LaTeX Warning: Citation `Mueller2005' on page 10 undefined on input line 106.
-
-
-LaTeX Warning: Citation `Mueller2004' on page 10 undefined on input line 106.
-
-
-LaTeX Warning: Citation `Russell2010' on page 10 undefined on input line 106.
-
-
-LaTeX Warning: Citation `Dueck1993' on page 10 undefined on input line 106.
-
-
-LaTeX Warning: Citation `Kirkpatrick1983' on page 10 undefined on input line 10
-6.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 106--107
 
  []
-
-
-LaTeX Warning: Citation `Gogos2012' on page 10 undefined on input line 110.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 110--111
@@ -2581,18 +2504,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 110--111
  []
 
 
-LaTeX Warning: Citation `Atsuta2007' on page 10 undefined on input line 112.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 112--113
 
  []
-
-
-LaTeX Warning: Citation `Smet2007' on page 10 undefined on input line 114.
-
-
-LaTeX Warning: Citation `Drools' on page 10 undefined on input line 114.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 114--115
@@ -2600,33 +2514,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 114--115
  []
 
 
-LaTeX Warning: Citation `Pillay2007' on page 10 undefined on input line 116.
-
-
-LaTeX Warning: Citation `Abdullah2009' on page 10 undefined on input line 121.
-
-
-LaTeX Warning: Citation `Javadian2008' on page 10 undefined on input line 121.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 121--122
 
  []
 
 [10]
-
-LaTeX Warning: Citation `Gogos2009' on page 11 undefined on input line 123.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 123--124
 
  []
-
-
-LaTeX Warning: Citation `McCollum2009' on page 11 undefined on input line 125.
-
-
-LaTeX Warning: Citation `Burke2004' on page 11 undefined on input line 125.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 125--126
@@ -2634,16 +2529,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 125--126
  []
 
 
-LaTeX Warning: Citation `Alzaqebah2011' on page 11 undefined on input line 127.
-
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 127--128
 
  []
-
-
-LaTeX Warning: Citation `Turabieh2011' on page 11 undefined on input line 129.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 129--130
@@ -2651,19 +2539,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 129--130
  []
 
 
-LaTeX Warning: Citation `Abdullah2012' on page 11 undefined on input line 131.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 131--132
 
  []
-
-
-LaTeX Warning: Citation `Demeester2012' on page 11 undefined on input line 133.
-
-
-
-LaTeX Warning: Citation `Burke2008' on page 11 undefined on input line 133.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 133--134
@@ -2671,15 +2549,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 133--134
  []
 
 
-LaTeX Warning: Citation `McCollum2012' on page 11 undefined on input line 135.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 135--136
 
  []
-
-
-LaTeX Warning: Citation `Sabar2012' on page 11 undefined on input line 137.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 137--138
@@ -2687,16 +2559,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 137--138
  []
 
 [11]
-
-LaTeX Warning: Citation `Sabar2012a' on page 12 undefined on input line 140.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 140--141
 
  []
-
-
-LaTeX Warning: Citation `Abdullah2013' on page 12 undefined on input line 142.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 142--143
@@ -2704,16 +2569,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 142--143
  []
 
 
-LaTeX Warning: Citation `Alzaqebah2014' on page 12 undefined on input line 144.
-
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 144--145
 
  []
-
-
-LaTeX Warning: Citation `Burke2014' on page 12 undefined on input line 146.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 146--147
@@ -2721,16 +2579,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 146--147
  []
 
 
-LaTeX Warning: Citation `Mouhoub2014' on page 12 undefined on input line 148.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 148--149
 
  []
-
-
-LaTeX Warning: Citation `Hamilton-Bryce2014' on page 12 undefined on input line
- 150.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 150--151
@@ -2738,24 +2589,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 150--151
  []
 
 [12]
-
-LaTeX Warning: Citation `Rahman2014' on page 13 undefined on input line 152.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 152--153
 
  []
 
 
-LaTeX Warning: Citation `Rahman2014a' on page 13 undefined on input line 154.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 154--155
 
  []
-
-
-LaTeX Warning: Citation `Leite2014' on page 13 undefined on input line 156.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 156--157
@@ -2969,9 +2810,6 @@ Overfull \hbox (62.54344pt too wide) in paragraph at lines 63--64
  []
 
 
-LaTeX Warning: Citation `McCollum2007a' on page 15 undefined on input line 70.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
@@ -3114,14 +2952,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 283--284
  []
 
 
-LaTeX Warning: Citation `McCollum2007b' on page 18 undefined on input line 285.
-
-
-
-LaTeX Warning: Citation `McCollum2007c' on page 18 undefined on input line 285.
-
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 289--290
 
  []
@@ -3152,13 +2982,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--16
 Underfull \hbox (badness 10000) in paragraph at lines 65--66
 
  []
-
-
-LaTeX Warning: Citation `Microsoft2015' on page 22 undefined on input line 67.
-
-
-LaTeX Warning: Citation `Microsoft2015a' on page 22 undefined on input line 67.
-
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 67--68
@@ -3200,16 +3023,78 @@ Underfull \hbox (badness 10000) in paragraph at lines 111--112
 
  []
 
-[23]) [24] (test.tex) [25
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
+
+ []
+
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
+
+ []
 
 
-] [26
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--147
+
+ []
+
+
+LaTeX Warning: Citation `McCollum2007d' on page 24 undefined on input line 148.
 
 
 
-] (800-references.tex
-No file 000-main.bbl.
-) (000-main.aux (100-cover.aux) (200-introduction.aux) (300-theory.aux)
+Underfull \hbox (badness 10000) in paragraph at lines 148--149
+
+ []
+
+[24]) [25] (test.tex) [26
+
+
+] (800-references.tex (000-main.bbl
+LaTeX Font Info:    Try loading font information for T1+fvm on input line 36.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bera\t1fvm.fd"
+File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
+)
+LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
+(Font)              scaled to size 8.09995pt on input line 36.
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--38
+[]\T1/fve/m/n/9 B. Mc-Col-lum, ``Ex-am-i-na-tion eval-u-a-tion func-tion.'' $\T
+1/fvm/m/n/9 http : / / www . cs . qub . ac . uk / itc2007 /$
+ []
+
+
+Underfull \hbox (badness 5504) in paragraph at lines 78--81
+[]\T1/fve/m/n/9 G. Smet, ``Drools-solver.'' $\T1/fvm/m/n/9 http : / / www . cs 
+. qub . ac . uk / itc2007 / winner / bestexamsolutions /$
+ []
+
+[27
+
+
+
+
+
+
+] [28]
+Underfull \hbox (badness 2189) in paragraph at lines 230--233
+[]\T1/fve/m/n/9 Microsoft, ``Stream-reader class.'' $\T1/fvm/m/n/9 https : / / 
+msdn . microsoft . com / en-[]us / library / system . io .$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 235--238
+[]\T1/fve/m/n/9 Microsoft, ``Regex class.'' $\T1/fvm/m/n/9 https : / / msdn . m
+icrosoft . com / en-[]us / library / system . text .$
+ []
+
+)) [29] (000-main.aux (100-cover.aux) (200-introduction.aux) (300-theory.aux)
 (400-architecture.aux) (500-loader-solution-init.aux) (test.aux)
 (800-references.aux))
 
@@ -3220,26 +3105,27 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 39546 strings out of 493671
- 799506 string characters out of 3141423
- 1006520 words of memory out of 3000000
- 42078 multiletter control sequences out of 15000+200000
- 92041 words of font info for 84 fonts, out of 3000000 for 9000
+ 39574 strings out of 493671
+ 799924 string characters out of 3141423
+ 1006658 words of memory out of 3000000
+ 42099 multiletter control sequences out of 15000+200000
+ 92661 words of font info for 86 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  62i,14n,84p,10397b,1208s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Progr
-am Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files (x86)/
-MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/f
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}<C:/Program Files (x86)/MiKTeX 2.9/f
 onts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
 ts/type1/bera/fveb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/bera/fv
 er8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/bera/fver8a.pfb><C:/Pro
-gram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files 
-(x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi9.pfb><C:/Program Files (x86)/MiKTeX
- 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
-pe1/public/lm/lmr9.pfb>
-Output written on 000-main.pdf (36 pages, 266550 bytes).
+gram Files (x86)/MiKTeX 2.9/fonts/type1/bera/fvmr8a.pfb><C:/Program Files (x86)
+/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9
+/fonts/type1/public/lm/lmmi9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
+/public/lm/lmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lm
+r9.pfb>
+Output written on 000-main.pdf (39 pages, 286734 bytes).
 PDF statistics:
- 219 PDF objects out of 1000 (max. 8388607)
+ 235 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  124 words of extra memory for PDF output out of 10000 (max. 10000000)
 

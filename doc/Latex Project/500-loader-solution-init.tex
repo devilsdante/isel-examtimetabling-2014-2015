@@ -110,7 +110,7 @@ All specifications about these two classes can be seen in the Figure \ref{fig:Lo
 
 The implementation of LoaderTimetable class is all about the Load method. This public method will be "asking" for new lines and reading the tokens out of it, using the Loader class. This procedure will take place as long as there are new lines to read. It's a pretty simple cycle that gets a new line and checks if, for example, the string "Exams" is contained on that line. If so, it runs InitExaminations, if not, checks if "Periods" is contained on that line, and so on, until it runs out of file.\\
 
-The pseudo code of this method can be seen on algorithm \ref{alg:Load}
+The pseudo code of this method can be seen on Algorithm \ref{alg:Load}.
 
 \begin{algorithm}
 \begin{algorithmic}[1]
@@ -133,10 +133,29 @@ The pseudo code of this method can be seen on algorithm \ref{alg:Load}
 \label{alg:Load}
 \end{algorithm}
 
-TODO : Conflict Matrix
+One very important topic on the LoaderTimetable class is the conflict matrix, as mentioned earlier. The conflict matrix is, as mentioned in Algorithm \ref{alg:Load}, created and populated in the Load method. The creation and population of the conflict matrix is what takes most of the time in the Load method, so it is crucial that it has the best performance possible.\\
+
+In the first version of this method, InitConflictMatrix, the time of execution took beyond 2 seconds on most of the sets. The way the search was implemented was not the best, so it wasted too much time. The search was made in a way that for each pair of examinations, all the attendant students were tested to check for clashes.\\
+
+The final implementation shows much better results. Instead of searching for all the students presented in each examination multiple times, this implementation organizes the students and examinations in a way that there's no need to search for the clashes. The method InitExaminations orders the examinations and its students as they are read. They are stored in a Hashmap, which stores the students as keys and the examinations which they attend as values. With this student-examinations organization, there's no need to search for the clashes, and so, the InitConflictMatrix simply goes to all pairs of examinations for each student, and add a conflict in the matrix for those pair of examinations. With this technique, the execution time of Load does not go beyond 80 milliseconds.
 
 \section{Graph Coloring}
 
-- Largest degree ordering (LDO)
+Graph Coloring is the heuristic used to generate a feasible solution. This heuristic is ran right after the loader. As the loader, it is convenient that this heuristic has the best possible performance, in order to give the next meta-heuristics most of the execution time. The implementation of this heuristic was based on M\"{u}ller's approach \cite{Mueller2009}.\\
+
+This heuristic is divided into phases. In the first phase, it starts by editing the conflict matrix, in order to add the exclusion hard constraints to the conflict matrix. This process is possible because the exclusion hard constraint is also a clash between a pair of examinations. This makes the algorithm easier to implement later on, because checking the conflict matrix for a clash between a pair of examinations now works for the student conflicts and exclusion.\\
+
+The second phase simply erases all examination coincidence hard constraints' occurrences that has student conflicts. It is mentioned in the \gls{itc2007}'s site \cite{McCollum2007d} that if two examinations have the examination coincidence hard constraint yet 'clash' with each other due to student enrollment, this hard constraint is ignored.\\
+
+The third phase populates and sort the assignment lists. The assignment lists are four lists that has the unassigned examinations. These four lists contain:
+\begin{itemize}
+	\item Unassigned examinations with "room exclusivity" hard constraint
+	\item Unassigned examinations with "after" hard constraint
+	\item Unassigned examinations with "examination coincidence" hard constraint
+	\item All other unassigned examinations
+\end{itemize}
+The Largest Degree Ordering from Graph Coloring heuristic is used on these four lists, and so, each list is sorted by student conflict. This is very useful, because the examination assignment has list ordering as well. The order is mentioned above, and so, first all the examinations with room exclusivity are assigned, then all with after, and finally all with examination coincidence.\\
+
+The fourth phase ... (TODO)
 
 \section{Experimental Evaluation/Results}
