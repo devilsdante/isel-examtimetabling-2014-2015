@@ -32,6 +32,5 @@
 \contentsline {section}{\numberline {4.1}Loader Module}{21}
 \contentsline {subsection}{\numberline {4.1.1}Analysis of benchmark data}{21}
 \contentsline {subsection}{\numberline {4.1.2}Implementation}{22}
-\contentsline {section}{\numberline {4.2}Graph Coloring}{22}
-\contentsline {section}{\numberline {4.3}Experimental Evaluation/Results}{22}
-\contentsline {chapter}{References}{23}
+\contentsline {section}{\numberline {4.2}Graph Coloring}{24}
+\contentsline {section}{\numberline {4.3}Experimental Evaluation/Results}{24}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.16)  20 JUN 2015 20:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.16)  21 JUN 2015 00:56
 entering extended mode
 **000-main.tex
 (000-main.tex
@@ -1164,15 +1164,6 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@every@algorithm=\toks43
 \c@algorithm=\count211
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\algorithms\algorithmic.sty"
-Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
-\c@ALC@unique=\count212
-\c@ALC@line=\count213
-\c@ALC@rem=\count214
-\c@ALC@depth=\count215
-\ALC@tlm=\skip75
-\algorithmicindent=\skip76
-)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\emp\emp.sty"
 Package: emp 1997/11/12 v1.00 Encapsulated MetaPost LaTeX Package (ohl)
 
@@ -1183,7 +1174,7 @@ Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \verbatim@in@stream=\read2
 )
 \@outemp=\write3
-\c@empfig=\count216
+\c@empfig=\count212
 \emp@TeX=\toks46
 \emp@prelude=\toks47
 )
@@ -1205,7 +1196,7 @@ Package gmp Warning: Ensure that you have enabled the shell escape feature, or
 \gmp@packages=\toks48
 \gmp@commands=\toks49
 \gmp@out=\write4
-\c@gmp@count=\count217
+\c@gmp@count=\count213
 ) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
@@ -1217,10 +1208,10 @@ Package xcolor Info: Driver file: pdftex.def on input line 225.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\colortbl\colortbl.sty"
 Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
 \everycr=\toks50
-\minrowclearance=\skip77
+\minrowclearance=\skip75
 )
 LaTeX Info: Redefining \color on input line 702.
-\rownum=\count218
+\rownum=\count214
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
 Package xcolor Info: Model `RGB' extended on input line 1353.
@@ -1239,16 +1230,16 @@ Package: chronology 2010/6/12 v1.0 Horizontal timeline
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\calc.sty"
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count219
-\calc@Bcount=\count220
+\calc@Acount=\count215
+\calc@Bcount=\count216
 \calc@Adimen=\dimen256
 \calc@Bdimen=\dimen257
-\calc@Askip=\skip78
-\calc@Bskip=\skip79
+\calc@Askip=\skip76
+\calc@Bskip=\skip77
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count221
-\calc@Cskip=\skip80
+\calc@Ccount=\count217
+\calc@Cskip=\skip78
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\frontendlayer\tikz.sty"
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgf.sty"
@@ -1295,10 +1286,10 @@ ode.tex"
 \pgf@yc=\dimen267
 \w@pgf@writea=\write5
 \r@pgf@reada=\read3
-\c@pgf@counta=\count222
-\c@pgf@countb=\count223
-\c@pgf@countc=\count224
-\c@pgf@countd=\count225
+\c@pgf@counta=\count218
+\c@pgf@countb=\count219
+\c@pgf@countc=\count220
+\c@pgf@countd=\count221
 \t@pgf@toka=\toks55
 \t@pgf@tokb=\toks56
 \t@pgf@tokc=\toks57
@@ -1319,8 +1310,8 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsyssoftpath.
 code.tex"
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count226
-\pgfsyssoftpath@bigbuffer@items=\count227
+\pgfsyssoftpath@smallbuffer@items=\count222
+\pgfsyssoftpath@bigbuffer@items=\count223
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsysprotocol.
 code.tex"
@@ -1335,7 +1326,7 @@ Package: pgfcore 2010/04/11 v3.0.0 (rcs-revision 1.7)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathparser.code.tex
 "
 \pgfmath@dimen=\dimen268
-\pgfmath@count=\count228
+\pgfmath@count=\count224
 \pgfmath@box=\box87
 \pgfmath@toks=\toks58
 \pgfmath@stack@operand=\toks59
@@ -1360,7 +1351,7 @@ code.tex")
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.integ
 erarithmetics.code.tex")))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfloat.code.tex"
-\c@pgfmathroundto@lastzeros=\count229
+\c@pgfmathroundto@lastzeros=\count225
 ))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepoints.co
 de.tex"
@@ -1398,7 +1389,7 @@ File: pgfcorescopes.code.tex 2013/10/09  (rcs-revision 1.44)
 \pgfpic=\box88
 \pgf@hbox=\box89
 \pgf@layerbox@main=\box90
-\pgf@picture@serial@count=\count230
+\pgf@picture@serial@count=\count226
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoregraphicst
 ate.code.tex"
@@ -1433,7 +1424,7 @@ File: pgfcorearrows.code.tex 2013/11/07  (rcs-revision 1.40)
 e.tex"
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
 \pgf@max=\dimen292
-\pgf@sys@shading@range@num=\count231
+\pgf@sys@shading@range@num=\count227
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreimage.cod
 e.tex"
@@ -1496,7 +1487,7 @@ Package: tikz 2013/12/13 v3.0.0 (rcs-revision 1.142)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryplothan
 dlers.code.tex"
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.0 (rcs-revision 1.20)
-\pgf@plot@mark@count=\count232
+\pgf@plot@mark@count=\count228
 \pgfplotmarksize=\dimen297
 )
 \tikz@lastx=\dimen298
@@ -1509,34 +1500,34 @@ File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.0 (rcs-revision 1.20)
 \tikz@figbox@bg=\box94
 \tikz@tempbox=\box95
 \tikz@tempbox@bg=\box96
-\tikztreelevel=\count233
-\tikznumberofchildren=\count266
-\tikznumberofcurrentchild=\count267
-\tikz@fig@count=\count268
+\tikztreelevel=\count229
+\tikznumberofchildren=\count230
+\tikznumberofcurrentchild=\count231
+\tikz@fig@count=\count232
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\modules\pgfmodulematrix.cod
 e.tex"
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count269
-\pgfmatrixcurrentcolumn=\count270
-\pgf@matrix@numberofcolumns=\count271
+\pgfmatrixcurrentrow=\count233
+\pgfmatrixcurrentcolumn=\count266
+\pgf@matrix@numberofcolumns=\count267
 )
-\tikz@expandcount=\count272
+\tikz@expandcount=\count268
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
 s\tikzlibrarytopaths.code.tex"
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.0 (rcs-revision 1.2)
 )))
-\c@step=\count273
-\c@stepstart=\count274
-\c@stepstop=\count275
-\c@yearstart=\count276
-\c@yearstop=\count277
-\c@deltayears=\count278
-\xstart=\skip81
-\xstop=\skip82
-\unit=\skip83
-\timelinewidth=\skip84
+\c@step=\count269
+\c@stepstart=\count270
+\c@stepstop=\count271
+\c@yearstart=\count272
+\c@yearstop=\count273
+\c@deltayears=\count274
+\xstart=\skip79
+\xstop=\skip80
+\unit=\skip81
+\timelinewidth=\skip82
 \timelinebox=\box97
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgfgantt\pgfgantt.sty"
@@ -1586,22 +1577,22 @@ File: pgflibraryshapes.geometric.code.tex 2008/06/26 v3.0.0 (rcs-revision 1.1)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfcalendar.code.
 tex"
 File: pgfcalendar.code.tex 2007/07/23 v3.0.0 (rcs-revision 1.11)
-\pgfcalendarcurrentjulian=\count279
+\pgfcalendarcurrentjulian=\count275
 ))
-\gtt@currentline=\count280
-\gtt@lasttitleline=\count281
-\gtt@currgrid=\count282
-\gtt@chartwidth=\count283
-\gtt@lasttitleslot=\count284
-\gtt@elementid=\count285
-\gtt@today@slot=\count286
-\gtt@startjulian=\count287
-\gtt@endjulian=\count288
-\gtt@calendar@slots=\count289
-\gtt@calendar@weeknumber=\count290
-\gtt@calendar@startofweek=\count291
-\gtt@left@slot=\count292
-\gtt@right@slot=\count293
+\gtt@currentline=\count276
+\gtt@lasttitleline=\count277
+\gtt@currgrid=\count278
+\gtt@chartwidth=\count279
+\gtt@lasttitleslot=\count280
+\gtt@elementid=\count281
+\gtt@today@slot=\count282
+\gtt@startjulian=\count283
+\gtt@endjulian=\count284
+\gtt@calendar@slots=\count285
+\gtt@calendar@weeknumber=\count286
+\gtt@calendar@startofweek=\count287
+\gtt@left@slot=\count288
+\gtt@right@slot=\count289
 ) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tikzscale\tikzscale.sty"
 Package: tikzscale 2013/05/22 v0.2.6 tikzscale LaTeX package
 
@@ -1611,8 +1602,8 @@ Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xstring\xstring.sty"
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xstring\xstring.tex"
 \@xs@message=\write6
-\integerpart=\count294
-\decimalpart=\count295
+\integerpart=\count290
+\decimalpart=\count291
 )
 Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
@@ -1826,7 +1817,7 @@ s.code.tex"
 \pgfdecoratedinputsegmentcompleteddistance=\dimen307
 \pgfdecoratedinputsegmentremainingdistance=\dimen308
 \pgf@decorate@distancetomove=\dimen309
-\pgf@decorate@repeatstate=\count296
+\pgf@decorate@repeatstate=\count292
 \pgfdecorationsegmentamplitude=\dimen310
 \pgfdecorationsegmentlength=\dimen311
 )
@@ -1834,7 +1825,7 @@ s.code.tex"
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\decorations\pgfli
 brarydecorations.markings.code.tex"))
-\c@tikzumlPackageLayers=\count297
+\c@tikzumlPackageLayers=\count293
 \pgf@layerbox@package0=\box122
 \pgf@layerboxsaved@package0=\box123
 \pgf@layerbox@package1=\box124
@@ -1843,7 +1834,7 @@ brarydecorations.markings.code.tex"))
 \pgf@layerboxsaved@package2=\box127
 \pgf@layerbox@package3=\box128
 \pgf@layerboxsaved@package3=\box129
-\c@tikzumlFragmentLayers=\count298
+\c@tikzumlFragmentLayers=\count294
 \pgf@layerbox@fragment0=\box130
 \pgf@layerboxsaved@fragment0=\box131
 \pgf@layerbox@fragment1=\box132
@@ -1852,7 +1843,7 @@ brarydecorations.markings.code.tex"))
 \pgf@layerboxsaved@fragment2=\box135
 \pgf@layerbox@fragment3=\box136
 \pgf@layerboxsaved@fragment3=\box137
-\c@tikzumlStateLayers=\count299
+\c@tikzumlStateLayers=\count295
 \pgf@layerbox@state0=\box138
 \pgf@layerboxsaved@state0=\box139
 \pgf@layerbox@state1=\box140
@@ -1861,7 +1852,7 @@ brarydecorations.markings.code.tex"))
 \pgf@layerboxsaved@state2=\box143
 \pgf@layerbox@state3=\box144
 \pgf@layerboxsaved@state3=\box145
-\c@tikzumlComponentLayers=\count300
+\c@tikzumlComponentLayers=\count296
 \pgf@layerbox@component0=\box146
 \pgf@layerboxsaved@component0=\box147
 \pgf@layerbox@component1=\box148
@@ -1876,69 +1867,88 @@ brarydecorations.markings.code.tex"))
 \pgf@layerboxsaved@activity=\box157
 \pgf@layerbox@connections=\box158
 \pgf@layerboxsaved@connections=\box159
-\c@tikzumlPackageClassNum=\count301
-\c@tikzumlPackageSubPackageNum=\count302
-\c@tikzumlRelationNum=\count303
-\c@tikzumlNoteNum=\count304
-\c@pos=\count305
-\c@posT=\count306
-\c@posStereo=\count307
-\c@tikzumlPackageLevel=\count308
-\c@tikzumlSystemUseCaseNum=\count309
-\c@tikzumlSystemLevel=\count310
-\c@tikzumlUseCaseNum=\count311
-\c@tikzumlActorNum=\count312
-\c@tikzumlStateJoinNum=\count313
-\c@tikzumlStateDecisionNum=\count314
-\c@tikzumlStateInitialNum=\count315
-\c@tikzumlStateFinalNum=\count316
-\c@tikzumlStateEnterNum=\count317
-\c@tikzumlStateExitNum=\count318
-\c@tikzumlStateEndNum=\count319
-\c@tikzumlStateHistoryNum=\count320
-\c@tikzumlStateDeepHistoryNum=\count321
-\c@tikzumlStateLevel=\count322
-\c@tikzumlStateSubStateNum=\count323
-\c@tikzumlStateText=\count324
-\c@tikzumlObjectNum=\count325
-\c@tikzumlCallLevel=\count326
-\c@tikzumlCallNum=\count327
-\c@tikzumlFragmentLevel=\count328
-\c@tikzumlFragmentLevelNum=\count329
-\c@tikzumlFragmentNum=\count330
-\c@tikzumlFragmentPartNum=\count331
-\c@tikzumlCallStartFragmentNum=\count332
-\c@tikzumlCallEndFragmentNum=\count333
-\tikzumlCall@xa=\skip85
-\tikzumlCall@xb=\skip86
-\c@tikzumlComponentLevel=\count334
-\c@tikzumlComponentSubComponentNum=\count335
-\c@tikzumlConnectorNum=\count336
-\tikzuml@AC@xa=\skip87
-\tikzuml@AC@ya=\skip88
-\tikzuml@AC@xb=\skip89
-\tikzuml@AC@yb=\skip90
-\tikzuml@AC@xi=\skip91
-\tikzuml@AC@yi=\skip92
-\tikzuml@AC@xic=\skip93
-\tikzuml@AC@yic=\skip94
-\tikzuml@AC@xio=\skip95
-\tikzuml@AC@yio=\skip96
-\tikzuml@AC@AB=\skip97
-\tikzuml@AC@lambda=\skip98
-\tikzuml@AC@xtrc=\skip99
-\tikzuml@AC@ytrc=\skip100
-\tikzuml@AC@xtlc=\skip101
-\tikzuml@AC@ytlc=\skip102
-\tikzuml@AC@xblc=\skip103
-\tikzuml@AC@yblc=\skip104
-\tikzuml@AC@xbrc=\skip105
-\tikzuml@AC@ybrc=\skip106
-\tikzuml@AC@middleArm=\skip107
+\c@tikzumlPackageClassNum=\count297
+\c@tikzumlPackageSubPackageNum=\count298
+\c@tikzumlRelationNum=\count299
+\c@tikzumlNoteNum=\count300
+\c@pos=\count301
+\c@posT=\count302
+\c@posStereo=\count303
+\c@tikzumlPackageLevel=\count304
+\c@tikzumlSystemUseCaseNum=\count305
+\c@tikzumlSystemLevel=\count306
+\c@tikzumlUseCaseNum=\count307
+\c@tikzumlActorNum=\count308
+\c@tikzumlStateJoinNum=\count309
+\c@tikzumlStateDecisionNum=\count310
+\c@tikzumlStateInitialNum=\count311
+\c@tikzumlStateFinalNum=\count312
+\c@tikzumlStateEnterNum=\count313
+\c@tikzumlStateExitNum=\count314
+\c@tikzumlStateEndNum=\count315
+\c@tikzumlStateHistoryNum=\count316
+\c@tikzumlStateDeepHistoryNum=\count317
+\c@tikzumlStateLevel=\count318
+\c@tikzumlStateSubStateNum=\count319
+\c@tikzumlStateText=\count320
+\c@tikzumlObjectNum=\count321
+\c@tikzumlCallLevel=\count322
+\c@tikzumlCallNum=\count323
+\c@tikzumlFragmentLevel=\count324
+\c@tikzumlFragmentLevelNum=\count325
+\c@tikzumlFragmentNum=\count326
+\c@tikzumlFragmentPartNum=\count327
+\c@tikzumlCallStartFragmentNum=\count328
+\c@tikzumlCallEndFragmentNum=\count329
+\tikzumlCall@xa=\skip83
+\tikzumlCall@xb=\skip84
+\c@tikzumlComponentLevel=\count330
+\c@tikzumlComponentSubComponentNum=\count331
+\c@tikzumlConnectorNum=\count332
+\tikzuml@AC@xa=\skip85
+\tikzuml@AC@ya=\skip86
+\tikzuml@AC@xb=\skip87
+\tikzuml@AC@yb=\skip88
+\tikzuml@AC@xi=\skip89
+\tikzuml@AC@yi=\skip90
+\tikzuml@AC@xic=\skip91
+\tikzuml@AC@yic=\skip92
+\tikzuml@AC@xio=\skip93
+\tikzuml@AC@yio=\skip94
+\tikzuml@AC@AB=\skip95
+\tikzuml@AC@lambda=\skip96
+\tikzuml@AC@xtrc=\skip97
+\tikzuml@AC@ytrc=\skip98
+\tikzuml@AC@xtlc=\skip99
+\tikzuml@AC@ytlc=\skip100
+\tikzuml@AC@xblc=\skip101
+\tikzuml@AC@yblc=\skip102
+\tikzuml@AC@xbrc=\skip103
+\tikzuml@AC@ybrc=\skip104
+\tikzuml@AC@middleArm=\skip105
 )
-Package caption Info: We need package `newfloat' on input line 53.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\algorithmicx\algpseudocode.sty"
+Package: algpseudocode 
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\newfloat.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\algorithmicx\algorithmicx.sty"
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count333
+\c@ALG@rem=\count334
+\c@ALG@nested=\count335
+\ALG@tlm=\skip106
+\ALG@thistlm=\skip107
+\c@ALG@Lnr=\count336
+\c@ALG@blocknr=\count337
+\c@ALG@storecount=\count338
+\c@ALG@tmpcounter=\count339
+\ALG@tmplength=\skip108
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+)
+Package caption Info: We need package `newfloat' on input line 54.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\newfloat.sty"
 Package: newfloat 2013/05/11 v1.1-91 Defining new floating environments (AR)
 Package newfloat Info: Unsupported document class, or \@chapter 
 (newfloat)             was already redefined by another package.
@@ -1952,19 +1962,19 @@ age [\@makechapterhead {#2}]\else \@makechapterhead {#2}\@afterheading \fi .
 Package newfloat Info: \Hy@org@chapter = undefined.
 Package newfloat Info: Trying Plan B...
 )
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 59.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 60.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1ptm.fd"
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 (001-acronyms.tex
-\acronymlabelwidth=\skip108
+\acronymlabelwidth=\skip109
 )
 \glswrite=\write7
 \glo@main@file=\write8
-Package glossaries Info: Writing glossary file 000-main.glo on input line 63.
+Package glossaries Info: Writing glossary file 000-main.glo on input line 64.
 \glo@acronym@file=\write9
-Package glossaries Info: Writing glossary file 000-main.acn on input line 63.
+Package glossaries Info: Writing glossary file 000-main.acn on input line 64.
 
 \@input{000-latex-config.aux}
 (000-latex-config.tex)
@@ -2082,29 +2092,30 @@ Package: berasans 2004/01/30 (WaS)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bera\beramono.sty"
 Package: beramono 2004/01/31 (WaS)
 )))
-\tikzscale@accuracy=\skip109
+\tikzscale@accuracy=\skip110
 
 (000-main.aux (100-cover.aux) (200-introduction.aux) (300-theory.aux)
-(400-architecture.aux) (500-loader-solution-init.aux) (800-references.aux))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 69.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 69.
+(400-architecture.aux) (500-loader-solution-init.aux) (test.aux)
+(800-references.aux))
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 70.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 70.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    ... okay on input line 70.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ucs\ucsencs.def"
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
@@ -2145,16 +2156,16 @@ File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count337
+\scratchcounter=\count340
 \scratchdimen=\dimen312
 \scratchbox=\box160
-\nofMPsegments=\count338
-\nofMParguments=\count339
+\nofMPsegments=\count341
+\nofMParguments=\count342
 \everyMPshowfont=\toks65
-\MPscratchCnt=\count340
+\MPscratchCnt=\count343
 \MPscratchDim=\dimen313
-\MPnumerator=\count341
-\makeMPintoPDFobject=\count342
+\MPnumerator=\count344
+\makeMPintoPDFobject=\count345
 \everyMPtoPDFconversion=\toks66
 )
 Package caption Info: Begin \AtBeginDocument code.
@@ -2181,7 +2192,7 @@ Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 (000-main.glsdefs)
-\c@lstlisting=\count343
+\c@lstlisting=\count346
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\beamer\base\translator\dicts\tran
 slator-basic-dictionary\translator-basic-dictionary-English.dict"
@@ -2195,53 +2206,53 @@ Dictionary: translator-months-dictionary, Language: English
 "
 File: siunitx-abbreviations.cfg 2015/06/16 v2.6f siunitx: Abbreviated units
 ) ABD: EveryShipout initializing macros
-\c__siunitx_mathsf_int=\count344
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 69.
+\c__siunitx_mathsf_int=\count347
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 70.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 69.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 70.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 69.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 70.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 69.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 70.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 69.
+(Font)              <10> on input line 70.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 69.
+(Font)              <7> on input line 70.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 69.
-LaTeX Font Info:    Try loading font information for U+msa on input line 69.
+(Font)              <5> on input line 70.
+LaTeX Font Info:    Try loading font information for U+msa on input line 70.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 69.
+LaTeX Font Info:    Try loading font information for U+msb on input line 70.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for OT1+lmss on input line 69.
+LaTeX Font Info:    Try loading font information for OT1+lmss on input line 70.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ot1lmss.fd"
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-\c__siunitx_mathtt_int=\count345
-LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 69.
+\c__siunitx_mathtt_int=\count348
+LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 70.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ot1lmtt.fd"
@@ -2295,7 +2306,11 @@ LaTeX Font Info:    Font shape `T1/fve/b/n' will be
 ]
 (000-main.toc [3])
 \tf@toc=\write10
- [4] (000-main.lof)
+ [4] (000-main.lof
+
+LaTeX Warning: Citation `Talbi2009' on page v undefined on input line 4.
+
+)
 \tf@lof=\write11
  [5
 
@@ -2308,8 +2323,7 @@ LaTeX Font Info:    Font shape `T1/fve/b/n' will be
  [7] [8
 
 
-]
-(000-main.lol)
+] (000-main.lol)
 \tf@lol=\write13
 
 No file 000-main.acr.
@@ -2387,6 +2401,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
  []
 
 
+LaTeX Warning: Citation `Schaerf1999' on page 5 undefined on input line 11.
+
+
+LaTeX Warning: Citation `Jensen2001' on page 5 undefined on input line 13.
+
+
+LaTeX Warning: Citation `Arora2009' on page 5 undefined on input line 13.
+
+
+LaTeX Warning: Citation `Arora2009' on page 5 undefined on input line 13.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 9--16
 
  []
@@ -2407,6 +2433,19 @@ File: ./images/typesOfAlgorithms.pdf Graphic file (type pdf)
 <use ./images/typesOfAlgorithms.pdf>
 Package pdftex.def Info: ./images/typesOfAlgorithms.pdf used on input line 21.
 (pdftex.def)             Requested size: 418.25368pt x 247.21951pt.
+
+
+LaTeX Warning: Citation `Talbi2009' on page 5 undefined on input line 22.
+
+
+LaTeX Warning: Citation `Talbi2009' on page 5 undefined on input line 22.
+
+
+LaTeX Warning: Citation `Qu2009' on page 5 undefined on input line 28.
+
+
+LaTeX Warning: Citation `Lewis2007' on page 5 undefined on input line 32.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 26--33
 
@@ -2433,9 +2472,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--37
  []
 
 
+LaTeX Warning: Citation `Qu2009' on page 7 undefined on input line 39.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 39--40
 
  []
+
+
+LaTeX Warning: Citation `Schaerf1999' on page 7 undefined on input line 42.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 42--43
@@ -2448,6 +2493,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 46--47
  []
 
 [7]
+
+LaTeX Warning: Citation `Qu2009' on page 8 undefined on input line 51.
+
+
+LaTeX Warning: Citation `Carter1996' on page 8 undefined on input line 53.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--54
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 49--54
 
  []
@@ -2458,9 +2515,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--54
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--54
-
- []
+LaTeX Warning: Citation `Talbi2009' on page 8 undefined on input line 59.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 59--60
@@ -2468,9 +2523,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--60
  []
 
 
+LaTeX Warning: Citation `Talbi2009' on page 8 undefined on input line 62.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 62--63
 
  []
+
+
+LaTeX Warning: Citation `Talbi2009' on page 8 undefined on input line 65.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 65--66
@@ -2478,14 +2539,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--66
  []
 
 [8]
+
+LaTeX Warning: Citation `McCollum2007' on page 9 undefined on input line 91.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
  []
 
 [9]
+
+LaTeX Warning: Citation `Mueller2009' on page 10 undefined on input line 106.
+
+
+LaTeX Warning: Citation `Mueller2005' on page 10 undefined on input line 106.
+
+
+LaTeX Warning: Citation `Mueller2004' on page 10 undefined on input line 106.
+
+
+LaTeX Warning: Citation `Russell2010' on page 10 undefined on input line 106.
+
+
+LaTeX Warning: Citation `Dueck1993' on page 10 undefined on input line 106.
+
+
+LaTeX Warning: Citation `Kirkpatrick1983' on page 10 undefined on input line 10
+6.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 106--107
 
  []
+
+
+LaTeX Warning: Citation `Gogos2012' on page 10 undefined on input line 110.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 110--111
@@ -2493,9 +2581,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 110--111
  []
 
 
+LaTeX Warning: Citation `Atsuta2007' on page 10 undefined on input line 112.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 112--113
 
  []
+
+
+LaTeX Warning: Citation `Smet2007' on page 10 undefined on input line 114.
+
+
+LaTeX Warning: Citation `Drools' on page 10 undefined on input line 114.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 114--115
@@ -2503,14 +2600,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 114--115
  []
 
 
+LaTeX Warning: Citation `Pillay2007' on page 10 undefined on input line 116.
+
+
+LaTeX Warning: Citation `Abdullah2009' on page 10 undefined on input line 121.
+
+
+LaTeX Warning: Citation `Javadian2008' on page 10 undefined on input line 121.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 121--122
 
  []
 
 [10]
+
+LaTeX Warning: Citation `Gogos2009' on page 11 undefined on input line 123.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 123--124
 
  []
+
+
+LaTeX Warning: Citation `McCollum2009' on page 11 undefined on input line 125.
+
+
+LaTeX Warning: Citation `Burke2004' on page 11 undefined on input line 125.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 125--126
@@ -2518,9 +2634,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 125--126
  []
 
 
+LaTeX Warning: Citation `Alzaqebah2011' on page 11 undefined on input line 127.
+
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 127--128
 
  []
+
+
+LaTeX Warning: Citation `Turabieh2011' on page 11 undefined on input line 129.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 129--130
@@ -2528,9 +2651,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 129--130
  []
 
 
+LaTeX Warning: Citation `Abdullah2012' on page 11 undefined on input line 131.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 131--132
 
  []
+
+
+LaTeX Warning: Citation `Demeester2012' on page 11 undefined on input line 133.
+
+
+
+LaTeX Warning: Citation `Burke2008' on page 11 undefined on input line 133.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 133--134
@@ -2538,9 +2671,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 133--134
  []
 
 
+LaTeX Warning: Citation `McCollum2012' on page 11 undefined on input line 135.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 135--136
 
  []
+
+
+LaTeX Warning: Citation `Sabar2012' on page 11 undefined on input line 137.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 137--138
@@ -2548,9 +2687,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 137--138
  []
 
 [11]
+
+LaTeX Warning: Citation `Sabar2012a' on page 12 undefined on input line 140.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 140--141
 
  []
+
+
+LaTeX Warning: Citation `Abdullah2013' on page 12 undefined on input line 142.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 142--143
@@ -2558,9 +2704,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 142--143
  []
 
 
+LaTeX Warning: Citation `Alzaqebah2014' on page 12 undefined on input line 144.
+
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 144--145
 
  []
+
+
+LaTeX Warning: Citation `Burke2014' on page 12 undefined on input line 146.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 146--147
@@ -2568,9 +2721,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 146--147
  []
 
 
+LaTeX Warning: Citation `Mouhoub2014' on page 12 undefined on input line 148.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 148--149
 
  []
+
+
+LaTeX Warning: Citation `Hamilton-Bryce2014' on page 12 undefined on input line
+ 150.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 150--151
@@ -2578,14 +2738,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 150--151
  []
 
 [12]
+
+LaTeX Warning: Citation `Rahman2014' on page 13 undefined on input line 152.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 152--153
 
  []
 
 
+LaTeX Warning: Citation `Rahman2014a' on page 13 undefined on input line 154.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 154--155
 
  []
+
+
+LaTeX Warning: Citation `Leite2014' on page 13 undefined on input line 156.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 156--157
@@ -2799,6 +2969,9 @@ Overfull \hbox (62.54344pt too wide) in paragraph at lines 63--64
  []
 
 
+LaTeX Warning: Citation `McCollum2007a' on page 15 undefined on input line 70.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
@@ -2941,6 +3114,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 283--284
  []
 
 
+LaTeX Warning: Citation `McCollum2007b' on page 18 undefined on input line 285.
+
+
+
+LaTeX Warning: Citation `McCollum2007c' on page 18 undefined on input line 285.
+
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 289--290
 
  []
@@ -2973,77 +3154,92 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--66
  []
 
 
+LaTeX Warning: Citation `Microsoft2015' on page 22 undefined on input line 67.
+
+
+LaTeX Warning: Citation `Microsoft2015a' on page 22 undefined on input line 67.
+
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 67--68
 
  []
 
-) [22] (800-references.tex (000-main.bbl
-LaTeX Font Info:    Try loading font information for T1+fvm on input line 36.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bera\t1fvm.fd"
-File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
-)
-LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 8.09995pt on input line 36.
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--38
-[]\T1/fve/m/n/9 B. Mc-Col-lum, ``Ex-am-i-na-tion eval-u-a-tion func-tion.'' $\T
-1/fvm/m/n/9 http : / / www . cs . qub . ac . uk / itc2007 /$
  []
 
 
-Underfull \hbox (badness 5504) in paragraph at lines 78--81
-[]\T1/fve/m/n/9 G. Smet, ``Drools-solver.'' $\T1/fvm/m/n/9 http : / / www . cs 
-. qub . ac . uk / itc2007 / winner / bestexamsolutions /$
+Underfull \hbox (badness 10000) in paragraph at lines 71--72
+
  []
 
-[23
+Missing character: There is no T in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 111--112
 
-
-
-
-
-
-] [24]
-Underfull \hbox (badness 2189) in paragraph at lines 230--233
-[]\T1/fve/m/n/9 Microsoft, ``Stream-reader class.'' $\T1/fvm/m/n/9 https : / / 
-msdn . microsoft . com / en-[]us / library / system . io .$
  []
 
+[23]) [24] (test.tex) [25
 
-Underfull \hbox (badness 10000) in paragraph at lines 235--238
-[]\T1/fve/m/n/9 Microsoft, ``Regex class.'' $\T1/fvm/m/n/9 https : / / msdn . m
-icrosoft . com / en-[]us / library / system . text .$
- []
 
-)) [25] (000-main.aux (100-cover.aux) (200-introduction.aux) (300-theory.aux)
-(400-architecture.aux) (500-loader-solution-init.aux) (800-references.aux))
+] [26
+
+
+
+] (800-references.tex
+No file 000-main.bbl.
+) (000-main.aux (100-cover.aux) (200-introduction.aux) (300-theory.aux)
+(400-architecture.aux) (500-loader-solution-init.aux) (test.aux)
+(800-references.aux))
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
- 39148 strings out of 493671
- 793087 string characters out of 3141423
- 1000160 words of memory out of 3000000
- 41684 multiletter control sequences out of 15000+200000
- 92661 words of font info for 86 fonts, out of 3000000 for 9000
+ 39546 strings out of 493671
+ 799506 string characters out of 3141423
+ 1006520 words of memory out of 3000000
+ 42078 multiletter control sequences out of 15000+200000
+ 92041 words of font info for 84 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  62i,14n,84p,10397b,1208s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files (x8
-6)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}<C:/Program Files (x86)/MiKTeX 2.9/f
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Progr
+am Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files (x86)/
+MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/f
 onts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
 ts/type1/bera/fveb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/bera/fv
 er8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/bera/fver8a.pfb><C:/Pro
-gram Files (x86)/MiKTeX 2.9/fonts/type1/bera/fvmr8a.pfb><C:/Program Files (x86)
-/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9
-/fonts/type1/public/lm/lmmi9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
-/public/lm/lmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lm
-r9.pfb>
-Output written on 000-main.pdf (35 pages, 270042 bytes).
+gram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files 
+(x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi9.pfb><C:/Program Files (x86)/MiKTeX
+ 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
+pe1/public/lm/lmr9.pfb>
+Output written on 000-main.pdf (36 pages, 266550 bytes).
 PDF statistics:
- 220 PDF objects out of 1000 (max. 8388607)
+ 219 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  124 words of extra memory for PDF output out of 10000 (max. 10000000)
 

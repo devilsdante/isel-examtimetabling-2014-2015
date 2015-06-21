@@ -54,35 +54,28 @@ namespace Tools.Loader.Timetable
                 if (token.Contains("Exams"))
                 {
                     InitExaminations();
-                    continue;
                 }
                 else if (token.Contains("Periods"))
                 {
                     InitPeriods();
-                    continue;
                 }
                 else if (token.Contains("Rooms"))
                 {
                     InitRooms();
-                    continue;
                 }
                 else if (token.Contains("PeriodHardConstraints"))
                 {
                     InitPeriodHardConstraints();
-                    continue;
                 }
                 else if (token.Contains("RoomHardConstraints"))
                 {
                     InitRoomHardConstraints();
-                    continue;
                 }
                 else if (token.Contains("InstitutionalWeightings"))
                 {
                     InitInstitutionalWeightings();
-                    continue;
                 }
-
-                if (!NextLine())
+                else if (!NextLine())
                     break;
             }
 
@@ -206,7 +199,7 @@ namespace Tools.Loader.Timetable
             }
         }
 
-        public void InitExaminations()
+        private void InitExaminations()
         {
             string token = ReadCurrToken();
             string n_exams_s = new Regex("\\d+").Match(token).Captures[0].Value;

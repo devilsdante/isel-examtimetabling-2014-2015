@@ -64,9 +64,76 @@ Instance 12  & 1653 	 & 78 	& 50 & 0.18 	 & 12 \\
 
 The development of the Loader tool is divided into two main parts: the implementation of the loading part, which loads the set file into the repositories using the business layer, and the creation and population of the conflict matrix.\\
 
-First off, The Loader was implemented using the Loader base class, in which the LoaderTimetable extends. The Loader class implements functions to make it easier to run through a file. It uses StreamReader \cite{Microsoft2015} to go through every line of the file and Regex \cite{Microsoft2015a} class to slit the phrases into tokens given a pattern. Methods like \textit{NextLine}, \textit{ReadNextToken}, \textit{ReadCurrToken}, etc, are pretty useful to use right away in the LoaderTimetable class. \\
+First off, The Loader was implemented using the Loader base class, in which the LoaderTimetable extends. The Loader class implements functions to make it easier to run through a file. It uses StreamReader \cite{Microsoft2015} to go through every line of the file and Regex \cite{Microsoft2015a} class to slit the phrases into tokens given a pattern. Loader offers the following methods: \textit{NextLine}, \textit{ReadNextToken}, \textit{ReadCurrToken} and \textit{ReadNextLine}. These methods are pretty useful to use directly in the LoaderTimetable class. \\
 
-Unlike the Loader, LoaderTimetable depends on the structure of the set files. This class will use the Loader functions to go through a set file, and so, populate the repositories depending on the information read by the Loader class. LoaderTimetable offers the following operations: 
+Unlike the Loader, LoaderTimetable depends on the structure of the set files. This class will use the Loader functions to go through a set file, and so, populate the repositories depending on the information read by the Loader class. LoaderTimetable offers the following operations: \textit{Load}, \textit{Unload}, \textit{InitSolutions}, \textit{InitInstitutionalWeightings}, \textit{InitRoomHardConstraints}, \textit{InitPeriodHardConstraints}, \textit{InitRooms}, \textit{InitPeriods} and \textit{InitExaminations}, \textit{InitConflictMatrix}. In this implementation only Load and Unload are public, while the rest is private, because their are only used within the class by the Load method.\\
+
+All specifications about these two classes can be seen in the Figure \ref{fig:Loaders}.\\
+
+\begin{figure}[t!]
+\centering
+\begin{tikzpicture}
+\begin{umlpackage}[x = 2, y = 0]{Tools Layer} 
+\umlclass[x = -3]{Loader}
+{
+}
+{
+	+Restart() : void\\
+	+NextLine() : bool\\
+	+ReadNextToken() : string\\
+	+ReadCurrToken() : string\\
+	+ReadNextLine() : List<string>
+}
+\umlclass[x = 6]{LoaderTimetable}
+{
+	
+}
+{
+	+Unload() : void\\
+	+Load() : void\\
+	-InitSolutions() : void\\
+	-InitInstitutionalWeightings() : void\\
+	-InitRoomHardConstraints() : void\\
+	-InitPeriodHardConstraints() : void\\
+	-InitRooms() : void\\
+	-InitPeriods() : void\\
+	-InitExaminations() : void\\
+	-InitConflictMatrix() : void
+}
+\end{umlpackage}
+
+\umlVHextend[anchor1 = -180, anchor2 = 0, pos stereo=1.5]{LoaderTimetable}{Loader} 
+\end{tikzpicture}
+
+\caption{Specification of Loader and LoaderTimetable tools} \label{fig:Loaders}
+\end{figure}
+
+The implementation of LoaderTimetable class is all about the Load method. This public method will be "asking" for new lines and reading the tokens out of it, using the Loader class. This procedure will take place as long as there are new lines to read. It's a pretty simple cycle that gets a new line and checks if, for example, the string "Exams" is contained on that line. If so, it runs InitExaminations, if not, checks if "Periods" is contained on that line, and so on, until it runs out of file.\\
+
+The pseudo code of this method can be seen on algorithm \ref{alg:Load}
+
+\begin{algorithm}
+\begin{algorithmic}[1]
+\State Read new line
+\Repeat
+	\State Read next token $token$
+	\State If $token == null$ Then $break$ 
+	\State If $token$ Contains $"Exams"$ Then $InitExaminations()$
+	\State Else If $token$ Contains $"Periods"$ Then $InitPeriods()$
+	\State Else If $token$ Contains $"Rooms"$ Then $InitRooms()$
+	\State Else If $token$ Contains $"PeriodHardConstraints"$ Then $InitPeriodHardConstraints()$
+	\State Else If $token$ Contains $"RoomHardConstraints"$ Then $InitRoomHardConstraints()$
+	\State Else If $token$ Contains $"InstitutionalWeightings"$ Then $InitInstitutionalWeightings()$
+	\State Else If Cannot read new line Then $break$ 
+\Until Always
+\State $InitSolutions()$
+\State $InitConflictMatrix()$
+\end{algorithmic}
+\caption{LoaderTimetabling's Loader method.}
+\label{alg:Load}
+\end{algorithm}
+
+TODO : Conflict Matrix
 
 \section{Graph Coloring}
 

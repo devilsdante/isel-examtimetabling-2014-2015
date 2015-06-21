@@ -28,7 +28,7 @@
 \usepackage{subcaption}
 \usepackage{etoolbox,siunitx}% http://ctan.org/pkg/etoolbox
 \usepackage{algorithm}
-\usepackage{algorithmic}
+%\usepackage{algorithmic}
 \usepackage{emp}
 \usepackage[shellescape]{gmp}
 
@@ -41,9 +41,10 @@
 \usepackage{tikzscale}
 \usepackage{tikz-uml}
 
-%\usepackage{multirow}
-%\usepackage{amstext}
-%\usepackage{textcomp}
+% Algorithm package
+\usepackage{algpseudocode} % Typesetting using the algorithmicx package
+\renewcommand{\algorithmiccomment}[1]{\bgroup\hfill//~#1\egroup} % Algorithm comment
+\usepackage{etoolbox,siunitx} % For floating point columns
 
 
 \usepackage{colortbl}
@@ -100,8 +101,8 @@
 \include{200-introduction}
 \include{300-theory}
 \include{400-architecture}
-%\include{test}
 \include{500-loader-solution-init}
+\include{test}
 %\include{500-local-search}
 %\include{500-genetic}
 %\include{600-conclusions}
