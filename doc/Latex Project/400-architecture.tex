@@ -131,6 +131,7 @@ The Repository class stores the entities in a list, which index corresponds to t
 \end{figure}
 
 \subsection{Business Layer}
+\label{subsec:BussinessLayer}
 
 The \gls{bl} provides access to the repositories explained above by, in each of the business classes, affording CRUD functions or get/set functions, and specific functions that depend on the type of the repository. One example of these last functions is, considering the room hard constraints repository, is to get all the room hard constraints that is of a certain type. This can be seen in the Figure \ref{fig:BusinessLayer}, which includes all the \gls{bl} classes, methods and variables. The CRUD functions provided by some of the business classes simply use the CRUD functions from the Repository instance, which is presented on that same business class.\\
 

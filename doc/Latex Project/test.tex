@@ -1,20 +1,35 @@
-\begin{algorithm}
-\begin{algorithmic}[1]
-\State Read new line
-\Repeat
-	\State Read next token $token$
-	\State If $token == null$ Then $break$ 
-	\State If $token$ Contains $"Exams"$ Then $InitExaminations()$
-	\State Else If $token$ Contains $"Periods"$ Then $InitPeriods()$
-	\State Else If $token$ Contains $"Rooms"$ Then $InitRooms()$
-	\State Else If $token$ Contains $"PeriodHardConstraints"$ Then $InitPeriodHardConstraints()$
-	\State Else If $token$ Contains $"RoomHardConstraints"$ Then $InitRoomHardConstraints()$
-	\State Else If $token$ Contains $"InstitutionalWeightings"$ Then $InitInstitutionalWeightings()$
-	\State Else If Cannot read new line Then $break$ 
-\Until Always
-\State $InitSolutions()$
-\State $InitConflictMatrix()$
-\end{algorithmic}
-\caption{LoaderTimetabling's Loader method.}
-\label{alg:GDA}
-\end{algorithm}
+\begin{figure}[t!]
+\centering
+\begin{tikzpicture}
+\begin{umlpackage}[x = 2, y = 0]{Tools Layer} 
+\umlclass[x = 0]{GraphColoring}
+{
+}
+{
+	+Restart() : void\\
+	+NextLine() : bool\\
+	+ReadNextToken() : string\\
+	+ReadCurrToken() : string\\
+	+ReadNextLine() : List<string>
+}
+\umlclass[x = 6, y = 0]{FeasibilityTester}
+{
+	-examinations : Examinations\\
+	-period\_hard\_constraints : PeriodHardConstraints\\
+	-room\_hard\_constraints: RoomHardConstraints\\
+	-rooms : Rooms\\
+	-conflict\_matrix : int[,]
+}
+{
+	+IsFeasiblePeriod(soltution : solution,\\ exam : Examination, period : Period) : bool\\
+	+IsFeasibleRoom(soltution : solution,\\ exam : Examination, period : Period, room : Room) : bool\\
+	+IsFeasiblePeriodRoom(soltution : solution,\\ exam : Examination, period : Period, room : Room) : bool\\
+	+RoomCurrentCapacityOnPeriod(solution : Solution,\\ period : Period, room : Room)\\
+}
+\end{umlpackage}
+
+%\umlimport[geometry=|-, anchors=90 and 50, name=import]{sp2}{sp1} 
+\end{tikzpicture}
+
+\caption{Specification of Loader and LoaderTimetable tools} \label{fig:Loaders}
+\end{figure}

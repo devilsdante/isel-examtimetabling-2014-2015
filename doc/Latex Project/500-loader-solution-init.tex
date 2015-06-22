@@ -156,6 +156,16 @@ The third phase populates and sort the assignment lists. The assignment lists ar
 \end{itemize}
 The Largest Degree Ordering from Graph Coloring heuristic is used on these four lists, and so, each list is sorted by student conflict. This is very useful, because the examination assignment has list ordering as well. The order is mentioned above, and so, first all the examinations with room exclusivity are assigned, then all with after, and finally all with examination coincidence.\\
 
-The fourth phase ... (TODO)
+The fourth phase is the examination assignment phase. This phase is the most important phase of this heuristic. As mentioned it's based on 
+M\"{u}ller's approach \cite{Mueller2009}. It starts to assign the examinations with higher conflict, as mentioned above, using the four lists method. There are two types of assignment:
+
+\begin{itemize}
+	\item Normal assignment - If it's possible to assign the chosen examination to a period and room, a normal assignment is processed. In this type of assignment, of all the possible periods to assign, one of them is chosen randomly. It should be noted that a possible period to assign means that the examination can be assigned to that period and at least in one room on that period. After choosing the period, the same will be done to the rooms, and so, a random room will be chosen from all possible assignable rooms for that examination and period. If the current examination has to be coincident to another, and so, set to the same period as the other, the rules explained won't be applied. Instead, only that period will be considered and if the period is not feasible to the current examination, the normal assignment won't occur. \\
+	\item Forcing assignment - Occurs if there are no possible periods to assign the chosen examination, thus the normal assignment was not possible. A random period and room are selected and the examination will be forced to be assigned on those, unassigning all the examinations that conflict with this assignment. As the normal assignment, there are exceptions to this rule. If a coincident examination is already set, the examination to be set will be forced to be on the same period as the coincident examination, in a random room. The rule about force assigning an examination to specific period because of a coincident examination has 75\% of chance to set the period the same as the coincident examination and 25\% of chance to unassign all coincident examinations and try a random period instead. This \textit{constraint} was applied to avoid infinite or very long finite loops, mainly in SET 6.
+\end{itemize}
+
+It is to be noted that the Graph Coloring heuristic implementation only signs, unassigns examinations and checks clashes of examinations when forcing an assignment. The feasibility checking done to periods and rooms (an examination being able to be set in a period and room) are made by the tool FeasibilityTester, as mentioned in the Section \ref{subsec:BussinessLayer}. The GraphColoring and FeasibilityTester classes, with all the parameters and methods, can be seen in Figure X.
+
+todo: keep working on the uml mate
 
 \section{Experimental Evaluation/Results}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.16)  21 JUN 2015 23:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.16)  23 JUN 2015 00:26
 entering extended mode
 **000-main.tex
 (000-main.tex
@@ -2095,8 +2095,11 @@ Package: beramono 2004/01/31 (WaS)
 \tikzscale@accuracy=\skip110
 
 (000-main.aux (100-cover.aux) (200-introduction.aux) (300-theory.aux)
-(400-architecture.aux) (500-loader-solution-init.aux) (test.aux)
-(800-references.aux))
+(400-architecture.aux) (500-loader-solution-init.aux) (test.aux
+
+LaTeX Warning: Label `fig:Loaders' multiply defined.
+
+) (800-references.aux))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
 LaTeX Font Info:    ... okay on input line 70.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
@@ -2873,22 +2876,22 @@ Overfull \hbox (88.36165pt too wide) in paragraph at lines 128--129
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--136
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
 
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 137--138
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--140
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
 
  []
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 141--142
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
 
  []
 
@@ -2919,45 +2922,45 @@ Missing character: There is no y in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
 
-Overfull \hbox (32.15245pt too wide) in paragraph at lines 270--271
+Overfull \hbox (32.15245pt too wide) in paragraph at lines 271--272
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 54.36844pt on input line 272.
+LaTeX Warning: Float too large for page by 54.36844pt on input line 273.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 275--276
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 277--278
+Underfull \hbox (badness 10000) in paragraph at lines 276--277
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 279--280
+Underfull \hbox (badness 10000) in paragraph at lines 278--279
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 281--282
+Underfull \hbox (badness 10000) in paragraph at lines 280--281
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 283--284
+Underfull \hbox (badness 10000) in paragraph at lines 282--283
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 289--290
+Underfull \hbox (badness 10000) in paragraph at lines 284--285
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 290--291
 
  []
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 295--296
+Underfull \hbox (badness 10000) in paragraph at lines 296--297
 
  []
 
@@ -3044,18 +3047,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 146--147
  []
 
 
-LaTeX Warning: Citation `McCollum2007d' on page 24 undefined on input line 148.
-
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 148--149
 
  []
 
-[24]) [25] (test.tex) [26
 
+Underfull \hbox (badness 10000) in paragraph at lines 157--158
 
-] (800-references.tex (000-main.bbl
+ []
+
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
+
+ []
+
+) [25] (test.tex
+Missing character: There is no T in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+) [26] (800-references.tex (000-main.bbl
 LaTeX Font Info:    Try loading font information for T1+fvm on input line 36.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bera\t1fvm.fd"
@@ -3063,12 +3090,6 @@ File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
 )
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
 (Font)              scaled to size 8.09995pt on input line 36.
-
-Underfull \hbox (badness 10000) in paragraph at lines 35--38
-[]\T1/fve/m/n/9 B. Mc-Col-lum, ``Ex-am-i-na-tion eval-u-a-tion func-tion.'' $\T
-1/fvm/m/n/9 http : / / www . cs . qub . ac . uk / itc2007 /$
- []
-
 
 Underfull \hbox (badness 5504) in paragraph at lines 78--81
 []\T1/fve/m/n/9 G. Smet, ``Drools-solver.'' $\T1/fvm/m/n/9 http : / / www . cs 
@@ -3082,7 +3103,15 @@ Underfull \hbox (badness 5504) in paragraph at lines 78--81
 
 
 
+
+
 ] [28]
+Underfull \hbox (badness 2856) in paragraph at lines 220--223
+[]\T1/fve/m/n/9 B. Mc-Col-lum, ``Itc2007 ex-am-i-na-tion out-put for-mat.'' $\T
+1/fvm/m/n/9 http : / / www . cs . qub . ac . uk / itc2007 /$
+ []
+
+
 Underfull \hbox (badness 2189) in paragraph at lines 230--233
 []\T1/fve/m/n/9 Microsoft, ``Stream-reader class.'' $\T1/fvm/m/n/9 https : / / 
 msdn . microsoft . com / en-[]us / library / system . io .$
@@ -3094,6 +3123,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 235--238
 icrosoft . com / en-[]us / library / system . text .$
  []
 
+
+Underfull \hbox (badness 4872) in paragraph at lines 240--243
+[]\T1/fve/m/n/9 B. Mc-Col-lum, ``Itc2007 ex-am-i-na-tion in-put for-mat.'' $\T1
+/fvm/m/n/9 http : / / www . cs . qub . ac . uk / itc2007 /$
+ []
+
 )) [29] (000-main.aux (100-cover.aux) (200-introduction.aux) (300-theory.aux)
 (400-architecture.aux) (500-loader-solution-init.aux) (test.aux)
 (800-references.aux))
@@ -3101,14 +3136,14 @@ icrosoft . com / en-[]us / library / system . text .$
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 39574 strings out of 493671
- 799924 string characters out of 3141423
- 1006658 words of memory out of 3000000
- 42099 multiletter control sequences out of 15000+200000
+ 39580 strings out of 493671
+ 800076 string characters out of 3141423
+ 1006702 words of memory out of 3000000
+ 42105 multiletter control sequences out of 15000+200000
  92661 words of font info for 86 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  62i,14n,84p,10397b,1208s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -3123,7 +3158,7 @@ gram Files (x86)/MiKTeX 2.9/fonts/type1/bera/fvmr8a.pfb><C:/Program Files (x86)
 /fonts/type1/public/lm/lmmi9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 /public/lm/lmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lm
 r9.pfb>
-Output written on 000-main.pdf (39 pages, 286734 bytes).
+Output written on 000-main.pdf (39 pages, 288665 bytes).
 PDF statistics:
  235 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
