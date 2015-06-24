@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.16)  24 JUN 2015 01:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.16)  24 JUN 2015 22:32
 entering extended mode
 **000-main.tex
 (000-main.tex
@@ -2097,7 +2097,7 @@ Package: beramono 2004/01/31 (WaS)
 (000-main.aux (100-cover.aux) (200-introduction.aux) (300-theory.aux)
 (400-architecture.aux) (500-loader-solution-init.aux) (test.aux
 
-LaTeX Warning: Label `fig:Loaders' multiply defined.
+LaTeX Warning: Label `tab:GCResults' multiply defined.
 
 ) (800-references.aux))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
@@ -3061,6 +3061,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 163--164
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 167--168
+
+ []
+
 Missing character: There is no H in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no u in font nullfont!
@@ -3111,60 +3116,24 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no y in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
-) [25] [26] (test.tex
-Missing character: There is no H in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no L in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no H in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no L in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no T in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no L in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no T in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no L in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-) [27] [28
+
+Underfull \hbox (badness 10000) in paragraph at lines 245--246
+
+ []
+
+[25] [26]
+Underfull \hbox (badness 10000) in paragraph at lines 288--289
+
+ []
+
+) [27] [28] (500-local-search.tex
+Chapter 5.
+) [29
 
 
+
+
+] [30
 
 
 
@@ -3182,11 +3151,11 @@ Underfull \hbox (badness 5504) in paragraph at lines 78--81
 . qub . ac . uk / itc2007 / winner / bestexamsolutions /$
  []
 
-[29
+[31
 
 
 
-] [30]
+] [32]
 Underfull \hbox (badness 2856) in paragraph at lines 220--223
 []\T1/fve/m/n/9 B. Mc-Col-lum, ``Itc2007 ex-am-i-na-tion out-put for-mat.'' $\T
 1/fvm/m/n/9 http : / / www . cs . qub . ac . uk / itc2007 /$
@@ -3210,8 +3179,8 @@ Underfull \hbox (badness 4872) in paragraph at lines 240--243
 /fvm/m/n/9 http : / / www . cs . qub . ac . uk / itc2007 /$
  []
 
-)) [31] (000-main.aux (100-cover.aux) (200-introduction.aux) (300-theory.aux)
-(400-architecture.aux) (500-loader-solution-init.aux) (test.aux)
+)) [33] (000-main.aux (100-cover.aux) (200-introduction.aux) (300-theory.aux)
+(400-architecture.aux) (500-loader-solution-init.aux) (500-local-search.aux)
 (800-references.aux))
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -3221,10 +3190,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 39601 strings out of 493671
- 800539 string characters out of 3141423
- 1006711 words of memory out of 3000000
- 42126 multiletter control sequences out of 15000+200000
+ 39604 strings out of 493671
+ 800637 string characters out of 3141423
+ 1007730 words of memory out of 3000000
+ 42128 multiletter control sequences out of 15000+200000
  92661 words of font info for 86 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  62i,14n,84p,10397b,1208s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -3239,9 +3208,9 @@ gram Files (x86)/MiKTeX 2.9/fonts/type1/bera/fvmr8a.pfb><C:/Program Files (x86)
 /fonts/type1/public/lm/lmmi9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 /public/lm/lmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lm
 r9.pfb>
-Output written on 000-main.pdf (41 pages, 291489 bytes).
+Output written on 000-main.pdf (43 pages, 293861 bytes).
 PDF statistics:
- 241 PDF objects out of 1000 (max. 8388607)
+ 248 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  124 words of extra memory for PDF output out of 10000 (max. 10000000)
 

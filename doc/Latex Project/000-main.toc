@@ -33,5 +33,10 @@
 \contentsline {subsection}{\numberline {4.1.1}Analysis of benchmark data}{21}
 \contentsline {subsection}{\numberline {4.1.2}Implementation}{22}
 \contentsline {section}{\numberline {4.2}Graph Coloring}{24}
-\contentsline {section}{\numberline {4.3}Experimental Evaluation/Results}{25}
-\contentsline {chapter}{References}{29}
+\contentsline {section}{\numberline {4.3}Experimental Results}{25}
+\contentsline {chapter}{\numberline {5}Approach 1 - Local Search}{29}
+\contentsline {section}{\numberline {5.1}Simulated Annealing}{29}
+\contentsline {section}{\numberline {5.2}Hill Climbing}{29}
+\contentsline {section}{\numberline {5.3}Neighborhood Operators}{29}
+\contentsline {section}{\numberline {5.4}Experimental Evaluation/Results}{29}
+\contentsline {chapter}{References}{31}

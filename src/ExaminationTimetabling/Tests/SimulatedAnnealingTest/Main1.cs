@@ -18,7 +18,7 @@ namespace Tests.SimulatedAnnealingTest
 {
     class Main1
     {
-        static void Main()
+        static void Main_()
         {
             int SET;
 
