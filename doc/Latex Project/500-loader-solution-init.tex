@@ -164,8 +164,58 @@ M\"{u}ller's approach \cite{Mueller2009}. It starts to assign the examinations w
 	\item Forcing assignment - Occurs if there are no possible periods to assign the chosen examination, thus the normal assignment was not possible. A random period and room are selected and the examination will be forced to be assigned on those, unassigning all the examinations that conflict with this assignment. As the normal assignment, there are exceptions to this rule. If a coincident examination is already set, the examination to be set will be forced to be on the same period as the coincident examination, in a random room. The rule about force assigning an examination to specific period because of a coincident examination has 75\% of chance to set the period the same as the coincident examination and 25\% of chance to unassign all coincident examinations and try a random period instead. This \textit{constraint} was applied to avoid infinite or very long finite loops, mainly in SET 6.
 \end{itemize}
 
-It is to be noted that the Graph Coloring heuristic implementation only signs, unassigns examinations and checks clashes of examinations when forcing an assignment. The feasibility checking done to periods and rooms (an examination being able to be set in a period and room) are made by the tool FeasibilityTester, as mentioned in the Section \ref{subsec:BussinessLayer}. The GraphColoring and FeasibilityTester classes, with all the parameters and methods, can be seen in Figure X.
+It is to be noted that the Graph Coloring heuristic implementation only signs, unassigns examinations and checks clashes of examinations when forcing an assignment. The feasibility checking done to periods and rooms (an examination being able to be set in a period and room) are made by the tool FeasibilityTester, as mentioned in the Section \ref{subsec:BussinessLayer}. The GraphColoring and FeasibilityTester classes, with all the variables and methods, can be seen in Figure \ref{fig:GraphColoring}.
 
-todo: keep working on the uml mate
+\begin{figure}[t!]
+\centering
+\begin{tikzpicture}
+\begin{umlpackage}[x = 2, y = 0]{Heuristics Layer} 
+\umlclass[x = 0]{GraphColoring}
+{
+	
+	-examinations : Examinations\\
+	-period\_hard\_constraints : PeriodHardConstraints\\
+	-periods : Periods\\
+	-room\_hard\_constraints: RoomHardConstraints\\
+	-rooms : Rooms\\
+	-conflict\_matrix : int[,]\\
+	-solution : Solution\\
+	-unassigned\_examinations\_with\_exclusive : \\ List<Examination>\\
+	-unassigned\_examinations\_with\_coincidence : \\ List<Examination>\\
+	-unassigned\_examinations\_with\_after : \\ List<Examination>\\
+	-unassigned\_examinations : \\ List<Examination>
+}
+{
+	+Restart() : void\\
+	+NextLine() : bool\\
+	+ReadNextToken() : string\\
+	+ReadCurrToken() : string\\
+	+ReadNextLine() : List<string>
+}
+\end{umlpackage}
+\begin{umlpackage}[x = 2, y = 0]{Tools Layer} 
+\umlclass[x = 0, y = -9]{FeasibilityTester}
+{
+	-examinations : Examinations\\
+	-period\_hard\_constraints : PeriodHardConstraints\\
+	-room\_hard\_constraints: RoomHardConstraints\\
+	-rooms : Rooms\\
+	-conflict\_matrix : int[,]
+}
+{
+	+IsFeasiblePeriod(soltution : solution,\\ exam : Examination, period : Period) : bool\\
+	+IsFeasibleRoom(soltution : solution,\\ exam : Examination, period : Period, room : Room) : bool\\
+	+IsFeasiblePeriodRoom(soltution : solution,\\ exam : Examination, period : Period, room : Room) : bool\\
+	+RoomCurrentCapacityOnPeriod(solution : Solution,\\ period : Period, room : Room)\\
+}
+\end{umlpackage}
+
+
+\umlinclude[anchors=90 and -90, name=uses]{FeasibilityTester}{GraphColoring} 
+\end{tikzpicture}
+
+\caption{Graph Coloring and FeasibilityTester} \label{fig:GraphColoring}
+\end{figure}
+
 
 \section{Experimental Evaluation/Results}

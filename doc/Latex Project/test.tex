@@ -1,9 +1,21 @@
 \begin{figure}[t!]
 \centering
 \begin{tikzpicture}
-\begin{umlpackage}[x = 2, y = 0]{Tools Layer} 
+\begin{umlpackage}[x = 2, y = 0]{Heuristics Layer} 
 \umlclass[x = 0]{GraphColoring}
 {
+	
+	-examinations : Examinations\\
+	-period\_hard\_constraints : PeriodHardConstraints\\
+	-periods : Periods\\
+	-room\_hard\_constraints: RoomHardConstraints\\
+	-rooms : Rooms\\
+	-conflict\_matrix : int[,]\\
+	-solution : Solution
+	-unassigned\_examinations\_with\_exclusive : \\ List<Examination>\\
+	-unassigned\_examinations\_with\_coincidence : \\ List<Examination>\\
+	-unassigned\_examinations\_with\_after : \\ List<Examination>\\
+	-unassigned\_examinations : \\ List<Examination>
 }
 {
 	+Restart() : void\\
@@ -12,7 +24,9 @@
 	+ReadCurrToken() : string\\
 	+ReadNextLine() : List<string>
 }
-\umlclass[x = 6, y = 0]{FeasibilityTester}
+\end{umlpackage}
+\begin{umlpackage}[x = 2, y = 0]{Tools Layer} 
+\umlclass[x = 0, y = -9]{FeasibilityTester}
 {
 	-examinations : Examinations\\
 	-period\_hard\_constraints : PeriodHardConstraints\\
@@ -28,8 +42,9 @@
 }
 \end{umlpackage}
 
-%\umlimport[geometry=|-, anchors=90 and 50, name=import]{sp2}{sp1} 
+
+\umlinclude[anchors=90 and -90, name=uses]{FeasibilityTester}{GraphColoring} 
 \end{tikzpicture}
 
-\caption{Specification of Loader and LoaderTimetable tools} \label{fig:Loaders}
+\caption{Graph Coloring and FeasibilityTester} \label{fig:Loaders}
 \end{figure}

@@ -34,4 +34,4 @@
 \contentsline {subsection}{\numberline {4.1.2}Implementation}{22}
 \contentsline {section}{\numberline {4.2}Graph Coloring}{24}
 \contentsline {section}{\numberline {4.3}Experimental Evaluation/Results}{25}
-\contentsline {chapter}{References}{27}
+\contentsline {chapter}{References}{29}
