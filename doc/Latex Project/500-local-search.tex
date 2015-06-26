@@ -1,12 +1,39 @@
 \chapter{Approach 1 - Local Search}
-\label{implementation}
+\label{LocalSearch}
 \thispagestyle{plain}
 
+The first approach consists about using a local search meta-heuristic(s) to improve the solution given by the graph coloring heuristic. This approach uses Simulated Annealing, based on M\"{u}ller's approach \cite{Mueller2009}, finishing with the use of Hill Climbing. Hill Climbing was added because the way Simulated Annealing is implemented, there's no way to have a good control of the execution time, and so the parameters are given to make it run almost all the limit time and the rest is executed on Hill Climbing which the execution time is perfectly controllable.
+
 \section{Simulated Annealing}
+\label{SimulatedAnnealing}
+
+Simulated Annealing is a single-solution meta-heuristic (section \ref{metaheuristics}). This meta-heuristic optimizes a solution by generating neighbor solutions which might be accepted given a acceptance criteria. A neighbor solution is the application of a neighbor operator to the current solution, creating a new solution which is a neighbor of the current solution. A neighbor operator, in this context, could be the movement of an examination to another time slot. Being a single-solution meta-heuristic, it only generates one neighbor at the time. The neighbor operators and acceptance criteria are the most important part of this algorithm. Little changes on one of these may get the algorithm behave in very different ways and end up with much different solutions.\\
+\\
+The acceptance criteria will, considering the current solution and a neighbor solution, give the percentage of acceptance of the neighbor solution. Most of the approaches using this meta-heuristic accept a new neighbor solution if this is \textit{better} than the current solution. Otherwise, there's a chance that the neighbor solution is still accepted, depending on certain parameters. The parameters of the acceptance criteria are the \textit{Temperature} (normally given as maximum and minimum temperature) and the \textit{Cooling Schedule}. By definition, the higher the temperature, the higher is the chance to accept a worse solution over the current solution. The cooling schedule, as the name suggests, is a function that lowers the temperature. The SA algorithm finishes when the current temperature is lower or equal to the minimum temperature. The temperature should start high enough to accept all possible wrong solutions at the beginning, in order to search the maximum value of solutions in the solution space.
+
+\subsection{Implementation}
+
+>Explicar organização\\
+>>UML\\
+>Explicar código\\
+>>Pseudo Código\\
+>Explicar parametros e Cooling Schedule\\
+>>Meter plot do Cooling Schedule
+
+In this project, we opted to use an exponential decreasing function \cite{CarvalhoLisbonNovember2004} :
+
+\[T(t) = T_{max}e^{-R.t} \]
+\\
+T $\rightarrow$ Current temperature\\
+t $\rightarrow$ Current span, incremental number stared from 0\\
+T\textsubscript{max} $\rightarrow$ Maximum/initial temperature\\
+R $\rightarrow$ Decreasing rate\\
 
 \section{Hill Climbing}
+\label{HillClimbing}
 
 \section{Neighborhood Operators}
+\label{NeighborhoodOperators}
 
 \section{Experimental Evaluation/Results}
 

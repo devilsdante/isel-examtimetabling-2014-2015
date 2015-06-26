@@ -55,7 +55,6 @@ namespace Tests.SimulatedAnnealingTest
                 Console.WriteLine("Fitness Time: " + watch.ElapsedMilliseconds);
                 Console.WriteLine("GC Fitness: " + solution.fitness);
 
-                continue;
 
                 SA_Solution = (Solution)solution.Copy();
                 SimulatedAnnealingTimetable sa = new SimulatedAnnealingTimetable();
@@ -67,7 +66,7 @@ namespace Tests.SimulatedAnnealingTest
                 sa.generated_neighbors = 0;
 
                 ////SA_Solution = (Solution)solution.Copy();
-                sa.ExecTimer(SA_Solution, 221000 - watch2.ElapsedMilliseconds, SimulatedAnnealingTimetable.type_random, true);
+                sa.OnlyBetter(SA_Solution, 221000 - watch2.ElapsedMilliseconds, SimulatedAnnealingTimetable.type_random, true);
                 Console.WriteLine("SA Total Time: " + watch2.ElapsedMilliseconds);
                 Console.WriteLine("SA Random Fitness: " + SA_Solution.fitness);
                 ////Console.WriteLine("SA Guided1 Fitness: " + SA_Solution.fitness);
@@ -76,7 +75,7 @@ namespace Tests.SimulatedAnnealingTest
 
                 //////221000
                 ////SA_Solution = (Solution)solution.Copy();
-                ////sa.ExecTimer(SA_Solution, 5000, SimulatedAnnealingTimetable.type_guided2, true);
+                ////sa.OnlyBetter(SA_Solution, 5000, SimulatedAnnealingTimetable.type_guided2, true);
                 ////Console.WriteLine("SA Guided2 Fitness: " + SA_Solution.fitness);
                 ////Console.WriteLine("generated_neighbors: " + sa.generated_neighbors);
                 ////sa.generated_neighbors = 0;

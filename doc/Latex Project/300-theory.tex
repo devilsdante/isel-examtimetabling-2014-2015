@@ -50,20 +50,20 @@ The \gls{gc} problem consists in assigning colors to an element type of a graph 
 \\
 The examination timetabling problem can be transformed into a graph coloring problem as follows. The exams corresponds to vertices and there exists an edge connecting each pair of conflicting exams (exams that have students in common). With this mapping only the clash hard constraint is take into consideration. Thus, soft constraints are ignored \cite{Qu2009}.\\
 \\
-Given the mapping between the \gls{gc} problem and the examination timetabling problem, \gls{gc} heuristics like \textit{Saturation Degree Ordering} are very commonly used to get the initial solutions. Others like \textit{First Fit} and other \textit{Degree Based Ordering} techniques (\textit{Largest Degree Ordering}, \textit{Incidence Degree Ordering}) are also heuristic techniques for coloring graphs~\cite{Carter1996}.\\
+Given the mapping between the \gls{gc} problem and the examination timetabling problem, \gls{gc} heuristics like \textit{Saturation Degree Ordering} are very commonly used to get the initial solutions. Others like \textit{First Fit} and other \textit{Degree Based Ordering} techniques (\textit{Largest Degree Ordering}, \textit{Incidence Degree Ordering}) are also heuristic techniques for coloring graphs~\cite{Carter1996}.
 
 %\paragraph{Saturation Degree Ordering}
 %The Saturation Degree Ordering heuristic colors the vertices with more constraints first. The coloring method is as follows: while choosing a vertice to color, the ones with higher saturation degree will be colored first. The saturation degree of one vertice is the number of differently colored vertices adjacent to this vertice or, in another words, the number of different colors of all adjacent vertices. In the case of a tie, the highest saturation vertice with higher number of adjacent vertices is chosen.
 
 \subsection{Meta-heuristics}
-Meta-heuristics, as mentioned above, usually provide solutions for optimization problems. In timetabling problems, meta-heuristic algorithms are used to optimize the feasible solutions provided by heuristics, like the \gls{gc} heuristics. Meta-heuristics are divided in two main sub-types, which are \textit{Single-solution meta-heuristics} and \textit{Population-based meta-heuristics}~\cite{Talbi2009}.\\
+\label{metaheuristics}
+Meta-heuristics, as mentioned above, usually provide solutions for optimization problems. In timetabling problems, meta-heuristic algorithms are used to optimize the feasible solutions provided by heuristics, like the \gls{gc} heuristics. Meta-heuristics are divided in two main sub-types, which are \textit{Single-solution meta-heuristics} and \textit{Population-based meta-heuristics}~\cite{Talbi2009}.
 
 \subsubsection{Single-solution meta-heuristics}
-Single-solution meta-heuristics main goal is to modify and to optimize one single solution, maintaining the search focused on local regions. This type of meta-heuristic is therefore exploitation oriented. Some examples of this type are \textit{\gls{sa}}, \textit{Variable-Neighborhood Search}, \textit{\gls{ts}}, and \textit{Guided Local Search}~\cite{Talbi2009}. \\
+Single-solution meta-heuristics main goal is to modify and to optimize one single solution, maintaining the search focused on local regions. This type of meta-heuristic is therefore exploitation oriented. Some examples of this type are \textit{\gls{sa}}, \textit{Variable-Neighborhood Search}, \textit{\gls{ts}}, and \textit{Guided Local Search}~\cite{Talbi2009}. 
 
 \subsubsection{Population-based meta-heuristics}
-Population-based meta-heuristics main goal is to modify and to optimize multiple candidate solutions, maintaining the search focused in the whole space. This type of meta-heuristic is therefore exploration oriented. Some examples of this type are \textit{Particle Swarm}, \textit{Evolutionary Algorithms}, and \textit{Genetic Algorithms}~\cite{Talbi2009}.\\
-
+Population-based meta-heuristics main goal is to modify and to optimize multiple candidate solutions, maintaining the search focused in the whole space. This type of meta-heuristic is therefore exploration oriented. Some examples of this type are \textit{Particle Swarm}, \textit{Evolutionary Algorithms}, and \textit{Genetic Algorithms}~\cite{Talbi2009}.
 
 \subsection{\gls{itc2007} Examination timetabling problem: some approaches}
 \label{subsection:ApprITC2007}
@@ -100,59 +100,55 @@ We now review the \gls{itc2007}'s five winners approaches. The winners list of t
 	\item 4th Place - Geoffrey De Smet
 	\item 5th Place - Nelishia Pillay
 \end{itemize}
-
-We now briefly describe these approaches.
-
+We now briefly describe these approaches.\\
+\\
 Tom\'{a}\v{s} M\"{u}ller's approach~\cite{Mueller2009} was actually used to solve all three problems established by the \gls{itc2007} competition. He was able to win two of them and to be finalist on the third. For solving the problems, he opted for an hybrid approach, organized in a two-phase algorithm. In the first phase, Tom\'{a}\v{s} used the Iterative Forward Search (IFS) algorithm~\cite{Mueller2005} to obtain feasible solutions and Conflict-based Statistics~\cite{Mueller2004} to prevent IFS from looping. The second phase consists in using multiple optimization algorithms. These algorithms are applied in this order: \gls{hc} \cite{Russell2010}, \gls{gd} \cite{Dueck1993}, and optionally \gls{sa}~\cite{Kirkpatrick1983}.\\
-
-	%--\gls{hc} is used to optimize the first phase solution, resulting on a solution stuck at a local optimum. To leave local optimum area, \gls{gd} is used in order to try and result in a better solution. For last, \gls{sa} is used in a loop, keeping the temperature limit unchanged. After not getting a better solution for a limited time, the temperature is reheated (temperature limit gets higher) and \gls{hc} phase is used again forming a loop in these 3 optimization algorithms.\\
-
+\\
 Gogos was able to reach second place in Examination Timetabling track, right after M\"{u}ller. Gogos' approach~\cite{Gogos2012}, like M\"{u}ller's, is a two-phase approach but with a pre-processing stage. The first phase starts by the application of a pre-processing stage, in which the hidden dependencies between exams are discovered in order to speed up the optimization phase. After the pre-processing stage, a construction stage takes place, using a meta-heuristic called \textit{\gls{grasp}}. In the second phase, optimization methods are applied in this order: \gls{hc}, \gls{sa}, \gls{ip} (the Branch and Bound procedure), finishing with the so-called Shaking Stage, which is only used on certain conditions. Shaking Stage \textit{shakes} the current solution creating an equally good solution, which is given to the \gls{sa}. The objective of this stage to make \gls{sa} restart with more promising solutions and generate better results.\\
-
+\\
 Mitsunori Atsuta, Koji Nonobe and Toshihide Ibaraki ended up in third place on the Examination Timetabling track and won third and second place on the other tracks as well, with the same approach for all of them. The approach~\cite{Atsuta2007} consists on applying a constraint satisfaction problem solver adopting an hybridization of \gls{ts} and Iterated Local Search.\\
-
+\\
 Geoffrey De Smet's approach \cite{Smet2007} differs from all others because he decided not to use a known problem-specific heuristic to obtain a feasible solution, but instead used what is called the \textit{Drool's rule engine}, named \textit{drools-solver} \cite{Drools}. By definition, the drools-solver is a combination of optimization heuristics and meta-heuristics with very efficient score calculation. A solution's score is the sum of the weight of the constraints being broken. After obtaining a feasible solution, Geoffrey opted to use a local search algorithm to improve the solutions obtained using the drools-solver.\\
-
+\\
 Nelishia Pillay opted to use a two-phase algorithm variation, using \textit{Developmental Approach based on Cell Biology} \cite{Pillay2007}, which the goal consists in forming a well-developed organism by the process of creating a cell, proceeding with cell division, cell interaction and cell migration. In this approach, each cell represents a time slot. The first phase represents the process of creating the first cell, cell division and cell interaction. The second phase represents the cell migration.
 
 \subsection{Other approaches}
 \label{subsection:OtherAppr}
 
 Salwani Abdullah, Hamza Turabieh, and Barry McCollum's 2009 approach \cite{Abdullah2009} consists on using an hybridization of an electromagnetic-like mechanism and the \gls{gd} algorithm. In this approach, the electromagnetism-like mechanism starts with a population of timetables randomly generated. Electromagnetic-like mechanism is a meta-heuristic algorithm using an \textit{attraction-repulsion} mechanism \cite{Javadian2008} to move the solutions to the optimum.\\
-
+\\
 Christos Gogos, George Goulas, Panayiotis Alefragis and Efthymios Housos' 2009 approach \cite{Gogos2009} also used the two-phase algorithm. The first phase consists on creating the timetable using a greedy randomized positioning, with the use of a backtracking mechanism to help creating the solution. This construction phase is repeated and only the best solutions pass to the second phase. The second phase utilizes local search ({\color{red} Isto não é um tipo?}), \gls{sa}, shaking and \gls{ip} to improve the solutions. As mentioned by the author, this approach produced very good results  and can be compared to Tom\'{a}\v{s} M\"{u}ller's results in his approached used to win \gls{itc2007} competition.\\
-
+\\
 B. McCollum, P.J. McMullan, A. J. Parkes, E.K. Burke and S. Abdullah's 2009 two phased approach \cite{McCollum2009} use an adaptive ordering heuristic from \cite{Burke2004}, proceeding with an \textit{extended version} of \gls{gd}. As the author stated, this approach is robust and general considering the results obtained on the benchmark datasets from \gls{itc2007} using this approach.\\
-
+\\
 Malek Alzaqebah and Salwani Abdullah's 2011 two phased approach \cite{Alzaqebah2011} starts by using a graph coloring heuristic (largest degree ordering) to generate the initial solution and ends by utilizing the \textit{Artificial Bee Colony} search algorithm to optimize the solution.\\
-
+\\
 Hamza Turabieh and SalwaniAbdullah's 2011 approach \cite{Turabieh2011} utilize two phase algorithm. The first phase consists on constructing initial solutions by using an hybridization of graph coloring heuristics (least saturation degree, largest degree first and largest enrollment {\color{red} ?} first). The second phase utilizes an hybridization of electromagnetic-like mechanism and \gls{gd} algorithm, just like in 2009 Abdullah et al.'s approach.\\
-
+\\
 Hamza Turabieh and Salwani Abdullah created another approach in 2012 \cite{Abdullah2012}. It utilizes a Tabu-based memetic algorithm which consists on an hybridization of a genetic algorithm with a Tabu Search algorithm. The author states that this approach produces some of the best results when tested on \gls{itc2007}'s datasets.\\
-
+\\
 P. Demeester, B. Bilgin, P. De Causmaecker and G. V. Berghe in 2012 created an hyper-heuristic approach \cite{Demeester2012}. The heuristics utilized are 'improved or equal' {\color{red} (hill climbing?)}, \gls{sa}, \gls{gd} and an adapted version of the \textit{late acceptance} strategy \cite{Burke2008}. These heuristics are used on already-created initial solutions. Initial solutions are constructed using an algorithm which does not guarantee the feasibility of the solution.\\
-
+\\
 B. McCollum, P.J. McMullan, A. J. Parkes, E.K. Burke and S. Abdullah's 2012 approach \cite{McCollum2012} to \gls{itc2007} problem was based on \gls{ip} formulation. This approach though, was not capable of solving the competition instances.\\
-
+\\
 N. R. Sabar, M. Ayob, R. Qu and G. Kendall utilized a graphical coloring hyper-heuristic on its approach in 2012 \cite{Sabar2012}. This hyper-heuristic is composed of four hybridizations of these four methods: last degree, saturation degree, largest colored degree and largest enrollment. This approach seems to compete with the winners' approaches from \gls{itc2007}, considering the benchmark results.\\
-
-
+\\
 N. R. Sabar, M. Ayob, G. Kendall, R. Qub's 2012 approach \cite{Sabar2012a} utilizes a two phase algorithm. Starts by using an hybridization of graph coloring heuristics to obtain feasible solutions and a variant of honey-bee algorithm for optimization. The hybridization is composed of least saturation degree, largest degree first, largest enrollment first applied in this order.\\
-
+\\
 Salwani Abdullah and Malek Alzaqebah opted to create an hybridization approach in 2013 \cite{Abdullah2013}, mixing the utilization of a modified bees algorithm with local search algorithms (i.e. \gls{sa} and late acceptance \gls{hc})\\
-
+\\
 Salwani Abdullah and Malek Alzaqebah in 2014 constructed an approach \cite{Alzaqebah2014} that utilizes an hybridization of a modified artificial bee colony with local search algorithm (i.e. late acceptance \gls{hc}).\\
-
+\\
 Edmund K. Burke, Rong Qu and Amr Soghier's 2014 approach \cite{Burke2014} uses an hyper-heuristic with hybridization of low level heuristics (neighbor operations) to improve the solutions. The low level heuristics are \textit{move exam}, \textit{swap exam}, \textit{kempe chain move} and \textit{swap times lot}. After applying this hyper-heuristic with the hybridizations, the hybridization with the best results will be tested with multiple exam ordering methods, applying another hyper-heuristic with hybridizations. The heuristics applied are \textit{largest degree}, \textit{largest weighted degree}, \textit{saturation degree}, \textit{largest penalty} and \textit{random ordering}.\\
-
+\\
 Ali Hmer and Malek Mouhoub's approach \cite{Mouhoub2014} uses a multi-phase hybridization of meta-heuristics. Works like the two phase algorithm but includes a pre-processing phase before the construction phase. This pre-processing phase is divided in two phases: the propagation of ordering constraints and implicit constraints discovery. The construction phase utilizes a variant of \gls{ts}. The optimization phase uses hybridization of \gls{hc}, \gls{sa} and an extended version of \gls{gd} algorithm.\\
-
+\\
 Ryan Hamilton-Bryce, Paul McMullan and Barry McCollum in 2014 opted to use a non-stochastic method on their approach \cite{Hamilton-Bryce2014} when choosing examinations in the neighborhood searching process on the optimization phase. Instead, it uses a technique to make an intelligent selection of examinations using information gathered in the construction phase. This approach is divided in 3 phases. The first phase uses a \textit{Squeaky Wheel} constructor which generates multiple initial timetables and a weighted list for each timetable generated. Only the best timetable and its weighted list is passed to the second phase. The second phase is the \textit{Directed Selection Optimization} phase which uses the weighted list created in the construction phase to influence the selection of examinations for the neighbor search process. {\color{red} ("DSO utilizes the weighted list to influence the selection of the examination for optimization".. ??? Não deveria ser seleção de exames para criar soluções vizinhas ao qual estas vão para optimização? Ou a melhor vai para optimização..)}. Only the best timetable is passed onto the next phase. The third phase is the \textit{Highest Soft Constraint Optimization} phase which is similar to the previous phase but weighted list values are calculated based on the solution's individual soft constraints penalty.\\
-
+\\
 S. A. Rahman, E. K. Burke, A. Bargiela, B. McCollum and E. Özcan's 2014 approach \cite{Rahman2014} is a constructive approach. This divides examinations in sets called \textit{easy sets} and \textit{hard sets}. Easy sets contain the examinations that are easy to schedule on a timetable and on the contrary, hard sets contain the ones that are hard to schedule and so are identified as the ones creating infeasibility. This allows to use the examinations present on the hard sets first on future construction attempts. There's also a sub-set within the easy set, called \textit{Boundary Set} which helps on the examinations' ordering and shuffling. Initial examinations' ordering  are accomplished by using graph coloring heuristics like largest degree and saturation degree heuristics.\\
-
+\\
 Syariza A. Rahman, Andrzej Bargiela, Edmund K. Burke, Ender Özcan, Barry McCollum and Paul McMullan's 2014 approach \cite{Rahman2014a} utilizes adaptive linear combinations of graph coloring heuristics (largest degree and saturation degree) with heuristic modifier. These adaptive linear combinations allows the attribution of difficulty scores to examinations depending on how hard their scheduling is. The ones with higher score, and so harder to schedule, are scheduled using two strategies: using single or multiple heuristics and with or without heuristic modifier. The authors conclude that multiple heuristics with heuristic modifier offers good quality solutions, and the presented adaptive linear combination is a highly effective method.\\
-
+\\
 Nuno Leite, Fernando Melício and Agostinho C. Rosa's approach in 2014 \cite{Leite2014} tries to solve not only the well-studied single epoch problem, but also an extension to that problem with two examination epochs. This approach utilizes a Memetic Algorithm to solve the problem. Memetic algorithms are hybridizations of a population-based meta-heuristic and a single-solution based meta-heuristic. The Memetic algorithm used is the hybridization of the \textit{Shuffled Complex Evolution Algorithm} and the \gls{gd} algorithm. Shuffled Complex Evolution Algorithm is a Evolutionary Algorithm. \gls{gd} algorithm is a variant of the local search \gls{sa}.\\
 
 \begin{table}

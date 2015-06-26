@@ -117,7 +117,7 @@ namespace Heuristics.SimulatedAnnealing
             return solution;
         }
 
-        public ISolution ExecTimer(ISolution solution, long miliseconds, int type, bool minimize)
+        public ISolution OnlyBetter(ISolution solution, long miliseconds, int type, bool minimize)
         {
             Stopwatch watch = Stopwatch.StartNew();
             InitVals(type);
@@ -143,26 +143,6 @@ namespace Heuristics.SimulatedAnnealing
                     }
                     solution = neighbor.Accept();
                     solution.fitness = neighbor.fitness;
-                }
-                else
-                {
-                    double acceptance_probability = Math.Pow(Math.E, ((-DeltaE) * miliseconds) / (miliseconds - watch.ElapsedMilliseconds));
-                    //Console.WriteLine("" + acceptance_probability);
-                    double random = new Random((int)DateTime.Now.Ticks).NextDouble();
-
-                    if (random <= acceptance_probability)
-                    {
-                        if (watch.ElapsedMilliseconds > 1000)
-                        {
-                            Console.WriteLine("fitness: " + neighbor.fitness);
-                            watch.Restart();
-                        }
-                        solution = neighbor.Accept();
-                        solution.fitness = neighbor.fitness;
-                    }
-
-                    else
-                        continue;
                 }
             }
             return solution;
