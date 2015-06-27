@@ -5,13 +5,88 @@
 The first approach consists about using a local search meta-heuristic(s) to improve the solution given by the graph coloring heuristic. This approach uses Simulated Annealing, based on M\"{u}ller's approach \cite{Mueller2009}, finishing with the use of Hill Climbing. Hill Climbing was added because the way Simulated Annealing is implemented, there's no way to have a good control of the execution time, and so the parameters are given to make it run almost all the limit time and the rest is executed on Hill Climbing which the execution time is perfectly controllable.
 
 \section{Simulated Annealing}
-\label{SimulatedAnnealing}
+\label{sec:SimulatedAnnealing}
 
 Simulated Annealing is a single-solution meta-heuristic (section \ref{metaheuristics}). This meta-heuristic optimizes a solution by generating neighbor solutions which might be accepted given a acceptance criteria. A neighbor solution is the application of a neighbor operator to the current solution, creating a new solution which is a neighbor of the current solution. A neighbor operator, in this context, could be the movement of an examination to another time slot. Being a single-solution meta-heuristic, it only generates one neighbor at the time. The neighbor operators and acceptance criteria are the most important part of this algorithm. Little changes on one of these may get the algorithm behave in very different ways and end up with much different solutions.\\
 \\
 The acceptance criteria will, considering the current solution and a neighbor solution, give the percentage of acceptance of the neighbor solution. Most of the approaches using this meta-heuristic accept a new neighbor solution if this is \textit{better} than the current solution. Otherwise, there's a chance that the neighbor solution is still accepted, depending on certain parameters. The parameters of the acceptance criteria are the \textit{Temperature} (normally given as maximum and minimum temperature) and the \textit{Cooling Schedule}. By definition, the higher the temperature, the higher is the chance to accept a worse solution over the current solution. The cooling schedule, as the name suggests, is a function that lowers the temperature. The SA algorithm finishes when the current temperature is lower or equal to the minimum temperature. The temperature should start high enough to accept all possible wrong solutions at the beginning, in order to search the maximum value of solutions in the solution space.
 
 \subsection{Implementation}
+
+The simulated annealing was implemented in a way that it is independent from the type of the cooling schedule and neighbor generator. The simulated annealing base class is abstract and implements everything except for the neighbor generator, which is an abstract method that must be implemented in order to decide how the neighbor generator behaves. It also does not implement the evaluation function (the one that computes the fitness value of a solution or neighbor). The SimulatedAnnealing and SimulatedAnnealingTimetable's methods and variables can be seen in the figure \ref{fig:SimulatedAnnealing}.\\
+\\
+\begin{figure}[p!]
+\centering
+\begin{tikzpicture}
+\begin{umlpackage}[x = 2, y = 0]{Heuristics Layer} 
+\umlabstract[x = 0]{SimulatedAnnealing}
+{
+	\umlvirt{\#evaluation\_function : IEvaluationFunction}\\
+	-cooling\_schedule : ICoolingSchedule
+}
+{
+	+Exec(solution : ISolution, TMax : double, \\ TMin : double, loops : int, type : int, minimize : bool)\\
+	+Exec2(solution : ISolution, TMax : double, \\ TMin : double, loops : int, rate : double, type : int, minimize : bool)\\
+	+OnlyBetter(solution : ISolution, \\ milliseconds : long, type : int, minimize : bool)\\
+	+ExecLinearTimer(solution : ISolution, TMax : double,\\ TMin : double, milliseconds : long, type : int, long : minimize)\\
+	\umlvirt{\#GenerateNeighbor(solution : ISolution, type : int) : INeighbor}\\
+	\umlvirt{\#InitVals(type : int)}
+}
+\umlclass[x = 0, y = -8]{SimulatedAnnealingTimetable}
+{
+	\#evaluation\_function : IEvaluationFunction\\
+	-neighbor\_selection\_timetable : NeighborSelectionTimetable\\
+	+\umlstatic{type\_random : int}\\
+	+\umlstatic{type\_guided1 : int}\\
+	+\umlstatic{type\_guided2 : int}\\
+	-room\_change : int\\
+	-period\_change : int\\
+	-period\_room\_change : int\\
+	-room\_swap : int\\
+	-period\_swap : int\\
+	-period\_room\_swap : int\\
+}
+{
+	\#GenerateNeighbor(solution : ISolution, type : int) : INeighbor\\
+	\#GenerateNeighbor(solution : Solution, type : int) : INeighbor\\
+	-GenerateRandomNeighbor(solution : Solution) : INeighbor\\
+	-GenerateGuidedNeighbor1(solution : Solution) : INeighbor\\
+	-GenerateGuidedNeighbor2(solution : Solution) : INeighbor\\
+	\#InitVals(type : int)
+}
+\end{umlpackage}
+
+
+\umlimpl[anchors=90 and -90]{SimulatedAnnealingTimetable}{SimulatedAnnealing} 
+\end{tikzpicture}
+
+\caption{SimulatedAnnealing implementation} 
+\label{fig:SimulatedAnnealing}
+\end{figure}
+The SimulatedAnnealing abstract class has the methods \textit{Exec}, \textit{Exec2}, \textit{OnlyBetter}, \textit{ExecLinearTimer}, which are all similar, but were created to test different approaches. All these methods share the same code, in exception to the cooling schedule and acceptance criteria. The pseudo code of these can be seen in ALGORITHM XXXXXX.\\
+\\
+ALGORITHM XXXX\\
+\\
+The ExecLinearTimer has a linear cooling schedule, which is directly proportional to the spent time, and uses the following acceptance criteria:\\
+\[P(\delta E, T) = e^{\frac{-\delta E}{T}} \]
+T $\rightarrow$ Current temperature\\
+$\delta$E $\rightarrow$ Fitness difference between the new neighbor and current solution\\
+\\
+The Exec method shares the same acceptance criteria but uses geometric cooling schedule:\\
+\[T = T.r \]
+r $\rightarrow$ rate\\
+\\
+The rate must belong in the interval ]0,1[. The closer to 1, the longer the algorithm takes to finish and wider is the area of solutions to be analyzed in the solution space.\\
+\\
+The Exec2 method is the one used in this project. It uses an exponential (decreasing) cooling schedule \cite{CarvalhoLisbonNovember2004}:\\
+\[T = T_{max}e^{-R.t} \]
+t $\rightarrow$ Current span, counter stated from 0\\
+T\textsubscript{max} $\rightarrow$ Maximum/initial temperature\\
+R $\rightarrow$ Decreasing rate\\
+\\
+This method also uses a different acceptance criteria:\\
+\[P(\delta E, T, SF) = e^{\frac{-\delta E}{T.sf}} \]
+sf $\rightarrow$ Solution fitness\\
 
 >Explicar organização\\
 >>UML\\
@@ -20,20 +95,13 @@ The acceptance criteria will, considering the current solution and a neighbor so
 >Explicar parametros e Cooling Schedule\\
 >>Meter plot do Cooling Schedule
 
-In this project, we opted to use an exponential decreasing function \cite{CarvalhoLisbonNovember2004} :
 
-\[T(t) = T_{max}e^{-R.t} \]
-\\
-T $\rightarrow$ Current temperature\\
-t $\rightarrow$ Current span, incremental number stared from 0\\
-T\textsubscript{max} $\rightarrow$ Maximum/initial temperature\\
-R $\rightarrow$ Decreasing rate\\
 
 \section{Hill Climbing}
-\label{HillClimbing}
+\label{sec:HillClimbing}
 
 \section{Neighborhood Operators}
-\label{NeighborhoodOperators}
+\label{sec:NeighborhoodOperators}
 
 \section{Experimental Evaluation/Results}
 

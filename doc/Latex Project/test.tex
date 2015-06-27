@@ -1,40 +1,48 @@
-\begin{table}
+\begin{figure}[p!]
 \centering
+\begin{tikzpicture}
+\begin{umlpackage}[x = 2, y = 0]{Heuristics Layer} 
+\umlabstract[x = 0]{SimulatedAnnealing}
+{
+	\umlvirt{\#evaluation\_function : IEvaluationFunction}\\
+	-cooling\_schedule : ICoolingSchedule
+}
+{
+	+Exec(solution : ISolution, TMax : double, \\ TMin : double, loops : int, type : int, minimize : bool)\\
+	+Exec2(solution : ISolution, TMax : double, \\ TMin : double, loops : int, rate : double, type : int, minimize : bool)\\
+	+OnlyBetter(solution : ISolution, \\ milliseconds : long, type : int, minimize : bool)\\
+	+ExecLinearTimer(solution : ISolution, TMax : double,\\ TMin : double, milliseconds : long, type : int, long : minimize)\\
+	\umlvirt{\#GenerateNeighbor(solution : ISolution, type : int) : INeighbor}\\
+	\umlvirt{\#InitVals(type : int)}
+}
+\umlclass[x = 0, y = -8]{SimulatedAnnealingTimetable}
+{
+	\#evaluation\_function : IEvaluationFunction\\
+	-neighbor\_selection\_timetable : NeighborSelectionTimetable\\
+	+\umlstatic{type\_random : int}\\
+	+\umlstatic{type\_guided1 : int}\\
+	+\umlstatic{type\_guided2 : int}\\
+	-room\_change : int\\
+	-period\_change : int\\
+	-period\_room\_change : int\\
+	-room\_swap : int\\
+	-period\_swap : int\\
+	-period\_room\_swap : int\\
+}
+{
+	\#GenerateNeighbor(solution : ISolution, type : int) : INeighbor\\
+	\#GenerateNeighbor(solution : Solution, type : int) : INeighbor\\
+	-GenerateRandomNeighbor(solution : Solution) : INeighbor\\
+	-GenerateGuidedNeighbor1(solution : Solution) : INeighbor\\
+	-GenerateGuidedNeighbor2(solution : Solution) : INeighbor\\
+	\#InitVals(type : int)
+}
+\end{umlpackage}
 
-\sisetup{table-alignment=center,table-figures-decimal=3}
 
-\begin{tabular}{%
-	 l%
-     S[table-figures-integer=9]%
-     S[table-figures-integer=6]%
-    }
+\umlimpl[anchors=90 and -90]{SimulatedAnnealingTimetable}{SimulatedAnnealing} 
+\end{tikzpicture}
 
-\toprule
-
-       & \multicolumn{1}{c}{} & \multicolumn{1}{c}{Execution}\\
-       &	 \multicolumn{1}{c}{Fitness} & \multicolumn{1}{c}{time}\\
-       &		   	     &\multicolumn{1}{c}{(ms)} \\
-       
-\midrule
-
-SET 1 	 & 49028 	 & 137 \\
-SET 2	 & 103907 & 250 \\
-SET 3 	 & 170232 & 938 \\
-SET 4	 & \text{--}  & \text{--} \\
-SET 5 	 & 349319 	 & 223 \\
-SET 6 	 & 60857 	 & 298 \\
-SET 7	 & 155708	 & 525 \\
-SET 8 	 & 397868 	 & 232 \\
-SET 9 	 & \text{--} 	 & \text{--} \\
-SET 10	 & \text{--} 	 & \text{--} \\
-SET 11	 & \text{--} & \text{--} \\
-SET 12	 & \text{--} 	 & \text{--} \\ 
-
-\bottomrule
-
-\end{tabular}
-
-\caption{Graph Coloring's fitness and execution time}
-\label{tab:GCResults}
-
-\end{table}
+\caption{SimulatedAnnealing implementation} 
+\label{fig:SimulatedAnnealing}
+\end{figure}

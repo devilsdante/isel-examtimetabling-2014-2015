@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Heuristics.SimulatedAnnealing.CoolingSchedule
 {
-    public class CoolingScheduleExponencial : ICoolingSchedule
+    public class CoolingScheduleExponential : ICoolingSchedule
     {
         public double TMax { get; set; }
 
@@ -16,7 +16,7 @@ namespace Heuristics.SimulatedAnnealing.CoolingSchedule
 
         public int span { get; set; }
 
-        public CoolingScheduleExponencial(double rate, double TMax)
+        public CoolingScheduleExponential(double rate, double TMax)
         {
             this.TMax = TMax;
             this.rate = rate;

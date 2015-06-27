@@ -17,7 +17,7 @@ namespace Heuristics.SimulatedAnnealing.Timetable
     public class SimulatedAnnealingTimetable : SimulatedAnnealing
     {
         protected override IEvaluationFunction evaluation_function { get; set; }
-        private readonly NeighborSelectionTimetable _neighborSelectionTimetable;
+        private readonly NeighborSelectionTimetable neighbor_selection_timetable;
 
         public static int type_random = 0;
         public static int type_guided1 = 1;
@@ -35,7 +35,7 @@ namespace Heuristics.SimulatedAnnealing.Timetable
         public SimulatedAnnealingTimetable()
         {
             evaluation_function = new EvaluationFunctionTimetable();
-            _neighborSelectionTimetable = new NeighborSelectionTimetable();
+            neighbor_selection_timetable = new NeighborSelectionTimetable();
         }
 
         protected INeighbor GenerateNeighbor(Solution solution, int type)
@@ -56,17 +56,17 @@ namespace Heuristics.SimulatedAnnealing.Timetable
             do
             {
                 if (random == 0)
-                    to_return = _neighborSelectionTimetable.RoomChange(solution);
+                    to_return = neighbor_selection_timetable.RoomChange(solution);
                 else if (random == 1)
-                    to_return = _neighborSelectionTimetable.PeriodChange(solution);
+                    to_return = neighbor_selection_timetable.PeriodChange(solution);
                 else if (random == 2)
-                    to_return = _neighborSelectionTimetable.PeriodRoomChange(solution);
+                    to_return = neighbor_selection_timetable.PeriodRoomChange(solution);
                 else if (random == 3)
-                    to_return = _neighborSelectionTimetable.RoomSwap(solution);
+                    to_return = neighbor_selection_timetable.RoomSwap(solution);
                 else if (random == 4)
-                    to_return = _neighborSelectionTimetable.PeriodSwap(solution);
+                    to_return = neighbor_selection_timetable.PeriodSwap(solution);
                 else
-                    to_return = _neighborSelectionTimetable.PeriodRoomSwap(solution);
+                    to_return = neighbor_selection_timetable.PeriodRoomSwap(solution);
             } while (to_return == null);
 
             return to_return;
@@ -85,7 +85,7 @@ namespace Heuristics.SimulatedAnnealing.Timetable
             {
                 if (random < room_change)
                 {
-                    to_return = _neighborSelectionTimetable.RoomChange(solution);
+                    to_return = neighbor_selection_timetable.RoomChange(solution);
                     if (to_return != null)
                     {
                         to_return.fitness = (to_return.fitness == -1) ? evaluation_function.Fitness(to_return) : to_return.fitness;
@@ -100,7 +100,7 @@ namespace Heuristics.SimulatedAnnealing.Timetable
                 }
                 else if (random < room_change + period_change)
                 {
-                    to_return = _neighborSelectionTimetable.PeriodChange(solution);
+                    to_return = neighbor_selection_timetable.PeriodChange(solution);
                     if (to_return != null)
                     {
                         to_return.fitness = (to_return.fitness == -1) ? evaluation_function.Fitness(to_return) : to_return.fitness;
@@ -115,7 +115,7 @@ namespace Heuristics.SimulatedAnnealing.Timetable
                 }
                 else if (random < room_change + period_change + period_room_change)
                 {
-                    to_return = _neighborSelectionTimetable.PeriodRoomChange(solution);
+                    to_return = neighbor_selection_timetable.PeriodRoomChange(solution);
                     if (to_return != null)
                     {
                         to_return.fitness = (to_return.fitness == -1) ? evaluation_function.Fitness(to_return) : to_return.fitness;
@@ -130,7 +130,7 @@ namespace Heuristics.SimulatedAnnealing.Timetable
                 }
                 else if (random < room_change + period_change + period_room_change + room_swap)
                 {
-                    to_return = _neighborSelectionTimetable.RoomSwap(solution);
+                    to_return = neighbor_selection_timetable.RoomSwap(solution);
                     if (to_return != null)
                     {
                         to_return.fitness = (to_return.fitness == -1) ? evaluation_function.Fitness(to_return) : to_return.fitness;
@@ -145,7 +145,7 @@ namespace Heuristics.SimulatedAnnealing.Timetable
                 }
                 else if (random < room_change + period_change + period_room_change + room_swap + period_swap)
                 {
-                    to_return = _neighborSelectionTimetable.PeriodSwap(solution);
+                    to_return = neighbor_selection_timetable.PeriodSwap(solution);
                     if (to_return != null)
                     {
                         to_return.fitness = (to_return.fitness == -1) ? evaluation_function.Fitness(to_return) : to_return.fitness;
@@ -160,7 +160,7 @@ namespace Heuristics.SimulatedAnnealing.Timetable
                 }
                 else
                 {
-                    to_return = _neighborSelectionTimetable.PeriodRoomSwap(solution);
+                    to_return = neighbor_selection_timetable.PeriodRoomSwap(solution);
                     if (to_return != null)
                     {
                         to_return.fitness = (to_return.fitness == -1) ? evaluation_function.Fitness(to_return) : to_return.fitness;
@@ -189,7 +189,7 @@ namespace Heuristics.SimulatedAnnealing.Timetable
             {
                 if (random < room_change)
                 {
-                    to_return = _neighborSelectionTimetable.RoomChange(solution);
+                    to_return = neighbor_selection_timetable.RoomChange(solution);
                     if (to_return != null)
                     {
                         to_return.fitness = (to_return.fitness == -1) ? evaluation_function.Fitness(to_return) : to_return.fitness;
@@ -202,7 +202,7 @@ namespace Heuristics.SimulatedAnnealing.Timetable
                 }
                 else if (random < room_change + period_change)
                 {
-                    to_return = _neighborSelectionTimetable.PeriodChange(solution);
+                    to_return = neighbor_selection_timetable.PeriodChange(solution);
                     if (to_return != null)
                     {
                         to_return.fitness = (to_return.fitness == -1) ? evaluation_function.Fitness(to_return) : to_return.fitness;
@@ -215,7 +215,7 @@ namespace Heuristics.SimulatedAnnealing.Timetable
                 }
                 else if (random < room_change + period_change + period_room_change)
                 {
-                    to_return = _neighborSelectionTimetable.PeriodRoomChange(solution);
+                    to_return = neighbor_selection_timetable.PeriodRoomChange(solution);
                     if (to_return != null)
                     {
                         to_return.fitness = (to_return.fitness == -1) ? evaluation_function.Fitness(to_return) : to_return.fitness;
@@ -228,7 +228,7 @@ namespace Heuristics.SimulatedAnnealing.Timetable
                 }
                 else if (random < room_change + period_change + period_room_change + room_swap)
                 {
-                    to_return = _neighborSelectionTimetable.RoomSwap(solution);
+                    to_return = neighbor_selection_timetable.RoomSwap(solution);
                     if (to_return != null)
                     {
                         to_return.fitness = (to_return.fitness == -1) ? evaluation_function.Fitness(to_return) : to_return.fitness;
@@ -241,7 +241,7 @@ namespace Heuristics.SimulatedAnnealing.Timetable
                 }
                 else if (random < room_change + period_change + period_room_change + room_swap + period_swap)
                 {
-                    to_return = _neighborSelectionTimetable.PeriodSwap(solution);
+                    to_return = neighbor_selection_timetable.PeriodSwap(solution);
                     if (to_return != null)
                     {
                         to_return.fitness = (to_return.fitness == -1) ? evaluation_function.Fitness(to_return) : to_return.fitness;
@@ -254,7 +254,7 @@ namespace Heuristics.SimulatedAnnealing.Timetable
                 }
                 else
                 {
-                    to_return = _neighborSelectionTimetable.PeriodRoomSwap(solution);
+                    to_return = neighbor_selection_timetable.PeriodRoomSwap(solution);
                     if (to_return != null)
                     {
                         to_return.fitness = (to_return.fitness == -1) ? evaluation_function.Fitness(to_return) : to_return.fitness;

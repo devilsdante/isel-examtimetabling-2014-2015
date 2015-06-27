@@ -17,7 +17,8 @@ namespace Heuristics.SimulatedAnnealing
         protected abstract IEvaluationFunction evaluation_function { get; set; }
         private ICoolingSchedule cooling_schedule;
 
-        public ISolution Exec(ISolution solution, int TMax, int TMin, int loops, int type, bool minimize)
+        public ISolution Exec(ISolution solution, double TMax, double TMin, int loops, int type, bool minimize)
+
         {
             cooling_schedule = new CoolingScheduleGeometric(0.9);
             InitVals(type);
@@ -65,7 +66,7 @@ namespace Heuristics.SimulatedAnnealing
         public ISolution Exec2(ISolution solution, double TMax, double TMin, int loops, double rate, int type, bool minimize)
         {
             InitVals(type);
-            cooling_schedule = new CoolingScheduleExponencial(rate, TMax);
+            cooling_schedule = new CoolingScheduleExponential(rate, TMax);
             Stopwatch watch = Stopwatch.StartNew();
             watch.Start();
 
@@ -148,12 +149,12 @@ namespace Heuristics.SimulatedAnnealing
             return solution;
         }
 
-        public ISolution ExecLinearTimer(ISolution solution, int TMax, int TMin, long miliseconds, int type, bool minimize)
+        public ISolution ExecLinearTimer(ISolution solution, double TMax, double TMin, long miliseconds, int type, bool minimize)
         {
             Stopwatch watch = Stopwatch.StartNew();
             InitVals(type);
 
-            for (int T = TMax; T > TMin; T = TMax - (int)((watch.ElapsedMilliseconds * (TMax - TMin) / miliseconds) + TMin))
+            for (double T = TMax; T > TMin; T = TMax - ((watch.ElapsedMilliseconds * (TMax - TMin) / miliseconds) + TMin))
             {
                 INeighbor neighbor = GenerateNeighbor(solution, type);
 

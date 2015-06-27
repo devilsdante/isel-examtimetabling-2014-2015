@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.16)  26 JUN 2015 03:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.16)  27 JUN 2015 03:08
 entering extended mode
 **000-main.tex
 (000-main.tex
@@ -3133,8 +3133,53 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--13
 
  []
 
+Missing character: There is no H in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no H in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--21
+Underfull \hbox (badness 10000) in paragraph at lines 16--71
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--71
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--71
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--71
 
  []
 
@@ -3144,11 +3189,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--21
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 24--30
+Underfull \hbox (badness 10000) in paragraph at lines 71--76
 
  []
 
-) [30] (800-references.tex (000-main.bbl
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--76
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--82
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--82
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--82
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--88
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--88
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--90
+
+ []
+
+[30] [31]) [32] (800-references.tex (000-main.bbl
 LaTeX Font Info:    Try loading font information for T1+fvm on input line 36.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bera\t1fvm.fd"
@@ -3162,14 +3242,14 @@ Underfull \hbox (badness 5504) in paragraph at lines 78--81
 . qub . ac . uk / itc2007 / winner / bestexamsolutions /$
  []
 
-[31
+[33
 
 
 
 
 
 
-] [32]
+] [34]
 Underfull \hbox (badness 2856) in paragraph at lines 220--223
 []\T1/fve/m/n/9 B. Mc-Col-lum, ``Itc2007 ex-am-i-na-tion out-put for-mat.'' $\T
 1/fvm/m/n/9 http : / / www . cs . qub . ac . uk / itc2007 /$
@@ -3193,7 +3273,7 @@ Underfull \hbox (badness 4872) in paragraph at lines 240--243
 /fvm/m/n/9 http : / / www . cs . qub . ac . uk / itc2007 /$
  []
 
-)) [33] (000-main.aux (100-cover.aux) (200-introduction.aux) (300-theory.aux)
+)) [35] (000-main.aux (100-cover.aux) (200-introduction.aux) (300-theory.aux)
 (400-architecture.aux) (500-loader-solution-init.aux) (500-local-search.aux)
 (800-references.aux))
 
@@ -3201,10 +3281,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 39609 strings out of 493671
- 800783 string characters out of 3141423
- 1005767 words of memory out of 3000000
- 42134 multiletter control sequences out of 15000+200000
+ 39634 strings out of 493671
+ 801515 string characters out of 3141423
+ 1005778 words of memory out of 3000000
+ 42159 multiletter control sequences out of 15000+200000
  92661 words of font info for 86 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  62i,15n,84p,10397b,1208s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -3217,15 +3297,17 @@ ra/fveb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/bera/fver8a.pfb><C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/bera/fver8a.pfb><C:/Program Files 
 (x86)/MiKTeX 2.9/fonts/type1/bera/fvmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9
 /fonts/type1/public/lm/lmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
-1/public/lm/lmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/
-lmmi9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr9.pfb><C:/Program Files (x86)/MiKT
-eX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
-s/type1/public/lm/lmsy7.pfb>
-Output written on 000-main.pdf (43 pages, 311915 bytes).
+1/public/lm/lmmi5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/
+lmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi9.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Program Files (x86)/MiK
+TeX 2.9/fonts/type1/public/lm/lmr9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
+/type1/public/lm/lmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
+ic/lm/lmsy5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy7.
+pfb>
+Output written on 000-main.pdf (45 pages, 326281 bytes).
 PDF statistics:
- 265 PDF objects out of 1000 (max. 8388607)
+ 279 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  124 words of extra memory for PDF output out of 10000 (max. 10000000)
 
