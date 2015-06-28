@@ -38,7 +38,7 @@
 \contentsline {chapter}{\numberline {5}Approach 1 - Local Search}{29}
 \contentsline {section}{\numberline {5.1}Simulated Annealing}{29}
 \contentsline {subsection}{\numberline {5.1.1}Implementation}{30}
-\contentsline {section}{\numberline {5.2}Hill Climbing}{32}
-\contentsline {section}{\numberline {5.3}Neighborhood Operators}{32}
-\contentsline {section}{\numberline {5.4}Experimental Evaluation/Results}{32}
-\contentsline {chapter}{References}{33}
+\contentsline {section}{\numberline {5.2}Hill Climbing}{33}
+\contentsline {section}{\numberline {5.3}Neighborhood Operators}{33}
+\contentsline {section}{\numberline {5.4}Experimental Evaluation/Results}{33}
+\contentsline {chapter}{References}{35}

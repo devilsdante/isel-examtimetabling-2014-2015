@@ -15,7 +15,7 @@ The acceptance criteria will, considering the current solution and a neighbor so
 
 The simulated annealing was implemented in a way that it is independent from the type of the cooling schedule and neighbor generator. The simulated annealing base class is abstract and implements everything except for the neighbor generator, which is an abstract method that must be implemented in order to decide how the neighbor generator behaves. It also does not implement the evaluation function (the one that computes the fitness value of a solution or neighbor). The SimulatedAnnealing and SimulatedAnnealingTimetable's methods and variables can be seen in the figure \ref{fig:SimulatedAnnealing}.\\
 \\
-\begin{figure}[p!]
+\begin{figure}[b!]
 \centering
 \begin{tikzpicture}
 \begin{umlpackage}[x = 2, y = 0]{Heuristics Layer} 
@@ -60,13 +60,36 @@ The simulated annealing was implemented in a way that it is independent from the
 \umlimpl[anchors=90 and -90]{SimulatedAnnealingTimetable}{SimulatedAnnealing} 
 \end{tikzpicture}
 
-\caption{SimulatedAnnealing implementation} 
+\caption{simulated annealing classes} 
 \label{fig:SimulatedAnnealing}
 \end{figure}
-The SimulatedAnnealing abstract class has the methods \textit{Exec}, \textit{Exec2}, \textit{OnlyBetter}, \textit{ExecLinearTimer}, which are all similar, but were created to test different approaches. All these methods share the same code, in exception to the cooling schedule and acceptance criteria. The pseudo code of these can be seen in ALGORITHM XXXXXX.\\
-\\
-ALGORITHM XXXX\\
-\\
+The SimulatedAnnealing abstract class has the methods \textit{Exec}, \textit{Exec2}, \textit{OnlyBetter} and \textit{ExecLinearTimer}, which are all similar, but were created to test different approaches. All these methods share the same code, in exception to the cooling schedule (the way the temperature is updated) and acceptance criteria. The pseudo code of these can be seen in Algorithm \ref{alg:SimulatedAnnealing}.\\
+\begin{algorithm}[b!]
+\textbf{Input:} 
+\begin{itemize}
+	\setlength{\itemsep}{1pt}
+	\item $s$ \Comment{Initial solution}
+	\item $TMax$ \Comment{Maximum temperature}
+	\item $TMin$ \Comment{Minimum temperature}
+	\item $loops$ \Comment{Number of loops per temperature}
+\end{itemize}
+\begin{algorithmic}
+\State $T = Tmax$ ; \Comment{Starting temperature}
+\State $Ac$ ; \Comment{Acceptance criteria initializer}
+\Repeat
+	\Repeat	
+		\State Generate a random neighbor $s'$;
+		\State $\delta E$ = $f(s') - f(s)$ ;
+		\State \textbf{If} $E \leq 0$ \textbf{Then} $s = s'$ \Comment{Accept the neighbor solution}
+		\State \textbf{Else} Accept $s'$ with a probability computed using the $Ac$;
+	\Until Number of iterations reached $loops$
+	\State $T = g(T )$ \Comment{Temperature update}
+\Until $T < TMin$
+\State \textbf{Output:} $s$ \Comment{return the current (best) solution}
+\end{algorithmic}
+\caption{Simulated Annealing method.}
+\label{alg:SimulatedAnnealing}
+\end{algorithm}\\
 The ExecLinearTimer has a linear cooling schedule, which is directly proportional to the spent time, and uses the following acceptance criteria:\\
 \[P(\delta E, T) = e^{\frac{-\delta E}{T}} \]
 T $\rightarrow$ Current temperature\\
@@ -85,9 +108,33 @@ T\textsubscript{max} $\rightarrow$ Maximum/initial temperature\\
 R $\rightarrow$ Decreasing rate\\
 \\
 This method also uses a different acceptance criteria:\\
-\[P(\delta E, T, SF) = e^{\frac{-\delta E}{T.sf}} \]
-sf $\rightarrow$ Solution fitness\\
+\[P(\delta E, T, SF) = e^{\frac{-\delta E}{T.f(s)}} \]
+f(s) $\rightarrow$ Solution fitness\\
 
+Some testings on the parameters were performed, so to check what parameters gave the best results. All the testings were made for the first set only (these testings require a lot of time), and so the same parameters will be used on all the sets so we can compare to results to other approaches, mainly the first winners of the competition. 
+In the Figure \ref{fig:SimulatedAnnealingPlot} is an example of a plot of the SA running with the following parameters: \textit{TMax} = 45, \textit{TMin} = $e^{-18}$, \textit{loops} = 5 and \textit{rate} = 0.01.\\
+\\
+\begin{figure}[!b]
+\centering
+
+\begin{tikzpicture}
+\begin{axis}[
+    title={},
+    xlabel={-log10(Temperature)},
+    ylabel={Solution score},
+]
+
+\addplot plot file [
+    color=blue,
+    mark=o,
+    ] {sa_plot_data.dat};
+
+\end{axis}
+\end{tikzpicture}
+
+\caption{Simulated Annealing results} 
+\label{fig:SimulatedAnnealingPlot}
+\end{figure}
 >Explicar organização\\
 >>UML\\
 >Explicar código\\

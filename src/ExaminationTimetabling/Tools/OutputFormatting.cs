@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,30 @@ namespace Tools
             }
 
             file.Close();
+        }
+
+        private static int counter = 0;
+
+        public static void StartNew(string path)
+        {
+            System.IO.StreamWriter file = new System.IO.StreamWriter(path);
+            file.Write("");
+            file.Close();
+        }
+
+        public static void Write(string path, string info_line)
+        {
+            if (counter++%4 != 0)
+                return;
+            System.IO.StreamWriter file = File.AppendText(path);
+            try
+            {
+                file.WriteLine(info_line);
+            }
+            finally
+            {
+                file.Close();
+            }
         }
     }
 }

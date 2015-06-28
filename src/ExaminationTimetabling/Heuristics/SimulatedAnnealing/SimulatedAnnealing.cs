@@ -70,6 +70,8 @@ namespace Heuristics.SimulatedAnnealing
             Stopwatch watch = Stopwatch.StartNew();
             watch.Start();
 
+            //OutputFormatting.StartNew("..//..//..//../..//doc//Latex Project//sa_plot_data.dat");
+
             for (double T = TMax; T > TMin; T = cooling_schedule.G(T))
             {
                 for (int loop = loops; loop > 0; --loop)
@@ -78,6 +80,8 @@ namespace Heuristics.SimulatedAnnealing
 
                     neighbor.fitness = (neighbor.fitness == -1) ? evaluation_function.Fitness(neighbor) : neighbor.fitness;
                     solution.fitness = (solution.fitness == -1) ? evaluation_function.Fitness(solution) : solution.fitness;
+
+                    //OutputFormatting.Write("..//..//..//../..//doc//Latex Project//sa_plot_data.dat", -Math.Log10(T) + " " + solution.fitness);
                     //Console.WriteLine("fitness: " + solution.fitness);
                     double DeltaE = minimize ? neighbor.fitness - solution.fitness : solution.fitness - neighbor.fitness;
 

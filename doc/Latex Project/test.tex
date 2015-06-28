@@ -1,48 +1,14 @@
-\begin{figure}[p!]
-\centering
-\begin{tikzpicture}
-\begin{umlpackage}[x = 2, y = 0]{Heuristics Layer} 
-\umlabstract[x = 0]{SimulatedAnnealing}
-{
-	\umlvirt{\#evaluation\_function : IEvaluationFunction}\\
-	-cooling\_schedule : ICoolingSchedule
-}
-{
-	+Exec(solution : ISolution, TMax : double, \\ TMin : double, loops : int, type : int, minimize : bool)\\
-	+Exec2(solution : ISolution, TMax : double, \\ TMin : double, loops : int, rate : double, type : int, minimize : bool)\\
-	+OnlyBetter(solution : ISolution, \\ milliseconds : long, type : int, minimize : bool)\\
-	+ExecLinearTimer(solution : ISolution, TMax : double,\\ TMin : double, milliseconds : long, type : int, long : minimize)\\
-	\umlvirt{\#GenerateNeighbor(solution : ISolution, type : int) : INeighbor}\\
-	\umlvirt{\#InitVals(type : int)}
-}
-\umlclass[x = 0, y = -8]{SimulatedAnnealingTimetable}
-{
-	\#evaluation\_function : IEvaluationFunction\\
-	-neighbor\_selection\_timetable : NeighborSelectionTimetable\\
-	+\umlstatic{type\_random : int}\\
-	+\umlstatic{type\_guided1 : int}\\
-	+\umlstatic{type\_guided2 : int}\\
-	-room\_change : int\\
-	-period\_change : int\\
-	-period\_room\_change : int\\
-	-room\_swap : int\\
-	-period\_swap : int\\
-	-period\_room\_swap : int\\
-}
-{
-	\#GenerateNeighbor(solution : ISolution, type : int) : INeighbor\\
-	\#GenerateNeighbor(solution : Solution, type : int) : INeighbor\\
-	-GenerateRandomNeighbor(solution : Solution) : INeighbor\\
-	-GenerateGuidedNeighbor1(solution : Solution) : INeighbor\\
-	-GenerateGuidedNeighbor2(solution : Solution) : INeighbor\\
-	\#InitVals(type : int)
-}
-\end{umlpackage}
-
-
-\umlimpl[anchors=90 and -90]{SimulatedAnnealingTimetable}{SimulatedAnnealing} 
-\end{tikzpicture}
-
-\caption{SimulatedAnnealing implementation} 
-\label{fig:SimulatedAnnealing}
-\end{figure}
+%\begin{tikzpicture}
+%\begin{axis}[
+%    title={Simulated Annealing results},
+%    xlabel={-log10(Temperature)},
+%    ylabel={Solution score},
+%]
+%
+%\addplot plot file [
+%    color=blue,
+%    mark=o,
+%    ] {sa_plot_data.dat};
+%
+%\end{axis}
+%\end{tikzpicture}

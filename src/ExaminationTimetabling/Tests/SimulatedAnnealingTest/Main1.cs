@@ -18,14 +18,14 @@ namespace Tests.SimulatedAnnealingTest
 {
     class Main1
     {
-        static void Main_()
+        static void Main()
         {
             int SET;
 
             Solution solution = null;
             Solution SA_Solution = null;
 
-            for (SET = 6; SET <= 6; SET++)
+            for (SET = 1; SET <= 1; SET++)
             {
                 if (SET == 4)
                     continue;
@@ -59,16 +59,16 @@ namespace Tests.SimulatedAnnealingTest
                 SA_Solution = (Solution)solution.Copy();
                 SimulatedAnnealingTimetable sa = new SimulatedAnnealingTimetable();
                 watch.Restart();
-                sa.Exec2(SA_Solution, 0.01, Math.Pow(Math.E, -18), 5, 0.001, SimulatedAnnealingTimetable.type_random, true);
+                sa.Exec2(SA_Solution, 45, Math.Pow(Math.E, -18), 5, 0.01, SimulatedAnnealingTimetable.type_random, true);
                 Console.WriteLine("SA Time: " + watch.ElapsedMilliseconds);
                 Console.WriteLine("SA Random Fitness: " + SA_Solution.fitness);
-                //Console.WriteLine("generated_neighbors: " + sa.generated_neighbors);
+                Console.WriteLine("generated_neighbors: " + sa.generated_neighbors);
                 sa.generated_neighbors = 0;
 
                 ////SA_Solution = (Solution)solution.Copy();
-                sa.OnlyBetter(SA_Solution, 221000 - watch2.ElapsedMilliseconds, SimulatedAnnealingTimetable.type_random, true);
-                Console.WriteLine("SA Total Time: " + watch2.ElapsedMilliseconds);
-                Console.WriteLine("SA Random Fitness: " + SA_Solution.fitness);
+                //sa.OnlyBetter(SA_Solution, 221000 - watch2.ElapsedMilliseconds, SimulatedAnnealingTimetable.type_random, true);
+                //Console.WriteLine("SA Total Time: " + watch2.ElapsedMilliseconds);
+                //Console.WriteLine("SA Random Fitness: " + SA_Solution.fitness);
                 ////Console.WriteLine("SA Guided1 Fitness: " + SA_Solution.fitness);
                 ////Console.WriteLine("generated_neighbors: " + sa.generated_neighbors);
                 ////sa.generated_neighbors = 0;
