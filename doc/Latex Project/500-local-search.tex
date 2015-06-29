@@ -110,7 +110,7 @@ R $\rightarrow$ Decreasing rate\\
 This method also uses a different acceptance criteria:\\
 \[P(\delta E, T, SF) = e^{\frac{-\delta E}{T.f(s)}} \]
 f(s) $\rightarrow$ Solution fitness\\
-
+\\
 Some testings on the parameters were performed, so to check what parameters gave the best results. All the testings were made for the first set only (these testings require a lot of time), and so the same parameters will be used on all the sets so we can compare to results to other approaches, mainly the first winners of the competition. 
 In the Figure \ref{fig:SimulatedAnnealingPlot} is an example of a plot of the SA running with the following parameters: \textit{TMax} = 45, \textit{TMin} = $e^{-18}$, \textit{loops} = 5 and \textit{rate} = 0.01.\\
 \\
@@ -135,22 +135,56 @@ In the Figure \ref{fig:SimulatedAnnealingPlot} is an example of a plot of the SA
 \caption{Simulated Annealing results} 
 \label{fig:SimulatedAnnealingPlot}
 \end{figure}
->Explicar organização\\
->>UML\\
->Explicar código\\
->>Pseudo Código\\
->Explicar parametros e Cooling Schedule\\
->>Meter plot do Cooling Schedule
-
-
+As can be seen in the Figure \ref{fig:SimulatedAnnealingPlot}, it starts by accepting almost all better neighbor solutions, because in the beginning they are rather easy to find and are all accepted. In the middle, the score of the accepted neighbors are stable, because it accepts almost all worst solutions and the ratio of seeking better or worse solutions is very similar. In the end, the temperature is so low it becomes harder to accept worse solutions, ending up acting similar to a Hill Climbing.\\
+\\
+The tests performed on all the sets, with the best (tested) parameters, are shown and explained in the section \ref{sec:SaResults}
 
 \section{Hill Climbing}
 \label{sec:HillClimbing}
 
+Hill Climbing is a similar meta-heuristic compared to simulated annealing. The only difference is that it doesn't need acceptance criteria. Not needing this, means it doesn't actually need temperature and cooling schedule to be executed. Not being stuck with these parameters, it can be parameterized directly to be executed in a time limit. After the neighbor creation and acceptance/rejection the elapsed time is checked, and so the method keeps running or not depending if the elapsed time already passed the limit time (normally the time limit given is little shorter than the original limit time).\\
+\\
+Considering the main meta-heuristic used being the simulated annealing, this basically works like the hill climbing in the end, because of the presence of the low temperature. So, as the execution time could not be directly manipulated in the simulated annealing, the hill climbing was added to continue the execution until the time limit expires, since it can be controlled in this last meta-heuristic.\\
+\\
+The hill climbing method is present in the simulated annealing abstract class, which the name of the method is \textit{OnlyBetter}. Works the same way as the other normal simulated annealing methods, sharing the neighbor operators, but in the input parameters is present the limit execution time, and as said above, does not accept worse solutions.
+
 \section{Neighborhood Operators}
 \label{sec:NeighborhoodOperators}
 
+Neighborhood operators are operations made to a solution, in order to create other valid solutions (neighbor solutions), but not necessarily feasible. In this context, the core of all operations are the relocation of the examinations.\\
+\\
+The implementation of neighborhood selection went through tree different approaches. Firstly, the random selection was implemented. This approach always chooses a random operator to generate a new neighbor. Thereafter two guided approaches were implemented. The first one raised the probability of selecting one operator if this one generated a better neighbor solution. The probability of that operator is reduced in an equal amount if the operator generated a worse solution. The other guided approach simply lower the probability of an operator in case of success, and raises in case of unsuccess. \\
+\\
+The second guided approach presented worse results compared to the first one, as expected. Oddly, the random approach almost always showed better results compared to the first guided approach, even after suffering major changes in order to try to get it to generate better results. These changes include raising the probabilities even more or less when successfully or unsuccessfully created a better solution, and instead of lowering the probability for an operator when created a worse solution, it was instead returned to its default value.\\
+\\
+The neighborhood operators, in this context, are all based on moving examinations to another \textit{spot}. This implementation uses six different neighborhood operators:
+\\
+\begin{itemize}
+	\item \textit{Room Change} - A random examination is selected. After that, a random room is randomly selected. If the assignment of the random examination to the random room, while maintaining the period, does not clash any hard constraints, that neighbor is returned. If not, the next rooms are tested until one of them creates a feasible solution. If it reaches the limit of rooms and no feasible solution was found, no neighbor is returned;\\
+	
+	\item \textit{Period Change} - A random examination is selected. After that, a random period is randomly selected. If the assignment of the random examination to the random period, while maintaining the room, does not clash any hard constraints, that neighbor is returned. If not, the next periods are tested until one of them creates a feasible solution. If it reaches the limit of periods and no feasible solution was found, no neighbor is returned;\\
+	
+	\item \textit{Period \& Room Change} - A random examination is selected. After that, a random room and period are randomly selected. If the assignment of the random examination to the random room and period does not clash any hard constraints, that neighbor is returned. If not, the next rooms are tested for each of the next periods, until one of them creates a feasible solution. If it reaches the limit of periods and rooms and no feasible solution was found, no neighbor is returned;\\
+	
+	\item \textit{Room Swap} - A random examination is selected. After that a random room is selected. If the selected examination can be placed in that room, while maintaining the period, then a \textit{Room Change} neighbor is returned instead. If not, if the swapping of the random examination with any of the examinations presented in the random room, keeping the same period, does not clash any hard constraints, that neighbor is returned. If not, the examinations presented in the next rooms are tested until a feasible solution is found (always testing first if a \textit{Room Change} can be returned instead). If it reaches the limit of rooms and no feasible solution was found, no neighbor is returned;\\
+	
+	\item \textit{Period Swap} -  A random examination is selected. After that a random period is selected. If the selected examination can be placed in that period, while maintaining the room, then a \textit{Period Change} neighbor is returned instead. If not, if the swapping of the random examination with any of the examinations presented in the random period, keeping the same room, does not clash any hard constraints, that neighbor is returned. If not, the examinations presented in the next periods are tested until a feasible solution is found (always testing first if a \textit{Period Change} can be returned instead). If it reaches the limit of periods and no feasible solution was found, no neighbor is returned;\\
+	
+	\item \textit{Period \& Room Swap} - A random examination is selected. After that a random period and room are selected. If the selected examination can be placed in that period and room, then a \textit{Period Change} neighbor is returned instead. If not, if the swapping of the random examination with any of the examinations presented in the random period and room does not clash any hard constraints, that neighbor is returned. If not, the examinations presented in the next periods and rooms are tested until a feasible solution is found (always testing first if a \textit{Period \& Room Change} can be returned instead). If it reaches the limit of periods and rooms and no feasible solution was found, no neighbor is returned;
+\end{itemize}
+
+\subsection{Implementation}
+
+The original concept of neighbor solution is to have another solution apart from the current one, which is the result of applying the neighborhood operator to the current solution. But in this project, a neighbor solution is not really a solution, but the changes that need to be done to the original solution in order to obtain the neighbor solution itself. This makes the "job" easier and faster, since there's no need to replicate the original solution and apply the neighborhood operator to it in order to obtain the neighbor solution. Instead, the neighbor objects presented in the project have the information about the original solution and the operations needed to be done in order to change the original solution (what is normally called as "replacing the original solution with the neighbor"). In this case, there's no replacing the original solution with the neighbor, but \textit{accepting} the neighbor solution will just apply the operator to the current solution.\\
+\\
+Every neighbor object must implement the interface \textit{INeighbor}, which presents the methods \textit{Accept}, \textit{Reverse} and an integer that represents the fitness of the neighbor (the fitness of the new solution if this neighbor is to be accepted). The method Accept applies the operation to the current solution, modifying it and act like it's replacing the solution with the neighbor solution. The Reverse method disapplies the operation, getting then the old solution. The different neighbors and its methods can be seen in the Figure X.\\
+\\
+> Figure X\\
+\\
+> Apresentação do código
+
 \section{Experimental Evaluation/Results}
+\label{sec:SaResults}
 
 SEE Muller
 
