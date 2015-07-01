@@ -277,9 +277,9 @@ The \gls{tl} represents the layer that contains all the tools used by the \gls{h
 \\
 EvaluationFunction is a tool that allows the computation of the validation, fitness and distance to feasibility for a given solution. A solution is only valid if the examinations are all set, even if the solution is not feasible. The distance to feasibility determines the number of violated hard constraints and the fitness determines the score of the solution depending on the violated soft constraints and its penalty values. The distance to feasibility is used by the \gls{gc} heuristic to guarantee that the end solution is feasible, while the fitness is used by the \gls{sa} to compare the score of the current solution and the generated neighbors.\\
 \\
-The Loader loads all the information presented in a file SET into the repositories. This tool is the first to be run allowing the heuristics and other tools to use the entities through the repositories. More information about this tool will be given in the {\color{red}section **X**}.\\
+The Loader loads all the information presented in a file SET into the repositories. This tool is the first to be run allowing the heuristics and other tools to use the entities through the repositories. More information about this tool will be given in the Section \ref{sec:Loader}.\\
 \\
-The NeighborSelection is a tool that provides functions that verifies if a certain neighbor function can be applied in the current solution, if so, it returns a Neighbor object. A Neighbor object does not represent a neighbor solution, but the changes that need to be applied to the current solution if this neighbor is to be accepted. Details about this tool will be explained in the {\color{red}section **X**}.\\
+The NeighborSelection is a tool that provides functions that verifies if a certain neighbor function can be applied in the current solution, if so, it returns a Neighbor object. A Neighbor object does not represent a neighbor solution, but the changes that need to be applied to the current solution if this neighbor is to be accepted. Details about this tool will be explained in the Section \ref{sec:NeighborhoodOperators}.\\
 \\
 The FeasibilityTester is a tool that provides functions, which efficiently checks if a certain examination can be placed in a certain period, room or simultaneously period and room. This tool is used by both \gls{gc} and \gls{sa}, even though it only works if the examination to check is not yet set in the solution provided.\\
 \\
@@ -289,7 +289,7 @@ The OutputFormatting tool is used to create the output file given the final solu
 
 The \gls{hl} offers access to all the implemented heuristics. These are the \gls{gc}, \gls{sa}, and \gls{hc}. All these heuristics are used to create the best timetable possible given a limited time. Heuristics like \gls{sa} and \gls{hc} make use of neighbor solutions, and so, utilize the NeighborSelection tool for this effect. They also use tools like FeasibilityTester and EvaluationFunction to help build the initial solution and check the fitness while improving the current solution, respectively.\\
 \\
-Extensive explanation about these heuristics will be given in the {\color{red}section **X**}.
+Extensive explanation about these heuristics will be given in the Sections \ref{sec:SolutionInit} and \ref{sec:LocalSearch}.
 
 \subsection{Presentation Layer}
 

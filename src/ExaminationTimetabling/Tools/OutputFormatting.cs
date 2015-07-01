@@ -36,8 +36,6 @@ namespace Tools
 
         public static void Write(string path, string info_line)
         {
-            if (counter++%4 != 0)
-                return;
             System.IO.StreamWriter file = File.AppendText(path);
             try
             {

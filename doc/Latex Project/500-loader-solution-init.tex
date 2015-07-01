@@ -1,10 +1,11 @@
 \chapter{Loader and solution initialization}
-\label{implementation}
+\label{sec:SolutionInit}
 \thispagestyle{plain}
 
 The Loader and the solution initializer (heuristic) are the first tools used in this project. It is extremely necessary that the development of every tool and heuristic take in consideration the performance of its run. The less time a tool uses to execute, the more time other tools will use to do its job, and so may obtain better results. The Loader and Graph Coloring heuristic (solution initializer) will only be executed once so the major of the execution time will be used by the meta-heuristic(s).
 
 \section{Loader Module}
+\label{sec:Loader}
 
 The Loader module is the first tool to be used, above all. Its job is to load all the information presented in the set files. Each set file includes information about examinations and the students participating in each of it, the periods and the their penalties, the rooms and their penalties, period hard constraints, room hard constraints, and the information about the soft constraints, named Institutional Weightings. The presence of period and room hard constraints are optional.\\
 \\
@@ -207,10 +208,10 @@ It is to be noted that the Graph Coloring heuristic implementation only signs, u
 \end{umlpackage}
 
 
-\umlinclude[anchors=90 and -90, name=uses]{FeasibilityTester}{GraphColoring} 
+\umlinclude[anchors=-90 and 90, name=uses]{GraphColoring}{FeasibilityTester} 
 \end{tikzpicture}
 
-\caption{Graph Coloring and FeasibilityTester} \label{fig:GraphColoring}
+\caption{Graph Coloring and Feasibility Tester} \label{fig:GraphColoring}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%
@@ -236,7 +237,7 @@ It is to be noted that the Graph Coloring heuristic implementation only signs, u
 \label{alg:GraphColoring}
 \end{algorithm}
 
-\section{Experimental Results}
+\section{Solution Initialization Results}
 
 The results of the solution initialization are not meant to be the best, since the fitness (satisfying soft constraints) were not the objective of this first heuristic. Thus, it's rather important that the execution time and performance of this heuristic to be the best possible. Some sets are simpler than others, always getting good and stable execution times. Others can be harder, getting worse execution timings and instability. An unstable set means the results vary too much, and so some tests show very good execution times and others not so much. The Graph Coloring heuristic results on the 12 sets can be seen in Table \ref{tab:GCResults}. These results were obtained by running the heuristic 10 times for each set and compute its average for both fitness and execution time fields.\\
 \\

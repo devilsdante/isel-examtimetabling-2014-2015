@@ -186,13 +186,12 @@ E.~Burke, R.~Qu, and A.~Soghier, ``Adaptive selection of heuristics for
 
 \bibitem{Mouhoub2014}
 A.~Hmer and M.~Mouhoub, ``A multi-phase hybrid metaheuristics approach for the
-  exam timetabling,'' {\em (?)Department of Computer Science University of
-  Regina Regina, Canada {fhmer200a,mouhoubmg}@cs.uregina.ca}, 2014.
+  exam timetabling,'' {\em Department of Computer Science University of Regina
+  Regina, Canada {fhmer200a,mouhoubmg}@cs.uregina.ca}, 2014.
 
 \bibitem{Hamilton-Bryce2014}
 R.~Hamilton-Bryce, P.~McMullan, and B.~McCollum, ``Directed selection using
-  reinforcement learning for the examination timetabling problem,'' {\em (?)},
-  2014.
+  reinforcement learning for the examination timetabling problem,'' 2014.
 
 \bibitem{Rahman2014}
 S.~Rahman, E.~Burke, A.~Bargiela, B.~McCollum, and E.~{\"{O}}zcan, ``A
@@ -205,12 +204,6 @@ S.~Rahman, A.~Bargiela, E.~Burke, E.~{\"{O}}zcan, B.~McCollum, and P.~McMullan,
   ``Adaptive linear combination of heuristic orderings in constructing
   examination timetables,'' {\em European Journal of Operational Research},
   vol.~232, no.~2, pp.~287--297, 2014.
-
-\bibitem{Leite2014}
-N.~Leite, F.~Melíıcio, and A.~Rosa, ``A shuffled complex evolution based
-  algorithm for examination timetabling: Benchmarks and a new problem focusing
-  two epochs,'' {\em Proceedings of the 6th International Joint Conference on
-  Computational Intelligence (IJCCI-ECTA 2014)}, 2014.
 
 \bibitem{McCollum2007a}
 B.~McCollum, ``Itc2007 examination timetabling datasets.''

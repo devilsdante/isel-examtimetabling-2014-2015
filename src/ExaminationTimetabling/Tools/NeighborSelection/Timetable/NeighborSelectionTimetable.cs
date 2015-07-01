@@ -16,7 +16,7 @@ namespace Tools.NeighborSelection.Timetable
         private readonly Rooms rooms;
         private readonly Periods periods;
         private readonly FeasibilityTester feasibility_tester;
-        private readonly EvaluationFunctionTimetable _evaluationFunctionTimetable;
+        private readonly EvaluationFunctionTimetable evaluation_function_timetable;
 
         public NeighborSelectionTimetable()
         {
@@ -24,7 +24,7 @@ namespace Tools.NeighborSelection.Timetable
             rooms = Rooms.Instance();
             periods = Periods.Instance();
             feasibility_tester = new FeasibilityTester();
-            _evaluationFunctionTimetable = new EvaluationFunctionTimetable();
+            evaluation_function_timetable = new EvaluationFunctionTimetable();
 
         }
 

@@ -1,5 +1,5 @@
 \chapter{Approach 1 - Local Search}
-\label{LocalSearch}
+\label{sec:LocalSearch}
 \thispagestyle{plain}
 
 The first approach consists about using a local search meta-heuristic(s) to improve the solution given by the graph coloring heuristic. This approach uses Simulated Annealing, based on M\"{u}ller's approach \cite{Mueller2009}, finishing with the use of Hill Climbing. Hill Climbing was added because the way Simulated Annealing is implemented, there's no way to have a good control of the execution time, and so the parameters are given to make it run almost all the limit time and the rest is executed on Hill Climbing which the execution time is perfectly controllable.
@@ -137,7 +137,7 @@ In the Figure \ref{fig:SimulatedAnnealingPlot} is an example of a plot of the SA
 \end{figure}
 As can be seen in the Figure \ref{fig:SimulatedAnnealingPlot}, it starts by accepting almost all better neighbor solutions, because in the beginning they are rather easy to find and are all accepted. In the middle, the score of the accepted neighbors are stable, because it accepts almost all worst solutions and the ratio of seeking better or worse solutions is very similar. In the end, the temperature is so low it becomes harder to accept worse solutions, ending up acting similar to a Hill Climbing.\\
 \\
-The tests performed on all the sets, with the best (tested) parameters, are shown and explained in the section \ref{sec:SaResults}
+The tests performed on all the sets are shown and explained in the section \ref{sec:ExpResults}
 
 \section{Hill Climbing}
 \label{sec:HillClimbing}
@@ -177,14 +177,59 @@ The neighborhood operators, in this context, are all based on moving examination
 
 The original concept of neighbor solution is to have another solution apart from the current one, which is the result of applying the neighborhood operator to the current solution. But in this project, a neighbor solution is not really a solution, but the changes that need to be done to the original solution in order to obtain the neighbor solution itself. This makes the "job" easier and faster, since there's no need to replicate the original solution and apply the neighborhood operator to it in order to obtain the neighbor solution. Instead, the neighbor objects presented in the project have the information about the original solution and the operations needed to be done in order to change the original solution (what is normally called as "replacing the original solution with the neighbor"). In this case, there's no replacing the original solution with the neighbor, but \textit{accepting} the neighbor solution will just apply the operator to the current solution.\\
 \\
-Every neighbor object must implement the interface \textit{INeighbor}, which presents the methods \textit{Accept}, \textit{Reverse} and an integer that represents the fitness of the neighbor (the fitness of the new solution if this neighbor is to be accepted). The method Accept applies the operation to the current solution, modifying it and act like it's replacing the solution with the neighbor solution. The Reverse method disapplies the operation, getting then the old solution. The different neighbors and its methods can be seen in the Figure X.\\
-\\
-> Figure X\\
-\\
-> Apresentação do código
+Every neighbor object must implement the interface \textit{INeighbor}, which presents the methods \textit{Accept}, \textit{Reverse} and an integer that represents the fitness of the neighbor (the fitness of the new solution if this neighbor is to be accepted). The method Accept applies the operation to the current solution, modifying it and act like it's replacing the solution with the neighbor solution. The Reverse method disapplies the operation, getting then the old solution. The different neighbors and its methods can be seen in the Figure \ref{fig:Neighbors}.\\
+\begin{figure}[b!]
+\centering
+\begin{tikzpicture}
+\begin{umlpackage}[x = 2, y = 0]{Heuristics Layer} 
 
-\section{Experimental Evaluation/Results}
-\label{sec:SaResults}
+\umlclass[x = 0, y = 0]{SimulatedAnnealingTimetable}{}{}
+\umlclass[x = 0, y = -4]{NeighborSelectionTimetable}
+{
+	-examinations : Examinations\\
+	-rooms : Rooms\\
+	-periods : Periods\\
+	-feasibility\_tester : FeasibilityTester\\
+	-evaluation\_function\_timetable : EvaluationFunctionTimetable\\
+}
+{
+	+RoomSwap(solution : Solution) : INeighbor\\
+	+PeriodSwap(solution : Solution) : INeighbor\\
+	+PeriodRoomSwap(solution : Solution) : INeighbor\\
+	+RoomChange(solution : Solution) : INeighbor\\
+	+PeriodChange(solution : Solution) : INeighbor\\
+	+PeriodRoomChange(solution : Solution) : INeighbor\\
+}
+\umlclass[x = 0, y = -9]{INeighbor}
+{
+	+fitness : int\\
+}
+{
+	+Accept() : ISolution\\
+	+Reverse() : ISolution
+}
+\umlclass[x = -3, y = -11]{PeriodChangeNeighbor}{}{}
+\umlclass[x = -3, y = -13]{RoomChangeNeighbor}{}{}
+\umlclass[x = -3, y = -15]{PeriodRoomChangeNeighbor}{}{}
+\umlclass[x = 3, y = -11]{PeriodSwapNeighbor}{}{}
+\umlclass[x = 3, y = -13]{RoomSwapNeighbor}{}{}
+\umlclass[x = 3, y = -15]{PeriodRoomSwapNeighbor}{}{}
 
-SEE Muller
 
+\end{umlpackage}
+
+
+
+\umlimpl[geometry=-|, anchors=180 and -90]{PeriodChangeNeighbor}{INeighbor} 
+\umlimpl[geometry=-|, anchors=180 and -90]{RoomChangeNeighbor}{INeighbor} 
+\umlimpl[geometry=-|, anchors=180 and -90]{PeriodRoomChangeNeighbor}{INeighbor} 
+\umlimpl[geometry=-|, anchors=-180 and -90]{PeriodSwapNeighbor}{INeighbor} 
+\umlimpl[geometry=-|, anchors=-180 and -90]{RoomSwapNeighbor}{INeighbor} 
+\umlimpl[geometry=-|, anchors=-180 and -90]{PeriodRoomSwapNeighbor}{INeighbor}
+\umlinclude[anchors=-90 and 90, name=uses]{SimulatedAnnealingTimetable}{NeighborSelectionTimetable}
+\umlinclude[anchors=-90 and 90, name=uses]{NeighborSelectionTimetable}{INeighbor} 
+\end{tikzpicture}
+
+\caption{Neighborhood selection and operators} 
+\label{fig:Neighbors}
+\end{figure}

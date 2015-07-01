@@ -6,3 +6,6 @@
 \contentsline {table}{\numberline {4.1}{\ignorespaces Specifications of the 12 data sets of the ITC 2007 examination timetabling problem.\relax }}{22}
 \contentsline {table}{\numberline {4.2}{\ignorespaces Graph Coloring's fitness and execution time\relax }}{27}
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {6.1}{\ignorespaces ITC 2007 results comparison to this project's approach. The best solutions are indicated in bold. ''--'' indicates that the corresponding instance is not tested or a feasible solution cannot be obtained.\relax }}{38}
+\addvspace {10\p@ }

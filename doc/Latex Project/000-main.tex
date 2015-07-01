@@ -56,6 +56,12 @@
 \usepackage{pgfplots}
 \usepackage{pgfplotstable}
 
+\newcommand{\boldentry}[2]{%
+  \multicolumn{1}{S[table-format=#1,
+                    mode=text,
+                    text-rm=\fontseries{b}\selectfont
+                   ]}{#2}}
+
 \captionsetup{compatibility=false,figurename=Figure}
 
 \interfootnotelinepenalty=10000
@@ -108,6 +114,8 @@
 \include{400-architecture}
 \include{500-loader-solution-init}
 \include{500-local-search}
+\include{550-experimental-results}
+\include{550-future-work}
 %\include{500-genetic}
 %\include{600-conclusions}
 \include{test}

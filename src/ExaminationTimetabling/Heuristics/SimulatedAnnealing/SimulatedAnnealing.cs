@@ -87,11 +87,11 @@ namespace Heuristics.SimulatedAnnealing
 
                     if (DeltaE <= 0)
                     {
-                        if (watch.ElapsedMilliseconds > 1000)
-                        {
-                            Console.WriteLine("fitness: " + neighbor.fitness);
-                            watch.Restart();
-                        }
+                        //if (watch.ElapsedMilliseconds > 1000)
+                        //{
+                        //    Console.WriteLine("fitness: " + neighbor.fitness);
+                        //    watch.Restart();
+                        //}
                         solution = neighbor.Accept();
                         solution.fitness = neighbor.fitness;
                     }
@@ -102,11 +102,11 @@ namespace Heuristics.SimulatedAnnealing
 
                         if (random <= acceptance_probability)
                         {
-                            if (watch.ElapsedMilliseconds > 1000)
-                            {
-                                Console.WriteLine("fitness: " + neighbor.fitness);
-                                watch.Restart();
-                            }
+                            //if (watch.ElapsedMilliseconds > 1000)
+                            //{
+                            //    Console.WriteLine("fitness: " + neighbor.fitness);
+                            //    watch.Restart();
+                            //}
                                 
                             solution = neighbor.Accept();
                             solution.fitness = neighbor.fitness;
@@ -129,7 +129,7 @@ namespace Heuristics.SimulatedAnnealing
 
             while (watch.ElapsedMilliseconds < miliseconds)
             {
-                TimerPrinter(watch.ElapsedMilliseconds, miliseconds);
+                //TimerPrinter(watch.ElapsedMilliseconds, miliseconds);
                 //watch.Restart();
                 INeighbor neighbor = GenerateNeighbor(solution, type);
                 //Console.WriteLine("GenerateNeighbor: " + watch.ElapsedMilliseconds);
@@ -141,11 +141,10 @@ namespace Heuristics.SimulatedAnnealing
                 
                 if (DeltaE <= 0)
                 {
-                    if (watch.ElapsedMilliseconds > 1000)
-                    {
-                        Console.WriteLine("fitness: " + neighbor.fitness);
-                        watch.Restart();
-                    }
+                    //if (watch.ElapsedMilliseconds > 1000)
+                    //{
+                    //    Console.WriteLine("fitness: " + neighbor.fitness);
+                    //}
                     solution = neighbor.Accept();
                     solution.fitness = neighbor.fitness;
                 }
