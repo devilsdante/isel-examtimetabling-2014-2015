@@ -19,7 +19,7 @@
 \glossaryentry{HL?\glossentry{hl}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{TL?\glossentry{tl}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{PL?\glossentry{pl}|setentrycounter[]{page}\glsnumberformat}{1}
-\glossaryentry{ITC 2007?\glossentry{itc2007}|setentrycounter[]{page}\glsnumberformat}{iii}
+\glossaryentry{CRUD?\glossentry{crud}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{AI?\glossentry{ai}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{ITC 2007?\glossentry{itc2007}|setentrycounter[]{page}\glsnumberformat}{2}
 \glossaryentry{ITC 2007?\glossentry{itc2007}|setentrycounter[]{page}\glsnumberformat}{2}
@@ -29,7 +29,6 @@
 \glossaryentry{TS?\glossentry{ts}|setentrycounter[]{page}\glsnumberformat}{2}
 \glossaryentry{ITC 2007?\glossentry{itc2007}|setentrycounter[]{page}\glsnumberformat}{2}
 \glossaryentry{ITC 2007?\glossentry{itc2007}|setentrycounter[]{page}\glsnumberformat}{2}
-\glossaryentry{ITC 2007?\glossentry{itc2007}|setentrycounter[]{page}\glsnumberformat}{3}
 \glossaryentry{ITC 2007?\glossentry{itc2007}|setentrycounter[]{page}\glsnumberformat}{3}
 \glossaryentry{ITC 2007?\glossentry{itc2007}|setentrycounter[]{page}\glsnumberformat}{3}
 \glossaryentry{ITC 2007?\glossentry{itc2007}|setentrycounter[]{page}\glsnumberformat}{3}
@@ -49,7 +48,6 @@
 \glossaryentry{ITC 2007?\glossentry{itc2007}|setentrycounter[]{page}\glsnumberformat}{9}
 \glossaryentry{ITC 2007?\glossentry{itc2007}|setentrycounter[]{page}\glsnumberformat}{9}
 \glossaryentry{ITC 2007?\glossentry{itc2007}|setentrycounter[]{page}\glsnumberformat}{9}
-\glossaryentry{ITC 2007?\glossentry{itc2007}|setentrycounter[]{page}\glsnumberformat}{9}
 \glossaryentry{ITC 2007?\glossentry{itc2007}|setentrycounter[]{page}\glsnumberformat}{10}
 \glossaryentry{HC?\glossentry{hc}|setentrycounter[]{page}\glsnumberformat}{10}
 \glossaryentry{GD?\glossentry{gd}|setentrycounter[]{page}\glsnumberformat}{10}
@@ -61,10 +59,8 @@
 \glossaryentry{SA?\glossentry{sa}|setentrycounter[]{page}\glsnumberformat}{10}
 \glossaryentry{SA?\glossentry{sa}|setentrycounter[]{page}\glsnumberformat}{10}
 \glossaryentry{TS?\glossentry{ts}|setentrycounter[]{page}\glsnumberformat}{10}
+\glossaryentry{TS?\glossentry{ts}|setentrycounter[]{page}\glsnumberformat}{10}
 \glossaryentry{GD?\glossentry{gd}|setentrycounter[]{page}\glsnumberformat}{10}
-\glossaryentry{SA?\glossentry{sa}|setentrycounter[]{page}\glsnumberformat}{11}
-\glossaryentry{IP?\glossentry{ip}|setentrycounter[]{page}\glsnumberformat}{11}
-\glossaryentry{ITC 2007?\glossentry{itc2007}|setentrycounter[]{page}\glsnumberformat}{11}
 \glossaryentry{GD?\glossentry{gd}|setentrycounter[]{page}\glsnumberformat}{11}
 \glossaryentry{ITC 2007?\glossentry{itc2007}|setentrycounter[]{page}\glsnumberformat}{11}
 \glossaryentry{GD?\glossentry{gd}|setentrycounter[]{page}\glsnumberformat}{11}
@@ -72,10 +68,8 @@
 \glossaryentry{SA?\glossentry{sa}|setentrycounter[]{page}\glsnumberformat}{11}
 \glossaryentry{GD?\glossentry{gd}|setentrycounter[]{page}\glsnumberformat}{11}
 \glossaryentry{ITC 2007?\glossentry{itc2007}|setentrycounter[]{page}\glsnumberformat}{11}
-\glossaryentry{IP?\glossentry{ip}|setentrycounter[]{page}\glsnumberformat}{11}
-\glossaryentry{ITC 2007?\glossentry{itc2007}|setentrycounter[]{page}\glsnumberformat}{11}
-\glossaryentry{SA?\glossentry{sa}|setentrycounter[]{page}\glsnumberformat}{12}
-\glossaryentry{HC?\glossentry{hc}|setentrycounter[]{page}\glsnumberformat}{12}
+\glossaryentry{SA?\glossentry{sa}|setentrycounter[]{page}\glsnumberformat}{11}
+\glossaryentry{HC?\glossentry{hc}|setentrycounter[]{page}\glsnumberformat}{11}
 \glossaryentry{HC?\glossentry{hc}|setentrycounter[]{page}\glsnumberformat}{12}
 \glossaryentry{TS?\glossentry{ts}|setentrycounter[]{page}\glsnumberformat}{12}
 \glossaryentry{HC?\glossentry{hc}|setentrycounter[]{page}\glsnumberformat}{12}
@@ -87,8 +81,6 @@
 \glossaryentry{GD?\glossentry{gd}|setentrycounter[]{page}\glsnumberformat}{14}
 \glossaryentry{SA?\glossentry{sa}|setentrycounter[]{page}\glsnumberformat}{14}
 \glossaryentry{GD?\glossentry{gd}|setentrycounter[]{page}\glsnumberformat}{14}
-\glossaryentry{SA?\glossentry{sa}|setentrycounter[]{page}\glsnumberformat}{14}
-\glossaryentry{IP?\glossentry{ip}|setentrycounter[]{page}\glsnumberformat}{14}
 \glossaryentry{GD?\glossentry{gd}|setentrycounter[]{page}\glsnumberformat}{14}
 \glossaryentry{GD?\glossentry{gd}|setentrycounter[]{page}\glsnumberformat}{14}
 \glossaryentry{HC?\glossentry{hc}|setentrycounter[]{page}\glsnumberformat}{14}
@@ -103,7 +95,6 @@
 \glossaryentry{HC?\glossentry{hc}|setentrycounter[]{page}\glsnumberformat}{14}
 \glossaryentry{SA?\glossentry{sa}|setentrycounter[]{page}\glsnumberformat}{14}
 \glossaryentry{GD?\glossentry{gd}|setentrycounter[]{page}\glsnumberformat}{14}
-\glossaryentry{ITC 2007?\glossentry{itc2007}|setentrycounter[]{page}\glsnumberformat}{15}
 \glossaryentry{DL?\glossentry{dl}|setentrycounter[]{page}\glsnumberformat}{15}
 \glossaryentry{DAL?\glossentry{dal}|setentrycounter[]{page}\glsnumberformat}{15}
 \glossaryentry{BL?\glossentry{bl}|setentrycounter[]{page}\glsnumberformat}{15}
@@ -114,23 +105,28 @@
 \glossaryentry{ITC 2007?\glossentry{itc2007}|setentrycounter[]{page}\glsnumberformat}{15}
 \glossaryentry{DAL?\glossentry{dal}|setentrycounter[]{page}\glsnumberformat}{15}
 \glossaryentry{DL?\glossentry{dl}|setentrycounter[]{page}\glsnumberformat}{15}
+\glossaryentry{CRUD?\glossentry{crud}|setentrycounter[]{page}\glsnumberformat}{15}
+\glossaryentry{BL?\glossentry{bl}|setentrycounter[]{page}\glsnumberformat}{16}
+\glossaryentry{CRUD?\glossentry{crud}|setentrycounter[]{page}\glsnumberformat}{16}
 \glossaryentry{BL?\glossentry{bl}|setentrycounter[]{page}\glsnumberformat}{17}
+\glossaryentry{CRUD?\glossentry{crud}|setentrycounter[]{page}\glsnumberformat}{17}
+\glossaryentry{CRUD?\glossentry{crud}|setentrycounter[]{page}\glsnumberformat}{17}
 \glossaryentry{BL?\glossentry{bl}|setentrycounter[]{page}\glsnumberformat}{17}
+\glossaryentry{CRUD?\glossentry{crud}|setentrycounter[]{page}\glsnumberformat}{17}
 \glossaryentry{TL?\glossentry{tl}|setentrycounter[]{page}\glsnumberformat}{18}
 \glossaryentry{HL?\glossentry{hl}|setentrycounter[]{page}\glsnumberformat}{18}
 \glossaryentry{BL?\glossentry{bl}|setentrycounter[]{page}\glsnumberformat}{18}
 \glossaryentry{GC?\glossentry{gc}|setentrycounter[]{page}\glsnumberformat}{18}
-\glossaryentry{SA?\glossentry{sa}|setentrycounter[]{page}\glsnumberformat}{18}
 \glossaryentry{GC?\glossentry{gc}|setentrycounter[]{page}\glsnumberformat}{18}
 \glossaryentry{SA?\glossentry{sa}|setentrycounter[]{page}\glsnumberformat}{18}
 \glossaryentry{ITC 2007?\glossentry{itc2007}|setentrycounter[]{page}\glsnumberformat}{18}
-\glossaryentry{HL?\glossentry{hl}|setentrycounter[]{page}\glsnumberformat}{19}
-\glossaryentry{GC?\glossentry{gc}|setentrycounter[]{page}\glsnumberformat}{19}
-\glossaryentry{SA?\glossentry{sa}|setentrycounter[]{page}\glsnumberformat}{19}
-\glossaryentry{HC?\glossentry{hc}|setentrycounter[]{page}\glsnumberformat}{19}
-\glossaryentry{SA?\glossentry{sa}|setentrycounter[]{page}\glsnumberformat}{19}
-\glossaryentry{HC?\glossentry{hc}|setentrycounter[]{page}\glsnumberformat}{19}
-\glossaryentry{PL?\glossentry{pl}|setentrycounter[]{page}\glsnumberformat}{19}
-\glossaryentry{SA?\glossentry{sa}|setentrycounter[]{page}\glsnumberformat}{19}
-\glossaryentry{HC?\glossentry{hc}|setentrycounter[]{page}\glsnumberformat}{19}
+\glossaryentry{HL?\glossentry{hl}|setentrycounter[]{page}\glsnumberformat}{18}
+\glossaryentry{GC?\glossentry{gc}|setentrycounter[]{page}\glsnumberformat}{18}
+\glossaryentry{SA?\glossentry{sa}|setentrycounter[]{page}\glsnumberformat}{18}
+\glossaryentry{HC?\glossentry{hc}|setentrycounter[]{page}\glsnumberformat}{18}
+\glossaryentry{SA?\glossentry{sa}|setentrycounter[]{page}\glsnumberformat}{18}
+\glossaryentry{HC?\glossentry{hc}|setentrycounter[]{page}\glsnumberformat}{18}
+\glossaryentry{PL?\glossentry{pl}|setentrycounter[]{page}\glsnumberformat}{20}
+\glossaryentry{SA?\glossentry{sa}|setentrycounter[]{page}\glsnumberformat}{20}
+\glossaryentry{HC?\glossentry{hc}|setentrycounter[]{page}\glsnumberformat}{20}
 \glossaryentry{ITC 2007?\glossentry{itc2007}|setentrycounter[]{page}\glsnumberformat}{24}

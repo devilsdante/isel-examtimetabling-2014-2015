@@ -7,7 +7,7 @@
 \contentsline {section}{\numberline {1.2}Objectives}{2}
 \contentsline {section}{\numberline {1.3}Planning}{2}
 \contentsline {section}{\numberline {1.4}Document Organization}{3}
-\contentsline {chapter}{\numberline {2}State of the Art}{5}
+\contentsline {chapter}{\numberline {2}State-of-the-Art}{5}
 \contentsline {section}{\numberline {2.1}Timetabling Problem}{5}
 \contentsline {section}{\numberline {2.2}Existing Approaches}{6}
 \contentsline {subsection}{\numberline {2.2.1}Exact methods}{7}
@@ -18,16 +18,16 @@
 \contentsline {subsection}{\numberline {2.2.3}Meta-heuristics}{8}
 \contentsline {subsubsection}{Single-solution meta-heuristics}{8}
 \contentsline {subsubsection}{Population-based meta-heuristics}{8}
-\contentsline {subsection}{\numberline {2.2.4}\gls {itc2007} Examination timetabling problem: some approaches}{9}
+\contentsline {subsection}{\numberline {2.2.4}ITC2007 Examination timetabling problem: some approaches}{9}
 \contentsline {subsection}{\numberline {2.2.5}Other approaches}{10}
 \contentsline {chapter}{\numberline {3}Architecture}{15}
 \contentsline {section}{\numberline {3.1}System Architecture}{15}
 \contentsline {subsection}{\numberline {3.1.1}Data Layer}{15}
 \contentsline {subsection}{\numberline {3.1.2}Data Access Layer}{15}
-\contentsline {subsection}{\numberline {3.1.3}Business Layer}{17}
+\contentsline {subsection}{\numberline {3.1.3}Business Layer}{16}
 \contentsline {subsection}{\numberline {3.1.4}Tools Layer}{18}
-\contentsline {subsection}{\numberline {3.1.5}Heuristics Layer}{19}
-\contentsline {subsection}{\numberline {3.1.6}Presentation Layer}{19}
+\contentsline {subsection}{\numberline {3.1.5}Heuristics Layer}{18}
+\contentsline {subsection}{\numberline {3.1.6}Presentation Layer}{20}
 \contentsline {chapter}{\numberline {4}Loader and solution initialization}{21}
 \contentsline {section}{\numberline {4.1}Loader Module}{21}
 \contentsline {subsection}{\numberline {4.1.1}Analysis of benchmark data}{21}
