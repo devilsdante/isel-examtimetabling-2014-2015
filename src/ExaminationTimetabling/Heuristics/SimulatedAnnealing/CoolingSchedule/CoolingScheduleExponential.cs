@@ -25,7 +25,9 @@ namespace Heuristics.SimulatedAnnealing.CoolingSchedule
 
         public double G(double T)
         {
-            return TMax * Math.Pow(Math.E, -rate * span++);
+            //return TMax * Math.Pow(Math.E, -rate * T);
+            double temp = TMax * Math.Exp(-rate * span++);
+            return temp;
         }
     }
 }

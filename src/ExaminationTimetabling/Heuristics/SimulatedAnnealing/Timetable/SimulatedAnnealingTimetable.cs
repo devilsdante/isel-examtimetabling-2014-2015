@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using DAL.Models;
@@ -41,6 +42,8 @@ namespace Heuristics.SimulatedAnnealing.Timetable
         protected INeighbor GenerateNeighbor(Solution solution, int type)
         {
             generated_neighbors++;
+            if(generated_neighbors % 1000 == 0)
+                Console.WriteLine(generated_neighbors);
             if (type == type_random)
                 return GenerateRandomNeighbor(solution);
             if (type == type_guided1)

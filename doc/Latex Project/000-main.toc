@@ -31,9 +31,9 @@
 \contentsline {chapter}{\numberline {4}Loader and solution initialization}{21}
 \contentsline {section}{\numberline {4.1}Loader Module}{21}
 \contentsline {subsection}{\numberline {4.1.1}Analysis of benchmark data}{21}
-\contentsline {subsection}{\numberline {4.1.2}Implementation}{22}
-\contentsline {section}{\numberline {4.2}Graph Coloring}{24}
-\contentsline {subsection}{\numberline {4.2.1}Implementation}{24}
+\contentsline {subsection}{\numberline {4.1.2}Implementation}{21}
+\contentsline {section}{\numberline {4.2}Graph Coloring}{23}
+\contentsline {subsection}{\numberline {4.2.1}Implementation}{23}
 \contentsline {section}{\numberline {4.3}Solution Initialization Results}{25}
 \contentsline {chapter}{\numberline {5}Approach 1 - Local Search}{29}
 \contentsline {section}{\numberline {5.1}Simulated Annealing}{29}

@@ -74,6 +74,7 @@ namespace Heuristics.SimulatedAnnealing
 
             for (double T = TMax; T > TMin; T = cooling_schedule.G(T))
             {
+                //Console.WriteLine(T);
                 for (int loop = loops; loop > 0; --loop)
                 {
                     INeighbor neighbor = GenerateNeighbor(solution, type);
