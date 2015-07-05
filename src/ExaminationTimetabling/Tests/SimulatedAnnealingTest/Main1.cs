@@ -74,7 +74,7 @@ namespace Tests.SimulatedAnnealingTest
                     Console.WriteLine("SA Random Fitness: " + solution.fitness);
                     Console.WriteLine("generated_neighbors: " + sa.generated_neighbors);
                     sa.generated_neighbors = 0;
-
+                    Console.WriteLine("supposed generated_neighbors: "+sa.GetSANumberEvaluations(TMax, rate, reps, TMin));
                     //sa.OnlyBetter(solution, 221000 - watch2.ElapsedMilliseconds, SimulatedAnnealingTimetable.type_random, true);
                     //Console.WriteLine("HC Total Time: " + watch2.ElapsedMilliseconds);
                     //Console.WriteLine("HC Random Fitness: " + solution.fitness);

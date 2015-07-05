@@ -1,7 +1,10 @@
-\contentsline {chapter}{List of Figures}{v}
-\contentsline {chapter}{List of Tables}{vii}
-\contentsline {chapter}{List of Code Listings}{ix}
-\contentsline {chapter}{List of Acronyms}{ix}
+\contentsline {chapter}{Acknowledgments}{iii}
+\contentsline {chapter}{Resumo}{v}
+\contentsline {chapter}{Abstract}{vii}
+\contentsline {chapter}{List of Figures}{xi}
+\contentsline {chapter}{List of Tables}{xiii}
+\contentsline {chapter}{List of Code Listings}{xv}
+\contentsline {chapter}{List of Acronyms}{xv}
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \contentsline {section}{\numberline {1.1}Educational Timetabling Problems}{1}
 \contentsline {section}{\numberline {1.2}Objectives}{2}

@@ -20,13 +20,12 @@ namespace Heuristics.SimulatedAnnealing.CoolingSchedule
         {
             this.TMax = TMax;
             this.rate = rate;
-            this.span = 0;
         }
 
-        public double G(double T)
+        public double G(double t)
         {
             //return TMax * Math.Pow(Math.E, -rate * T);
-            double temp = TMax * Math.Exp(-rate * span++);
+            double temp = TMax * Math.Exp(-rate * t++);
             return temp;
         }
     }

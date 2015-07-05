@@ -67,12 +67,13 @@ namespace Heuristics.SimulatedAnnealing
         {
             InitVals(type);
             cooling_schedule = new CoolingScheduleExponential(rate, TMax);
+            int t = 1;
             Stopwatch watch = Stopwatch.StartNew();
             watch.Start();
 
             //OutputFormatting.StartNew("..//..//..//../..//doc//Latex Project//sa_plot_data.dat");
 
-            for (double T = TMax; T > TMin; T = cooling_schedule.G(T))
+            for (double T = TMax; T > TMin; T = cooling_schedule.G(t++))
             {
                 //Console.WriteLine(T);
                 for (int loop = loops; loop > 0; --loop)
@@ -230,6 +231,23 @@ namespace Heuristics.SimulatedAnnealing
                     
             }
             
+        }
+
+        public long GetSANumberEvaluations(double TMax, double R, double K, double TMin)
+        {
+            double t = 0, temp = TMax;
+            CoolingScheduleExponential cooling_schedule = new CoolingScheduleExponential(R, TMax);
+            long numberEvaluations = 0;
+            do
+            {
+                for (int i = 1; i <= K; ++i)
+                    ++numberEvaluations;
+                // Actualize temperature
+                ++t;
+                temp = cooling_schedule.G(t);
+            } while (temp >= TMin);
+
+            return numberEvaluations;
         }
     }
 }

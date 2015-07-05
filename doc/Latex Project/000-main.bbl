@@ -106,12 +106,6 @@ N.~Javadian, M.~Alikhani, and R.~Tavakkoli{-}Moghaddam, ``A discrete binary
   vol.~5227 of {\em Lecture Notes in Computer Science}, pp.~123--130, Springer,
   2008.
 
-\bibitem{Gogos2009}
-C.~Gogos, G.~Goulas, P.~Alefragis, and E.~Housos, ``Pursuit of better results
-  for the examination timetabling problem using grid resources,'' in {\em 2009
-  {IEEE} Symposium on Computational Intelligence in Scheduling, CISched 2009,
-  Nashville, TN, USA, April 1-2, 2009}, pp.~48--53, {IEEE}, 2009.
-
 \bibitem{McCollum2009}
 B.~McCollum, P.~McMullan, A.~Parkes, E.~Burke, and S.~Abdullah, ``An extended
   great deluge approach to the examination timetabling problem,'' in {\em
@@ -205,10 +199,6 @@ S.~Rahman, A.~Bargiela, E.~Burke, E.~{\"{O}}zcan, B.~McCollum, and P.~McMullan,
   examination timetables,'' {\em European Journal of Operational Research},
   vol.~232, no.~2, pp.~287--297, 2014.
 
-\bibitem{McCollum2007a}
-B.~McCollum, ``Itc2007 examination timetabling datasets.''
-  \url{http://www.cs.qub.ac.uk/itc2007/Login/SecretPage.php}, 2007.
-
 \bibitem{McCollum2007b}
 B.~McCollum, ``Itc2007 examination output format.''
   \url{http://www.cs.qub.ac.uk/itc2007/examtrack/exam_track_index_files/outputformat.htm},
@@ -219,20 +209,14 @@ B.~McCollum, ``Itc2007 examination validator.''
   \url{http://www.cs.qub.ac.uk/itc2007/examtrack/exam_track_index_files/validation.htm},
   2007.
 
-\bibitem{Microsoft2015}
-Microsoft, ``Streamreader class.''
-  \url{https://msdn.microsoft.com/en-us/library/system.io.streamreader(v=vs.110).aspx},
-  2015.
-
-\bibitem{Microsoft2015a}
-Microsoft, ``Regex class.''
-  \url{https://msdn.microsoft.com/en-us/library/system.text.regularexpressions.regex(v=vs.110).aspx},
-  2015.
-
 \bibitem{McCollum2007d}
 B.~McCollum, ``Itc2007 examination input format.''
   \url{http://www.cs.qub.ac.uk/itc2007/examtrack/exam_track_index_files/Inputformat.htm},
   2007.
+
+\bibitem{McCollum2007e}
+B.~McCollum, ``Itc 2007 examination benchmarking.''
+  \url{http://www.cs.qub.ac.uk/itc2007/index_files/benchmarking.htm}, 2007.
 
 \bibitem{CarvalhoLisbonNovember2004}
 P.~Carvalho, {\em Lecture Notes in Evolutionary Computation}.

@@ -293,7 +293,7 @@ Barry McCollum},
   Title                    = {A Multi-Phase Hybrid Metaheuristics Approach for the Exam Timetabling},
   Author                   = {Ali Hmer and
  Malek Mouhoub},
-  Journal                  = {(?)Department of Computer Science University of Regina Regina, Canada {fhmer200a,mouhoubmg}@cs.uregina.ca},
+  Journal                  = {Department of Computer Science University of Regina Regina, Canada {fhmer200a,mouhoubmg}@cs.uregina.ca},
   Year                     = {2014},
 
   Owner                    = {Mike},
@@ -437,6 +437,17 @@ Hana Rudová},
 
   Owner                    = {Mike},
   Timestamp                = {2015.06.21}
+}
+
+@Misc{,
+  Title                    = {ITC 2007 Examination Benchmarking},
+
+  Author                   = {Barry McCollum},
+  HowPublished             = {\url{http://www.cs.qub.ac.uk/itc2007/index_files/benchmarking.htm}},
+  Year                     = {2007},
+
+  Owner                    = {Mike},
+  Timestamp                = {2015.07.04}
 }
 
 @InProceedings{McCollum2009,

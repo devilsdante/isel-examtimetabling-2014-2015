@@ -42,6 +42,7 @@ namespace Heuristics.SimulatedAnnealing.Timetable
         protected INeighbor GenerateNeighbor(Solution solution, int type)
         {
             generated_neighbors++;
+
             if(generated_neighbors % 1000 == 0)
                 Console.WriteLine(generated_neighbors);
             if (type == type_random)
