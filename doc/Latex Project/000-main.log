@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.16)  5 JUL 2015 18:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.16)  6 JUL 2015 23:55
 entering extended mode
 **000-main.tex
 (000-main.tex
@@ -2483,12 +2483,17 @@ pe-ti-tion 2007; Timetable; Horários;
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
 (Font)              scaled to size 8.09995pt on input line 30.
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 33--38
+Underfull \hbox (badness 10000) in paragraph at lines 33--40
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--38
+Underfull \hbox (badness 10000) in paragraph at lines 33--40
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--40
 
  []
 
@@ -2545,16 +2550,16 @@ File: ts1fve.fd 2004/09/07 scalable font definitions for TS1/fve.
 )
 LaTeX Font Info:    Font shape `TS1/fve/m/n' will be
 (Font)              scaled to size 8.99994pt on input line 16.
- [1
 
-
-
-]
 Underfull \hbox (badness 10000) in paragraph at lines 20--23
 
  []
 
+[1
 
+
+
+]
 Underfull \hbox (badness 10000) in paragraph at lines 27--30
 
  []
@@ -2673,143 +2678,143 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--54
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 91--92
+Underfull \hbox (badness 10000) in paragraph at lines 89--92
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--114
+Underfull \hbox (badness 10000) in paragraph at lines 99--110
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--114
+Underfull \hbox (badness 10000) in paragraph at lines 99--110
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--114
+Underfull \hbox (badness 10000) in paragraph at lines 99--110
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--114
+Underfull \hbox (badness 10000) in paragraph at lines 99--110
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--114
+Underfull \hbox (badness 10000) in paragraph at lines 99--110
 
  []
 
 [9]
-Overfull \hbox (3.7799pt too wide) in paragraph at lines 118--149
+Overfull \hbox (3.7799pt too wide) in paragraph at lines 114--147
 \T1/fve/m/n/10 Abdullah et al.'s 2009 ap-proach [[]] con-sists on us-ing an hy-
 bridiza-tion of an electromagnetic-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--149
+Underfull \hbox (badness 10000) in paragraph at lines 114--147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--149
+Underfull \hbox (badness 10000) in paragraph at lines 114--147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--149
+Underfull \hbox (badness 10000) in paragraph at lines 114--147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--149
+Underfull \hbox (badness 10000) in paragraph at lines 114--147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--149
+Underfull \hbox (badness 10000) in paragraph at lines 114--147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--149
+Underfull \hbox (badness 10000) in paragraph at lines 114--147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--149
+Underfull \hbox (badness 10000) in paragraph at lines 114--147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--149
+Underfull \hbox (badness 10000) in paragraph at lines 114--147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--149
+Underfull \hbox (badness 10000) in paragraph at lines 114--147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--149
+Underfull \hbox (badness 10000) in paragraph at lines 114--147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--149
+Underfull \hbox (badness 10000) in paragraph at lines 114--147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--149
+Underfull \hbox (badness 10000) in paragraph at lines 114--147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--149
+Underfull \hbox (badness 10000) in paragraph at lines 114--147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--149
+Underfull \hbox (badness 10000) in paragraph at lines 114--147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--149
+Underfull \hbox (badness 10000) in paragraph at lines 114--147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--149
+Underfull \hbox (badness 10000) in paragraph at lines 114--147
 
  []
 
 [10] [11]
 
 LaTeX Font Warning: Font shape `T1/fve/m/sc' undefined
-(Font)              using `T1/fve/m/n' instead on input line 154.
+(Font)              using `T1/fve/m/n' instead on input line 152.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 155.
+(Font)              <9> on input line 153.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 155.
+(Font)              <6> on input line 153.
 LaTeX Font Info:    Font shape `TS1/fve/m/n' will be
-(Font)              scaled to size 8.09995pt on input line 158.
+(Font)              scaled to size 8.09995pt on input line 156.
 LaTeX Font Info:    Font shape `T1/fve/m/it' in size <9> not available
-(Font)              Font shape `T1/fve/m/sl' tried instead on input line 163.
+(Font)              Font shape `T1/fve/m/sl' tried instead on input line 161.
 LaTeX Font Info:    Font shape `T1/fve/m/sl' will be
-(Font)              scaled to size 8.09995pt on input line 163.
+(Font)              scaled to size 8.09995pt on input line 161.
 
-Overfull \hbox (42.49413pt too wide) in paragraph at lines 155--181
-[][] 
+Overfull \hbox (42.49413pt too wide) in paragraph at lines 153--180
+[][]
  []
 
 
-LaTeX Warning: Float too large for page by 13.98903pt on input line 181.
+LaTeX Warning: Float too large for page by 14.98903pt on input line 180.
 
 [12]) [13] [14] (400-architecture.tex
 Chapter 3.
@@ -3114,12 +3119,6 @@ Overfull \hbox (32.15245pt too wide) in paragraph at lines 269--270
 LaTeX Warning: Float too large for page by 54.36844pt on input line 271.
 
 
-Overfull \hbox (34.3518pt too wide) in paragraph at lines 274--285
-\T1/fve/m/n/10 ers, while us-ing the []BL to ac-cess all the stored en-ti-ties.
- These tools are named []\T1/fvm/m/n/10 EvaluationFunction\T1/fve/m/n/10 ,
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 274--285
 
  []
@@ -3193,29 +3192,22 @@ Missing character: There is no y in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--131
+Underfull \hbox (badness 10000) in paragraph at lines 66--130
 
  []
 
 
-Overfull \hbox (20.18666pt too wide) in paragraph at lines 66--131
-\T1/fve/m/n/10 First off, the loader was im-ple-mented us-ing the []\T1/fvm/m/n
-/10 Loader \T1/fve/m/n/10 base class, in which the []\T1/fvm/m/n/10 LoaderTimet
-able
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 66--131
+Underfull \hbox (badness 10000) in paragraph at lines 66--130
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--131
+Underfull \hbox (badness 10000) in paragraph at lines 66--130
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--131
+Underfull \hbox (badness 10000) in paragraph at lines 66--130
 
  []
 
@@ -3225,37 +3217,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--131
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 135--136
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
 
  []
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 139--144
+Underfull \hbox (badness 10000) in paragraph at lines 138--143
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--144
+Underfull \hbox (badness 10000) in paragraph at lines 138--143
 
  []
 
 [23]
-Underfull \hbox (badness 10000) in paragraph at lines 150--155
+Underfull \hbox (badness 10000) in paragraph at lines 149--153
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--155
+Underfull \hbox (badness 10000) in paragraph at lines 149--153
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--157
+Underfull \hbox (badness 10000) in paragraph at lines 154--155
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--160
+Underfull \hbox (badness 10000) in paragraph at lines 157--158
 
  []
 
@@ -3311,17 +3303,17 @@ Missing character: There is no y in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
 )
-Underfull \hbox (badness 10000) in paragraph at lines 237--117
+Underfull \hbox (badness 10000) in paragraph at lines 235--117
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 237--117
+Underfull \hbox (badness 10000) in paragraph at lines 235--117
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 237--117
+Underfull \hbox (badness 10000) in paragraph at lines 235--117
 
  []
 
@@ -3412,51 +3404,61 @@ Underfull \hbox (badness 10000) in paragraph at lines 105--111
 
  []
 
-Package pgfplots info on input line 125: Overriding colorspace to rgb due to xc
+Package pgfplots info on input line 124: Overriding colorspace to rgb due to xc
 olor configuration.
 PGFPlots: reading {sa_plot_data.dat}
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--141
+Underfull \hbox (badness 10000) in paragraph at lines 111--139
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--141
+Underfull \hbox (badness 10000) in paragraph at lines 111--139
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--141
+Underfull \hbox (badness 10000) in paragraph at lines 111--139
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 145--150
+Underfull \hbox (badness 10000) in paragraph at lines 143--148
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 145--150
+Underfull \hbox (badness 10000) in paragraph at lines 143--148
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--148
 
  []
 
 [32]
-Underfull \hbox (badness 10000) in paragraph at lines 154--162
+Underfull \hbox (badness 10000) in paragraph at lines 152--160
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--162
+Underfull \hbox (badness 10000) in paragraph at lines 152--160
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--162
+Underfull \hbox (badness 10000) in paragraph at lines 152--160
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--162
+Underfull \hbox (badness 10000) in paragraph at lines 152--160
+
+ []
+
+[33]
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
 
  []
 
@@ -3465,7 +3467,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 163--164
 
  []
 
-[33]
+
 Underfull \hbox (badness 10000) in paragraph at lines 165--166
 
  []
@@ -3480,11 +3482,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 169--170
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 171--172
-
- []
-
+[34]
 Missing character: There is no H in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no u in font nullfont!
@@ -3516,11 +3514,11 @@ Missing character: There is no y in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
 )
-Underfull \hbox (badness 10000) in paragraph at lines 178--118
+Underfull \hbox (badness 10000) in paragraph at lines 176--118
 
  []
 
-[34] [35] [36] (550-experimental-results.tex
+[35] [36] (550-experimental-results.tex
 Chapter 6.
 )
 Underfull \hbox (badness 10000) in paragraph at lines 4--119
@@ -3560,9 +3558,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--120
  []
 
 
-Overfull \hbox (22.17569pt too wide) in paragraph at lines 4--120
-\T1/fve/m/n/10 One of the main fea-tures that needs to be up-graded is the per-
-for-mance of the []\T1/fvm/m/n/10 FeasibilityTester
+Underfull \hbox (badness 10000) in paragraph at lines 4--120
+
  []
 
 
@@ -3632,10 +3629,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 49330 strings out of 493671
- 1123427 string characters out of 3141423
- 2812612 words of memory out of 3000000
- 51681 multiletter control sequences out of 15000+200000
+ 49331 strings out of 493671
+ 1123447 string characters out of 3141423
+ 2814142 words of memory out of 3000000
+ 51682 multiletter control sequences out of 15000+200000
  93281 words of font info for 88 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  62i,15n,105p,10397b,1883s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -3660,7 +3657,7 @@ m Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy5.pfb><C:/Program Files (x86
 )/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9
 /fonts/type1/public/lm/lmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 /public/lm/lmsy9.pfb>
-Output written on 000-main.pdf (59 pages, 595234 bytes).
+Output written on 000-main.pdf (59 pages, 597621 bytes).
 PDF statistics:
  343 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

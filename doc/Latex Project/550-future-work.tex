@@ -1,9 +1,11 @@
-\chapter{Future Work}
-\label{chapter:FutureWork}
+\chapter{Conclusions and Future Work}
+\label{chap:FutureWork}
 
-In the future work, we plan on getting better results on all the sets by tweaking some features in the implemented code. This includes changing the input parameters for each set to obtain the best performance in order to deliver the best results on each one of them.\\
+We were able to conclude that with the use of this hybrid approach of \gls{gc}, \gls{sa}, and \gls{hc} we matched the results of the five winners of the \gls{itc2007} on some of the instances. It should be possible to be able to get better results if more tests were to be performed on the parameters of the \gls{sa} meta-heuristic and edit some of the most used methods, to upgrade the performance of the heuristic and get better results.\\
 \\
-One of the main features that needs to be upgraded is the performance of the \verb+FeasibilityTester+ tool and the \gls{sa}, because this heuristic for each new generated neighbor, it computes a new fitness value. As some tests were made, we concluded that most of the time spent on this heuristic is used by the computation of the fitness value for each neighbor created. We should get better results if the fitness value was computed based on the change that was made on the new neighbor, instead of computing it all again. First we need to study if this feature is possible to implement. If it is, the performance boost should be very noticeable.\\
+In the future work, we plan on getting better results on all the sets by improving some features in the implemented code. This includes changing the input parameters for each set to obtain the best performance in order to deliver the best results on each one of them.\\
+\\
+One of the main features that needs to be upgraded is the performance of the \verb+Feasibility+- \verb+Tester+ tool and the \gls{sa}, because this heuristic for each new generated neighbor, computes a new fitness value. As some tests were made, we concluded that most of the time spent on this heuristic is used by the computation of the fitness value for each neighbor. We should get better results if the fitness value was computed based on the change that was made on the new neighbor (incremental evaluation of the neighbour solution), instead of computing it again. First we need to study if this feature is possible to implement. If it is, the performance boost should be very noticeable.\\
 \\
 The graph coloring heuristic will probably be edited in order to try and get a feasible solution on all the sets, since the 4th set ends up in an infinite loop, and so it is unable to create a feasible solution.\\
 \\

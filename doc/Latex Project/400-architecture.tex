@@ -65,13 +65,13 @@ The architecture of this project is divided in multiple layers. These are indepe
 
 \subsection{Data Layer}
 
-The \gls{dl} is the layer where all entities are stored. The entities, which represent the different elements of a timetable, such as exam, room, or timeslot, are instantiated after reading an \gls{itc2007} benchmark file. Entities are maintained in memory and discarded after the program is finished.
+The \gls{dl} stores all entities. The entities, which represent the different elements of a timetable, such as exam, room, or timeslot, are instantiated after reading an \gls{itc2007} benchmark file. Entities are maintained in memory and discarded after the program is finished.
 
 \subsection{Data Access Layer}
 
-The \gls{dal} is the layer that allow access to the data stored in the \gls{dl}. This layer provides repositories of each type of entity. The repository was implemented in a way that its signature is generic, and so can only be created with objects that implement \verb+IEntity+. This is mandatory because the generic repository's implementation uses the identification presented in \verb+IEntity+. \\
+The \gls{dal} allows access to the data stored in the \gls{dl}. This layer provides repositories of each type of entity. The repository was implemented in a way that its signature is generic, and so can only be created with objects that implement the \verb+IEntity+ interface. This is mandatory because the generic repository's implementation uses the identification presented in \verb+IEntity+. \\
 \\
-The \verb+Repository+ class stores the entities in a list, with indexes corresponding to the entities identifiers. The \verb+Repository+ provides basic \gls{crud} functions to access and edit the stored entities. The signature of the entities and all the specifications of the generic repository can be seen in the Figure \ref{fig:DataAccessLayer}.\\
+The \verb+Repository+ class stores the entities in a list, with indexes corresponding to the entities identifiers. The \verb+Repository+ provides basic \gls{crud} functions to access and edit the stored entities. The signature of the entities and all the specifications of the generic repository can be seen in Figure \ref{fig:DataAccessLayer}.\\
 
 \begin{figure}[t!]
 \centering
@@ -131,13 +131,13 @@ The \verb+Repository+ class stores the entities in a list, with indexes correspo
 \subsection{Business Layer}
 \label{subsec:BussinessLayer}
 
-The \gls{bl} provides access to the repositories explained above by, in each of the business classes, affording \gls{crud} functions or get/set functions, and specific functions that depend on the type of the repository. One example of these latter functions is the following. Considering the room hard constraints repository, one could invoke a method for obtaining all room hard constraints of a given type. This can be seen in the Figure \ref{fig:BusinessLayer}, which includes all the \gls{bl} classes, methods and variables. The \gls{crud} functions provided by some of the business classes simply use the \gls{crud} functions from the Repository instance, which is presented on that same business class.\\
+The \gls{bl} provides access to the repositories explained above by, in each of the business classes, with \gls{crud} functions or get/set functions, and specific functions that depend on the type of the repository. One example of these latter functions is the following. Considering the room hard constraints repository, one could invoke a method for obtaining all room hard constraints of a given type. This can be seen in Figure \ref{fig:BusinessLayer}, which includes all the \gls{bl} classes, methods and variables. The \gls{crud} functions provided by some of the business classes use the \gls{crud} functions from the Repository instance, which is presented on that same business class.\\
 \\
 It's possible to store multiple instances of a certain type of entity, recurring to the \gls{bl} classes, which provide \verb+Repository+ functions for that objective. If that's the case, a \verb+Repository+ instance of that type of entity is used. Thus, business classes that only store one instance, do not provide \gls{crud} functions, just \textit{set} and \textit{get} functions. This makes sense, considering it only stores one instance of an entity, instead of multiple entity instances, not needing the use of a \verb+Repository+. One example of these classes is the \verb+ConflictMatrix+. \\
 \\
 The \verb+ConflictMatrix+ class represents the \textit{Conflict matrix}, of size equal to the number of examinations. Each matrix element $(i,j)$ contains the number of conflicts between examinations $i$ and $j$. Even though it's not an entity that implements \verb+IEntity+, it must be easily accessed in the lower layers. There's only one instance of this class because there's only one conflict matrix for each set. Each set must be loaded using the \verb+Loader+ if that set is to be tested.\\
 \\
-All the business classes implement the \textit{Singleton} pattern. This decision was made because it makes sense to keep only one repository of each entity since they must be populated using the Loader each time a set is tested. Another reason is to avoid passing the instances references of the business classes to all the heuristics and tools that use them, and so, the instances can be easily be accessed statically.\\
+All the business classes implement the \textit{Singleton} pattern. This decision was made because it makes sense to keep only one repository of each entity since it must be populated using the Loader each time a set is tested. Another reason is to avoid passing the instances references of the business classes to all the heuristics and tools that use them, and so, the instances can easily be accessed statically.\\
 
 \begin{figure}[p]
 \centering
@@ -271,29 +271,29 @@ All the business classes implement the \textit{Singleton} pattern. This decision
 \end{figure}
 
 \subsection{Tools Layer}
-The \gls{tl} represents the layer that contains all the tools used by the \gls{hl} and by the lower layers, while using the \gls{bl} to access all the stored entities. These tools are named \verb+EvaluationFunction+, \verb+Loader+, \verb+NeighborSelection+, \verb+FeasibilityTester+ and \verb+OutputFormatting+.\\
+The \gls{tl} contains all the tools used by the \gls{hl} and by the lower layers, while using the \gls{bl} to access the stored entities. These tools are named \verb+EvaluationFunction+, \verb+Loader+, \verb+NeighborSelection+, \verb+FeasibilityTester+, and \verb+OutputFormatting+.\\
 \\
 \verb+EvaluationFunction+ is a tool  for solution validation, and computation of solution's fitness and distance to feasibility. A solution is only valid if the examinations are all scheduled, even if the solution is not feasible. The distance to feasibility determines the number of violated hard constraints and the fitness determines the score of the solution depending on the violated soft constraints and its penalty values. The distance to feasibility is used by the \gls{gc} heuristic to guarantee that the end solution is feasible, while the fitness is used by the metaheuristics used, such as SA, to compare different solutions.\\
 \\
-The \verb+Loader+ loads all the information presented in a benchmark file into the repositories. This tool is the first to be run allowing the heuristics and other tools to use the entities through the repositories. More information about this tool will be given in the Section \ref{sec:Loader}.\\
+The \verb+Loader+ loads all the information presented in a benchmark file into the repositories. This tool is the first to be run, allowing the heuristics and other tools to use the entities through the repositories. More information about this tool is given in Section \ref{sec:Loader}.\\
 \\
-The \verb+NeighborSelection+ is a tool that provides functions that verify if a certain neighbor function can be applied in the current solution, if so, it returns a \verb+Neighbor+ object. A \verb+Neighbor+ object does not represent a neighbor solution, but the changes that need to be applied to the current solution if this neighbor is to be accepted. Details about this tool will be explained in the Section \ref{sec:NeighborhoodOperators}.\\
+The \verb+NeighborSelection+ is a tool that provides functions that verify if a certain neighbor function can be applied in the current solution. If so, it returns a \verb+Neighbor+ object. A \verb+Neighbor+ object does not represent a neighbor solution, but the changes that need to be applied to the current solution if this neighbor is to be accepted. Details about are given in Section \ref{sec:NeighborhoodOperators}.\\
 \\
-The \verb+FeasibilityTester+ is a tool that provides functions, which efficiently checks if a certain examination can be placed in a certain period or room. An exam could be moved by only changing the period, the room, or both. This tool is used by both the \gls{gc} and the \gls{sa}, even though it only works if the examination to check is not yet set in the solution provided.\\
+The \verb+FeasibilityTester+ is a tool that provides functions, which efficiently checks if a certain examination can be placed in a certain period or room. An exam could be moved by only changing the period, the room, or both. This tool is used by both the \gls{gc} and the \gls{sa}, even though it only works if the examination to check is not yet set in the provided solution.\\
 \\
-The \verb+OutputFormatting+ tool is used to create the output file given the final solution. This file obeys the output file rules represented in the \gls{itc2007}'s site \cite{McCollum2007b} in order to be able to submit the solution \cite{McCollum2007c}. Submitting the solution allows to check all violated hard constraints, soft constraints, distance to feasibility and fitness values on the site's page.
+The \verb+OutputFormatting+ tool is used to create the output file, given the final solution. This file obeys the output file rules of the \gls{itc2007}'s site \cite{McCollum2007b}, in order to be able to submit the solution \cite{McCollum2007c}. Submitting the solution allows to check all violated hard constraints, soft constraints, distance to feasibility and fitness values on the site's page.
 
 \subsection{Heuristics Layer}
 
 The \gls{hl} offers access to all the implemented heuristics. These are the \gls{gc}, \gls{sa}, and \gls{hc}. All these heuristics are used to create the best timetable possible given a limited time. Heuristics like \gls{sa} and \gls{hc} make use of neighbor solutions, and so they utilize the \verb+NeighborSelection+ tool for this effect. They also use tools like \verb+FeasibilityTester+ and \verb+EvaluationFunction+ to help build the initial solution and check the fitness while improving the current solution, respectively.\\
 \\
-Extensive explanation about these heuristics will be given in the Chapters \ref{sec:SolutionInit} and \ref{sec:LocalSearch}.
+Detailed explanation about these heuristics are given in Chapters \ref{sec:SolutionInit} and \ref{sec:LocalSearch}.
 
 \subsection{Presentation Layer}
 
-The \gls{pl}, in this phase, works mainly as a debugger to run the all the project functionalities and to check the final results. It's in this layer that all the tests are made, like checking execution timings and changing input parameters on \gls{sa} and \gls{hc} to check if better results can be achieved.\\
+The \gls{pl}, in this phase, works mainly as a debugger to run the project functionalities and to check the final results. It's in this layer that all the tests are made, such as checking execution time and changing input parameters on both \gls{sa} and \gls{hc}, to check if better results can be achieved.\\
 \\
-It is planned to be implemented, in a latter  phase, another version of the presentation layer that includes the possibility of visualization of the final and best timetable generated.
+It is planned to be implemented, in a latter  phase, another version of the presentation layer that includes the visualization of the final and best timetable generated.
 
 
 

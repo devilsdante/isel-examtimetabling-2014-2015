@@ -2,7 +2,7 @@
 \label{sec:SolutionInit}
 \thispagestyle{plain}
 
-The Loader and the solution initializer (heuristic) are the first tools used in this project. The Loader and Graph Coloring heuristic (solution initializer) will only be executed once so the major of the execution time will be used by the meta-heuristic(s).
+The Loader and the solution initializer (heuristic) are the first tools used in this project. The Loader and Graph Coloring heuristic (solution initializer) will only be executed once, so the major part of the execution time will be used by the meta-heuristic(s).
 
 \section{Loader Module}
 \label{sec:Loader}
@@ -15,7 +15,7 @@ This tool not only loads all the data to its corresponding repositories, but als
 
 Figure 4.1 presents the specifications of the 12 datasets of the \gls{itc2007}. The instances presented have different degrees of complexity, that is, ease of finding a feasible solution and number of feasible solutions. Using the \gls{gc} heuristic developed (described later in Section \ref{sec:GraphColoring}), Instance 4 is the most complex one, as no feasible solution could be obtained. The high conflict matrix density, in addition to the fact there's only one room (with capacity 1200 seats), and the presence of 40 period hard constraints, help to explain the dataset complexity.\\
 \\
-All the specifications and benchmark data from the 12 datasets of the \gls{itc2007} timetabling problem are shown in the Figure \ref{tab:ITC2007Datasets}.
+All the specifications and benchmark data from the 12 datasets of the \gls{itc2007} timetabling problem are shown in the Table \ref{tab:ITC2007Datasets}.
 
 \begin{table}
 \centering
@@ -23,7 +23,7 @@ All the specifications and benchmark data from the 12 datasets of the \gls{itc20
 \sisetup{table-alignment=center,table-figures-decimal=3}
 
 \begin{tabular}{%
-	 l%
+	 S[table-figures-integer=6]%
      S[table-figures-integer=6]%
      S[table-figures-integer=4]%
      S[table-figures-integer=3]%
@@ -33,24 +33,24 @@ All the specifications and benchmark data from the 12 datasets of the \gls{itc20
 
 \toprule
 
-       & \multicolumn{1}{c}{\#} & \multicolumn{1}{c}{\#} & \multicolumn{1}{c}{\#} & \multicolumn{1}{l}{conflict} & \multicolumn{1}{l}{\# time} \\
-       &	 \multicolumn{1}{c}{students} & \multicolumn{1}{c}{exams} & \multicolumn{1}{c}{rooms} & \multicolumn{1}{l}{matrix}   & \multicolumn{1}{l}{slots}  \\
-       &		   	     & 		    & 		  & \multicolumn{1}{l}{density}  &\multicolumn{1}{l}{}\\ %HERE parece que ele ñ gosta de &\\ tive de alterar para &\multicolumn{1}{l}{}\\
+       & \multicolumn{1}{c}{\#} & \multicolumn{1}{c}{\#} & \multicolumn{1}{c}{\#} & \multicolumn{1}{l}{conflict} & \multicolumn{1}{c}{\#} \\
+\multicolumn{1}{c}{Instance} &  \multicolumn{1}{c}{students} & \multicolumn{1}{c}{exams} & \multicolumn{1}{c}{rooms} & \multicolumn{1}{c}{matrix}   & \multicolumn{1}{c}{time}  \\
+       &		   	     & 		    & 		  & \multicolumn{1}{c}{density}  &\multicolumn{1}{c}{slots}\\ 
        
 \midrule
 
-Instance 1 	 & 7891 	 & 607	& 7 	 & 0.05 	 & 54 \\
-Instance 2	 & 12743 & 870	& 49 & 0.01 	 & 40 \\
-Instance 3 	 & 16439 & 934	& 48 & 0.03 	 & 36 \\
-Instance 4	 & 5045  & 273 	& 1 	 & 0.15 	 & 21 \\
-Instance 5 	 & 9253 	 & 1018 	& 3 	 & 0.009 & 42 \\
-Instance 6 	 & 7909 	 & 242 	& 8 	 & 0.06  & 16 \\
-Instance 7	 & 14676	 & 1096 	& 15 & 0.02  & 80 \\
-Instance 8 	 & 7718 	 & 598 	& 8 	 & 0.05 	 & 80 \\
-Instance 9 	 & 655 	 & 169 	& 3  & 0.08 	 & 25 \\
-Instance 10	 & 1577 	 & 214 	& 48 & 0.05 	 & 32 \\
-Instance 11	 & 16439 & 934 	& 40 & 0.03 	 & 26 \\
-Instance 12  & 1653 	 & 78 	& 50 & 0.18 	 & 12 \\ 
+1 	 & 7891 	 & 607	& 7 	 & 0.05 	 & 54 \\
+2	 & 12743 & 870	& 49 & 0.01 	 & 40 \\
+3 	 & 16439 & 934	& 48 & 0.03 	 & 36 \\
+4	 & 5045  & 273 	& 1 	 & 0.15 	 & 21 \\
+5 	 & 9253 	 & 1018 	& 3 	 & 0.009 & 42 \\
+6 	 & 7909 	 & 242 	& 8 	 & 0.06  & 16 \\
+7	 & 14676	 & 1096 	& 15 & 0.02  & 80 \\
+8 	 & 7718 	 & 598 	& 8 	 & 0.05 	 & 80 \\
+9 	 & 655 	 & 169 	& 3  & 0.08 	 & 25 \\
+10	 & 1577 	 & 214 	& 48 & 0.05 	 & 32 \\
+11	 & 16439 & 934 	& 40 & 0.03 	 & 26 \\
+12  & 1653 	 & 78 	& 50 & 0.18 	 & 12 \\ 
 
 \bottomrule
 
@@ -63,9 +63,9 @@ Instance 12  & 1653 	 & 78 	& 50 & 0.18 	 & 12 \\
 
 \subsection{Implementation}
 
-The development of the \verb+ILoader+ tool is divided into two main parts: the implementation of the loading part, which loads the dataset file into the repositories using the business layer, and the creation and population of the conflict matrix.\\
+The development of the \verb+ILoader+ tool is divided into two main parts: the loading part, which loads the dataset file into the repositories using the business layer, and the creation and population of the conflict matrix.\\
 \\
-First off, the loader was implemented using the \verb+Loader+ base class, in which the \verb+LoaderTimetable+ extends. The \verb+Loader+ class implements functions to make it easier to run through a file. All specifications about these two classes can be seen in the Figure \ref{fig:Loaders}\\
+The loader was implemented using the \verb+Loader+ base class, from which the \verb+LoaderTimetable+ extends. The \verb+Loader+ class implements functions to make it easier to run through a file. These two classes are depicted in Figure \ref{fig:Loaders}\\
 \\
 Unlike the \verb+Loader+, \verb+LoaderTimetable+ depends on the structure of the dataset files. This class will use the Loader functions to go through a dataset file, and so, populate the repositories depending on the information read by the \verb+Loader+ class. The \verb+LoaderTimetable+ offers operations like \verb+Load+ and \verb+Unload+ to load all the information in a dataset file and to empty the repositories, respectively.\\
 \\
@@ -105,8 +105,8 @@ Unlike the \verb+Loader+, \verb+LoaderTimetable+ depends on the structure of the
 \end{tikzpicture}
 
 \caption{Specification of Loader and LoaderTimetable tools} \label{fig:Loaders}
-\end{figure}
-The implementation of the \verb+LoaderTimetable+ class is all about the \verb+Load+ method. This public method will be asking for new lines and reading the tokens out of it, using the \verb+Loader+ class. This procedure will take place as long as there are new lines to read. It's a pretty simple cycle that gets a new line and checks if, for example, the string ``Exams'' is contained on that line. If so, it runs \verb+InitExaminations+, if not, checks if ``Periods'' is contained on that line, and so on, until it runs out of file. The pseudo code of this method can be seen on Algorithm \ref{alg:Load}.\\\\
+\end{figure}The implementation of the \verb+LoaderTimetable+ class is all about the \verb+Load+ method. This public method will be asking for new lines and reading the tokens out of it, using the \verb+Loader+ class. This procedure will take place as long as there are new lines to read. It's a pretty simple cycle that gets a new line and checks if, for example, the string ``Exams'' is contained on that line. If so, it runs \verb+InitExaminations+, if not, checks if ``Periods'' is contained on that line, and so on, until it runs out of file. The pseudo code of this method can be seen on Algorithm \ref{alg:Load}.\\
+\\
 \begin{algorithm}[b!]
 \begin{algorithmic}
 \State Read new line
@@ -126,8 +126,7 @@ The implementation of the \verb+LoaderTimetable+ class is all about the \verb+Lo
 \end{algorithmic}
 \caption{LoaderTimetabling's Load method.}
 \label{alg:Load}
-\end{algorithm}
-The method \verb+InitExaminations+ reads each examination and enrolled students, and store them in a Hashmap, which stores the students as keys and the examinations which they attend as values. With this student-examinations organization, the \verb+InitConflictMatrix+ simply goes to all pairs of examinations for each student, and add a conflict in the matrix for those pair of examinations.
+\end{algorithm}The method \verb+InitExaminations+ reads each examination and enrolled students, and store them in a Hashmap, which stores the students as keys and the examinations which they attend as values. With this student-examinations organization, the \verb+InitConflictMatrix+ simply goes to all pairs of examinations for each student, and add a conflict in the matrix for those pair of examinations.
 
 \section{Graph Coloring}
 \label{sec:GraphColoring}
@@ -136,11 +135,11 @@ Graph Coloring is the heuristic used to generate a feasible solution. This heuri
 
 \subsection{Implementation}
 
-This heuristic is divided into four phases. In the first phase, it starts by editing the conflict matrix, in order to add the exclusion hard constraints to the conflict matrix. This process is possible because the exclusion hard constraint is also a clash between a pair of examinations. This makes the algorithm easier to implement later on, because checking the conflict matrix for a clash between a pair of examinations now works for the student conflicts and exclusion.\\
+The computation of the proposed heuristic is divided into four phases. In the first phase, it starts by editing the conflict matrix, in order to add the exclusion hard constraints to the conflict matrix. This process is possible because the exclusion hard constraint is also a clash between a pair of examinations. This makes the algorithm easier to implement later on, because checking the conflict matrix for a clash between a pair of examinations now works for the student conflicts and exclusion.\\
 \\
-The second phase simply erases all examination coincidence hard constraints' occurrences that have student conflicts. It is mentioned in the \gls{itc2007}'s site \cite{McCollum2007d} that if two examinations have the examination coincidence hard constraint and yet 'clash' with each other due to student enrollment, this hard constraint is ignored.\\
+The second phase simply erases all examination coincidence hard constraints' occurrences that have student conflicts. It is mentioned in the \gls{itc2007} site \cite{McCollum2007d} that if two examinations have the examination coincidence hard constraint and yet 'clash' with each other due to student enrollment, this hard constraint is ignored.\\
 \\
-The third phase populates and sort the assignment lists. The assignment lists are four lists that contain the unassigned examinations. These four lists contain:
+The third phase populates and sort the assignment lists. The assignment lists are four lists that hold the unassigned examinations. These four lists contain:
 \begin{itemize}
 	\item Unassigned examinations with ``room exclusivity'' hard constraint
 	\item Unassigned examinations with ``after'' hard constraint
@@ -149,14 +148,13 @@ The third phase populates and sort the assignment lists. The assignment lists ar
 \end{itemize}
 The Largest Degree Ordering Graph Coloring heuristic is used on these four lists, and so, each list is sorted by number of students conflicts. The examination assignment is done taking the present list ordering. First all the examinations with room exclusivity are assigned, then all that have the after constraints, and finally all with examination coincidence.\\
 \\
-The fourth phase is the examination assignment phase. This phase is the most important phase of this heuristic. As mentioned, it's based on 
-M\"{u}ller's approach \cite{Mueller2009}. It starts to assign the examinations with higher conflict, as mentioned above, using the four lists method. There are two types of assignment:
+The fourth phase is the examination assignment phase (the most important phase of this heuristic). It is based on M\"{u}ller's approach \cite{Mueller2009}. It starts to assign the examinations with higher conflict, as mentioned above, using the four lists method. There are two types of assignment:
 \\
 \begin{itemize}
-	\item Normal assignment -- If it's possible to assign the chosen examination to a period and room, a normal assignment is processed. In this type of assignment, of all the possible periods to assign, one of them is chosen randomly. It should be noted that a possible period to assign means that the examination can be assigned to that period and at least in one room on that period. After choosing the period, the same will be done to the rooms, and so, a random room will be chosen from all possible assignable rooms for that examination and period. If the current examination has to be coincident to another, and so, set to the same period as the other, the rules explained will not occur. Instead, only that period will be considered and if the period is not feasible to the current examination, the normal assignment will not occur. \\
+	\item Normal assignment -- If it's possible to assign the chosen examination to a period and room, a normal assignment is processed. In this type of assignment, of all the possible periods to assign, one of them is chosen randomly. It should be noted that a possible period to assign means that the examination can be assigned to that period and at least in one room on that period. After choosing the period, the same will be done to the rooms, and so, a random room will be chosen from all possible assignable rooms for that examination and period. If the current examination has to be coincident to another, and so, set to the same period as the other, the rules explained will not occur. Instead, only that period will be considered and if the period is not feasible to the current examination, the normal assignment will not take place. \\
 	\item Forcing assignment -- Occurs if there are no possible periods to assign the chosen examination, because the normal assignment was not possible. A random period and room are selected and the examination will be forced to be assigned on those, unassigning all the examinations that conflict with this assignment. As the normal assignment, there are exceptions to this rule. If a coincident examination is already set, the examination to be set will be forced to be on the same period as the coincident examination, in a random room. Forcing an examination to a specific period because of a coincident examination sometimes caused infinite or very long loops in the dataset 6. Because of this, there's a chance of 25\% that the previous rule does not occur, but instead, it unassigns all coincident examinations and try to assign the current examination to a random period instead.
 \end{itemize}
-It is to be noted that the Graph Coloring heuristic implementation only realize assignments and unassignments of exams examinations and checks examination clashes when forcing an assignment. The feasibility checking done to periods and rooms is are made by the tool FeasibilityTester, as mentioned in the Section \ref{subsec:BussinessLayer}. The GraphColoring and FeasibilityTester classes, with all the variables and methods, can be seen in Figure \ref{fig:GraphColoring}. The algorithm of the graph coloring heuristic, which was explained in this section can be seen in Algorithm \ref{alg:GraphColoring}.\\
+The Graph Coloring heuristic implementation only realize assignments and unassignments of exams examinations and checks examination clashes when forcing an assignment. The feasibility checking done to periods and rooms is are made by the tool FeasibilityTester, as mentioned in Section \ref{subsec:BussinessLayer}. The GraphColoring and FeasibilityTester classes, with all the variables and methods, can be seen in Figure \ref{fig:GraphColoring}. The algorithm of the graph coloring heuristic, which was explained in this section can be seen in Algorithm \ref{alg:GraphColoring}.\\
 
 \begin{figure}[t!]
 \centering
@@ -234,7 +232,7 @@ It is to be noted that the Graph Coloring heuristic implementation only realize 
 
 \section{Solution Initialization Results}
 
-As mentioned previously, the goal of the initialization procedure is not to find the best solution possible (in terms of fitness), but the find of feasible solution. Some sets are simpler than others, always getting good and stable execution times. Others can be harder, getting worse execution timings and instability. An unstable set means the results vary too much, and so some tests show very good execution times and others not so much. The Graph Coloring heuristic results on the 12 sets can be seen in Table \ref{tab:GCResults}. These results were obtained by running the heuristic 10 times for each set and compute its average for both fitness and execution time fields.\\
+As mentioned previously, the goal of the initialization procedure is not to find the best solution possible (in terms of fitness), but the find of feasible solution. Some sets are simpler than others, always getting good and stable execution times. Others can be harder, getting worse execution timings and instability. An unstable set means the results vary too much, and so some tests show very good execution times and others not so much. The Graph Coloring heuristic results on the 12 sets can be seen in Table \ref{tab:GCResults}. These results were obtained by running the heuristic, 10 times for each set, and computing the average for both fitness and execution time fields.\\
 \\
 \begin{table}[t]
 \centering
@@ -280,6 +278,6 @@ SET 12	 & 11887 	 & 3690 & 1829 & 1.67 & 98.33\\
 
 \end{table}The table \ref{tab:GCResults} features many tests performed to this first phase. It features, as mentioned before, the average fitness of the solutions created for each dataset, and so the average execution time, its standard deviation, and the percentage of time used in the first and second phase of this project. The standard deviation was applied because of the instability on execution times of certain datasets when creating initial solutions, using the \gls{gc} heuristic. By checking the standard deviation, the datasets 6, 11 and 12 are unstable. The datasets 11 and 12, even thought the average execution time was 3405 and 3690, the tested values varied from 864 to 7642 and 201 to 6452, respectively.\\
 \\
-The allowed execution time is 221000 milliseconds for each test made to each dataset. This time was picked by the benchmark program provided by the \gls{itc2007}'s site \cite{McCollum2007e} when executed on the machine, where all testes were made. In the results presented on the table \ref{tab:GCResults}, we can conclude that a very short amount of time is used on this first phase, compared to the one being used on the second phase.\\
+The allowed execution time is 221000 milliseconds for each test made to each dataset. This time was picked by the benchmark program provided by the \gls{itc2007} site \cite{McCollum2007e} when executed on the machine where all testes were performed. In the results presented on the Table \ref{tab:GCResults}, we can conclude that a very short amount of time is used on this first phase, compared to the one being used on the second phase.\\
 \\
-As shown in the table \ref{tab:GCResults}, the heuristic could not get a feasible solution for the set 4. This problem might be present because of the presence of an infinite cycle of normal and forcing assignments, resulting in assigning and unassigning the same examinations. This problem might be solved in the final version of this project.
+As shown in table \ref{tab:GCResults}, the heuristic could not get a feasible solution for the set 4. This problem might be present because of the presence of an infinite cycle of normal and forcing assignments, resulting in assigning and unassigning the same examinations. This problem might be solved in the final version of this project.

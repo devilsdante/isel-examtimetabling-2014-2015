@@ -9,17 +9,17 @@ A concrete example of this type of problems is the creation of timetables. Timet
 
 \section{Educational Timetabling Problems}
 
-This class of timetabling problems involve the scheduling of classes, lectures or exams on a school or university in a predefined set of time slots while satisfying a set of rules or constraints. Examples of rules are: a student can't be present in two classes at the same time, a student can't have two exams on the same day or even an exam must be scheduled before another.\\
+This class of timetabling problems involve the scheduling of classes, lectures or exams on a school or university in a predefined set of time slots while satisfying a set of rules or constraints. Examples of rules are: a student can't be present in two classes at the same time, a student can't have two exams on the same day or an exam must be scheduled before another.\\
 \\
-Depending on the institution type and if we're scheduling classes/lectures or exams the timetabling problem is divided into three main types:\\
+Depending on the institution type and if we're scheduling classes/lectures or exams, the timetabling problem is divided into three main types:\\
 \begin{itemize}
-	\item Examination timetabling -- consists on scheduling university course exams avoiding the overlap of exams containing students from the same course and spreading the exams as much as possible in the timetable.
+	\item Examination timetabling -- consists on scheduling university course exams, while avoiding the overlap of exams containing students from the same course and spreading the exams as much as possible in the timetable.
 	\item Course timetabling -- consists on scheduling lectures considering the multiple university courses, avoiding the overlap of lectures with common students.
 	\item School timetabling -- consists on scheduling all classes in a school, avoiding the need of students being present at multiple classes at the same time.
 \end{itemize}
 In this project, the main focus is the examination timetabling problem. \\
 \\
-The type of rules/constraints to satisfy depend on the timetabling problem type and problem specifications. The constraints are generally divided into two constraint categories: hard and soft. Hard constraints are a set of rules which must be followed in order to get a \textit{feasible} solution. On the other hand, soft constraints represent the views of the different interested players (e.g., institution, students, nurses, train operators) on the resulting timetable. The satisfaction of this type of constraints is not mandatory as is for the case of the hard constraints. In the timetabling problem, the goal is usually to optimize a function with a weighted combination of the different soft constraints, while satisfying the set of hard constraints. 
+The type of rules/constraints to satisfy depend on the particular timetabling problem specifications. The constraints are generally divided into two constraint categories: hard and soft. Hard constraints are a set of rules which must be followed in order to get a \textit{feasible} solution. On the other hand, soft constraints represent the views of the different interested players (e.g., institution, students, nurses, train operators) on the resulting timetable. The satisfaction of this type of constraints is not mandatory as is for the case of the hard constraints. In the timetabling problem, the goal is usually to optimize a function with a weighted combination of the different soft constraints, while satisfying the set of hard constraints. 
 
 \section{Objectives}
 \label{section:Objts}
@@ -32,18 +32,18 @@ The application's requirements are the following:
 	\item Validation (correction and quality) of a timetable provided by the user (\textit{mandatory}).
 	\item Graphical User Interface to allow the user to edit generated solutions and to optimize user's edited solutions (\textit{optional}).
 \end{itemize}
-This project is divided into two main phases. The first phase consists on studying some techniques and solutions for this problem emphasizing meta-heuristics like: \gls{ga}, \gls{sa}, \gls{ts}, and some of its hybridizations. The second phase consists in the development of the selected algorithms and promising hybridizations, and test them using the \gls{itc2007} data. A performance comparison between the proposed algorithms and the state-of-the-art algorithms will be made.
+This project is divided into two main phases. The first phase consists on studying some techniques and solutions for this problem emphasizing meta-heuristics like: \gls{ga} \cite{Abdullah2012}, \gls{sa} \cite{Kirkpatrick1983}, \gls{ts} \cite{Smet2007}, and some of its hybridizations. The second phase consists in the development of the selected algorithms and promising hybridizations, and to test them using the \gls{itc2007} data. A performance comparison between the proposed algorithms and the state-of-the-art algorithms will be made.
 
 \section{Planning}
 
-In this section, more details are given about the development of the two project phases. A Gantt diagram is presented showing each project's phase timeline. On the first phase the author studied the educational timetabling problem and in particular the examination timetabling problem and related literature. This work is documented in the progress report submitted in March, 2015. The second phase's main goal is to develop solutions for the \gls{itc2007} problem instance. The work developed in the second phase spanned from March to July 2015, and is documented in the present document.\\
+This section provides more details about the development of the two project phases. On the first phase the author studied the educational timetabling problem and in particular the examination timetabling problem and related literature. This work is documented in the progress report submitted in March, 2015. The second phase's main goal is to develop solutions for the \gls{itc2007} problem instance. The work developed in the second phase spanned from March to July 2015, and is documented in the present document.\\
 \\
-One of the approaches to be developed will use a local search algorithm (e.g., Simulated Annealing) to improve the solution obtained using a graph coloring heuristic. In a subsequent approach, instead of using a single-solution based meta-heuristic, the author intends to use a population-based meta-heuristic (e.g., Genetic Algorithm) hybridized with a local
-search algorithm (e.g., Simulated Annealing), or a combination of other meta-heuristics. A performance comparison will be made in which the proposed solution methods are compared with the five \gls{itc2007} finalists and other state-of-the-art approaches. \\
+One of the approaches to be developed will use a local search algorithm (e.g., \gls{sa}) to improve the solution obtained using a \gls{gc} heuristic. In a subsequent approach, instead of using a single-solution based meta-heuristic, the author intends to use a population-based meta-heuristic (e.g., \gls{ga}) hybridized with a local
+search algorithm (e.g., \gls{sa}), or a combination of other meta-heuristics. A performance comparison will be made in which the proposed solution methods are compared against the five \gls{itc2007} finalists and other state-of-the-art approaches. \\
 \\
 As an optional project requirement, a GUI for editing generated solutions by the human planner will be developed.\\
 \\
-The Gantt diagram presented on Figure \ref{fig:planning} shows a detailed planning for the development of all the main topics of this project including both phases mentioned above. The colors presented on the diagram are green and blue, which designate the first and second phase, respectively.\\
+The Gantt diagram on Figure \ref{fig:planning} shows a detailed planning for the development of all the main topics of this project including both phases mentioned above. The colors presented on the diagram are green and blue, which designate the first and second phase, respectively.\\
 
 \begin{figure}[t!]
 \centering
@@ -141,8 +141,6 @@ The Gantt diagram presented on Figure \ref{fig:planning} shows a detailed planni
    \label{fig:planning}
 \end{figure}
 
-%The planning shown on the GANTT diagram may not be accurate. Some topics and features may take less or more time than specified. The developing order of certain features may change depending on the necessity of these to implement others already in development.
-
 \section{Document Organization}
 
-The rest of the document is organized as follows. Section \ref{stateofart}, entitled ``State-of-the-Art'', specifies the timetabling problem focusing on examination timetabling and existing approaches applied to the \gls{itc2007} benchmark data. This chapter includes a survey of the most important paradigms and algorithmic strategies used to tackle the timetabling problem. Next, the methods of the five \gls{itc2007} finalists are summarized. The next chapters address the implementation aspects of the solution method. This includes a chapter that explains the organization of the project and its architecture, following by chapters that explain the heuristics and the Loader module, ending with the experimental results and future work.
+The remainder of this report is organized as follows. Chapter \ref{chap:stateofart}, addresses the timetabling problem focusing on examination timetabling and existing approaches applied to the \gls{itc2007} benchmark data. This chapter includes a survey of the most important paradigms and algorithmic strategies to tackle the timetabling problem. Next, the methods of the five \gls{itc2007} finalists are summarized. The next chapters address the implementation aspects of the solution method. This includes a chapter that explains the organization of the project and its architecture, following by chapters that explain the heuristics and the Loader module, ending with the experimental results, conclusions, and future work.

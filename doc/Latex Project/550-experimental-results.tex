@@ -1,22 +1,22 @@
 \chapter{Experimental Results}
-\label{sec:ExpResults}
+\label{chap:ExpResults}
 
-In this section we will present the results obtained while running all the heuristics explained in the previous chapters. We will also compare the obtained results with the top 5 winners of the ITC2007.\\
+In this chapter we will present the results obtained while running all the heuristics explained in the previous chapters. We also compare our results against the ones of the top 5 winners of the \gls{itc2007} contest.\\
 \\
-The results obtained using the approach explained in the previous chapters were not as we expected. Some of the results obtained could be as good as it can match the top 5 winners, and some were so far away from these. Each set score is the result of the average of 10 runs that were done on that same set. The tests were made on all 12 sets, including the hidden ones.\\
+Each set score is the result of the average of 10 runs that were done on that same set. The tests were made on all 12 sets, including the hidden ones.\\
 \\
-The parameters used to run the Simulated Annealing and the Hill Climbing were:\\
+The parameters used to run the \gls{sa} were:\\
 \\
-TMax $\rightarrow$ 0.01\\
-TMin $\rightarrow$ $1e^{-18}$\\
-reps $\rightarrow$ 5\\
-rate $\rightarrow$ 0.001\\
+TMax = 0.01 $\rightarrow$ Maximum/initial temperature\\
+TMin = $1e^{-18}$ $\rightarrow$ Minimum temperature\\
+reps = 5 $\rightarrow$ Number of repetitions per temperature\\
+rate = 0.001 $\rightarrow$ Temperature cooling rate\\
 \\
-With these parameters used on all the sets, we obtained the results presented on the Table \ref{tab:ITC2007ResultsComparison}. As can be seen, the results for the sets 1, 2, 6, 7, 8 and 9 can match the 5 winners' results, but the sets 3, 10 and 11 were way too far away from the results of the top 5 (the ones that could get a feasible solution). We believe this can be fixed by tweaking the parameters and give individual parameters to each set to try and obtain better results.\\
+With these parameters used on all the sets, we obtained the results presented on Table \ref{tab:ITC2007ResultsComparison}. Some of the results could be as good as it can match the top 5 winners, and some were so far away from these. As can be seen, the results for the sets 1, 2, 6, 7, 8, and 9 can match the 5 winners' results, but the sets 3, 10, and 11 were far away from the results of the top 5 (the ones that could get a feasible solution). We believe this can be fixed by tweaking the parameters and give individual parameters to each set to try and obtain better results.\\
 \\
 \begin{table*}
 \centering
-
+\caption{ITC 2007 results comparison to this project's approach. The best solutions are indicated in bold. ''--'' indicates that a feasible solution could not be obtained.}
 \sisetup{table-alignment=center,detect-weight=true,detect-inline-weight=math}
 \begin{tabular}{%
 	S[table-figures-integer=3]%
@@ -30,8 +30,8 @@ With these parameters used on all the sets, we obtained the results presented on
 
 \toprule
 
-\multicolumn{1}{l}{Instance} & \multicolumn{1}{l}{M\"{u}ller} &	\multicolumn{1}{l}{Gogos et} & \multicolumn{1}{l}{Atsuta et} & \multicolumn{1}{l}{De Smet} & \multicolumn{1}{l}{Pillay} & \multicolumn{1}{l}{My Approach}\\
-		& \multicolumn{1}{l}{2008 \cite{Mueller2009}} & \multicolumn{1}{l}{al. 2008~\cite{Gogos2012}} & \multicolumn{1}{l}{al. 2008~\cite{Atsuta2007}} & \multicolumn{1}{l}{2008~\cite{Smet2007}} & \multicolumn{1}{l}{2008~\cite{Pillay2007}} & \multicolumn{1}{l}{2015} \\
+\multicolumn{1}{l}{Instance} & \multicolumn{1}{l}{M\"{u}ller} &	\multicolumn{1}{l}{Gogos et} & \multicolumn{1}{l}{Atsuta et} & \multicolumn{1}{l}{De Smet} & \multicolumn{1}{l}{Pillay} & \multicolumn{1}{l}{Proposed}\\
+		& \multicolumn{1}{l}{2008 \cite{Mueller2009}} & \multicolumn{1}{l}{al. 2008~\cite{Gogos2012}} & \multicolumn{1}{l}{al. 2008~\cite{Atsuta2007}} & \multicolumn{1}{l}{2008~\cite{Smet2007}} & \multicolumn{1}{l}{2008~\cite{Pillay2007}} & \multicolumn{1}{l}{Approach 2015} \\
 
 \midrule
 
@@ -51,6 +51,5 @@ With these parameters used on all the sets, we obtained the results presented on
 \bottomrule
 
 \end{tabular}
-\caption{ITC 2007 results comparison to this project's approach. The best solutions are indicated in bold. ''--'' indicates that a feasible solution could not be obtained.}
 \label{tab:ITC2007ResultsComparison}
 \end{table*}
