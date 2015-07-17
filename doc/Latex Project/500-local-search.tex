@@ -121,11 +121,14 @@ Some testings on the parameters were performed, in order to check what parameter
     title={},
     xlabel={-log10(Temperature)},
     ylabel={Solution score},
+    mark size=0.2pt
 ]
 
 \addplot plot file [
     color=blue,
-    mark=o,
+    mark=*,
+    mark options={solid},
+   	smooth
     ] {sa_plot_data.dat};
 
 \end{axis}
