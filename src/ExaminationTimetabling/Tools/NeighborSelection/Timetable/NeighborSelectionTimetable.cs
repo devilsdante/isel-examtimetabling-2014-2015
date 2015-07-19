@@ -17,6 +17,7 @@ namespace Tools.NeighborSelection.Timetable
         private readonly Periods periods;
         private readonly FeasibilityTester feasibility_tester;
         private readonly EvaluationFunctionTimetable evaluation_function_timetable;
+        private Random random;
 
         public NeighborSelectionTimetable()
         {
@@ -25,15 +26,14 @@ namespace Tools.NeighborSelection.Timetable
             periods = Periods.Instance();
             feasibility_tester = new FeasibilityTester();
             evaluation_function_timetable = new EvaluationFunctionTimetable();
-
+            random = new Random(Guid.NewGuid().GetHashCode());
         }
 
         public INeighbor RoomSwap(Solution solution)
         {
             Stopwatch watch = new Stopwatch();
             watch.Start();
-
-            Random random = new Random((int) DateTime.Now.Ticks);
+            
             Examination random_examination = examinations.GetById(random.Next(examinations.EntryCount()));
             Period period = periods.GetById(solution.GetPeriodFrom(random_examination.id));
             int random_room_id = random.Next(rooms.EntryCount());
@@ -91,7 +91,6 @@ namespace Tools.NeighborSelection.Timetable
             Stopwatch watch = new Stopwatch();
             watch.Start();
 
-            Random random = new Random((int) DateTime.Now.Ticks);
             Examination random_examination = examinations.GetById(random.Next(examinations.EntryCount()));
             int random_period_id = random.Next(periods.EntryCount());
             Room room = rooms.GetById(solution.GetRoomFrom(random_examination.id));
@@ -150,7 +149,6 @@ namespace Tools.NeighborSelection.Timetable
             Stopwatch watch = new Stopwatch();
             watch.Start();
 
-            Random random = new Random((int)DateTime.Now.Ticks);
             Examination random_examination = examinations.GetById(random.Next(examinations.EntryCount()));
             int random_period_id = random.Next(periods.EntryCount());
             int random_room_id = random.Next(rooms.EntryCount());
@@ -214,7 +212,7 @@ namespace Tools.NeighborSelection.Timetable
 
         public INeighbor PeriodChange(Solution solution)
         {
-            Examination random_examination = examinations.GetById(new Random((int)DateTime.Now.Ticks).Next(examinations.EntryCount()));
+            Examination random_examination = examinations.GetById(random.Next(examinations.EntryCount()));
             Room room = rooms.GetById(solution.GetRoomFrom(random_examination.id));
             int random_period_id = new Random((int)DateTime.Now.Ticks).Next(periods.EntryCount());
 
@@ -231,7 +229,7 @@ namespace Tools.NeighborSelection.Timetable
 
         public INeighbor RoomChange(Solution solution)
         {
-            Examination random_examination = examinations.GetById(new Random((int)DateTime.Now.Ticks).Next(examinations.EntryCount()));
+            Examination random_examination = examinations.GetById(random.Next(examinations.EntryCount()));
             Period period = periods.GetById(solution.GetPeriodFrom(random_examination.id));
             int random_room_id = new Random((int)DateTime.Now.Ticks).Next(rooms.EntryCount());
             for (int room_id = 0; room_id < rooms.EntryCount(); ++room_id)
@@ -247,7 +245,6 @@ namespace Tools.NeighborSelection.Timetable
 
         public INeighbor PeriodRoomChange(Solution solution)
         {
-            Random random = new Random((int)DateTime.Now.Ticks);
             Examination random_examination = examinations.GetById(random.Next(examinations.EntryCount()));
             int random_period_id = random.Next(periods.EntryCount());
             int random_room_id = random.Next(rooms.EntryCount());

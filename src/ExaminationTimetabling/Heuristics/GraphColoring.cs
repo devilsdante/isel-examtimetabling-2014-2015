@@ -171,7 +171,7 @@ namespace Heuristics
             if (!possible_periods.Any())
                 return false;
 
-            Random random = new Random();
+            Random random = new Random(Guid.NewGuid().GetHashCode());
             int random_assignable = random.Next(possible_periods.Count);
             Period period_to_assign = possible_periods[random_assignable];
 
@@ -193,7 +193,7 @@ namespace Heuristics
 
         private void ExaminationForcingAssignment(Examination exam_to_assign)
         {
-            Random random = new Random();
+            Random random = new Random(Guid.NewGuid().GetHashCode());
             int random_room = -1;
             int random_period = -1;
             Room room_to_assign = null;

@@ -27,7 +27,7 @@ namespace Tests.SimulatedAnnealingTest
 
             OutputFormatting.StartNew("..//..//results1.txt");
 
-            for (SET = 2; SET <= 2; SET++)
+            for (SET = 1; SET <= 1; SET++)
             {
                 if (SET == 4)
                     continue;
@@ -74,11 +74,13 @@ namespace Tests.SimulatedAnnealingTest
                     sa.Exec2(solution, TMax, TMin, reps, rate, SimulatedAnnealingTimetable.type_random, true);
                     Console.WriteLine("SA Time: " + watch.ElapsedMilliseconds);
                     Console.WriteLine("SA Random Fitness: " + solution.fitness);
+                    Console.WriteLine("SA Random Fitness: " + evaluation.Fitness(solution));
                     Console.WriteLine("generated_neighbors: " + sa.generated_neighbors);
                     sa.generated_neighbors = 0;
                     sa.OnlyBetter(solution, 221000 - watch2.ElapsedMilliseconds, SimulatedAnnealingTimetable.type_random, true);
                     Console.WriteLine("HC Total Time: " + watch2.ElapsedMilliseconds);
                     Console.WriteLine("HC Random Fitness: " + solution.fitness);
+                    Console.WriteLine("HC Random Fitness: " + evaluation.Fitness(solution));
                     Console.WriteLine("generated_neighbors: " + sa.generated_neighbors);
                     ////Console.WriteLine("SA Guided1 Fitness: " + SA_Solution.fitness);
                     ////Console.WriteLine("generated_neighbors: " + sa.generated_neighbors);

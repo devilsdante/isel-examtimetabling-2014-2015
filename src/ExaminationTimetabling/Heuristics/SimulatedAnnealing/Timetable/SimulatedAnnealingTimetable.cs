@@ -39,7 +39,7 @@ namespace Heuristics.SimulatedAnnealing.Timetable
         {
             evaluation_function = new EvaluationFunctionTimetable();
             neighbor_selection_timetable = new NeighborSelectionTimetable();
-            random = new Random();
+            random = new Random(Guid.NewGuid().GetHashCode());
         }
 
         protected INeighbor GenerateNeighbor(Solution solution, int type)
@@ -59,21 +59,21 @@ namespace Heuristics.SimulatedAnnealing.Timetable
         private INeighbor GenerateRandomNeighbor(Solution solution)
         {
             INeighbor to_return;
-            int val = random.Next(6);
+            int val = random.Next(3);
             do
             {
                 if (val == 0)
                     to_return = neighbor_selection_timetable.RoomChange(solution);
                 else if (val == 1)
                     to_return = neighbor_selection_timetable.PeriodChange(solution);
-                else if (val == 2)
-                    to_return = neighbor_selection_timetable.PeriodRoomChange(solution);
-                else if (val == 3)
+                else //if (val == 2)
+                    //to_return = neighbor_selection_timetable.PeriodRoomChange(solution);
+                //else if (val == 3)
                     to_return = neighbor_selection_timetable.RoomSwap(solution);
-                else if (val == 4)
-                    to_return = neighbor_selection_timetable.PeriodSwap(solution);
-                else
-                    to_return = neighbor_selection_timetable.PeriodRoomSwap(solution);
+                //else if (val == 4)
+                    //to_return = neighbor_selection_timetable.PeriodSwap(solution);
+                //else
+                    //to_return = neighbor_selection_timetable.PeriodRoomSwap(solution);
             } while (to_return == null);
 
             return to_return;
