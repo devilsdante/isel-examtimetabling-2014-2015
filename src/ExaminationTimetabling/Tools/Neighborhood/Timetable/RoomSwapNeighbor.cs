@@ -6,17 +6,19 @@ namespace Tools.Neighborhood.Timetable
     class RoomSwapNeighbor:INeighbor
     {
         public int fitness { get; set; }
-        private readonly Solution solution;
-        private readonly int examination1_id;
-        private readonly int examination2_id;
-        private readonly int period1_id;
-        private readonly int period2_id;
-        private readonly int room1_id;
-        private readonly int room2_id;
+        public int type { get; set; }
+        public readonly Solution solution;
+        public readonly int examination1_id;
+        public readonly int examination2_id;
+        public readonly int period1_id;
+        public readonly int period2_id;
+        public readonly int room1_id;
+        public readonly int room2_id;
         
         public RoomSwapNeighbor(Solution solution, int examination1_id, int examination2_id)
         {
             this.fitness = -1;
+            this.type = 5;
             this.solution = solution;
             this.examination1_id = examination1_id;
             this.examination2_id = examination2_id;

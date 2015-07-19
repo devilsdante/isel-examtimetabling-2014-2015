@@ -46,13 +46,8 @@ namespace Tools.NeighborSelection.Timetable
                 if (feasibility_tester.IsFeasibleRoom(solution, random_examination, period, random_room))
                     return new RoomChangeNeighbor(solution, random_examination.id, random_room.id);
 
-                //TODO agora é possível não varrer todos os exames e ver logo para aquele periodo e sala!
-
-                for (int exam_to_swap_id = 0; exam_to_swap_id < examinations.EntryCount(); ++exam_to_swap_id)
+                foreach(int exam_to_swap_id in solution.GetExaminationsFrom(period.id, random_room.id))
                 {
-                    if (!solution.IsExamSetTo(period.id, random_room.id, exam_to_swap_id))
-                        continue;
-
                     INeighbor neighbor = new RoomSwapNeighbor(solution, random_examination.id, exam_to_swap_id);
                     neighbor.Accept();
 
@@ -109,12 +104,8 @@ namespace Tools.NeighborSelection.Timetable
                 if (feasibility_tester.IsFeasiblePeriodRoom(solution, random_examination, random_period, room))
                     return new PeriodChangeNeighbor(solution, random_examination.id, random_period.id);
 
-                //TODO agora é possível não varrer todos os exames e ver logo para aquele periodo e sala!
-
-                for (int exam_to_swap_id = 0; exam_to_swap_id < examinations.EntryCount(); ++exam_to_swap_id)
+                foreach (int exam_to_swap_id in solution.GetExaminationsFrom(random_period.id, room.id))
                 {
-                    if (!solution.IsExamSetTo(random_period.id, room.id, exam_to_swap_id))
-                        continue;
 
                     INeighbor neighbor = new PeriodSwapNeighbor(solution, random_examination.id, exam_to_swap_id);
                     neighbor.Accept();
@@ -179,12 +170,9 @@ namespace Tools.NeighborSelection.Timetable
                     if (feasibility_tester.IsFeasibleRoom(solution, random_examination, random_period, random_room))
                         return new PeriodRoomChangeNeighbor(solution, random_examination.id, random_period.id, random_room.id);
 
-                    //TODO agora é possível não varrer todos os exames e ver logo para aquele periodo e sala!
-
-                    for (int exam_to_swap_id = 0; exam_to_swap_id < examinations.EntryCount(); ++exam_to_swap_id)
+                    foreach (int exam_to_swap_id in solution.GetExaminationsFrom(random_period.id, random_room.id))
                     {
-                        if (!solution.IsExamSetTo(random_period.id, random_room.id, exam_to_swap_id))
-                            continue;
+
                         INeighbor neighbor = new PeriodRoomSwapNeighbor(solution, random_examination.id, exam_to_swap_id);
                         neighbor.Accept();
 

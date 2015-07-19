@@ -80,7 +80,10 @@ namespace Heuristics.SimulatedAnnealing
                 {
                     INeighbor neighbor = GenerateNeighbor(solution, type);
 
+                    Stopwatch watch2= Stopwatch.StartNew();
+                    watch2.Start();
                     neighbor.fitness = (neighbor.fitness == -1) ? evaluation_function.Fitness(neighbor) : neighbor.fitness;
+                    //Console.WriteLine(watch2.ElapsedMilliseconds);
                     solution.fitness = (solution.fitness == -1) ? evaluation_function.Fitness(solution) : solution.fitness;
 
                     //OutputFormatting.Write("..//..//..//../..//doc//Latex Project//sa_plot_data.dat", -Math.Log10(T) + " " + solution.fitness);

@@ -12,6 +12,12 @@ namespace Tools.Neighborhood.BitFlip
     {
         public int fitness{ get; set; }
 
+        public int type
+        {
+            get { throw new NotImplementedException(); }
+            set { throw new NotImplementedException(); }
+        }
+
         public SolutionBitFlip solution;
         public int bit;
         public char value;

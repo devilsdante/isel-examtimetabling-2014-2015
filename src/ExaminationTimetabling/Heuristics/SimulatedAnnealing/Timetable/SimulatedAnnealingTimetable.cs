@@ -33,18 +33,21 @@ namespace Heuristics.SimulatedAnnealing.Timetable
 
         public int generated_neighbors;
 
+        private Random random;
+
         public SimulatedAnnealingTimetable()
         {
             evaluation_function = new EvaluationFunctionTimetable();
             neighbor_selection_timetable = new NeighborSelectionTimetable();
+            random = new Random();
         }
 
         protected INeighbor GenerateNeighbor(Solution solution, int type)
         {
             generated_neighbors++;
 
-            if(generated_neighbors % 1000 == 0)
-                Console.WriteLine(generated_neighbors);
+            //if(generated_neighbors % 1000 == 0)
+            //    Console.WriteLine(generated_neighbors);
             if (type == type_random)
                 return GenerateRandomNeighbor(solution);
             if (type == type_guided1)
@@ -56,18 +59,18 @@ namespace Heuristics.SimulatedAnnealing.Timetable
         private INeighbor GenerateRandomNeighbor(Solution solution)
         {
             INeighbor to_return;
-            int random = new Random().Next(6);
+            int val = random.Next(6);
             do
             {
-                if (random == 0)
+                if (val == 0)
                     to_return = neighbor_selection_timetable.RoomChange(solution);
-                else if (random == 1)
+                else if (val == 1)
                     to_return = neighbor_selection_timetable.PeriodChange(solution);
-                else if (random == 2)
+                else if (val == 2)
                     to_return = neighbor_selection_timetable.PeriodRoomChange(solution);
-                else if (random == 3)
+                else if (val == 3)
                     to_return = neighbor_selection_timetable.RoomSwap(solution);
-                else if (random == 4)
+                else if (val == 4)
                     to_return = neighbor_selection_timetable.PeriodSwap(solution);
                 else
                     to_return = neighbor_selection_timetable.PeriodRoomSwap(solution);

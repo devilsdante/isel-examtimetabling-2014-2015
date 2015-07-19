@@ -27,7 +27,7 @@ namespace Tests.SimulatedAnnealingTest
 
             OutputFormatting.StartNew("..//..//results1.txt");
 
-            for (SET = 1; SET <= 1; SET++)
+            for (SET = 2; SET <= 2; SET++)
             {
                 if (SET == 4)
                     continue;
@@ -35,12 +35,13 @@ namespace Tests.SimulatedAnnealingTest
 
                 for (int repeats = 0; repeats < 1; repeats++)
                 {
-                    double TMax = 0.1;
-                    //double TMin = Math.Pow(Math.E, -7);
-                    double TMin = 1*Math.Pow(10, -7);
+                    double TMax = 0.01;
+                    //double TMax = 0.1;
+                    double TMin = Math.Pow(Math.E, -18);
+                    //double TMin = 1*Math.Pow(10, -7);
                     int reps = 5;
-                    //double rate = Math.Pow(Math.E, -5);
-                    double rate = 1*Math.Pow(10, -5);
+                    double rate = 0.001;
+                    //double rate = 1*Math.Pow(10, -5);
 
                     Stopwatch watch = new Stopwatch();
                     Stopwatch watch2 = new Stopwatch();
@@ -68,17 +69,17 @@ namespace Tests.SimulatedAnnealingTest
                     Console.WriteLine("GC Fitness: " + solution.fitness);
 
                     SimulatedAnnealingTimetable sa = new SimulatedAnnealingTimetable();
+                    Console.WriteLine("supposed generated_neighbors: " + sa.GetSANumberEvaluations(TMax, rate, reps, TMin));
                     watch.Restart();
                     sa.Exec2(solution, TMax, TMin, reps, rate, SimulatedAnnealingTimetable.type_random, true);
                     Console.WriteLine("SA Time: " + watch.ElapsedMilliseconds);
                     Console.WriteLine("SA Random Fitness: " + solution.fitness);
                     Console.WriteLine("generated_neighbors: " + sa.generated_neighbors);
                     sa.generated_neighbors = 0;
-                    Console.WriteLine("supposed generated_neighbors: "+sa.GetSANumberEvaluations(TMax, rate, reps, TMin));
-                    //sa.OnlyBetter(solution, 221000 - watch2.ElapsedMilliseconds, SimulatedAnnealingTimetable.type_random, true);
-                    //Console.WriteLine("HC Total Time: " + watch2.ElapsedMilliseconds);
-                    //Console.WriteLine("HC Random Fitness: " + solution.fitness);
-                    //Console.WriteLine("generated_neighbors: " + sa.generated_neighbors);
+                    sa.OnlyBetter(solution, 221000 - watch2.ElapsedMilliseconds, SimulatedAnnealingTimetable.type_random, true);
+                    Console.WriteLine("HC Total Time: " + watch2.ElapsedMilliseconds);
+                    Console.WriteLine("HC Random Fitness: " + solution.fitness);
+                    Console.WriteLine("generated_neighbors: " + sa.generated_neighbors);
                     ////Console.WriteLine("SA Guided1 Fitness: " + SA_Solution.fitness);
                     ////Console.WriteLine("generated_neighbors: " + sa.generated_neighbors);
                     ////sa.generated_neighbors = 0;

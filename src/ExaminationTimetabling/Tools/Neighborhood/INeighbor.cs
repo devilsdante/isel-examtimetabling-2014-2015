@@ -12,6 +12,7 @@ namespace Tools.Neighborhood
     public interface INeighbor
     {
         int fitness { get; set; }
+        int type { get; set; }
         ISolution Accept();
         ISolution Reverse();
     }
