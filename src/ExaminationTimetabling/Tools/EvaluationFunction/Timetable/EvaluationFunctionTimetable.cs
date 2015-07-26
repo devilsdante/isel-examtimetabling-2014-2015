@@ -493,6 +493,75 @@ namespace Tools.EvaluationFunction.Timetable
             return fitness;
         }
 
+        private int Fitness(PeriodSwapNeighbor n)
+        {
+            int fitness = n.solution.fitness;
+
+            if (examinations.GetById(n.examination1_id).duration != examinations.GetById(n.examination2_id).duration)
+            {
+                //Remove old Mixed durations
+                fitness -= ConflictMixedDurationsFromPeriodAndRoom(n.period1_id, n.room1_id, n.solution);
+                fitness -= ConflictMixedDurationsFromPeriodAndRoom(n.period2_id, n.room2_id, n.solution);
+
+                //Add new Mixed durations
+                n.Accept();
+                fitness += ConflictMixedDurationsFromPeriodAndRoom(n.period1_id, n.room1_id, n.solution);
+                fitness += ConflictMixedDurationsFromPeriodAndRoom(n.period2_id, n.room2_id, n.solution);
+                n.Reverse();
+            }
+
+            //Remove old Period spread
+            fitness -= ConflictPeriodSpreadBeforeAndAfterPeriod(n.examination1_id, n.period1_id, n.solution);
+            fitness -= ConflictPeriodSpreadBeforeAndAfterPeriod(n.examination2_id, n.period2_id, n.solution);
+
+            //Add new Period spread
+            n.Accept();
+            fitness += ConflictPeriodSpreadBeforeAndAfterPeriod(n.examination1_id, n.period2_id, n.solution);
+            fitness += ConflictPeriodSpreadBeforeAndAfterPeriod(n.examination2_id, n.period1_id, n.solution);
+            n.Reverse();
+
+            if (front_load_examinations.Contains(examinations.GetById(n.examination1_id)))
+            {
+                //Adjust front load if necessary
+                if (front_load_periods.Contains(periods.GetById(n.period1_id)) && !front_load_periods.Contains(periods.GetById(n.period2_id)))
+                    fitness -= model_weightings.Get().front_load[2];
+                //Adjust front load if necessary
+                else if (!front_load_periods.Contains(periods.GetById(n.period1_id)) && front_load_periods.Contains(periods.GetById(n.period2_id)))
+                    fitness += model_weightings.Get().front_load[2];
+            }
+
+            if (front_load_examinations.Contains(examinations.GetById(n.examination2_id)))
+            {
+                //Adjust front load if necessary
+                if (front_load_periods.Contains(periods.GetById(n.period2_id)) && !front_load_periods.Contains(periods.GetById(n.period1_id)))
+                    fitness -= model_weightings.Get().front_load[2];
+                //Adjust front load if necessary
+                else if (!front_load_periods.Contains(periods.GetById(n.period2_id)) && front_load_periods.Contains(periods.GetById(n.period1_id)))
+                    fitness += model_weightings.Get().front_load[2];
+            }
+
+            //Remove in a day and row
+            fitness -= ConflictInADayAndRowFromDay(n.examination1_id, n.period1_id, n.solution);
+            fitness -= ConflictInADayAndRowFromDay(n.examination2_id, n.period2_id, n.solution);
+            //Add in a day and row
+            n.Accept();
+            fitness += ConflictInADayAndRowFromDay(n.examination1_id, n.period2_id, n.solution);
+            fitness += ConflictInADayAndRowFromDay(n.examination2_id, n.period1_id, n.solution);
+            n.Reverse();
+
+            //ISolution new_solution = n.Accept();
+            //int dtf = Fitness(new_solution);
+            //n.Reverse();
+            //if (fitness != dtf)
+            //{
+            //    //OutputFormatting.Write("..//..//ahetal.txt", n.examination_id + " " + n.old_period_id + " " + n.new_period_id);
+            //    throw new Exception();
+            //    return dtf;
+            //}
+
+            return fitness;
+        }
+        
         public int Fitness(INeighbor neighbor)
         {
             if (neighbor.type == 4)
@@ -513,6 +582,12 @@ namespace Tools.EvaluationFunction.Timetable
 
                 return Fitness(n);
             }
+            if (neighbor.type == 3)
+            {
+                PeriodSwapNeighbor n = (PeriodSwapNeighbor) neighbor;
+
+                return Fitness(n);
+            }
             else
             {
                 ISolution new_solution = neighbor.Accept();
@@ -521,7 +596,6 @@ namespace Tools.EvaluationFunction.Timetable
                 return fitness;
             }
         }
-
 
         public int DistanceToFeasibility(INeighbor neighbor)
         {
@@ -566,6 +640,9 @@ namespace Tools.EvaluationFunction.Timetable
                 foreach (int exam in exams)
                 {
                     int no_conflicts = conflict_matrix[exam, examination];
+
+                    if (no_conflicts == 0)
+                        continue;
 
                     if (no_conflicts == 1)
                     {
