@@ -458,54 +458,14 @@ namespace Tools.EvaluationFunction.Timetable
         {
             int fitness = n.solution.fitness;
 
-            List<int> sizes = new List<int>();
+            //Remove old Mixed durations
+            fitness -= ConflictMixedDurationsFromPeriodAndRoom(n.period1_id, n.room1_id, n.solution);
+            fitness -= ConflictMixedDurationsFromPeriodAndRoom(n.period2_id, n.room2_id, n.solution);
 
-            foreach (int exam_id in n.solution.GetExaminationsFrom(n.period1_id, n.room1_id))
-            {
-                int curr_duration = examinations.GetById(exam_id).duration;
-                if (!sizes.Contains(curr_duration))
-                    sizes.Add(curr_duration);
-            }
-            if (sizes.Count != 0)
-                fitness -= (sizes.Count() - 1) * model_weightings.Get().non_mixed_durations;
-
-            sizes = new List<int>();
-
-            foreach (int exam_id in n.solution.GetExaminationsFrom(n.period2_id, n.room2_id))
-            {
-                int curr_duration = examinations.GetById(exam_id).duration;
-                if (!sizes.Contains(curr_duration))
-                    sizes.Add(curr_duration);
-            }
-            if (sizes.Count != 0)
-                fitness -= (sizes.Count() - 1) * model_weightings.Get().non_mixed_durations;
-
-            //--
+            //Add new Mixed durations
             n.Accept();
-            //--
-
-            sizes = new List<int>();
-
-            foreach (int exam_id in n.solution.GetExaminationsFrom(n.period1_id, n.room1_id))
-            {
-                int curr_duration = examinations.GetById(exam_id).duration;
-                if (!sizes.Contains(curr_duration))
-                    sizes.Add(curr_duration);
-            }
-            if (sizes.Count != 0)
-                fitness += (sizes.Count() - 1) * model_weightings.Get().non_mixed_durations;
-
-            sizes = new List<int>();
-
-            foreach (int exam_id in n.solution.GetExaminationsFrom(n.period2_id, n.room2_id))
-            {
-                int curr_duration = examinations.GetById(exam_id).duration;
-                if (!sizes.Contains(curr_duration))
-                    sizes.Add(curr_duration);
-            }
-            if (sizes.Count != 0)
-                fitness += (sizes.Count() - 1) * model_weightings.Get().non_mixed_durations;
-
+            fitness += ConflictMixedDurationsFromPeriodAndRoom(n.period1_id, n.room1_id, n.solution);
+            fitness += ConflictMixedDurationsFromPeriodAndRoom(n.period2_id, n.room2_id, n.solution);
             n.Reverse();
 
             //ISolution new_solution = n.Accept();
