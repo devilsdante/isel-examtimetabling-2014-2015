@@ -62,14 +62,14 @@ namespace Heuristics.SimulatedAnnealing.Timetable
             int val = random.Next(3);
             do
             {
-                if (val == 0)
-                    to_return = neighbor_selection_timetable.RoomChange(solution);
-                else if (val == 1)
+                //if (val == 0)
+                //    to_return = neighbor_selection_timetable.RoomChange(solution);
+                //else if (val == 1)
                     to_return = neighbor_selection_timetable.PeriodChange(solution);
-                else //if (val == 2)
+                //else //if (val == 2)
                     //to_return = neighbor_selection_timetable.PeriodRoomChange(solution);
                 //else if (val == 3)
-                    to_return = neighbor_selection_timetable.RoomSwap(solution);
+                    //to_return = neighbor_selection_timetable.RoomSwap(solution);
                 //else if (val == 4)
                     //to_return = neighbor_selection_timetable.PeriodSwap(solution);
                 //else

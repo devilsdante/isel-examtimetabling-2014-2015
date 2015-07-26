@@ -23,6 +23,8 @@ namespace Tools.EvaluationFunction.Timetable
         private readonly Rooms rooms;
         private readonly Periods periods;
         private readonly ModelWeightings model_weightings;
+        private readonly List<Examination> front_load_examinations;
+        private readonly List<Period> front_load_periods; 
 
         public int student_conflicts_hc;
         public int period_lengths_hc;
@@ -43,6 +45,14 @@ namespace Tools.EvaluationFunction.Timetable
             rooms = Rooms.Instance();
             model_weightings = ModelWeightings.Instance();
             conflict_matrix = ConflictMatrix.Instance().Get();
+            front_load_examinations = examinations.GetAll()
+                .OrderByDescending(ex => ex.students_count)
+                .ToList()
+                .GetRange(0, model_weightings.Get().front_load[0]);
+            front_load_periods = periods.GetAll()
+                .OrderByDescending(pe => pe.id)
+                .ToList()
+                .GetRange(0, model_weightings.Get().front_load[1] < periods.EntryCount() ? model_weightings.Get().front_load[1] : periods.EntryCount());
         }
 
         public int DistanceToFeasibility(Solution solution)
@@ -320,14 +330,14 @@ namespace Tools.EvaluationFunction.Timetable
                     .OrderByDescending(ex => ex.students_count)
                     .ToList()
                     .GetRange(0, model_weightings.Get().front_load[0]);
-            List<Period> periods_from_load = periods.GetAll()
+            List<Period> periods_front_load = periods.GetAll()
                 .OrderByDescending(pe => pe.id)
                 .ToList()
                 .GetRange(0, model_weightings.Get().front_load[1] < periods.EntryCount() ? model_weightings.Get().front_load[1] : periods.EntryCount());
 
             foreach (Examination exam in exams_front_load)
             {
-                if (periods_from_load.Contains(periods.GetById(solution.GetPeriodFrom(exam.id))))
+                if (periods_front_load.Contains(periods.GetById(solution.GetPeriodFrom(exam.id))))
                     front_load += model_weightings.Get().front_load[2];
             }
 
@@ -511,170 +521,43 @@ namespace Tools.EvaluationFunction.Timetable
         {
             int fitness = n.solution.fitness;
 
-            //Period penalty
+            //Adjust Period penalty
             fitness += (periods.GetById(n.new_period_id).penalty - periods.GetById(n.old_period_id).penalty);
 
             //Remove old Mixed durations
-            List<int> sizes = new List<int>();
-
-            foreach (int exam_id in n.solution.GetExaminationsFrom(n.old_period_id, n.room_id))
-            {
-                int curr_duration = examinations.GetById(exam_id).duration;
-                if (!sizes.Contains(curr_duration))
-                    sizes.Add(curr_duration);
-            }
-            if (sizes.Count != 0)
-            {
-                fitness -= (sizes.Count() - 1) * model_weightings.Get().non_mixed_durations;
-            }
-                
-
-            sizes = new List<int>();
-
-            foreach (int exam_id in n.solution.GetExaminationsFrom(n.new_period_id, n.room_id))
-            {
-                int curr_duration = examinations.GetById(exam_id).duration;
-                if (!sizes.Contains(curr_duration))
-                    sizes.Add(curr_duration);
-            }
-            if (sizes.Count != 0)
-            {
-                fitness -= (sizes.Count() - 1) * model_weightings.Get().non_mixed_durations;
-            }
-                
+            fitness -= ConflictMixedDurationsFromPeriodAndRoom(n.old_period_id, n.room_id, n.solution);
+            fitness -= ConflictMixedDurationsFromPeriodAndRoom(n.new_period_id, n.room_id, n.solution);
 
             //Add new Mixed durations
             n.Accept();
-
-            sizes = new List<int>();
-
-            foreach (int exam_id in n.solution.GetExaminationsFrom(n.old_period_id, n.room_id))
-            {
-                int curr_duration = examinations.GetById(exam_id).duration;
-                if (!sizes.Contains(curr_duration))
-                    sizes.Add(curr_duration);
-            }
-            if (sizes.Count != 0)
-            {
-                fitness += (sizes.Count() - 1) * model_weightings.Get().non_mixed_durations;
-            }
-                
-
-            sizes = new List<int>();
-
-            foreach (int exam_id in n.solution.GetExaminationsFrom(n.new_period_id, n.room_id))
-            {
-                int curr_duration = examinations.GetById(exam_id).duration;
-                if (!sizes.Contains(curr_duration))
-                    sizes.Add(curr_duration);
-            }
-            if (sizes.Count != 0)
-            {
-                fitness += (sizes.Count() - 1) * model_weightings.Get().non_mixed_durations;
-            }
-                
-
+            fitness += ConflictMixedDurationsFromPeriodAndRoom(n.old_period_id, n.room_id, n.solution);
+            fitness += ConflictMixedDurationsFromPeriodAndRoom(n.new_period_id, n.room_id, n.solution); 
             n.Reverse();
 
 
             //Remove old Period spread
-            for (int period_id = 0; period_id < periods.EntryCount(); ++period_id)
-            {
-                if (period_id >= n.old_period_id - model_weightings.Get().period_spread &&
-                    period_id <= n.old_period_id + model_weightings.Get().period_spread &&
-                    period_id != n.old_period_id)
-                {
-                    List<int> exams = n.solution.GetExaminationsFrom(period_id);
-
-                    foreach (int exam in exams)
-                    {
-                        int no_conflicts = conflict_matrix[exam, n.examination_id];
-
-                        if (no_conflicts == 1)
-                        {
-                            if (
-                                period_hard_constraints.GetByType(PeriodHardConstraint.types.EXCLUSION)
-                                    .Any(phc => phc.ex1 == exam && phc.ex2 == n.examination_id ||
-                                                phc.ex1 == n.examination_id && phc.ex2 == exam))
-                            {
-                                --no_conflicts;
-                            }
-                        }
-                        fitness -= no_conflicts;
-                    }
-                }
-            }
+            fitness -= ConflictPeriodSpreadBeforeAndAfterPeriod(n.examination_id, n.old_period_id, n.solution);
 
             //Add new Period spread
             n.Accept();
-            for (int period_id = 0; period_id < periods.EntryCount(); ++period_id)
-            {
-                
-                if (period_id >= n.new_period_id - model_weightings.Get().period_spread &&
-                    period_id <= n.new_period_id + model_weightings.Get().period_spread &&
-                    period_id != n.new_period_id)
-                {
-                    List<int> exams = n.solution.GetExaminationsFrom(period_id);
-
-                    foreach (int exam in exams)
-                    {
-                        int no_conflicts = conflict_matrix[exam, n.examination_id];
-
-                        if (no_conflicts == 1)
-                        {
-                            if (
-                                period_hard_constraints.GetByType(PeriodHardConstraint.types.EXCLUSION)
-                                    .Any(phc => phc.ex1 == exam && phc.ex2 == n.examination_id ||
-                                                phc.ex1 == n.examination_id && phc.ex2 == exam))
-                            {
-                                --no_conflicts;
-                            }
-                        }
-                        fitness += no_conflicts;
-                    }
-                }
-            }
+            fitness += ConflictPeriodSpreadBeforeAndAfterPeriod(n.examination_id, n.new_period_id, n.solution);
             n.Reverse();
 
-            //Remove all Front load
-            List<Examination> exams_front_load =
-                examinations.GetAll()
-                    .OrderByDescending(ex => ex.students_count)
-                    .ToList()
-                    .GetRange(0, model_weightings.Get().front_load[0]);
-            List<Period> periods_from_load = periods.GetAll()
-                .OrderByDescending(pe => pe.id)
-                .ToList()
-                .GetRange(0, model_weightings.Get().front_load[1] < periods.EntryCount() ? model_weightings.Get().front_load[1] : periods.EntryCount());
-
-            foreach (Examination exam in exams_front_load)
+            if (front_load_examinations.Contains(examinations.GetById(n.examination_id)))
             {
-                if (periods_from_load.Contains(periods.GetById(n.solution.GetPeriodFrom(exam.id))))
+                //Adjust front load if necessary
+                if (front_load_periods.Contains(periods.GetById(n.old_period_id)) && !front_load_periods.Contains(periods.GetById(n.new_period_id)))
                     fitness -= model_weightings.Get().front_load[2];
-            }
-
-            //Recalculate all Fron load
-            n.Accept();
-            exams_front_load =
-                examinations.GetAll()
-                    .OrderByDescending(ex => ex.students_count)
-                    .ToList()
-                    .GetRange(0, model_weightings.Get().front_load[0]);
-            periods_from_load = periods.GetAll()
-                .OrderByDescending(pe => pe.id)
-                .ToList()
-                .GetRange(0, model_weightings.Get().front_load[1] < periods.EntryCount() ? model_weightings.Get().front_load[1] : periods.EntryCount());
-
-            foreach (Examination exam in exams_front_load)
-            {
-                if (periods_from_load.Contains(periods.GetById(n.solution.GetPeriodFrom(exam.id))))
+                //Adjust front load if necessary
+                else if (!front_load_periods.Contains(periods.GetById(n.old_period_id)) && front_load_periods.Contains(periods.GetById(n.new_period_id)))
                     fitness += model_weightings.Get().front_load[2];
             }
-            n.Reverse();
 
-            fitness -= TotalConflictInADay(n.examination_id, n.old_period_id, n.solution);
+            //Remove in a day and row
+            fitness -= ConflictInADayAndRowFromDay(n.examination_id, n.old_period_id, n.solution);
+            //Add in a day and row
             n.Accept();
-            fitness += TotalConflictInADay(n.examination_id, n.new_period_id, n.solution);
+            fitness += ConflictInADayAndRowFromDay(n.examination_id, n.new_period_id, n.solution);
             n.Reverse();
 
             //ISolution new_solution = n.Accept();
@@ -743,7 +626,7 @@ namespace Tools.EvaluationFunction.Timetable
             return IsValid((Solution)solution);
         }
 
-        private int TotalConflictInADay(int examination, int period, Solution solution)
+        private int ConflictInADayAndRowFromDay(int examination, int period, Solution solution)
         {
             int conflict = 0;
 
@@ -786,5 +669,61 @@ namespace Tools.EvaluationFunction.Timetable
 
             return conflict;
         }
+
+        private int ConflictPeriodSpreadBeforeAndAfterPeriod(int examination, int period, Solution solution)
+        {
+            int fitness = 0;
+
+            for (int period_id = 0; period_id < periods.EntryCount(); ++period_id)
+            {
+
+                if (period_id >= period - model_weightings.Get().period_spread &&
+                    period_id <= period + model_weightings.Get().period_spread &&
+                    period_id != period)
+                {
+                    List<int> exams = solution.GetExaminationsFrom(period_id);
+
+                    foreach (int exam in exams)
+                    {
+                        int no_conflicts = conflict_matrix[exam, examination];
+
+                        if (no_conflicts == 1)
+                        {
+                            if (
+                                period_hard_constraints.GetByType(PeriodHardConstraint.types.EXCLUSION)
+                                    .Any(phc => phc.ex1 == exam && phc.ex2 == examination ||
+                                                phc.ex1 == examination && phc.ex2 == exam))
+                            {
+                                --no_conflicts;
+                            }
+                        }
+                        fitness += no_conflicts;
+                    }
+                }
+            }
+
+            return fitness;
+        }
+
+        private int ConflictMixedDurationsFromPeriodAndRoom(int period, int room, Solution solution)
+        {
+            int fitness = 0;
+
+            List<int> sizes = new List<int>();
+
+            foreach (int exam_id in solution.GetExaminationsFrom(period, room))
+            {
+                int curr_duration = examinations.GetById(exam_id).duration;
+                if (!sizes.Contains(curr_duration))
+                    sizes.Add(curr_duration);
+            }
+            if (sizes.Count != 0)
+            {
+                fitness += (sizes.Count() - 1) * model_weightings.Get().non_mixed_durations;
+            }
+
+            return fitness;
+        }
+
     }
 }
