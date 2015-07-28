@@ -119,7 +119,8 @@ namespace Heuristics.SimulatedAnnealing
         public ISolution OnlyBetter(ISolution solution, long miliseconds, int type, bool minimize)
         {
             Stopwatch watch = Stopwatch.StartNew();
-            InitVals(type);
+            Stopwatch watch2 = Stopwatch.StartNew();
+            //InitVals(type);
 
             while (watch.ElapsedMilliseconds < miliseconds)
             {
@@ -135,9 +136,10 @@ namespace Heuristics.SimulatedAnnealing
                 
                 if (DeltaE <= 0)
                 {
-                    //if (watch.ElapsedMilliseconds > 1000)
+                    //if (watch2.ElapsedMilliseconds > 1000)
                     //{
                     //    Console.WriteLine("fitness: " + neighbor.fitness);
+                    //    watch2.Restart();
                     //}
                     solution = neighbor.Accept();
                     solution.fitness = neighbor.fitness;
@@ -234,7 +236,7 @@ namespace Heuristics.SimulatedAnnealing
             {
                 for (int i = 1; i <= K; ++i)
                     ++numberEvaluations;
-                // Actualize temperature
+                // Update temperature
                 ++t;
                 temp = cooling_schedule.G(t);
             } while (temp >= TMin);

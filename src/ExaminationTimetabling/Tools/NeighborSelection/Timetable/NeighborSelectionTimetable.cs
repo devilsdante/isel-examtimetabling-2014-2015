@@ -214,7 +214,7 @@ namespace Tools.NeighborSelection.Timetable
         {
             Examination random_examination = examinations.GetById(random.Next(examinations.EntryCount()));
             Room room = rooms.GetById(solution.GetRoomFrom(random_examination.id));
-            int random_period_id = new Random((int)DateTime.Now.Ticks).Next(periods.EntryCount());
+            int random_period_id = random.Next(periods.EntryCount());
 
             for (int period_id = 0; period_id < periods.EntryCount(); ++period_id)
             {
@@ -231,7 +231,7 @@ namespace Tools.NeighborSelection.Timetable
         {
             Examination random_examination = examinations.GetById(random.Next(examinations.EntryCount()));
             Period period = periods.GetById(solution.GetPeriodFrom(random_examination.id));
-            int random_room_id = new Random((int)DateTime.Now.Ticks).Next(rooms.EntryCount());
+            int random_room_id = random.Next(rooms.EntryCount());
             for (int room_id = 0; room_id < rooms.EntryCount(); ++room_id)
             {
                 Room random_room = rooms.GetById((room_id + random_room_id) % rooms.EntryCount());

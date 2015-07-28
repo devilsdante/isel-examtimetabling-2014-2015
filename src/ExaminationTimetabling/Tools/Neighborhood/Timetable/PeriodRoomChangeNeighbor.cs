@@ -7,12 +7,12 @@ namespace Tools.Neighborhood.Timetable
     {
         public int fitness { get; set; }
         public int type { get; set; }
-        private readonly Solution solution;
-        private readonly int examination_id;
-        private readonly int old_period_id;
-        private readonly int new_period_id;
-        private readonly int old_room_id;
-        private readonly int new_room_id;
+        public readonly Solution solution;
+        public readonly int examination_id;
+        public readonly int old_period_id;
+        public readonly int new_period_id;
+        public readonly int old_room_id;
+        public readonly int new_room_id;
 
         public PeriodRoomChangeNeighbor(Solution solution, int examination_id, int new_period_id, int new_room_id)
         {

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -59,21 +60,21 @@ namespace Heuristics.SimulatedAnnealing.Timetable
         private INeighbor GenerateRandomNeighbor(Solution solution)
         {
             INeighbor to_return;
-            int val = random.Next(3);
+            int val = random.Next(6);
             do
             {
-                //if (val == 0)
-                //    to_return = neighbor_selection_timetable.RoomChange(solution);
-                //else if (val == 1)
-                    //to_return = neighbor_selection_timetable.PeriodChange(solution);
-                //else //if (val == 2)
-                    //to_return = neighbor_selection_timetable.PeriodRoomChange(solution);
-                //else if (val == 3)
-                    //to_return = neighbor_selection_timetable.RoomSwap(solution);
-                //else if (val == 4)
-                to_return = neighbor_selection_timetable.PeriodSwap(solution);
-                //else
-                    //to_return = neighbor_selection_timetable.PeriodRoomSwap(solution);
+                if (val == 0)
+                    to_return = neighbor_selection_timetable.RoomChange(solution);
+                else if (val == 1)
+                    to_return = neighbor_selection_timetable.PeriodChange(solution);
+                else if (val == 2)
+                    to_return = neighbor_selection_timetable.PeriodRoomChange(solution);
+                else if (val == 3)
+                    to_return = neighbor_selection_timetable.RoomSwap(solution);
+                else if (val == 4)
+                    to_return = neighbor_selection_timetable.PeriodSwap(solution);
+                else
+                    to_return = neighbor_selection_timetable.PeriodRoomSwap(solution);
             } while (to_return == null);
 
             return to_return;
@@ -301,6 +302,38 @@ namespace Heuristics.SimulatedAnnealing.Timetable
                 period_swap = 10;
                 period_room_swap = 10;
             }
+        }
+
+        public long EstimateTotalNumberOfNeighbors(int average_reps, int total_time, Solution solution)
+        {
+            Stopwatch watch = new Stopwatch();
+            long computed_neighbors = -1;
+            int total_operators = 6;
+            long computed_time = -1;
+            INeighbor neighbor = null;
+            watch.Start();
+            for (int i = 0; i < average_reps; i++)
+            {
+                while((neighbor = neighbor_selection_timetable.RoomChange(solution)) == null);
+                evaluation_function.Fitness(neighbor);
+                while ((neighbor = neighbor_selection_timetable.PeriodChange(solution)) == null) ;
+                evaluation_function.Fitness(neighbor);
+                while ((neighbor = neighbor_selection_timetable.PeriodRoomChange(solution)) == null) ;
+                evaluation_function.Fitness(neighbor);
+                while ((neighbor = neighbor_selection_timetable.RoomSwap(solution)) == null) ;
+                evaluation_function.Fitness(neighbor);
+                while ((neighbor = neighbor_selection_timetable.PeriodSwap(solution)) == null) ;
+                evaluation_function.Fitness(neighbor);
+                while ((neighbor = neighbor_selection_timetable.PeriodRoomSwap(solution)) == null) ;
+                evaluation_function.Fitness(neighbor);
+            }
+            computed_time = watch.ElapsedMilliseconds;
+            Console.WriteLine(computed_time);
+            
+            //Console.WriteLine((average_reps * total_operators) / (float)computed_time);
+            computed_neighbors = total_time*(average_reps*total_operators)/computed_time;
+
+            return computed_neighbors;
         }
     }
 }

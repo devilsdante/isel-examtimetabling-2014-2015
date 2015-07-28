@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using Business;
 using DAL;
@@ -25,33 +26,46 @@ namespace Tests.SimulatedAnnealingTest
             Solution solution = null;
             Solution SA_Solution = null;
 
-            OutputFormatting.StartNew("..//..//results1.txt");
+            OutputFormatting.StartNew("..//..//results.txt");
 
-            for (SET = 1; SET <= 1; SET++)
+            for (SET = 2; SET <= 2; SET++)
             {
                 if (SET == 4)
                     continue;
-                OutputFormatting.Write("..//..//results1.txt", "SET " + SET);
+                OutputFormatting.Write("..//..//results.txt", "SET " + SET);
+                //Corre!
+                double rate = 2.6e-05;
+                for (; rate >= 2.3e-05; rate = rate - 0.1e-05)
 
-                for (int repeats = 0; repeats < 1; repeats++)
+                for (int repeats = 0; repeats < 10; repeats++)
                 {
-                    double TMax = 0.01;
-                    //double TMax = 0.1;
-                    double TMin = Math.Pow(Math.E, -18);
-                    //double TMin = 1*Math.Pow(10, -7);
+                    //Set2
+                    double TMax = 0.1;
+                    double TMin = 1e-06;
                     int reps = 5;
-                    double rate = 0.001;
-                    //double rate = 1*Math.Pow(10, -5);
+                    //double rate = 2.6e-05;
+
+                    //Set1
+                    //double TMax = 0.1;
+                    //double TMin = 1e-06;
+                    //int reps = 5;
+                    //double rate = 3.5e-05;
+
+                    //double TMax = 0.01;
+                    //double TMin = Math.Pow(Math.E, -18);
+                    //int reps = 5;
+                    //double rate = 0.001;
 
                     Stopwatch watch = new Stopwatch();
                     Stopwatch watch2 = new Stopwatch();
-                    watch2.Start();
+                    
 
                     Console.WriteLine("**SET** " + SET);
                     LoaderTimetable loader = new LoaderTimetable("..//..//exam_comp_set" + SET + ".exam");
                     loader.Unload();
                 
                     watch.Start();
+                    watch2.Start();
                     loader.Load();
 
                     Console.WriteLine("Loader: " + watch.ElapsedMilliseconds);
@@ -72,27 +86,25 @@ namespace Tests.SimulatedAnnealingTest
                     Console.WriteLine("supposed generated_neighbors: " + sa.GetSANumberEvaluations(TMax, rate, reps, TMin));
                     watch.Restart();
                     sa.Exec2(solution, TMax, TMin, reps, rate, SimulatedAnnealingTimetable.type_random, true);
-                    Console.WriteLine("SA Time: " + watch.ElapsedMilliseconds);
-                    Console.WriteLine("SA Random Fitness: " + solution.fitness);
+                    long sa_time = watch.ElapsedMilliseconds;
+                    int sa_fitness = solution.fitness;
+                    int sa_neighbors = sa.generated_neighbors;
+                    Console.WriteLine("SA Time: " + sa_time);
+                    Console.WriteLine("SA Random Fitness: " + sa_fitness);
                     Console.WriteLine("SA Random Fitness: " + evaluation.Fitness(solution));
-                    Console.WriteLine("generated_neighbors: " + sa.generated_neighbors);
+                    Console.WriteLine("generated_neighbors: " + sa_neighbors);
                     sa.generated_neighbors = 0;
-                    sa.OnlyBetter(solution, 221000 - watch2.ElapsedMilliseconds, SimulatedAnnealingTimetable.type_random, true);
-                    Console.WriteLine("HC Total Time: " + watch2.ElapsedMilliseconds);
-                    Console.WriteLine("HC Random Fitness: " + solution.fitness);
-                    Console.WriteLine("HC Random Fitness: " + evaluation.Fitness(solution));
-                    Console.WriteLine("generated_neighbors: " + sa.generated_neighbors);
-                    ////Console.WriteLine("SA Guided1 Fitness: " + SA_Solution.fitness);
-                    ////Console.WriteLine("generated_neighbors: " + sa.generated_neighbors);
-                    ////sa.generated_neighbors = 0;
-
-                    //////221000
-                    ////SA_Solution = (Solution)solution.Copy();
-                    ////sa.OnlyBetter(SA_Solution, 5000, SimulatedAnnealingTimetable.type_guided2, true);
-                    ////Console.WriteLine("SA Guided2 Fitness: " + SA_Solution.fitness);
-                    ////Console.WriteLine("generated_neighbors: " + sa.generated_neighbors);
-                    ////sa.generated_neighbors = 0;
-                    OutputFormatting.Write("..//..//results1.txt", ""+solution.fitness+" "+watch2.ElapsedMilliseconds);
+                    //sa.OnlyBetter(solution, 221000 - watch2.ElapsedMilliseconds, SimulatedAnnealingTimetable.type_random, true);
+                    long total_time = watch2.ElapsedMilliseconds;
+                    long hc_time = total_time - sa_time;
+                    int hc_fitness = solution.fitness;
+                    int hc_neighbors = sa.generated_neighbors;
+                    //Console.WriteLine("HC Total Time: " + hc_time);
+                    //Console.WriteLine("HC Random Fitness: " + hc_fitness);
+                    //Console.WriteLine("HC Random Fitness: " + evaluation.Fitness(solution));
+                    //Console.WriteLine("generated_neighbors: " + hc_neighbors);
+                    
+                    OutputFormatting.Write("..//..//results.txt", "SA: " + sa_fitness + " " + sa_time + " " + sa_neighbors + ", HC: " + +hc_fitness + " " + hc_time + " " + hc_neighbors);
                     PrintToFile("..//..//output" + SET + ".txt", solution);
 
                     //Console.ReadKey();
@@ -108,5 +120,43 @@ namespace Tests.SimulatedAnnealingTest
             OutputFormatting.Format(output_txt, solution);
         }
 
+        private static void Main2()
+        {
+            int SET = 2;
+            LoaderTimetable loader = new LoaderTimetable("..//..//exam_comp_set" + SET + ".exam");
+            loader.Load();
+
+            GraphColoring gc = new GraphColoring();
+            Solution solution = gc.Exec();
+
+            SimulatedAnnealingTimetable sa = new SimulatedAnnealingTimetable();
+            Stopwatch watch = Stopwatch.StartNew();
+            Console.WriteLine("STARTS");
+            //**Calibration
+            sa.EstimateTotalNumberOfNeighbors(2, 221000, solution);
+            //**
+            Console.WriteLine(watch.ElapsedMilliseconds);
+
+            long total_neighbors = sa.EstimateTotalNumberOfNeighbors(50, 221000, solution);
+            Console.WriteLine(watch.ElapsedMilliseconds);
+            //Console.WriteLine(total_neighbors);
+            double offset = 0.14;
+            total_neighbors = (long)(total_neighbors * (1 - offset));
+            //Console.WriteLine("A usar: " + total_neighbors);
+
+            double TMax = 0.1;
+            double TMin = 1e-06;
+            int reps = 5;
+            double rate = 5.0e-05;
+
+            while (sa.GetSANumberEvaluations(TMax, rate, reps, TMin) < total_neighbors)
+            {
+                rate = rate - 0.1e-05;
+                //Console.WriteLine(rate);
+            }
+            Console.WriteLine(rate);
+            Console.WriteLine(watch.ElapsedMilliseconds);
+            while (Console.ReadKey().Key != ConsoleKey.NumPad7) ;
+        }
     }
 }
