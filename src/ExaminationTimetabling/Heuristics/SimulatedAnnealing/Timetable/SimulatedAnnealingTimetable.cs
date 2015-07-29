@@ -328,9 +328,12 @@ namespace Heuristics.SimulatedAnnealing.Timetable
                 evaluation_function.Fitness(neighbor);
             }
             computed_time = watch.ElapsedMilliseconds;
-            Console.WriteLine(computed_time);
+            //Console.WriteLine(computed_time);
             
             //Console.WriteLine((average_reps * total_operators) / (float)computed_time);
+            if (computed_time == 0)
+                return 0;
+
             computed_neighbors = total_time*(average_reps*total_operators)/computed_time;
 
             return computed_neighbors;

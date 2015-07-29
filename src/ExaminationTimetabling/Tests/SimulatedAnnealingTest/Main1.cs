@@ -28,21 +28,19 @@ namespace Tests.SimulatedAnnealingTest
 
             OutputFormatting.StartNew("..//..//results.txt");
 
-            for (SET = 2; SET <= 2; SET++)
+            for (SET = 1; SET <= 12; SET++)
             {
                 if (SET == 4)
                     continue;
                 OutputFormatting.Write("..//..//results.txt", "SET " + SET);
-                //Corre!
-                double rate = 2.6e-05;
-                for (; rate >= 2.3e-05; rate = rate - 0.1e-05)
 
-                for (int repeats = 0; repeats < 10; repeats++)
+                for (int repeats = 0; repeats < 5; repeats++)
                 {
                     //Set2
                     double TMax = 0.1;
                     double TMin = 1e-06;
                     int reps = 5;
+                    double rate;
                     //double rate = 2.6e-05;
 
                     //Set1
@@ -82,6 +80,9 @@ namespace Tests.SimulatedAnnealingTest
                     Console.WriteLine("Fitness Time: " + watch.ElapsedMilliseconds);
                     Console.WriteLine("GC Fitness: " + solution.fitness);
 
+                    rate = ComputeRate(TMax, TMin, reps, solution);
+                    Console.WriteLine(rate);
+
                     SimulatedAnnealingTimetable sa = new SimulatedAnnealingTimetable();
                     Console.WriteLine("supposed generated_neighbors: " + sa.GetSANumberEvaluations(TMax, rate, reps, TMin));
                     watch.Restart();
@@ -94,7 +95,7 @@ namespace Tests.SimulatedAnnealingTest
                     Console.WriteLine("SA Random Fitness: " + evaluation.Fitness(solution));
                     Console.WriteLine("generated_neighbors: " + sa_neighbors);
                     sa.generated_neighbors = 0;
-                    //sa.OnlyBetter(solution, 221000 - watch2.ElapsedMilliseconds, SimulatedAnnealingTimetable.type_random, true);
+                    sa.OnlyBetter(solution, 221000 - watch2.ElapsedMilliseconds, SimulatedAnnealingTimetable.type_random, true);
                     long total_time = watch2.ElapsedMilliseconds;
                     long hc_time = total_time - sa_time;
                     int hc_fitness = solution.fitness;
@@ -122,41 +123,90 @@ namespace Tests.SimulatedAnnealingTest
 
         private static void Main2()
         {
+            
             int SET = 2;
             LoaderTimetable loader = new LoaderTimetable("..//..//exam_comp_set" + SET + ".exam");
+            loader.Unload();
             loader.Load();
 
-            GraphColoring gc = new GraphColoring();
-            Solution solution = gc.Exec();
+            while (true)
+            {
 
+                GraphColoring gc = new GraphColoring();
+                Solution solution = gc.Exec();
+
+                SimulatedAnnealingTimetable sa = new SimulatedAnnealingTimetable();
+                Stopwatch watch = Stopwatch.StartNew();
+
+                //**Calibration
+                sa.EstimateTotalNumberOfNeighbors(2, 221000, solution);
+                sa.EstimateTotalNumberOfNeighbors(2, 221000, solution);
+                //**
+                Console.WriteLine(watch.ElapsedMilliseconds);
+
+                long total_neighbors = sa.EstimateTotalNumberOfNeighbors(500, 221000, solution);
+                //Console.WriteLine(watch.ElapsedMilliseconds);
+                //Console.WriteLine(total_neighbors);
+                double offset = 0.18;
+                total_neighbors = (long) (total_neighbors*(1 - offset));
+                //Console.WriteLine("A usar: " + total_neighbors);
+
+                double TMax = 0.1;
+                double TMin = 1e-06;
+                int reps = 5;
+                double rate = 5.0e-05;
+
+                while (sa.GetSANumberEvaluations(TMax, rate, reps, TMin) < total_neighbors)
+                {
+                    rate = rate - 0.2e-05;
+                    //Console.WriteLine(rate);
+                }
+                if (sa.GetSANumberEvaluations(TMax, rate - 0.1e-05, reps, TMin) < total_neighbors)
+                    rate = rate - 0.1e-05;
+                Console.WriteLine(rate);
+                //Console.WriteLine(watch.ElapsedMilliseconds);
+
+                //while (Console.ReadKey().Key != ConsoleKey.NumPad7) ;
+            }
+        }
+
+        public static double ComputeRate(double TMax, double TMin, int reps, Solution solution)
+        {
             SimulatedAnnealingTimetable sa = new SimulatedAnnealingTimetable();
-            Stopwatch watch = Stopwatch.StartNew();
-            Console.WriteLine("STARTS");
             //**Calibration
             sa.EstimateTotalNumberOfNeighbors(2, 221000, solution);
+            sa.EstimateTotalNumberOfNeighbors(2, 221000, solution);
             //**
-            Console.WriteLine(watch.ElapsedMilliseconds);
 
             long total_neighbors = sa.EstimateTotalNumberOfNeighbors(50, 221000, solution);
-            Console.WriteLine(watch.ElapsedMilliseconds);
-            //Console.WriteLine(total_neighbors);
-            double offset = 0.14;
+            double offset = 0.16;
             total_neighbors = (long)(total_neighbors * (1 - offset));
-            //Console.WriteLine("A usar: " + total_neighbors);
+            double rate = 15.0e-05;
 
-            double TMax = 0.1;
-            double TMin = 1e-06;
-            int reps = 5;
-            double rate = 5.0e-05;
-
-            while (sa.GetSANumberEvaluations(TMax, rate, reps, TMin) < total_neighbors)
+            while (sa.GetSANumberEvaluations(TMax, rate - 1e-05, reps, TMin) < total_neighbors)
+            {
+                rate = rate - 1e-05;
+            }
+            while (sa.GetSANumberEvaluations(TMax, rate - 0.5e-05, reps, TMin) < total_neighbors)
+            {
+                rate = rate - 0.5e-05;
+            }
+            while (sa.GetSANumberEvaluations(TMax, rate - 0.2e-05, reps, TMin) < total_neighbors)
+            {
+                rate = rate - 0.2e-05;
+            }
+            while (sa.GetSANumberEvaluations(TMax, rate - 0.1e-05, reps, TMin) < total_neighbors)
             {
                 rate = rate - 0.1e-05;
-                //Console.WriteLine(rate);
             }
-            Console.WriteLine(rate);
-            Console.WriteLine(watch.ElapsedMilliseconds);
-            while (Console.ReadKey().Key != ConsoleKey.NumPad7) ;
+            while (sa.GetSANumberEvaluations(TMax, rate - 0.1e-06, reps, TMin) < total_neighbors)
+            {
+                rate = rate - 0.1e-06;
+            }
+            //if (sa.GetSANumberEvaluations(TMax, rate - 0.1e-05, reps, TMin) < total_neighbors)
+            //    rate = rate - 0.1e-05;
+
+            return rate;
         }
     }
 }
