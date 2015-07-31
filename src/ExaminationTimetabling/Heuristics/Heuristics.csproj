@@ -40,6 +40,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GraphColoring.cs" />
+    <Compile Include="Hill Climbing\HillClimbing.cs" />
+    <Compile Include="Hill Climbing\Timetable\HillClimbingTimetable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SimulatedAnnealing\BitFlip\SimulatedAnnealingBitFlip.cs" />
     <Compile Include="SimulatedAnnealing\CoolingSchedule\CoolingScheduleExponential.cs" />

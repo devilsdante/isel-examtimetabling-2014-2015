@@ -9,6 +9,7 @@ using DAL.Models;
 using DAL.Models.Solution;
 using DAL.Models.Solution.Timetabling;
 using Heuristics;
+using Heuristics.Hill_Climbing.Timetable;
 using Heuristics.SimulatedAnnealing;
 using Heuristics.SimulatedAnnealing.Timetable;
 using Tools;
@@ -28,13 +29,13 @@ namespace Tests.SimulatedAnnealingTest
 
             OutputFormatting.StartNew("..//..//results.txt");
 
-            for (SET = 1; SET <= 12; SET++)
+            for (SET = 1; SET <= 1; SET++)
             {
                 if (SET == 4)
                     continue;
                 OutputFormatting.Write("..//..//results.txt", "SET " + SET);
 
-                for (int repeats = 0; repeats < 5; repeats++)
+                for (int repeats = 0; repeats < 1; repeats++)
                 {
                     //Set2
                     double TMax = 0.1;
@@ -95,15 +96,17 @@ namespace Tests.SimulatedAnnealingTest
                     Console.WriteLine("SA Random Fitness: " + evaluation.Fitness(solution));
                     Console.WriteLine("generated_neighbors: " + sa_neighbors);
                     sa.generated_neighbors = 0;
-                    sa.OnlyBetter(solution, 221000 - watch2.ElapsedMilliseconds, SimulatedAnnealingTimetable.type_random, true);
+
+                    HillClimbingTimetable hc = new HillClimbingTimetable();
+                    hc.Exec(solution, 221000 - watch2.ElapsedMilliseconds, SimulatedAnnealingTimetable.type_random, true);
                     long total_time = watch2.ElapsedMilliseconds;
                     long hc_time = total_time - sa_time;
                     int hc_fitness = solution.fitness;
                     int hc_neighbors = sa.generated_neighbors;
-                    //Console.WriteLine("HC Total Time: " + hc_time);
-                    //Console.WriteLine("HC Random Fitness: " + hc_fitness);
-                    //Console.WriteLine("HC Random Fitness: " + evaluation.Fitness(solution));
-                    //Console.WriteLine("generated_neighbors: " + hc_neighbors);
+                    Console.WriteLine("HC Total Time: " + hc_time);
+                    Console.WriteLine("HC Random Fitness: " + hc_fitness);
+                    Console.WriteLine("HC Random Fitness: " + evaluation.Fitness(solution));
+                    Console.WriteLine("generated_neighbors: " + hc_neighbors);
                     
                     OutputFormatting.Write("..//..//results.txt", "SA: " + sa_fitness + " " + sa_time + " " + sa_neighbors + ", HC: " + +hc_fitness + " " + hc_time + " " + hc_neighbors);
                     PrintToFile("..//..//output" + SET + ".txt", solution);

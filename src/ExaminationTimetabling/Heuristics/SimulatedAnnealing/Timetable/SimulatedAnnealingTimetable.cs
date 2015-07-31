@@ -34,7 +34,7 @@ namespace Heuristics.SimulatedAnnealing.Timetable
 
         public int generated_neighbors;
 
-        private Random random;
+        private readonly Random random;
 
         public SimulatedAnnealingTimetable()
         {
