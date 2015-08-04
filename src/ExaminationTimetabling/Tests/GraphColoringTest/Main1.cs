@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using Business;
+using DAL;
 using DAL.Models.Solution.Timetabling;
 using Heuristics;
 using Tools;
@@ -12,46 +14,82 @@ namespace Tests.GraphColoringTest
 {
     class Main1
     {
-        static void Main_()
+        static void Main()
         {
-            //int SET;
-            //Stopwatch watch = Stopwatch.StartNew();
-            //Solution solution = null;
+            int SET;
 
-            //for (SET = 1; SET <= 8; SET++)
-            //{
-            //    if (SET == 4)
-            //        continue;
+            Solution solution = null;
+            Solution SA_Solution = null;
+            int repeats_count = 50;
 
-            //    Console.WriteLine("**SET** " + SET);
-            //    LoaderTimetable loader = new LoaderTimetable("..//..//exam_comp_set" + SET + ".exam");
-            //    loader.Unload();
-            //    loader.Load();
+            OutputFormatting.StartNew("..//..//results.txt");
 
-            //    Console.WriteLine("Time LoaderTimetable: " + watch.ElapsedMilliseconds);
-            //    watch.Restart();
-            //    var evaluation = new EvaluationFunctionTimetable();
-            //    for (int i = 0; i < 1; i++)
-            //    {
-            //        GraphColoring gc = new GraphColoring();
-            //        watch.Restart();
+            for (SET = 1; SET <= 1; SET++)
+            {
+                if (SET == 4)
+                    continue;
+                OutputFormatting.Write("..//..//results.txt", "SET " + SET);
 
-            //        solution = gc.Exec();
-            //        long time = watch.ElapsedMilliseconds;
+                for (int repeats = 0; repeats < repeats_count; repeats++)
+                {
+                    //Set2
+                    double TMax = 0.1;
+                    double TMin = 1e-06;
+                    int reps = 5;
+                    double rate;
+                    //double rate = 2.6e-05;
 
-            //        Console.WriteLine("Time GraphColoring: " + time);
-            //        watch.Restart();
-            //        //Console.WriteLine("GC DTF: " + evaluation.DistanceToFeasibility(solution));
-            //        watch.Restart();
-            //        Console.WriteLine("GC Fitness: " + evaluation.Fitness(solution));
-            //        Console.WriteLine("Time Fitness: " + watch.ElapsedMilliseconds);
-            //    }
-            //    PrintToFile("..//..//output" + SET + ".txt", solution);
-            //}
+                    //Set1
+                    //double TMax = 0.1;
+                    //double TMin = 1e-06;
+                    //int reps = 5;
+                    //double rate = 3.5e-05;
 
-            Test1();
+                    //double TMax = 0.01;
+                    //double TMin = Math.Pow(Math.E, -18);
+                    //int reps = 5;
+                    //double rate = 0.001;
 
-            Console.ReadKey();
+                    Stopwatch watch = new Stopwatch();
+                    Stopwatch watch2 = new Stopwatch();
+
+
+                    Console.WriteLine("**SET** " + SET);
+                    LoaderTimetable loader = new LoaderTimetable("..//..//exam_comp_set" + SET + ".exam");
+                    loader.Unload();
+
+                    watch.Start();
+                    watch2.Start();
+                    loader.Load();
+                    
+                    StaticMatrix.examinations = StaticMatrix.examinations ?? Examinations.Instance().GetAll().OrderBy(exam => exam.conflict).ToList().ConvertAll(exam => exam.id);
+                    StaticMatrix.static_matrix = StaticMatrix.static_matrix ?? new int[repeats_count, StaticMatrix.examinations.Count];
+
+                    Console.WriteLine("Loader: " + watch.ElapsedMilliseconds);
+
+                    var evaluation = new EvaluationFunctionTimetable();
+
+                    GraphColoring gc = new GraphColoring();
+                    watch.Restart();
+                    solution = gc.Exec();
+                    Console.WriteLine("GraphColoring Time: " + watch.ElapsedMilliseconds);
+                    //Console.WriteLine("GC DTF: " + evaluation.DistanceToFeasibility(solution));
+                    watch.Restart();
+                    solution.fitness = evaluation.Fitness(solution);
+                    Console.WriteLine("Fitness Time: " + watch.ElapsedMilliseconds);
+                    Console.WriteLine("GC Fitness: " + solution.fitness);
+                    for (int exam_id = 0; exam_id < solution.ExaminationCount(); exam_id++)
+                    {
+                        StaticMatrix.static_matrix[repeats, StaticMatrix.examinations.IndexOf(exam_id)] =
+                            solution.GetPeriodFrom(exam_id);
+                    }
+                    
+
+                }
+            }
+            while (Console.ReadKey().Key != ConsoleKey.NumPad7) ;
+
+            //PrintToFile("..//..//output.txt", solution);
         }
 
         private static void PrintToFile(string output_txt, Solution solution)
@@ -59,75 +97,6 @@ namespace Tests.GraphColoringTest
             OutputFormatting.Format(output_txt, solution);
         }
 
-        private static void Test1()
-        {
-            int SET;
-            Stopwatch watch = Stopwatch.StartNew();
-            Solution solution = null;
-
-            List<int> list_scores = new List<int>(8) { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-            List<long> list_timings = new List<long>(8) { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-            
-
-            for (SET = 8; SET <= 12; SET++)
-            {
-                if (SET == 4)
-                    continue;
-
-                Console.WriteLine("**SET** " + SET);
-                LoaderTimetable loader = new LoaderTimetable("..//..//exam_comp_set" + SET + ".exam");
-                loader.Unload();
-                loader.Load();
-
-                Console.WriteLine("Time LoaderTimetable: " + watch.ElapsedMilliseconds);
-                watch.Restart();
-                var evaluation = new EvaluationFunctionTimetable();
-
-                List<long> list_timing_cicle = new List<long>(10);
-                List<int> list_scores_cicle = new List<int>(10);
-
-                for (int i = 0; i < 10; i++)
-                {
-                    GraphColoring gc = new GraphColoring();
-                    watch.Restart();
-
-                    solution = gc.Exec();
-                    long time = watch.ElapsedMilliseconds;
-                    list_timing_cicle.Add(time);
-                    Console.WriteLine("Time GraphColoring: " + time);
-                    watch.Restart();
-                    int fitness = evaluation.Fitness(solution);
-                    Console.WriteLine("GC Fitness: " + fitness);
-                    list_scores_cicle.Add(fitness);
-                }
-
-                foreach (int value in list_scores_cicle)
-                {
-                    list_scores[SET - 1] += value;
-                }
-                list_scores[SET - 1] /= list_scores_cicle.Count;
-
-                foreach (int value in list_timing_cicle)
-                {
-                    list_timings[SET - 1] += value;
-                }
-                list_timings[SET - 1] /= list_timing_cicle.Count;
-
-                PrintToFile("..//..//output" + SET + ".txt", solution);
-            }
-
-            for (int idx = 0; idx < list_scores.Count; idx++)
-            {
-                Console.WriteLine("Score SET" + (idx + 1) + "is " + list_scores[idx]);
-            }
-
-            for (int idx = 0; idx < list_timings.Count; idx++)
-            {
-                Console.WriteLine("Timings SET" + (idx + 1) + "is " + list_timings[idx]);
-            }
-
-            Console.ReadKey();
-        }
     }
 
 }
