@@ -28,7 +28,9 @@ namespace Heuristics
         private List<Examination> unassigned_examinations_with_after;
         private List<Examination> unassigned_examinations_with_coincidence;
         private List<Examination> unassigned_examinations_with_exclusive;
-        //private List<Examination> assigned_examinations;
+
+        private readonly Random random;
+        private List<int> my_list;
 
 
         public GraphColoring()
@@ -39,6 +41,8 @@ namespace Heuristics
             room_hard_constraints = RoomHardConstraints.Instance();
             rooms = Rooms.Instance();
             conflict_matrix = ConflictMatrix.Instance().Get();
+            random = new Random(Guid.NewGuid().GetHashCode());
+            my_list = new List<int>(new int[examinations.EntryCount()]);
         }
 
         public Solution Exec()
@@ -70,21 +74,37 @@ namespace Heuristics
                     
                 List<Examination> list_to_use;
 
-                if (unassigned_examinations_with_exclusive.Any())
-                    list_to_use = unassigned_examinations_with_exclusive;
+                if (unassigned_examinations_with_coincidence.Any())
+                    list_to_use = unassigned_examinations_with_coincidence;
                 else if (unassigned_examinations_with_after.Any())
                     list_to_use = unassigned_examinations_with_after;
-                else if (unassigned_examinations_with_coincidence.Any())
-                    list_to_use = unassigned_examinations_with_coincidence;
+                else if (unassigned_examinations_with_exclusive.Any())
+                    list_to_use = unassigned_examinations_with_exclusive;
                 else
                     list_to_use = unassigned_examinations;
 
                 var exam_to_assign = list_to_use.Last();
+                my_list[exam_to_assign.id]++;
                 list_to_use.RemoveAt(list_to_use.Count - 1);
 
                 /**/
                 //Console.WriteLine("Normal Assignment");
                 watch.Restart();
+
+                //if (watch2.ElapsedMilliseconds%1000 == 0)
+                //{
+                //    if (unassigned_examinations_with_exclusive.Count > 0)
+                //        Console.WriteLine("Exclusive: " + unassigned_examinations_with_exclusive.Count);
+                //    if (unassigned_examinations_with_after.Count > 0)
+                //        Console.WriteLine("After: " + unassigned_examinations_with_after.Count);
+                //    if (unassigned_examinations_with_coincidence.Count > 0)
+                //        //Console.WriteLine("Coincidence: " + unassigned_examinations_with_coincidence.Count);
+                //        Console.WriteLine("Coincidence: " + unassigned_examinations_with_coincidence[0].id);
+                //    if (unassigned_examinations.Count > 0)
+                        //Console.WriteLine("Others: " + unassigned_examinations.Count);
+                //    Console.WriteLine();
+                //}
+                
 
                 if (!ExaminationNormalAssignment(exam_to_assign))
                 {
@@ -171,7 +191,6 @@ namespace Heuristics
             if (!possible_periods.Any())
                 return false;
 
-            Random random = new Random(Guid.NewGuid().GetHashCode());
             int random_assignable = random.Next(possible_periods.Count);
             Period period_to_assign = possible_periods[random_assignable];
 
@@ -193,7 +212,7 @@ namespace Heuristics
 
         private void ExaminationForcingAssignment(Examination exam_to_assign)
         {
-            Random random = new Random(Guid.NewGuid().GetHashCode());
+            //Console.WriteLine(exam_to_assign.id);
             int random_room = -1;
             int random_period = -1;
             Room room_to_assign = null;
@@ -362,24 +381,22 @@ namespace Heuristics
 
             solution.UnsetExam(solution.GetPeriodFrom(exam.id), solution.GetRoomFrom(exam.id), exam.id);
 
-            //Why not random?
-            //Random random = new Random();
             if (room_hard_constraints.HasRoomExclusivity(exam.id))
             {
                 //unassigned_examinations_with_exclusive.Insert(
-                    //random.Next(unassigned_examinations_with_exclusive.Count), exam);
+                //    random.Next(unassigned_examinations_with_exclusive.Count), exam);
                 unassigned_examinations_with_exclusive.Add(exam);
                 unassigned_examinations_with_exclusive = unassigned_examinations_with_exclusive.OrderBy(examination => examination.conflict).ToList();
             }
-                
+
             else if (period_hard_constraints.GetByTypeWithExamId(PeriodHardConstraint.types.AFTER, exam.id).Any())
             {
                 //unassigned_examinations_with_after.Insert(
-                    //random.Next(unassigned_examinations_with_after.Count), exam);
+                //    random.Next(unassigned_examinations_with_after.Count), exam);
                 unassigned_examinations_with_after.Add(exam);
                 unassigned_examinations_with_after = unassigned_examinations_with_after.OrderBy(examination => examination.conflict).ToList();
             }
-                
+
             else if (
                 period_hard_constraints.GetByTypeWithExamId(PeriodHardConstraint.types.EXAM_COINCIDENCE, exam.id)
                     .Any())
@@ -393,7 +410,7 @@ namespace Heuristics
             else
             {
                 //unassigned_examinations.Insert(
-                    //random.Next(unassigned_examinations.Count), exam);
+                //    random.Next(unassigned_examinations.Count), exam);
                 unassigned_examinations.Add(exam);
                 unassigned_examinations = unassigned_examinations.OrderBy(examination => examination.conflict).ToList();
             }

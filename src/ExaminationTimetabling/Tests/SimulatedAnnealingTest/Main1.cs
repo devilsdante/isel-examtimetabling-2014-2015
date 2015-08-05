@@ -29,7 +29,7 @@ namespace Tests.SimulatedAnnealingTest
 
             OutputFormatting.StartNew("..//..//results.txt");
 
-            for (SET = 1; SET <= 1; SET++)
+            for (SET = 1; SET <= 12; SET++)
             {
                 if (SET == 4)
                     continue;

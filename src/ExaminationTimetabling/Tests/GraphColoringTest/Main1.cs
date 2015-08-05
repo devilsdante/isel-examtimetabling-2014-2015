@@ -20,14 +20,14 @@ namespace Tests.GraphColoringTest
 
             Solution solution = null;
             Solution SA_Solution = null;
-            int repeats_count = 50;
+            int repeats_count = 1;
 
             OutputFormatting.StartNew("..//..//results.txt");
 
-            for (SET = 1; SET <= 1; SET++)
+            for (SET = 4; SET <= 4; SET++)
             {
-                if (SET == 4)
-                    continue;
+                //if (SET == 4)
+                //    continue;
                 OutputFormatting.Write("..//..//results.txt", "SET " + SET);
 
                 for (int repeats = 0; repeats < repeats_count; repeats++)

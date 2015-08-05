@@ -16,6 +16,7 @@ namespace Heuristics.SimulatedAnnealing
     {
         protected abstract IEvaluationFunction evaluation_function { get; set; }
         private ICoolingSchedule cooling_schedule;
+        private readonly Random random = new Random((int)DateTime.Now.Ticks);
 
         public ISolution Exec(ISolution solution, double TMax, double TMin, int loops, int type, bool minimize)
 
@@ -42,9 +43,9 @@ namespace Heuristics.SimulatedAnnealing
                     else
                     {
                         double acceptance_probability = Math.Pow(Math.E, (-DeltaE) / T);
-                        double random = new Random((int)DateTime.Now.Ticks).NextDouble();
+                        double chance = random.NextDouble();
 
-                        if (random <= acceptance_probability)
+                        if (chance <= acceptance_probability)
                         {
                             solution = neighbor.Accept();
                             solution.fitness = neighbor.fitness;
@@ -98,9 +99,9 @@ namespace Heuristics.SimulatedAnnealing
                     else
                     {
                         double acceptance_probability = Math.Pow(Math.E, (-DeltaE) / (T * solution.fitness));
-                        double random = new Random((int)DateTime.Now.Ticks).NextDouble();
+                        double chance = random.NextDouble();
 
-                        if (random <= acceptance_probability)
+                        if (chance <= acceptance_probability)
                         {
                             solution = neighbor.Accept();
                             solution.fitness = neighbor.fitness;
@@ -138,9 +139,9 @@ namespace Heuristics.SimulatedAnnealing
                 else
                 {
                     double acceptance_probability = Math.Pow(Math.E, (-DeltaE) / T);
-                    double random = new Random((int)DateTime.Now.Ticks).NextDouble();
+                    double chance = random.NextDouble();
 
-                    if (random <= acceptance_probability)
+                    if (chance <= acceptance_probability)
                     {
                         Console.WriteLine("fitness: " + neighbor.fitness);
                         solution = neighbor.Accept();

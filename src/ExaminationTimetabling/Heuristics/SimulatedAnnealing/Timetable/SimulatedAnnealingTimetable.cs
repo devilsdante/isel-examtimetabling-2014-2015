@@ -85,13 +85,13 @@ namespace Heuristics.SimulatedAnnealing.Timetable
         {
             INeighbor to_return;
             int total = room_change + period_change + period_room_change + room_swap + period_swap + period_room_swap;
-            int random = new Random((int)DateTime.Now.Ticks).Next(total);
+            int random_number = this.random.Next(total);
             solution.fitness = (solution.fitness == -1) ? evaluation_function.Fitness(solution) : solution.fitness;
             const int chance_incrementation = 10;
 
             while (true)
             {
-                if (random < room_change)
+                if (random_number < room_change)
                 {
                     to_return = neighbor_selection_timetable.RoomChange(solution);
                     if (to_return != null)
@@ -106,7 +106,7 @@ namespace Heuristics.SimulatedAnnealing.Timetable
                         break;
                     }
                 }
-                else if (random < room_change + period_change)
+                else if (random_number < room_change + period_change)
                 {
                     to_return = neighbor_selection_timetable.PeriodChange(solution);
                     if (to_return != null)
@@ -121,7 +121,7 @@ namespace Heuristics.SimulatedAnnealing.Timetable
                         break;
                     }
                 }
-                else if (random < room_change + period_change + period_room_change)
+                else if (random_number < room_change + period_change + period_room_change)
                 {
                     to_return = neighbor_selection_timetable.PeriodRoomChange(solution);
                     if (to_return != null)
@@ -136,7 +136,7 @@ namespace Heuristics.SimulatedAnnealing.Timetable
                         break;
                     }
                 }
-                else if (random < room_change + period_change + period_room_change + room_swap)
+                else if (random_number < room_change + period_change + period_room_change + room_swap)
                 {
                     to_return = neighbor_selection_timetable.RoomSwap(solution);
                     if (to_return != null)
@@ -151,7 +151,7 @@ namespace Heuristics.SimulatedAnnealing.Timetable
                         break;
                     }
                 }
-                else if (random < room_change + period_change + period_room_change + room_swap + period_swap)
+                else if (random_number < room_change + period_change + period_room_change + room_swap + period_swap)
                 {
                     to_return = neighbor_selection_timetable.PeriodSwap(solution);
                     if (to_return != null)
@@ -190,12 +190,12 @@ namespace Heuristics.SimulatedAnnealing.Timetable
         {
             INeighbor to_return;
             int total = room_change + period_change + period_room_change + room_swap + period_swap + period_room_swap;
-            int random = new Random((int)DateTime.Now.Ticks).Next(total);
+            int random_number = this.random.Next(total);
             solution.fitness = (solution.fitness == -1) ? evaluation_function.Fitness(solution) : solution.fitness;
 
             while (true)
             {
-                if (random < room_change)
+                if (random_number < room_change)
                 {
                     to_return = neighbor_selection_timetable.RoomChange(solution);
                     if (to_return != null)
@@ -208,7 +208,7 @@ namespace Heuristics.SimulatedAnnealing.Timetable
                         break;
                     }
                 }
-                else if (random < room_change + period_change)
+                else if (random_number < room_change + period_change)
                 {
                     to_return = neighbor_selection_timetable.PeriodChange(solution);
                     if (to_return != null)
@@ -221,7 +221,7 @@ namespace Heuristics.SimulatedAnnealing.Timetable
                         break;
                     }
                 }
-                else if (random < room_change + period_change + period_room_change)
+                else if (random_number < room_change + period_change + period_room_change)
                 {
                     to_return = neighbor_selection_timetable.PeriodRoomChange(solution);
                     if (to_return != null)
@@ -234,7 +234,7 @@ namespace Heuristics.SimulatedAnnealing.Timetable
                         break;
                     }
                 }
-                else if (random < room_change + period_change + period_room_change + room_swap)
+                else if (random_number < room_change + period_change + period_room_change + room_swap)
                 {
                     to_return = neighbor_selection_timetable.RoomSwap(solution);
                     if (to_return != null)
@@ -247,7 +247,7 @@ namespace Heuristics.SimulatedAnnealing.Timetable
                         break;
                     }
                 }
-                else if (random < room_change + period_change + period_room_change + room_swap + period_swap)
+                else if (random_number < room_change + period_change + period_room_change + room_swap + period_swap)
                 {
                     to_return = neighbor_selection_timetable.PeriodSwap(solution);
                     if (to_return != null)
