@@ -59,27 +59,27 @@ namespace Heuristics
 
             int count = 0;
             //TODO Only for testing
-            Stopwatch watch = Stopwatch.StartNew();
-            Stopwatch watch2 = Stopwatch.StartNew();
+            //Stopwatch watch = Stopwatch.StartNew();
+            //Stopwatch watch2 = Stopwatch.StartNew();
 
-            int count_average = 0;
             int [] normal_assignments = new int[examinations.EntryCount()];
 
             while (solution.AssignedExaminations() != examinations.EntryCount())
             {
-                if (++count%5000 == 0)
+                if (++count%500 == 0)
                 {
                     Console.WriteLine(count);
+                    //Console.WriteLine(unassigned_examinations.Count);
                 }
                     
                 List<Examination> list_to_use;
 
-                if (unassigned_examinations_with_coincidence.Any())
-                    list_to_use = unassigned_examinations_with_coincidence;
+                if (unassigned_examinations_with_exclusive.Any())
+                    list_to_use = unassigned_examinations_with_exclusive;
                 else if (unassigned_examinations_with_after.Any())
                     list_to_use = unassigned_examinations_with_after;
-                else if (unassigned_examinations_with_exclusive.Any())
-                    list_to_use = unassigned_examinations_with_exclusive;
+                else if (unassigned_examinations_with_coincidence.Any())
+                    list_to_use = unassigned_examinations_with_coincidence;
                 else
                     list_to_use = unassigned_examinations;
 
@@ -89,7 +89,7 @@ namespace Heuristics
 
                 /**/
                 //Console.WriteLine("Normal Assignment");
-                watch.Restart();
+                //watch.Restart();
 
                 //if (watch2.ElapsedMilliseconds%1000 == 0)
                 //{
@@ -104,19 +104,19 @@ namespace Heuristics
                         //Console.WriteLine("Others: " + unassigned_examinations.Count);
                 //    Console.WriteLine();
                 //}
-                
+
+                //if(exam_to_assign.conflict > 0)
+                //    exam_to_assign.conflict -= 10;
+                //else
+                //    exam_to_assign.conflict -= 1;
 
                 if (!ExaminationNormalAssignment(exam_to_assign))
                 {
-                    watch.Restart();
                     ExaminationForcingAssignment(exam_to_assign);
-                    //Console.WriteLine("Forcing Assignment: " + watch.ElapsedMilliseconds);
                 }
                 else
                 {
-                    count_average++;
                     normal_assignments[exam_to_assign.id] += 1;
-                    //Console.WriteLine("Normal Assignment: " + watch.ElapsedMilliseconds);
                 }
                     
                 /**/
@@ -128,7 +128,6 @@ namespace Heuristics
                     != examinations.EntryCount())
                     throw new Exception("Examinations lists size mismatch");
             }
-            //Console.WriteLine("Average: "+(watch2.ElapsedMilliseconds/count_average));
             return solution;
         }
 
@@ -383,16 +382,12 @@ namespace Heuristics
 
             if (room_hard_constraints.HasRoomExclusivity(exam.id))
             {
-                //unassigned_examinations_with_exclusive.Insert(
-                //    random.Next(unassigned_examinations_with_exclusive.Count), exam);
                 unassigned_examinations_with_exclusive.Add(exam);
                 unassigned_examinations_with_exclusive = unassigned_examinations_with_exclusive.OrderBy(examination => examination.conflict).ToList();
             }
 
             else if (period_hard_constraints.GetByTypeWithExamId(PeriodHardConstraint.types.AFTER, exam.id).Any())
             {
-                //unassigned_examinations_with_after.Insert(
-                //    random.Next(unassigned_examinations_with_after.Count), exam);
                 unassigned_examinations_with_after.Add(exam);
                 unassigned_examinations_with_after = unassigned_examinations_with_after.OrderBy(examination => examination.conflict).ToList();
             }
@@ -401,20 +396,41 @@ namespace Heuristics
                 period_hard_constraints.GetByTypeWithExamId(PeriodHardConstraint.types.EXAM_COINCIDENCE, exam.id)
                     .Any())
             {
-                //unassigned_examinations_with_coincidence.Insert(
-                //random.Next(unassigned_examinations_with_coincidence.Count), exam);
                 unassigned_examinations_with_coincidence.Add(exam);
                 unassigned_examinations_with_coincidence = unassigned_examinations_with_coincidence.OrderBy(examination => examination.conflict).ToList();
             }
 
             else
             {
-                //unassigned_examinations.Insert(
-                //    random.Next(unassigned_examinations.Count), exam);
                 unassigned_examinations.Add(exam);
                 unassigned_examinations = unassigned_examinations.OrderBy(examination => examination.conflict).ToList();
             }
-                
+
+            //if (room_hard_constraints.HasRoomExclusivity(exam.id))
+            //{
+            //    unassigned_examinations_with_exclusive.Insert(
+            //        random.Next(unassigned_examinations_with_exclusive.Count), exam);
+            //}
+
+            //else if (period_hard_constraints.GetByTypeWithExamId(PeriodHardConstraint.types.AFTER, exam.id).Any())
+            //{
+            //    unassigned_examinations_with_after.Insert(
+            //        random.Next(unassigned_examinations_with_after.Count), exam);
+            //}
+
+            //else if (
+            //    period_hard_constraints.GetByTypeWithExamId(PeriodHardConstraint.types.EXAM_COINCIDENCE, exam.id)
+            //        .Any())
+            //{
+            //    unassigned_examinations_with_coincidence.Insert(
+            //    random.Next(unassigned_examinations_with_coincidence.Count), exam);
+            //}
+
+            //else
+            //{
+            //    unassigned_examinations.Insert(
+            //        random.Next(unassigned_examinations.Count), exam);
+            //}
         }
 
         private void UnassignExaminationAndCoincidences(Examination exam)
