@@ -20,19 +20,20 @@ namespace Tests.GraphColoringTest
 
             Solution solution = null;
             Solution SA_Solution = null;
-            int repeats_count = 1;
+            int repeats_count = 50;
 
             OutputFormatting.StartNew("..//..//results.txt");
+            OutputFormatting.StartNew("..//..//GCResults.dat");
 
-            for (SET = 4; SET <= 4; SET++)
+            for (SET = 1; SET <= 1; SET++)
             {
                 //if (SET == 4)
                 //    continue;
+
                 OutputFormatting.Write("..//..//results.txt", "SET " + SET);
 
                 for (int repeats = 0; repeats < repeats_count; repeats++)
                 {
-                    //Set2
                     double TMax = 0.1;
                     double TMin = 1e-06;
                     int reps = 5;
@@ -83,12 +84,22 @@ namespace Tests.GraphColoringTest
                         StaticMatrix.static_matrix[repeats, StaticMatrix.examinations.IndexOf(exam_id)] =
                             solution.GetPeriodFrom(exam_id);
                     }
-                    
-
                 }
             }
             while (Console.ReadKey().Key != ConsoleKey.NumPad7) ;
 
+            for (int j = 0; j < StaticMatrix.examinations.Count; j++)
+            {
+                for (int i = 0; i < repeats_count; i++)
+                {
+                    OutputFormatting.Write("..//..//GCResults.dat", i + " " + StaticMatrix.examinations.IndexOf(j) + " " + StaticMatrix.static_matrix[i, StaticMatrix.examinations.IndexOf(j)]);
+                }
+                OutputFormatting.Write("..//..//GCResults.dat", "");
+            }
+                
+                    
+
+            
             //PrintToFile("..//..//output.txt", solution);
         }
 

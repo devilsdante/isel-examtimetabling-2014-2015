@@ -66,7 +66,7 @@ namespace Heuristics
 
             while (solution.AssignedExaminations() != examinations.EntryCount())
             {
-                if (++count%500 == 0)
+                if (++count%5000 == 0)
                 {
                     Console.WriteLine(count);
                     Console.WriteLine(unassigned_examinations.Count);
