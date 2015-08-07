@@ -69,7 +69,7 @@ namespace Heuristics
                 if (++count%500 == 0)
                 {
                     Console.WriteLine(count);
-                    //Console.WriteLine(unassigned_examinations.Count);
+                    Console.WriteLine(unassigned_examinations.Count);
                 }
                     
                 List<Examination> list_to_use;
