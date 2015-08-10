@@ -1,0 +1,1410 @@
+\ifglsentryexists{soa}{}%
+{%
+\gls@defglossaryentry{soa}%
+{%
+name={SOA},%
+sort={SOA},%
+type={acronym},%
+first={Service Oriented Architecture\glsspace (SOA)},%
+firstplural={Service Oriented Architecture\acrpluralsuffix \glsspace (SOA\acrpluralsuffix )},%
+text={SOA},%
+plural={SOA\acrpluralsuffix },%
+description={Service Oriented Architecture},%
+descriptionplural={Service Oriented Architecture\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Service Oriented Architecture},%
+longplural={Service Oriented Architectures},%
+short={SOA},%
+shortplural={SOAs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{http}{}%
+{%
+\gls@defglossaryentry{http}%
+{%
+name={HTTP},%
+sort={HTTP},%
+type={acronym},%
+first={HyperText Transfer Protocol\glsspace (HTTP)},%
+firstplural={HyperText Transfer Protocol\acrpluralsuffix \glsspace (HTTP\acrpluralsuffix )},%
+text={HTTP},%
+plural={HTTP\acrpluralsuffix },%
+description={HyperText Transfer Protocol},%
+descriptionplural={HyperText Transfer Protocol\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={HyperText Transfer Protocol},%
+longplural={HyperText Transfer Protocols},%
+short={HTTP},%
+shortplural={HTTPs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{rest}{}%
+{%
+\gls@defglossaryentry{rest}%
+{%
+name={REST},%
+sort={REST},%
+type={acronym},%
+first={REpresentational State Transfer\glsspace (REST)},%
+firstplural={REpresentational State Transfer\acrpluralsuffix \glsspace (REST\acrpluralsuffix )},%
+text={REST},%
+plural={REST\acrpluralsuffix },%
+description={REpresentational State Transfer},%
+descriptionplural={REpresentational State Transfer\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={REpresentational State Transfer},%
+longplural={REpresentational State Transfers},%
+short={REST},%
+shortplural={RESTs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{ide}{}%
+{%
+\gls@defglossaryentry{ide}%
+{%
+name={IDE},%
+sort={IDE},%
+type={acronym},%
+first={Integrated Development Environment\glsspace (IDE)},%
+firstplural={Integrated Development Environment\acrpluralsuffix \glsspace (IDE\acrpluralsuffix )},%
+text={IDE},%
+plural={IDE\acrpluralsuffix },%
+description={Integrated Development Environment},%
+descriptionplural={Integrated Development Environment\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Integrated Development Environment},%
+longplural={Integrated Development Environments},%
+short={IDE},%
+shortplural={IDEs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{cf}{}%
+{%
+\gls@defglossaryentry{cf}%
+{%
+name={CF},%
+sort={CF},%
+type={acronym},%
+first={Collaborative Filtering\glsspace (CF)},%
+firstplural={Collaborative Filtering\acrpluralsuffix \glsspace (CF\acrpluralsuffix )},%
+text={CF},%
+plural={CF\acrpluralsuffix },%
+description={Collaborative Filtering},%
+descriptionplural={Collaborative Filtering\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Collaborative Filtering},%
+longplural={Collaborative Filterings},%
+short={CF},%
+shortplural={CFs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{cbf}{}%
+{%
+\gls@defglossaryentry{cbf}%
+{%
+name={CBF},%
+sort={CBF},%
+type={acronym},%
+first={Content-Based Filtering\glsspace (CBF)},%
+firstplural={Content-Based Filtering\acrpluralsuffix \glsspace (CBF\acrpluralsuffix )},%
+text={CBF},%
+plural={CBF\acrpluralsuffix },%
+description={Content-Based Filtering},%
+descriptionplural={Content-Based Filtering\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Content-Based Filtering},%
+longplural={Content-Based Filterings},%
+short={CBF},%
+shortplural={CBFs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{ubcf}{}%
+{%
+\gls@defglossaryentry{ubcf}%
+{%
+name={UBCF},%
+sort={UBCF},%
+type={acronym},%
+first={User-Based Collaborative Filtering\glsspace (UBCF)},%
+firstplural={User-Based Collaborative Filtering\acrpluralsuffix \glsspace (UBCF\acrpluralsuffix )},%
+text={UBCF},%
+plural={UBCF\acrpluralsuffix },%
+description={User-Based Collaborative Filtering},%
+descriptionplural={User-Based Collaborative Filtering\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={User-Based Collaborative Filtering},%
+longplural={User-Based Collaborative Filterings},%
+short={UBCF},%
+shortplural={UBCFs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{knn}{}%
+{%
+\gls@defglossaryentry{knn}%
+{%
+name={KNN},%
+sort={KNN},%
+type={acronym},%
+first={K-Nearest Neighbors\glsspace (KNN)},%
+firstplural={K-Nearest Neighbors\acrpluralsuffix \glsspace (KNN\acrpluralsuffix )},%
+text={KNN},%
+plural={KNN\acrpluralsuffix },%
+description={K-Nearest Neighbors},%
+descriptionplural={K-Nearest Neighbors\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={K-Nearest Neighbors},%
+longplural={K-Nearest Neighborss},%
+short={KNN},%
+shortplural={KNNs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{lsh}{}%
+{%
+\gls@defglossaryentry{lsh}%
+{%
+name={LSH},%
+sort={LSH},%
+type={acronym},%
+first={Locality Sensitive Hashing\glsspace (LSH)},%
+firstplural={Locality Sensitive Hashing\acrpluralsuffix \glsspace (LSH\acrpluralsuffix )},%
+text={LSH},%
+plural={LSH\acrpluralsuffix },%
+description={Locality Sensitive Hashing},%
+descriptionplural={Locality Sensitive Hashing\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Locality Sensitive Hashing},%
+longplural={Locality Sensitive Hashings},%
+short={LSH},%
+shortplural={LSHs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{ibcf}{}%
+{%
+\gls@defglossaryentry{ibcf}%
+{%
+name={IBCF},%
+sort={IBCF},%
+type={acronym},%
+first={Item-Based CF\glsspace (IBCF)},%
+firstplural={Item-Based CF\acrpluralsuffix \glsspace (IBCF\acrpluralsuffix )},%
+text={IBCF},%
+plural={IBCF\acrpluralsuffix },%
+description={Item-Based CF},%
+descriptionplural={Item-Based CF\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Item-Based CF},%
+longplural={Item-Based CFs},%
+short={IBCF},%
+shortplural={IBCFs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{api}{}%
+{%
+\gls@defglossaryentry{api}%
+{%
+name={API},%
+sort={API},%
+type={acronym},%
+first={Application Programming Interface\glsspace (API)},%
+firstplural={Application Programming Interface\acrpluralsuffix \glsspace (API\acrpluralsuffix )},%
+text={API},%
+plural={API\acrpluralsuffix },%
+description={Application Programming Interface},%
+descriptionplural={Application Programming Interface\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Application Programming Interface},%
+longplural={Application Programming Interfaces},%
+short={API},%
+shortplural={APIs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{apns}{}%
+{%
+\gls@defglossaryentry{apns}%
+{%
+name={APNS},%
+sort={APNS},%
+type={acronym},%
+first={Apple Push Notification Service\glsspace (APNS)},%
+firstplural={Apple Push Notification Service\acrpluralsuffix \glsspace (APNS\acrpluralsuffix )},%
+text={APNS},%
+plural={APNS\acrpluralsuffix },%
+description={Apple Push Notification Service},%
+descriptionplural={Apple Push Notification Service\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Apple Push Notification Service},%
+longplural={Apple Push Notification Services},%
+short={APNS},%
+shortplural={APNSs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{qos}{}%
+{%
+\gls@defglossaryentry{qos}%
+{%
+name={QoS},%
+sort={QoS},%
+type={acronym},%
+first={Quality of Service\glsspace (QoS)},%
+firstplural={Quality of Service\acrpluralsuffix \glsspace (QoS\acrpluralsuffix )},%
+text={QoS},%
+plural={QoS\acrpluralsuffix },%
+description={Quality of Service},%
+descriptionplural={Quality of Service\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Quality of Service},%
+longplural={Quality of Services},%
+short={QoS},%
+shortplural={QoSs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{er}{}%
+{%
+\gls@defglossaryentry{er}%
+{%
+name={ER},%
+sort={ER},%
+type={acronym},%
+first={Entity Relationship\glsspace (ER)},%
+firstplural={Entity Relationship\acrpluralsuffix \glsspace (ER\acrpluralsuffix )},%
+text={ER},%
+plural={ER\acrpluralsuffix },%
+description={Entity Relationship},%
+descriptionplural={Entity Relationship\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Entity Relationship},%
+longplural={Entity Relationships},%
+short={ER},%
+shortplural={ERs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{dal}{}%
+{%
+\gls@defglossaryentry{dal}%
+{%
+name={DAL},%
+sort={DAL},%
+type={acronym},%
+first={Data Access Layer\glsspace (DAL)},%
+firstplural={Data Access Layer\acrpluralsuffix \glsspace (DAL\acrpluralsuffix )},%
+text={DAL},%
+plural={DAL\acrpluralsuffix },%
+description={Data Access Layer},%
+descriptionplural={Data Access Layer\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Data Access Layer},%
+longplural={Data Access Layers},%
+short={DAL},%
+shortplural={DALs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{dao}{}%
+{%
+\gls@defglossaryentry{dao}%
+{%
+name={DAO},%
+sort={DAO},%
+type={acronym},%
+first={Data Access Object\glsspace (DAO)},%
+firstplural={Data Access Object\acrpluralsuffix \glsspace (DAO\acrpluralsuffix )},%
+text={DAO},%
+plural={DAO\acrpluralsuffix },%
+description={Data Access Object},%
+descriptionplural={Data Access Object\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Data Access Object},%
+longplural={Data Access Objects},%
+short={DAO},%
+shortplural={DAOs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{json}{}%
+{%
+\gls@defglossaryentry{json}%
+{%
+name={JSON},%
+sort={JSON},%
+type={acronym},%
+first={JavaScript Object Notation\glsspace (JSON)},%
+firstplural={JavaScript Object Notation\acrpluralsuffix \glsspace (JSON\acrpluralsuffix )},%
+text={JSON},%
+plural={JSON\acrpluralsuffix },%
+description={JavaScript Object Notation},%
+descriptionplural={JavaScript Object Notation\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={JavaScript Object Notation},%
+longplural={JavaScript Object Notations},%
+short={JSON},%
+shortplural={JSONs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{gg}{}%
+{%
+\gls@defglossaryentry{gg}%
+{%
+name={GG},%
+sort={GG},%
+type={acronym},%
+first={Google Geocoding\glsspace (GG)},%
+firstplural={Google Geocoding\acrpluralsuffix \glsspace (GG\acrpluralsuffix )},%
+text={GG},%
+plural={GG\acrpluralsuffix },%
+description={Google Geocoding},%
+descriptionplural={Google Geocoding\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Google Geocoding},%
+longplural={Google Geocodings},%
+short={GG},%
+shortplural={GGs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{orm}{}%
+{%
+\gls@defglossaryentry{orm}%
+{%
+name={ORM},%
+sort={ORM},%
+type={acronym},%
+first={Object-Relational Mapping\glsspace (ORM)},%
+firstplural={Object-Relational Mapping\acrpluralsuffix \glsspace (ORM\acrpluralsuffix )},%
+text={ORM},%
+plural={ORM\acrpluralsuffix },%
+description={Object-Relational Mapping},%
+descriptionplural={Object-Relational Mapping\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Object-Relational Mapping},%
+longplural={Object-Relational Mappings},%
+short={ORM},%
+shortplural={ORMs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{crud}{}%
+{%
+\gls@defglossaryentry{crud}%
+{%
+name={CRUD},%
+sort={CRUD},%
+type={acronym},%
+first={Create, Read, Update, and Delete\glsspace (CRUD)},%
+firstplural={Create, Read, Update, and Delete\acrpluralsuffix \glsspace (CRUD\acrpluralsuffix )},%
+text={CRUD},%
+plural={CRUD\acrpluralsuffix },%
+description={Create, Read, Update, and Delete},%
+descriptionplural={Create, Read, Update, and Delete\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Create, Read, Update, and Delete},%
+longplural={Create, Read, Update, and Deletes},%
+short={CRUD},%
+shortplural={CRUDs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{url}{}%
+{%
+\gls@defglossaryentry{url}%
+{%
+name={URL},%
+sort={URL},%
+type={acronym},%
+first={Uniform Resource Locator\glsspace (URL)},%
+firstplural={Uniform Resource Locator\acrpluralsuffix \glsspace (URL\acrpluralsuffix )},%
+text={URL},%
+plural={URL\acrpluralsuffix },%
+description={Uniform Resource Locator},%
+descriptionplural={Uniform Resource Locator\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Uniform Resource Locator},%
+longplural={Uniform Resource Locators},%
+short={URL},%
+shortplural={URLs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{html5}{}%
+{%
+\gls@defglossaryentry{html5}%
+{%
+name={HTML5},%
+sort={HTML5},%
+type={acronym},%
+first={HyperText Markup Language version 5\glsspace (HTML5)},%
+firstplural={HyperText Markup Language version 5\acrpluralsuffix \glsspace (HTML5\acrpluralsuffix )},%
+text={HTML5},%
+plural={HTML5\acrpluralsuffix },%
+description={HyperText Markup Language version 5},%
+descriptionplural={HyperText Markup Language version 5\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={HyperText Markup Language version 5},%
+longplural={HyperText Markup Language version 5s},%
+short={HTML5},%
+shortplural={HTML5s},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{css3}{}%
+{%
+\gls@defglossaryentry{css3}%
+{%
+name={CSS3},%
+sort={CSS3},%
+type={acronym},%
+first={Cascading Style Sheets version 3\glsspace (CSS3)},%
+firstplural={Cascading Style Sheets version 3\acrpluralsuffix \glsspace (CSS3\acrpluralsuffix )},%
+text={CSS3},%
+plural={CSS3\acrpluralsuffix },%
+description={Cascading Style Sheets version 3},%
+descriptionplural={Cascading Style Sheets version 3\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Cascading Style Sheets version 3},%
+longplural={Cascading Style Sheets version 3s},%
+short={CSS3},%
+shortplural={CSS3s},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{sql}{}%
+{%
+\gls@defglossaryentry{sql}%
+{%
+name={SQL},%
+sort={SQL},%
+type={acronym},%
+first={Structured Query Language\glsspace (SQL)},%
+firstplural={Structured Query Language\acrpluralsuffix \glsspace (SQL\acrpluralsuffix )},%
+text={SQL},%
+plural={SQL\acrpluralsuffix },%
+description={Structured Query Language},%
+descriptionplural={Structured Query Language\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Structured Query Language},%
+longplural={Structured Query Languages},%
+short={SQL},%
+shortplural={SQLs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{ip}{}%
+{%
+\gls@defglossaryentry{ip}%
+{%
+name={IP},%
+sort={IP},%
+type={acronym},%
+first={Internet Protocol\glsspace (IP)},%
+firstplural={Internet Protocol\acrpluralsuffix \glsspace (IP\acrpluralsuffix )},%
+text={IP},%
+plural={IP\acrpluralsuffix },%
+description={Internet Protocol},%
+descriptionplural={Internet Protocol\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Internet Protocol},%
+longplural={Internet Protocols},%
+short={IP},%
+shortplural={IPs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{gps}{}%
+{%
+\gls@defglossaryentry{gps}%
+{%
+name={GPS},%
+sort={GPS},%
+type={acronym},%
+first={Global Positioning System\glsspace (GPS)},%
+firstplural={Global Positioning System\acrpluralsuffix \glsspace (GPS\acrpluralsuffix )},%
+text={GPS},%
+plural={GPS\acrpluralsuffix },%
+description={Global Positioning System},%
+descriptionplural={Global Positioning System\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Global Positioning System},%
+longplural={Global Positioning Systems},%
+short={GPS},%
+shortplural={GPSs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{hbm}{}%
+{%
+\gls@defglossaryentry{hbm}%
+{%
+name={HBM},%
+sort={HBM},%
+type={acronym},%
+first={Hibernate Mapping\glsspace (HBM)},%
+firstplural={Hibernate Mapping\acrpluralsuffix \glsspace (HBM\acrpluralsuffix )},%
+text={HBM},%
+plural={HBM\acrpluralsuffix },%
+description={Hibernate Mapping},%
+descriptionplural={Hibernate Mapping\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Hibernate Mapping},%
+longplural={Hibernate Mappings},%
+short={HBM},%
+shortplural={HBMs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{hql}{}%
+{%
+\gls@defglossaryentry{hql}%
+{%
+name={HQL},%
+sort={HQL},%
+type={acronym},%
+first={Hibernate Query Language\glsspace (HQL)},%
+firstplural={Hibernate Query Language\acrpluralsuffix \glsspace (HQL\acrpluralsuffix )},%
+text={HQL},%
+plural={HQL\acrpluralsuffix },%
+description={Hibernate Query Language},%
+descriptionplural={Hibernate Query Language\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Hibernate Query Language},%
+longplural={Hibernate Query Languages},%
+short={HQL},%
+shortplural={HQLs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{pk}{}%
+{%
+\gls@defglossaryentry{pk}%
+{%
+name={PK},%
+sort={PK},%
+type={acronym},%
+first={Primary Key\glsspace (PK)},%
+firstplural={Primary Key\acrpluralsuffix \glsspace (PK\acrpluralsuffix )},%
+text={PK},%
+plural={PK\acrpluralsuffix },%
+description={Primary Key},%
+descriptionplural={Primary Key\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Primary Key},%
+longplural={Primary Keys},%
+short={PK},%
+shortplural={PKs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{fk}{}%
+{%
+\gls@defglossaryentry{fk}%
+{%
+name={FK},%
+sort={FK},%
+type={acronym},%
+first={Foreign Key\glsspace (FK)},%
+firstplural={Foreign Key\acrpluralsuffix \glsspace (FK\acrpluralsuffix )},%
+text={FK},%
+plural={FK\acrpluralsuffix },%
+description={Foreign Key},%
+descriptionplural={Foreign Key\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Foreign Key},%
+longplural={Foreign Keys},%
+short={FK},%
+shortplural={FKs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{uml}{}%
+{%
+\gls@defglossaryentry{uml}%
+{%
+name={UML},%
+sort={UML},%
+type={acronym},%
+first={Unified Modeling Language\glsspace (UML)},%
+firstplural={Unified Modeling Language\acrpluralsuffix \glsspace (UML\acrpluralsuffix )},%
+text={UML},%
+plural={UML\acrpluralsuffix },%
+description={Unified Modeling Language},%
+descriptionplural={Unified Modeling Language\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Unified Modeling Language},%
+longplural={Unified Modeling Languages},%
+short={UML},%
+shortplural={UMLs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{uri}{}%
+{%
+\gls@defglossaryentry{uri}%
+{%
+name={URI},%
+sort={URI},%
+type={acronym},%
+first={Uniform Resource Identifier\glsspace (URI)},%
+firstplural={Uniform Resource Identifier\acrpluralsuffix \glsspace (URI\acrpluralsuffix )},%
+text={URI},%
+plural={URI\acrpluralsuffix },%
+description={Uniform Resource Identifier},%
+descriptionplural={Uniform Resource Identifier\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Uniform Resource Identifier},%
+longplural={Uniform Resource Identifiers},%
+short={URI},%
+shortplural={URIs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{gcd}{}%
+{%
+\gls@defglossaryentry{gcd}%
+{%
+name={GCD},%
+sort={GCD},%
+type={acronym},%
+first={Grand Central Dispatch\glsspace (GCD)},%
+firstplural={Grand Central Dispatch\acrpluralsuffix \glsspace (GCD\acrpluralsuffix )},%
+text={GCD},%
+plural={GCD\acrpluralsuffix },%
+description={Grand Central Dispatch},%
+descriptionplural={Grand Central Dispatch\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Grand Central Dispatch},%
+longplural={Grand Central Dispatchs},%
+short={GCD},%
+shortplural={GCDs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{ui}{}%
+{%
+\gls@defglossaryentry{ui}%
+{%
+name={UI},%
+sort={UI},%
+type={acronym},%
+first={User Interface\glsspace (UI)},%
+firstplural={User Interface\acrpluralsuffix \glsspace (UI\acrpluralsuffix )},%
+text={UI},%
+plural={UI\acrpluralsuffix },%
+description={User Interface},%
+descriptionplural={User Interface\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={User Interface},%
+longplural={User Interfaces},%
+short={UI},%
+shortplural={UIs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{mvc}{}%
+{%
+\gls@defglossaryentry{mvc}%
+{%
+name={MVC},%
+sort={MVC},%
+type={acronym},%
+first={Model View Controller\glsspace (MVC)},%
+firstplural={Model View Controller\acrpluralsuffix \glsspace (MVC\acrpluralsuffix )},%
+text={MVC},%
+plural={MVC\acrpluralsuffix },%
+description={Model View Controller},%
+descriptionplural={Model View Controller\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Model View Controller},%
+longplural={Model View Controllers},%
+short={MVC},%
+shortplural={MVCs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{ajax}{}%
+{%
+\gls@defglossaryentry{ajax}%
+{%
+name={AJAX},%
+sort={AJAX},%
+type={acronym},%
+first={Asynchronous JavaScript and XML\glsspace (AJAX)},%
+firstplural={Asynchronous JavaScript and XML\acrpluralsuffix \glsspace (AJAX\acrpluralsuffix )},%
+text={AJAX},%
+plural={AJAX\acrpluralsuffix },%
+description={Asynchronous JavaScript and XML},%
+descriptionplural={Asynchronous JavaScript and XML\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Asynchronous JavaScript and XML},%
+longplural={Asynchronous JavaScript and XMLs},%
+short={AJAX},%
+shortplural={AJAXs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{js}{}%
+{%
+\gls@defglossaryentry{js}%
+{%
+name={JS},%
+sort={JS},%
+type={acronym},%
+first={JavaScript\glsspace (JS)},%
+firstplural={JavaScript\acrpluralsuffix \glsspace (JS\acrpluralsuffix )},%
+text={JS},%
+plural={JS\acrpluralsuffix },%
+description={JavaScript},%
+descriptionplural={JavaScript\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={JavaScript},%
+longplural={JavaScripts},%
+short={JS},%
+shortplural={JSs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{wwo}{}%
+{%
+\gls@defglossaryentry{wwo}%
+{%
+name={WWO},%
+sort={WWO},%
+type={acronym},%
+first={World Weather Online\glsspace (WWO)},%
+firstplural={World Weather Online\acrpluralsuffix \glsspace (WWO\acrpluralsuffix )},%
+text={WWO},%
+plural={WWO\acrpluralsuffix },%
+description={World Weather Online},%
+descriptionplural={World Weather Online\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={World Weather Online},%
+longplural={World Weather Onlines},%
+short={WWO},%
+shortplural={WWOs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{jdbc}{}%
+{%
+\gls@defglossaryentry{jdbc}%
+{%
+name={JDBC},%
+sort={JDBC},%
+type={acronym},%
+first={Java Database Connectivity\glsspace (JDBC)},%
+firstplural={Java Database Connectivity\acrpluralsuffix \glsspace (JDBC\acrpluralsuffix )},%
+text={JDBC},%
+plural={JDBC\acrpluralsuffix },%
+description={Java Database Connectivity},%
+descriptionplural={Java Database Connectivity\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Java Database Connectivity},%
+longplural={Java Database Connectivitys},%
+short={JDBC},%
+shortplural={JDBCs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{ssl}{}%
+{%
+\gls@defglossaryentry{ssl}%
+{%
+name={SSL},%
+sort={SSL},%
+type={acronym},%
+first={Secure Socket Layer\glsspace (SSL)},%
+firstplural={Secure Socket Layer\acrpluralsuffix \glsspace (SSL\acrpluralsuffix )},%
+text={SSL},%
+plural={SSL\acrpluralsuffix },%
+description={Secure Socket Layer},%
+descriptionplural={Secure Socket Layer\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Secure Socket Layer},%
+longplural={Secure Socket Layers},%
+short={SSL},%
+shortplural={SSLs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{treeTierDT}{}%
+{%
+\gls@defglossaryentry{treeTierDT}%
+{%
+name={DT},%
+sort={DT},%
+type={acronym},%
+first={Data Tier\glsspace (DT)},%
+firstplural={Data Tier\acrpluralsuffix \glsspace (DT\acrpluralsuffix )},%
+text={DT},%
+plural={DT\acrpluralsuffix },%
+description={Data Tier},%
+descriptionplural={Data Tier\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Data Tier},%
+longplural={Data Tiers},%
+short={DT},%
+shortplural={DTs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{treeTierBT}{}%
+{%
+\gls@defglossaryentry{treeTierBT}%
+{%
+name={BLT},%
+sort={BLT},%
+type={acronym},%
+first={Business Logic Tier\glsspace (BLT)},%
+firstplural={Business Logic Tier\acrpluralsuffix \glsspace (BLT\acrpluralsuffix )},%
+text={BLT},%
+plural={BLT\acrpluralsuffix },%
+description={Business Logic Tier},%
+descriptionplural={Business Logic Tier\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Business Logic Tier},%
+longplural={Business Logic Tiers},%
+short={BLT},%
+shortplural={BLTs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{threeTierPT}{}%
+{%
+\gls@defglossaryentry{threeTierPT}%
+{%
+name={PT},%
+sort={PT},%
+type={acronym},%
+first={Presentation Tier\glsspace (PT)},%
+firstplural={Presentation Tier\acrpluralsuffix \glsspace (PT\acrpluralsuffix )},%
+text={PT},%
+plural={PT\acrpluralsuffix },%
+description={Presentation Tier},%
+descriptionplural={Presentation Tier\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Presentation Tier},%
+longplural={Presentation Tiers},%
+short={PT},%
+shortplural={PTs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{xml}{}%
+{%
+\gls@defglossaryentry{xml}%
+{%
+name={XML},%
+sort={XML},%
+type={acronym},%
+first={Extensible Markup Language\glsspace (XML)},%
+firstplural={Extensible Markup Language\acrpluralsuffix \glsspace (XML\acrpluralsuffix )},%
+text={XML},%
+plural={XML\acrpluralsuffix },%
+description={Extensible Markup Language},%
+descriptionplural={Extensible Markup Language\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Extensible Markup Language},%
+longplural={Extensible Markup Languages},%
+short={XML},%
+shortplural={XMLs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{csv}{}%
+{%
+\gls@defglossaryentry{csv}%
+{%
+name={CSV},%
+sort={CSV},%
+type={acronym},%
+first={Comma-Separated Values\glsspace (CSV)},%
+firstplural={Comma-Separated Values\acrpluralsuffix \glsspace (CSV\acrpluralsuffix )},%
+text={CSV},%
+plural={CSV\acrpluralsuffix },%
+description={Comma-Separated Values},%
+descriptionplural={Comma-Separated Values\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Comma-Separated Values},%
+longplural={Comma-Separated Valuess},%
+short={CSV},%
+shortplural={CSVs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{mae}{}%
+{%
+\gls@defglossaryentry{mae}%
+{%
+name={MAE},%
+sort={MAE},%
+type={acronym},%
+first={Mean Absolute Error\glsspace (MAE)},%
+firstplural={Mean Absolute Error\acrpluralsuffix \glsspace (MAE\acrpluralsuffix )},%
+text={MAE},%
+plural={MAE\acrpluralsuffix },%
+description={Mean Absolute Error},%
+descriptionplural={Mean Absolute Error\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Mean Absolute Error},%
+longplural={Mean Absolute Errors},%
+short={MAE},%
+shortplural={MAEs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{rs}{}%
+{%
+\gls@defglossaryentry{rs}%
+{%
+name={RS},%
+sort={RS},%
+type={acronym},%
+first={Recommender System\glsspace (RS)},%
+firstplural={Recommender System\acrpluralsuffix \glsspace (RS\acrpluralsuffix )},%
+text={RS},%
+plural={RS\acrpluralsuffix },%
+description={Recommender System},%
+descriptionplural={Recommender System\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Recommender System},%
+longplural={Recommender Systems},%
+short={RS},%
+shortplural={RSs},%
+counter={page},%
+parent={},%
+%
+}%
+}%

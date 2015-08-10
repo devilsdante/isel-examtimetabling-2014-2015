@@ -1,0 +1,55 @@
+\chapter{Experimental Results}
+\label{chap:ExpResults}
+
+In this chapter we will present the results obtained while running all the heuristics explained in the previous chapters. We also compare our results against the ones of the top 5 winners of the \gls{itc2007} contest.\\
+\\
+Each set score is the result of the average of 10 runs that were done on that same set. The tests were made on all 12 sets, including the hidden ones.\\
+\\
+The parameters used to run the \gls{sa} were:\\
+\\
+TMax = 0.01 $\rightarrow$ Maximum/initial temperature\\
+TMin = $1e^{-18}$ $\rightarrow$ Minimum temperature\\
+reps = 5 $\rightarrow$ Number of repetitions per temperature\\
+rate = 0.001 $\rightarrow$ Temperature cooling rate\\
+\\
+With these parameters used on all the sets, we obtained the results presented on Table \ref{tab:ITC2007ResultsComparison}. Some of the results could be as good as it can match the top 5 winners, and some were so far away from these. As can be seen, the results for the sets 1, 2, 6, 7, 8, and 9 can match the 5 winners' results, but the sets 3, 10, and 11 were far away from the results of the top 5 (the ones that could get a feasible solution). We believe this can be fixed by tweaking the parameters and give individual parameters to each set to try and obtain better results.\\
+\\
+\begin{table*}
+\centering
+\caption{ITC 2007 results comparison to this project's approach. The best solutions are indicated in bold. ''--'' indicates that a feasible solution could not be obtained.}
+\sisetup{table-alignment=center,detect-weight=true,detect-inline-weight=math}
+\begin{tabular}{%
+	S[table-figures-integer=3]%
+	S[table-format=5.1]%
+	S[table-format=5.1]%
+	S[table-format=5.1]%    
+	S[table-format=5.1]%
+	S[table-format=5.1]%
+	S[table-format=5.1]%
+    }
+
+\toprule
+
+\multicolumn{1}{l}{Instance} & \multicolumn{1}{l}{M\"{u}ller} &	\multicolumn{1}{l}{Gogos et} & \multicolumn{1}{l}{Atsuta et} & \multicolumn{1}{l}{De Smet} & \multicolumn{1}{l}{Pillay} & \multicolumn{1}{l}{Proposed}\\
+		& \multicolumn{1}{l}{2008 \cite{Mueller2009}} & \multicolumn{1}{l}{al. 2008~\cite{Gogos2012}} & \multicolumn{1}{l}{al. 2008~\cite{Atsuta2007}} & \multicolumn{1}{l}{2008~\cite{Smet2007}} & \multicolumn{1}{l}{2008~\cite{Pillay2007}} & \multicolumn{1}{l}{Approach 2015} \\
+
+\midrule
+
+1   &   \boldentry{5.1}{4370}  & 5905      & 8006           & 6670       & 12035 & 6934\\
+2   &   \boldentry{5.1}{400}   & 1008      & 3470           &  623       & 3074 & 821 \\
+3   &   \boldentry{5.1}{10049} & 13862     & 18622          & \text{--}  & 15917 & 24627 \\
+4   &   \boldentry{5.1}{18141} & 18674     & 22559          & \text{--}  & 23582 & \text{--} \\
+5   &   \boldentry{5.1}{2988}  & 4139      & 4714           & 3847       & 6860 & 7729\\
+6   &   \boldentry{5.1}{26950} & 27640     & 29155          & 27815      & 32250 & 30195 \\
+7   &   \boldentry{5.1}{4213}  & 6683      & 10473          & 5420       & 17666 & 8089 \\
+8   &   \boldentry{5.1}{7861}  & 10521     & 14317          & \text{--}  & 16184 & 11067 \\
+9   &   \boldentry{5.1}{1047}  & 1159      & 1737           & 1288       & 2055 & 1448 \\
+10  &   16682                  & \text{--} & 15085          & \boldentry{5.1}{14778}      & 17724  & 35698\\
+11  &   \boldentry{5.1}{34129} & 43888     & \text{--}      & \text{--}  & 40535 & 72751 \\
+12  &   5535            & \text{--} & \boldentry{5.1}{5264} & \text{--}  & 6310 & 8049 \\
+
+\bottomrule
+
+\end{tabular}
+\label{tab:ITC2007ResultsComparison}
+\end{table*}

@@ -1,0 +1,50 @@
+\begin{tikzpicture}
+	\begin{axis}[
+		colorbar style={
+		scaled y ticks = false,
+		y tick label style={/pgf/number format/fixed,
+			/pgf/number format/1000 sep = \thinspace 	% Optional if you want to
+														% replace comma as the 1000
+														% separator 
+        }
+		},
+		width = \textwidth,
+		xlabel = {Thresholds},
+		ylabel = {Exams},
+		enlarge x limits = true,	% The value true enlarges the lower 
+									% and upper limit.
+									% The value false uses tight axis limits
+		enlarge y limits = true,
+		colorbar,
+		%colormap={}{ gray(0cm)=(1); gray(1cm)=(0);}, % Grey colorbar
+		x dir = reverse,
+		y dir = reverse,
+		%xmode = log,        % logarithmic x axis
+		%xmin = 0, xmax = 9,
+		% car92 has 543 exams
+		%ymin = 0, ymax = 606, 
+%		ytick = { 0, 100, 200, 300, 400, 500, 542},
+		extra x ticks = {
+0,
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9
+}, extra x tick labels = {},
+	    		extra tick style = { grid = major},
+	    		width = \textwidth,
+	    		%width = 17cm,
+			%height = 11cm,
+		]
+		\addplot[surf, 
+			shader = interp, % No facets
+			point meta = explicit] 
+			%table [z expr = 100, meta index = 2] {./yor83Cool1Eminus6.dat};
+			table [z expr = 100, meta index = 2] {./GCResults7.dat};
+\end{axis}
+\end{tikzpicture}

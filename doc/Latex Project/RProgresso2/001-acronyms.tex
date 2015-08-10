@@ -1,0 +1,42 @@
+\newlength{\acronymlabelwidth}
+\setlength{\acronymlabelwidth}{0.25\textwidth}
+\newglossarystyle{listwithwidth}{%
+  \renewenvironment{theglossary}%
+    {\begin{description}}{\end{description}}%
+  \renewcommand*{\glossaryheader}{}%
+  \renewcommand*{\glsgroupheading}[1]{}%
+  \renewcommand*{\glossaryentryfield}[5]{%
+    \item[\parbox{\acronymlabelwidth}{\glsentryitem{##1}\glstarget{##1}{##2}}]
+       ##3\glspostdescription\space ##5}%
+  \renewcommand*{\glossarysubentryfield}[6]{%
+    \glssubentryitem{##2}%
+    \glstarget{##2}{\strut}##4\glspostdescription\space ##6.}%
+  \renewcommand*{\glsgroupskip}{\indexspace}%
+}
+
+\begin{titlepage}
+\thispagestyle{empty}
+	\newacronym{ai}{AI}{Artificial Intelligence}
+	\newacronym{itc2007}{ITC 2007}{International Timetabling Competition 2007}
+	\newacronym{sa}{SA}{Simulated Annealing}
+	\newacronym{ifs}{IFS}{Iterative Forward Search}
+	\newacronym{hc}{HC}{Hill Climbing}
+	\newacronym{gd}{GD}{Great Deluge}
+	\newacronym{ip}{IP}{Integer Programming}
+	\newacronym{bb}{BB}{Branch and Bound}
+	\newacronym{ts}{TS}{Tabu Search}
+	\newacronym{ga}{GA}{Genetic Algorithms}
+	\newacronym{ilp}{ILP}{Integer Linear Problem}
+	\newacronym{milp}{MILP}{Mixed-Integer Linear Programming}
+	\newacronym{gc}{GC}{Graph Coloring}
+	\newacronym{grasp}{GRASP}{Greedy Randomized Adaptive Search
+	 Procedure}
+	\newacronym{cpbt}{CPBT}{Constraint Programming Based Technique}
+	\newacronym{dl}{DL}{Data Layer}
+	\newacronym{dal}{DAL}{Data Access Layer}
+	\newacronym{bl}{BL}{Business Layer}
+	\newacronym{hl}{HL}{Heuristics Layer}
+	\newacronym{tl}{TL}{Tools Layer}
+	\newacronym{pl}{PL}{Presentation Layer}
+	\newacronym{crud}{CRUD}{Create, Read, Update and Delete}
+\end{titlepage}

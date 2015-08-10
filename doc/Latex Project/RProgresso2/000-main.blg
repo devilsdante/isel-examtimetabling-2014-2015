@@ -1,0 +1,17 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: 000-main.aux
+A level-1 auxiliary file: 100-cover.aux
+A level-1 auxiliary file: 002-abstract.aux
+A level-1 auxiliary file: 200-introduction.aux
+A level-1 auxiliary file: 300-theory.aux
+A level-1 auxiliary file: 400-architecture.aux
+A level-1 auxiliary file: 500-loader-solution-init.aux
+A level-1 auxiliary file: 500-local-search.aux
+A level-1 auxiliary file: 550-experimental-results.aux
+A level-1 auxiliary file: 550-future-work.aux
+A level-1 auxiliary file: test.aux
+A level-1 auxiliary file: 800-references.aux
+The style file: ieeetr.bst
+Database file #1: 000-main.bib
+Warning--can't use both author and editor fields in Jensen2001
+Warning--empty journal in Hamilton-Bryce2014
+(There were 2 warnings)

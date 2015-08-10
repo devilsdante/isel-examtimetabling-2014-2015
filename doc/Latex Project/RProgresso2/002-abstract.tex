@@ -1,0 +1,45 @@
+\chapter*{Acknowledgments}
+\addcontentsline{toc}{chapter}{Acknowledgments} 
+
+I would like to express my gratitude to my supervisors Artur Ferreira and Nuno Leite, for being aware and helpful for the entire development of the project. If it wasn't for them, the development of this project wouldn't be possible. Their assistance and motivations towards me, really motivated me to continue and work hard on this project.\\
+\\
+I would like to thank my best friends João Vaz, Daniel Albuquerque, André Ferreira, Pedro Miguel, my brothers Pedro Nunes and João Tiago, and my parents, Mariana and Paulo, for always being there to support me on the hardest moments of my life. Their help on my personal life's issues were crucial while developing this project.\\
+\\
+Last, but not least, I would like to thank the Instituto Superior de Engenharia de Lisboa, for giving me support and knowledge in the Computing Engineering subject, for the last 6 years.
+\
+\chapter*{Resumo}
+
+\addcontentsline{toc}{chapter}{Resumo} 
+Nos últimos anos o tema de criação de horários tem sido alvo de muito estudo. Em muitos locais, a criação de horários ainda é feita manualmente, o que leva à criação de um horário que normalmente tem falhas ao qual se fosse criado por uma máquina, poderia obter-se melhores resultados.\\
+\\
+A criação de hórarios não é uma tarefa fácil, mesmo para uma máquina. Por exemplo, horários escolares necessitam de seguir certas regras para que seja possível a criação de um horário válido. Mas como o espaço de estados (soluções) válidas é tão vasto, é impossível criar um algoritmo que faça \textit{brute force} e assim obter a melhor solução possível, considerando as regras fornecidas. Daí a utilização de heuristicas que varrem de uma forma guiada o espaço de estados, conseguindo assim uma boa solução em tempo real.\\
+\\
+Este relatório explica algumas das importantes heuristicas que são úteis neste tipo de desafios, tanto como o estado-da-arte que menciona abordagens importantes neste tema. Este projeto tem como objetivo o desenvolvimento de uma abordagem para concurso de \textit{International Timetabling Competition 2007} considerando os melhores concorrentes que participaram na altura.\\
+\\
+É dos objetivos do projeto criar uma abordagem que siga as regras do \textit{International Timetabling Competition 2007} ao qual irá incidir na criação de horários de exames para a faculdade (Examination timetabling). Este projeto utiliza uma abordagem de heusticas hibridas. Isto significa que utiliza multiplas heuristicas para a obter a melhor solução possível. Utiliza uma variancia de Graph Coloring para obter uma solução válida e uma meta-heuristica chamada Simulated Annealing para melhorar a solução o máximo possível.\\
+\\
+Este projeto possui uma arquitetura de 5 camadas. Camada de dados, camada de acesso a dados, camada de negócio, camada de heuristicas, camada de ferramentas e camadas de apresentação. A primeira é responsável pelo armazenamento de dados, ao qual são armazenados em repositórios em memória volátil. A camada de acesso a dados disponibiliza os repositórios das entidades que fornece funções como adicionar, remover, alterar e obter. A camada de dados fornece funções de acesso aos repositórios, ao qual as funções são mais ricas do que as funções fornecidas pelos repositórios. Dentro do mesmo nível estão presentes a camada de heuristicas, que possui todas as heuristicas, e a camada de ferramentas, que é utilizada pelas heuristicas e pela camada de apresentação. E por fim a camada de apresentação, que simplesmente serve como debug e para verificação de resultados de testes.\\
+\\
+No final os resultados vão ser avaliados e comparados com os 5 melhores participantes do concurso.
+\
+\section*{Palavras Chave}
+
+Heuristicas; Meta-heuristicas; International Timetabling Competition 2007; Timetable; Horários; Horários de exames; Graph Coloring; Simulated Annealing;
+\
+
+\chapter*{Abstract}
+
+\addcontentsline{toc}{chapter}{Abstract} 
+In the last few years the creation of timetables is being a well-studied subject. In many places, the creation of timetables is still manual, so it will normally result on creating a faulty timetable, unlike being created by a machine, which can produce better results.\\
+\\
+It is not easy to create timetables, even for a machine. For example, scholar/university timetables need to follow certain type of constraints or rules for them to be considered valid. But since the solution space is so vast, it is impossible to create a brute force algorithm to get the best possible solution in acceptable time, considering the given rules/constraints. Hence the use of heuristics which navigate through the solution space in a guided way, obtaining then a good solution in acceptable time.\\
+\\
+The main objective of this project is to create an approach that follows the \textit{International Timetabling Competition 2007} rules, focusing on creating examination timetables. This project will use a hybrid approach. This means it will use an approach that includes multiple heuristics in order to find the best possible solution. This approach uses a variant of the Graph Coloring heuristic to find an initial valid solution, and a meta-heuristic called Simulated Annealing to improve that solution.\\
+\\
+The final results were satisfactory, as in some instances we were able to obtain results that match some of the five finalists from 2007 timetabling contest.
+
+
+\section*{Keywords}
+
+Heuristics; Meta-heuristics; International Timetabling Competition 2007; Timetable; Examination Timetabling; Graph Coloring; Simulated Annealing;
+

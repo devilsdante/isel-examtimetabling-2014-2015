@@ -1,0 +1,22 @@
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+\renewcommand*{\glspostdescription}{}				% remove the "." at the end of the glossary description
+\renewcommand{\lstlistlistingname}{List of Code Listings}		% changes the "Listing" title to "Code Listings"
+\renewcommand{\lstlistingname}{Code Listing}			% changes "Listing X.Y" to "Code Listing X.Y." in text
+
+\newcommand{\specialcell}[2][c]{						% Cell that allows break line 
+  \begin{tabular}[#1]{@{}l@{}}#2\end{tabular}}
+  
+  
+%%%% Specify table width with Left, Right or Center content of the table cell
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+%%% Tab command
+\newcommand{\tab}[1]{\hspace{.2\textwidth}\rlap{#1}}
+
+
+%%% Formating listign for algorithmic entries
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}

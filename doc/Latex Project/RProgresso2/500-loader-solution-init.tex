@@ -1,0 +1,283 @@
+\chapter{Loader and solution initialization}
+\label{sec:SolutionInit}
+\thispagestyle{plain}
+
+The Loader and the solution initializer (heuristic) are the first tools used in this project. The Loader and Graph Coloring heuristic (solution initializer) will only be executed once, so the major part of the execution time will be used by the meta-heuristic(s).
+
+\section{Loader Module}
+\label{sec:Loader}
+
+The Loader's job is to load all the information presented in the dataset files. Each set file includes information about examinations and the enrolled students, the periods, the rooms, and their penalties, as well as the period and room hard constraints, and the information about the soft constraints, named \textit{Institutional Weightings}. The presence of period and room hard constraints are optional.\\
+\\
+This tool not only loads all the data to its corresponding repositories, but also creates and populates the conflict matrix depending on the data obtained previously. The conflict matrix is a matrix that has the information about the conflicts of each pair of examinations.
+
+\subsection{Analysis of benchmark data}
+
+Figure 4.1 presents the specifications of the 12 datasets of the \gls{itc2007}. The instances presented have different degrees of complexity, that is, ease of finding a feasible solution and number of feasible solutions. Using the \gls{gc} heuristic developed (described later in Section \ref{sec:GraphColoring}), Instance 4 is the most complex one, as no feasible solution could be obtained. The high conflict matrix density, in addition to the fact there's only one room (with capacity 1200 seats), and the presence of 40 period hard constraints, help to explain the dataset complexity.\\
+\\
+All the specifications and benchmark data from the 12 datasets of the \gls{itc2007} timetabling problem are shown in the Table \ref{tab:ITC2007Datasets}.
+
+\begin{table}
+\centering
+
+\sisetup{table-alignment=center,table-figures-decimal=3}
+
+\begin{tabular}{%
+	 S[table-figures-integer=6]%
+     S[table-figures-integer=6]%
+     S[table-figures-integer=4]%
+     S[table-figures-integer=3]%
+     S%
+     S[table-figures-integer=3]%
+    }
+
+\toprule
+
+       & \multicolumn{1}{c}{\#} & \multicolumn{1}{c}{\#} & \multicolumn{1}{c}{\#} & \multicolumn{1}{l}{conflict} & \multicolumn{1}{c}{\#} \\
+\multicolumn{1}{c}{Instance} &  \multicolumn{1}{c}{students} & \multicolumn{1}{c}{exams} & \multicolumn{1}{c}{rooms} & \multicolumn{1}{c}{matrix}   & \multicolumn{1}{c}{time}  \\
+       &		   	     & 		    & 		  & \multicolumn{1}{c}{density}  &\multicolumn{1}{c}{slots}\\ 
+       
+\midrule
+
+1 	 & 7891 	 & 607	& 7 	 & 0.05 	 & 54 \\
+2	 & 12743 & 870	& 49 & 0.01 	 & 40 \\
+3 	 & 16439 & 934	& 48 & 0.03 	 & 36 \\
+4	 & 5045  & 273 	& 1 	 & 0.15 	 & 21 \\
+5 	 & 9253 	 & 1018 	& 3 	 & 0.009 & 42 \\
+6 	 & 7909 	 & 242 	& 8 	 & 0.06  & 16 \\
+7	 & 14676	 & 1096 	& 15 & 0.02  & 80 \\
+8 	 & 7718 	 & 598 	& 8 	 & 0.05 	 & 80 \\
+9 	 & 655 	 & 169 	& 3  & 0.08 	 & 25 \\
+10	 & 1577 	 & 214 	& 48 & 0.05 	 & 32 \\
+11	 & 16439 & 934 	& 40 & 0.03 	 & 26 \\
+12  & 1653 	 & 78 	& 50 & 0.18 	 & 12 \\ 
+
+\bottomrule
+
+\end{tabular}
+
+\caption{Specifications of the 12 datasets of the ITC 2007 examination timetabling problem.}
+\label{tab:ITC2007Datasets}
+
+\end{table}
+
+\subsection{Implementation}
+
+The development of the \verb+ILoader+ tool is divided into two main parts: the loading part, which loads the dataset file into the repositories using the business layer, and the creation and population of the conflict matrix.\\
+\\
+The loader was implemented using the \verb+Loader+ base class, from which the \verb+LoaderTimetable+ extends. The \verb+Loader+ class implements functions to make it easier to run through a file. These two classes are depicted in Figure \ref{fig:Loaders}\\
+\\
+Unlike the \verb+Loader+, \verb+LoaderTimetable+ depends on the structure of the dataset files. This class will use the Loader functions to go through a dataset file, and so, populate the repositories depending on the information read by the \verb+Loader+ class. The \verb+LoaderTimetable+ offers operations like \verb+Load+ and \verb+Unload+ to load all the information in a dataset file and to empty the repositories, respectively.\\
+\\
+\begin{figure}[t!]
+\centering
+\begin{tikzpicture}
+\begin{umlpackage}[x = 2, y = 0]{Tools Layer} 
+\umlclass[x = -3]{Loader}
+{
+}
+{
+	+Restart() : void\\
+	+NextLine() : bool\\
+	+ReadNextToken() : string\\
+	+ReadCurrToken() : string\\
+	+ReadNextLine() : List<string>
+}
+\umlclass[x = 6]{LoaderTimetable}
+{
+	
+}
+{
+	+Unload() : void\\
+	+Load() : void\\
+	-InitSolutions() : void\\
+	-InitInstitutionalWeightings() : void\\
+	-InitRoomHardConstraints() : void\\
+	-InitPeriodHardConstraints() : void\\
+	-InitRooms() : void\\
+	-InitPeriods() : void\\
+	-InitExaminations() : void\\
+	-InitConflictMatrix() : void
+}
+\end{umlpackage}
+
+\umlVHextend[anchor1 = -180, anchor2 = 0, pos stereo=1.5]{LoaderTimetable}{Loader} 
+\end{tikzpicture}
+
+\caption{Specification of Loader and LoaderTimetable tools} \label{fig:Loaders}
+\end{figure}The implementation of the \verb+LoaderTimetable+ class is all about the \verb+Load+ method. This public method will be asking for new lines and reading the tokens out of it, using the \verb+Loader+ class. This procedure will take place as long as there are new lines to read. It's a pretty simple cycle that gets a new line and checks if, for example, the string ``Exams'' is contained on that line. If so, it runs \verb+InitExaminations+, if not, checks if ``Periods'' is contained on that line, and so on, until it runs out of file. The pseudo code of this method can be seen on Algorithm \ref{alg:Load}.\\
+\\
+\begin{algorithm}[b!]
+\begin{algorithmic}
+\State Read new line
+\Repeat
+	\State Read next token $token$
+	\State \textbf{If} $token == null$ Then $break$ 
+	\State \textbf{If} $token$ Contains $"Exams"$ Then $InitExaminations()$
+	\State \textbf{Else If} $token$ Contains $"Periods"$ \textbf{Then} $InitPeriods()$
+	\State \textbf{Else If} $token$ Contains $"Rooms"$ \textbf{Then} $InitRooms()$
+	\State \textbf{Else If} $token$ Contains $"PeriodHardConstraints"$ \textbf{Then} $InitPeriodHardConstraints()$
+	\State \textbf{Else If} $token$ Contains $"RoomHardConstraints"$ \textbf{Then} $InitRoomHardConstraints()$
+	\State \textbf{Else If} $token$ Contains $"InstitutionalWeightings"$ \textbf{Then} $InitInstitutionalWeightings()$
+	\State \textbf{Else If} Cannot read new line \textbf{Then} $break$ 
+\Until Always
+\State $InitSolutions()$
+\State $InitConflictMatrix()$
+\end{algorithmic}
+\caption{LoaderTimetabling's Load method.}
+\label{alg:Load}
+\end{algorithm}The method \verb+InitExaminations+ reads each examination and enrolled students, and store them in a Hashmap, which stores the students as keys and the examinations which they attend as values. With this student-examinations organization, the \verb+InitConflictMatrix+ simply goes to all pairs of examinations for each student, and add a conflict in the matrix for those pair of examinations.
+
+\section{Graph Coloring}
+\label{sec:GraphColoring}
+
+Graph Coloring is the heuristic used to generate a feasible solution. This heuristic is ran right after the loader. The implementation of this heuristic was based on M\"{u}ller's approach \cite{Mueller2009}.\\
+
+\subsection{Implementation}
+
+The computation of the proposed heuristic is divided into four phases. In the first phase, it starts by editing the conflict matrix, in order to add the exclusion hard constraints to the conflict matrix. This process is possible because the exclusion hard constraint is also a clash between a pair of examinations. This makes the algorithm easier to implement later on, because checking the conflict matrix for a clash between a pair of examinations now works for the student conflicts and exclusion.\\
+\\
+The second phase simply erases all examination coincidence hard constraints' occurrences that have student conflicts. It is mentioned in the \gls{itc2007} site \cite{McCollum2007d} that if two examinations have the examination coincidence hard constraint and yet 'clash' with each other due to student enrollment, this hard constraint is ignored.\\
+\\
+The third phase populates and sort the assignment lists. The assignment lists are four lists that hold the unassigned examinations. These four lists contain:
+\begin{itemize}
+	\item Unassigned examinations with ``room exclusivity'' hard constraint
+	\item Unassigned examinations with ``after'' hard constraint
+	\item Unassigned examinations with ``examination coincidence'' hard constraint
+	\item All other unassigned examinations
+\end{itemize}
+The Largest Degree Ordering Graph Coloring heuristic is used on these four lists, and so, each list is sorted by number of students conflicts. The examination assignment is done taking the present list ordering. First all the examinations with room exclusivity are assigned, then all that have the after constraints, and finally all with examination coincidence.\\
+\\
+The fourth phase is the examination assignment phase (the most important phase of this heuristic). It is based on M\"{u}ller's approach \cite{Mueller2009}. It starts to assign the examinations with higher conflict, as mentioned above, using the four lists method. There are two types of assignment:
+\\
+\begin{itemize}
+	\item Normal assignment -- If it's possible to assign the chosen examination to a period and room, a normal assignment is processed. In this type of assignment, of all the possible periods to assign, one of them is chosen randomly. It should be noted that a possible period to assign means that the examination can be assigned to that period and at least in one room on that period. After choosing the period, the same will be done to the rooms, and so, a random room will be chosen from all possible assignable rooms for that examination and period. If the current examination has to be coincident to another, and so, set to the same period as the other, the rules explained will not occur. Instead, only that period will be considered and if the period is not feasible to the current examination, the normal assignment will not take place. \\
+	\item Forcing assignment -- Occurs if there are no possible periods to assign the chosen examination, because the normal assignment was not possible. A random period and room are selected and the examination will be forced to be assigned on those, unassigning all the examinations that conflict with this assignment. As the normal assignment, there are exceptions to this rule. If a coincident examination is already set, the examination to be set will be forced to be on the same period as the coincident examination, in a random room. Forcing an examination to a specific period because of a coincident examination sometimes caused infinite or very long loops in the dataset 6. Because of this, there's a chance of 25\% that the previous rule does not occur, but instead, it unassigns all coincident examinations and try to assign the current examination to a random period instead.
+\end{itemize}
+The Graph Coloring heuristic implementation only realize assignments and unassignments of exams examinations and checks examination clashes when forcing an assignment. The feasibility checking done to periods and rooms is are made by the tool FeasibilityTester, as mentioned in Section \ref{subsec:BussinessLayer}. The GraphColoring and FeasibilityTester classes, with all the variables and methods, can be seen in Figure \ref{fig:GraphColoring}. The algorithm of the graph coloring heuristic, which was explained in this section can be seen in Algorithm \ref{alg:GraphColoring}.\\
+
+\begin{figure}[t!]
+\centering
+\begin{tikzpicture}
+\begin{umlpackage}[x = 2, y = 0]{Heuristics Layer} 
+\umlclass[x = 0]{GraphColoring}
+{
+	
+	-examinations : Examinations\\
+	-period\_hard\_constraints : PeriodHardConstraints\\
+	-periods : Periods\\
+	-room\_hard\_constraints: RoomHardConstraints\\
+	-rooms : Rooms\\
+	-conflict\_matrix : int[,]\\
+	-solution : Solution\\
+	-unassigned\_examinations\_with\_exclusive : \\ List<Examination>\\
+	-unassigned\_examinations\_with\_coincidence : \\ List<Examination>\\
+	-unassigned\_examinations\_with\_after : \\ List<Examination>\\
+	-unassigned\_examinations : \\ List<Examination>
+}
+{
+	+Restart() : void\\
+	+NextLine() : bool\\
+	+ReadNextToken() : string\\
+	+ReadCurrToken() : string\\
+	+ReadNextLine() : List<string>
+}
+\end{umlpackage}
+\begin{umlpackage}[x = 2, y = 0]{Tools Layer} 
+\umlclass[x = 0, y = -9]{FeasibilityTester}
+{
+	-examinations : Examinations\\
+	-period\_hard\_constraints : PeriodHardConstraints\\
+	-room\_hard\_constraints: RoomHardConstraints\\
+	-rooms : Rooms\\
+	-conflict\_matrix : int[,]
+}
+{
+	+IsFeasiblePeriod(soltution : solution,\\ exam : Examination, period : Period) : bool\\
+	+IsFeasibleRoom(soltution : solution,\\ exam : Examination, period : Period, room : Room) : bool\\
+	+IsFeasiblePeriodRoom(soltution : solution,\\ exam : Examination, period : Period, room : Room) : bool\\
+	+RoomCurrentCapacityOnPeriod(solution : Solution,\\ period : Period, room : Room)\\
+}
+\end{umlpackage}
+
+
+\umlinclude[anchors=-90 and 90, name=uses]{GraphColoring}{FeasibilityTester} 
+\end{tikzpicture}
+
+\caption{Graph Coloring and Feasibility Tester} \label{fig:GraphColoring}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%
+
+\begin{algorithm}
+\begin{itemize}
+\item Initial solution $solution$
+\end{itemize}
+
+\begin{algorithmic}[1]
+\State Add exclusion to conflict matrix
+\State Erase coincidence HC that contains conflict HC
+\State Populate and sort assignment examination lists
+
+\Repeat
+	\State Get the right list to use $list$
+	\State Remove last examination from $list$, $exam$
+	\State \textbf{If Not} NormalAssign($solution$, $exam$) \textbf{Then} ForceAssign($solution$, $exam$)
+\Until No more examinations to assign
+\State  \textbf{Output:} $solution$
+\end{algorithmic}
+\caption{Graph Coloring algorithm.}
+\label{alg:GraphColoring}
+\end{algorithm}
+
+\section{Solution Initialization Results}
+
+As mentioned previously, the goal of the initialization procedure is not to find the best solution possible (in terms of fitness), but the find of feasible solution. Some sets are simpler than others, always getting good and stable execution times. Others can be harder, getting worse execution timings and instability. An unstable set means the results vary too much, and so some tests show very good execution times and others not so much. The Graph Coloring heuristic results on the 12 sets can be seen in Table \ref{tab:GCResults}. These results were obtained by running the heuristic, 10 times for each set, and computing the average for both fitness and execution time fields.\\
+\\
+\begin{table}[t]
+\centering
+
+\sisetup{table-alignment=center,table-figures-decimal=3}
+
+\begin{tabular}{%
+	 l%
+     S[table-figures-integer=9]%
+     S[table-figures-integer=6]%
+     S[table-figures-integer=6]%
+     S[table-figures-integer=6]%
+     S[table-figures-integer=6]%
+    }
+
+\toprule
+
+       & \multicolumn{1}{c}{} & \multicolumn{1}{c}{Execution} & \multicolumn{1}{c}{Standard} & \multicolumn{1}{c}{Time used} & \multicolumn{1}{c}{Time used}\\
+       &	 \multicolumn{1}{c}{Fitness} & \multicolumn{1}{c}{time} & \multicolumn{1}{c}{Deviation} & \multicolumn{1}{c}{in the $1_{st}$} & \multicolumn{1}{c}{in the $2_{nd}$}\\
+       &		   	     &\multicolumn{1}{c}{(ms)} & \multicolumn{1}{c}{$\sigma$ (ms)} & \multicolumn{1}{c}{phase (\%)} & \multicolumn{1}{c}{phase (\%)}\\
+       
+\midrule
+
+SET 1 	 & 49028 	 & 202 & 61 & 0.09 & 99.91\\
+SET 2	 & 103907 & 250 & 2 & 0.11 & 99.89\\
+SET 3 	 & 170232 & 942 & 20 & 0.43 & 99.57\\
+SET 4	 & \text{--}  & \text{--} & \text{--} & \text{--} & \text{--}\\
+SET 5 	 & 349319 	 & 227 & 5 & 0.10 & 99.9\\
+SET 6 	 & 60857 	 & 297 & 192 & 0.13 & 99.87\\
+SET 7	 & 155708	 & 569 & 19 & 0.26 & 99.74\\
+SET 8 	 & 397868 	 & 243 & 8 & 0.11 & 99.89\\
+SET 9 	 & 15680 	 & 12 & 1 & 0.01 & 99.99\\
+SET 10	 & 121164 	 & 110 & 6 & 0.05 & 99.95\\
+SET 11	 & 260310 & 3405 & 2170 & 1.54 & 98.46\\
+SET 12	 & 11887 	 & 3690 & 1829 & 1.67 & 98.33\\ 
+
+\bottomrule
+
+\end{tabular}
+
+\caption{Some of the Graph Coloring's performance features.}
+\label{tab:GCResults}
+
+\end{table}The table \ref{tab:GCResults} features many tests performed to this first phase. It features, as mentioned before, the average fitness of the solutions created for each dataset, and so the average execution time, its standard deviation, and the percentage of time used in the first and second phase of this project. The standard deviation was applied because of the instability on execution times of certain datasets when creating initial solutions, using the \gls{gc} heuristic. By checking the standard deviation, the datasets 6, 11 and 12 are unstable. The datasets 11 and 12, even thought the average execution time was 3405 and 3690, the tested values varied from 864 to 7642 and 201 to 6452, respectively.\\
+\\
+The allowed execution time is 221000 milliseconds for each test made to each dataset. This time was picked by the benchmark program provided by the \gls{itc2007} site \cite{McCollum2007e} when executed on the machine where all testes were performed. In the results presented on the Table \ref{tab:GCResults}, we can conclude that a very short amount of time is used on this first phase, compared to the one being used on the second phase.\\
+\\
+As shown in table \ref{tab:GCResults}, the heuristic could not get a feasible solution for the set 4. This problem might be present because of the presence of an infinite cycle of normal and forcing assignments, resulting in assigning and unassigning the same examinations. This problem might be solved in the final version of this project.

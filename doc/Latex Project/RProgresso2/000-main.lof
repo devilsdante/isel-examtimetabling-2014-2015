@@ -1,0 +1,17 @@
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Gantt diagram of the project activities.\relax }}{4}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Optimization methods: taxonomy and organization (adapted from \cite {Talbi2009}).\relax }}{6}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Overview of subsystems that compose the system architecture.\relax }}{16}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Overview of the DAL and the present entity types and repositories.\relax }}{17}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Overview of the BL and its main classes.\relax }}{19}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Specification of Loader and LoaderTimetable tools\relax }}{23}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Graph Coloring and Feasibility Tester\relax }}{26}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Simulated Annealing classes\relax }}{31}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Simulated Annealing results: score value as a function of the temperature\relax }}{33}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Neighborhood selection and operators\relax }}{36}
+\addvspace {10\p@ }
+\addvspace {10\p@ }

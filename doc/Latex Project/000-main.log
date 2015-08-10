@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.16)  17 JUL 2015 20:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.16)  10 AUG 2015 23:03
 entering extended mode
 **000-main.tex
 (000-main.tex
@@ -2063,7 +2063,7 @@ Package: pgfplotstable 2015/05/02 v1.12.1 Table typesetting and Pretty-printing
 Package: floatpag 2012/05/29 v1.1 Different pagestyles on float pages
 Package: floatpag 1999/04/29 FLOAT PAGESTYLE
 )
-Package caption Info: We need package `newfloat' on input line 67.
+Package caption Info: We need package `newfloat' on input line 68.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\newfloat.sty"
 Package: newfloat 2013/05/11 v1.1-91 Defining new floating environments (AR)
@@ -2079,7 +2079,7 @@ age [\@makechapterhead {#2}]\else \@makechapterhead {#2}\@afterheading \fi .
 Package newfloat Info: \Hy@org@chapter = undefined.
 Package newfloat Info: Trying Plan B...
 )
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 73.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 74.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1ptm.fd"
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
@@ -2089,9 +2089,9 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 \glswrite=\write7
 \glo@main@file=\write8
-Package glossaries Info: Writing glossary file 000-main.glo on input line 77.
+Package glossaries Info: Writing glossary file 000-main.glo on input line 78.
 \glo@acronym@file=\write9
-Package glossaries Info: Writing glossary file 000-main.acn on input line 77.
+Package glossaries Info: Writing glossary file 000-main.acn on input line 78.
 
 \@input{000-latex-config.aux}
 (000-latex-config.tex)
@@ -2215,25 +2215,25 @@ Package: beramono 2004/01/31 (WaS)
 (300-theory.aux) (400-architecture.aux) (500-loader-solution-init.aux)
 (500-local-search.aux) (550-experimental-results.aux) (550-future-work.aux)
 (test.aux) (800-references.aux))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 83.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 83.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 84.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 84.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    ... okay on input line 84.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ucs\ucsencs.def"
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
@@ -2324,58 +2324,55 @@ Dictionary: translator-months-dictionary, Language: English
 "
 File: siunitx-abbreviations.cfg 2015/06/16 v2.6f siunitx: Abbreviated units
 ) ABD: EveryShipout initializing macros
-
-Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
-ick labels; missing features). Consider writing \pgfplotsset{compat=1.12} into 
-your preamble.
- on input line 83.
+Package pgfplots notification 'compat/show suggested version=true': you might b
+enefit from \pgfplotsset{compat=1.12} (current compat level: 1.9).
 
 \c__siunitx_mathsf_int=\count354
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 83.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 84.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 83.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 84.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 83.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 84.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 83.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 84.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 83.
+(Font)              <10> on input line 84.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 83.
+(Font)              <7> on input line 84.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 83.
-LaTeX Font Info:    Try loading font information for U+msa on input line 83.
+(Font)              <5> on input line 84.
+LaTeX Font Info:    Try loading font information for U+msa on input line 84.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 83.
+LaTeX Font Info:    Try loading font information for U+msb on input line 84.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for OT1+lmss on input line 83.
+LaTeX Font Info:    Try loading font information for OT1+lmss on input line 84.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ot1lmss.fd"
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 \c__siunitx_mathtt_int=\count355
-LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 83.
+LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 84.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ot1lmtt.fd"
@@ -3303,17 +3300,17 @@ Missing character: There is no y in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
 )
-Underfull \hbox (badness 10000) in paragraph at lines 235--117
+Underfull \hbox (badness 10000) in paragraph at lines 235--118
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 235--117
+Underfull \hbox (badness 10000) in paragraph at lines 235--118
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 235--117
+Underfull \hbox (badness 10000) in paragraph at lines 235--118
 
  []
 
@@ -3519,34 +3516,34 @@ Missing character: There is no y in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
 )
-Underfull \hbox (badness 10000) in paragraph at lines 179--118
+Underfull \hbox (badness 10000) in paragraph at lines 179--119
 
  []
 
 [35] [36] (550-experimental-results.tex
 Chapter 6.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 4--119
+Underfull \hbox (badness 10000) in paragraph at lines 4--120
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--119
+Underfull \hbox (badness 10000) in paragraph at lines 4--120
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--119
+Underfull \hbox (badness 10000) in paragraph at lines 4--120
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--119
+Underfull \hbox (badness 10000) in paragraph at lines 4--120
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--119
+Underfull \hbox (badness 10000) in paragraph at lines 4--120
 
  []
 
@@ -3558,22 +3555,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--119
 ] [38] (550-future-work.tex
 Chapter 7.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 4--120
+Underfull \hbox (badness 10000) in paragraph at lines 4--121
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--120
+Underfull \hbox (badness 10000) in paragraph at lines 4--121
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--120
+Underfull \hbox (badness 10000) in paragraph at lines 4--121
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--120
+Underfull \hbox (badness 10000) in paragraph at lines 4--121
 
  []
 
@@ -3582,10 +3579,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--120
 
 
 
-] (test.tex) [40
+] (test.tex
+Package pgfplots info on input line 68: Overriding colorspace to rgb due to xco
+lor configuration.
+PGFPlots: reading {./GCResults7.dat}
+Package pgfplots info on input line 74: Overriding colorspace to rgb due to xco
+lor configuration.
+)
+Overfull \hbox (43.4656pt too wide) in paragraph at lines 75--124
+[][] 
+ []
 
-
-
+[40
 
 
 ] (800-references.tex (000-main.bbl
@@ -3598,6 +3603,9 @@ Underfull \hbox (badness 5504) in paragraph at lines 78--81
  []
 
 [41
+
+
+
 
 
 
@@ -3634,13 +3642,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 49331 strings out of 493671
- 1123447 string characters out of 3141423
- 2813224 words of memory out of 3000000
- 51682 multiletter control sequences out of 15000+200000
+ 49393 strings out of 493671
+ 1125238 string characters out of 3141423
+ 2816686 words of memory out of 3000000
+ 51742 multiletter control sequences out of 15000+200000
  93281 words of font info for 88 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 62i,15n,105p,10397b,1890s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,15n,105p,10397b,2255s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program F
 iles (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files (x86)/
 MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files (x86)/MiKTeX 2.9/
@@ -3662,9 +3670,9 @@ m Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy5.pfb><C:/Program Files (x86
 )/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9
 /fonts/type1/public/lm/lmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 /public/lm/lmsy9.pfb>
-Output written on 000-main.pdf (59 pages, 586299 bytes).
+Output written on 000-main.pdf (59 pages, 621176 bytes).
 PDF statistics:
- 343 PDF objects out of 1000 (max. 8388607)
+ 349 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 124 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 144 words of extra memory for PDF output out of 10000 (max. 10000000)
 

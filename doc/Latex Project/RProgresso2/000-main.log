@@ -1,0 +1,3670 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.16)  17 JUL 2015 20:41
+entering extended mode
+**000-main.tex
+(000-main.tex
+LaTeX2e <2015/01/01>
+Babel <3.9l> and hyphenation patterns for 69 languages loaded.
+(svmono.cls
+Document Class: svmono 2006/10/31 v4.17 
+Springer Verlag global LaTeX document class for monographs
+Class Springer-SVMono Info: extra/valid Springer sub-package 
+(Springer-SVMono)           not found in option list - using "global" style.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size10.clo"
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+\betweenumberspace=\dimen103
+\headlineindent=\dimen104
+\c@chapter=\count87
+\chapstarthookwidth=\dimen105
+\svitemindent=\dimen106
+\verbatimindent=\dimen107
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 633.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 634.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 635.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 636.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 637.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 638.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 639.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 640.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 641.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 642.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 643.
+\tocchpnum=\dimen108
+\tocsecnum=\dimen109
+\tocsectotal=\dimen110
+\tocsubsecnum=\dimen111
+\tocsubsectotal=\dimen112
+\tocsubsubsecnum=\dimen113
+\tocsubsubsectotal=\dimen114
+\tocparanum=\dimen115
+\tocparatotal=\dimen116
+\tocsubparanum=\dimen117
+\foot@parindent=\dimen118
+\spthmsep=\dimen119
+\c@theorem=\count88
+\c@prob=\count89
+\instindent=\dimen120
+\figgap=\dimen121
+\figcapgap=\dimen122
+\tabcapgap=\dimen123
+\c@merk=\count90
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
+File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encoding T1
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
+File: t1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0104 (decimal 260)
+   defining Unicode char U+0105 (decimal 261)
+   defining Unicode char U+0106 (decimal 262)
+   defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+010C (decimal 268)
+   defining Unicode char U+010D (decimal 269)
+   defining Unicode char U+010E (decimal 270)
+   defining Unicode char U+010F (decimal 271)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0118 (decimal 280)
+   defining Unicode char U+0119 (decimal 281)
+   defining Unicode char U+011A (decimal 282)
+   defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011E (decimal 286)
+   defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0130 (decimal 304)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0132 (decimal 306)
+   defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0139 (decimal 313)
+   defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013D (decimal 317)
+   defining Unicode char U+013E (decimal 318)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0143 (decimal 323)
+   defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0147 (decimal 327)
+   defining Unicode char U+0148 (decimal 328)
+   defining Unicode char U+014A (decimal 330)
+   defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+0150 (decimal 336)
+   defining Unicode char U+0151 (decimal 337)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0154 (decimal 340)
+   defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0158 (decimal 344)
+   defining Unicode char U+0159 (decimal 345)
+   defining Unicode char U+015A (decimal 346)
+   defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015E (decimal 350)
+   defining Unicode char U+015F (decimal 351)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0162 (decimal 354)
+   defining Unicode char U+0163 (decimal 355)
+   defining Unicode char U+0164 (decimal 356)
+   defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+016E (decimal 366)
+   defining Unicode char U+016F (decimal 367)
+   defining Unicode char U+0170 (decimal 368)
+   defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+0179 (decimal 377)
+   defining Unicode char U+017A (decimal 378)
+   defining Unicode char U+017B (decimal 379)
+   defining Unicode char U+017C (decimal 380)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
+)
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encoding OT1
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
+File: ot1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00B8 (decimal 184)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+)
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encoding OMS
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
+File: omsenc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+)
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2423 (decimal 9251)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.def"
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ucs\ucs.sty"
+Package: ucs 2013/05/11 v2.2 UCS: Unicode input support
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ucs\uni-global.def"
+File: uni-global.def 2013/05/13 UCS: Unicode global data
+)
+\uc@secondtry=\count91
+\uc@combtoks=\toks16
+\uc@combtoksb=\toks17
+\uc@temptokena=\toks18
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks19
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count92
+\Gm@cntv=\count93
+\c@Gm@tempcnt=\count94
+\Gm@bindingoffset=\dimen124
+\Gm@wd@mp=\dimen125
+\Gm@odd@mp=\dimen126
+\Gm@even@mp=\dimen127
+\Gm@layoutwidth=\dimen128
+\Gm@layoutheight=\dimen129
+\Gm@layouthoffset=\dimen130
+\Gm@layoutvoffset=\dimen131
+\Gm@dimlist=\toks20
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 94.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count95
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption.sty"
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen132
+\captionmargin@=\dimen133
+\captionwidth=\dimen134
+\caption@tempdima=\dimen135
+\caption@indent=\dimen136
+\caption@parindent=\dimen137
+\caption@hangindent=\dimen138
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+)
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption)                usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+Package caption Info: \@makecaption = \long macro:#1#2->\captionstyle \ifx \@ca
+ptype \fig@type \vskip \figcapgap \fi \setbox \@tempboxa \hbox {{\floatlegendst
+yle #1\floatcounterend }\capstrut #2}\ifdim \wd \@tempboxa >\hsize {\floatlegen
+dstyle #1\floatcounterend }\capstrut #2\par \else \hbox to\hsize {\leftlegendgl
+ue \unhbox \@tempboxa \hfil }\fi \ifx \@captype \fig@type \else \vskip \tabcapg
+ap \fi .
+\c@ContinuedFloat=\count96
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks21
+\ex@=\dimen139
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen140
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count97
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count98
+\leftroot@=\count99
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count100
+\DOTSCASE@=\count101
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen141
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+
+
+Package amsmath Warning: Unable to redefine math accent \vec.
+
+\macc@depth=\count102
+\c@MaxMatrixCols=\count103
+\dotsspace@=\muskip10
+\c@parentequation=\count104
+\dspbrk@lvl=\count105
+\tag@help=\toks22
+\row@=\count106
+\column@=\count107
+\maxfields@=\count108
+\andhelp@=\toks23
+\eqnshift@=\dimen142
+\alignsep@=\dimen143
+\tagshift@=\dimen144
+\tagwidth@=\dimen145
+\totwidth@=\dimen146
+\lineht@=\dimen147
+\@envbody=\toks24
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks25
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.sty"
+Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\rotating\rotating.sty"
+Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+\Gin@req@height=\dimen148
+\Gin@req@width=\dimen149
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count109
+\rotFPtop=\skip46
+\rotFPbot=\skip47
+\rot@float@box=\box28
+\rot@mess@toks=\toks26
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\lmodern.sty"
+Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\multicol.sty"
+Package: multicol 2015/03/31 v1.8m multicolumn formatting (FMi)
+\c@tracingmulticols=\count110
+\mult@box=\box29
+\multicol@leftmargin=\dimen150
+\c@unbalance=\count111
+\c@collectmore=\count112
+\doublecol@number=\count113
+\multicoltolerance=\count114
+\multicolpretolerance=\count115
+\full@width=\dimen151
+\page@free=\dimen152
+\premulticols=\dimen153
+\postmulticols=\dimen154
+\multicolsep=\skip48
+\multicolbaselineskip=\skip49
+\partial@page=\box30
+\last@line=\box31
+\maxbalancingoverflow=\dimen155
+\mult@rightbox=\box32
+\mult@grightbox=\box33
+\mult@gfirstbox=\box34
+\mult@firstbox=\box35
+\@tempa=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\@tempa=\box52
+\c@columnbadness=\count116
+\c@finalcolumnbadness=\count117
+\last@try=\dimen156
+\multicolovershoot=\dimen157
+\multicolundershoot=\dimen158
+\mult@nat@firstbox=\box53
+\colbreak@box=\box54
+\mc@col@check@num=\count118
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\footmisc\footmisc.sty"
+Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
+\FN@temptoken=\toks27
+\footnotemargin=\dimen159
+\c@pp@next@reset=\count119
+Package footmisc Info: Declaring symbol style bringhurst on input line 855.
+Package footmisc Info: Declaring symbol style chicago on input line 863.
+Package footmisc Info: Declaring symbol style wiley on input line 872.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
+
+Package footmisc Info: Declaring symbol style lamport* on input line 903.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
+.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\color.sty"
+Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 142.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\array.sty"
+Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen160
+\extrarowheight=\dimen161
+\NC@list=\toks28
+\extratabsurround=\skip50
+\backup@length=\skip51
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\booktabs\booktabs.sty"
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen162
+\lightrulewidth=\dimen163
+\cmidrulewidth=\dimen164
+\belowrulesep=\dimen165
+\belowbottomsep=\dimen166
+\aboverulesep=\dimen167
+\abovetopsep=\dimen168
+\cmidrulesep=\dimen169
+\cmidrulekern=\dimen170
+\defaultaddspace=\dimen171
+\@cmidla=\count120
+\@cmidlb=\count121
+\@aboverulesep=\dimen172
+\@belowrulesep=\dimen173
+\@thisruleclass=\count122
+\@lastruleclass=\count123
+\@thisrulewidth=\dimen174
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\appendix\appendix.sty"
+Package: appendix 2009/09/02 v1.2b extra appendix facilities
+\c@@pps=\count124
+\c@@ppsavesec=\count125
+\c@@ppsaveapp=\count126
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\glossaries\base\glossaries.sty"
+Package: glossaries 2015/03/16 v4.15 (NLCT)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkvutils.tex"
+\XKV@toks=\toks29
+\XKV@tempa@toks=\toks30
+)
+\XKV@depth=\count127
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\glossaries\base\mfirstuc.sty"
+Package: mfirstuc 2015/02/03 v1.10 (NLCT)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty"
+Package: etoolbox 2015/05/04 v2.2 e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count128
+)
+\@glsmfirst=\toks31
+\@glsmrest=\toks32
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\textcase\textcase.sty"
+Package: textcase 2004/10/07 v0.07 Text only upper/lower case changing (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xfor\xfor.sty"
+Package: xfor 2009/02/05 v1.05 (NLCT)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\datatool\datatool-base.sty"
+Package: datatool-base 2014/06/10 v2.22 (NLCT)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\substr\substr.sty"
+Package: substr 2009/10/20 v1.2 Handle substrings
+\c@su@anzahl=\count129
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\datatool\datatool-fp.sty"
+Package: datatool-fp 2013/08/29 v2.17 (NLCT)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp.sty"
+Package: fp 1995/04/02
+
+`Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\defpattern.sty"
+Package: defpattern 1994/10/12
+\actioncount=\count130
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-basic.sty"
+Package: fp-basic 1996/05/13
+\FP@xs=\count131
+\FP@xia=\count132
+\FP@xib=\count133
+\FP@xfa=\count134
+\FP@xfb=\count135
+\FP@rega=\count136
+\FP@regb=\count137
+\FP@regs=\count138
+\FP@times=\count139
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-addons.sty"
+Package: fp-addons 1995/03/15
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-snap.sty"
+Package: fp-snap 1995/04/05
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-exp.sty"
+Package: fp-exp 1995/04/03
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-trigo.sty"
+Package: fp-trigo 1995/04/14
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-pas.sty"
+Package: fp-pas 1994/08/29
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-random.sty"
+Package: fp-random 1995/02/23
+\FPseed=\count140
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-eqn.sty"
+Package: fp-eqn 1995/04/03
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-upn.sty"
+Package: fp-upn 1996/10/21
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-eval.sty"
+Package: fp-eval 1995/04/03
+)))
+\@dtl@toks=\toks33
+\@dtl@tmpcount=\count141
+\dtl@tmplength=\skip52
+\dtl@sortresult=\count142
+\@dtl@numgrpsepcount=\count143
+\@dtl@datatype=\count144
+\dtl@codeA=\count145
+\dtl@codeB=\count146
+\@dtl@foreach@level=\count147
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\glossaries\base\glossaries-compat
+ible-307.sty"
+Package: glossaries-compatible-307 2013/11/14 v4.0 (NLCT)
+)
+\gls@level=\count148
+\@gls@tmpb=\toks34
+\gls@tmplen=\skip53
+\glskeylisttok=\toks35
+\glslabeltok=\toks36
+\glsshorttok=\toks37
+\glslongtok=\toks38
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-hypern
+av.sty"
+Package: glossary-hypernav 2013/11/14 v4.0 (NLCT)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-list.s
+ty"
+Package: glossary-list 2015/02/03 v4.13 (NLCT)
+\glslistdottedwidth=\skip54
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-long.s
+ty"
+Package: glossary-long 2013/11/14 v4.0 (NLCT)
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\longtable.sty"
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip55
+\LTright=\skip56
+\LTpre=\skip57
+\LTpost=\skip58
+\LTchunksize=\count149
+\LTcapwidth=\dimen175
+\LT@head=\box55
+\LT@firsthead=\box56
+\LT@foot=\box57
+\LT@lastfoot=\box58
+\LT@cols=\count150
+\LT@rows=\count151
+\c@LT@tables=\count152
+\c@LT@chunks=\count153
+\LT@p@ftn=\toks39
+)
+\glsdescwidth=\skip59
+\glspagelistwidth=\skip60
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-super.
+sty"
+Package: glossary-super 2013/11/14 v4.0 (NLCT)
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\supertabular\supertabular.sty"
+Package: supertabular 2004/02/20 v4.1e the supertabular environment
+\c@tracingst=\count154
+\ST@wd=\dimen176
+\ST@rightskip=\skip61
+\ST@leftskip=\skip62
+\ST@parfillskip=\skip63
+\ST@pageleft=\dimen177
+\ST@headht=\dimen178
+\ST@tailht=\dimen179
+\ST@pagesofar=\dimen180
+\ST@pboxht=\dimen181
+\ST@lineht=\dimen182
+\ST@stretchht=\dimen183
+\ST@prevht=\dimen184
+\ST@toadd=\dimen185
+\ST@dimen=\dimen186
+\ST@pbox=\box59
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-tree.s
+ty"
+Package: glossary-tree 2015/02/03 v4.13 (NLCT)
+\glstreeindent=\skip64
+)) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.sty"
+\lst@mode=\count155
+\lst@gtempboxa=\box60
+\lst@token=\toks40
+\lst@length=\count156
+\lst@currlwidth=\dimen187
+\lst@column=\count157
+\lst@pos=\count158
+\lst@lostspace=\dimen188
+\lst@width=\dimen189
+\lst@newlines=\count159
+\lst@lineno=\count160
+\lst@maxwidth=\dimen190
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count161
+\lst@skipnumbers=\count162
+\lst@framebox=\box61
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.cfg"
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\subcaption.sty"
+Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
+\c@subfigure=\count163
+\c@subtable=\count164
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\siunitx\siunitx.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\l3kernel\expl3.sty"
+Package: expl3 2015/03/01 v5547 L3 programming layer (loader) 
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\l3kernel\expl3-code.tex"
+Package: expl3 2015/03/01 v5547 L3 programming layer (code) 
+L3 Module: l3bootstrap 2015/02/28 v5542 L3 Bootstrap code
+L3 Module: l3names 2015/02/24 v5535 L3 Namespace for primitives
+L3 Module: l3basics 2015/01/27 v5500 L3 Basic definitions
+L3 Module: l3expan 2014/11/27 v5472 L3 Argument expansion
+L3 Module: l3tl 2015/01/27 v5500 L3 Token lists
+L3 Module: l3str 2015/03/01 v5545 L3 Strings
+L3 Module: l3seq 2014/08/23 v5354 L3 Sequences and stacks
+L3 Module: l3int 2015/02/21 v5529 L3 Integers
+\c_max_int=\count165
+\l_tmpa_int=\count166
+\l_tmpb_int=\count167
+\g_tmpa_int=\count168
+\g_tmpb_int=\count169
+L3 Module: l3quark 2014/08/23 v5354 L3 Quarks
+L3 Module: l3prg 2014/08/23 v5354 L3 Control structures
+\g__prg_map_int=\count170
+L3 Module: l3clist 2014/08/23 v5354 L3 Comma separated lists
+L3 Module: l3token 2014/09/15 v5422 L3 Experimental token manipulation
+L3 Module: l3prop 2014/08/23 v5354 L3 Property lists
+L3 Module: l3msg 2015/02/26 v5537 L3 Messages
+L3 Module: l3file 2014/08/24 v5369 L3 File and I/O operations
+\l_iow_line_count_int=\count171
+\l__iow_target_count_int=\count172
+\l__iow_current_line_int=\count173
+\l__iow_current_word_int=\count174
+\l__iow_current_indentation_int=\count175
+L3 Module: l3skip 2014/08/23 v5354 L3 Dimensions and skips
+\c_zero_dim=\dimen191
+\c_max_dim=\dimen192
+\l_tmpa_dim=\dimen193
+\l_tmpb_dim=\dimen194
+\g_tmpa_dim=\dimen195
+\g_tmpb_dim=\dimen196
+\c_zero_skip=\skip65
+\c_max_skip=\skip66
+\l_tmpa_skip=\skip67
+\l_tmpb_skip=\skip68
+\g_tmpa_skip=\skip69
+\g_tmpb_skip=\skip70
+\c_zero_muskip=\muskip12
+\c_max_muskip=\muskip13
+\l_tmpa_muskip=\muskip14
+\l_tmpb_muskip=\muskip15
+\g_tmpa_muskip=\muskip16
+\g_tmpb_muskip=\muskip17
+L3 Module: l3keys 2015/01/27 v5500 L3 Key-value interfaces
+\g__keyval_level_int=\count176
+\l_keys_choice_int=\count177
+L3 Module: l3fp 2014/08/22 v5336 L3 Floating points
+\c__fp_leading_shift_int=\count178
+\c__fp_middle_shift_int=\count179
+\c__fp_trailing_shift_int=\count180
+\c__fp_big_leading_shift_int=\count181
+\c__fp_big_middle_shift_int=\count182
+\c__fp_big_trailing_shift_int=\count183
+\c__fp_Bigg_leading_shift_int=\count184
+\c__fp_Bigg_middle_shift_int=\count185
+\c__fp_Bigg_trailing_shift_int=\count186
+L3 Module: l3box 2014/08/23 v5354 L3 Experimental boxes
+\c_empty_box=\box62
+\l_tmpa_box=\box63
+\l_tmpb_box=\box64
+\g_tmpa_box=\box65
+\g_tmpb_box=\box66
+L3 Module: l3coffins 2014/08/23 v5354 L3 Coffin code layer
+\l__coffin_internal_box=\box67
+\l__coffin_internal_dim=\dimen197
+\l__coffin_offset_x_dim=\dimen198
+\l__coffin_offset_y_dim=\dimen199
+\l__coffin_x_dim=\dimen200
+\l__coffin_y_dim=\dimen201
+\l__coffin_x_prime_dim=\dimen202
+\l__coffin_y_prime_dim=\dimen203
+\c_empty_coffin=\box68
+\l__coffin_aligned_coffin=\box69
+\l__coffin_aligned_internal_coffin=\box70
+\l_tmpa_coffin=\box71
+\l_tmpb_coffin=\box72
+\l__coffin_display_coffin=\box73
+\l__coffin_display_coord_coffin=\box74
+\l__coffin_display_pole_coffin=\box75
+\l__coffin_display_offset_dim=\dimen204
+\l__coffin_display_x_dim=\dimen205
+\l__coffin_display_y_dim=\dimen206
+L3 Module: l3color 2014/08/23 v5354 L3 Experimental color support
+L3 Module: l3candidates 2015/03/01 v5544 L3 Experimental additions to l3kernel
+\l__box_top_dim=\dimen207
+\l__box_bottom_dim=\dimen208
+\l__box_left_dim=\dimen209
+\l__box_right_dim=\dimen210
+\l__box_top_new_dim=\dimen211
+\l__box_bottom_new_dim=\dimen212
+\l__box_left_new_dim=\dimen213
+\l__box_right_new_dim=\dimen214
+\l__box_internal_box=\box76
+\l__coffin_bounding_shift_dim=\dimen215
+\l__coffin_left_corner_dim=\dimen216
+\l__coffin_right_corner_dim=\dimen217
+\l__coffin_bottom_corner_dim=\dimen218
+\l__coffin_top_corner_dim=\dimen219
+\l__coffin_scaled_total_height_dim=\dimen220
+\l__coffin_scaled_width_dim=\dimen221
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\l3kernel\l3unicode-data.def"
+File: l3unicode-data.def 2015/03/01 v5544 L3 Unicode data
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\l3kernel\l3pdfmode.def"
+File: l3pdfmode.def 2015/03/01 v5544 L3 Experimental driver: PDF mode
+\l__driver_color_stack_int=\count187
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\l3packages\xparse\xparse.sty"
+Package: xparse 2014/11/25 v5471 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count188
+\l__xparse_m_args_int=\count189
+\l__xparse_mandatory_args_int=\count190
+\l__xparse_processor_int=\count191
+\l__xparse_v_nesting_int=\count192
+)
+Package: siunitx 2015/06/16 v2.6f A comprehensive (SI) units package
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\l3packages\l3keys2e\l3keys2e.sty"
+Package: l3keys2e 2014/11/25 v5471 LaTeX2e option processing using LaTeX3 keys
+)
+Variant \tl_if_blank:VTF already defined; not changing it on line 50
+\l__siunitx_tmp_box=\box77
+\l__siunitx_tmp_dim=\dimen222
+\l__siunitx_tmp_int=\count193
+Variant \prop_get:NVNT already defined; not changing it on line 380
+Variant \prop_get:NVNF already defined; not changing it on line 381
+Variant \prop_get:NVNTF already defined; not changing it on line 382
+\l__siunitx_number_mantissa_length_int=\count194
+\l__siunitx_number_uncert_length_int=\count195
+\l__siunitx_round_int=\count196
+\l__siunitx_process_decimal_int=\count197
+\l__siunitx_process_uncertainty_int=\count198
+\l__siunitx_process_fixed_int=\count199
+\l__siunitx_process_integer_min_int=\count200
+\l__siunitx_process_precision_int=\count201
+\l__siunitx_group_min_int=\count202
+\l__siunitx_angle_marker_box=\box78
+\l__siunitx_angle_unit_box=\box79
+\l__siunitx_angle_marker_dim=\dimen223
+\l__siunitx_angle_unit_dim=\dimen224
+\l__siunitx_unit_int=\count203
+\l__siunitx_unit_denominator_int=\count204
+\l__siunitx_unit_numerator_int=\count205
+\l__siunitx_unit_prefix_int=\count206
+\l__siunitx_unit_prefix_base_int=\count207
+\l__siunitx_unit_prefix_gram_int=\count208
+\l__siunitx_number_product_int=\count209
+\c__siunitx_one_fill_skip=\skip71
+\l__siunitx_table_unit_align_skip=\skip72
+\l__siunitx_table_exponent_dim=\dimen225
+\l__siunitx_table_integer_dim=\dimen226
+\l__siunitx_table_mantissa_dim=\dimen227
+\l__siunitx_table_marker_dim=\dimen228
+\l__siunitx_table_result_dim=\dimen229
+\l__siunitx_table_uncert_dim=\dimen230
+\l__siunitx_table_fill_pre_dim=\dimen231
+\l__siunitx_table_fill_post_dim=\dimen232
+\l__siunitx_table_fill_mid_dim=\dimen233
+\l__siunitx_table_pre_box=\box80
+\l__siunitx_table_post_box=\box81
+\l__siunitx_table_mantissa_box=\box82
+\l__siunitx_table_result_box=\box83
+\l__siunitx_table_number_align_skip=\skip73
+\l__siunitx_table_text_align_skip=\skip74
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareBinaryPrefix with sig. 'mmm' on line 7184.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareSIPostPower with sig. 'mm' on line 7187.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareSIPrefix with sig. 'mmm' on line 7190.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareSIPrePower with sig. 'mm' on line 7193.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareSIQualifier with sig. 'mm' on line 7196.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareSIUnit with sig. 'O{}mm' on line 7199.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareSIUnitWithOptions with sig. 'mmm' on line 7202.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \ang with sig. 'o>{\SplitArgument {2}{;}}m' on line 7217.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \num with sig. 'om' on line 7225.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \numlist with sig. 'o>{\SplitList {;}}m' on line 7233.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \numrange with sig. 'omm' on line 7241.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \SIlist with sig. 'o>{\SplitList {;}}mm' on line 7252.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \SIrange with sig. 'ommm' on line 7263.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \SI with sig. 'omom' on line 7274.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \sisetup with sig. 'm' on line 7277.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \tablenum with sig. 'om' on line 7289.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \si with sig. 'om' on line 7300.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \__siunitx_bookmark_num:w with sig. 'om' on line 7347.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \__siunitx_bookmark_numrange:w with sig. 'omm' on line
+. 7349.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \__siunitx_bookmark_SI:w with sig. 'omom' on line 7351.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \__siunitx_bookmark_SIlist:w with sig. 'omm' on line 7353.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \__siunitx_bookmark_SIrange:w with sig. 'ommm' on line
+. 7355.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \__siunitx_bookmark_si:w with sig. 'om' on line 7356.
+.................................................
+\g__file_internal_ior=\read1
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\beamer\base\translator\translator
+.sty"
+Package: translator 2010/06/12 ver 1.10
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\beamer\base\translator\translator
+-language-mappings.tex")))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\algorithms\algorithm.sty"
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count210
+\float@exts=\toks41
+\float@box=\box84
+\@float@everytoks=\toks42
+\@floatcapt=\box85
+)
+\@float@every@algorithm=\toks43
+\c@algorithm=\count211
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\emp\emp.sty"
+Package: emp 1997/11/12 v1.00 Encapsulated MetaPost LaTeX Package (ohl)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks44
+\verbatim@line=\toks45
+\verbatim@in@stream=\read2
+)
+\@outemp=\write3
+\c@empfig=\count212
+\emp@TeX=\toks46
+\emp@prelude=\toks47
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\gmp\gmp.sty"
+Package: gmp 2011/03/10 v1.0 Integrate MetaPost with LaTeX (EG)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\environ\environ.sty"
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\trimspaces\trimspaces.sty"
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+\gmp@packages=\toks48
+\gmp@commands=\toks49
+\gmp@out=\write4
+\c@gmp@count=\count213
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\colortbl\colortbl.sty"
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
+\everycr=\toks50
+\minrowclearance=\skip75
+)
+LaTeX Info: Redefining \color on input line 702.
+\rownum=\count214
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xcolor\x11nam.def"
+File: x11nam.def 2007/01/21 v2.11 Predefined colors according to Unix/X11 (UK)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\chronology\chronology.sty"
+Package: chronology 2010/6/12 v1.0 Horizontal timeline
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\calc.sty"
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count215
+\calc@Bcount=\count216
+\calc@Adimen=\dimen256
+\calc@Bdimen=\dimen257
+\calc@Askip=\skip76
+\calc@Bskip=\skip77
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count217
+\calc@Cskip=\skip78
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\frontendlayer\tikz.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgf.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\utilities\pgfrcs.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common.te
+x"
+\pgfutil@everybye=\toks51
+\pgfutil@tempdima=\dimen258
+\pgfutil@tempdimb=\dimen259
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common-li
+sts.tex"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-latex.def
+"
+\pgfutil@abb=\box86
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ms\everyshi.sty"
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfrcs.code.tex"
+Package: pgfrcs 2013/12/20 v3.0.0 (rcs-revision 1.28)
+))
+Package: pgf 2013/12/18 v3.0.0 (rcs-revision 1.14)
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgfcore.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\systemlayer\pgfsys.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys.code.tex
+"
+Package: pgfsys 2013/11/30 v3.0.0 (rcs-revision 1.47)
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex
+"
+\pgfkeys@pathtoks=\toks52
+\pgfkeys@temptoks=\toks53
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeysfiltered.c
+ode.tex"
+\pgfkeys@tmptoks=\toks54
+))
+\pgf@x=\dimen260
+\pgf@y=\dimen261
+\pgf@xa=\dimen262
+\pgf@ya=\dimen263
+\pgf@xb=\dimen264
+\pgf@yb=\dimen265
+\pgf@xc=\dimen266
+\pgf@yc=\dimen267
+\w@pgf@writea=\write5
+\r@pgf@reada=\read3
+\c@pgf@counta=\count218
+\c@pgf@countb=\count219
+\c@pgf@countc=\count220
+\c@pgf@countd=\count221
+\t@pgf@toka=\toks55
+\t@pgf@tokb=\toks56
+\t@pgf@tokc=\toks57
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgf.cfg"
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys-pdftex.d
+ef"
+File: pgfsys-pdftex.def 2013/07/18  (rcs-revision 1.33)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys-common-p
+df.def"
+File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
+)))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsyssoftpath.
+code.tex"
+File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
+\pgfsyssoftpath@smallbuffer@items=\count222
+\pgfsyssoftpath@bigbuffer@items=\count223
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsysprotocol.
+code.tex"
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcore.code.tex
+"
+Package: pgfcore 2010/04/11 v3.0.0 (rcs-revision 1.7)
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathcalc.code.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathutil.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathparser.code.tex
+"
+\pgfmath@dimen=\dimen268
+\pgfmath@count=\count224
+\pgfmath@box=\box87
+\pgfmath@toks=\toks58
+\pgfmath@stack@operand=\toks59
+\pgfmath@stack@operation=\toks60
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.code.
+tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.basic
+.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.trigo
+nometric.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.rando
+m.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.compa
+rison.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.base.
+code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.round
+.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.misc.
+code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.integ
+erarithmetics.code.tex")))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfloat.code.tex"
+\c@pgfmathroundto@lastzeros=\count225
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepoints.co
+de.tex"
+File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
+\pgf@picminx=\dimen269
+\pgf@picmaxx=\dimen270
+\pgf@picminy=\dimen271
+\pgf@picmaxy=\dimen272
+\pgf@pathminx=\dimen273
+\pgf@pathmaxx=\dimen274
+\pgf@pathminy=\dimen275
+\pgf@pathmaxy=\dimen276
+\pgf@xx=\dimen277
+\pgf@xy=\dimen278
+\pgf@yx=\dimen279
+\pgf@yy=\dimen280
+\pgf@zx=\dimen281
+\pgf@zy=\dimen282
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathconst
+ruct.code.tex"
+File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
+\pgf@path@lastx=\dimen283
+\pgf@path@lasty=\dimen284
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathusage
+.code.tex"
+File: pgfcorepathusage.code.tex 2013/12/13  (rcs-revision 1.23)
+\pgf@shorten@end@additional=\dimen285
+\pgf@shorten@start@additional=\dimen286
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorescopes.co
+de.tex"
+File: pgfcorescopes.code.tex 2013/10/09  (rcs-revision 1.44)
+\pgfpic=\box88
+\pgf@hbox=\box89
+\pgf@layerbox@main=\box90
+\pgf@picture@serial@count=\count226
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoregraphicst
+ate.code.tex"
+File: pgfcoregraphicstate.code.tex 2013/09/19  (rcs-revision 1.11)
+\pgflinewidth=\dimen287
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretransform
+ations.code.tex"
+File: pgfcoretransformations.code.tex 2013/10/10  (rcs-revision 1.17)
+\pgf@pt@x=\dimen288
+\pgf@pt@y=\dimen289
+\pgf@pt@temp=\dimen290
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorequick.cod
+e.tex"
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreobjects.c
+ode.tex"
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathproce
+ssing.code.tex"
+File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorearrows.co
+de.tex"
+File: pgfcorearrows.code.tex 2013/11/07  (rcs-revision 1.40)
+\pgfarrowsep=\dimen291
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreshade.cod
+e.tex"
+File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
+\pgf@max=\dimen292
+\pgf@sys@shading@range@num=\count227
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreimage.cod
+e.tex"
+File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreexternal.
+code.tex"
+File: pgfcoreexternal.code.tex 2013/07/15  (rcs-revision 1.20)
+\pgfexternal@startupbox=\box91
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorelayers.co
+de.tex"
+File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretranspare
+ncy.code.tex"
+File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepatterns.
+code.tex"
+File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
+)))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleshapes.cod
+e.tex"
+File: pgfmoduleshapes.code.tex 2013/10/31  (rcs-revision 1.34)
+\pgfnodeparttextbox=\box92
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleplot.code.
+tex"
+File: pgfmoduleplot.code.tex 2013/07/31  (rcs-revision 1.12)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version
+-0-65.sty"
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.0 (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen293
+\pgf@nodesepend=\dimen294
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version
+-1-18.sty"
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.0 (rcs-revision 1.1)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\utilities\pgffor.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\utilities\pgfkeys.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex"
+)) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\math\pgfmath.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgffor.code.tex"
+Package: pgffor 2013/12/13 v3.0.0 (rcs-revision 1.25)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex")
+\pgffor@iter=\dimen295
+\pgffor@skip=\dimen296
+\pgffor@stack=\toks61
+\pgffor@toks=\toks62
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\tikz.cod
+e.tex"
+Package: tikz 2013/12/13 v3.0.0 (rcs-revision 1.142)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryplothan
+dlers.code.tex"
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.0 (rcs-revision 1.20)
+\pgf@plot@mark@count=\count228
+\pgfplotmarksize=\dimen297
+)
+\tikz@lastx=\dimen298
+\tikz@lasty=\dimen299
+\tikz@lastxsaved=\dimen300
+\tikz@lastysaved=\dimen301
+\tikzleveldistance=\dimen302
+\tikzsiblingdistance=\dimen303
+\tikz@figbox=\box93
+\tikz@figbox@bg=\box94
+\tikz@tempbox=\box95
+\tikz@tempbox@bg=\box96
+\tikztreelevel=\count229
+\tikznumberofchildren=\count230
+\tikznumberofcurrentchild=\count231
+\tikz@fig@count=\count232
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\modules\pgfmodulematrix.cod
+e.tex"
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+\pgfmatrixcurrentrow=\count233
+\pgfmatrixcurrentcolumn=\count266
+\pgf@matrix@numberofcolumns=\count267
+)
+\tikz@expandcount=\count268
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
+s\tikzlibrarytopaths.code.tex"
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.0 (rcs-revision 1.2)
+)))
+\c@step=\count269
+\c@stepstart=\count270
+\c@stepstop=\count271
+\c@yearstart=\count272
+\c@yearstop=\count273
+\c@deltayears=\count274
+\xstart=\skip79
+\xstop=\skip80
+\unit=\skip81
+\timelinewidth=\skip82
+\timelinebox=\box97
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgfgantt\pgfgantt.sty"
+Package: pgfgantt 2013/06/01 v4.0 Draw Gantt diagrams with TikZ
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
+s\tikzlibraryarrows.code.tex"
+File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryarrows.
+code.tex"
+File: pgflibraryarrows.code.tex 2013/09/23 v3.0.0 (rcs-revision 1.16)
+\arrowsize=\dimen304
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
+s\tikzlibrarybackgrounds.code.tex"
+File: tikzlibrarybackgrounds.code.tex 2013/07/18 v3.0.0 (rcs-revision 1.3)
+\pgf@layerbox@background=\box98
+\pgf@layerboxsaved@background=\box99
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
+s\tikzlibrarycalc.code.tex"
+File: tikzlibrarycalc.code.tex 2013/07/15 v3.0.0 (rcs-revision 1.9)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
+s\tikzlibrarypatterns.code.tex"
+File: tikzlibrarypatterns.code.tex 2008/01/15 v3.0.0 (rcs-revision 1.2)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibrarypattern
+s.code.tex"
+File: pgflibrarypatterns.code.tex 2008/03/03 v3.0.0 (rcs-revision 1.13)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
+s\tikzlibrarypositioning.code.tex"
+File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.0 (rcs-revision 1.7)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
+s\tikzlibraryshapes.geometric.code.tex"
+File: tikzlibraryshapes.geometric.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
+
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\shapes\pgflibrary
+shapes.geometric.code.tex"
+File: pgflibraryshapes.geometric.code.tex 2008/06/26 v3.0.0 (rcs-revision 1.1)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\utilities\pgfcalendar.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfcalendar.code.
+tex"
+File: pgfcalendar.code.tex 2007/07/23 v3.0.0 (rcs-revision 1.11)
+\pgfcalendarcurrentjulian=\count275
+))
+\gtt@currentline=\count276
+\gtt@lasttitleline=\count277
+\gtt@currgrid=\count278
+\gtt@chartwidth=\count279
+\gtt@lasttitleslot=\count280
+\gtt@elementid=\count281
+\gtt@today@slot=\count282
+\gtt@startjulian=\count283
+\gtt@endjulian=\count284
+\gtt@calendar@slots=\count285
+\gtt@calendar@weeknumber=\count286
+\gtt@calendar@startofweek=\count287
+\gtt@left@slot=\count288
+\gtt@right@slot=\count289
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tikzscale\tikzscale.sty"
+Package: tikzscale 2013/05/22 v0.2.6 tikzscale LaTeX package
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\letltxmacro.sty"
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xstring\xstring.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xstring\xstring.tex"
+\@xs@message=\write6
+\integerpart=\count290
+\decimalpart=\count291
+)
+Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
+)
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \tikzscale@forGroupListElement with sig.
+. 'mgu{\tikzscale@endList }' on line 65.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \elseif with sig. 'mm' on line 88.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \elseif@optional with sig. 'gg' on line 102.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \elseif@absorb with sig. 'g' on line 107.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \IfNoValueOrSplitEmptyTF with sig. 'mmm' on line 115.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \tikzscale@includegraphics with sig. 'O{}m' on line 186.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \tikzscale@findExactFileName with sig. 'mm' on line 232.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \tikzscale@setGraphicsPath with sig. '' on line 250.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \tikzscale@isTikzFile with sig. 'mm' on line 260.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \tikzscale@includetikzWithExternalization with sig. 'm' on
+. line 314.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \tikzscale@checkRequestedSizeChanges with sig. '' on line
+. 350.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \tikzscale@preparePlot with sig. '' on line 353.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \tikzscale@prepareTikzpicture with sig. '' on line 356.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \tikzscale@includeNormalTikzpicture with sig. 'm' on line
+. 368.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \tikzscale@invalidKeyError with sig. 'm' on line 371.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \tikzscale@includeAxisRatio with sig. 'm' on line 387.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \tikzscale@scaleTikzpictureTo with sig. 'mmm' on line 419.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \tikzscale@resizePlotTo with sig. 'm' on line 475.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \tikzscale@resizePlotWithAxesRatioTo with sig. 'mmmm' on
+. line 517.
+.................................................
+\tikzscale@measuredSize=\box100
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \tikzscale@conditionalDisableExternalization with sig. ''
+. on line 552.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \tikzscale@conditionalEnableExternalization with sig. 'm'
+. on line 564.
+.................................................
+)
+(D:\Miguel\Documentos\texmf\tex\generic\pgf\pgfutilies\tikz-uml\tikz-uml.sty
+Package: tikz-uml 2011/01/26
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgfopts\pgfopts.sty"
+Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
+\pgfopts@list@add@a@toks=\toks63
+\pgfopts@list@add@b@toks=\toks64
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
+s\tikzlibraryshapes.code.tex"
+File: tikzlibraryshapes.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
+s\tikzlibraryshapes.misc.code.tex"
+File: tikzlibraryshapes.misc.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\shapes\pgflibrary
+shapes.misc.code.tex"
+File: pgflibraryshapes.misc.code.tex 2013/07/18 v3.0.0 (rcs-revision 1.5)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
+s\tikzlibraryshapes.symbols.code.tex"
+File: tikzlibraryshapes.symbols.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\shapes\pgflibrary
+shapes.symbols.code.tex"
+File: pgflibraryshapes.symbols.code.tex 2013/09/11 v3.0.0 (rcs-revision 1.6)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
+s\tikzlibraryshapes.arrows.code.tex"
+File: tikzlibraryshapes.arrows.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\shapes\pgflibrary
+shapes.arrows.code.tex"
+File: pgflibraryshapes.arrows.code.tex 2008/06/26 v3.0.0 (rcs-revision 1.1)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
+s\tikzlibraryshapes.callouts.code.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\shapes\pgflibrary
+shapes.callouts.code.tex"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
+s\tikzlibraryshapes.multipart.code.tex"
+File: tikzlibraryshapes.multipart.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
+
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\shapes\pgflibrary
+shapes.multipart.code.tex"
+File: pgflibraryshapes.multipart.code.tex 2010/01/07 v3.0.0 (rcs-revision 1.2)
+\pgfnodepartlowerbox=\box101
+\pgfnodeparttwobox=\box102
+\pgfnodepartthreebox=\box103
+\pgfnodepartfourbox=\box104
+\pgfnodeparttwentybox=\box105
+\pgfnodepartnineteenbox=\box106
+\pgfnodeparteighteenbox=\box107
+\pgfnodepartseventeenbox=\box108
+\pgfnodepartsixteenbox=\box109
+\pgfnodepartfifteenbox=\box110
+\pgfnodepartfourteenbox=\box111
+\pgfnodepartthirteenbox=\box112
+\pgfnodeparttwelvebox=\box113
+\pgfnodepartelevenbox=\box114
+\pgfnodeparttenbox=\box115
+\pgfnodepartninebox=\box116
+\pgfnodeparteightbox=\box117
+\pgfnodepartsevenbox=\box118
+\pgfnodepartsixbox=\box119
+\pgfnodepartfivebox=\box120
+)))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
+s\tikzlibraryfit.code.tex"
+File: tikzlibraryfit.code.tex 2013/07/12 v3.0.0 (rcs-revision 1.5)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
+s\tikzlibraryshadows.code.tex"
+File: tikzlibraryshadows.code.tex 2008/01/13 v3.0.0 (rcs-revision 1.3)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
+s\tikzlibraryfadings.code.tex"
+File: tikzlibraryfadings.code.tex 2009/11/15 v3.0.0 (rcs-revision 1.2)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryfadings
+.code.tex"
+File: pgflibraryfadings.code.tex 2008/02/07 v3.0.0 (rcs-revision 1.3)
+)))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
+s\tikzlibrarydecorations.markings.code.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
+s\tikzlibrarydecorations.code.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduledecoration
+s.code.tex"
+\pgfdecoratedcompleteddistance=\dimen305
+\pgfdecoratedremainingdistance=\dimen306
+\pgfdecoratedinputsegmentcompleteddistance=\dimen307
+\pgfdecoratedinputsegmentremainingdistance=\dimen308
+\pgf@decorate@distancetomove=\dimen309
+\pgf@decorate@repeatstate=\count292
+\pgfdecorationsegmentamplitude=\dimen310
+\pgfdecorationsegmentlength=\dimen311
+)
+\tikz@lib@dec@box=\box121
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\decorations\pgfli
+brarydecorations.markings.code.tex"))
+\c@tikzumlPackageLayers=\count293
+\pgf@layerbox@package0=\box122
+\pgf@layerboxsaved@package0=\box123
+\pgf@layerbox@package1=\box124
+\pgf@layerboxsaved@package1=\box125
+\pgf@layerbox@package2=\box126
+\pgf@layerboxsaved@package2=\box127
+\pgf@layerbox@package3=\box128
+\pgf@layerboxsaved@package3=\box129
+\c@tikzumlFragmentLayers=\count294
+\pgf@layerbox@fragment0=\box130
+\pgf@layerboxsaved@fragment0=\box131
+\pgf@layerbox@fragment1=\box132
+\pgf@layerboxsaved@fragment1=\box133
+\pgf@layerbox@fragment2=\box134
+\pgf@layerboxsaved@fragment2=\box135
+\pgf@layerbox@fragment3=\box136
+\pgf@layerboxsaved@fragment3=\box137
+\c@tikzumlStateLayers=\count295
+\pgf@layerbox@state0=\box138
+\pgf@layerboxsaved@state0=\box139
+\pgf@layerbox@state1=\box140
+\pgf@layerboxsaved@state1=\box141
+\pgf@layerbox@state2=\box142
+\pgf@layerboxsaved@state2=\box143
+\pgf@layerbox@state3=\box144
+\pgf@layerboxsaved@state3=\box145
+\c@tikzumlComponentLayers=\count296
+\pgf@layerbox@component0=\box146
+\pgf@layerboxsaved@component0=\box147
+\pgf@layerbox@component1=\box148
+\pgf@layerboxsaved@component1=\box149
+\pgf@layerbox@component2=\box150
+\pgf@layerboxsaved@component2=\box151
+\pgf@layerbox@component3=\box152
+\pgf@layerboxsaved@component3=\box153
+\pgf@layerbox@lifelines=\box154
+\pgf@layerboxsaved@lifelines=\box155
+\pgf@layerbox@activity=\box156
+\pgf@layerboxsaved@activity=\box157
+\pgf@layerbox@connections=\box158
+\pgf@layerboxsaved@connections=\box159
+\c@tikzumlPackageClassNum=\count297
+\c@tikzumlPackageSubPackageNum=\count298
+\c@tikzumlRelationNum=\count299
+\c@tikzumlNoteNum=\count300
+\c@pos=\count301
+\c@posT=\count302
+\c@posStereo=\count303
+\c@tikzumlPackageLevel=\count304
+\c@tikzumlSystemUseCaseNum=\count305
+\c@tikzumlSystemLevel=\count306
+\c@tikzumlUseCaseNum=\count307
+\c@tikzumlActorNum=\count308
+\c@tikzumlStateJoinNum=\count309
+\c@tikzumlStateDecisionNum=\count310
+\c@tikzumlStateInitialNum=\count311
+\c@tikzumlStateFinalNum=\count312
+\c@tikzumlStateEnterNum=\count313
+\c@tikzumlStateExitNum=\count314
+\c@tikzumlStateEndNum=\count315
+\c@tikzumlStateHistoryNum=\count316
+\c@tikzumlStateDeepHistoryNum=\count317
+\c@tikzumlStateLevel=\count318
+\c@tikzumlStateSubStateNum=\count319
+\c@tikzumlStateText=\count320
+\c@tikzumlObjectNum=\count321
+\c@tikzumlCallLevel=\count322
+\c@tikzumlCallNum=\count323
+\c@tikzumlFragmentLevel=\count324
+\c@tikzumlFragmentLevelNum=\count325
+\c@tikzumlFragmentNum=\count326
+\c@tikzumlFragmentPartNum=\count327
+\c@tikzumlCallStartFragmentNum=\count328
+\c@tikzumlCallEndFragmentNum=\count329
+\tikzumlCall@xa=\skip83
+\tikzumlCall@xb=\skip84
+\c@tikzumlComponentLevel=\count330
+\c@tikzumlComponentSubComponentNum=\count331
+\c@tikzumlConnectorNum=\count332
+\tikzuml@AC@xa=\skip85
+\tikzuml@AC@ya=\skip86
+\tikzuml@AC@xb=\skip87
+\tikzuml@AC@yb=\skip88
+\tikzuml@AC@xi=\skip89
+\tikzuml@AC@yi=\skip90
+\tikzuml@AC@xic=\skip91
+\tikzuml@AC@yic=\skip92
+\tikzuml@AC@xio=\skip93
+\tikzuml@AC@yio=\skip94
+\tikzuml@AC@AB=\skip95
+\tikzuml@AC@lambda=\skip96
+\tikzuml@AC@xtrc=\skip97
+\tikzuml@AC@ytrc=\skip98
+\tikzuml@AC@xtlc=\skip99
+\tikzuml@AC@ytlc=\skip100
+\tikzuml@AC@xblc=\skip101
+\tikzuml@AC@yblc=\skip102
+\tikzuml@AC@xbrc=\skip103
+\tikzuml@AC@ybrc=\skip104
+\tikzuml@AC@middleArm=\skip105
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\algorithmicx\algpseudocode.sty"
+Package: algpseudocode 
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\algorithmicx\algorithmicx.sty"
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count333
+\c@ALG@rem=\count334
+\c@ALG@nested=\count335
+\ALG@tlm=\skip106
+\ALG@thistlm=\skip107
+\c@ALG@Lnr=\count336
+\c@ALG@blocknr=\count337
+\c@ALG@storecount=\count338
+\c@ALG@tmpcounter=\count339
+\ALG@tmplength=\skip108
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgfplots\pgfplots.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\pgfplots.revision.tex"
+)
+Package: pgfplots 2015/05/02 v1.12.1 Data Visualization (1.12.1)
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\pgfplots.code.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\pgfplotscore.code.tex"
+\t@pgfplots@toka=\toks65
+\t@pgfplots@tokb=\toks66
+\t@pgfplots@tokc=\toks67
+\pgfplots@tmpa=\dimen312
+\c@pgfplots@coordindex=\count340
+\c@pgfplots@scanlineindex=\count341
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\sys\pgfplotssysgeneric
+.code.tex"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\libs\pgfplotslibrary.c
+ode.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\oldpgfcompatib\pgfplot
+soldpgfsupp_loader.code.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryfpu.cod
+e.tex")
+Package pgfplots: loading complementary arithmetics for your pgf version...
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\oldpgfcompatib\pgfplot
+soldpgfsupp_pgflibraryfpu.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\oldpgfcompatib\pgfplot
+soldpgfsupp_pgfmathfloat.code.tex"
+\c@pgfmathroundto@lastzeros=\count342
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\oldpgfcompatib\pgfplot
+soldpgfsupp_trig_format.code.tex"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\util\pgfplotsutil.code
+.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\liststructure\pgfplots
+liststructure.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\liststructure\pgfplots
+liststructureext.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\liststructure\pgfplots
+array.code.tex"
+\c@pgfplotsarray@tmp=\count343
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\liststructure\pgfplots
+matrix.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\numtable\pgfplotstable
+shared.code.tex"
+\c@pgfplotstable@counta=\count344
+\t@pgfplotstable@a=\toks68
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\liststructure\pgfplots
+deque.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\util\pgfplotsbinary.co
+de.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\util\pgfplotsbinary.da
+ta.code.tex"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\util\pgfplotsutil.verb
+.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\libs\pgflibrarypgfplot
+s.surfshading.code.tex"
+\c@pgfplotslibrarysurf@no=\count345
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\sys\pgflibrarypgfplots
+.surfshading.pgfsys-pdftex.def")))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\util\pgfplotscolormap.
+code.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\util\pgfplotscolor.cod
+e.tex"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\pgfplotsstackedplots.c
+ode.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\pgfplotsplothandlers.c
+ode.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\pgfplotsmeshplothandle
+r.code.tex"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\pgfplots.scaling.code.
+tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\pgfplotscoordprocessin
+g.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\pgfplots.errorbars.cod
+e.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\pgfplots.markers.code.
+tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\pgfplotsticks.code.tex
+")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\pgfplots.paths.code.te
+x")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
+s\tikzlibrarydecorations.pathmorphing.code.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\decorations\pgfli
+brarydecorations.pathmorphing.code.tex"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
+s\tikzlibrarydecorations.pathreplacing.code.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\decorations\pgfli
+brarydecorations.pathreplacing.code.tex"))
+\pgfplots@numplots=\count346
+\pgfplots@xmin@reg=\dimen313
+\pgfplots@xmax@reg=\dimen314
+\pgfplots@ymin@reg=\dimen315
+\pgfplots@ymax@reg=\dimen316
+\pgfplots@zmin@reg=\dimen317
+\pgfplots@zmax@reg=\dimen318
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
+s\tikzlibraryplotmarks.code.tex"
+File: tikzlibraryplotmarks.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryplotmar
+ks.code.tex"
+File: pgflibraryplotmarks.code.tex 2013/07/20 v3.0.0 (rcs-revision 1.13)
+)))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgfplots\pgfplotstable.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\pgfplots.revision.tex"
+)
+Package: pgfplotstable 2015/05/02 v1.12.1 Table typesetting and Pretty-printing
+ (1.12.1)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\numtable\pgfplotstable
+.code.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\numtable\pgfplotstable
+.coltype.code.tex")))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\sttools\floatpag.sty"
+Package: floatpag 2012/05/29 v1.1 Different pagestyles on float pages
+Package: floatpag 1999/04/29 FLOAT PAGESTYLE
+)
+Package caption Info: We need package `newfloat' on input line 67.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\newfloat.sty"
+Package: newfloat 2013/05/11 v1.1-91 Defining new floating environments (AR)
+Package newfloat Info: Unsupported document class, or \@chapter 
+(newfloat)             was already redefined by another package.
+Package newfloat Info: \@chapter = macro:[#1]#2->\ifnum \c@secnumdepth >\m@ne \
+refstepcounter {chapter}\if@mainmatter \typeout {\@chapapp \space \thechapter .
+}\addcontentsline {toc}{chapter}{\protect \numberline {\thechapter \thechaptere
+nd }#1}\else \addcontentsline {toc}{chapter}{#1}\fi \else \addcontentsline {toc
+}{chapter}{#1}\fi \chaptermark {#1}\addtocontents {lof}{\protect \addvspace {10
+\p@ }}\addtocontents {lot}{\protect \addvspace {10\p@ }}\if@twocolumn \@topnewp
+age [\@makechapterhead {#2}]\else \@makechapterhead {#2}\@afterheading \fi .
+Package newfloat Info: \Hy@org@chapter = undefined.
+Package newfloat Info: Trying Plan B...
+)
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 73.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1ptm.fd"
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+)
+(001-acronyms.tex
+\acronymlabelwidth=\skip109
+)
+\glswrite=\write7
+\glo@main@file=\write8
+Package glossaries Info: Writing glossary file 000-main.glo on input line 77.
+\glo@acronym@file=\write9
+Package glossaries Info: Writing glossary file 000-main.acn on input line 77.
+
+\@input{000-latex-config.aux}
+(000-latex-config.tex)
+\@input{000-format-json.aux}
+(000-format-json.tex ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bera\bera.st
+y"
+Package: bera 2004/01/31 (WaS)
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.def"
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\textcomp.sty"
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1enc.def"
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+Now handling font encoding TS1 ...
+... processing UTF-8 mapping file for font encoding TS1
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1enc.dfu"
+File: ts1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
+))
+LaTeX Info: Redefining \oldstylenums on input line 334.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
+Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bera\beraserif.sty"
+Package: beraserif 2004/01/30 (WaS)
+LaTeX Font Info:    Try loading font information for T1+fve on input line 30.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bera\t1fve.fd"
+File: t1fve.fd 2004/09/07 scalable font definitions for T1/fve.
+)
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 30.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bera\berasans.sty"
+Package: berasans 2004/01/30 (WaS)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bera\beramono.sty"
+Package: beramono 2004/01/31 (WaS)
+)))
+\tikzscale@accuracy=\skip110
+
+(000-main.aux (100-cover.aux) (002-abstract.aux) (200-introduction.aux)
+(300-theory.aux) (400-architecture.aux) (500-loader-solution-init.aux)
+(500-local-search.aux) (550-experimental-results.aux) (550-future-work.aux)
+(test.aux) (800-references.aux))
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 83.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 83.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 83.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ucs\ucsencs.def"
+File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(71.70166pt, 418.25368pt, 107.55254pt)
+* v-part:(T,H,B)=(101.40665pt, 591.5302pt, 152.11pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=418.25368pt
+* \textheight=591.5302pt
+* \oddsidemargin=-0.56833pt
+* \evensidemargin=35.28255pt
+* \topmargin=5.13666pt
+* \headheight=12.0pt
+* \headsep=12.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=90.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count347
+\scratchdimen=\dimen319
+\scratchbox=\box160
+\nofMPsegments=\count348
+\nofMParguments=\count349
+\everyMPshowfont=\toks69
+\MPscratchCnt=\count350
+\MPscratchDim=\dimen320
+\MPnumerator=\count351
+\makeMPintoPDFobject=\count352
+\everyMPtoPDFconversion=\toks70
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: Incompatible package detected (regarding \@caption).
+(caption)             \@caption = \long macro:#1[#2]#3->\par \addcontentsline {
+\csname ext@#1\endcsname }{#1}{\protect \numberline {\csname the#1\endcsname }{
+\ignorespaces #2}}\begingroup \@parboxrestore \if@minipage \@setminipage \fi \@
+makecaption {\csname fnum@#1\endcsname }{\ignorespaces #3}\par \endgroup .
+
+
+Package caption Warning: Forced redefinition of \caption since the
+(caption)                unsupported(!) package option `compatibility=false'
+(caption)                was given.
+See the caption package documentation for explanation.
+
+Package caption Info: float package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: longtable package is loaded.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\ltcaption.sty"
+Package: ltcaption 2013/02/03 v1.3-62 longtable captions (AR)
+)
+Package caption Info: rotating package is loaded.
+Package caption Info: supertabular package is loaded.
+Package caption Info: End \AtBeginDocument code.
+
+(000-main.glsdefs)
+\c@lstlisting=\count353
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\beamer\base\translator\dicts\tran
+slator-basic-dictionary\translator-basic-dictionary-English.dict"
+Dictionary: translator-basic-dictionary, Language: English 
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\beamer\base\translator\dicts\tran
+slator-months-dictionary\translator-months-dictionary-English.dict"
+Dictionary: translator-months-dictionary, Language: English 
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\siunitx\siunitx-abbreviations.cfg
+"
+File: siunitx-abbreviations.cfg 2015/06/16 v2.6f siunitx: Abbreviated units
+) ABD: EveryShipout initializing macros
+
+Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
+ick labels; missing features). Consider writing \pgfplotsset{compat=1.12} into 
+your preamble.
+ on input line 83.
+
+\c__siunitx_mathsf_int=\count354
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 83.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 83.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 83.
+
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 83.
+
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 83.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 83.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 83.
+LaTeX Font Info:    Try loading font information for U+msa on input line 83.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 83.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for OT1+lmss on input line 83.
+
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ot1lmss.fd"
+File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+\c__siunitx_mathtt_int=\count355
+LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 83.
+
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ot1lmtt.fd"
+File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) (100-cover.tex
+<./images/LogoIsel3.png, id=28, 173.448pt x 104.5506pt>
+File: ./images/LogoIsel3.png Graphic file (type png)
+
+<use ./images/LogoIsel3.png>
+Package pdftex.def Info: ./images/LogoIsel3.png used on input line 4.
+(pdftex.def)             Requested size: 209.12683pt x 126.06311pt.
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 12.9599pt on input line 6.
+LaTeX Font Info:    Font shape `T1/fve/b/n' will be
+(Font)              scaled to size 12.9599pt on input line 6.
+
+<./images/guide_me_logo.jpg, id=30, 225.84375pt x 225.84375pt>
+File: ./images/guide_me_logo.jpg Graphic file (type jpg)
+
+<use ./images/guide_me_logo.jpg>
+Package pdftex.def Info: ./images/guide_me_logo.jpg used on input line 7.
+(pdftex.def)             Requested size: 125.47737pt x 125.47916pt.
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 16.19989pt on input line 8.
+LaTeX Font Info:    Font shape `T1/fve/b/n' will be
+(Font)              scaled to size 16.19989pt on input line 9.
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 14.3999pt on input line 10.
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 12.59991pt on input line 13.
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 10.79993pt on input line 15.
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 9.89993pt on input line 24.
+LaTeX Font Info:    Font shape `T1/fve/b/n' will be
+(Font)              scaled to size 8.99994pt on input line 45.
+ [1
+
+
+
+
+
+
+
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./images/LogoIsel3.png> <
+./images/guide_me_logo.jpg>])
+(002-abstract.tex [2
+
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 4--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--10
+
+ []
+
+[3] [4
+
+
+]
+LaTeX Font Info:    Font shape `T1/fve/m/it' in size <10> not available
+(Font)              Font shape `T1/fve/m/sl' tried instead on input line 15.
+LaTeX Font Info:    Font shape `T1/fve/m/sl' will be
+(Font)              scaled to size 8.99994pt on input line 15.
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--25
+
+ []
+
+[5]
+LaTeX Font Info:    Font shape `T1/fve/b/n' will be
+(Font)              scaled to size 10.79993pt on input line 25.
+
+Overfull \hbox (20.63666pt too wide) in paragraph at lines 27--29
+\T1/fve/m/n/10 Heuristicas; Meta-heuristicas; In-ter-na-tional Timetabling Com-
+pe-ti-tion 2007; Timetable; Horários;
+ []
+
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 8.09995pt on input line 30.
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 33--40
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--40
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--40
+
+ []
+
+) [7
+
+
+] [8
+
+
+
+] (000-main.toc [9])
+\tf@toc=\write10
+ [10] (000-main.lof)
+\tf@lof=\write11
+ [11
+
+
+] [12
+
+
+] (000-main.lot)
+\tf@lot=\write12
+
+[13] [14
+
+
+] (000-main.lol)
+\tf@lol=\write13
+
+No file 000-main.acr.
+[15] [16
+
+
+] (200-introduction.tex
+Chapter 1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--9
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--15
+
+ []
+
+LaTeX Font Info:    Try loading font information for TS1+fve on input line 16.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bera\ts1fve.fd"
+File: ts1fve.fd 2004/09/07 scalable font definitions for TS1/fve.
+)
+LaTeX Font Info:    Font shape `TS1/fve/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 16.
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--23
+
+ []
+
+[1
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 27--30
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--47
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--47
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--47
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--47
+
+ []
+
+[2]
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 6.29996pt on input line 81.
+
+Overfull \hbox (37.16954pt too wide) in paragraph at lines 138--139
+ [][] 
+ []
+
+) [3] [4] (300-theory.tex
+Chapter 2.
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--16
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--16
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--16
+
+ []
+
+<./images/typesOfAlgorithms.pdf, id=99, 358.33875pt x 211.79124pt>
+File: ./images/typesOfAlgorithms.pdf Graphic file (type pdf)
+
+<use ./images/typesOfAlgorithms.pdf>
+Package pdftex.def Info: ./images/typesOfAlgorithms.pdf used on input line 21.
+(pdftex.def)             Requested size: 418.25368pt x 247.21951pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--33
+
+ []
+
+
+Overfull \hbox (5.43582pt too wide) in paragraph at lines 26--33
+\T1/fve/m/n/10 Colony al-go-rithms, Ar-ti-fi-cial im-mune al-go-rithms), \T1/fv
+e/m/sl/10 Multi-criteria tech-niques\T1/fve/m/n/10 , \T1/fve/m/sl/10 Hyper-heur
+istics\T1/fve/m/n/10 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--33
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--33
+
+ []
+
+[5
+
+
+
+
+] [6 <./images/typesOfAlgorithms.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
+
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 49--54
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--54
+
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 89--92
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--110
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--110
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--110
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--110
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--110
+
+ []
+
+[9]
+Overfull \hbox (3.7799pt too wide) in paragraph at lines 114--147
+\T1/fve/m/n/10 Abdullah et al.'s 2009 ap-proach [[]] con-sists on us-ing an hy-
+bridiza-tion of an electromagnetic-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--147
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--147
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--147
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--147
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--147
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--147
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--147
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--147
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--147
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--147
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--147
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--147
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--147
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--147
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--147
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--147
+
+ []
+
+[10] [11]
+
+LaTeX Font Warning: Font shape `T1/fve/m/sc' undefined
+(Font)              using `T1/fve/m/n' instead on input line 152.
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 153.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 153.
+LaTeX Font Info:    Font shape `TS1/fve/m/n' will be
+(Font)              scaled to size 8.09995pt on input line 156.
+LaTeX Font Info:    Font shape `T1/fve/m/it' in size <9> not available
+(Font)              Font shape `T1/fve/m/sl' tried instead on input line 161.
+LaTeX Font Info:    Font shape `T1/fve/m/sl' will be
+(Font)              scaled to size 8.09995pt on input line 161.
+
+Overfull \hbox (42.49413pt too wide) in paragraph at lines 153--180
+[][]
+ []
+
+
+LaTeX Warning: Float too large for page by 14.98903pt on input line 180.
+
+[12]) [13] [14] (400-architecture.tex
+Chapter 3.
+Missing character: There is no D in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no D in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no D in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no D in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no M in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no M in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no s in font nullfont!
+LaTeX Font Info:    Font shape `T1/fve/b/n' will be
+(Font)              scaled to size 8.09995pt on input line 21.
+Missing character: There is no B in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no B in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no H in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no H in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no P in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no P in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+
+Overfull \hbox (62.54344pt too wide) in paragraph at lines 61--62
+ [][] 
+ []
+
+LaTeX Font Info:    Try loading font information for T1+fvm on input line 72.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bera\t1fvm.fd"
+File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
+)
+LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 72.
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--75
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--75
+
+ []
+
+Missing character: There is no D in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no D in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no M in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no M in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no s in font nullfont!
+
+Overfull \hbox (88.36165pt too wide) in paragraph at lines 126--127
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--141
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--141
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--141
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--141
+
+ []
+
+[15
+
+
+
+
+] [16] [17]
+Missing character: There is no B in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no B in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+
+Overfull \hbox (32.15245pt too wide) in paragraph at lines 269--270
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 54.36844pt on input line 271.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 274--285
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 274--285
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 274--285
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 274--285
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 274--285
+
+ []
+
+
+Overfull \hbox (7.28844pt too wide) in paragraph at lines 288--291
+\T1/fve/m/n/10 tics like []SA and []HC make use of neigh-bor so-lu-tions, and s
+o they uti-lize the []\T1/fvm/m/n/10 NeighborSelection
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 288--291
+
+ []
+
+[18] [19]
+Underfull \hbox (badness 10000) in paragraph at lines 294--297
+
+ []
+
+) [20] (500-loader-solution-init.tex
+Chapter 4.
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--19
+
+ []
+
+Missing character: There is no T in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--130
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--130
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--130
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--130
+
+ []
+
+[21
+
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
+
+ []
+
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 138--143
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--143
+
+ []
+
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 149--153
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--153
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--155
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--158
+
+ []
+
+[24]
+Missing character: There is no H in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no H in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+)
+Underfull \hbox (badness 10000) in paragraph at lines 235--117
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 235--117
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 235--117
+
+ []
+
+[25] [26] [27] (500-local-search.tex [28
+
+
+
+
+]
+Chapter 5.
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--13
+
+ []
+
+Missing character: There is no H in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no H in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--94
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--94
+
+ []
+
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 94--99
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--99
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--105
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--105
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--105
+
+ []
+
+[30] [31]
+Underfull \hbox (badness 10000) in paragraph at lines 105--111
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--111
+
+ []
+
+Package pgfplots info on input line 125: Overriding colorspace to rgb due to xc
+olor configuration.
+Missing character: There is no s in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+PGFPlots: reading {sa_plot_data.dat}
+
+Underfull \hbox (badness 10000) in paragraph at lines 111--142
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 111--142
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 111--142
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--151
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--151
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--151
+
+ []
+
+[32]
+Underfull \hbox (badness 10000) in paragraph at lines 155--163
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--163
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--163
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--163
+
+ []
+
+[33]
+Underfull \hbox (badness 10000) in paragraph at lines 164--165
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--169
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 170--171
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--173
+
+ []
+
+[34]
+Missing character: There is no H in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no H in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+)
+Underfull \hbox (badness 10000) in paragraph at lines 179--118
+
+ []
+
+[35] [36] (550-experimental-results.tex
+Chapter 6.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 4--119
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--119
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--119
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--119
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--119
+
+ []
+
+[37
+
+
+
+
+] [38] (550-future-work.tex
+Chapter 7.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 4--120
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--120
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--120
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--120
+
+ []
+
+[39
+
+
+
+
+] (test.tex) [40
+
+
+
+
+
+] (800-references.tex (000-main.bbl
+LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
+(Font)              scaled to size 8.09995pt on input line 36.
+
+Underfull \hbox (badness 5504) in paragraph at lines 78--81
+[]\T1/fve/m/n/9 G. Smet, ``Drools-solver.'' $\T1/fvm/m/n/9 http : / / www . cs 
+. qub . ac . uk / itc2007 / winner / bestexamsolutions /$
+ []
+
+[41
+
+
+
+]
+Underfull \hbox (badness 1454) in paragraph at lines 182--185
+\T1/fve/m/n/9 timetabling,'' \T1/fve/m/sl/9 De-part-ment of Com-puter Sci-ence 
+Uni-ver-sity of Regina Regina, Canada fh-
+ []
+
+[42]
+Underfull \hbox (badness 2856) in paragraph at lines 203--206
+[]\T1/fve/m/n/9 B. Mc-Col-lum, ``Itc2007 ex-am-i-na-tion out-put for-mat.'' $\T
+1/fvm/m/n/9 http : / / www . cs . qub . ac . uk / itc2007 /$
+ []
+
+
+Underfull \hbox (badness 4872) in paragraph at lines 213--216
+[]\T1/fve/m/n/9 B. Mc-Col-lum, ``Itc2007 ex-am-i-na-tion in-put for-mat.'' $\T1
+/fvm/m/n/9 http : / / www . cs . qub . ac . uk / itc2007 /$
+ []
+
+
+Underfull \hbox (badness 1655) in paragraph at lines 218--220
+[]\T1/fve/m/n/9 B. Mc-Col-lum, ``Itc 2007 ex-am-i-na-tion bench-mark-ing.'' $\T
+1/fvm/m/n/9 http : / / www . cs . qub . ac . uk / itc2007 /$
+ []
+
+)) [43] (000-main.aux (100-cover.aux) (002-abstract.aux) (200-introduction.aux)
+(300-theory.aux) (400-architecture.aux) (500-loader-solution-init.aux)
+(500-local-search.aux) (550-experimental-results.aux) (550-future-work.aux)
+(test.aux) (800-references.aux))
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 49331 strings out of 493671
+ 1123447 string characters out of 3141423
+ 2813224 words of memory out of 3000000
+ 51682 multiletter control sequences out of 15000+200000
+ 93281 words of font info for 88 fonts, out of 3000000 for 9000
+ 1025 hyphenation exceptions out of 8191
+ 62i,15n,105p,10397b,1890s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files (x86)/
+MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files (x86)/MiKTeX 2.9/
+fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/be
+ra/fveb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/bera/fver8a.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/bera/fver8a.pfb><C:/Program Files 
+(x86)/MiKTeX 2.9/fonts/type1/bera/fvmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9
+/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
+1/public/lm/lmmi5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/
+lmmi6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi7.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi9.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/public/lm/lmr5.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
+s/type1/public/lm/lmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
+c/lm/lmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr9.pfb
+><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy5.pfb><C:/Program Files (x86
+)/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9
+/fonts/type1/public/lm/lmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
+/public/lm/lmsy9.pfb>
+Output written on 000-main.pdf (59 pages, 586299 bytes).
+PDF statistics:
+ 343 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 124 words of extra memory for PDF output out of 10000 (max. 10000000)
+

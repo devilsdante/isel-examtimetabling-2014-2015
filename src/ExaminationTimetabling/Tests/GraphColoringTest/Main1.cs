@@ -20,7 +20,7 @@ namespace Tests.GraphColoringTest
 
             Solution solution = null;
             Solution SA_Solution = null;
-            int repeats_count = 50;
+            int repeats_count = 10;
 
             OutputFormatting.StartNew("..//..//results.txt");
             OutputFormatting.StartNew("..//..//GCResults.dat");
@@ -92,7 +92,7 @@ namespace Tests.GraphColoringTest
             {
                 for (int i = 0; i < repeats_count; i++)
                 {
-                    OutputFormatting.Write("..//..//GCResults.dat", i + " " + StaticMatrix.examinations.IndexOf(j) + " " + StaticMatrix.static_matrix[i, StaticMatrix.examinations.IndexOf(j)]);
+                    OutputFormatting.Write("..//..//GCResults.dat", i + "\t" + j + "\t" + StaticMatrix.static_matrix[i, StaticMatrix.examinations.IndexOf(j)]);
                 }
                 OutputFormatting.Write("..//..//GCResults.dat", "");
             }
