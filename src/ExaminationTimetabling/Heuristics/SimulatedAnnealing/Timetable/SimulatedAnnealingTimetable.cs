@@ -36,11 +36,14 @@ namespace Heuristics.SimulatedAnnealing.Timetable
 
         private readonly Random random;
 
+        private int total_neighbor_operators;
+
         public SimulatedAnnealingTimetable()
         {
             evaluation_function = new EvaluationFunctionTimetable();
             neighbor_selection_timetable = new NeighborSelectionTimetable();
             random = new Random(Guid.NewGuid().GetHashCode());
+            total_neighbor_operators = 6;
         }
 
         protected INeighbor GenerateNeighbor(Solution solution, int type)
@@ -60,7 +63,7 @@ namespace Heuristics.SimulatedAnnealing.Timetable
         private INeighbor GenerateRandomNeighbor(Solution solution)
         {
             INeighbor to_return;
-            int val = random.Next(6);
+            int val = random.Next(total_neighbor_operators);
             do
             {
                 if (val == 0)
@@ -308,7 +311,7 @@ namespace Heuristics.SimulatedAnnealing.Timetable
         {
             Stopwatch watch = new Stopwatch();
             long computed_neighbors = -1;
-            int total_operators = 6;
+            int total_operators = total_neighbor_operators;
             long computed_time = -1;
             INeighbor neighbor = null;
             watch.Start();

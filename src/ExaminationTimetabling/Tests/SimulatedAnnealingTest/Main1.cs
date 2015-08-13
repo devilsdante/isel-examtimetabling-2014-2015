@@ -20,28 +20,32 @@ namespace Tests.SimulatedAnnealingTest
 {
     class Main1
     {
-        static void Main_()
+        static void Main()
         {
             int SET;
 
             Solution solution = null;
             Solution SA_Solution = null;
+            int n_repeats = 3;
 
             OutputFormatting.StartNew("..//..//results.txt");
 
-            for (SET = 1; SET <= 12; SET++)
+            for (SET = 1; SET <= 2; SET++)
             {
                 if (SET == 4)
                     continue;
                 OutputFormatting.Write("..//..//results.txt", "SET " + SET);
 
-                for (int repeats = 0; repeats < 1; repeats++)
+                double TMax = 0.1;
+                double TMin = 1e-06;
+                int reps = 5;
+                double rate = -1;
+
+                for (int repeats = 0; repeats < n_repeats; repeats++)
                 {
                     //Set2
-                    double TMax = 0.1;
-                    double TMin = 1e-06;
-                    int reps = 5;
-                    double rate;
+
+                    
                     //double rate = 2.6e-05;
 
                     //Set1
@@ -81,7 +85,7 @@ namespace Tests.SimulatedAnnealingTest
                     Console.WriteLine("Fitness Time: " + watch.ElapsedMilliseconds);
                     Console.WriteLine("GC Fitness: " + solution.fitness);
 
-                    rate = ComputeRate(TMax, TMin, reps, solution);
+                    rate = (rate != -1) ? rate : ComputeRate(TMax, TMin, reps, solution);
                     Console.WriteLine(rate);
 
                     SimulatedAnnealingTimetable sa = new SimulatedAnnealingTimetable();
@@ -95,25 +99,25 @@ namespace Tests.SimulatedAnnealingTest
                     Console.WriteLine("SA Random Fitness: " + sa_fitness);
                     Console.WriteLine("SA Random Fitness: " + evaluation.Fitness(solution));
                     Console.WriteLine("generated_neighbors: " + sa_neighbors);
-                    sa.generated_neighbors = 0;
 
                     HillClimbingTimetable hc = new HillClimbingTimetable();
                     hc.Exec(solution, 221000 - watch2.ElapsedMilliseconds, SimulatedAnnealingTimetable.type_random, true);
                     long total_time = watch2.ElapsedMilliseconds;
                     long hc_time = total_time - sa_time;
                     int hc_fitness = solution.fitness;
-                    int hc_neighbors = sa.generated_neighbors;
+                    int hc_neighbors = hc.generated_neighbors;
                     Console.WriteLine("HC Total Time: " + hc_time);
                     Console.WriteLine("HC Random Fitness: " + hc_fitness);
                     Console.WriteLine("HC Random Fitness: " + evaluation.Fitness(solution));
                     Console.WriteLine("generated_neighbors: " + hc_neighbors);
                     
-                    OutputFormatting.Write("..//..//results.txt", "SA: " + sa_fitness + " " + sa_time + " " + sa_neighbors + ", HC: " + +hc_fitness + " " + hc_time + " " + hc_neighbors);
+                    OutputFormatting.Write("..//..//results.txt", "SA: " + sa_fitness + " " + sa_time + " " + sa_neighbors + " " + rate +", HC: " + +hc_fitness + " " + hc_time + " " + hc_neighbors);
                     PrintToFile("..//..//output" + SET + ".txt", solution);
 
                     //Console.ReadKey();
                 }
             }
+            Console.WriteLine("PRESS 7 ON THE NUMPAD TO CONTINUE..........");
             while (Console.ReadKey().Key != ConsoleKey.NumPad7) ;
 
             //PrintToFile("..//..//output.txt", solution);
@@ -188,23 +192,33 @@ namespace Tests.SimulatedAnnealingTest
 
             while (sa.GetSANumberEvaluations(TMax, rate - 1e-05, reps, TMin) < total_neighbors)
             {
+                if (rate - 1e-05 - 1e-05 < 0)
+                    break;
                 rate = rate - 1e-05;
             }
             while (sa.GetSANumberEvaluations(TMax, rate - 0.5e-05, reps, TMin) < total_neighbors)
             {
+                if (rate - 0.5e-05 - 0.5e-05 < 0)
+                    break;
                 rate = rate - 0.5e-05;
             }
             while (sa.GetSANumberEvaluations(TMax, rate - 0.2e-05, reps, TMin) < total_neighbors)
             {
+                if (rate - 0.2e-05 - 0.2e-05 < 0)
+                    break;
                 rate = rate - 0.2e-05;
             }
             while (sa.GetSANumberEvaluations(TMax, rate - 0.1e-05, reps, TMin) < total_neighbors)
             {
-                rate = rate - 0.1e-05;
+                if (rate - 1e-06 - 1e-06 < 0)
+                    break;
+                rate = rate - 1e-06;
             }
             while (sa.GetSANumberEvaluations(TMax, rate - 0.1e-06, reps, TMin) < total_neighbors)
             {
-                rate = rate - 0.1e-06;
+                if (rate - 1e-07 - 1e-07 < 0)
+                    break;
+                rate = rate - 1e-07;
             }
             //if (sa.GetSANumberEvaluations(TMax, rate - 0.1e-05, reps, TMin) < total_neighbors)
             //    rate = rate - 0.1e-05;

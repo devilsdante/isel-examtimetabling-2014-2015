@@ -21,12 +21,14 @@ namespace Heuristics.Hill_Climbing.Timetable
 
         private readonly Random random;
         public int generated_neighbors;
+        private int total_neighbor_operators;
 
         public HillClimbingTimetable()
         {
             evaluation_function = new EvaluationFunctionTimetable();
             neighbor_selection_timetable = new NeighborSelectionTimetable();
             random = new Random(Guid.NewGuid().GetHashCode());
+            total_neighbor_operators = 6;
         }
 
         protected INeighbor GenerateNeighbor(Solution solution, int type)
@@ -43,7 +45,7 @@ namespace Heuristics.Hill_Climbing.Timetable
         private INeighbor GenerateRandomNeighbor(Solution solution)
         {
             INeighbor to_return;
-            int val = random.Next(6);
+            int val = random.Next(total_neighbor_operators);
             do
             {
                 if (val == 0)
