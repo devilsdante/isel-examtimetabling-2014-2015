@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using Business;
 using DAL;
 using DAL.Models.Solution.Timetabling;
@@ -20,7 +21,7 @@ namespace Tests.GraphColoringTest
 
             Solution solution = null;
             Solution SA_Solution = null;
-            int repeats_count = 10;
+            int repeats_count = 1;
             LoaderTimetable loader = null;
 
             OutputFormatting.StartNew("..//..//results.txt");
@@ -63,8 +64,9 @@ namespace Tests.GraphColoringTest
                     watch.Start();
                     watch2.Start();
                     loader.Load();
-                    
-                    StaticMatrix.examinations = StaticMatrix.examinations ?? Examinations.Instance().GetAll().OrderByDescending(exam => exam.conflict).ToList().ConvertAll(exam => exam.id);
+
+                    StaticMatrix.examinations = StaticMatrix.examinations ?? new List<int>(loader.examination_examinations_conflicts.Keys.OrderByDescending(x => loader.examination_examinations_conflicts[x].Count));
+                    //StaticMatrix.examinations = StaticMatrix.examinations ?? Examinations.Instance().GetAll().OrderByDescending(exam => exam.conflict).ToList().ConvertAll(exam => exam.id);
                     StaticMatrix.static_matrix = StaticMatrix.static_matrix ?? new int[repeats_count, StaticMatrix.examinations.Count];
 
                     Console.WriteLine("Loader: " + watch.ElapsedMilliseconds);
@@ -102,7 +104,7 @@ namespace Tests.GraphColoringTest
                     //}
                     //if (all_conflicts.EndsWith(", "))
                     //{
-                    //    all_conflicts =  all_conflicts.Substring(0, all_conflicts.Length - 2);
+                    //    all_conflicts = all_conflicts.Substring(0, all_conflicts.Length - 2);
                     //}
                     OutputFormatting.Write("..//..//GCResults.dat", repeat_id + "\t" + exam_id + "\t" + StaticMatrix.static_matrix[repeat_id, StaticMatrix.examinations.IndexOf(exam_id)]);
                 }

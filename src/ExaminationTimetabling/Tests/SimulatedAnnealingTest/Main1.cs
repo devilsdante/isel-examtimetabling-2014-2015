@@ -27,7 +27,7 @@ namespace Tests.SimulatedAnnealingTest
 
             Solution solution = null;
             Solution SA_Solution = null;
-            int repeats_count = 5;
+            int repeats_count = 1;
 
             OutputFormatting.StartNew("..//..//results.txt");
 
@@ -75,7 +75,8 @@ namespace Tests.SimulatedAnnealingTest
 
                     Console.WriteLine("Loader: " + watch.ElapsedMilliseconds);
 
-                    StaticMatrix.examinations = StaticMatrix.examinations ?? Examinations.Instance().GetAll().OrderByDescending(exam => exam.conflict).ToList().ConvertAll(exam => exam.id);
+                    //StaticMatrix.examinations = StaticMatrix.examinations ?? Examinations.Instance().GetAll().OrderByDescending(exam => exam.conflict).ToList().ConvertAll(exam => exam.id);
+                    StaticMatrix.examinations = StaticMatrix.examinations ?? new List<int>(loader.examination_examinations_conflicts.Keys.OrderByDescending(x => loader.examination_examinations_conflicts[x].Count));
                     StaticMatrix.static_matrix = StaticMatrix.static_matrix ?? new int[repeats_count*2, StaticMatrix.examinations.Count];
                     StaticMatrix.run = repeats;
 
@@ -125,10 +126,9 @@ namespace Tests.SimulatedAnnealingTest
 
                     OutputFormatting.Write("..//..//results.txt", "SA: " + sa_fitness + " " + sa_time + " " + sa_feas_neighbors + " " + sa_nonfeas_neighbors + " " + rate + ", HC: " + +hc_fitness + " " + hc_time + " " + hc_feas_neighbors + " " + hc_nonfeas_neighbors);
                     PrintToFile("..//..//output" + SET + ".txt", solution);
-
-                    //Console.ReadKey();
                 }
             }
+
             Console.WriteLine("PRESS 7 ON THE NUMPAD TO CONTINUE..........");
             while (Console.ReadKey().Key != ConsoleKey.NumPad7) ;
 
@@ -136,8 +136,8 @@ namespace Tests.SimulatedAnnealingTest
             {
                 for (int i = 0; i < repeats_count; i++)
                 {
-                    OutputFormatting.Write("..//..//SAResults.dat", i + "\t" + j + "\t" + StaticMatrix.static_matrix[i * 2, j]);
-                    OutputFormatting.Write("..//..//SAResults.dat", i + "\t" + j + "\t" + StaticMatrix.static_matrix[i * 2 + 1, j]);
+                    OutputFormatting.Write("..//..//SAResults.dat", 1 + "\t" + j + "\t" + StaticMatrix.static_matrix[i * 2, j]);
+                    OutputFormatting.Write("..//..//SAResults.dat", 2 + "\t" + j + "\t" + StaticMatrix.static_matrix[i * 2 + 1, j]);
                 }
                 OutputFormatting.Write("..//..//SAResults.dat", "");
             }

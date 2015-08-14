@@ -3,7 +3,7 @@ using DAL.Models.Solution.Timetabling;
 
 namespace Tools.Neighborhood.Timetable
 {
-    class PeriodRoomSwapNeighbor:INeighbor
+    public class PeriodRoomSwapNeighbor:INeighbor
     {
         public int fitness { get; set; }
         public int type { get; set; }
