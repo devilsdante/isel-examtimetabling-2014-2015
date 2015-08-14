@@ -15,6 +15,7 @@ using Heuristics.SimulatedAnnealing.Timetable;
 using Tools;
 using Tools.EvaluationFunction.Timetable;
 using Tools.Loader.Timetable;
+using Tools.NeighborSelection.Timetable;
 
 namespace Tests.SimulatedAnnealingTest
 {
@@ -26,14 +27,15 @@ namespace Tests.SimulatedAnnealingTest
 
             Solution solution = null;
             Solution SA_Solution = null;
-            int n_repeats = 3;
+            int repeats_count = 5;
 
             OutputFormatting.StartNew("..//..//results.txt");
 
-            for (SET = 1; SET <= 2; SET++)
+            for (SET = 1; SET <= 1; SET++)
             {
                 if (SET == 4)
                     continue;
+
                 OutputFormatting.Write("..//..//results.txt", "SET " + SET);
 
                 double TMax = 0.1;
@@ -41,7 +43,7 @@ namespace Tests.SimulatedAnnealingTest
                 int reps = 5;
                 double rate = -1;
 
-                for (int repeats = 0; repeats < n_repeats; repeats++)
+                for (int repeats = 0; repeats < repeats_count; repeats++)
                 {
                     //Set2
 
@@ -73,6 +75,10 @@ namespace Tests.SimulatedAnnealingTest
 
                     Console.WriteLine("Loader: " + watch.ElapsedMilliseconds);
 
+                    StaticMatrix.examinations = StaticMatrix.examinations ?? Examinations.Instance().GetAll().OrderByDescending(exam => exam.conflict).ToList().ConvertAll(exam => exam.id);
+                    StaticMatrix.static_matrix = StaticMatrix.static_matrix ?? new int[repeats_count*2, StaticMatrix.examinations.Count];
+                    StaticMatrix.run = repeats;
+
                     var evaluation = new EvaluationFunctionTimetable();
 
                     GraphColoring gc = new GraphColoring();
@@ -94,24 +100,30 @@ namespace Tests.SimulatedAnnealingTest
                     sa.Exec2(solution, TMax, TMin, reps, rate, SimulatedAnnealingTimetable.type_random, true);
                     long sa_time = watch.ElapsedMilliseconds;
                     int sa_fitness = solution.fitness;
-                    int sa_neighbors = sa.generated_neighbors;
+                    int sa_feas_neighbors = sa.generated_neighbors;
+                    int sa_nonfeas_neighbors = NeighborSelectionTimetable.non_feasibles;
+
                     Console.WriteLine("SA Time: " + sa_time);
                     Console.WriteLine("SA Random Fitness: " + sa_fitness);
                     Console.WriteLine("SA Random Fitness: " + evaluation.Fitness(solution));
-                    Console.WriteLine("generated_neighbors: " + sa_neighbors);
+                    Console.WriteLine("SA Feasible Neighbors: " + sa_feas_neighbors);
+                    Console.WriteLine("SA Non-Feasible Neighbors: " + sa_nonfeas_neighbors);
 
                     HillClimbingTimetable hc = new HillClimbingTimetable();
                     hc.Exec(solution, 221000 - watch2.ElapsedMilliseconds, SimulatedAnnealingTimetable.type_random, true);
                     long total_time = watch2.ElapsedMilliseconds;
                     long hc_time = total_time - sa_time;
                     int hc_fitness = solution.fitness;
-                    int hc_neighbors = hc.generated_neighbors;
+                    int hc_feas_neighbors = hc.generated_neighbors;
+                    int hc_nonfeas_neighbors = NeighborSelectionTimetable.non_feasibles;
+
                     Console.WriteLine("HC Total Time: " + hc_time);
                     Console.WriteLine("HC Random Fitness: " + hc_fitness);
                     Console.WriteLine("HC Random Fitness: " + evaluation.Fitness(solution));
-                    Console.WriteLine("generated_neighbors: " + hc_neighbors);
-                    
-                    OutputFormatting.Write("..//..//results.txt", "SA: " + sa_fitness + " " + sa_time + " " + sa_neighbors + " " + rate +", HC: " + +hc_fitness + " " + hc_time + " " + hc_neighbors);
+                    Console.WriteLine("HC Feasible Neighbors: " + hc_feas_neighbors);
+                    Console.WriteLine("HC Non-Feasible Neighbors: " + hc_nonfeas_neighbors);
+
+                    OutputFormatting.Write("..//..//results.txt", "SA: " + sa_fitness + " " + sa_time + " " + sa_feas_neighbors + " " + sa_nonfeas_neighbors + " " + rate + ", HC: " + +hc_fitness + " " + hc_time + " " + hc_feas_neighbors + " " + hc_nonfeas_neighbors);
                     PrintToFile("..//..//output" + SET + ".txt", solution);
 
                     //Console.ReadKey();
@@ -119,6 +131,16 @@ namespace Tests.SimulatedAnnealingTest
             }
             Console.WriteLine("PRESS 7 ON THE NUMPAD TO CONTINUE..........");
             while (Console.ReadKey().Key != ConsoleKey.NumPad7) ;
+
+            for (int j = 0; j < StaticMatrix.examinations.Count; j++)
+            {
+                for (int i = 0; i < repeats_count; i++)
+                {
+                    OutputFormatting.Write("..//..//SAResults.dat", i + "\t" + j + "\t" + StaticMatrix.static_matrix[i * 2, j]);
+                    OutputFormatting.Write("..//..//SAResults.dat", i + "\t" + j + "\t" + StaticMatrix.static_matrix[i * 2 + 1, j]);
+                }
+                OutputFormatting.Write("..//..//SAResults.dat", "");
+            }
 
             //PrintToFile("..//..//output.txt", solution);
         }
@@ -138,7 +160,6 @@ namespace Tests.SimulatedAnnealingTest
 
             while (true)
             {
-
                 GraphColoring gc = new GraphColoring();
                 Solution solution = gc.Exec();
 

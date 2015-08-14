@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.16)  10 AUG 2015 23:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.16)  14 AUG 2015 02:36
 entering extended mode
 **000-main.tex
 (000-main.tex
@@ -3580,13 +3580,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--121
 
 
 ] (test.tex
-Package pgfplots info on input line 68: Overriding colorspace to rgb due to xco
+Package pgfplots info on input line 43: Overriding colorspace to rgb due to xco
 lor configuration.
-PGFPlots: reading {./GCResults7.dat}
-Package pgfplots info on input line 74: Overriding colorspace to rgb due to xco
+PGFPlots: reading {./SAResults3.dat}
+Package pgfplots info on input line 49: Overriding colorspace to rgb due to xco
 lor configuration.
 )
-Overfull \hbox (43.4656pt too wide) in paragraph at lines 75--124
+Overfull \hbox (65.13773pt too wide) in paragraph at lines 50--124
 [][] 
  []
 
@@ -3642,10 +3642,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 49393 strings out of 493671
- 1125238 string characters out of 3141423
- 2816686 words of memory out of 3000000
- 51742 multiletter control sequences out of 15000+200000
+ 49391 strings out of 493671
+ 1125154 string characters out of 3141423
+ 2816684 words of memory out of 3000000
+ 51740 multiletter control sequences out of 15000+200000
  93281 words of font info for 88 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  63i,15n,105p,10397b,2255s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -3670,7 +3670,7 @@ m Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy5.pfb><C:/Program Files (x86
 )/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9
 /fonts/type1/public/lm/lmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 /public/lm/lmsy9.pfb>
-Output written on 000-main.pdf (59 pages, 621176 bytes).
+Output written on 000-main.pdf (59 pages, 615828 bytes).
 PDF statistics:
  349 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

@@ -9,7 +9,7 @@
         }
 		},
 		width = \textwidth,
-		xlabel = {Thresholds},
+		xlabel = {Runs},
 		ylabel = {Exams},
 		enlarge x limits = true,	% The value true enlarges the lower 
 									% and upper limit.
@@ -17,8 +17,8 @@
 		enlarge y limits = true,
 		colorbar,
 		%colormap={}{ gray(0cm)=(1); gray(1cm)=(0);}, % Grey colorbar
-		x dir = reverse,
-		y dir = reverse,
+		%x dir = reverse,
+		%y dir = reverse,
 		%xmode = log,        % logarithmic x axis
 		%xmin = 0, xmax = 9,
 		% car92 has 543 exams
@@ -45,6 +45,6 @@
 			shader = interp, % No facets
 			point meta = explicit] 
 			%table [z expr = 100, meta index = 2] {./yor83Cool1Eminus6.dat};
-			table [z expr = 100, meta index = 2] {./GCResults7.dat};
+			table [z expr = 100, meta index = 2] {./SAResults3.dat};
 \end{axis}
 \end{tikzpicture}

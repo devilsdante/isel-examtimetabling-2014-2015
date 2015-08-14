@@ -21,6 +21,7 @@ namespace Tests.GraphColoringTest
             Solution solution = null;
             Solution SA_Solution = null;
             int repeats_count = 10;
+            LoaderTimetable loader = null;
 
             OutputFormatting.StartNew("..//..//results.txt");
             OutputFormatting.StartNew("..//..//GCResults.dat");
@@ -56,14 +57,14 @@ namespace Tests.GraphColoringTest
 
 
                     Console.WriteLine("**SET** " + SET);
-                    LoaderTimetable loader = new LoaderTimetable("..//..//exam_comp_set" + SET + ".exam");
+                    loader = new LoaderTimetable("..//..//exam_comp_set" + SET + ".exam");
                     loader.Unload();
 
                     watch.Start();
                     watch2.Start();
                     loader.Load();
                     
-                    StaticMatrix.examinations = StaticMatrix.examinations ?? Examinations.Instance().GetAll().OrderBy(exam => exam.conflict).ToList().ConvertAll(exam => exam.id);
+                    StaticMatrix.examinations = StaticMatrix.examinations ?? Examinations.Instance().GetAll().OrderByDescending(exam => exam.conflict).ToList().ConvertAll(exam => exam.id);
                     StaticMatrix.static_matrix = StaticMatrix.static_matrix ?? new int[repeats_count, StaticMatrix.examinations.Count];
 
                     Console.WriteLine("Loader: " + watch.ElapsedMilliseconds);
@@ -86,13 +87,24 @@ namespace Tests.GraphColoringTest
                     }
                 }
             }
+            Console.WriteLine("PRESS 7 ON THE NUMPAD TO CONTINUE..........");
             while (Console.ReadKey().Key != ConsoleKey.NumPad7) ;
 
-            for (int j = 0; j < StaticMatrix.examinations.Count; j++)
+            for (int exam_id = 0; exam_id < StaticMatrix.examinations.Count; exam_id++)
             {
-                for (int i = 0; i < repeats_count; i++)
+
+                for (int repeat_id = 0; repeat_id < repeats_count; repeat_id++)
                 {
-                    OutputFormatting.Write("..//..//GCResults.dat", i + "\t" + j + "\t" + StaticMatrix.static_matrix[i, StaticMatrix.examinations.IndexOf(j)]);
+                    //string all_conflicts = "";
+                    //foreach (int conflict_exam_id in loader.examination_examinations_conflicts[StaticMatrix.examinations[exam_id]])
+                    //{
+                    //    all_conflicts += conflict_exam_id + ", ";
+                    //}
+                    //if (all_conflicts.EndsWith(", "))
+                    //{
+                    //    all_conflicts =  all_conflicts.Substring(0, all_conflicts.Length - 2);
+                    //}
+                    OutputFormatting.Write("..//..//GCResults.dat", repeat_id + "\t" + exam_id + "\t" + StaticMatrix.static_matrix[repeat_id, StaticMatrix.examinations.IndexOf(exam_id)]);
                 }
                 OutputFormatting.Write("..//..//GCResults.dat", "");
             }

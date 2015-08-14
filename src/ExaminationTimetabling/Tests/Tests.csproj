@@ -42,7 +42,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GraphColoringTest\Main1.cs" />
-    <Compile Include="GraphColoringTest\StaticMatrix.cs" />
     <Compile Include="LoaderTest\Main1.cs" />
     <Compile Include="SimulatedAnnealingTest\Main1.cs" />
     <Compile Include="OutputFormattingTest\Main1.cs" />

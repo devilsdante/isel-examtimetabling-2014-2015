@@ -23,6 +23,7 @@ namespace Tools.Loader.Timetable
         private ModelWeightings model_weightings;
         private ConflictMatrix conflict_matrix;
         private Dictionary<int, List<int>> student_examinations;
+        public Dictionary<int, List<int>> examination_examinations_conflicts; 
 
         //rivate readonly Loader loader;
 
@@ -237,6 +238,7 @@ namespace Tools.Loader.Timetable
         {
             conflict_matrix = ConflictMatrix.Instance();
             int[,] matrix = new int[examinations.EntryCount(), examinations.EntryCount()];
+            examination_examinations_conflicts = new Dictionary<int, List<int>>();
 
             foreach (KeyValuePair<int, List<int>> entry in student_examinations)
             {
@@ -245,6 +247,22 @@ namespace Tools.Loader.Timetable
                 {
                     for (int j = i + 1; j < exams.Count; j++)
                     {
+                        if (!examination_examinations_conflicts.ContainsKey(exams[i]))
+                        {
+                            examination_examinations_conflicts.Add(exams[i], new List<int> { exams[j] });
+                        }
+                        else if (!examination_examinations_conflicts[exams[i]].Contains(exams[j]))
+                        {
+                            examination_examinations_conflicts[exams[i]].Add(exams[j]);
+                        }
+                        if (!examination_examinations_conflicts.ContainsKey(exams[j]))
+                        {
+                            examination_examinations_conflicts.Add(exams[j], new List<int> { exams[i] });
+                        }
+                        else if (!examination_examinations_conflicts[exams[j]].Contains(exams[i]))
+                        {
+                            examination_examinations_conflicts[exams[j]].Add(exams[i]);
+                        }
                         matrix[exams[i], exams[j]]++;
                         matrix[exams[j], exams[i]]++;
                         examinations.GetById(exams[i]).conflict++;

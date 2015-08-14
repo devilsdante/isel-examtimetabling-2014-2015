@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using Business;
 using DAL;
 using DAL.Models;
@@ -17,6 +19,7 @@ namespace Tools.NeighborSelection.Timetable
         private readonly Periods periods;
         private readonly FeasibilityTester feasibility_tester;
         private readonly EvaluationFunctionTimetable evaluation_function_timetable;
+        public static int non_feasibles;
         private Random random;
 
         public NeighborSelectionTimetable()
@@ -27,6 +30,7 @@ namespace Tools.NeighborSelection.Timetable
             feasibility_tester = new FeasibilityTester();
             evaluation_function_timetable = new EvaluationFunctionTimetable();
             random = new Random(Guid.NewGuid().GetHashCode());
+            non_feasibles = 0;
         }
 
         public INeighbor RoomSwap(Solution solution)
@@ -42,9 +46,20 @@ namespace Tools.NeighborSelection.Timetable
             {
                 Room random_room = rooms.GetById((room_id + random_room_id) % rooms.EntryCount());
                 if (solution.GetRoomFrom(random_examination.id) == random_room.id)
+                {
+                    StaticMatrix.static_matrix[
+                        StaticMatrix.run*2+1, StaticMatrix.examinations.IndexOf(random_examination.id)]++;
+                    non_feasibles++;
                     continue;
+                }
+
                 if (feasibility_tester.IsFeasibleRoom(solution, random_examination, period, random_room))
+                {
+                    StaticMatrix.static_matrix[
+                        StaticMatrix.run * 2, StaticMatrix.examinations.IndexOf(random_examination.id)]++;
                     return new RoomChangeNeighbor(solution, random_examination.id, random_room.id);
+                }
+                    
 
                 foreach(int exam_to_swap_id in solution.GetExaminationsFrom(period.id, random_room.id))
                 {
@@ -65,6 +80,9 @@ namespace Tools.NeighborSelection.Timetable
                     if (!is_feasible)
                     {
                         neighbor.Reverse();
+                        non_feasibles++;
+                        StaticMatrix.static_matrix[
+                            StaticMatrix.run * 2 + 1, StaticMatrix.examinations.IndexOf(random_examination.id)]++;
                         continue;
                     }
 
@@ -76,9 +94,15 @@ namespace Tools.NeighborSelection.Timetable
                     if (!is_feasible)
                     {
                         neighbor.Reverse();
+                        non_feasibles++;
+                        StaticMatrix.static_matrix[
+                            StaticMatrix.run * 2 + 1, StaticMatrix.examinations.IndexOf(random_examination.id)]++;
                         continue;
                     }
                     neighbor.Reverse();
+
+                    StaticMatrix.static_matrix[
+                        StaticMatrix.run * 2, StaticMatrix.examinations.IndexOf(random_examination.id)]++;
 
                     return neighbor;
                 }
@@ -99,9 +123,20 @@ namespace Tools.NeighborSelection.Timetable
             {
                 Period random_period = periods.GetById((period_id + random_period_id) % periods.EntryCount());
                 if (solution.GetPeriodFrom(random_examination.id) == random_period.id)
+                {
+                    non_feasibles++;
+                    StaticMatrix.static_matrix[
+                        StaticMatrix.run * 2 + 1, StaticMatrix.examinations.IndexOf(random_examination.id)]++;
                     continue;
+                }
+
                 if (feasibility_tester.IsFeasiblePeriodRoom(solution, random_examination, random_period, room))
+                {
+                    StaticMatrix.static_matrix[
+                        StaticMatrix.run * 2, StaticMatrix.examinations.IndexOf(random_examination.id)]++;
                     return new PeriodChangeNeighbor(solution, random_examination.id, random_period.id);
+                }
+                    
 
                 foreach (int exam_to_swap_id in solution.GetExaminationsFrom(random_period.id, room.id))
                 {
@@ -123,6 +158,9 @@ namespace Tools.NeighborSelection.Timetable
                     if (!is_feasible)
                     {
                         neighbor.Reverse();
+                        non_feasibles++;
+                        StaticMatrix.static_matrix[
+                            StaticMatrix.run * 2 + 1, StaticMatrix.examinations.IndexOf(random_examination.id)]++;
                         continue;
                     }
 
@@ -134,9 +172,15 @@ namespace Tools.NeighborSelection.Timetable
                     if (!is_feasible)
                     {
                         neighbor.Reverse();
+                        non_feasibles++;
+                        StaticMatrix.static_matrix[
+                            StaticMatrix.run * 2 + 1, StaticMatrix.examinations.IndexOf(random_examination.id)]++;
                         continue;
                     }
                     neighbor.Reverse();
+
+                    StaticMatrix.static_matrix[
+                        StaticMatrix.run * 2, StaticMatrix.examinations.IndexOf(random_examination.id)]++;
                     
                     return neighbor;
                 }
@@ -157,16 +201,35 @@ namespace Tools.NeighborSelection.Timetable
             {
                 Period random_period = periods.GetById((period_id + random_period_id) % periods.EntryCount());
                 if (!feasibility_tester.IsFeasiblePeriod(solution, random_examination, random_period))
+                {
+                    non_feasibles++;
+                    StaticMatrix.static_matrix[
+                        StaticMatrix.run * 2 + 1, StaticMatrix.examinations.IndexOf(random_examination.id)]++;
                     continue;
+                }
+                    
+
                 for (int room_id = 0; room_id < rooms.EntryCount(); ++room_id)
                 {
                     Room random_room = rooms.GetById((room_id + random_room_id) % rooms.EntryCount());
                     if (solution.GetPeriodFrom(random_examination.id) == random_period.id ||
                         solution.GetRoomFrom(random_examination.id) == random_room.id)
+                    {
+                        non_feasibles++;
+                        StaticMatrix.static_matrix[
+                            StaticMatrix.run * 2 + 1, StaticMatrix.examinations.IndexOf(random_examination.id)]++;
                         continue;
+                    }
+
 
                     if (feasibility_tester.IsFeasibleRoom(solution, random_examination, random_period, random_room))
+                    {
+                        StaticMatrix.static_matrix[
+                            StaticMatrix.run * 2, StaticMatrix.examinations.IndexOf(random_examination.id)]++;
+
                         return new PeriodRoomChangeNeighbor(solution, random_examination.id, random_period.id, random_room.id);
+                    }
+                        
 
                     foreach (int exam_to_swap_id in solution.GetExaminationsFrom(random_period.id, random_room.id))
                     {
@@ -188,6 +251,9 @@ namespace Tools.NeighborSelection.Timetable
                         if (!is_feasible)
                         {
                             neighbor.Reverse();
+                            non_feasibles++;
+                            StaticMatrix.static_matrix[
+                                StaticMatrix.run * 2 + 1, StaticMatrix.examinations.IndexOf(random_examination.id)]++;
                             continue;
                         }
 
@@ -199,9 +265,16 @@ namespace Tools.NeighborSelection.Timetable
                         if (!is_feasible)
                         {
                             neighbor.Reverse();
+                            non_feasibles++;
+                            StaticMatrix.static_matrix[
+                                StaticMatrix.run * 2 + 1, StaticMatrix.examinations.IndexOf(random_examination.id)]++;
                             continue;
                         }
                         neighbor.Reverse();
+
+                        StaticMatrix.static_matrix[
+                            StaticMatrix.run * 2, StaticMatrix.examinations.IndexOf(random_examination.id)]++;
+
                         return neighbor;
                     }
                 }
@@ -220,9 +293,24 @@ namespace Tools.NeighborSelection.Timetable
             {
                 Period random_period = periods.GetById((period_id + random_period_id) % periods.EntryCount());
                 if (solution.GetPeriodFrom(random_examination.id) == random_period.id)
+                {
+                    non_feasibles++;
+                    StaticMatrix.static_matrix[
+                        StaticMatrix.run * 2 + 1, StaticMatrix.examinations.IndexOf(random_examination.id)]++;
                     continue;
+                }
+
                 if (feasibility_tester.IsFeasiblePeriodRoom(solution, random_examination, random_period, room))
+                {
+                    StaticMatrix.static_matrix[
+                        StaticMatrix.run * 2, StaticMatrix.examinations.IndexOf(random_examination.id)]++;
+
                     return new PeriodChangeNeighbor (solution, random_examination.id, random_period.id);
+                }
+
+                StaticMatrix.static_matrix[
+                    StaticMatrix.run * 2 + 1, StaticMatrix.examinations.IndexOf(random_examination.id)]++;
+                    
             }
             return null;
         }
@@ -232,13 +320,29 @@ namespace Tools.NeighborSelection.Timetable
             Examination random_examination = examinations.GetById(random.Next(examinations.EntryCount()));
             Period period = periods.GetById(solution.GetPeriodFrom(random_examination.id));
             int random_room_id = random.Next(rooms.EntryCount());
+
             for (int room_id = 0; room_id < rooms.EntryCount(); ++room_id)
             {
                 Room random_room = rooms.GetById((room_id + random_room_id) % rooms.EntryCount());
                 if (solution.GetRoomFrom(random_examination.id) == random_room.id)
+                {
+                    non_feasibles++;
+                    StaticMatrix.static_matrix[
+                        StaticMatrix.run * 2 + 1, StaticMatrix.examinations.IndexOf(random_examination.id)]++;
                     continue;
+                }
+
                 if (feasibility_tester.IsFeasibleRoom(solution, random_examination, period, random_room))
+                {
+                    StaticMatrix.static_matrix[
+                        StaticMatrix.run * 2, StaticMatrix.examinations.IndexOf(random_examination.id)]++;
+
                     return new RoomChangeNeighbor(solution, random_examination.id, random_room.id);
+                }
+
+                StaticMatrix.static_matrix[
+                    StaticMatrix.run * 2 + 1, StaticMatrix.examinations.IndexOf(random_examination.id)]++;
+                    
             }
             return null;
         }
@@ -253,15 +357,35 @@ namespace Tools.NeighborSelection.Timetable
             {
                 Period random_period = periods.GetById((period_id + random_period_id) % periods.EntryCount());
                 if (!feasibility_tester.IsFeasiblePeriod(solution, random_examination, random_period))
+                {
+                    non_feasibles++;
+                    StaticMatrix.static_matrix[
+                        StaticMatrix.run * 2 + 1, StaticMatrix.examinations.IndexOf(random_examination.id)]++;
                     continue;
+                }
+                    
                 for (int room_id = 0; room_id < rooms.EntryCount(); ++room_id)
                 {
                     Room random_room = rooms.GetById((room_id + random_room_id) % rooms.EntryCount());
                     if (solution.GetPeriodFrom(random_examination.id) == random_period.id ||
                         solution.GetRoomFrom(random_examination.id) == random_room.id)
+                    {
+                        non_feasibles++;
+                        StaticMatrix.static_matrix[
+                        StaticMatrix.run * 2 + 1, StaticMatrix.examinations.IndexOf(random_examination.id)]++;
                         continue;
+                    }
+
                     if (feasibility_tester.IsFeasibleRoom(solution, random_examination, random_period, random_room))
+                    {
+                        StaticMatrix.static_matrix[
+                        StaticMatrix.run * 2, StaticMatrix.examinations.IndexOf(random_examination.id)]++;
+
                         return new PeriodRoomChangeNeighbor(solution, random_examination.id, random_period.id, random_room.id);
+                    }
+
+                    StaticMatrix.static_matrix[
+                        StaticMatrix.run * 2 + 1, StaticMatrix.examinations.IndexOf(random_examination.id)]++;
                 }
             }
             return null;

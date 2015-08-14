@@ -57,6 +57,7 @@
     <Compile Include="OutputFormatting.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="EvaluationFunction\Timetable\EvaluationFunctionTimetable.cs" />
+    <Compile Include="StaticMatrix.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Business\Business.csproj">
