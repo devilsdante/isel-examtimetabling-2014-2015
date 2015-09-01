@@ -42,25 +42,10 @@ namespace Tests.SimulatedAnnealingTest
                 double TMin = 1e-06;
                 int reps = 5;
                 double rate = -1;
+                int exec_time = 221000;
 
                 for (int repeats = 0; repeats < repeats_count; repeats++)
                 {
-                    //Set2
-
-                    
-                    //double rate = 2.6e-05;
-
-                    //Set1
-                    //double TMax = 0.1;
-                    //double TMin = 1e-06;
-                    //int reps = 5;
-                    //double rate = 3.5e-05;
-
-                    //double TMax = 0.01;
-                    //double TMin = Math.Pow(Math.E, -18);
-                    //int reps = 5;
-                    //double rate = 0.001;
-
                     Stopwatch watch = new Stopwatch();
                     Stopwatch watch2 = new Stopwatch();
                     
@@ -92,7 +77,7 @@ namespace Tests.SimulatedAnnealingTest
                     Console.WriteLine("Fitness Time: " + watch.ElapsedMilliseconds);
                     Console.WriteLine("GC Fitness: " + solution.fitness);
 
-                    rate = (rate != -1) ? rate : ComputeRate(TMax, TMin, reps, solution);
+                    rate = (rate != -1) ? rate : ComputeRate(TMax, TMin, reps, exec_time, solution);
                     Console.WriteLine(rate);
 
                     SimulatedAnnealingTimetable sa = new SimulatedAnnealingTimetable();
@@ -111,7 +96,7 @@ namespace Tests.SimulatedAnnealingTest
                     Console.WriteLine("SA Non-Feasible Neighbors: " + sa_nonfeas_neighbors);
 
                     HillClimbingTimetable hc = new HillClimbingTimetable();
-                    hc.Exec(solution, 221000 - watch2.ElapsedMilliseconds, SimulatedAnnealingTimetable.type_random, true);
+                    hc.Exec(solution, exec_time - watch2.ElapsedMilliseconds, SimulatedAnnealingTimetable.type_random, true);
                     long total_time = watch2.ElapsedMilliseconds;
                     long hc_time = total_time - sa_time;
                     int hc_fitness = solution.fitness;
@@ -132,15 +117,15 @@ namespace Tests.SimulatedAnnealingTest
             Console.WriteLine("PRESS 7 ON THE NUMPAD TO CONTINUE..........");
             while (Console.ReadKey().Key != ConsoleKey.NumPad7) ;
 
-            for (int j = 0; j < StaticMatrix.examinations.Count; j++)
-            {
-                for (int i = 0; i < repeats_count; i++)
-                {
-                    OutputFormatting.Write("..//..//SAResults.dat", 1 + "\t" + j + "\t" + StaticMatrix.static_matrix[i * 2, j]);
-                    OutputFormatting.Write("..//..//SAResults.dat", 2 + "\t" + j + "\t" + StaticMatrix.static_matrix[i * 2 + 1, j]);
-                }
-                OutputFormatting.Write("..//..//SAResults.dat", "");
-            }
+            //for (int j = 0; j < StaticMatrix.examinations.Count; j++)
+            //{
+            //    for (int i = 0; i < repeats_count; i++)
+            //    {
+            //        OutputFormatting.Write("..//..//SAResults.dat", 1 + "\t" + j + "\t" + StaticMatrix.static_matrix[i * 2, j]);
+            //        OutputFormatting.Write("..//..//SAResults.dat", 2 + "\t" + j + "\t" + StaticMatrix.static_matrix[i * 2 + 1, j]);
+            //    }
+            //    OutputFormatting.Write("..//..//SAResults.dat", "");
+            //}
 
             //PrintToFile("..//..//output.txt", solution);
         }
@@ -198,48 +183,48 @@ namespace Tests.SimulatedAnnealingTest
             }
         }
 
-        public static double ComputeRate(double TMax, double TMin, int reps, Solution solution)
+        public static double ComputeRate(double TMax, double TMin, int reps, int exec_time, Solution solution)
         {
             SimulatedAnnealingTimetable sa = new SimulatedAnnealingTimetable();
             //**Calibration
-            sa.EstimateTotalNumberOfNeighbors(2, 221000, solution);
-            sa.EstimateTotalNumberOfNeighbors(2, 221000, solution);
+            sa.EstimateTotalNumberOfNeighbors(2, exec_time, solution);
+            sa.EstimateTotalNumberOfNeighbors(2, exec_time, solution);
             //**
 
-            long total_neighbors = sa.EstimateTotalNumberOfNeighbors(50, 221000, solution);
+            long total_neighbors = sa.EstimateTotalNumberOfNeighbors(50, exec_time, solution);
             double offset = 0.16;
             total_neighbors = (long)(total_neighbors * (1 - offset));
             double rate = 15.0e-05;
 
             while (sa.GetSANumberEvaluations(TMax, rate - 1e-05, reps, TMin) < total_neighbors)
             {
-                if (rate - 1e-05 - 1e-05 < 0)
+                if (Math.Round(rate - 1e-05 - 1e-05, 6) <= 0)
                     break;
-                rate = rate - 1e-05;
+                rate = Math.Round(rate - 1e-05, 6);
             }
             while (sa.GetSANumberEvaluations(TMax, rate - 0.5e-05, reps, TMin) < total_neighbors)
             {
-                if (rate - 0.5e-05 - 0.5e-05 < 0)
+                if (Math.Round(rate - 0.5e-05 - 0.5e-05, 6) <= 0)
                     break;
-                rate = rate - 0.5e-05;
+                rate = Math.Round(rate - 0.5e-05, 6);
             }
             while (sa.GetSANumberEvaluations(TMax, rate - 0.2e-05, reps, TMin) < total_neighbors)
             {
-                if (rate - 0.2e-05 - 0.2e-05 < 0)
+                if (Math.Round(rate - 0.2e-05 - 0.2e-05, 6) <= 0)
                     break;
-                rate = rate - 0.2e-05;
+                rate = Math.Round(rate - 0.2e-05, 6);
             }
             while (sa.GetSANumberEvaluations(TMax, rate - 0.1e-05, reps, TMin) < total_neighbors)
             {
-                if (rate - 1e-06 - 1e-06 < 0)
+                if (rate - 0.1e-05 - 0.1e-05 < 0)
                     break;
-                rate = rate - 1e-06;
+                rate = Math.Round(rate - 0.1e-05, 6);
             }
             while (sa.GetSANumberEvaluations(TMax, rate - 0.1e-06, reps, TMin) < total_neighbors)
             {
-                if (rate - 1e-07 - 1e-07 < 0)
+                if (rate - 0.1e-06 - 0.1e-06 < 0)
                     break;
-                rate = rate - 1e-07;
+                rate = Math.Round(rate - 0.1e-06, 7);
             }
             //if (sa.GetSANumberEvaluations(TMax, rate - 0.1e-05, reps, TMin) < total_neighbors)
             //    rate = rate - 0.1e-05;
