@@ -43,6 +43,7 @@ namespace Tests.SimulatedAnnealingTest
                 int reps = 5;
                 double rate = -1;
                 int exec_time = 221000;
+                //int exec_time = 43200000;
 
                 for (int repeats = 0; repeats < repeats_count; repeats++)
                 {
@@ -194,41 +195,30 @@ namespace Tests.SimulatedAnnealingTest
             long total_neighbors = sa.EstimateTotalNumberOfNeighbors(50, exec_time, solution);
             double offset = 0.16;
             total_neighbors = (long)(total_neighbors * (1 - offset));
-            double rate = 15.0e-05;
+            double rate = 1.50e-04;
 
-            while (sa.GetSANumberEvaluations(TMax, rate - 1e-05, reps, TMin) < total_neighbors)
+            int power = -4;
+            double rate_to_sub = Math.Pow(10, power);
+            int depth = 2;
+            while (depth > 0)
             {
-                if (Math.Round(rate - 1e-05 - 1e-05, 6) <= 0)
-                    break;
-                rate = Math.Round(rate - 1e-05, 6);
+                if (sa.GetSANumberEvaluations(TMax, rate - rate_to_sub, reps, TMin) < total_neighbors)
+                {
+                    if (Math.Round(rate - rate_to_sub - rate_to_sub, Math.Abs(power) - 1) <= 0)
+                    {
+                        power--;
+                        rate_to_sub = Math.Pow(10, power);
+                    }
+                    rate = Math.Round(rate - rate_to_sub, Math.Abs(power) + 1);
+                    Console.WriteLine(rate);
+                }
+                else
+                {
+                    depth--;
+                    power--;
+                    rate_to_sub = Math.Pow(10, power);
+                }
             }
-            while (sa.GetSANumberEvaluations(TMax, rate - 0.5e-05, reps, TMin) < total_neighbors)
-            {
-                if (Math.Round(rate - 0.5e-05 - 0.5e-05, 6) <= 0)
-                    break;
-                rate = Math.Round(rate - 0.5e-05, 6);
-            }
-            while (sa.GetSANumberEvaluations(TMax, rate - 0.2e-05, reps, TMin) < total_neighbors)
-            {
-                if (Math.Round(rate - 0.2e-05 - 0.2e-05, 6) <= 0)
-                    break;
-                rate = Math.Round(rate - 0.2e-05, 6);
-            }
-            while (sa.GetSANumberEvaluations(TMax, rate - 0.1e-05, reps, TMin) < total_neighbors)
-            {
-                if (rate - 0.1e-05 - 0.1e-05 < 0)
-                    break;
-                rate = Math.Round(rate - 0.1e-05, 6);
-            }
-            while (sa.GetSANumberEvaluations(TMax, rate - 0.1e-06, reps, TMin) < total_neighbors)
-            {
-                if (rate - 0.1e-06 - 0.1e-06 < 0)
-                    break;
-                rate = Math.Round(rate - 0.1e-06, 7);
-            }
-            //if (sa.GetSANumberEvaluations(TMax, rate - 0.1e-05, reps, TMin) < total_neighbors)
-            //    rate = rate - 0.1e-05;
-
             return rate;
         }
     }

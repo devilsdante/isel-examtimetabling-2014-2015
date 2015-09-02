@@ -311,7 +311,7 @@ namespace Heuristics.SimulatedAnnealing.Timetable
         {
             Stopwatch watch = new Stopwatch();
             long computed_neighbors = -1;
-            int total_operators = total_neighbor_operators;
+            long total_operators = total_neighbor_operators;
             long computed_time = -1;
             INeighbor neighbor = null;
             watch.Start();
@@ -337,7 +337,7 @@ namespace Heuristics.SimulatedAnnealing.Timetable
             if (computed_time == 0)
                 return 0;
 
-            computed_neighbors = total_time*(average_reps*total_operators)/computed_time;
+            computed_neighbors = total_time / computed_time * (average_reps * total_operators);
 
             return computed_neighbors;
         }
