@@ -27,7 +27,6 @@ The \gls{sa} was implemented in a way that it is independent from the type of th
 {
 	+Exec(solution : ISolution, TMax : double, \\ TMin : double, loops : int, type : int, minimize : bool)\\
 	+Exec2(solution : ISolution, TMax : double, \\ TMin : double, loops : int, rate : double, type : int, minimize : bool)\\
-	+OnlyBetter(solution : ISolution, \\ milliseconds : long, type : int, minimize : bool)\\
 	+ExecLinearTimer(solution : ISolution, TMax : double,\\ TMin : double, milliseconds : long, type : int, long : minimize)\\
 	\umlvirt{\#GenerateNeighbor(solution : ISolution, type : int) : INeighbor}\\
 	\umlvirt{\#InitVals(type : int)}
@@ -45,6 +44,9 @@ The \gls{sa} was implemented in a way that it is independent from the type of th
 	-room\_swap : int\\
 	-period\_swap : int\\
 	-period\_room\_swap : int\\
+	+generated\_neighbors : int\\
+	-random : Random\\
+	-total\_neighbor\_operators : int
 }
 {
 	\#GenerateNeighbor(solution : ISolution, type : int) : INeighbor\\
@@ -52,7 +54,8 @@ The \gls{sa} was implemented in a way that it is independent from the type of th
 	-GenerateRandomNeighbor(solution : Solution) : INeighbor\\
 	-GenerateGuidedNeighbor1(solution : Solution) : INeighbor\\
 	-GenerateGuidedNeighbor2(solution : Solution) : INeighbor\\
-	\#InitVals(type : int)
+	\#InitVals(type : int)\\
+	+EstimateTotalNumberOfNeighbors(average\_reps : int, \\ total\_time : int, solution : Solution)
 }
 \end{umlpackage}
 
@@ -64,7 +67,7 @@ The \gls{sa} was implemented in a way that it is independent from the type of th
 \label{fig:SimulatedAnnealing}
 \end{figure}
 The \verb+SimulatedAnnealing+ abstract class has the methods \verb+Exec+, \verb+Exec2+, \verb+OnlyBetter+, and \verb+ExecLinearTimer+, which are all similar, but were created to test different approaches. All these methods share the same code, in exception to the cooling schedule (the way the temperature is updated) and acceptance criterion. The pseudo code of these can be seen in Algorithm \ref{alg:SimulatedAnnealing}.\\
-\begin{algorithm}[b!]
+\begin{algorithm}[t!]
 \textbf{Input:} 
 \begin{itemize}
 	\setlength{\itemsep}{1pt}
@@ -113,7 +116,7 @@ f(s) $\rightarrow$ Solution fitness\\
 \\
 Some testings on the parameters were performed, in order to check what parameters produce the best results. Due to the time taken, all the testings were made for the first set only, and so the same parameters will be used on all the sets so we can compare to results to other approaches, beginning with the five \gls{itc2007} finalists. Figure \ref{fig:SimulatedAnnealingPlot} illustrates an example of a plot of the \gls{sa} running with the following parameters: \textit{TMax} = 45, \textit{TMin} = $e^{-18}$, \textit{loops} = 5 and \textit{rate} = 0.01.\\
 \\
-\begin{figure}[!b]
+\begin{figure}[!t]
 \centering
 
 \begin{tikzpicture}
@@ -145,9 +148,46 @@ The tests performed on all the sets are shown and explained in Chapter \ref{chap
 
 \gls{hc} is a meta-heuristic different to the \gls{sa} family of meta-heuristics, in the sense that only accepts improving solutions. So, as long as it reaches a local optimum, it can't get out of that point because every neighbor solutions are worse. In this way, \gls{hc} only has one parameter that is the number of iterations or time limit which controls the algorithms' execution time.\\
 \\
-In the evaluation undertaken, the best results were obtained with the \verb+Exec2+ version of \gls{sa}. \gls{sa} was parametrized in order to finish execution within the specified time limit imposed by the \gls{itc2007} rules. \gls{hc} is executed after \gls{sa} until the time limit is reached.\\
+In the evaluation undertaken, the best results were obtained with the \verb+Exec2+ version of \gls{sa}. \gls{sa} was parametrized in order to finish execution within the specified time limit imposed by the \gls{itc2007} rules. \gls{hc} is executed after \gls{sa} until the time limit is reached.
+
+\subsection{Implementation}
+The implementation of this heuristic is very similar to the \gls{sa}, also containing the classes \verb+HillClimbing+ and \verb+HillClimbingTimetable+, which are simplified versions of the \gls{sa} classes. The \verb+HillClimbing+ and \verb+HillClimbingTimetable+'s methods and variables can be seen in Figure \ref{fig:HillClimbing}.\\
 \\
-The \gls{hc} implementation is under \verb+SimulationAnnealing+ class' \verb+OnlyBetter+ method.\\
+\begin{figure}[t!]
+\centering
+\begin{tikzpicture}
+\begin{umlpackage}[x = 2, y = 0]{Heuristics Layer} 
+\umlabstract[x = 0]{HillClimbing}
+{
+	\umlvirt{\#evaluation\_function : IEvaluationFunction}\\
+}
+{
+	+Exec(solution : ISolution, milliseconds : long, type : int, \\ minimize : bool)\\
+	\umlvirt{\#GenerateNeighbor(solution : ISolution, type : int) : INeighbor}
+}
+\umlclass[x = 0, y = -5]{HillClimbingTimetable}
+{
+	\#evaluation\_function : IEvaluationFunction\\
+	-neighbor\_selection\_timetable : NeighborSelectionTimetable\\
+	+\umlstatic{type\_random : int}\\
+	-random : Random\\
+	+generated\_neighbors : int\\
+	-total\_neighbor\_operators : int\\
+}
+{
+	\#GenerateNeighbor(solution : ISolution, type : int) : INeighbor\\
+	\#GenerateNeighbor(solution : Solution, type : int) : INeighbor\\
+	-GenerateRandomNeighbor(solution : Solution) : INeighbor\\
+}
+\end{umlpackage}
+
+
+\umlimpl[anchors=90 and -90]{HillClimbingTimetable}{HillClimbing} 
+\end{tikzpicture}
+
+\caption{Hill Climbing classes} 
+\label{fig:HillClimbing}
+\end{figure}
 
 \section{Neighborhood Operators}
 \label{sec:NeighborhoodOperators}
@@ -179,7 +219,7 @@ The neighborhood operators, in this context, are all based on moving examination
 The original concept of neighbor solution is to have another solution apart from the current one, which is the result of applying the neighborhood operator to the current solution. In order to have an efficient implementation, the neighbor only keeps the changes introduced in the solution, and not the changed solution. With this design, there's no need to replicate the original solution and apply the neighborhood operator to it in order to obtain the neighbor solution. The process of replacing the original solution with the neighbor, consists in applying to the current solution the movement registered in the neighbor.\\
 \\
 Every neighbor object must implement the interface \verb+INeighbor+, which presents the methods \verb+Accept+, \verb+Reverse+ and a real value that represents the fitness of the neighbor (the fitness of the new solution if this neighbor is to be accepted). The \verb+Accept+ method  moves the current solution to the neighbor solution. The \verb+Reverse+ method undoes the operation, getting then back the old solution. The different neighbors and their methods are illustrated in Figure \ref{fig:Neighbors}.\\
-\begin{figure}[b!]
+\begin{figure}[p!]
 \centering
 \begin{tikzpicture}
 \begin{umlpackage}[x = 2, y = 0]{Heuristics Layer} 
@@ -234,3 +274,18 @@ Every neighbor object must implement the interface \verb+INeighbor+, which prese
 \caption{Neighborhood selection and operators} 
 \label{fig:Neighbors}
 \end{figure}
+
+\section{Fitness Computation}
+\label{sec:FitnessComputation}
+
+The fitness computation is an important topic, when taking performance into consideration. As mentioned in the Subsection \ref{subsec:ToolsLayer}, this value is computed using the \verb+EvaluationFunction+ tool, which in a first approach, implied for generated neighbors, the recalculation of their fitness value. Tests were made to study this approach since the results were not as good as expected. The tests showed that this approach was having poor performance since most of the time was used to compute the fitness for each new neighbor generated solution.\\
+\\
+A new and final approach was implemented, which consists in computing the fitness incrementally. This means for each new generated neighbor, a new fitness value is computed based on the current solution's fitness. This approach takes advantage of the fact that the operations applied to the current solution are simple and so the neighbor solutions are, in most part, equal to the current solution. Thu, the fitness computation is performed considering only the small changes between the current solution and the new generated neighbor solution.\\
+\\
+Tests were made to compare both approaches and, using the same parameters, for the first set it was possible to achieve equivalent results, nineteen times faster.
+
+\subsection{Implementation}
+
+To compute the fitness of the neighbor solutions incrementally, a fitness function must be implemented depending on the type of neighbor. Considering all neighbors have a reference to the solution they derive from, and the methods \verb+Accept+ and \verb+Reject+, it's possible to access the current solution and the neighbor generated solution (Reminding that the \verb+Accept+ will change the current solution and so the reference presented in this neighbor, replacing with the neighbor solution). \\
+\\
+The differences between the fitness values of the current solution and the new neighbor's depend on the type of the neighbor created. For example, if a \verb+RoomSwapNeighbor+ is created, the changes will occur in the mixed durations constraints value of the periods and rooms of the swapped examinations. It is necessary to compute the impact (fitness values) of these conflicts in the current solution and subtract its value to the current fitness, proceeding with computing the same impact but now for the generated neighbor and sum its value to the current fitness, thus obtaining the new neighbor's fitness value. The impact computing mentioned above is a simple rule that is must be followed by all the soft constraints when computing the new neighbor's fitness incrementally.

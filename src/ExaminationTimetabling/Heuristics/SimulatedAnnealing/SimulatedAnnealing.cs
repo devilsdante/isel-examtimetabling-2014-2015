@@ -90,52 +90,54 @@ namespace Heuristics.SimulatedAnnealing
 
                     double DeltaE = minimize ? neighbor.fitness - solution.fitness : solution.fitness - neighbor.fitness;
 
+                    //TODO Tests only
                     //*********
-                    int exam1 = -1;
-                    int exam2 = -1;
-                    if (neighbor.type == 4)
-                    {
-                        RoomChangeNeighbor n = (RoomChangeNeighbor)neighbor;
-                        exam1 = n.examination_id;
-                    }
-                    if (neighbor.type == 5)
-                    {
-                        RoomSwapNeighbor n = (RoomSwapNeighbor)neighbor;
-                        exam1 = n.examination1_id;
-                        exam2 = n.examination2_id;
-                    }
-                    if (neighbor.type == 0)
-                    {
-                        PeriodChangeNeighbor n = (PeriodChangeNeighbor)neighbor;
-                        exam1 = n.examination_id;
-                    }
-                    if (neighbor.type == 3)
-                    {
-                        PeriodSwapNeighbor n = (PeriodSwapNeighbor)neighbor;
-                        exam1 = n.examination1_id;
-                        exam2 = n.examination2_id;
-                    }
-                    if (neighbor.type == 1)
-                    {
-                        PeriodRoomChangeNeighbor n = (PeriodRoomChangeNeighbor)neighbor;
-                        exam1 = n.examination_id;
-                    }
-                    if (neighbor.type == 2)
-                    {
-                        PeriodRoomSwapNeighbor n = (PeriodRoomSwapNeighbor)neighbor;
-                        exam1 = n.examination1_id;
-                        exam2 = n.examination2_id;
-                    }
+                    //int exam1 = -1;
+                    //int exam2 = -1;
+                    //if (neighbor.type == 4)
+                    //{
+                    //    RoomChangeNeighbor n = (RoomChangeNeighbor)neighbor;
+                    //    exam1 = n.examination_id;
+                    //}
+                    //if (neighbor.type == 5)
+                    //{
+                    //    RoomSwapNeighbor n = (RoomSwapNeighbor)neighbor;
+                    //    exam1 = n.examination1_id;
+                    //    exam2 = n.examination2_id;
+                    //}
+                    //if (neighbor.type == 0)
+                    //{
+                    //    PeriodChangeNeighbor n = (PeriodChangeNeighbor)neighbor;
+                    //    exam1 = n.examination_id;
+                    //}
+                    //if (neighbor.type == 3)
+                    //{
+                    //    PeriodSwapNeighbor n = (PeriodSwapNeighbor)neighbor;
+                    //    exam1 = n.examination1_id;
+                    //    exam2 = n.examination2_id;
+                    //}
+                    //if (neighbor.type == 1)
+                    //{
+                    //    PeriodRoomChangeNeighbor n = (PeriodRoomChangeNeighbor)neighbor;
+                    //    exam1 = n.examination_id;
+                    //}
+                    //if (neighbor.type == 2)
+                    //{
+                    //    PeriodRoomSwapNeighbor n = (PeriodRoomSwapNeighbor)neighbor;
+                    //    exam1 = n.examination1_id;
+                    //    exam2 = n.examination2_id;
+                    //}
                     //*******
 
                     if (DeltaE <= 0)
                     {
-                        StaticMatrix.static_matrix[
-                                StaticMatrix.run * 2, StaticMatrix.examinations.IndexOf(exam1)]++;
+                        //TODO Tests only
+                        //StaticMatrix.static_matrix[
+                        //        StaticMatrix.run * 2, StaticMatrix.examinations.IndexOf(exam1)]++;
 
-                        if (neighbor.type == 2 || neighbor.type == 3 || neighbor.type == 5)
-                            StaticMatrix.static_matrix[
-                                StaticMatrix.run * 2, StaticMatrix.examinations.IndexOf(exam2)]++;  
+                        //if (neighbor.type == 2 || neighbor.type == 3 || neighbor.type == 5)
+                        //    StaticMatrix.static_matrix[
+                        //        StaticMatrix.run * 2, StaticMatrix.examinations.IndexOf(exam2)]++;  
 
                         solution = neighbor.Accept();
                         solution.fitness = neighbor.fitness;
@@ -147,24 +149,26 @@ namespace Heuristics.SimulatedAnnealing
 
                         if (chance <= acceptance_probability)
                         {
-                            StaticMatrix.static_matrix[
-                                    StaticMatrix.run * 2, StaticMatrix.examinations.IndexOf(exam1)]++;
+                            //TODO Tests only
+                            //StaticMatrix.static_matrix[
+                            //        StaticMatrix.run * 2, StaticMatrix.examinations.IndexOf(exam1)]++;
 
-                            if (neighbor.type == 2 || neighbor.type == 3 || neighbor.type == 5)
-                                StaticMatrix.static_matrix[
-                                    StaticMatrix.run * 2, StaticMatrix.examinations.IndexOf(exam2)]++;  
+                            //if (neighbor.type == 2 || neighbor.type == 3 || neighbor.type == 5)
+                            //    StaticMatrix.static_matrix[
+                            //        StaticMatrix.run * 2, StaticMatrix.examinations.IndexOf(exam2)]++;  
 
                             solution = neighbor.Accept();
                             solution.fitness = neighbor.fitness;
                         }
                         else
                         {
-                            StaticMatrix.static_matrix[
-                                StaticMatrix.run * 2 + 1, StaticMatrix.examinations.IndexOf(exam1)]++;
+                            //TODO Tests only
+                            //StaticMatrix.static_matrix[
+                            //    StaticMatrix.run * 2 + 1, StaticMatrix.examinations.IndexOf(exam1)]++;
 
-                            if (neighbor.type == 2 || neighbor.type == 3 || neighbor.type == 5)
-                                StaticMatrix.static_matrix[
-                                    StaticMatrix.run * 2 + 1, StaticMatrix.examinations.IndexOf(exam2)]++;  
+                            //if (neighbor.type == 2 || neighbor.type == 3 || neighbor.type == 5)
+                            //    StaticMatrix.static_matrix[
+                            //        StaticMatrix.run * 2 + 1, StaticMatrix.examinations.IndexOf(exam2)]++;  
                             continue;
                         }
 

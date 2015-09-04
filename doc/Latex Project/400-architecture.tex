@@ -8,7 +8,7 @@ In this chapter, a description of the architecture is given. The subsystems that
 
 The architecture of this project is divided in multiple layers. These are independent from one another and each of them has its unique features considering the objectives of this project. The layers presented in the project are named \textit{\gls{dl}}, \textit{\gls{dal}}, \textit{\gls{bl}}, \textit{\gls{hl}}, \textit{\gls{tl}}, and \textit{\gls{pl}}. The assortment, dependencies and the main classes of each layer can be seen in Figure \ref{fig:SystemArchitecture}.
 
-\begin{figure}[t!]
+\begin{figure}[p!]
 \centering
 \begin{tikzpicture}
 \begin{umlpackage}[x = 4, y = 0]{Data Layer} 
@@ -271,6 +271,7 @@ All the business classes implement the \textit{Singleton} pattern. This decision
 \end{figure}
 
 \subsection{Tools Layer}
+\label{subsec:ToolsLayer}
 The \gls{tl} contains all the tools used by the \gls{hl} and by the lower layers, while using the \gls{bl} to access the stored entities. These tools are named \verb+EvaluationFunction+, \verb+Loader+, \verb+NeighborSelection+, \verb+FeasibilityTester+, and \verb+OutputFormatting+.\\
 \\
 \verb+EvaluationFunction+ is a tool  for solution validation, and computation of solution's fitness and distance to feasibility. A solution is only valid if the examinations are all scheduled, even if the solution is not feasible. The distance to feasibility determines the number of violated hard constraints and the fitness determines the score of the solution depending on the violated soft constraints and its penalty values. The distance to feasibility is used by the \gls{gc} heuristic to guarantee that the end solution is feasible, while the fitness is used by the metaheuristics used, such as SA, to compare different solutions.\\
@@ -291,12 +292,7 @@ Detailed explanation about these heuristics are given in Chapters \ref{sec:Solut
 
 \subsection{Presentation Layer}
 
-The \gls{pl}, in this phase, works mainly as a debugger to run the project functionalities and to check the final results. It's in this layer that all the tests are made, such as checking execution time and changing input parameters on both \gls{sa} and \gls{hc}, to check if better results can be achieved.\\
-\\
-It is planned to be implemented, in a latter  phase, another version of the presentation layer that includes the visualization of the final and best timetable generated.
-
-
-
+The \gls{pl}, in this phase, works mainly as a debugger to run the project functionalities and to check the final results. It's in this layer that all the tests are made, such as checking execution time and changing input parameters on both \gls{sa} and \gls{hc}, to check if better results can be achieved.
 
 
 

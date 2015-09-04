@@ -381,16 +381,6 @@ namespace Tools.EvaluationFunction.Timetable
             return true;
         }
 
-
-
-        //public int Fitness(INeighbor neighbor)
-        //{
-        //    ISolution new_solution = neighbor.Accept();
-        //    int fitness = Fitness(new_solution);
-        //    neighbor.Reverse();
-        //    return fitness;
-        //}
-
         private int Fitness(RoomChangeNeighbor n)
         {
             int fitness = n.solution.fitness + (rooms.GetById(n.new_room_id).penalty - rooms.GetById(n.old_room_id).penalty);
@@ -405,6 +395,7 @@ namespace Tools.EvaluationFunction.Timetable
             fitness += ConflictMixedDurationsFromPeriodAndRoom(n.period_id, n.new_room_id, n.solution);
             n.Reverse();
 
+            //TODO only for testing
             //ISolution new_solution = n.Accept();
             //int dtf = Fitness(new_solution);
             //n.Reverse();
@@ -428,6 +419,7 @@ namespace Tools.EvaluationFunction.Timetable
             fitness += ConflictMixedDurationsFromPeriodAndRoom(n.period2_id, n.room2_id, n.solution);
             n.Reverse();
 
+            //TODO only for testing
             //ISolution new_solution = n.Accept();
             //int dtf = Fitness(new_solution);
             //n.Reverse();
@@ -480,6 +472,7 @@ namespace Tools.EvaluationFunction.Timetable
             fitness += ConflictInADayAndRowFromDay(n.examination_id, n.new_period_id, n.solution);
             n.Reverse();
 
+            //TODO only for testing
             //ISolution new_solution = n.Accept();
             //int dtf = Fitness(new_solution);
             //n.Reverse();
@@ -549,6 +542,7 @@ namespace Tools.EvaluationFunction.Timetable
             fitness += ConflictInADayAndRowFromDay(n.examination2_id, n.period1_id, n.solution);
             n.Reverse();
 
+            //TODO only for testing
             //ISolution new_solution = n.Accept();
             //int dtf = Fitness(new_solution);
             //n.Reverse();
@@ -606,6 +600,7 @@ namespace Tools.EvaluationFunction.Timetable
             fitness += ConflictInADayAndRowFromDay(n.examination_id, n.new_period_id, n.solution);
             n.Reverse();
 
+            //TODO only for testing
             //ISolution new_solution = n.Accept();
             //int dtf = Fitness(new_solution);
             //n.Reverse();
@@ -674,7 +669,8 @@ namespace Tools.EvaluationFunction.Timetable
             fitness += ConflictInADayAndRowFromDay(n.examination1_id, n.period2_id, n.solution);
             fitness += ConflictInADayAndRowFromDay(n.examination2_id, n.period1_id, n.solution);
             n.Reverse();
-            
+
+            //TODO only for testing
             //ISolution new_solution = n.Accept();
             //int dtf = Fitness(new_solution);
             //n.Reverse();

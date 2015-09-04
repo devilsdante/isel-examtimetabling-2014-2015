@@ -27,7 +27,7 @@ namespace Tests.SimulatedAnnealingTest
 
             Solution solution = null;
             Solution SA_Solution = null;
-            int repeats_count = 1;
+            int repeats_count = 20;
 
             OutputFormatting.StartNew("..//..//results.txt");
 
@@ -43,7 +43,7 @@ namespace Tests.SimulatedAnnealingTest
                 int reps = 5;
                 double rate = -1;
                 int exec_time = 221000;
-                //int exec_time = 43200000;
+                //int exec_time = 43200000/24;
 
                 for (int repeats = 0; repeats < repeats_count; repeats++)
                 {
@@ -62,9 +62,9 @@ namespace Tests.SimulatedAnnealingTest
                     Console.WriteLine("Loader: " + watch.ElapsedMilliseconds);
 
                     //StaticMatrix.examinations = StaticMatrix.examinations ?? Examinations.Instance().GetAll().OrderByDescending(exam => exam.conflict).ToList().ConvertAll(exam => exam.id);
-                    StaticMatrix.examinations = StaticMatrix.examinations ?? new List<int>(loader.examination_examinations_conflicts.Keys.OrderByDescending(x => loader.examination_examinations_conflicts[x].Count));
-                    StaticMatrix.static_matrix = StaticMatrix.static_matrix ?? new int[repeats_count*2, StaticMatrix.examinations.Count];
-                    StaticMatrix.run = repeats;
+                    //StaticMatrix.examinations = StaticMatrix.examinations ?? new List<int>(loader.examination_examinations_conflicts.Keys.OrderByDescending(x => loader.examination_examinations_conflicts[x].Count));
+                    //StaticMatrix.static_matrix = StaticMatrix.static_matrix ?? new int[repeats_count * 2, StaticMatrix.examinations.Count];
+                    //StaticMatrix.run = repeats;
 
                     var evaluation = new EvaluationFunctionTimetable();
 
@@ -210,7 +210,7 @@ namespace Tests.SimulatedAnnealingTest
                         rate_to_sub = Math.Pow(10, power);
                     }
                     rate = Math.Round(rate - rate_to_sub, Math.Abs(power) + 1);
-                    Console.WriteLine(rate);
+                    //Console.WriteLine(rate);
                 }
                 else
                 {

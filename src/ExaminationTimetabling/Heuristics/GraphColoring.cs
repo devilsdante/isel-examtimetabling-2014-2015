@@ -30,7 +30,6 @@ namespace Heuristics
         private List<Examination> unassigned_examinations_with_exclusive;
 
         private readonly Random random;
-        private List<int> my_list;
 
 
         public GraphColoring()
@@ -42,7 +41,6 @@ namespace Heuristics
             rooms = Rooms.Instance();
             conflict_matrix = ConflictMatrix.Instance().Get();
             random = new Random(Guid.NewGuid().GetHashCode());
-            my_list = new List<int>(new int[examinations.EntryCount()]);
         }
 
         public Solution Exec()
@@ -84,7 +82,6 @@ namespace Heuristics
                     list_to_use = unassigned_examinations;
 
                 var exam_to_assign = list_to_use.Last();
-                my_list[exam_to_assign.id]++;
                 list_to_use.RemoveAt(list_to_use.Count - 1);
 
                 /**/
@@ -354,11 +351,11 @@ namespace Heuristics
                     exams_to_unassign.Sum(ex_id => examinations.GetById(ex_id).students_count);
                 UnassignExaminations(exams_to_unassign);
             }
-            ////TODO remover, só para testes
+            ////TODO Só para testes
             //if (feasibility_tester.RoomCurrentCapacityOnPeriod(solution, period_to_assign, room_to_assign) != room_to_assign_curr_capacity)
             //    throw new Exception("Period and room are not feasible but should've been");
 
-            ////TODO remover, só para testes
+            ////TODO Só para testes
             //if (!feasibility_tester.IsFeasiblePeriod(solution, exam_to_assign, period_to_assign) ||
             //    !feasibility_tester.IsFeasibleRoom(solution, exam_to_assign, period_to_assign, room_to_assign))
             //    throw new Exception("Period and room are not feasible but should've been");

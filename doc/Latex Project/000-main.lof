@@ -12,6 +12,7 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Simulated Annealing classes\relax }}{31}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Simulated Annealing results: score value as a function of the temperature\relax }}{33}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Neighborhood selection and operators\relax }}{36}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Hill Climbing classes\relax }}{34}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Neighborhood selection and operators\relax }}{37}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

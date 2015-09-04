@@ -16,13 +16,13 @@ namespace Heuristics
     {
         protected abstract IEvaluationFunction evaluation_function { get; set; }
 
-        public ISolution Exec(ISolution solution, long miliseconds, int type, bool minimize)
+        public ISolution Exec(ISolution solution, long milliseconds, int type, bool minimize)
         {
             Stopwatch watch = Stopwatch.StartNew();
             Stopwatch watch2 = Stopwatch.StartNew();
             //InitVals(type);
 
-            while (watch.ElapsedMilliseconds < miliseconds)
+            while (watch.ElapsedMilliseconds < milliseconds)
             {
                 //TimerPrinter(watch.ElapsedMilliseconds, miliseconds);
                 //watch.Restart();
@@ -74,24 +74,24 @@ namespace Heuristics
 
                 if (DeltaE <= 0)
                 {
-                    StaticMatrix.static_matrix[
-                        StaticMatrix.run*2, StaticMatrix.examinations.IndexOf(exam1)]++;
+                //    StaticMatrix.static_matrix[
+                //        StaticMatrix.run*2, StaticMatrix.examinations.IndexOf(exam1)]++;
 
-                    if (neighbor.type == 2 || neighbor.type == 3 || neighbor.type == 5)
-                        StaticMatrix.static_matrix[
-                            StaticMatrix.run*2, StaticMatrix.examinations.IndexOf(exam2)]++;
+                //    if (neighbor.type == 2 || neighbor.type == 3 || neighbor.type == 5)
+                //        StaticMatrix.static_matrix[
+                //            StaticMatrix.run*2, StaticMatrix.examinations.IndexOf(exam2)]++;
 
                     solution = neighbor.Accept();
                     solution.fitness = neighbor.fitness;
                 }
                 else
                 {
-                    StaticMatrix.static_matrix[
-                                StaticMatrix.run * 2 + 1, StaticMatrix.examinations.IndexOf(exam1)]++;
+                    //StaticMatrix.static_matrix[
+                    //            StaticMatrix.run * 2 + 1, StaticMatrix.examinations.IndexOf(exam1)]++;
 
-                    if (neighbor.type == 2 || neighbor.type == 3 || neighbor.type == 5)
-                        StaticMatrix.static_matrix[
-                            StaticMatrix.run * 2 + 1, StaticMatrix.examinations.IndexOf(exam2)]++;  
+                    //if (neighbor.type == 2 || neighbor.type == 3 || neighbor.type == 5)
+                    //    StaticMatrix.static_matrix[
+                    //        StaticMatrix.run * 2 + 1, StaticMatrix.examinations.IndexOf(exam2)]++;  
                     continue;
                 }
             }
