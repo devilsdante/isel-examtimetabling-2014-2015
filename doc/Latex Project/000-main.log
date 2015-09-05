@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.16)  4 SEP 2015 01:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.16)  4 SEP 2015 15:55
 entering extended mode
 **000-main.tex
 (000-main.tex
@@ -3678,7 +3678,7 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Here is how much of TeX's memory you used:
  49419 strings out of 493671
  1125823 string characters out of 3141423
- 2821709 words of memory out of 3000000
+ 2821711 words of memory out of 3000000
  51768 multiletter control sequences out of 15000+200000
  93281 words of font info for 88 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191

@@ -27,7 +27,7 @@ namespace Tests.SimulatedAnnealingTest
 
             Solution solution = null;
             Solution SA_Solution = null;
-            int repeats_count = 20;
+            int repeats_count = 1;
 
             OutputFormatting.StartNew("..//..//results.txt");
 
@@ -42,8 +42,8 @@ namespace Tests.SimulatedAnnealingTest
                 double TMin = 1e-06;
                 int reps = 5;
                 double rate = -1;
-                int exec_time = 221000;
-                //int exec_time = 43200000/24;
+                //int exec_time = 221000;
+                int exec_time = 43200000;
 
                 for (int repeats = 0; repeats < repeats_count; repeats++)
                 {
