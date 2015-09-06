@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.16)  4 SEP 2015 15:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.16)  6 SEP 2015 05:11
 entering extended mode
 **000-main.tex
 (000-main.tex
@@ -2473,7 +2473,7 @@ LaTeX Font Info:    Font shape `T1/fve/b/n' will be
 (Font)              scaled to size 10.79993pt on input line 25.
 
 Overfull \hbox (20.63666pt too wide) in paragraph at lines 27--29
-\T1/fve/m/n/10 Heuristicas; Meta-heuristicas; In-ter-na-tional Timetabling Com-
+\T1/fve/m/n/10 Heurísticas; Meta-heurísticas; In-ter-na-tional Timetabling Com-
 pe-ti-tion 2007; Timetable; Horários;
  []
 
@@ -3357,6 +3357,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--97
  []
 
 
+Overfull \hbox (5.67871pt too wide) in paragraph at lines 16--97
+ \T1/fve/m/n/10 The []\T1/fvm/m/n/10 SimulatedAnnealing \T1/fve/m/n/10 ab-strac
+t class has the meth-ods []\T1/fvm/m/n/10 Exec\T1/fve/m/n/10 , []\T1/fvm/m/n/10
+ Exec2\T1/fve/m/n/10 , and []\T1/fvm/m/n/10 ExecLinearTimer\T1/fve/m/n/10 ,
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 16--97
 
  []
@@ -3396,7 +3403,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 108--114
 
  []
 
-Package pgfplots info on input line 128: Overriding colorspace to rgb due to xc
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 5.39996pt on input line 129.
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 4.49997pt on input line 129.
+Package pgfplots info on input line 160: Overriding colorspace to rgb due to xc
 olor configuration.
 Missing character: There is no s in font nullfont!
 Missing character: There is no o in font nullfont!
@@ -3405,161 +3416,162 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no d in font nullfont!
 PGFPlots: reading {sa_plot_data.dat}
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--145
+Underfull \hbox (badness 10000) in paragraph at lines 114--176
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--145
+Underfull \hbox (badness 10000) in paragraph at lines 114--176
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--145
+Underfull \hbox (badness 10000) in paragraph at lines 114--176
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 149--152
-
- []
-
-Missing character: There is no H in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no L in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no H in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no L in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-
-Underfull \hbox (badness 10000) in paragraph at lines 154--191
+Underfull \hbox (badness 10000) in paragraph at lines 114--176
 
  []
 
 [32]
-Underfull \hbox (badness 10000) in paragraph at lines 195--203
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 195--203
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 195--203
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 195--203
+Underfull \hbox (badness 10000) in paragraph at lines 180--183
 
  []
 
 [33]
-Underfull \hbox (badness 10000) in paragraph at lines 204--205
+Missing character: There is no H in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no H in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+
+Underfull \hbox (badness 10000) in paragraph at lines 185--222
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 206--207
+Underfull \hbox (badness 10000) in paragraph at lines 226--234
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 208--209
+Underfull \hbox (badness 10000) in paragraph at lines 226--234
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 226--234
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 226--234
 
  []
 
 [34]
-Underfull \hbox (badness 10000) in paragraph at lines 210--211
+Underfull \hbox (badness 10000) in paragraph at lines 235--236
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 212--213
+Underfull \hbox (badness 10000) in paragraph at lines 237--238
 
  []
 
-Missing character: There is no H in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no L in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no H in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no L in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
 
-Underfull \hbox (badness 10000) in paragraph at lines 219--277
+Underfull \hbox (badness 10000) in paragraph at lines 239--240
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 241--242
 
  []
 
 [35]
-Underfull \hbox (badness 10000) in paragraph at lines 281--286
+Underfull \hbox (badness 10000) in paragraph at lines 243--244
+
+ []
+
+Missing character: There is no H in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no H in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+
+Underfull \hbox (badness 10000) in paragraph at lines 250--308
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 281--286
+Underfull \hbox (badness 10000) in paragraph at lines 312--317
 
  []
 
-)
-Underfull \hbox (badness 10000) in paragraph at lines 289--119
+
+Underfull \hbox (badness 10000) in paragraph at lines 312--317
 
  []
 
-[36] [37] (550-experimental-results.tex [38
+[36] [37])
+Underfull \hbox (badness 10000) in paragraph at lines 320--119
 
+ []
 
-
-
-]
+[38] (550-experimental-results.tex
 Chapter 6.
 )
 Underfull \hbox (badness 10000) in paragraph at lines 4--120
@@ -3586,7 +3598,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--120
 
  []
 
-[39] [40] (550-future-work.tex
+[39
+
+
+
+
+] [40] (550-future-work.tex
 Chapter 7.
 )
 Underfull \hbox (badness 10000) in paragraph at lines 4--121
@@ -3676,11 +3693,11 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 49419 strings out of 493671
- 1125823 string characters out of 3141423
- 2821711 words of memory out of 3000000
- 51768 multiletter control sequences out of 15000+200000
- 93281 words of font info for 88 fonts, out of 3000000 for 9000
+ 49423 strings out of 493671
+ 1125891 string characters out of 3141423
+ 2978152 words of memory out of 3000000
+ 51772 multiletter control sequences out of 15000+200000
+ 97033 words of font info for 90 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  63i,15n,105p,10397b,2255s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program F
@@ -3704,7 +3721,7 @@ m Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy5.pfb><C:/Program Files (x86
 )/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9
 /fonts/type1/public/lm/lmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 /public/lm/lmsy9.pfb>
-Output written on 000-main.pdf (61 pages, 640486 bytes).
+Output written on 000-main.pdf (61 pages, 747006 bytes).
 PDF statistics:
  356 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

@@ -19,7 +19,7 @@ namespace Tools.NeighborSelection.Timetable
         private readonly Periods periods;
         private readonly FeasibilityTester feasibility_tester;
         private readonly EvaluationFunctionTimetable evaluation_function_timetable;
-        public static int non_feasibles;
+        public static long non_feasibles;
         private Random random;
 
         public NeighborSelectionTimetable()

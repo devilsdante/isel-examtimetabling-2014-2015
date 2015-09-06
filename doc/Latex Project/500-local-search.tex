@@ -66,7 +66,7 @@ The \gls{sa} was implemented in a way that it is independent from the type of th
 \caption{Simulated Annealing classes} 
 \label{fig:SimulatedAnnealing}
 \end{figure}
-The \verb+SimulatedAnnealing+ abstract class has the methods \verb+Exec+, \verb+Exec2+, \verb+OnlyBetter+, and \verb+ExecLinearTimer+, which are all similar, but were created to test different approaches. All these methods share the same code, in exception to the cooling schedule (the way the temperature is updated) and acceptance criterion. The pseudo code of these can be seen in Algorithm \ref{alg:SimulatedAnnealing}.\\
+The \verb+SimulatedAnnealing+ abstract class has the methods \verb+Exec+, \verb+Exec2+, and \verb+ExecLinearTimer+, which are all similar, but were created to test different approaches. All these methods share the same code, in exception to the cooling schedule (the way the temperature is updated) and acceptance criterion. The pseudo code of these can be seen in Algorithm \ref{alg:SimulatedAnnealing}.\\
 \begin{algorithm}[t!]
 \textbf{Input:} 
 \begin{itemize}
@@ -114,7 +114,39 @@ This method also uses a different acceptance criterion:\\
 \[P(\delta E, T, SF) = e^{\frac{-\delta E}{T.f(s)}} \]
 f(s) $\rightarrow$ Solution fitness\\
 \\
-Some testings on the parameters were performed, in order to check what parameters produce the best results. Due to the time taken, all the testings were made for the first set only, and so the same parameters will be used on all the sets so we can compare to results to other approaches, beginning with the five \gls{itc2007} finalists. Figure \ref{fig:SimulatedAnnealingPlot} illustrates an example of a plot of the \gls{sa} running with the following parameters: \textit{TMax} = 45, \textit{TMin} = $e^{-18}$, \textit{loops} = 5 and \textit{rate} = 0.01.\\
+The behavior of this meta-heuristic depends on the given parameters (maximum and minimum temperature, rate, number of loops per temperature, type of the cooling schedule), and the difficulty of the set is also important, considering the execution time limit. Knowing this, it's important to choose the parameters wisely to obtain the best possible results. But, each set has its own characteristics and using parameters for one set does not guarantee that the results will be equivalently good for the others. One example is finding the best parameters for the first set, and make it try run for about 200 milliseconds. This does not mean the others will run for about the same amount of time, degrading the effectiveness of this heuristic. Thus, a variable rate was implemented.\\
+\\
+The variable rate was implemented to make this meta-heuristic run closer to the given time limit. It starts by simulating the execution of this meta-heuristic, by running all the neighbor operators \textit{n} times and using the elapsed time and the given time limit, we estimate the number of neighbors that would be generated if this meta-heuristic was to be run within the time limit. To calculate the said number of total neighbors, we use this math expression: $CompNeighbs = TotalTime / CompTime * AverageReps * TotalOperats$. After that, we compute the exact number of the neighbors ($TotalNeighbs$) that will be generated for the given parameters, using the default rate. This is achieved by simulating this meta-heuristic using those parameters, cooling the current temperature until it reaches the minimum and returning the number supposed generated neighbors. If the $TotalNeighbs$ is way higher than the $CompNeighbs$, a lower rate will be used to make another simulation, until the $TotalNeighbs$ for the given rate reaches a value that is close to the $TotalNeighbs$. The pseudo code of this method can be seen in Algorithm \ref{alg:RateComputing}.\\
+\\
+\begin{algorithm}[t!]
+\textbf{Input:} 
+\begin{itemize}
+	\setlength{\itemsep}{1pt}
+	\item $s$ \Comment{Solution}
+	\item $TMax$ \Comment{Maximum temperature}
+	\item $TMin$ \Comment{Minimum temperature}
+	\item $reps$ \Comment{Number of loops per temperature}
+	\item $exec\_time$ \Comment{Execution time limit}
+\end{itemize}
+\begin{algorithmic}
+\State $sa = SAInit()$ ;
+\State $n = 50$ ; \Comment{Number of times each operator runs}
+\State $est\_neighbors = sa.EstimateNumberNeighbors(n, exec\_time, s)$ ;
+\State $rate = 1.50^{-04}$ ;\Comment{Initial default rate}
+\State $power = -4$ ;
+\State $rate\_to\_sub = 10^{power}$ ;\Comment{Rate decrementing}
+\State $total\_neighbors = sa.GetNumberNeighbors(TMax, rate, reps, TMin)$ ;
+\Repeat	
+	\State \textbf{If} $rate - rate\_to\_sub \leq 0$ \textbf{Then} $power = power - 1$ ; $rate\_to\_sub = 10^{power}$ ;
+	\State $rate = rate - rate\_to\_sub$ ;
+	\State $total\_neighbors = sa.GetNumberNeighbors(TMax, rate, reps, TMin)$ ;
+\Until $total\_neighbors < est\_neighbors$
+\State $rate = rate + rate\_to\_sub$ ; \Comment{To guarantee that total\_neighbors < est\_neighbors}
+\State \textbf{Output:} $rate$ \Comment{Return computed rate}
+\end{algorithmic}
+\caption{Rate computing.}
+\label{alg:RateComputing}
+\end{algorithm}Some testings were made in order to check this meta-heuristic's behavior, using the following parameters: \textit{TMax} = 0.1, \textit{TMin} = $1e-06$, \textit{loops} = 5, \textit{exec\_time} = 50000, and the computed\_rate = 0.00016. As can be seen in Figure \ref{fig:SimulatedAnnealingPlot}, it starts by accepting all worse and better neighbor solutions. In the end, the temperature is so low that it becomes harder to accept worse solutions, ending up acting similar to the \gls{hc} procedure.\\
 \\
 \begin{figure}[!t]
 \centering
@@ -122,7 +154,7 @@ Some testings on the parameters were performed, in order to check what parameter
 \begin{tikzpicture}
 \begin{axis}[
     title={},
-    xlabel={-log10(Temperature)},
+    xlabel={Neighbor index},
     ylabel={Solution score},
     mark size=0.2pt
 ]
@@ -139,8 +171,7 @@ Some testings on the parameters were performed, in order to check what parameter
 
 \caption{Simulated Annealing results: score value as a function of the temperature} 
 \label{fig:SimulatedAnnealingPlot}
-\end{figure}As can be seen in Figure \ref{fig:SimulatedAnnealingPlot}, it starts by accepting almost all better neighbor solutions, because in the beginning they are rather easy to find and are all accepted. In the middle, the score of the accepted neighbors are stable, because it accepts almost all worst solutions and the ratio of seeking better or worse solutions is very similar. In the end, the temperature is so low that it becomes harder to accept worse solutions, ending up acting similar to the \gls{hc} procedure.\\
-\\
+\end{figure}
 The tests performed on all the sets are shown and explained in Chapter \ref{chap:ExpResults}.
 
 \section{Hill Climbing}

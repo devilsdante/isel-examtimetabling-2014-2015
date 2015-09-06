@@ -32,7 +32,7 @@ namespace Heuristics.SimulatedAnnealing.Timetable
         private int period_swap;
         private int period_room_swap;
 
-        public int generated_neighbors;
+        public long generated_neighbors;
 
         private readonly Random random;
 

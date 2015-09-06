@@ -42,8 +42,9 @@ namespace Tests.SimulatedAnnealingTest
                 double TMin = 1e-06;
                 int reps = 5;
                 double rate = -1;
-                //int exec_time = 221000;
-                int exec_time = 43200000;
+                int exec_time = 221000;
+                //int exec_time = 43200000;
+                //int exec_time = 50000;
 
                 for (int repeats = 0; repeats < repeats_count; repeats++)
                 {
@@ -87,8 +88,8 @@ namespace Tests.SimulatedAnnealingTest
                     sa.Exec2(solution, TMax, TMin, reps, rate, SimulatedAnnealingTimetable.type_random, true);
                     long sa_time = watch.ElapsedMilliseconds;
                     int sa_fitness = solution.fitness;
-                    int sa_feas_neighbors = sa.generated_neighbors;
-                    int sa_nonfeas_neighbors = NeighborSelectionTimetable.non_feasibles;
+                    long sa_feas_neighbors = sa.generated_neighbors;
+                    long sa_nonfeas_neighbors = NeighborSelectionTimetable.non_feasibles;
 
                     Console.WriteLine("SA Time: " + sa_time);
                     Console.WriteLine("SA Random Fitness: " + sa_fitness);
@@ -101,8 +102,8 @@ namespace Tests.SimulatedAnnealingTest
                     long total_time = watch2.ElapsedMilliseconds;
                     long hc_time = total_time - sa_time;
                     int hc_fitness = solution.fitness;
-                    int hc_feas_neighbors = hc.generated_neighbors;
-                    int hc_nonfeas_neighbors = NeighborSelectionTimetable.non_feasibles;
+                    long hc_feas_neighbors = hc.generated_neighbors;
+                    long hc_nonfeas_neighbors = NeighborSelectionTimetable.non_feasibles;
 
                     Console.WriteLine("HC Total Time: " + hc_time);
                     Console.WriteLine("HC Random Fitness: " + hc_fitness);
@@ -195,25 +196,26 @@ namespace Tests.SimulatedAnnealingTest
             long total_neighbors = sa.EstimateTotalNumberOfNeighbors(50, exec_time, solution);
             double offset = 0.16;
             total_neighbors = (long)(total_neighbors * (1 - offset));
-            double rate = 1.50e-04;
+            double rate = 1.50e-02;
 
-            int power = -4;
+            int power = -3;
             double rate_to_sub = Math.Pow(10, power);
             int depth = 2;
             while (depth > 0)
             {
-                if (sa.GetSANumberEvaluations(TMax, rate - rate_to_sub, reps, TMin) < total_neighbors)
+                if (sa.GetSANumberEvaluations(TMax, rate, reps, TMin) < total_neighbors)
                 {
-                    if (Math.Round(rate - rate_to_sub - rate_to_sub, Math.Abs(power) - 1) <= 0)
+                    if (Math.Round(rate - rate_to_sub, Math.Abs(power)) <= 0)
                     {
                         power--;
                         rate_to_sub = Math.Pow(10, power);
                     }
-                    rate = Math.Round(rate - rate_to_sub, Math.Abs(power) + 1);
-                    //Console.WriteLine(rate);
+                    rate = Math.Round(rate - rate_to_sub, Math.Abs(power));
+                    Console.WriteLine(rate);
                 }
                 else
                 {
+                    rate = Math.Round(rate + rate_to_sub, Math.Abs(power));
                     depth--;
                     power--;
                     rate_to_sub = Math.Pow(10, power);

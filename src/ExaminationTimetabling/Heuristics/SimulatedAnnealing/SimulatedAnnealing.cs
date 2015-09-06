@@ -73,7 +73,10 @@ namespace Heuristics.SimulatedAnnealing
             Stopwatch watch = Stopwatch.StartNew();
             watch.Start();
 
+            //TODO Tests only
             //OutputFormatting.StartNew("..//..//..//../..//doc//Latex Project//sa_plot_data.dat");
+            //int i = 0;
+            //int j = 0;
 
             for (double T = TMax; T > TMin; T = cooling_schedule.G(t++))
             {
@@ -141,6 +144,11 @@ namespace Heuristics.SimulatedAnnealing
 
                         solution = neighbor.Accept();
                         solution.fitness = neighbor.fitness;
+
+                        //TODO Tests only
+                        //i++;
+                        //if(i % 40 == 0)
+                        //    OutputFormatting.Write("..//..//..//../..//doc//Latex Project//sa_plot_data.dat", ""+j++ +" "+solution.fitness);
                     }
                     else
                     {
@@ -159,6 +167,11 @@ namespace Heuristics.SimulatedAnnealing
 
                             solution = neighbor.Accept();
                             solution.fitness = neighbor.fitness;
+
+                            //TODO Tests only
+                            //i++;
+                            //if (i % 40 == 0)
+                            //    OutputFormatting.Write("..//..//..//../..//doc//Latex Project//sa_plot_data.dat", "" + j++ + " " + solution.fitness);
                         }
                         else
                         {

@@ -20,7 +20,7 @@ namespace Heuristics.Hill_Climbing.Timetable
         public static int type_random = 0;
 
         private readonly Random random;
-        public int generated_neighbors;
+        public long generated_neighbors;
         private int total_neighbor_operators;
 
         public HillClimbingTimetable()
