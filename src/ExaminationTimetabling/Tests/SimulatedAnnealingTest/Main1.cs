@@ -31,7 +31,7 @@ namespace Tests.SimulatedAnnealingTest
 
             OutputFormatting.StartNew("..//..//results.txt");
 
-            for (SET = 1; SET <= 1; SET++)
+            for (SET = 7; SET <= 7; SET++)
             {
                 if (SET == 4)
                     continue;
@@ -42,8 +42,8 @@ namespace Tests.SimulatedAnnealingTest
                 double TMin = 1e-06;
                 int reps = 5;
                 double rate = -1;
-                int exec_time = 221000;
-                //int exec_time = 43200000;
+                //int exec_time = 221000;
+                int exec_time = 43200000;
                 //int exec_time = 50000;
 
                 for (int repeats = 0; repeats < repeats_count; repeats++)
