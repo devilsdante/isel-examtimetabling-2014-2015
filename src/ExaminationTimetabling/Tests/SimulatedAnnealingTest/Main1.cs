@@ -27,11 +27,11 @@ namespace Tests.SimulatedAnnealingTest
 
             Solution solution = null;
             Solution SA_Solution = null;
-            int repeats_count = 1;
+            int repeats_count = 20;
 
             OutputFormatting.StartNew("..//..//results.txt");
 
-            for (SET = 7; SET <= 7; SET++)
+            for (SET = 12; SET <= 12; SET++)
             {
                 if (SET == 4)
                     continue;
@@ -42,8 +42,8 @@ namespace Tests.SimulatedAnnealingTest
                 double TMin = 1e-06;
                 int reps = 5;
                 double rate = -1;
-                //int exec_time = 221000;
-                int exec_time = 43200000;
+                int exec_time = 221000;
+                //int exec_time = 43200000;
                 //int exec_time = 50000;
 
                 for (int repeats = 0; repeats < repeats_count; repeats++)
@@ -85,7 +85,7 @@ namespace Tests.SimulatedAnnealingTest
                     SimulatedAnnealingTimetable sa = new SimulatedAnnealingTimetable();
                     Console.WriteLine("supposed generated_neighbors: " + sa.GetSANumberEvaluations(TMax, rate, reps, TMin));
                     watch.Restart();
-                    sa.Exec2(solution, TMax, TMin, reps, rate, SimulatedAnnealingTimetable.type_random, true);
+                    sa.Exec2(solution, TMax, TMin, reps, rate, SimulatedAnnealingTimetable.type_random, true, exec_time - watch2.ElapsedMilliseconds);
                     long sa_time = watch.ElapsedMilliseconds;
                     int sa_fitness = solution.fitness;
                     long sa_feas_neighbors = sa.generated_neighbors;
@@ -200,7 +200,7 @@ namespace Tests.SimulatedAnnealingTest
 
             int power = -3;
             double rate_to_sub = Math.Pow(10, power);
-            int depth = 2;
+            int depth = 3;
             while (depth > 0)
             {
                 if (sa.GetSANumberEvaluations(TMax, rate, reps, TMin) < total_neighbors)

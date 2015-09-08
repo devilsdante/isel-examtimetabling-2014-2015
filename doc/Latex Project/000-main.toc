@@ -41,12 +41,12 @@
 \contentsline {chapter}{\numberline {5}Proposed Approach: Local Search}{29}
 \contentsline {section}{\numberline {5.1}Simulated Annealing}{29}
 \contentsline {subsection}{\numberline {5.1.1}Implementation}{30}
-\contentsline {section}{\numberline {5.2}Hill Climbing}{34}
+\contentsline {section}{\numberline {5.2}Hill Climbing}{33}
 \contentsline {subsection}{\numberline {5.2.1}Implementation}{34}
-\contentsline {section}{\numberline {5.3}Neighborhood Operators}{35}
+\contentsline {section}{\numberline {5.3}Neighborhood Operators}{34}
 \contentsline {subsection}{\numberline {5.3.1}Implementation}{36}
-\contentsline {section}{\numberline {5.4}Fitness Computation}{38}
-\contentsline {subsection}{\numberline {5.4.1}Implementation}{38}
+\contentsline {section}{\numberline {5.4}Fitness Computation}{37}
+\contentsline {subsection}{\numberline {5.4.1}Implementation}{37}
 \contentsline {chapter}{\numberline {6}Experimental Results}{39}
 \contentsline {chapter}{\numberline {7}Conclusions and Future Work}{41}
 \contentsline {chapter}{References}{43}

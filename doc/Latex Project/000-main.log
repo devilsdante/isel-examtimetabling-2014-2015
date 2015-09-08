@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.16)  6 SEP 2015 05:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.16)  8 SEP 2015 02:49
 entering extended mode
 **000-main.tex
 (000-main.tex
@@ -3309,6 +3309,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 235--118
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 235--118
+
+ []
+
 [25] [26] [27] (500-local-search.tex [28
 
 
@@ -3404,10 +3409,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 108--114
  []
 
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
-(Font)              scaled to size 5.39996pt on input line 129.
+(Font)              scaled to size 5.39996pt on input line 131.
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
-(Font)              scaled to size 4.49997pt on input line 129.
-Package pgfplots info on input line 160: Overriding colorspace to rgb due to xc
+(Font)              scaled to size 4.49997pt on input line 131.
+Package pgfplots info on input line 162: Overriding colorspace to rgb due to xc
 olor configuration.
 Missing character: There is no s in font nullfont!
 Missing character: There is no o in font nullfont!
@@ -3416,92 +3421,91 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no d in font nullfont!
 PGFPlots: reading {sa_plot_data.dat}
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--176
+Underfull \hbox (badness 10000) in paragraph at lines 114--178
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--176
+Underfull \hbox (badness 10000) in paragraph at lines 114--178
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--176
+Underfull \hbox (badness 10000) in paragraph at lines 114--178
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--176
+Underfull \hbox (badness 10000) in paragraph at lines 114--178
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--178
 
  []
 
 [32]
-Underfull \hbox (badness 10000) in paragraph at lines 180--183
+Underfull \hbox (badness 10000) in paragraph at lines 182--185
+
+ []
+
+Missing character: There is no H in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no H in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+
+Underfull \hbox (badness 10000) in paragraph at lines 187--224
 
  []
 
 [33]
-Missing character: There is no H in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no L in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no H in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no L in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-
-Underfull \hbox (badness 10000) in paragraph at lines 185--222
+Underfull \hbox (badness 10000) in paragraph at lines 228--236
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 226--234
+Underfull \hbox (badness 10000) in paragraph at lines 228--236
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 226--234
+Underfull \hbox (badness 10000) in paragraph at lines 228--236
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 226--234
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 226--234
+Underfull \hbox (badness 10000) in paragraph at lines 228--236
 
  []
 
 [34]
-Underfull \hbox (badness 10000) in paragraph at lines 235--236
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 237--238
 
  []
@@ -3521,6 +3525,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 243--244
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 245--246
+
+ []
+
 Missing character: There is no H in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no u in font nullfont!
@@ -3552,26 +3561,26 @@ Missing character: There is no y in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
 
-Underfull \hbox (badness 10000) in paragraph at lines 250--308
+Underfull \hbox (badness 10000) in paragraph at lines 252--310
+
+ []
+
+[36]
+Underfull \hbox (badness 10000) in paragraph at lines 314--319
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 312--317
+Underfull \hbox (badness 10000) in paragraph at lines 314--319
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 312--317
-
- []
-
-[36] [37])
-Underfull \hbox (badness 10000) in paragraph at lines 320--119
+)
+Underfull \hbox (badness 10000) in paragraph at lines 322--119
 
  []
 
-[38] (550-experimental-results.tex
+[37] [38] (550-experimental-results.tex
 Chapter 6.
 )
 Underfull \hbox (badness 10000) in paragraph at lines 4--120
@@ -3641,6 +3650,116 @@ Overfull \hbox (64.32437pt too wide) in paragraph at lines 43--44
 [][] 
  []
 
+
+Overfull \hbox (10.79166pt too wide) detected at line 72
+ 
+ []
+
+
+Overfull \hbox (15.41666pt too wide) detected at line 72
+ 
+ []
+
+
+Overfull \hbox (10.79166pt too wide) detected at line 73
+ 
+ []
+
+
+Overfull \hbox (10.79166pt too wide) detected at line 73
+ 
+ []
+
+
+Overfull \hbox (4.625pt too wide) detected at line 74
+ 
+ []
+
+
+Overfull \hbox (10.79166pt too wide) detected at line 74
+ 
+ []
+
+
+Overfull \hbox (10.79166pt too wide) detected at line 76
+ 
+ []
+
+
+Overfull \hbox (10.79166pt too wide) detected at line 76
+ 
+ []
+
+
+Overfull \hbox (10.79166pt too wide) detected at line 77
+ 
+ []
+
+
+Overfull \hbox (15.41666pt too wide) detected at line 77
+ 
+ []
+
+
+Overfull \hbox (10.79166pt too wide) detected at line 78
+ 
+ []
+
+
+Overfull \hbox (10.79166pt too wide) detected at line 78
+ 
+ []
+
+
+Overfull \hbox (10.79166pt too wide) detected at line 79
+ 
+ []
+
+
+Overfull \hbox (10.79166pt too wide) detected at line 79
+ 
+ []
+
+
+Overfull \hbox (10.79166pt too wide) detected at line 80
+ 
+ []
+
+
+Overfull \hbox (15.41666pt too wide) detected at line 80
+ 
+ []
+
+
+Overfull \hbox (4.625pt too wide) detected at line 81
+ 
+ []
+
+
+Overfull \hbox (15.41666pt too wide) detected at line 81
+ 
+ []
+
+
+Overfull \hbox (4.625pt too wide) detected at line 82
+ 
+ []
+
+
+Overfull \hbox (10.79166pt too wide) detected at line 82
+ 
+ []
+
+
+Overfull \hbox (10.79166pt too wide) detected at line 83
+ 
+ []
+
+
+Overfull \hbox (15.41666pt too wide) detected at line 83
+ 
+ []
+
 ) [42
 
 
@@ -3694,8 +3813,8 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
  ) 
 Here is how much of TeX's memory you used:
  49423 strings out of 493671
- 1125891 string characters out of 3141423
- 2978152 words of memory out of 3000000
+ 1125876 string characters out of 3141423
+ 2980651 words of memory out of 3000000
  51772 multiletter control sequences out of 15000+200000
  97033 words of font info for 90 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
@@ -3721,7 +3840,7 @@ m Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy5.pfb><C:/Program Files (x86
 )/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9
 /fonts/type1/public/lm/lmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 /public/lm/lmsy9.pfb>
-Output written on 000-main.pdf (61 pages, 747006 bytes).
+Output written on 000-main.pdf (61 pages, 748110 bytes).
 PDF statistics:
  356 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
