@@ -38,7 +38,7 @@
 			shader = interp, % No facets
 			point meta = explicit] 
 			%table [z expr = 100, meta index = 2] {./yor83Cool1Eminus6.dat};
-			table [z expr = 100, meta index = 2] {./SAResults6.dat};
+			table [z expr = 100, meta index = 2] {./GCResults8.dat};
 \end{axis}
 \end{tikzpicture}
 
@@ -47,43 +47,3 @@
 
 
 
-\begin{table*}[!t]
-\centering
-\caption{ITC 2007 results comparison to this project's approach. The best solutions are indicated in bold. ''--'' indicates that a feasible solution could not be obtained.}
-\sisetup{table-alignment=center,detect-weight=true,detect-inline-weight=math}
-\begin{tabular}{%
-	S[table-figures-integer=3]%
-	S[table-format=5.1]%
-	S[table-format=5.1]%
-	S[table-format=5.1]%    
-	S[table-format=5.1]%
-	S[table-format=5.1]%
-	S[table-format=5.1]%
-    }
-
-\toprule
-
-\multicolumn{1}{l}{} & \multicolumn{1}{l}{} &	\multicolumn{1}{l}{Best} & \multicolumn{1}{l}{Worst} & \multicolumn{1}{l}{Fitness} & \multicolumn{1}{l}{\# Feasible} & \multicolumn{1}{l}{\# Unfeasible}\\
-\multicolumn{1}{l}{Instance} & \multicolumn{1}{l}{Fitness} & \multicolumn{1}{l}{Fitness} & \multicolumn{1}{l}{Fitness} & \multicolumn{1}{l}{Standard} & \multicolumn{1}{l}{Generated} & \multicolumn{1}{l}{Generated} \\
-		& \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{Deviation} & \multicolumn{1}{l}{Neighbors} & \multicolumn{1}{l}{Neighbors} \\
-
-\midrule
-
-1   &   5055  & 4857      & 5307           & 123       & 1803391 & 13314066\\
-2   &   523  & 451      & 921           & 102       & 2226202 & 5181268\\
-3   &   15228 & 13375     & 17755          & 1121  & 450514 & 4443983 \\
-4   &   \text{--} & \text{--}     & \text{--}          & \text{--}  & \text{--} & \text{--} \\
-5   &   4819  & 3965      & 7737           & 1003       & 2093197 & 7795497\\
-6   &   27528 & 26665     & 30145          & 828      & 1380462 & 12160378 \\
-7   &   4912  & 4576      & 5448          & 282       & 1051390 & 4724867 \\
-8   &   8741  & 8238     & 11670          & 687  & 1248848 & 6139766 \\
-9   &   1150  & 1033      & 1300           & 70       & 4050744 & 21298017 \\
-10  &   25586  & 19858 & 38698          & 4778      & 445664  & 10929700\\
-11  &   45630 & 39150     & 53611      & 4113  & 444747 & 5663990 \\
-12  &   7679  & 6109 & 12033 & 1684  & 1825580 & 34767637 \\
-
-\bottomrule
-
-\end{tabular}
-\label{tab:test}
-\end{table*}

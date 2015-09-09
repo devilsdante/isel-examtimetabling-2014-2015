@@ -1,20 +1,61 @@
 \chapter{Experimental Results}
 \label{chap:ExpResults}
 
-In this chapter we will present the results obtained while running all the heuristics explained in the previous chapters. We also compare our results against the ones of the top 5 winners of the \gls{itc2007} contest.\\
-\\
-Each set score is the result of the average of 10 runs that were done on that same set. The tests were made on all 12 sets, including the hidden ones.\\
+In this chapter we will present the results obtained while running all the heuristics explained in the previous chapters. We also compare our results against the ones of the top 5 winners of the \gls{itc2007} contest and more up to date approaches.\\
 \\
 The parameters used to run the \gls{sa} were:\\
 \\
-TMax = 0.01 $\rightarrow$ Maximum/initial temperature\\
-TMin = $1e^{-18}$ $\rightarrow$ Minimum temperature\\
+TMax = 0.1 $\rightarrow$ Maximum/initial temperature\\
+TMin = 1e-06 $\rightarrow$ Minimum temperature\\
 reps = 5 $\rightarrow$ Number of repetitions per temperature\\
-rate = 0.001 $\rightarrow$ Temperature cooling rate\\
+rate = \textit{real-time computed} $\rightarrow$ Temperature cooling rate\\
 \\
-With these parameters used on all the sets, we obtained the results presented on Table \ref{tab:ITC2007ResultsComparison}. Some of the results could be as good as it can match the top 5 winners, and some were so far away from these. As can be seen, the results for the sets 1, 2, 6, 7, 8, and 9 can match the 5 winners' results, but the sets 3, 10, and 11 were far away from the results of the top 5 (the ones that could get a feasible solution). We believe this can be fixed by tweaking the parameters and give individual parameters to each set to try and obtain better results.\\
+All the 12 sets were tested by running each set 20 times. In Table \ref{tab:20tests} we can see the results which are the values for average fitness, fitness' best and worst values, its standard deviation, and the average of feasible and unfeasible generated neighbors. Compared to the previous approaches, which excludes the use of incremental fitness computing and the real time computed rate, these results are noticeable better. \\
 \\
-\begin{table*}[!t]
+While studying the results, some of the were much worse compared to the other tests made to the same set. \textcolor{red}{As can be seen in Table \ref{tab:20tests}, the sets 2, 5, 6, 8, 10, and 12 have the worst fitness much more distant to the average fitness compared to the other sets. The fitness standard deviation itself, in these sets, is much smaller compared to the distance between the average fitness and the worst fitness of the 20 runs. On the 20 runs for these sets, only one or two had this kind of results. We believe this rarely happens because of the problem specified in Chapter X, the fact that examinations with coincidence hard constraints cannot be moved, it limits the algorithm performance to get better results.}\\
+\\
+\begin{table*}[!p]
+\centering
+\caption{All the project's results by running 20 times each set. The fitness and the generated neighbors represent the average for those 20 runs. ''--'' indicates that a feasible solution could not be obtained.}
+\sisetup{table-alignment=center,detect-weight=true,detect-inline-weight=math}
+\begin{tabular}{%
+	S[table-figures-integer=3]%
+	S[table-format=5.1]%
+	S[table-format=5.1]%
+	S[table-format=5.1]%    
+	S[table-format=5.1]%
+	S[table-format=5.1]%
+	S[table-format=5.1]%
+    }
+
+\toprule
+
+\multicolumn{1}{l}{} & \multicolumn{1}{l}{} &	\multicolumn{1}{l}{Best} & \multicolumn{1}{l}{Worst} & \multicolumn{1}{l}{Fitness} & \multicolumn{1}{l}{\# Feasible} & \multicolumn{1}{l}{\# Unfeasible}\\
+\multicolumn{1}{l}{Instance} & \multicolumn{1}{l}{Fitness} & \multicolumn{1}{l}{Fitness} & \multicolumn{1}{l}{Fitness} & \multicolumn{1}{l}{Standard} & \multicolumn{1}{l}{Generated} & \multicolumn{1}{l}{Generated} \\
+		& \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{Deviation} & \multicolumn{1}{l}{Neighbors} & \multicolumn{1}{l}{Neighbors} \\
+
+\midrule
+
+1   &   5055  & 4857      & 5307           & 123       & 1803391 & 13314066\\
+2   &   523  & 451      & 921           & 102       & 2226202 & 5181268\\
+3   &   15228 & 13375     & 17755          & 1121  & 450514 & 4443983 \\
+4   &   \text{--} & \text{--}     & \text{--}          & \text{--}  & \text{--} & \text{--} \\
+5   &   4819  & 3965      & 7737           & 1003       & 2093197 & 7795497\\
+6   &   27528 & 26665     & 30145          & 828      & 1380462 & 12160378 \\
+7   &   4912  & 4576      & 5448          & 282       & 1051390 & 4724867 \\
+8   &   8741  & 8238     & 11670          & 687  & 1248848 & 6139766 \\
+9   &   1150  & 1033      & 1300           & 70       & 4050744 & 21298017 \\
+10  &   25586  & 19858 & 38698          & 4778      & 445664  & 10929700\\
+11  &   45630 & 39150     & 53611      & 4113  & 444747 & 5663990 \\
+12  &   7679  & 6109 & 12033 & 1684  & 1825580 & 34767637 \\
+
+\bottomrule
+
+\end{tabular}
+\label{tab:20tests}
+\end{table*}In Table \ref{tab:ITC2007ResultsComparison} we compare the results obtained in this project's approach versus the five winners of the \gls{itc2007}. Not all of the sets were able to be right behind M\"{u}ller \cite{Mueller2009}, unfortunately. Being this approach was based on M\"{u}ller's \cite{Mueller2009}, some results were not as good as his, and this might be because of the use of the \gls{gd} heuristic in his approach, together with the use of \gls{sa}. Fortunately in some sets, this developed approach was able to reach and beat most of the contestants. However, the sets with highest scores, and so represent the ones with worst results, are the ones that have more coincident examinations hard constraints. We believe that solving this approach limitation mentioned above, would make it to the third place, at least, on all the sets.\\
+\\
+\begin{table*}[!p]
 \centering
 \caption{ITC 2007 results comparison to this project's approach. The best solutions are indicated in bold. ''--'' indicates that a feasible solution could not be obtained.}
 \sisetup{table-alignment=center,detect-weight=true,detect-inline-weight=math}
@@ -31,25 +72,65 @@ With these parameters used on all the sets, we obtained the results presented on
 \toprule
 
 \multicolumn{1}{l}{Instance} & \multicolumn{1}{l}{M\"{u}ller} &	\multicolumn{1}{l}{Gogos et} & \multicolumn{1}{l}{Atsuta et} & \multicolumn{1}{l}{De Smet} & \multicolumn{1}{l}{Pillay} & \multicolumn{1}{l}{Proposed}\\
-		& \multicolumn{1}{l}{2008 \cite{Mueller2009}} & \multicolumn{1}{l}{al. 2008~\cite{Gogos2012}} & \multicolumn{1}{l}{al. 2008~\cite{Atsuta2007}} & \multicolumn{1}{l}{2008~\cite{Smet2007}} & \multicolumn{1}{l}{2008~\cite{Pillay2007}} & \multicolumn{1}{l}{Approach 2015} \\
+		& \multicolumn{1}{l}{2009 \cite{Mueller2009}} & \multicolumn{1}{l}{al. 2012~\cite{Gogos2012}} & \multicolumn{1}{l}{al. 2007~\cite{Atsuta2007}} & \multicolumn{1}{l}{2008~\cite{Smet2007}} & \multicolumn{1}{l}{2008~\cite{Pillay2007}} & \multicolumn{1}{l}{Approach 2015} \\
 
 \midrule
 
-1   &   \boldentry{5.1}{4370}  & 5905      & 8006           & 6670       & 12035 & 6934\\
-2   &   \boldentry{5.1}{400}   & 1008      & 3470           &  623       & 3074 & 821 \\
-3   &   \boldentry{5.1}{10049} & 13862     & 18622          & \text{--}  & 15917 & 24627 \\
+1   &   \boldentry{5.1}{4370}  & 5905      & 8006           & 6670       & 12035 & 5055\\
+2   &   \boldentry{5.1}{400}   & 1008      & 3470           &  623       & 3074 & 523 \\
+3   &   \boldentry{5.1}{10049} & 13862     & 18622          & \text{--}  & 15917 & 15228 \\
 4   &   \boldentry{5.1}{18141} & 18674     & 22559          & \text{--}  & 23582 & \text{--} \\
-5   &   \boldentry{5.1}{2988}  & 4139      & 4714           & 3847       & 6860 & 7729\\
-6   &   \boldentry{5.1}{26950} & 27640     & 29155          & 27815      & 32250 & 30195 \\
-7   &   \boldentry{5.1}{4213}  & 6683      & 10473          & 5420       & 17666 & 8089 \\
-8   &   \boldentry{5.1}{7861}  & 10521     & 14317          & \text{--}  & 16184 & 11067 \\
-9   &   \boldentry{5.1}{1047}  & 1159      & 1737           & 1288       & 2055 & 1448 \\
-10  &   16682                  & \text{--} & 15085          & \boldentry{5.1}{14778}      & 17724  & 35698\\
-11  &   \boldentry{5.1}{34129} & 43888     & \text{--}      & \text{--}  & 40535 & 72751 \\
-12  &   5535            & \text{--} & \boldentry{5.1}{5264} & \text{--}  & 6310 & 8049 \\
+5   &   \boldentry{5.1}{2988}  & 4139      & 4714           & 3847       & 6860 & 4819 \\
+6   &   \boldentry{5.1}{26950} & 27640     & 29155          & 27815      & 32250 & 27528 \\
+7   &   \boldentry{5.1}{4213}  & 6683      & 10473          & 5420       & 17666 & 4912 \\
+8   &   \boldentry{5.1}{7861}  & 10521     & 14317          & \text{--}  & 16184 & 8741 \\
+9   &   \boldentry{5.1}{1047}  & 1159      & 1737           & 1288       & 2055 & 1150 \\
+10  &   16682                  & \text{--} & 15085          & \boldentry{5.1}{14778}      & 17724  & 25586 \\
+11  &   \boldentry{5.1}{34129} & 43888     & \text{--}      & \text{--}  & 40535 & 45630 \\
+12  &   5535            & \text{--} & \boldentry{5.1}{5264} & \text{--}  & 6310 & 7679 \\
 
 \bottomrule
 
 \end{tabular}
 \label{tab:ITC2007ResultsComparison}
+\end{table*}In table \ref{tab:UpToDateResultsComparison} this project's results are compared to more up to date approaches. As can be seen, Rahman et al. \cite{Rahman2014}, Bryce et al. \cite{Hamilton-Bryce2014}, and Mouhoub et al. \cite{Mouhoub2014} stole almost all the best results. Some of Rahman's \cite{Rahman2014} and Bryce's results surpass M\"{u}ller's \cite{Mueller2009} results. None of the sets' score of this approach was able to beat all the other approaches shown on the table. 
+
+\begin{table*}[!p]
+\centering
+\caption{Up to date results comparison to this project's approach. The best solutions are indicated in bold. ''--'' indicates that a feasible solution could not be obtained, or the following sets were not tested.}
+\sisetup{table-alignment=center,detect-weight=true,detect-inline-weight=math}
+\begin{tabular}{%
+	S[table-figures-integer=3]%
+	S[table-format=5.1]%
+	S[table-format=5.1]%
+	S[table-format=5.1]%    
+	S[table-format=5.1]%
+	S[table-format=5.1]%
+	S[table-format=5.1]%
+    }
+
+\toprule
+
+\multicolumn{1}{l}{Instance} & \multicolumn{1}{l}{Rahman} &	\multicolumn{1}{l}{Bryce} & \multicolumn{1}{l}{Mouhoub} & \multicolumn{1}{l}{De Smet} & \multicolumn{1}{l}{Abdullah et} & \multicolumn{1}{l}{Proposed}\\
+		& \multicolumn{1}{l}{et al. 2014 \cite{Rahman2014a}} & \multicolumn{1}{l}{et al. 2014~\cite{Hamilton-Bryce2014}} & \multicolumn{1}{l}{al. 2014~\cite{Mouhoub2014}} & \multicolumn{1}{l}{2014~\cite{Burke2014}} & \multicolumn{1}{l}{al. 2014~\cite{Alzaqebah2014}} & \multicolumn{1}{l}{Approach 2015} \\
+
+\midrule
+
+1   &   5231  & 5302      & \boldentry{5.1}{4395}           & 6235       & 5517 & 5055\\
+2   &   \boldentry{5.1}{433}   & 418      & \boldentry{5.1}{433}           &  2974       & 537 & 523 \\
+3   &   \boldentry{5.1}{9265} & 10036     & 10118          & 15832  & 10324 & 15228 \\
+4   &   17787 & 20531     & 21772          & 35106  & \boldentry{5.1}{16589} & \text{--} \\
+5   &   3083  & 3236      & \boldentry{5.1}{2836}           & 4873       & 3631 & 4819 \\
+6   &   \boldentry{5.1}{26060} & 26253     & 27166          & 31756      & 26275 & 27528 \\
+7   &   10712  & \boldentry{5.1}{4115}      & 4294          & 11562      & 4592 & 4912 \\
+8   &   12713  & \boldentry{5.1}{7555}     & 7632          & 20994  & 8328 & 8741 \\
+9   &   1111  & \boldentry{5.1}{1089}      & 1109           & \text{--}       & \text{--} & 1150 \\
+10  &   \boldentry{5.1}{14825}                  & 15167 & 17022          & \text{--}      & \text{--}  & 25586 \\
+11  &   \boldentry{5.1}{28891} & 31415     & 33608      & \text{--}  & \text{--} & 45630 \\
+12  &   6181            & \boldentry{5.1}{5464} & 6364 & \text{--}  & \text{--} & 7679 \\
+
+\bottomrule
+
+\end{tabular}
+\label{tab:UpToDateResultsComparison}
 \end{table*}
