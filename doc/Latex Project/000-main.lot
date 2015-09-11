@@ -1,13 +1,14 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Approaches timeline\relax }}{14}
+\contentsline {table}{\numberline {2.1}{\ignorespaces Approaches timeline\relax }}{12}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Specifications of the 12 datasets of the ITC 2007 examination timetabling problem.\relax }}{22}
-\contentsline {table}{\numberline {4.2}{\ignorespaces Some of the Graph Coloring's performance features.\relax }}{27}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Specifications of the 12 datasets of the ITC 2007 examination timetabling problem.\relax }}{20}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Some of the Graph Coloring's performance features.\relax }}{25}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {6.1}{\ignorespaces All the project's results by running 20 times each set. The fitness and the generated neighbors represent the average for those 20 runs. ''--'' indicates that a feasible solution could not be obtained.\relax }}{41}
 \contentsline {table}{\numberline {6.2}{\ignorespaces ITC 2007 results comparison to this project's approach. The best solutions are indicated in bold. ''--'' indicates that a feasible solution could not be obtained.\relax }}{41}
 \contentsline {table}{\numberline {6.3}{\ignorespaces Up to date results comparison to this project's approach. The best solutions are indicated in bold. ''--'' indicates that a feasible solution could not be obtained, or the following sets were not tested.\relax }}{42}
+\contentsline {table}{\numberline {6.4}{\ignorespaces Results comparison with results obtained with 12 hours of running.\relax }}{42}
 \addvspace {10\p@ }

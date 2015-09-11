@@ -1,4 +1,4 @@
-\chapter{Experimental Results}
+\chapter{\textcolor{green}{Experimental Results}}
 \label{chap:ExpResults}
 
 In this chapter we will present the results obtained while running all the heuristics explained in the previous chapters. We also compare our results against the ones of the top 5 winners of the \gls{itc2007} contest and more up to date approaches.\\
@@ -12,7 +12,7 @@ rate = \textit{real-time computed} $\rightarrow$ Temperature cooling rate\\
 \\
 All the 12 sets were tested by running each set 20 times. In Table \ref{tab:20tests} we can see the results which are the values for average fitness, fitness' best and worst values, its standard deviation, and the average of feasible and unfeasible generated neighbors. Compared to the previous approaches, which excludes the use of incremental fitness computing and the real time computed rate, these results are noticeable better. \\
 \\
-While studying the results, some of the were much worse compared to the other tests made to the same set. \textcolor{red}{As can be seen in Table \ref{tab:20tests}, the sets 2, 5, 6, 8, 10, and 12 have the worst fitness much more distant to the average fitness compared to the other sets. The fitness standard deviation itself, in these sets, is much smaller compared to the distance between the average fitness and the worst fitness of the 20 runs. On the 20 runs for these sets, only one or two had this kind of results. We believe this rarely happens because of the problem specified in Chapter X, the fact that examinations with coincidence hard constraints cannot be moved, it limits the algorithm performance to get better results.}\\
+While studying the results, some of the were much worse compared to the other tests made to the same set. As can be seen in Table \ref{tab:20tests}, the sets 2, 5, 6, 8, 10, and 12 have the worst fitness much more distant to the average fitness compared to the other sets. The fitness standard deviation itself, in these sets, is much smaller compared to the distance between the average fitness and the worst fitness of the 20 runs. On the 20 runs for these sets, only one or two had this kind of results. We believe this rarely happens because of the problem specified in Chapter \ref{sub:SAStatistics}, the fact that examinations with coincidence hard constraints cannot be moved, it limits the algorithm performance to get better results.\\
 \\
 \begin{table*}[!p]
 \centering
@@ -30,9 +30,9 @@ While studying the results, some of the were much worse compared to the other te
 
 \toprule
 
-\multicolumn{1}{l}{} & \multicolumn{1}{l}{} &	\multicolumn{1}{l}{Best} & \multicolumn{1}{l}{Worst} & \multicolumn{1}{l}{Fitness} & \multicolumn{1}{l}{\# Feasible} & \multicolumn{1}{l}{\# Unfeasible}\\
-\multicolumn{1}{l}{Instance} & \multicolumn{1}{l}{Fitness} & \multicolumn{1}{l}{Fitness} & \multicolumn{1}{l}{Fitness} & \multicolumn{1}{l}{Standard} & \multicolumn{1}{l}{Generated} & \multicolumn{1}{l}{Generated} \\
-		& \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{Deviation} & \multicolumn{1}{l}{Neighbors} & \multicolumn{1}{l}{Neighbors} \\
+\multicolumn{1}{c}{} & \multicolumn{1}{c}{Average} &	\multicolumn{1}{c}{Best} & \multicolumn{1}{c}{Worst} & \multicolumn{1}{c}{Fitness} & \multicolumn{1}{c}{\# Feasible} & \multicolumn{1}{c}{\# Unfeasible}\\
+\multicolumn{1}{c}{Instance} & \multicolumn{1}{c}{Fitness} & \multicolumn{1}{c}{Fitness} & \multicolumn{1}{c}{Fitness} & \multicolumn{1}{c}{Standard} & \multicolumn{1}{c}{Generated} & \multicolumn{1}{c}{Generated} \\
+		& \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{Deviation} & \multicolumn{1}{c}{Neighbors} & \multicolumn{1}{c}{Neighbors} \\
 
 \midrule
 
@@ -53,7 +53,7 @@ While studying the results, some of the were much worse compared to the other te
 
 \end{tabular}
 \label{tab:20tests}
-\end{table*}In Table \ref{tab:ITC2007ResultsComparison} we compare the results obtained in this project's approach versus the five winners of the \gls{itc2007}. Not all of the sets were able to be right behind M\"{u}ller \cite{Mueller2009}, unfortunately. Being this approach was based on M\"{u}ller's \cite{Mueller2009}, some results were not as good as his, and this might be because of the use of the \gls{gd} heuristic in his approach, together with the use of \gls{sa}. Fortunately in some sets, this developed approach was able to reach and beat most of the contestants. However, the sets with highest scores, and so represent the ones with worst results, are the ones that have more coincident examinations hard constraints. We believe that solving this approach limitation mentioned above, would make it to the third place, at least, on all the sets.\\
+\end{table*}In Table \ref{tab:ITC2007ResultsComparison} we compare the results obtained in this project's approach versus the five winners of the \gls{itc2007}. Not all of the sets were able to be right behind M\"{u}ller \cite{Mueller2009}, unfortunately. Being this approach was based on M\"{u}ller's \cite{Mueller2009}, some results were not as good as his, and this might be because of the use of the \gls{gd} heuristic in his approach, together with the use of \gls{sa}. Fortunately in some sets, this developed approach was able to reach and beat most of the contestants. However, the sets with highest scores, and so represent the ones with worst results, are the ones that have more \textit{exam\_coincident} hard constraints. We believe that solving this approach limitation mentioned above, would make it to the third place, at least, on all the sets.\\
 \\
 \begin{table*}[!p]
 \centering
@@ -71,8 +71,8 @@ While studying the results, some of the were much worse compared to the other te
 
 \toprule
 
-\multicolumn{1}{l}{Instance} & \multicolumn{1}{l}{M\"{u}ller} &	\multicolumn{1}{l}{Gogos et} & \multicolumn{1}{l}{Atsuta et} & \multicolumn{1}{l}{De Smet} & \multicolumn{1}{l}{Pillay} & \multicolumn{1}{l}{Proposed}\\
-		& \multicolumn{1}{l}{2009 \cite{Mueller2009}} & \multicolumn{1}{l}{al. 2012~\cite{Gogos2012}} & \multicolumn{1}{l}{al. 2007~\cite{Atsuta2007}} & \multicolumn{1}{l}{2008~\cite{Smet2007}} & \multicolumn{1}{l}{2008~\cite{Pillay2007}} & \multicolumn{1}{l}{Approach 2015} \\
+\multicolumn{1}{c}{Instance} & \multicolumn{1}{c}{M\"{u}ller} &	\multicolumn{1}{c}{Gogos et al.} & \multicolumn{1}{c}{Atsuta et al.} & \multicolumn{1}{c}{De Smet} & \multicolumn{1}{c}{Pillay} & \multicolumn{1}{c}{Proposed}\\
+		& \multicolumn{1}{c}{2009 \cite{Mueller2009}} & \multicolumn{1}{c}{2012~\cite{Gogos2012}} & \multicolumn{1}{c}{2007~\cite{Atsuta2007}} & \multicolumn{1}{c}{2008~\cite{Smet2007}} & \multicolumn{1}{c}{2008~\cite{Pillay2007}} & \multicolumn{1}{c}{Approach 2015} \\
 
 \midrule
 
@@ -93,8 +93,8 @@ While studying the results, some of the were much worse compared to the other te
 
 \end{tabular}
 \label{tab:ITC2007ResultsComparison}
-\end{table*}In table \ref{tab:UpToDateResultsComparison} this project's results are compared to more up to date approaches. As can be seen, Rahman et al. \cite{Rahman2014}, Bryce et al. \cite{Hamilton-Bryce2014}, and Mouhoub et al. \cite{Mouhoub2014} stole almost all the best results. Some of Rahman's \cite{Rahman2014} and Bryce's results surpass M\"{u}ller's \cite{Mueller2009} results. None of the sets' score of this approach was able to beat all the other approaches shown on the table. 
-
+\end{table*}In table \ref{tab:UpToDateResultsComparison} this project's results are compared to more up to date approaches. As can be seen, Rahman et al. \cite{Rahman2014}, Bryce et al. \cite{Hamilton-Bryce2014}, and Mouhoub et al. \cite{Mouhoub2014} stole almost all the best results. Some of Rahman's \cite{Rahman2014} and Bryce's results surpass M\"{u}ller's \cite{Mueller2009} results. None of the sets' score of this approach was able to beat all the other approaches shown on the table. \\
+\\
 \begin{table*}[!p]
 \centering
 \caption{Up to date results comparison to this project's approach. The best solutions are indicated in bold. ''--'' indicates that a feasible solution could not be obtained, or the following sets were not tested.}
@@ -111,13 +111,13 @@ While studying the results, some of the were much worse compared to the other te
 
 \toprule
 
-\multicolumn{1}{l}{Instance} & \multicolumn{1}{l}{Rahman} &	\multicolumn{1}{l}{Bryce} & \multicolumn{1}{l}{Mouhoub} & \multicolumn{1}{l}{De Smet} & \multicolumn{1}{l}{Abdullah et} & \multicolumn{1}{l}{Proposed}\\
-		& \multicolumn{1}{l}{et al. 2014 \cite{Rahman2014a}} & \multicolumn{1}{l}{et al. 2014~\cite{Hamilton-Bryce2014}} & \multicolumn{1}{l}{al. 2014~\cite{Mouhoub2014}} & \multicolumn{1}{l}{2014~\cite{Burke2014}} & \multicolumn{1}{l}{al. 2014~\cite{Alzaqebah2014}} & \multicolumn{1}{l}{Approach 2015} \\
+\multicolumn{1}{c}{Instance} & \multicolumn{1}{c}{Rahman et al.} &	\multicolumn{1}{c}{Bryce et al.} & \multicolumn{1}{c}{Mouhoub et al.} & \multicolumn{1}{c}{De Smet} & \multicolumn{1}{c}{Abdullah et al.} & \multicolumn{1}{c}{Proposed}\\
+		& \multicolumn{1}{c}{2014 \cite{Rahman2014a}} & \multicolumn{1}{c}{2014~\cite{Hamilton-Bryce2014}} & \multicolumn{1}{c}{2014~\cite{Mouhoub2014}} & \multicolumn{1}{c}{2014~\cite{Burke2014}} & \multicolumn{1}{c}{2014~\cite{Alzaqebah2014}} & \multicolumn{1}{c}{Approach 2015} \\
 
 \midrule
 
 1   &   5231  & 5302      & \boldentry{5.1}{4395}           & 6235       & 5517 & 5055\\
-2   &   \boldentry{5.1}{433}   & 418      & \boldentry{5.1}{433}           &  2974       & 537 & 523 \\
+2   &   433   & \boldentry{5.1}{418}      & 433           &  2974       & 537 & 523 \\
 3   &   \boldentry{5.1}{9265} & 10036     & 10118          & 15832  & 10324 & 15228 \\
 4   &   17787 & 20531     & 21772          & 35106  & \boldentry{5.1}{16589} & \text{--} \\
 5   &   3083  & 3236      & \boldentry{5.1}{2836}           & 4873       & 3631 & 4819 \\
@@ -133,4 +133,40 @@ While studying the results, some of the were much worse compared to the other te
 
 \end{tabular}
 \label{tab:UpToDateResultsComparison}
-\end{table*}
+\end{table*}One interesting test would be to run the created approach in a huge amount of time, not considering the time limit, just to see the results and compare to the ones obtained with the 221 seconds time limit. The \gls{sa} heuristic should obtain better results compared to the 221 time limit tests. Table \ref{tab:LimitedTimevsUnlimitedTime} represents the comparison of the original tests with time limit, with tests that took 12 hours for each set. It can be seen that most of the sets, for the 12 hours tests, obtained better results. Two of the sets were not better, and the reason should be because of the \gls{sa} limitation.
+
+\begin{table}[!p]
+\centering
+\caption{Results comparison with results obtained with 12 hours of running.}
+\sisetup{table-alignment=center,detect-weight=true,detect-inline-weight=math}
+\begin{tabular}{%
+	S[table-figures-integer=3]%
+	S[table-format=5.1]%
+	S[table-format=5.1]%
+    }
+
+\toprule
+
+\multicolumn{1}{c}{Fitness} & \multicolumn{1}{c}{221 seconds} &	\multicolumn{1}{c}{12 hours}\\
+\multicolumn{1}{c}{}	& \multicolumn{1}{c}{fitness} & \multicolumn{1}{c}{fitness}\\
+
+\midrule
+
+1   &   5055  & 3735 \\
+2   &   523  & 400 \\
+3   &   15228  & 11284 \\
+4   &   \text{--}  & \text{--} \\
+5   &   4819 & 5578 \\
+6   &   27528  & 27975 \\
+7   &   4812  & 3419 \\
+8   &   8741  & 6885 \\
+9   &   1150  & 999 \\
+10  &   28586  & 21389 \\
+11  &   45630  & 33456 \\
+12  &   7679  & 6356 \\
+
+\bottomrule
+
+\end{tabular}
+\label{tab:LimitedTimevsUnlimitedTime}
+\end{table}

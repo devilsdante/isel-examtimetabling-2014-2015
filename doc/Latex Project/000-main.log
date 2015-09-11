@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.16)  9 SEP 2015 00:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.16)  11 SEP 2015 01:54
 entering extended mode
 **000-main.tex
 (000-main.tex
@@ -2214,7 +2214,7 @@ Package: beramono 2004/01/31 (WaS)
 (000-main.aux (100-cover.aux) (002-abstract.aux) (200-introduction.aux)
 (300-theory.aux) (400-architecture.aux) (500-loader-solution-init.aux)
 (500-local-search.aux) (550-experimental-results.aux) (550-future-work.aux)
-(test.aux))
+(test.aux) (800-references.aux))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
 LaTeX Font Info:    ... okay on input line 84.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
@@ -2229,7 +2229,8 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
 LaTeX Font Info:    ... okay on input line 84.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 84.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 84.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 84.
@@ -2382,11 +2383,11 @@ File: ./images/isellogo.png Graphic file (type png)
 
 <use ./images/isellogo.png>
 Package pdftex.def Info: ./images/isellogo.png used on input line 4.
-(pdftex.def)             Requested size: 167.2989pt x 167.29636pt.
+(pdftex.def)             Requested size: 125.47737pt x 125.46844pt.
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
-(Font)              scaled to size 12.9599pt on input line 6.
+(Font)              scaled to size 12.9599pt on input line 5.
 LaTeX Font Info:    Font shape `T1/fve/b/n' will be
-(Font)              scaled to size 12.9599pt on input line 6.
+(Font)              scaled to size 12.9599pt on input line 5.
 
 <./images/timetable.jpg, id=30, 225.84375pt x 225.84375pt>
 File: ./images/timetable.jpg Graphic file (type jpg)
@@ -2418,8 +2419,19 @@ LaTeX Font Info:    Font shape `T1/fve/b/n' will be
 
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./images/isellogo.png> <.
-/images/timetable.jpg>]) (002-abstract.tex
-[2
+/images/timetable.jpg>] [2
+
+]
+File: ./images/isellogo.png Graphic file (type png)
+
+<use ./images/isellogo.png>
+Package pdftex.def Info: ./images/isellogo.png used on input line 55.
+(pdftex.def)             Requested size: 125.47737pt x 125.46844pt.
+File: ./images/timetable.jpg Graphic file (type jpg)
+ <use ./images/timetable.jpg>
+Package pdftex.def Info: ./images/timetable.jpg used on input line 58.
+(pdftex.def)             Requested size: 83.64944pt x 83.65047pt.
+ [3]) (002-abstract.tex [4
 
 
 
@@ -2434,7 +2446,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--10
 
  []
 
-[3] [4
+[5] [6
 
 
 ]
@@ -2443,87 +2455,78 @@ LaTeX Font Info:    Font shape `T1/fve/m/it' in size <10> not available
 LaTeX Font Info:    Font shape `T1/fve/m/sl' will be
 (Font)              scaled to size 8.99994pt on input line 15.
 
-Underfull \hbox (badness 10000) in paragraph at lines 13--25
+Underfull \hbox (badness 10000) in paragraph at lines 13--21
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13--25
+Underfull \hbox (badness 10000) in paragraph at lines 13--21
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13--25
+Underfull \hbox (badness 10000) in paragraph at lines 13--21
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--25
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--25
-
- []
-
-[5]
 LaTeX Font Info:    Font shape `T1/fve/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 25.
+(Font)              scaled to size 10.79993pt on input line 21.
 
-Overfull \hbox (20.63666pt too wide) in paragraph at lines 27--29
+Overfull \hbox (20.63666pt too wide) in paragraph at lines 23--25
 \T1/fve/m/n/10 Heurísticas; Meta-heurísticas; In-ter-na-tional Timetabling Com-
 pe-ti-tion 2007; Timetable; Horários;
  []
 
-LaTeX Font Info:    Font shape `T1/fve/m/n' will be
-(Font)              scaled to size 8.09995pt on input line 30.
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 33--40
+[7] [8
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 29--36
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--40
+Underfull \hbox (badness 10000) in paragraph at lines 29--36
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--40
+Underfull \hbox (badness 10000) in paragraph at lines 29--36
 
  []
 
-) [7
-
-
-] [8
+) [9] [10
 
 
 
-] (000-main.toc)
+] (000-main.toc [11])
 \tf@toc=\write10
- [9] [10
-
-
-] (000-main.lof)
+ [12] (000-main.lof)
 \tf@lof=\write11
- [11] [12
+ [13
+
+
+] [14
 
 
 ] (000-main.lot)
 \tf@lot=\write12
 
-[13] [14
-
-
-] (000-main.lol)
-\tf@lol=\write13
-
-No file 000-main.acr.
 [15] [16
 
 
-] (200-introduction.tex
+] (000-main.loa)
+\tf@loa=\write13
+ (000-main.acr [17] [18
+
+]) [19
+
+
+] [20
+
+
+]
+(200-introduction.tex
 Chapter 1.
 
 Underfull \hbox (badness 10000) in paragraph at lines 6--9
@@ -2560,45 +2563,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--30
 
  []
 
-
-LaTeX Warning: Citation `Abdullah2012' on page 2 undefined on input line 35.
-
-
-LaTeX Warning: Citation `Kirkpatrick1983' on page 2 undefined on input line 35.
-
-
-
-LaTeX Warning: Citation `Smet2007' on page 2 undefined on input line 35.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 39--47
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 39--47
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 39--47
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 39--47
-
- []
-
-[2]
-LaTeX Font Info:    Font shape `T1/fve/m/n' will be
-(Font)              scaled to size 6.29996pt on input line 81.
-
-Overfull \hbox (37.16954pt too wide) in paragraph at lines 138--139
- [][] 
- []
-
-) [3] [4] (300-theory.tex
+) [2] (300-theory.tex
 Chapter 2.
 
 Underfull \hbox (badness 10000) in paragraph at lines 5--6
@@ -2606,24 +2571,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
  []
 
 
-LaTeX Warning: Citation `Schaerf1999' on page 5 undefined on input line 11.
-
-
-LaTeX Warning: Citation `Jensen2001' on page 5 undefined on input line 13.
-
-
-LaTeX Warning: Citation `Arora2009' on page 5 undefined on input line 13.
-
-
-LaTeX Warning: Citation `Qu2009' on page 5 undefined on input line 13.
-
-
-LaTeX Warning: Citation `Arora2009' on page 5 undefined on input line 13.
-
-
-LaTeX Warning: Citation `Qu2009' on page 5 undefined on input line 13.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 9--16
 
  []
@@ -2638,25 +2585,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--16
 
  []
 
-<./images/typesOfAlgorithms.pdf, id=99, 358.33875pt x 211.79124pt>
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 8.09995pt on input line 19.
+<./images/typesOfAlgorithms.pdf, id=105, 358.33875pt x 211.79124pt>
 File: ./images/typesOfAlgorithms.pdf Graphic file (type pdf)
 
 <use ./images/typesOfAlgorithms.pdf>
 Package pdftex.def Info: ./images/typesOfAlgorithms.pdf used on input line 21.
 (pdftex.def)             Requested size: 418.25368pt x 247.21951pt.
-
-
-LaTeX Warning: Citation `Talbi2009' on page 5 undefined on input line 22.
-
-
-LaTeX Warning: Citation `Talbi2009' on page 5 undefined on input line 22.
-
-
-LaTeX Warning: Citation `Qu2009' on page 5 undefined on input line 28.
-
-
-LaTeX Warning: Citation `Lewis2007' on page 5 undefined on input line 32.
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 26--33
 
@@ -2679,26 +2615,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--33
 
  []
 
-[5
+[3
 
 
 
 
-] [6 <./images/typesOfAlgorithms.pdf>]
+] [4 <./images/typesOfAlgorithms.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
  []
 
 
-LaTeX Warning: Citation `Qu2009' on page 7 undefined on input line 39.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 39--40
 
  []
-
-
-LaTeX Warning: Citation `Schaerf1999' on page 7 undefined on input line 42.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 42--43
@@ -2710,14 +2640,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
  []
 
-[7]
-
-LaTeX Warning: Citation `Qu2009' on page 8 undefined on input line 51.
-
-
-LaTeX Warning: Citation `Carter1996' on page 8 undefined on input line 53.
-
-
+[5]
 Underfull \hbox (badness 10000) in paragraph at lines 49--54
 
  []
@@ -2727,59 +2650,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--54
 
  []
 
-
-LaTeX Warning: Citation `Talbi2009' on page 8 undefined on input line 60.
-
-
-LaTeX Warning: Citation `Talbi2009' on page 8 undefined on input line 63.
-
-
-LaTeX Warning: Citation `Talbi2009' on page 8 undefined on input line 66.
-
-[8]
-
-LaTeX Warning: Citation `McCollum2007' on page 9 undefined on input line 89.
-
-
+[6]
 Underfull \hbox (badness 10000) in paragraph at lines 89--92
 
  []
 
 
-LaTeX Warning: Citation `Mueller2009' on page 9 undefined on input line 101.
-
-
-LaTeX Warning: Citation `Mueller2005' on page 9 undefined on input line 101.
-
-
-LaTeX Warning: Citation `Mueller2004' on page 9 undefined on input line 101.
-
-
-LaTeX Warning: Citation `Russell2010' on page 9 undefined on input line 101.
-
-
-LaTeX Warning: Citation `Dueck1993' on page 9 undefined on input line 101.
-
-
-LaTeX Warning: Citation `Kirkpatrick1983' on page 9 undefined on input line 101
-.
-
-
-LaTeX Warning: Citation `Gogos2012' on page 9 undefined on input line 103.
-
-
-LaTeX Warning: Citation `Atsuta2007' on page 9 undefined on input line 105.
-
-
-LaTeX Warning: Citation `Smet2007' on page 9 undefined on input line 107.
-
-
-LaTeX Warning: Citation `Drools' on page 9 undefined on input line 107.
-
-
-LaTeX Warning: Citation `Pillay2007' on page 9 undefined on input line 109.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 99--110
 
  []
@@ -2804,74 +2680,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 99--110
 
  []
 
-[9]
-
-LaTeX Warning: Citation `Abdullah2009' on page 10 undefined on input line 114.
-
-
-LaTeX Warning: Citation `Javadian2008' on page 10 undefined on input line 114.
-
-
-LaTeX Warning: Citation `McCollum2009' on page 10 undefined on input line 116.
-
-
-LaTeX Warning: Citation `Burke2004' on page 10 undefined on input line 116.
-
-
-LaTeX Warning: Citation `Alzaqebah2011' on page 10 undefined on input line 118.
-
-
-
-LaTeX Warning: Citation `Turabieh2011' on page 10 undefined on input line 120.
-
-
-LaTeX Warning: Citation `Abdullah2009' on page 10 undefined on input line 120.
-
-
-LaTeX Warning: Citation `Abdullah2012' on page 10 undefined on input line 122.
-
-
-LaTeX Warning: Citation `Demeester2012' on page 10 undefined on input line 124.
-
-
-
-LaTeX Warning: Citation `Burke2008' on page 10 undefined on input line 124.
-
-
-LaTeX Warning: Citation `McCollum2012' on page 10 undefined on input line 126.
-
-
-LaTeX Warning: Citation `Sabar2012' on page 10 undefined on input line 128.
-
-
-LaTeX Warning: Citation `Sabar2012a' on page 10 undefined on input line 130.
-
-
-LaTeX Warning: Citation `Abdullah2013' on page 10 undefined on input line 132.
-
-
-LaTeX Warning: Citation `Alzaqebah2014' on page 10 undefined on input line 134.
-
-
-
-LaTeX Warning: Citation `Burke2014' on page 10 undefined on input line 136.
-
-
-LaTeX Warning: Citation `Mouhoub2014' on page 10 undefined on input line 138.
-
-
-LaTeX Warning: Citation `Hamilton-Bryce2014' on page 10 undefined on input line
- 140.
-
-
-LaTeX Warning: Citation `Hamilton-Bryce2014' on page 10 undefined on input line
- 140.
-
-
-LaTeX Warning: Citation `Rahman2014' on page 10 undefined on input line 142.
-
-
-LaTeX Warning: Citation `Rahman2014a' on page 10 undefined on input line 144.
+[7]
+Overfull \hbox (3.7799pt too wide) in paragraph at lines 114--147
+\T1/fve/m/n/10 Abdullah et al.'s 2009 ap-proach [[]] con-sists on us-ing an hy-
+bridiza-tion of an electromagnetic-
+ []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 114--147
@@ -2953,7 +2766,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 114--147
 
  []
 
-[10] [11]
+[8] [9]
 
 LaTeX Font Warning: Font shape `T1/fve/m/sc' undefined
 (Font)              using `T1/fve/m/n' instead on input line 152.
@@ -2976,7 +2789,7 @@ Overfull \hbox (42.49413pt too wide) in paragraph at lines 153--180
 
 LaTeX Warning: Float too large for page by 14.98903pt on input line 180.
 
-[12]) [13] [14] (400-architecture.tex
+[10]) [11] [12] (400-architecture.tex
 Chapter 3.
 Missing character: There is no D in font nullfont!
 Missing character: There is no a in font nullfont!
@@ -3238,12 +3051,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 134--141
 
  []
 
-[15
+[13
 
 
 
 
-] [16] [17]
+] [14] [15]
 Missing character: There is no B in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no s in font nullfont!
@@ -3277,14 +3090,6 @@ Overfull \hbox (32.15245pt too wide) in paragraph at lines 269--270
 
 
 LaTeX Warning: Float too large for page by 54.36844pt on input line 271.
-
-
-LaTeX Warning: Citation `McCollum2007b' on page 18 undefined on input line 285.
-
-
-
-LaTeX Warning: Citation `McCollum2007c' on page 18 undefined on input line 285.
-
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 275--286
@@ -3322,7 +3127,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 289--292
 
  []
 
-[18] [19]) [20] (500-loader-solution-init.tex
+[16] [17]) [18] (500-loader-solution-init.tex
 Chapter 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 10--13
@@ -3374,26 +3179,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--130
 
  []
 
-[21
+[19
 
 
 
 
 ]
-
-LaTeX Warning: Citation `Mueller2009' on page 22 undefined on input line 134.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 134--135
 
  []
 
-[22]
-
-LaTeX Warning: Citation `McCollum2007d' on page 23 undefined on input line 140.
-
-
-
+[20]
 Underfull \hbox (badness 10000) in paragraph at lines 138--143
 
  []
@@ -3403,11 +3199,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 138--143
 
  []
 
-[23]
-
-LaTeX Warning: Citation `Mueller2009' on page 24 undefined on input line 151.
-
-
+[21]
 Underfull \hbox (badness 10000) in paragraph at lines 149--153
 
  []
@@ -3427,7 +3219,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 157--158
 
  []
 
-[24]
+[22]
 Missing character: There is no H in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no u in font nullfont!
@@ -3478,41 +3270,33 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no y in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
-
-
-LaTeX Warning: Citation `McCollum2007e' on page 25 undefined on input line 281.
-
-
 )
-Underfull \hbox (badness 10000) in paragraph at lines 235--118
+Underfull \hbox (badness 10000) in paragraph at lines 239--118
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 235--118
+Underfull \hbox (badness 10000) in paragraph at lines 239--118
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 235--118
+Underfull \hbox (badness 10000) in paragraph at lines 239--118
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 235--118
+Underfull \hbox (badness 10000) in paragraph at lines 239--118
 
  []
 
-[25] [26] [27] (500-local-search.tex [28
+[23] [24] [25] (500-local-search.tex [26
 
 
 
 
 ]
 Chapter 5.
-
-LaTeX Warning: Citation `Mueller2009' on page 29 undefined on input line 5.
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 10--13
 
@@ -3565,7 +3349,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--97
 
  []
 
-[29]
+[27]
 Underfull \hbox (badness 10000) in paragraph at lines 97--102
 
  []
@@ -3576,10 +3360,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--102
  []
 
 
-LaTeX Warning: Citation `CarvalhoLisbonNovember2004' on page 30 undefined on in
-put line 107.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 102--108
 
  []
@@ -3594,7 +3374,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--108
 
  []
 
-[30] [31]
+[28] [29]
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 6.29996pt on input line 110.
+
 Underfull \hbox (badness 10000) in paragraph at lines 108--114
 
  []
@@ -3605,9 +3388,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 108--114
  []
 
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
-(Font)              scaled to size 5.39996pt on input line 131.
+(Font)              scaled to size 5.39996pt on input line 151.
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
-(Font)              scaled to size 4.49997pt on input line 131.
+(Font)              scaled to size 4.49997pt on input line 151.
 Package pgfplots info on input line 162: Overriding colorspace to rgb due to xc
 olor configuration.
 Missing character: There is no s in font nullfont!
@@ -3617,162 +3400,188 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no d in font nullfont!
 PGFPlots: reading {sa_plot_data.dat}
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--178
+Underfull \hbox (badness 10000) in paragraph at lines 114--177
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--178
+Underfull \hbox (badness 10000) in paragraph at lines 114--177
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--178
+Underfull \hbox (badness 10000) in paragraph at lines 114--177
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--178
+Underfull \hbox (badness 10000) in paragraph at lines 114--177
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--178
+Underfull \hbox (badness 10000) in paragraph at lines 114--177
+
+ []
+
+[30]
+Underfull \hbox (badness 10000) in paragraph at lines 181--184
+
+ []
+
+Missing character: There is no H in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no H in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+
+Underfull \hbox (badness 10000) in paragraph at lines 186--223
+
+ []
+
+[31]
+Underfull \hbox (badness 10000) in paragraph at lines 227--235
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--235
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--235
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--235
 
  []
 
 [32]
-Underfull \hbox (badness 10000) in paragraph at lines 182--185
+Underfull \hbox (badness 10000) in paragraph at lines 236--237
 
  []
 
-Missing character: There is no H in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no L in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no H in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no L in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
 
-Underfull \hbox (badness 10000) in paragraph at lines 187--224
+Underfull \hbox (badness 10000) in paragraph at lines 238--239
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 240--241
 
  []
 
 [33]
-Underfull \hbox (badness 10000) in paragraph at lines 228--236
+Underfull \hbox (badness 10000) in paragraph at lines 242--243
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--236
+Underfull \hbox (badness 10000) in paragraph at lines 244--245
 
  []
 
+Missing character: There is no H in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no H in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--236
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 228--236
+Underfull \hbox (badness 10000) in paragraph at lines 251--309
 
  []
 
 [34]
-Underfull \hbox (badness 10000) in paragraph at lines 237--238
+Package pgfplots info on input line 360: Overriding colorspace to rgb due to xc
+olor configuration.
+PGFPlots: reading {./SAResults6.dat}
+Package pgfplots info on input line 366: Overriding colorspace to rgb due to xc
+olor configuration.
+
+Overfull \hbox (43.30434pt too wide) in paragraph at lines 367--368
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 312--369
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 239--240
+Underfull \hbox (badness 10000) in paragraph at lines 312--369
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 241--242
-
- []
-
-[35]
-Underfull \hbox (badness 10000) in paragraph at lines 243--244
+Underfull \hbox (badness 10000) in paragraph at lines 312--369
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 245--246
-
- []
-
-Missing character: There is no H in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no L in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no H in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no L in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-
-Underfull \hbox (badness 10000) in paragraph at lines 252--310
-
- []
-
-[36]
-Underfull \hbox (badness 10000) in paragraph at lines 314--319
+Underfull \hbox (badness 10000) in paragraph at lines 373--378
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--319
+Underfull \hbox (badness 10000) in paragraph at lines 373--378
 
  []
 
-)
-Underfull \hbox (badness 10000) in paragraph at lines 322--119
+[35] [36])
+Underfull \hbox (badness 10000) in paragraph at lines 381--119
 
  []
 
@@ -3889,69 +3698,37 @@ Overfull \hbox (15.41666pt too wide) detected at line 50
  []
 
 
-LaTeX Warning: Citation `Mueller2009' on page 39 undefined on input line 56.
-
-
-LaTeX Warning: Citation `Mueller2009' on page 39 undefined on input line 56.
-
-
-LaTeX Warning: Citation `Mueller2009' on page 39 undefined on input line 75.
-
-
-LaTeX Warning: Citation `Gogos2012' on page 39 undefined on input line 75.
-
-
-LaTeX Warning: Citation `Atsuta2007' on page 39 undefined on input line 75.
-
-
-LaTeX Warning: Citation `Smet2007' on page 39 undefined on input line 75.
-
-
-LaTeX Warning: Citation `Pillay2007' on page 39 undefined on input line 75.
-
-
-LaTeX Warning: Citation `Rahman2014' on page 39 undefined on input line 96.
-
-
-LaTeX Warning: Citation `Hamilton-Bryce2014' on page 39 undefined on input line
- 96.
-
-
-LaTeX Warning: Citation `Mouhoub2014' on page 39 undefined on input line 96.
-
-
-LaTeX Warning: Citation `Rahman2014' on page 39 undefined on input line 96.
-
-
-LaTeX Warning: Citation `Mueller2009' on page 39 undefined on input line 96.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--97
+Underfull \hbox (badness 10000) in paragraph at lines 4--137
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--97
+Underfull \hbox (badness 10000) in paragraph at lines 4--137
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--97
+Underfull \hbox (badness 10000) in paragraph at lines 4--137
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--97
+Underfull \hbox (badness 10000) in paragraph at lines 4--137
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--97
+Underfull \hbox (badness 10000) in paragraph at lines 4--137
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--97
+Underfull \hbox (badness 10000) in paragraph at lines 4--137
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--137
 
  []
 
@@ -3960,25 +3737,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--97
 
 
 
-]
-
-LaTeX Warning: Citation `Rahman2014a' on page 40 undefined on input line 115.
-
-
-LaTeX Warning: Citation `Hamilton-Bryce2014' on page 40 undefined on input line
- 115.
-
-
-LaTeX Warning: Citation `Mouhoub2014' on page 40 undefined on input line 115.
-
-
-LaTeX Warning: Citation `Burke2014' on page 40 undefined on input line 115.
-
-
-LaTeX Warning: Citation `Alzaqebah2014' on page 40 undefined on input line 115.
-
-
-) [40] [41] [42] (550-future-work.tex
+]) [40] [41] [42] (550-future-work.tex
 Chapter 7.
 )
 Underfull \hbox (badness 10000) in paragraph at lines 4--121
@@ -4006,29 +3765,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--121
 
 
 ] (test.tex
-Package pgfplots info on input line 36: Overriding colorspace to rgb due to xco
+Package pgfplots info on input line 43: Overriding colorspace to rgb due to xco
 lor configuration.
-PGFPlots: reading {./GCResults8.dat}
-Package pgfplots info on input line 42: Overriding colorspace to rgb due to xco
+PGFPlots: reading {./SAResults6.dat}
+Package pgfplots info on input line 49: Overriding colorspace to rgb due to xco
 lor configuration.
 
-Overfull \hbox (43.4656pt too wide) in paragraph at lines 43--44
-[][] 
+Overfull \hbox (43.30434pt too wide) in paragraph at lines 50--51
+ [][] 
  []
 
-) [44
-
-
-] (800-references.tex (000-main.bbl
+) [44] (800-references.tex (000-main.bbl
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 8.09995pt on input line 36.
+(Font)              scaled to size 8.09995pt on input line 19.
 
-Underfull \hbox (badness 5504) in paragraph at lines 78--81
+Underfull \hbox (badness 5504) in paragraph at lines 18--21
 []\T1/fve/m/n/9 G. Smet, ``Drools-solver.'' $\T1/fvm/m/n/9 http : / / www . cs 
 . qub . ac . uk / itc2007 / winner / bestexamsolutions /$
  []
 
 [45
+
+
 
 
 
@@ -4066,21 +3824,15 @@ Underfull \hbox (badness 1655) in paragraph at lines 218--220
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 49420 strings out of 493671
- 1125850 string characters out of 3141423
- 2976840 words of memory out of 3000000
- 51771 multiletter control sequences out of 15000+200000
+ 49022 strings out of 493671
+ 1117507 string characters out of 3141423
+ 2977388 words of memory out of 3000000
+ 51369 multiletter control sequences out of 15000+200000
  97033 words of font info for 90 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 63i,15n,105p,10397b,2255s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,15n,105p,10397b,2409s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program F
 iles (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files (x86)/
 MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files (x86)/MiKTeX 2.9/
@@ -4102,9 +3854,9 @@ m Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy5.pfb><C:/Program Files (x86
 )/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9
 /fonts/type1/public/lm/lmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 /public/lm/lmsy9.pfb>
-Output written on 000-main.pdf (63 pages, 766935 bytes).
+Output written on 000-main.pdf (67 pages, 755985 bytes).
 PDF statistics:
- 362 PDF objects out of 1000 (max. 8388607)
+ 381 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 144 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 164 words of extra memory for PDF output out of 10000 (max. 10000000)
 

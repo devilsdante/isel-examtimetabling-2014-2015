@@ -114,7 +114,7 @@ This method also uses a different acceptance criterion:\\
 \[P(\delta E, T, SF) = e^{\frac{-\delta E}{T.f(s)}} \]
 f(s) $\rightarrow$ Solution fitness\\
 \\
-The behavior of this heuristic depends on the given parameters (maximum and minimum temperature, rate, number of loops per temperature, type of the cooling schedule), and the difficulty of the set is also important, considering the execution time limit. Knowing this, it's important to choose the parameters wisely to obtain the best possible results. But, each set has its own characteristics and using parameters for one set does not guarantee that the results will be equivalently good for the others. One example is finding the best parameters for the first set, and make it try run for about 200 milliseconds. This does not mean the others will run for about the same amount of time, degrading the effectiveness of this heuristic. Thus, a variable rate was implemented.\\
+\textcolor{green}{The behavior of this heuristic depends on the given parameters (maximum and minimum temperature, rate, number of loops per temperature, type of the cooling schedule), and the difficulty of the set is also important, considering the execution time limit. Knowing this, it's important to choose the parameters wisely to obtain the best possible results. But, each set has its own characteristics and using parameters for one set does not guarantee that the results will be equivalently good for the others. One example is finding the best parameters for the first set, and make it try run for about 200 milliseconds. This does not mean the others will run for about the same amount of time, degrading the effectiveness of this heuristic. Thus, a variable rate was implemented.\\
 \\
 The variable rate was implemented to make this heuristic run closer to the given time limit. Considering it is not certain that the algorithm will run within the given 221000 milliseconds, as being a stochastic algorithm, a time limit was added to this meta-heuristic as well, ending this heuristic automatically if the time limit is reached. If this happens, it degrades the meta-heuristic's performance because it ends before it's suppose to. To avoid this, an offset was created. The offset is a percentage which is removed from a part of the simulation to, instead of pointing the heuristic to run for 221000 milliseconds, it points to 185640 milliseconds, to have a margin of safety. The offset used is 16\%.\\
 \\
@@ -148,7 +148,7 @@ The algorithm starts by simulating the execution of this heuristic, by running a
 \end{algorithmic}
 \caption{Rate computing.}
 \label{alg:RateComputing}
-\end{algorithm}Some testings were made in order to check this heuristic's behavior, using the following parameters: \textit{TMax} = 0.1, \textit{TMin} = $1e-06$, \textit{loops} = 5, \textit{exec\_time} = 50000, and the computed\_rate = 0.00016. As can be seen in Figure \ref{fig:SimulatedAnnealingPlot}, it starts by accepting all worse and better neighbor solutions. In the end, the temperature is so low that it becomes harder to accept worse solutions, ending up acting similar to the \gls{hc} procedure.\\
+\end{algorithm}Some testings were made in order to check this heuristic's behavior, using the following parameters: \textit{TMax} = 0.1, \textit{TMin} = $1e-06$, \textit{loops} = 5, \textit{exec\_time} = 50000, and the computed\_rate = 0.00016. As can be seen in Figure \ref{fig:SimulatedAnnealingPlot}, it starts by accepting all worse and better neighbor solutions. In the end, the temperature is so low that it becomes harder to accept worse solutions, ending up acting similar to the \gls{hc} procedure.}\\
 \\
 \begin{figure}[!t]
 \centering
@@ -173,10 +173,9 @@ The algorithm starts by simulating the execution of this heuristic, by running a
 
 \caption{Simulated Annealing results: score value as a function of the temperature} 
 \label{fig:SimulatedAnnealingPlot}
-\end{figure}
-The tests performed on all the sets are shown and explained in Chapter \ref{chap:ExpResults}.
+\end{figure}\textcolor{green}{The tests performed on all the sets are shown and explained in Chapter \ref{chap:ExpResults}.}
 
-\section{Hill Climbing}
+\section{\textcolor{green}{Hill Climbing}}
 \label{sec:HillClimbing}
 
 \gls{hc} is a meta-heuristic different to the \gls{sa} family of meta-heuristics, in the sense that only accepts improving solutions. So, as long as it reaches a local optimum, it can't get out of that point because every neighbor solutions are worse. In this way, \gls{hc} only has one parameter that is the number of iterations or time limit which controls the algorithms' execution time.\\
@@ -308,7 +307,67 @@ Every neighbor object must implement the interface \verb+INeighbor+, which prese
 \label{fig:Neighbors}
 \end{figure}
 
-\section{Fitness Computation}
+\subsection{\textcolor{green}{Statistics}}
+\label{sub:SAStatistics}
+It is important to make sure that the algorithm works as planned. This includes being stochastic, and all the neighbor operators must contribute positively to obtain better results.\\
+\\
+In this particular case, to make sure this heuristic is stochastic, we must guarantee that all the examinations are moved more or less the same amount of times. Considering some examinations are harder to move, these are moved less times than others, but the difference is never that high. A study was made to compare, in the same run, the number of rejected and accepted neighbor for each examination. The examinations are sorted by the number of conflicts. Figure \ref{fig:AvsRNeighbors} represents a colorbar which the colors represent the number of times each examination was accepted (x = 1) and rejected (x = 2). As can be seen, some examinations are not even selected to move, and so, have zero accepted and rejected results. In this particular set, only two lines are completely blue, as checked in the results file. These two examinations have \textit{exam\_coincidence} hard constraint and are only able to be in one room because of the number of students being so high. The \gls{sa} algorithm is not optimized to move more than one examinations at the time. This means that those two examinations can never be moved to another period, because the \gls{sa} can only move one examination at the time and can't be moved to another room because the examination does not fit in other rooms.\\
+\\
+Other blue lines, which have values between 1000 and 1, are so low, not only because the examination is hard to move because of its conflicts, but may also have the \textit{exam\_coincidence} and a really short number of rooms which that examination can fit. This problem creates a limitation in the \gls{sa} heuristic, preventing from scanning parts of the solutions space, limiting then the final results. \\
+\\
+\begin{figure}[t!]
+\centering
+
+\caption{Accepted and rejected neighbors in the Simulated Annealing.} 
+\label{fig:AvsRNeighbors}
+
+\begin{tikzpicture}
+
+	\begin{axis}[
+		colorbar style={
+		scaled y ticks = false,
+		y tick label style={/pgf/number format/fixed,
+			/pgf/number format/1000 sep = \thinspace 	% Optional if you want to
+														% replace comma as the 1000
+														% separator 
+        }
+		},
+		width = \textwidth,
+		xlabel = {Runs},
+		ylabel = {Exams},
+		enlarge x limits = true,	% The value true enlarges the lower 
+									% and upper limit.
+									% The value false uses tight axis limits
+		enlarge y limits = true,
+		colorbar,
+		%colormap={}{ gray(0cm)=(1); gray(1cm)=(0);}, % Grey colorbar
+		%x dir = reverse,
+		%y dir = reverse,
+		%xmode = log,        % logarithmic x axis
+		%xmin = 0, xmax = 9,
+		% car92 has 543 exams
+		%ymin = 0, ymax = 606, 
+%		ytick = { 0, 100, 200, 300, 400, 500, 542},
+		extra x ticks = {
+1,
+2,
+3
+}, extra x tick labels = {},
+	    		extra tick style = { grid = major},
+	    		width = \textwidth,
+	    		%width = 17cm,
+			%height = 11cm,
+		]
+		\addplot[surf, 
+			shader = interp, % No facets
+			point meta = explicit] 
+			%table [z expr = 100, meta index = 2] {./yor83Cool1Eminus6.dat};
+			table [z expr = 100, meta index = 2] {./SAResults6.dat};
+\end{axis}
+\end{tikzpicture}
+\end{figure}
+
+\section{\textcolor{green}{Fitness Computation}}
 \label{sec:FitnessComputation}
 
 The fitness computation is an important topic, when taking performance into consideration. As mentioned in the Subsection \ref{subsec:ToolsLayer}, this value is computed using the \verb+EvaluationFunction+ tool, which in a first approach, implied for generated neighbors, the recalculation of their fitness value. Tests were made to study this approach since the fitness results were not as good as expected. The tests showed that this approach was having poor performance since most of the time was used to compute the fitness for each new neighbor generated solution.\\

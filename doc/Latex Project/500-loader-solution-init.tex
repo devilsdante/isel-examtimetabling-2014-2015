@@ -230,6 +230,10 @@ The Graph Coloring heuristic implementation only realize assignments and unassig
 \label{alg:GraphColoring}
 \end{algorithm}
 
+\subsection{\textcolor{green}{Statistics}}
+
+It is important to guarantee that the implemented heuristic is stochastic, and so, has stochastic behavior. The implemented heuristic is not considered stochastic if the results are not, in most part, different from each other. In this particular case, we need to assure that the \gls{gc} produces different results in different runs. This means that generated timetables cannot have examinations placed in the same period and room for each different run. This test was performed using a colorbar figure to check for color patters between the runs, wherein periods were represented by a different color. The figure didn't show any color patters, thus concluding that the \gls{gc} was indeed behaving stochastically.
+
 \section{Solution Initialization Results}
 
 As mentioned previously, the goal of the initialization procedure is not to find the best solution possible (in terms of fitness), but the find of feasible solution. Some sets are simpler than others, always getting good and stable execution times. Others can be harder, getting worse execution timings and instability. An unstable set means the results vary too much, and so some tests show very good execution times and others not so much. The Graph Coloring heuristic results on the 12 sets can be seen in Table \ref{tab:GCResults}. These results were obtained by running the heuristic, 10 times for each set, and computing the average for both fitness and execution time fields.\\
@@ -250,24 +254,24 @@ As mentioned previously, the goal of the initialization procedure is not to find
 
 \toprule
 
-       & \multicolumn{1}{c}{} & \multicolumn{1}{c}{Execution} & \multicolumn{1}{c}{Standard} & \multicolumn{1}{c}{Time used} & \multicolumn{1}{c}{Time used}\\
-       &	 \multicolumn{1}{c}{Fitness} & \multicolumn{1}{c}{time} & \multicolumn{1}{c}{Deviation} & \multicolumn{1}{c}{in the $1_{st}$} & \multicolumn{1}{c}{in the $2_{nd}$}\\
+ & \multicolumn{1}{c}{} & \multicolumn{1}{c}{Execution} & \multicolumn{1}{c}{Standard} & \multicolumn{1}{c}{Time used} & \multicolumn{1}{c}{Time used}\\
+\multicolumn{1}{c}{SET} &	 \multicolumn{1}{c}{Fitness} & \multicolumn{1}{c}{time} & \multicolumn{1}{c}{Deviation} & \multicolumn{1}{c}{in the $1_{st}$} & \multicolumn{1}{c}{in the $2_{nd}$}\\
        &		   	     &\multicolumn{1}{c}{(ms)} & \multicolumn{1}{c}{$\sigma$ (ms)} & \multicolumn{1}{c}{phase (\%)} & \multicolumn{1}{c}{phase (\%)}\\
        
 \midrule
 
-SET 1 	 & 49028 	 & 202 & 61 & 0.09 & 99.91\\
-SET 2	 & 103907 & 250 & 2 & 0.11 & 99.89\\
-SET 3 	 & 170232 & 942 & 20 & 0.43 & 99.57\\
-SET 4	 & \text{--}  & \text{--} & \text{--} & \text{--} & \text{--}\\
-SET 5 	 & 349319 	 & 227 & 5 & 0.10 & 99.9\\
-SET 6 	 & 60857 	 & 297 & 192 & 0.13 & 99.87\\
-SET 7	 & 155708	 & 569 & 19 & 0.26 & 99.74\\
-SET 8 	 & 397868 	 & 243 & 8 & 0.11 & 99.89\\
-SET 9 	 & 15680 	 & 12 & 1 & 0.01 & 99.99\\
-SET 10	 & 121164 	 & 110 & 6 & 0.05 & 99.95\\
-SET 11	 & 260310 & 3405 & 2170 & 1.54 & 98.46\\
-SET 12	 & 11887 	 & 3690 & 1829 & 1.67 & 98.33\\ 
+1 	 & 49028 	 & 202 & 61 & 0.09 & 99.91\\
+2	 & 103907 & 250 & 2 & 0.11 & 99.89\\
+3 	 & 170232 & 942 & 20 & 0.43 & 99.57\\
+4	 & \text{--}  & \text{--} & \text{--} & \text{--} & \text{--}\\
+5 	 & 349319 	 & 227 & 5 & 0.10 & 99.9\\
+6 	 & 60857 	 & 297 & 192 & 0.13 & 99.87\\
+7	 & 155708	 & 569 & 19 & 0.26 & 99.74\\
+8 	 & 397868 	 & 243 & 8 & 0.11 & 99.89\\
+9 	 & 15680 	 & 12 & 1 & 0.01 & 99.99\\
+10	 & 121164 	 & 110 & 6 & 0.05 & 99.95\\
+11	 & 260310 & 3405 & 2170 & 1.54 & 98.46\\
+12	 & 11887 	 & 3690 & 1829 & 1.67 & 98.33\\ 
 
 \bottomrule
 

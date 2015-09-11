@@ -43,7 +43,7 @@ namespace Heuristics.SimulatedAnnealing.Timetable
             evaluation_function = new EvaluationFunctionTimetable();
             neighbor_selection_timetable = new NeighborSelectionTimetable();
             random = new Random(Guid.NewGuid().GetHashCode());
-            total_neighbor_operators = 6;
+            total_neighbor_operators = 5;
         }
 
         protected INeighbor GenerateNeighbor(Solution solution, int type)
@@ -63,9 +63,9 @@ namespace Heuristics.SimulatedAnnealing.Timetable
         private INeighbor GenerateRandomNeighbor(Solution solution)
         {
             INeighbor to_return;
-            int val = random.Next(total_neighbor_operators);
             do
             {
+                var val = random.Next(total_neighbor_operators);
                 if (val == 0)
                     to_return = neighbor_selection_timetable.RoomChange(solution);
                 else if (val == 1)
@@ -74,10 +74,10 @@ namespace Heuristics.SimulatedAnnealing.Timetable
                     to_return = neighbor_selection_timetable.PeriodRoomChange(solution);
                 else if (val == 3)
                     to_return = neighbor_selection_timetable.RoomSwap(solution);
-                else if (val == 4)
+                else //if (val == 4)
                     to_return = neighbor_selection_timetable.PeriodSwap(solution);
-                else
-                    to_return = neighbor_selection_timetable.PeriodRoomSwap(solution);
+                //else
+                    //to_return = neighbor_selection_timetable.PeriodRoomSwap(solution);
             } while (to_return == null);
 
             return to_return;
@@ -327,8 +327,8 @@ namespace Heuristics.SimulatedAnnealing.Timetable
                 evaluation_function.Fitness(neighbor);
                 while ((neighbor = neighbor_selection_timetable.PeriodSwap(solution)) == null) ;
                 evaluation_function.Fitness(neighbor);
-                while ((neighbor = neighbor_selection_timetable.PeriodRoomSwap(solution)) == null) ;
-                evaluation_function.Fitness(neighbor);
+                //while ((neighbor = neighbor_selection_timetable.PeriodRoomSwap(solution)) == null) ;
+                //evaluation_function.Fitness(neighbor);
             }
             computed_time = watch.ElapsedMilliseconds;
             //Console.WriteLine(computed_time);

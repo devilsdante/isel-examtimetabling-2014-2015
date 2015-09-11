@@ -14,13 +14,9 @@ Nos últimos anos o tema de criação de horários tem sido alvo de muito estudo
 \\
 A criação de horários não é uma tarefa fácil, mesmo para uma máquina. Por exemplo, horários escolares necessitam de seguir certas regras para que seja possível a criação de um horário válido. Mas como o espaço de estados (soluções) válidas é tão vasto, é impossível criar um algoritmo que faça \textit{brute force} e assim obter a melhor solução possível, considerando as regras fornecidas. Daí a utilização de heurísticas que varrem de uma forma guiada o espaço de estados, conseguindo assim uma boa solução em tempo real.\\
 \\
-Este relatório explica algumas das importantes heurísticas que são úteis neste tipo de desafios, tanto como o estado-da-arte que menciona abordagens importantes neste tema. Este projeto tem como objetivo o desenvolvimento de uma abordagem para concurso de \textit{International Timetabling Competition 2007} considerando os melhores concorrentes que participaram no concurso e abordagens mais recentes.\\
-\\
 É dos objetivos do projeto criar uma abordagem que siga as regras do \textit{International Timetabling Competition 2007} ao qual irá incidir na criação de horários de exames para a faculdade (Examination timetabling). Este projeto utiliza uma abordagem de heurísticas hibridas. Isto significa que utiliza múltiplas heurísticas para a obter a melhor solução possível. Utiliza uma variância de Graph Coloring para obter uma solução válida e meta-heurísticas chamadas Simulated Annealing e Hill Climbing para melhorar a solução o máximo possível.\\
 \\
-Este projeto possui uma arquitetura com 6 camadas. Camada de dados, camada de acesso a dados, camada de negócio, camada de heurísticas, camada de ferramentas e camadas de apresentação. A primeira é responsável pelo armazenamento de dados, ao qual são armazenados em repositórios em memória volátil. A camada de acesso a dados disponibiliza os repositórios das entidades que fornece funções como adicionar, remover, alterar e obter para essas mesmas entidades. A camada de dados fornece funções de acesso aos repositórios, ao qual as funções são mais ricas do que as funções fornecidas pelos repositórios. Dentro do mesmo nível estão presentes a camada de heurísticas, que possui todas as heurísticas, e a camada de ferramentas, que é utilizada pelas heurísticas e pela camada de apresentação. E por fim a camada de apresentação, que simplesmente serve como debug e para verificação de resultados de testes.\\
-\\
-No final os resultados vão ser avaliados e comparados com os cinco melhores participantes do concurso e outras abordagens mais recentes.
+Os resultados finais foram satisfatórios, pois em algumas instâncias os resultados foram melhores do que alguns dos cinco finalistas do concurso.
 \
 \section*{Palavras Chave}
 

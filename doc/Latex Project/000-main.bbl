@@ -4,6 +4,21 @@
 E.~Talbi, {\em Metaheuristics - From Design to Implementation}.
 \newblock Wiley, 2009.
 
+\bibitem{Abdullah2012}
+S.~Abdullah and H.~Turabieh, ``On the use of multi neighbourhood structures
+  within a tabu-based memetic approach to university timetabling problems,''
+  {\em Information Sciences}, vol.~191, no.~0, pp.~146 -- 168, 2012.
+\newblock Data Mining for Software Trustworthiness.
+
+\bibitem{Kirkpatrick1983}
+S.~Kirkpatrick, D.~Gelatt, and M.~Vecchi, ``Optimization by simmulated
+  annealing,'' {\em Science}, vol.~220, no.~4598, pp.~671--680, 1983.
+
+\bibitem{Smet2007}
+G.~Smet, ``Drools-solver.''
+  \url{http://www.cs.qub.ac.uk/itc2007/winner/bestexamsolutions/Geoffrey_De_smet_examination_description.pdf},
+  2007.
+
 \bibitem{Schaerf1999}
 A.~Schaerf, ``A survey of automated timetabling,'' {\em Artif. Intell. Rev.},
   vol.~13, no.~2, pp.~87--127, 1999.
@@ -59,10 +74,6 @@ S.~J. Russell and P.~Norvig, {\em Artificial Intelligence - {A} Modern Approach
 G.~Dueck, ``New optimization heuristics: The great deluge algorithm and the
   record-to-record travel,'' {\em Journal of Computational Physics}, 1993.
 
-\bibitem{Kirkpatrick1983}
-S.~Kirkpatrick, D.~Gelatt, and M.~Vecchi, ``Optimization by simmulated
-  annealing,'' {\em Science}, vol.~220, no.~4598, pp.~671--680, 1983.
-
 \bibitem{Gogos2012}
 C.~Gogos, P.~Alefragis, and E.~Housos, ``An improved multi-staged algorithmic
   process for the solution of the examination timetabling problem,'' {\em
@@ -73,11 +84,6 @@ M.~Atsuta, K.~Nonobe, and T.~Ibaraki, {\em ITC-2007 Track2: An Approach using
   General CSP Solver}.
 \newblock PhD thesis, Kwansei-Gakuin University, School of Science and
   Technology, Tokyo, Japan, 2007.
-
-\bibitem{Smet2007}
-G.~Smet, ``Drools-solver.''
-  \url{http://www.cs.qub.ac.uk/itc2007/winner/bestexamsolutions/Geoffrey_De_smet_examination_description.pdf},
-  2007.
 
 \bibitem{Drools}
 T.~J. Drools, ``Drools planner user guide.''
@@ -131,12 +137,6 @@ M.~Alzaqebah and S.~Abdullah, ``Hybrid artificial bee colony search algorithm
 \bibitem{Turabieh2011}
 H.~Turabieh and S.~Abdullah, ``An integrated hybrid approach to the examination
   timetabling problem,'' {\em Omega}, vol.~39, no.~6, pp.~598 -- 607, 2011.
-
-\bibitem{Abdullah2012}
-S.~Abdullah and H.~Turabieh, ``On the use of multi neighbourhood structures
-  within a tabu-based memetic approach to university timetabling problems,''
-  {\em Information Sciences}, vol.~191, no.~0, pp.~146 -- 168, 2012.
-\newblock Data Mining for Software Trustworthiness.
 
 \bibitem{Demeester2012}
 P.~Demeester, B.~Bilgin, P.~Causmaecker, and G.~Berghe, ``A hyperheuristic
