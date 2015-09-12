@@ -46,8 +46,8 @@
 \contentsline {section}{\numberline {5.3}Neighborhood Operators}{32}
 \contentsline {subsection}{\numberline {5.3.1}Implementation}{34}
 \contentsline {subsection}{\numberline {5.3.2}\leavevmode {\color {green}Statistics}}{35}
-\contentsline {section}{\numberline {5.4}\leavevmode {\color {green}Fitness Computation}}{35}
-\contentsline {subsection}{\numberline {5.4.1}Implementation}{37}
+\contentsline {section}{\numberline {5.4}\leavevmode {\color {green}Fitness Computation}}{38}
+\contentsline {subsection}{\numberline {5.4.1}Implementation}{38}
 \contentsline {chapter}{\numberline {6}\leavevmode {\color {green}Experimental Results}}{39}
-\contentsline {chapter}{\numberline {7}Conclusions and Future Work}{43}
+\contentsline {chapter}{\numberline {7}\leavevmode {\color {green}Conclusions and Future Work}}{43}
 \contentsline {chapter}{References}{45}

@@ -20,6 +20,7 @@
 \glossaryentry{TL?\glossentry{tl}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{PL?\glossentry{pl}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{CRUD?\glossentry{crud}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{SA?\glossentry{sa}|setentrycounter[]{page}\glsnumberformat}{xiii}
 \glossaryentry{AI?\glossentry{ai}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{ITC 2007?\glossentry{itc2007}|setentrycounter[]{page}\glsnumberformat}{2}
 \glossaryentry{ITC 2007?\glossentry{itc2007}|setentrycounter[]{page}\glsnumberformat}{2}
@@ -161,6 +162,8 @@
 \glossaryentry{SA?\glossentry{sa}|setentrycounter[]{page}\glsnumberformat}{35}
 \glossaryentry{SA?\glossentry{sa}|setentrycounter[]{page}\glsnumberformat}{35}
 \glossaryentry{SA?\glossentry{sa}|setentrycounter[]{page}\glsnumberformat}{35}
+\glossaryentry{SA?\glossentry{sa}|setentrycounter[]{page}\glsnumberformat}{35}
+\glossaryentry{SA?\glossentry{sa}|setentrycounter[]{page}\glsnumberformat}{37}
 \glossaryentry{ITC 2007?\glossentry{itc2007}|setentrycounter[]{page}\glsnumberformat}{39}
 \glossaryentry{SA?\glossentry{sa}|setentrycounter[]{page}\glsnumberformat}{39}
 \glossaryentry{ITC 2007?\glossentry{itc2007}|setentrycounter[]{page}\glsnumberformat}{39}
@@ -174,4 +177,8 @@
 \glossaryentry{ITC 2007?\glossentry{itc2007}|setentrycounter[]{page}\glsnumberformat}{43}
 \glossaryentry{SA?\glossentry{sa}|setentrycounter[]{page}\glsnumberformat}{43}
 \glossaryentry{SA?\glossentry{sa}|setentrycounter[]{page}\glsnumberformat}{43}
-\glossaryentry{GC?\glossentry{gc}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{SA?\glossentry{sa}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{SA?\glossentry{sa}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{HC?\glossentry{hc}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{GD?\glossentry{gd}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{SA?\glossentry{sa}|setentrycounter[]{page}\glsnumberformat}{43}

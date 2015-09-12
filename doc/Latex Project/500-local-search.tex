@@ -313,12 +313,12 @@ It is important to make sure that the algorithm works as planned. This includes 
 \\
 In this particular case, to make sure this heuristic is stochastic, we must guarantee that all the examinations are moved more or less the same amount of times. Considering some examinations are harder to move, these are moved less times than others, but the difference is never that high. A study was made to compare, in the same run, the number of rejected and accepted neighbor for each examination. The examinations are sorted by the number of conflicts. Figure \ref{fig:AvsRNeighbors} represents a colorbar which the colors represent the number of times each examination was accepted (x = 1) and rejected (x = 2). As can be seen, some examinations are not even selected to move, and so, have zero accepted and rejected results. In this particular set, only two lines are completely blue, as checked in the results file. These two examinations have \textit{exam\_coincidence} hard constraint and are only able to be in one room because of the number of students being so high. The \gls{sa} algorithm is not optimized to move more than one examinations at the time. This means that those two examinations can never be moved to another period, because the \gls{sa} can only move one examination at the time and can't be moved to another room because the examination does not fit in other rooms.\\
 \\
-Other blue lines, which have values between 1000 and 1, are so low, not only because the examination is hard to move because of its conflicts, but may also have the \textit{exam\_coincidence} and a really short number of rooms which that examination can fit. This problem creates a limitation in the \gls{sa} heuristic, preventing from scanning parts of the solutions space, limiting then the final results. \\
+Other blue lines, which have values between 1000 and 1, are so low, not only because the examination is hard to move because of its conflicts, but may also have the \textit{exam\_coincidence} and a really short number of rooms which that examination can fit. This problem creates a limitation in the \gls{sa} heuristic, preventing from scanning parts of the solutions space, limiting then the final results.\\
 \\
 \begin{figure}[t!]
 \centering
 
-\caption{Accepted and rejected neighbors in the Simulated Annealing.} 
+\caption{Accepted and rejected neighbors for each examination in the \gls{sa}.} 
 \label{fig:AvsRNeighbors}
 
 \begin{tikzpicture}
@@ -333,8 +333,8 @@ Other blue lines, which have values between 1000 and 1, are so low, not only bec
         }
 		},
 		width = \textwidth,
-		xlabel = {Runs},
-		ylabel = {Exams},
+		xlabel = {Accepted (x=1) and rejected (x=2) neighbors},
+		ylabel = {Exam indexes},
 		enlarge x limits = true,	% The value true enlarges the lower 
 									% and upper limit.
 									% The value false uses tight axis limits
@@ -365,7 +365,45 @@ Other blue lines, which have values between 1000 and 1, are so low, not only bec
 			table [z expr = 100, meta index = 2] {./SAResults6.dat};
 \end{axis}
 \end{tikzpicture}
-\end{figure}
+\end{figure}One of the most important topics of the \gls{sa} is the choice of the neighbor operators. It is important that all the neighbor operators contribute positively. If a neighbor operator contributes negatively, it's better not to use it. M\"{u}ller studied the first 5 operators~\cite{Mueller2009} \textit{Room Change}, \textit{Period Chage}, \textit{Period \& Room Change}, \textit{Room Swap}, and \textit{Period Swap}. The \textit{Period \& Room Swap} was added and it must be studied in order to check if the results are better compared to the original 5 operators. For all 12 sets, 20 runs were performed, calculating the fitness average for each of the two cases. Table \ref{NeighborsImprovementFactor} shows the improvement factor for using 6 neighbors instead of 5. In most cases it's worse compared to using the original 5 neighbor operators, and so, the 6th will not be used in this project's results. The results also showed that more neighbors were generated and the percentage of feasible generated neighbors compared to the unfeasible, for each set, is also higher compared to using 6 neighbor operators.
+
+\begin{table}[!t]
+\centering
+\caption{Percentage of improvement factor between using 5 and 6 neighbors.}
+\sisetup{table-alignment=center,detect-weight=true,detect-inline-weight=math}
+\begin{tabular}{%
+	S[table-figures-integer=3]%
+	S[table-format=5.1]%
+	S[table-format=5.1]%
+	S[table-format=5.1]%
+    }
+
+\toprule
+
+\multicolumn{1}{c}{Set} & \multicolumn{1}{c}{5} &	\multicolumn{1}{c}{6} &	\multicolumn{1}{c}{Improvement}\\
+\multicolumn{1}{c}{} & \multicolumn{1}{c}{Neighbors} &	\multicolumn{1}{c}{Neighbors}&	\multicolumn{1}{c}{Factor (\%)}\\
+
+\midrule
+
+1   &   5019  & 5055 & \textcolor{red}{0.7$\downarrow$}\\
+2   &   478  & 523 & \textcolor{red}{9.4$\downarrow$} \\
+3   &   14997  & 15228 & \textcolor{red}{1.5$\downarrow$} \\
+4   &   \text{--}  & \text{--} & \text{--}\\
+5   &   4950 & 4819 & \textcolor{green}{1.5$\uparrow$}\\
+6   &   27680  & 27528 & \textcolor{green}{0.5$\uparrow$} \\
+7   &   4799  & 4812 & \textcolor{red}{0.3$\downarrow$} \\
+8   &   8551  & 8741 & \textcolor{red}{2.2$\downarrow$} \\
+9   &   1141  & 1150 & \textcolor{red}{0.8$\downarrow$} \\
+10  &   28219  & 25586 & \textcolor{green}{9.3$\uparrow$} \\
+11  &   45344  & 45630 & \textcolor{red}{0.6$\downarrow$} \\
+12  &   7222  & 7679 & \textcolor{red}{6.3$\downarrow$} \\
+
+\bottomrule
+
+\end{tabular}
+\label{tab:NeighborsImprovementFactor}
+\end{table}
+
 
 \section{\textcolor{green}{Fitness Computation}}
 \label{sec:FitnessComputation}

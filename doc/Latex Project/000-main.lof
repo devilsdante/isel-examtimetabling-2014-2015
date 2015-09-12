@@ -13,7 +13,6 @@
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Simulated Annealing results: score value as a function of the temperature\relax }}{32}
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Hill Climbing classes\relax }}{33}
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Neighborhood selection and operators\relax }}{36}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Accepted and rejected neighbors in the Simulated Annealing.\relax }}{37}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Accepted and rejected neighbors for each examination in the \gls {sa}.\relax }}{37}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Accepted and rejected neighbors in the Simulated Annealing.\relax }}{44}
