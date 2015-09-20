@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.16)  12 SEP 2015 02:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.16)  19 SEP 2015 19:19
 entering extended mode
 **000-main.tex
 (000-main.tex
@@ -2451,9 +2451,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--10
 
 ]
 LaTeX Font Info:    Font shape `T1/fve/m/it' in size <10> not available
-(Font)              Font shape `T1/fve/m/sl' tried instead on input line 15.
+(Font)              Font shape `T1/fve/m/sl' tried instead on input line 17.
 LaTeX Font Info:    Font shape `T1/fve/m/sl' will be
-(Font)              scaled to size 8.99994pt on input line 15.
+(Font)              scaled to size 8.99994pt on input line 17.
 
 Underfull \hbox (badness 10000) in paragraph at lines 13--21
 
@@ -2472,9 +2472,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--21
 LaTeX Font Info:    Font shape `T1/fve/b/n' will be
 (Font)              scaled to size 10.79993pt on input line 21.
 
-Overfull \hbox (20.63666pt too wide) in paragraph at lines 23--25
+Overfull \hbox (12.0597pt too wide) in paragraph at lines 23--25
 \T1/fve/m/n/10 Heurísticas; Meta-heurísticas; In-ter-na-tional Timetabling Com-
-pe-ti-tion 2007; Timetable; Horários;
+pe-ti-tion 2007; Horários; Horários
  []
 
 [7] [8
@@ -3160,22 +3160,22 @@ Missing character: There is no y in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--130
+Underfull \hbox (badness 10000) in paragraph at lines 64--128
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--130
+Underfull \hbox (badness 10000) in paragraph at lines 64--128
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--130
+Underfull \hbox (badness 10000) in paragraph at lines 64--128
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--130
+Underfull \hbox (badness 10000) in paragraph at lines 64--128
 
  []
 
@@ -3185,37 +3185,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--130
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 134--135
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
  []
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 138--143
+Underfull \hbox (badness 10000) in paragraph at lines 136--141
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--143
+Underfull \hbox (badness 10000) in paragraph at lines 136--141
 
  []
 
 [21]
-Underfull \hbox (badness 10000) in paragraph at lines 149--153
+Underfull \hbox (badness 10000) in paragraph at lines 147--151
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 149--153
+Underfull \hbox (badness 10000) in paragraph at lines 147--151
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--155
+Underfull \hbox (badness 10000) in paragraph at lines 152--153
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 157--158
+Underfull \hbox (badness 10000) in paragraph at lines 155--156
 
  []
 
@@ -3271,22 +3271,22 @@ Missing character: There is no y in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
 )
-Underfull \hbox (badness 10000) in paragraph at lines 239--118
+Underfull \hbox (badness 10000) in paragraph at lines 237--118
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 239--118
+Underfull \hbox (badness 10000) in paragraph at lines 237--118
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 239--118
+Underfull \hbox (badness 10000) in paragraph at lines 237--118
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 239--118
+Underfull \hbox (badness 10000) in paragraph at lines 237--118
 
  []
 
@@ -3828,7 +3828,7 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  49011 strings out of 493671
  1117333 string characters out of 3141423
- 2977388 words of memory out of 3000000
+ 2977408 words of memory out of 3000000
  51358 multiletter control sequences out of 15000+200000
  97033 words of font info for 90 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
@@ -3854,7 +3854,7 @@ m Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy5.pfb><C:/Program Files (x86
 )/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9
 /fonts/type1/public/lm/lmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 /public/lm/lmsy9.pfb>
-Output written on 000-main.pdf (67 pages, 747653 bytes).
+Output written on 000-main.pdf (67 pages, 748354 bytes).
 PDF statistics:
  375 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

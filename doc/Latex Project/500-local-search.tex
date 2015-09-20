@@ -116,7 +116,7 @@ f(s) $\rightarrow$ Solution fitness\\
 \\
 \textcolor{green}{The behavior of this heuristic depends on the given parameters (maximum and minimum temperature, rate, number of loops per temperature, type of the cooling schedule), and the difficulty of the set is also important, considering the execution time limit. Knowing this, it's important to choose the parameters wisely to obtain the best possible results. But, each set has its own characteristics and using parameters for one set does not guarantee that the results will be equivalently good for the others. One example is finding the best parameters for the first set, and make it try run for about 200 milliseconds. This does not mean the others will run for about the same amount of time, degrading the effectiveness of this heuristic. Thus, a variable rate was implemented.\\
 \\
-The variable rate was implemented to make this heuristic run closer to the given time limit. Considering it is not certain that the algorithm will run within the given 221000 milliseconds, as being a stochastic algorithm, a time limit was added to this meta-heuristic as well, ending this heuristic automatically if the time limit is reached. If this happens, it degrades the meta-heuristic's performance because it ends before it's suppose to. To avoid this, an offset was created. The offset is a percentage which is removed from a part of the simulation to, instead of pointing the heuristic to run for 221000 milliseconds, it points to 185640 milliseconds, to have a margin of safety. The offset used is 16\%.\\
+The variable rate was implemented to make this heuristic run closer to the given time limit for all the datasets. Considering it is not certain that the algorithm will run within the given 221000 milliseconds, as being a stochastic algorithm, a time limit was added to this meta-heuristic as well, ending this heuristic automatically if the time limit is reached. If this happens, it degrades the meta-heuristic's performance because it ends before it's supposed to. To avoid this, an offset was created. The offset is a percentage which is removed from a part of the simulation to, instead of pointing the heuristic to run for 221000 milliseconds, it points to 185640 milliseconds, to have a margin of safety. The offset used is 16\%.\\
 \\
 The algorithm starts by simulating the execution of this heuristic, by running all the neighbor operators \textit{n} times and using the elapsed time and the given time limit, we estimate the number of neighbors that would be generated if this heuristic was to be run within the time limit. To calculate the said number of total neighbors, we use this math expression: $CompNeighbs = TotalTime / CompTime * AverageReps * TotalOperats$. After that, we compute the exact number of the neighbors ($TotalNeighbs$) that will be generated for the given parameters, using the default rate. This is achieved by simulating this heuristic using those parameters, cooling the current temperature until it reaches the minimum and returning the number supposed generated neighbors. If the $TotalNeighbs$ is way higher than the $CompNeighbs$, a lower rate will be used to make another simulation, until the $TotalNeighbs$ for the given rate reaches a value that is close to the $TotalNeighbs$. The pseudo code of this method can be seen in Algorithm \ref{alg:RateComputing}.\\
 \\
@@ -134,8 +134,8 @@ The algorithm starts by simulating the execution of this heuristic, by running a
 \State $sa = SAInit()$ ;
 \State $n = 50$ ; \Comment{Number of times each operator runs}
 \State $est\_neighbors = sa.EstimateNumberNeighbors(n, exec\_time, s)$ ;
-\State $rate = 1.50^{-04}$ ;\Comment{Initial default rate}
-\State $power = -4$ ;
+\State $rate = 1.50^{-02}$ ;\Comment{Initial default rate}
+\State $power = -3$ ;
 \State $rate\_to\_sub = 10^{power}$ ;\Comment{Rate decrementing}
 \State $total\_neighbors = sa.GetNumberNeighbors(TMax, rate, reps, TMin)$ ;
 \Repeat	
@@ -173,14 +173,14 @@ The algorithm starts by simulating the execution of this heuristic, by running a
 
 \caption{Simulated Annealing results: score value as a function of the temperature} 
 \label{fig:SimulatedAnnealingPlot}
-\end{figure}\textcolor{green}{The tests performed on all the sets are shown and explained in Chapter \ref{chap:ExpResults}.}
+\end{figure}
 
 \section{\textcolor{green}{Hill Climbing}}
 \label{sec:HillClimbing}
 
 \gls{hc} is a meta-heuristic different to the \gls{sa} family of meta-heuristics, in the sense that only accepts improving solutions. So, as long as it reaches a local optimum, it can't get out of that point because every neighbor solutions are worse. In this way, \gls{hc} only has one parameter that is the number of iterations or time limit which controls the algorithms' execution time.\\
 \\
-In the evaluation undertaken, the best results were obtained with the \verb+Exec2+ version of \gls{sa}. \gls{sa} was parametrized in order to finish execution within the specified time limit imposed by the \gls{itc2007} rules. \gls{hc} is executed after \gls{sa} until the time limit is reached.
+In the evaluation undertaken, the best results were obtained with the \verb+Exec2+ version of \gls{sa}. \gls{sa} was parametrized in order to finish execution within the specified time limit imposed by the \gls{itc2007} rules. \gls{hc} is executed after \gls{sa} until the time limit is reached, if was not reached already when executing the \gls{sa}.
 
 \subsection{Implementation}
 The implementation of this heuristic is very similar to the \gls{sa}, also containing the classes \verb+HillClimbing+ and \verb+HillClimbingTimetable+, which are simplified versions of the \gls{sa} classes. The \verb+HillClimbing+ and \verb+HillClimbingTimetable+'s methods and variables can be seen in Figure \ref{fig:HillClimbing}.\\
@@ -365,7 +365,7 @@ Other blue lines, which have values between 1000 and 1, are so low, not only bec
 			table [z expr = 100, meta index = 2] {./SAResults6.dat};
 \end{axis}
 \end{tikzpicture}
-\end{figure}One of the most important topics of the \gls{sa} is the choice of the neighbor operators. It is important that all the neighbor operators contribute positively. If a neighbor operator contributes negatively, it's better not to use it. M\"{u}ller studied the first 5 operators~\cite{Mueller2009} \textit{Room Change}, \textit{Period Chage}, \textit{Period \& Room Change}, \textit{Room Swap}, and \textit{Period Swap}. The \textit{Period \& Room Swap} was added and it must be studied in order to check if the results are better compared to the original 5 operators. For all 12 sets, 20 runs were performed, calculating the fitness average for each of the two cases. Table \ref{NeighborsImprovementFactor} shows the improvement factor for using 6 neighbors instead of 5. In most cases it's worse compared to using the original 5 neighbor operators, and so, the 6th will not be used in this project's results. The results also showed that more neighbors were generated and the percentage of feasible generated neighbors compared to the unfeasible, for each set, is also higher compared to using 6 neighbor operators.
+\end{figure}One of the most important topics of the \gls{sa} is the choice of the neighbor operators. It is crucial that all the neighbor operators contribute positively. If a neighbor operator contributes negatively, it's better not to use it. M\"{u}ller studied the first 5 operators~\cite{Mueller2009} \textit{Room Change}, \textit{Period Chage}, \textit{Period \& Room Change}, \textit{Room Swap}, and \textit{Period Swap}. The \textit{Period \& Room Swap} was added and it must be studied in order to check if the results are better compared to the original 5 operators. For all 12 sets, 20 runs were performed, calculating the fitness average for each of the two cases. Table \ref{NeighborsImprovementFactor} shows the improvement factor for using 6 neighbors instead of 5. In most cases it's worse compared to using the original 5 neighbor operators, and so, the 6th will not be used in this project's results. The results also showed that more neighbors were generated and the percentage of feasible generated neighbors compared to the unfeasible, for each set, is also higher compared to using 6 neighbor operators.
 
 \begin{table}[!t]
 \centering

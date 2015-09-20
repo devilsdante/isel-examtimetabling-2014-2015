@@ -21,7 +21,7 @@ All the specifications and benchmark data from the 12 datasets of the \gls{itc20
 \centering
 
 \sisetup{table-alignment=center,table-figures-decimal=3}
-
+\caption{Specifications of the 12 datasets of the ITC 2007 examination timetabling problem.}
 \begin{tabular}{%
 	 S[table-figures-integer=6]%
      S[table-figures-integer=6]%
@@ -55,8 +55,6 @@ All the specifications and benchmark data from the 12 datasets of the \gls{itc20
 \bottomrule
 
 \end{tabular}
-
-\caption{Specifications of the 12 datasets of the ITC 2007 examination timetabling problem.}
 \label{tab:ITC2007Datasets}
 
 \end{table}
@@ -137,7 +135,7 @@ Graph Coloring is the heuristic used to generate a feasible solution. This heuri
 
 The computation of the proposed heuristic is divided into four phases. In the first phase, it starts by editing the conflict matrix, in order to add the exclusion hard constraints to the conflict matrix. This process is possible because the exclusion hard constraint is also a clash between a pair of examinations. This makes the algorithm easier to implement later on, because checking the conflict matrix for a clash between a pair of examinations now works for the student conflicts and exclusion.\\
 \\
-The second phase simply erases all examination coincidence hard constraints' occurrences that have student conflicts. It is mentioned in the \gls{itc2007} site \cite{McCollum2007d} that if two examinations have the examination coincidence hard constraint and yet 'clash' with each other due to student enrollment, this hard constraint is ignored.\\
+The second phase simply erases all examination coincidence hard constraints' occurrences that have student conflicts. It is mentioned in the \gls{itc2007} website \cite{McCollum2007d} that if two examinations have the examination coincidence hard constraint and yet 'clash' with each other due to student enrollment, this hard constraint is ignored.\\
 \\
 The third phase populates and sort the assignment lists. The assignment lists are four lists that hold the unassigned examinations. These four lists contain:
 \begin{itemize}
@@ -146,7 +144,7 @@ The third phase populates and sort the assignment lists. The assignment lists ar
 	\item Unassigned examinations with ``examination coincidence'' hard constraint
 	\item All other unassigned examinations
 \end{itemize}
-The Largest Degree Ordering Graph Coloring heuristic is used on these four lists, and so, each list is sorted by number of students conflicts. The examination assignment is done taking the present list ordering. First all the examinations with room exclusivity are assigned, then all that have the after constraints, and finally all with examination coincidence.\\
+The Largest Degree Ordering Graph Coloring heuristic is used on these four lists, and so, each list is sorted by number of student conflicts. The examination assignment is done taking the present list ordering. First all the examinations with room exclusivity are assigned, then all that have the after constraints, and finally all with examination coincidence.\\
 \\
 The fourth phase is the examination assignment phase (the most important phase of this heuristic). It is based on M\"{u}ller's approach \cite{Mueller2009}. It starts to assign the examinations with higher conflict, as mentioned above, using the four lists method. There are two types of assignment:
 \\
@@ -230,9 +228,9 @@ The Graph Coloring heuristic implementation only realize assignments and unassig
 \label{alg:GraphColoring}
 \end{algorithm}
 
-\subsection{\textcolor{green}{Statistics}}
+\subsection{\textcolor{green}{Stochasticity}}
 
-It is important to guarantee that the implemented heuristic is stochastic, and so, has stochastic behavior. The implemented heuristic is not considered stochastic if the results are not, in most part, different from each other. In this particular case, we need to assure that the \gls{gc} produces different results in different runs. This means that generated timetables cannot have examinations placed in the same period and room for each different run. This test was performed using a colorbar figure to check for color patters between the runs, wherein periods were represented by a different color. The figure didn't show any color patters, thus concluding that the \gls{gc} was indeed behaving stochastically.
+It is important to guarantee that the implemented heuristic is stochastic, and so, has stochastic behavior. The implemented heuristic is not considered stochastic if the results are not, for each run, different from each other. In this particular case, we need to assure that the \gls{gc} produces different results in different runs. This means that generated timetables cannot have the same examinations placed in the same periods and rooms. This test was performed using a colorbar figure to check for color patters between the runs, wherein periods were represented by a different color. The figure didn't show any color patters, thus concluding that the \gls{gc} was indeed behaving stochastically.
 
 \section{Solution Initialization Results}
 
@@ -242,7 +240,7 @@ As mentioned previously, the goal of the initialization procedure is not to find
 \centering
 
 \sisetup{table-alignment=center,table-figures-decimal=3}
-
+\caption{Some of the Graph Coloring's performance features.}
 \begin{tabular}{%
 	 l%
      S[table-figures-integer=9]%
@@ -276,14 +274,12 @@ As mentioned previously, the goal of the initialization procedure is not to find
 \bottomrule
 
 \end{tabular}
-
-\caption{Some of the Graph Coloring's performance features.}
 \label{tab:GCResults}
 
 \end{table}The table \ref{tab:GCResults} features many tests performed to this first phase. It features, as mentioned before, the average fitness of the solutions created for each dataset, and so the average execution time, its standard deviation, and the percentage of time used in the first and second phase of this project. The standard deviation was applied because of the instability on execution times of certain datasets when creating initial solutions, using the \gls{gc} heuristic. By checking the standard deviation, the datasets 6, 11 and 12 are unstable. The datasets 11 and 12, even thought the average execution time was 3405 and 3690, the tested values varied from 864 to 7642 and 201 to 6452, respectively.\\
 \\
 The allowed execution time is 221000 milliseconds for each test made to each dataset. This time was picked by the benchmark program provided by the \gls{itc2007} site \cite{McCollum2007e} when executed on the machine where all testes were performed. In the results presented on the Table \ref{tab:GCResults}, we can conclude that a very short amount of time is used on this first phase, compared to the one being used on the second phase.\\
 \\
-As shown in table \ref{tab:GCResults}, the heuristic could not get a feasible solution for the set 4. This problem might be present because of the presence of an infinite cycle of normal and forcing assignments, resulting in assigning and unassigning the same examinations. Different approaches were tried in order to try obtaining results for set 4. These approaches include using only one unsorted list of unassigned examinations, using all four unsorted lists, and keeping the four lists sorted but changing the priority order of their usage. Oddly, using only one unsorted list led to the best results, sometimes only leaving 20 to 30 examinations to sign, while the default approach varied between 90 and 120. Unfortunately none of the approaches were good enough to generate a feasible solution.\\
+\textcolor{green}{As shown in table \ref{tab:GCResults}, the heuristic could not get a feasible solution for the set 4. This problem might be present because of the presence of an infinite cycle of normal and forcing assignments, resulting in assigning and unassigning the same examinations. Different approaches were tried in order to try obtaining results for set 4. These approaches include using only one unsorted list of unassigned examinations, using all four unsorted lists, and keeping the four lists sorted but changing the priority order of their usage. Oddly, using only one unsorted list led to the best results, sometimes leaving only 20 to 30 examinations to be signed, while the default approach varied between 90 and 120. Unfortunately none of the approaches were good enough to generate a feasible solution.\\
 \\
-One possible and probably good approach would be to order the lists by examination conflict. The difference between these conflict values and the ones presented in the conflict matrix, which is used in the default approach, is that the conflict matrix's values are the total student conflicts between one examination and all the others, while this new approach results in ordering the examination lists by the number of examinations each examination has conflicts with.
+One possible and probably good approach would be to order the lists by examination conflict. The difference between this type of conflict and the one presented in the conflict matrix, which is used in the default approach, is that the conflict matrix's values are the total student conflicts between one examination and all the others, while this new approach results in ordering the examination lists by the number of examinations each examination has conflicts with.}
