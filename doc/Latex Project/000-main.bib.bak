@@ -102,8 +102,9 @@
  Hamza Turabieh},
   Journal                  = {Information Sciences },
   Year                     = {2012},
-  Note                     = {Data Mining for Software Trustworthiness },
-  Number                   = {0},
+
+  Month                    = {May},
+  Note                     = {Data Mining for Software Trustworthiness},
   Pages                    = {146 - 168},
   Volume                   = {191},
 
@@ -153,6 +154,7 @@
   School                   = {Kwansei-Gakuin University, School of Science and Technology, Tokyo, Japan},
   Year                     = {2007},
 
+  Journal                  = {Kwansei-Gakuin University, School of Science and Technology, Tokyo, Japan},
   Timestamp                = {2015.03.07},
   Url                      = {http://www.cs.qub.ac.uk/itc2007/winner/bestcoursesolutions/Atsuta_et_al.pdf}
 }
@@ -208,6 +210,12 @@ Sau Lee},
   Journal                  = {The Journal of the Operational Research Society},
   Year                     = {1996},
 
+  Month                    = {Mar.},
+  Note                     = {1996},
+  Number                   = {3},
+  Pages                    = {373-383},
+  Volume                   = {47},
+
   Timestamp                = {2015.03.05}
 }
 
@@ -256,6 +264,10 @@ Sau Lee},
   Journal                  = {Journal of Computational Physics},
   Year                     = {1993},
 
+  Month                    = {January},
+  Pages                    = {86 - 92},
+  Volume                   = {104},
+
   Timestamp                = {2015.03.03}
 }
 
@@ -283,7 +295,11 @@ Sau Lee},
   Author                   = {Ryan Hamilton-Bryce and
 Paul McMullan and
 Barry McCollum},
+  Journal                  = {10th International Conference of the Practice and Theory of Automated Timetabling},
   Year                     = {2014},
+
+  Month                    = {August},
+  Pages                    = {218 - 232},
 
   Owner                    = {Mike},
   Timestamp                = {2015.03.13}
@@ -293,7 +309,7 @@ Barry McCollum},
   Title                    = {A Multi-Phase Hybrid Metaheuristics Approach for the Exam Timetabling},
   Author                   = {Ali Hmer and
  Malek Mouhoub},
-  Journal                  = {Department of Computer Science University of Regina Regina, Canada {fhmer200a,mouhoubmg}@cs.uregina.ca},
+  Journal                  = {Department of Computer Science University of Regina Regina, Canada},
   Year                     = {2014},
 
   Owner                    = {Mike},
@@ -382,6 +398,7 @@ Hana Rudová},
   School                   = {Faculty of Mathematics and Physics, Charles University Malostranské nám. 2/25, Prague, Czech Republic},
   Year                     = {2004},
 
+  Journal                  = {Faculty of Mathematics and Physics, Charles University Malostranské nám. 2/25, Prague, Czech Republic},
   Timestamp                = {2015.03.03}
 }
 
@@ -439,7 +456,7 @@ Hana Rudová},
   Timestamp                = {2015.06.21}
 }
 
-@Misc{,
+@Misc{McCollum2007e,
   Title                    = {ITC 2007 Examination Benchmarking},
 
   Author                   = {Barry McCollum},
@@ -456,7 +473,6 @@ Hana Rudová},
   Booktitle                = {Proceedings of the 4th Multidisciplinary International Scheduling Conference: Theory and Applications (MISTA 2009), 10-12 Aug 2009, Dublin, Ireland},
   Year                     = {2009},
   Editor                   = {J. Blazewicz and M. Drozdowski and G. Kendall and B. McCollum},
-  Note                     = {Paper},
   Pages                    = {424--434},
 
   Abstract                 = {A two phased approach incorporating the extended great deluge technique is detailed in relation to the Examination Timetabling Problem as described in the 2nd International Timetabling Competition (ITC2007). The approach proves to be both robust and general. Robust in the sense that it is capable of producing six of the best results published in literature so far on the benchmark datasets and general as the technique has produced in the recent past some of the best results on existing course timetabling benchmark datasets. The datasets used as part of this research, introduced during ITC2007, are described and discussed in detail. We present the results of our technique in relation to the competition results and provide a comparison between the outlined method and those of the competition entrants from the international arena, in order to highlight both characteristics of the technique on the datasets used.},
@@ -693,7 +709,7 @@ Hana Rudová},
 @Article{Turabieh2011,
   Title                    = {An integrated hybrid approach to the examination timetabling problem },
   Author                   = {Hamza Turabieh and Salwani Abdullah},
-  Journal                  = {Omega },
+  Journal                  = {Omega},
   Year                     = {2011},
   Number                   = {6},
   Pages                    = {598 - 607},

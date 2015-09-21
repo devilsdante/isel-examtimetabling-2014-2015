@@ -7,7 +7,7 @@ E.~Talbi, {\em Metaheuristics - From Design to Implementation}.
 \bibitem{Abdullah2012}
 S.~Abdullah and H.~Turabieh, ``On the use of multi neighbourhood structures
   within a tabu-based memetic approach to university timetabling problems,''
-  {\em Information Sciences}, vol.~191, no.~0, pp.~146 -- 168, 2012.
+  {\em Information Sciences}, vol.~191, pp.~146 -- 168, May 2012.
 \newblock Data Mining for Software Trustworthiness.
 
 \bibitem{Kirkpatrick1983}
@@ -44,7 +44,8 @@ R.~Lewis, ``A survey of metaheuristic-based techniques for university
 \bibitem{Carter1996}
 M.~Carter, G.~Laporte, and S.~Lee, ``Examination timetabling: Algorithmic
   strategies and applications,'' {\em The Journal of the Operational Research
-  Society}, 1996.
+  Society}, vol.~47, pp.~373--383, Mar. 1996.
+\newblock 1996.
 
 \bibitem{McCollum2007}
 B.~McCollum, ``Itc2007 examination evaluation function.''
@@ -72,7 +73,8 @@ S.~J. Russell and P.~Norvig, {\em Artificial Intelligence - {A} Modern Approach
 
 \bibitem{Dueck1993}
 G.~Dueck, ``New optimization heuristics: The great deluge algorithm and the
-  record-to-record travel,'' {\em Journal of Computational Physics}, 1993.
+  record-to-record travel,'' {\em Journal of Computational Physics}, vol.~104,
+  pp.~86 -- 92, January 1993.
 
 \bibitem{Gogos2012}
 C.~Gogos, P.~Alefragis, and E.~Housos, ``An improved multi-staged algorithmic
@@ -119,7 +121,6 @@ B.~McCollum, P.~McMullan, A.~Parkes, E.~Burke, and S.~Abdullah, ``An extended
   Theory and Applications (MISTA 2009), 10-12 Aug 2009, Dublin, Ireland}
   (J.~Blazewicz, M.~Drozdowski, G.~Kendall, and B.~McCollum, eds.),
   pp.~424--434, 2009.
-\newblock Paper.
 
 \bibitem{Burke2004}
 E.~Burke and J.~Newall, ``Solving examination timetabling problems through
@@ -181,11 +182,13 @@ E.~Burke, R.~Qu, and A.~Soghier, ``Adaptive selection of heuristics for
 \bibitem{Mouhoub2014}
 A.~Hmer and M.~Mouhoub, ``A multi-phase hybrid metaheuristics approach for the
   exam timetabling,'' {\em Department of Computer Science University of Regina
-  Regina, Canada {fhmer200a,mouhoubmg}@cs.uregina.ca}, 2014.
+  Regina, Canada}, 2014.
 
 \bibitem{Hamilton-Bryce2014}
 R.~Hamilton-Bryce, P.~McMullan, and B.~McCollum, ``Directed selection using
-  reinforcement learning for the examination timetabling problem,'' 2014.
+  reinforcement learning for the examination timetabling problem,'' {\em 10th
+  International Conference of the Practice and Theory of Automated
+  Timetabling}, pp.~218 -- 232, August 2014.
 
 \bibitem{Rahman2014}
 S.~Rahman, E.~Burke, A.~Bargiela, B.~McCollum, and E.~{\"{O}}zcan, ``A
