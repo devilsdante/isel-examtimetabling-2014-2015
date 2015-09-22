@@ -1,5 +1,5 @@
 \chapter{Proposed Approach: Local Search}
-\label{sec:LocalSearch}
+\label{chap:LocalSearch}
 \thispagestyle{plain}
 
 The proposed solution consists about using a local search meta-heuristic(s) to improve the solution given by the \gls{gc} heuristic. This approach uses \gls{sa}, based on M\"{u}ller's approach \cite{Mueller2009}, followed by the use of \gls{hc}. The use of \gls{hc} is justified by the fact that \gls{sa} does not guarantee a good control of the execution time, and so the parameters are given to make it run almost all the available time. The rest of the optimization is executed on \gls{hc}, whose execution time is perfectly controllable.
@@ -7,7 +7,7 @@ The proposed solution consists about using a local search meta-heuristic(s) to i
 \section{Simulated Annealing}
 \label{sec:SimulatedAnnealing}
 
-\gls{sa} is a single-solution meta-heuristic (section \ref{metaheuristics}). This meta-heuristic optimizes a solution by generating neighbor solutions which might be accepted given an acceptance criterion. A neighbor solution is obtained by applying a movement operator (also known as neighbor operator) to the current solution, creating a new solution which is a neighbor of the current solution. A neighbor operator, in this context, could be the movement of an examination to another time slot. Being a single-solution meta-heuristic, it only generates one neighbor at the time. The neighbor operators and acceptance criterion are the most important part of this algorithm. Little changes on one of these, may get the algorithm to behave in very different ways and end up with much different solutions.\\
+\gls{sa} is a single-solution meta-heuristic (section \ref{subsec:MetaHeuristics}). This meta-heuristic optimizes a solution by generating neighbor solutions which might be accepted given an acceptance criterion. A neighbor solution is obtained by applying a movement operator (also known as neighbor operator) to the current solution, creating a new solution which is a neighbor of the current solution. A neighbor operator, in this context, could be the movement of an examination to another time slot. Being a single-solution meta-heuristic, it only generates one neighbor at the time. The neighbor operators and acceptance criterion are the most important part of this algorithm. Little changes on one of these, may get the algorithm to behave in very different ways and end up with much different solutions.\\
 \\
 The acceptance criterion will, considering the current solution and a neighbor solution, give the percentage of acceptance of the neighbor solution. Most of the approaches using this heuristic accept a new neighbor solution if this is \textit{better} than the current solution. Otherwise, there's a chance that the neighbor solution is still accepted, depending on certain parameters. These parameters are the \textit{Temperature} (normally given as maximum and minimum temperature) and the \textit{Cooling Schedule}. By definition, the higher the temperature, the higher is the chance to accept a worse solution over the current solution. The cooling schedule, as the name suggests, is a function that lowers the temperature at a given rate. The SA algorithm finishes when the current temperature is lower or equal to the minimum temperature. The temperature should start high enough in order to be able to escape from local optima, by accepting worse solutions found during the trajectory.
 
@@ -320,7 +320,7 @@ Other blue lines, which have values between 1000 and 1, are rare. This occurs no
 \begin{figure}[t!]
 \centering
 
-\caption{Accepted and rejected neighbors for each examination in the \gls{sa}.} 
+\caption{Accepted and rejected neighbors for each examination in the Simulated Annealing.} 
 \label{fig:AvsRNeighbors}
 
 \begin{tikzpicture}
@@ -344,7 +344,7 @@ Other blue lines, which have values between 1000 and 1, are rare. This occurs no
 		colorbar,
 		%colormap={}{ gray(0cm)=(1); gray(1cm)=(0);}, % Grey colorbar
 		%x dir = reverse,
-		%y dir = reverse,
+		y dir = reverse,
 		%xmode = log,        % logarithmic x axis
 		%xmin = 0, xmax = 9,
 		% car92 has 543 exams

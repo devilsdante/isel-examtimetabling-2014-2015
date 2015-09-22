@@ -1,5 +1,5 @@
 \chapter{Architecture}
-\label{Architecture}
+\label{chap:Architecture}
 \thispagestyle{plain}
 
 In this chapter, a description of the architecture is given. The subsystems that compose the architecture are detailed. The proposed software architecture was designed taking into consideration aspects such as: code readability, extensibility, and efficiency.
@@ -288,7 +288,7 @@ The \verb+OutputFormatting+ tool is used to create the output file, given the fi
 
 The \gls{hl} offers access to all the implemented heuristics. These are the \gls{gc}, \gls{sa}, and \gls{hc}. All these heuristics are used to create the best timetable possible given a limited time. Heuristics like \gls{sa} and \gls{hc} make use of neighbor solutions, and so they utilize the \verb+NeighborSelection+ tool for this effect. They also use tools like \verb+FeasibilityTester+ and \verb+EvaluationFunction+ to help build the initial solution and check the fitness while improving the current solution, respectively.\\
 \\
-Detailed explanation about these heuristics are given in Chapters \ref{sec:SolutionInit} and \ref{sec:LocalSearch}.
+Detailed explanation about these heuristics are given in Chapters \ref{chap:SolutionInit} and \ref{chap:LocalSearch}.
 
 \subsection{Presentation Layer}
 

@@ -146,17 +146,32 @@
   Url                      = {http://www.cambridge.org/catalogue/catalogue.asp?isbn=9780521424264}
 }
 
-@PhdThesis{Atsuta2007,
+@TechReport{Atsuta2007,
   Title                    = {ITC-2007 Track2: An Approach using General CSP Solver},
   Author                   = {Mitsunori Atsuta and
  Koji Nonobe and
  Toshihide Ibaraki},
-  School                   = {Kwansei-Gakuin University, School of Science and Technology, Tokyo, Japan},
+  Institution              = {Kwansei-Gakuin University, School of Science and Technology, Tokyo, Japan},
   Year                     = {2007},
 
   Journal                  = {Kwansei-Gakuin University, School of Science and Technology, Tokyo, Japan},
+  School                   = {Kwansei-Gakuin University, School of Science and Technology, Tokyo, Japan},
   Timestamp                = {2015.03.07},
   Url                      = {http://www.cs.qub.ac.uk/itc2007/winner/bestcoursesolutions/Atsuta_et_al.pdf}
+}
+
+@Article{Boizumault1996,
+  Title                    = {Constraint logic programming for examination timetabling },
+  Author                   = {P Boizumault and Y Delon and L Peridy},
+  Journal                  = {The Journal of Logic Programming },
+  Year                     = {1996},
+  Number                   = {2},
+  Pages                    = {217 - 233},
+  Volume                   = {26},
+
+  Doi                      = {http://dx.doi.org/10.1016/0743-1066(95)00100-X},
+  ISSN                     = {0743-1066},
+  Url                      = {http://www.sciencedirect.com/science/article/pii/074310669500100X}
 }
 
 @InProceedings{Burke2008,
@@ -213,19 +228,22 @@ Sau Lee},
   Month                    = {Mar.},
   Note                     = {1996},
   Number                   = {3},
-  Pages                    = {373-383},
+  Pages                    = {373 - 383},
   Volume                   = {47},
 
   Timestamp                = {2015.03.05}
 }
 
-@PhdThesis{CarvalhoLisbonNovember2004,
+@Misc{CarvalhoLisbonNovember2004,
   Title                    = {Lecture Notes in Evolutionary Computation},
+
   Author                   = {Pedro Carvalho},
-  School                   = {Instituto Superior Técnico},
-  Year                     = {Lisbon, November 2004},
+  HowPublished             = {Instituto Superior Técnico},
+  Month                    = {November},
+  Year                     = {2004},
 
   Owner                    = {Mike},
+  School                   = {Instituto Superior Técnico},
   Timestamp                = {2015.06.26}
 }
 
@@ -390,15 +408,16 @@ Faculty of Mathematics and Physics},
   Timestamp                = {2015.03.03}
 }
 
-@PhdThesis{Mueller2004,
+@TechReport{Mueller2004,
   Title                    = {Conflict-Based Statistics},
   Author                   = {Tom{\'{a}}s M{\"{u}}ller and
 Roman Barták and
 Hana Rudová},
-  School                   = {Faculty of Mathematics and Physics, Charles University Malostranské nám. 2/25, Prague, Czech Republic},
+  Institution              = {Faculty of Mathematics and Physics, Charles University Malostranské nám. 2/25, Prague, Czech Republic},
   Year                     = {2004},
 
   Journal                  = {Faculty of Mathematics and Physics, Charles University Malostranské nám. 2/25, Prague, Czech Republic},
+  School                   = {Faculty of Mathematics and Physics, Charles University Malostranské nám. 2/25, Prague, Czech Republic},
   Timestamp                = {2015.03.03}
 }
 
@@ -808,5 +827,21 @@ Hana Rudová},
   ISBN                     = {978-1-4244-2757-4},
   Timestamp                = {Mon, 01 Jun 4432448 10:51:12 +},
   Url                      = {http://ieeexplore.ieee.org/xpl/mostRecentIssue.jsp?punumber=4911214}
+}
+
+@article{
+year={2010},
+issn={1619-697X},
+journal={Computational Management Science},
+volume={7},
+number={1},
+doi={10.1007/s10287-007-0066-8},
+title={A mixed-integer mathematical modeling approach to exam timetabling},
+url={http://dx.doi.org/10.1007/s10287-007-0066-8},
+publisher={Springer-Verlag},
+keywords={Exam timetabling; Mixed-integer programming; Mathematical programming; Optimization; 90C90; 90C11},
+author={Al-Yakoob, SalemM. and Sherali, HanifD. and Al-Jazzaf, Mona},
+pages={19-46},
+language={English}
 }
 

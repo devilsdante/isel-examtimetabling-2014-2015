@@ -41,10 +41,20 @@ R.~Lewis, ``A survey of metaheuristic-based techniques for university
   timetabling problems,'' {\em OR Spectrum Volume 30, Issue 1 , pp 167-190},
   2007.
 
+\bibitem{Boizumault1996}
+P.~Boizumault, Y.~Delon, and L.~Peridy, ``Constraint logic programming for
+  examination timetabling,'' {\em The Journal of Logic Programming}, vol.~26,
+  no.~2, pp.~217 -- 233, 1996.
+
+\bibitem{Al-Yakoob2010}
+S.~Al-Yakoob, H.~Sherali, and M.~Al-Jazzaf, ``A mixed-integer mathematical
+  modeling approach to exam timetabling,'' {\em Computational Management
+  Science}, vol.~7, no.~1, pp.~19--46, 2010.
+
 \bibitem{Carter1996}
 M.~Carter, G.~Laporte, and S.~Lee, ``Examination timetabling: Algorithmic
   strategies and applications,'' {\em The Journal of the Operational Research
-  Society}, vol.~47, pp.~373--383, Mar. 1996.
+  Society}, vol.~47, pp.~373 -- 383, Mar. 1996.
 \newblock 1996.
 
 \bibitem{McCollum2007}
@@ -62,8 +72,8 @@ T.~M{\"{u}}ller, {\em Constraint-Based Timetabling}.
   Physics, 2005.
 
 \bibitem{Mueller2004}
-T.~M{\"{u}}ller, R.~Barták, and H.~Rudová, {\em Conflict-Based Statistics}.
-\newblock PhD thesis, Faculty of Mathematics and Physics, Charles University
+T.~M{\"{u}}ller, R.~Barták, and H.~Rudová, ``Conflict-based statistics,''
+  tech. rep., Faculty of Mathematics and Physics, Charles University
   Malostranské nám. 2/25, Prague, Czech Republic, 2004.
 
 \bibitem{Russell2010}
@@ -82,10 +92,9 @@ C.~Gogos, P.~Alefragis, and E.~Housos, ``An improved multi-staged algorithmic
   Annals of Operations Research}, vol.~194, no.~1, pp.~203--221, 2012.
 
 \bibitem{Atsuta2007}
-M.~Atsuta, K.~Nonobe, and T.~Ibaraki, {\em ITC-2007 Track2: An Approach using
-  General CSP Solver}.
-\newblock PhD thesis, Kwansei-Gakuin University, School of Science and
-  Technology, Tokyo, Japan, 2007.
+M.~Atsuta, K.~Nonobe, and T.~Ibaraki, ``Itc-2007 track2: An approach using
+  general csp solver,'' tech. rep., Kwansei-Gakuin University, School of
+  Science and Technology, Tokyo, Japan, 2007.
 
 \bibitem{Drools}
 T.~J. Drools, ``Drools planner user guide.''
@@ -222,7 +231,7 @@ B.~McCollum, ``Itc 2007 examination benchmarking.''
   \url{http://www.cs.qub.ac.uk/itc2007/index_files/benchmarking.htm}, 2007.
 
 \bibitem{CarvalhoLisbonNovember2004}
-P.~Carvalho, {\em Lecture Notes in Evolutionary Computation}.
-\newblock PhD thesis, Instituto Superior Técnico, Lisbon, November 2004.
+P.~Carvalho, ``Lecture notes in evolutionary computation.'' Instituto Superior
+  Técnico, November 2004.
 
 \end{thebibliography}

@@ -1,22 +1,56 @@
 \chapter{\textcolor{green}{Experimental Results}}
 \label{chap:ExpResults}
 
-In this chapter we will present the results obtained while running all the heuristics explained in the previous chapters. We also compare our results against the ones of the top 5 winners of the \gls{itc2007} contest and more up to date approaches.\\
+In this chapter we will present the results obtained while running all the heuristics explained in the previous chapters. We also compare our results against the ones of the top five winners of the \gls{itc2007} contest and more up to date approaches.\\
 \\
 The parameters used to run the \gls{sa} were:\\
 \\
 TMax = 0.1 $\rightarrow$ Maximum/initial temperature\\
 TMin = 1e-06 $\rightarrow$ Minimum temperature\\
 reps = 5 $\rightarrow$ Number of repetitions per temperature\\
-rate = \textit{real-time computed} $\rightarrow$ Temperature cooling rate\\
+rate = \textit{computed automatically} $\rightarrow$ Temperature cooling rate\\
 \\
-All the 12 sets were tested by running each set 20 times. In Table \ref{tab:20tests} we can see the results which are the values for average fitness, fitness' best and worst values, its standard deviation, and the average of feasible and unfeasible generated neighbors. Compared to the previous approaches, which excludes the use of incremental fitness computing and the real time computed rate, these results are noticeable better. \\
+All the 12 sets were tested by running the algorithm on each set 20 times. Table \ref{tab:20tests} presents the obtained results, showing the values for the average fitness, fitness' best and worst values, its standard deviation, and the average of feasible and unfeasible generated neighbors. Compared to the previous approaches, which excludes the use of incremental fitness computing and the real time computed rate, these results are noticeable better, as can be seen in Table \ref{tab:PrevApprVSNewAppr}. \\
 \\
-While studying the results, some of the were much worse compared to the other tests made to the same set. As can be seen in Table \ref{tab:20tests}, the sets 2, 5, 6, 8, 10, and 12 have the worst fitness much more distant to the average fitness compared to the other sets. The fitness standard deviation itself, in these sets, is much smaller compared to the distance between the average fitness and the worst fitness of the 20 runs. On the 20 runs for these sets, only one or two had this kind of results. We believe this rarely happens because of the problem specified in Chapter \ref{sub:SAStatistics}, the fact that examinations with coincidence hard constraints cannot be moved, it limits the algorithm performance to get better results.\\
-\\
-\begin{table*}[!p]
+\begin{table}[!t]
 \centering
-\caption{All the project's results by running 20 times each set. The fitness and the generated neighbors represent the average for those 20 runs. ''--'' indicates that a feasible solution could not be obtained.}
+\caption{Comparison of the current approach with the previous approach. ''--'' indicates that a feasible solution could not be obtained.}
+\sisetup{table-alignment=center,detect-weight=true,detect-inline-weight=math}
+\begin{tabular}{%
+	S[table-figures-integer=3]%
+	S[table-format=5.1]%
+	S[table-format=5.1]%
+    }
+
+\toprule
+
+\multicolumn{1}{c}{Set} & \multicolumn{1}{c}{Current} &	\multicolumn{1}{c}{Previous}\\
+\multicolumn{1}{c}{}	& \multicolumn{1}{c}{approach} & \multicolumn{1}{c}{approach}\\
+
+\midrule
+
+1   &   5019  & 6934 \\
+2   &   478  & 821 \\
+3   &   14997  & 24627 \\
+4   &   \text{--}  & \text{--} \\
+5   &   4950 & 7729 \\
+6   &   27680  & 30195 \\
+7   &   4799  & 8089 \\
+8   &   8551  & 11067 \\
+9   &   1141  & 1448 \\
+10  &   28219  & 35698 \\
+11  &   45344  & 72751 \\
+12  &   7222  & 8049 \\
+
+\bottomrule
+
+\end{tabular}
+\label{tab:PrevApprVSNewAppr}
+\end{table}While studying the results, it was noticed that some runs produced results very far from the average results for the given dataset. As can be seen in Table \ref{tab:20tests}, the sets 2, 5, 6, 8, 10, and 12 have the worst fitness much more distant to the average fitness compared to the other sets. The fitness standard deviation itself, in these sets, is much smaller compared to the distance between the average fitness and the worst fitness of the 20 runs. On the 20 runs for these sets, only one or two had this kind of results. We believe this rarely happens because of the problem specified in Chapter \ref{sub:SAStatistics}, the fact that examinations with coincidence hard constraints cannot be moved, it limits the algorithm performance to get better results.\\
+\\
+\begin{table*}[!t]
+\centering
+\caption{Obtained results for the proposed SA hybrid algorithm. ''--'' indicates that a feasible solution could not be obtained.}
 \sisetup{table-alignment=center,detect-weight=true,detect-inline-weight=math}
 \begin{tabular}{%
 	S[table-figures-integer=3]%
@@ -53,11 +87,11 @@ While studying the results, some of the were much worse compared to the other te
 
 \end{tabular}
 \label{tab:20tests}
-\end{table*}In Table \ref{tab:ITC2007ResultsComparison} we compare the results obtained in this project's approach versus the five winners of the \gls{itc2007}. Not all of the sets were able to be right behind M\"{u}ller \cite{Mueller2009}, unfortunately. Being this approach was based on M\"{u}ller's \cite{Mueller2009}, some results were not as good as his, and this might be because of the use of the \gls{gd} heuristic in his approach, together with the use of \gls{sa}. Fortunately in some sets, this developed approach was able to reach and beat most of the contestants. However, the sets with highest scores, and so represent the ones with worst results, are the ones that have more \textit{exam\_coincident} hard constraints. We believe that solving this approach limitation mentioned above, would make it to the third place, at least, on all the sets.\\
+\end{table*}In Table \ref{tab:ITC2007ResultsComparison} we compare the results obtained in this project's approach with the five winners of the \gls{itc2007}. Being this approach based on M\"{u}ller's \cite{Mueller2009} approach, the results are not as good as their, and this might be because of the use of the \gls{gd} heuristic in his approach and differences on the neighborhood and on the initialization procedure. In some sets, however, the developed approach was able to reach and beat most of the contestants. We can also observe that the sets with the highest scores, and so represent the ones with worst results, are the ones that have more \textit{exam\_coincident} hard constraints. We believe that solving this approach limitation mentioned above, would improve the algorithm results.\\
 \\
-\begin{table*}[!p]
+\begin{table*}[!t]
 \centering
-\caption{ITC 2007 results comparison to this project's approach. The best solutions are indicated in bold. ''--'' indicates that a feasible solution could not be obtained.}
+\caption{Comparison of the proposed approach with the ITC 2007 finalists. The comparison is made between the average values of each approach. The best solutions are indicated in bold. ''--'' indicates that a feasible solution could not be obtained.}
 \sisetup{table-alignment=center,detect-weight=true,detect-inline-weight=math}
 \begin{tabular}{%
 	S[table-figures-integer=3]%
@@ -93,11 +127,11 @@ While studying the results, some of the were much worse compared to the other te
 
 \end{tabular}
 \label{tab:ITC2007ResultsComparison}
-\end{table*}In table \ref{tab:UpToDateResultsComparison} this project's results are compared to more up to date approaches. As can be seen, Rahman et al. \cite{Rahman2014}, Bryce et al. \cite{Hamilton-Bryce2014}, and Mouhoub et al. \cite{Mouhoub2014} stole almost all the best results. Some of Rahman's \cite{Rahman2014} and Bryce's results surpass M\"{u}ller's \cite{Mueller2009} results. None of the sets' score of this approach was able to beat all the other approaches shown on the table. \\
+\end{table*}In table \ref{tab:UpToDateResultsComparison}, our algorithm's results are compared to more up to date approaches. As can be seen, Rahman et al. \cite{Rahman2014}, Bryce et al. \cite{Hamilton-Bryce2014}, and Mouhoub et al. \cite{Mouhoub2014} beat almost all the best results. Some of Rahman's \cite{Rahman2014} and Bryce's results surpass M\"{u}ller's \cite{Mueller2009} results. None of the sets' score of our approach was able to beat all the other approaches shown on the table. \\
 \\
-\begin{table*}[!p]
+\begin{table*}[!t]
 \centering
-\caption{Up to date results comparison to this project's approach. The best solutions are indicated in bold. ''--'' indicates that a feasible solution could not be obtained, or the following sets were not tested.}
+\caption{Comparison of the proposed approach with state-of-the-art approaches. The comparison is made between the average values of each approach. ''--'' indicates that a feasible solution could not be obtained, or the following sets were not tested.}
 \sisetup{table-alignment=center,detect-weight=true,detect-inline-weight=math}
 \begin{tabular}{%
 	S[table-figures-integer=3]%
@@ -133,11 +167,11 @@ While studying the results, some of the were much worse compared to the other te
 
 \end{tabular}
 \label{tab:UpToDateResultsComparison}
-\end{table*}One interesting test would be to run the created approach in a huge amount of time, not considering the time limit, just to see the results and compare to the ones obtained with the 221 seconds time limit. The \gls{sa} heuristic should obtain better results compared to the 221 time limit tests. Table \ref{tab:LimitedTimevsUnlimitedTime} represents the comparison of the original tests with time limit, with tests that took 12 hours for each set. It can be seen that most of the sets, for the 12 hours tests, obtained better results. Two of the sets were not better, and the reason should be because of the \gls{sa} limitation.
+\end{table*}One interesting test would be to run the created approach allowing it to run for a large period of time, not considering the time limit. The \gls{sa} heuristic should obtain better results compared to the 221 seconds time limit tests. Table \ref{tab:LimitedTimevsUnlimitedTime} represents the comparison of the original tests with time limit, with tests that took 12 hours for each set. It can be seen that for most of the sets, for the 12 hours tests, the algorithm obtained better results. In two sets the results were not better, and the reason should be because of the \gls{sa} limitation.
 
-\begin{table}[!p]
+\begin{table}[!t]
 \centering
-\caption{Results comparison with results obtained with 12 hours of running.}
+\caption{Obtained results with different time constraints. ''--'' indicates that a feasible solution could not be obtained.}
 \sisetup{table-alignment=center,detect-weight=true,detect-inline-weight=math}
 \begin{tabular}{%
 	S[table-figures-integer=3]%

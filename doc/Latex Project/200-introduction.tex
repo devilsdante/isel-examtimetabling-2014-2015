@@ -1,15 +1,15 @@
 \setcounter{secnumdepth}{2}
 \chapter{Introduction}
-\label{introduction}
+\label{chap:Introduction}
 \thispagestyle{plain}
 
-Many people believe that \gls{ai} was created to imitate human behavior and the way humans think and act. Even though people are not wrong, AI was also created to solve problems that humans are unable to solve, or to solve them in a shorter time window, with a better solution. For hard problems like timetabling, job shop, traffic routing, clustering, among others, humans may take days to find a solution, or may not find a solution that fits their needs. Optimization algorithms, that is, methods that seek to minimize or to maximize some criterion, may deliver a very good solution in minutes, hours or days, depending on how much time the human is willing to use in order to get a proper solution.\\
+Many people believe that \gls{ai} techniques aim to imitate human behavior and the way humans think and act. Even though people are not wrong, AI was also created to solve problems that humans are unable to solve, or to solve them in a shorter time window, with a better solution. For hard problems like timetabling, job shop, traffic routing, clustering, among others, humans may take days to find a solution, or may not find a solution that fits their needs. Optimization algorithms, that is, methods that seek to minimize or to maximize some criterion, may deliver a very good solution in minutes, hours, or days, depending on how much time the human is willing to use in order to get a proper solution.\\
 \\
 A concrete example of this type of problems is the creation of timetables. Timetables can be used for educational purposes, in sports scheduling, or in transportation timetabling, among other applications. The timetabling problem consists in scheduling a set of events (e.g., exams, people, trains) to a specified set of time slots, while respecting a predefined set of rules.
 
 \section{Educational Timetabling Problems}
 
-This class of timetabling problems involves the scheduling of classes, lectures or exams on a school or university in a predefined set of time slots while satisfying a set of rules or constraints. Examples of rules are: a student can't be present in two classes at the same time, a student can't have two exams on the same day or an exam must be scheduled before another.\\
+The educational of timetabling problems involves the scheduling of classes, lectures or exams on a school or university in a predefined set of time slots while satisfying a set of rules or constraints. Examples of rules are: a student can't be present in two classes at the same time, a student can't have two exams on the same day or an exam must be scheduled before another.\\
 \\
 Depending on the institution type and if we're scheduling classes/lectures or exams, the timetabling problem is divided into three main types:\\
 \begin{itemize}
@@ -22,7 +22,7 @@ In this project, the main focus is the examination timetabling problem. \\
 The type of rules/constraints to satisfy depend on the particular timetabling problem specifications. The constraints are generally divided into two constraint categories: hard and soft. Hard constraints are a set of rules which must be followed in order to get a \textit{feasible} solution. On the other hand, soft constraints represent the views of the different interested players (e.g., institution, students, nurses, train operators) on the resulting timetable. The satisfaction of this type of constraints is not mandatory as is for the case of the hard constraints. In the timetabling problem, the goal is usually to optimize a function with a weighted combination of the different soft constraints, while satisfying the set of hard constraints. 
 
 \section{Objectives}
-\label{section:Objts}
+\label{sec:Objectives}
 
 This project's main objective is the production of a prototype application which serves as an examination timetable generator tool. The problem at hand focus on the specifications introduced in the \gls{itc2007}, \textit{First track}, which includes 12 benchmark instances. In the \gls{itc2007} specification, the examination timetabling problem considers a set of periods, room assignment, and the existence of constraints analogous to the ones present in real instances.\\
 \\
@@ -36,4 +36,4 @@ This project is divided into two main phases. The first phase consists on studyi
 
 \section{Document Organization}
 
-The remainder of this report is organized as follows. Chapter \ref{chap:stateofart}, addresses the timetabling problem focusing on examination timetabling and existing approaches applied to the \gls{itc2007} benchmark data. This chapter includes a survey of the most important paradigms and algorithmic strategies to tackle the timetabling problem. Next, the methods of the five \gls{itc2007} finalists are summarized. The next chapters address the implementation aspects of the solution method. This includes a chapter that explains the organization of the project and its architecture, following by chapters that explain the heuristics and the Loader module, ending with the experimental results, conclusions, and future work.
+The remainder of this report is organized as follows. Chapter \ref{chap:stateofart}, addresses the timetabling problem focusing on examination timetabling and existing approaches applied to the \gls{itc2007} benchmark data. This chapter includes a survey of the most important paradigms, algorithmic strategies to tackle the timetabling problem, and the methods of the five \gls{itc2007} finalists are summarized. In Chapter \ref{chap:Architecture} the system architecture is explained, together with the created layers. Chapter \ref{chap:SolutionInit} explains how the solution is created and initialized. Chapter \ref{chap:LocalSearch} addresses the used local search meta-heuristics, together with their implementations. In Chapter \ref{chap:ExpResults} we compare the final results with the five \gls{itc2007} finalists and state-of-the-art approaches. In the last Chapter, Chapter \ref{chap:FutureWork}, we share the conclusions taken after developing the project, finishing with the possible future work.
