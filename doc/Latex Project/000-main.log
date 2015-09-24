@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.16)  22 SEP 2015 23:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.16)  24 SEP 2015 23:19
 entering extended mode
 **000-main.tex
 (000-main.tex
@@ -3127,12 +3127,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 275--286
  []
 
 
-Overfull \hbox (7.28844pt too wide) in paragraph at lines 289--292
-\T1/fve/m/n/10 tics like []SA and []HC make use of neigh-bor so-lu-tions, and s
-o they uti-lize the []\T1/fvm/m/n/10 NeighborSelection
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 289--292
 
  []
@@ -3170,22 +3164,22 @@ Missing character: There is no y in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--128
+Underfull \hbox (badness 10000) in paragraph at lines 64--130
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--128
+Underfull \hbox (badness 10000) in paragraph at lines 64--130
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--128
+Underfull \hbox (badness 10000) in paragraph at lines 64--130
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--128
+Underfull \hbox (badness 10000) in paragraph at lines 64--130
 
  []
 
@@ -3195,41 +3189,40 @@ Underfull \hbox (badness 10000) in paragraph at lines 64--128
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 132--133
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
 
  []
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 136--141
+Underfull \hbox (badness 10000) in paragraph at lines 138--143
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--141
+Underfull \hbox (badness 10000) in paragraph at lines 138--143
 
  []
 
 [23]
-Underfull \hbox (badness 10000) in paragraph at lines 147--151
+Underfull \hbox (badness 10000) in paragraph at lines 149--153
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--151
+Underfull \hbox (badness 10000) in paragraph at lines 149--153
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 152--153
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 155--156
+Underfull \hbox (badness 10000) in paragraph at lines 154--155
 
  []
 
 [24]
+Underfull \hbox (badness 10000) in paragraph at lines 157--158
+
+ []
+
 Missing character: There is no H in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no u in font nullfont!
@@ -3281,31 +3274,26 @@ Missing character: There is no y in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
 )
-Underfull \hbox (badness 10000) in paragraph at lines 237--118
+Underfull \hbox (badness 10000) in paragraph at lines 240--118
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 237--118
+Underfull \hbox (badness 10000) in paragraph at lines 240--118
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 237--118
+Underfull \hbox (badness 10000) in paragraph at lines 240--118
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 237--118
+Underfull \hbox (badness 10000) in paragraph at lines 240--118
 
  []
 
-[25] [26] [27] (500-local-search.tex [28
-
-
-
-
-]
+[25] [26] [27] [28] (500-local-search.tex
 Chapter 5.
 
 Underfull \hbox (badness 10000) in paragraph at lines 10--13
@@ -3359,7 +3347,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--97
 
  []
 
-[29]
+[29
+
+
+
+
+]
 Underfull \hbox (badness 10000) in paragraph at lines 97--102
 
  []
@@ -3825,14 +3818,11 @@ Underfull \hbox (badness 1655) in paragraph at lines 230--232
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
  49015 strings out of 493671
  1117426 string characters out of 3141423
- 2977026 words of memory out of 3000000
+ 2977027 words of memory out of 3000000
  51362 multiletter control sequences out of 15000+200000
  97033 words of font info for 90 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
@@ -3858,7 +3848,7 @@ m Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy5.pfb><C:/Program Files (x86
 )/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9
 /fonts/type1/public/lm/lmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 /public/lm/lmsy9.pfb>
-Output written on 000-main.pdf (71 pages, 751978 bytes).
+Output written on 000-main.pdf (71 pages, 752684 bytes).
 PDF statistics:
  387 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

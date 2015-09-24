@@ -22,7 +22,7 @@
 \contentsline {subsubsection}{Population-based meta-heuristics}{8}
 \contentsline {subsection}{\numberline {2.2.4}ITC2007 Examination timetabling problem: some approaches}{9}
 \contentsline {subsection}{\numberline {2.2.5}Other methods - further approaches}{10}
-\contentsline {chapter}{\numberline {3}Architecture}{15}
+\contentsline {chapter}{\numberline {3}Software Architecture}{15}
 \contentsline {section}{\numberline {3.1}System Architecture}{15}
 \contentsline {subsection}{\numberline {3.1.1}Data Layer}{15}
 \contentsline {subsection}{\numberline {3.1.2}Data Access Layer}{15}
