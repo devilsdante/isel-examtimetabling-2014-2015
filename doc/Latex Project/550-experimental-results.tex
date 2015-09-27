@@ -1,56 +1,58 @@
-\chapter{\textcolor{green}{Experimental Results}}
+\chapter{Experimental Results}
 \label{chap:ExpResults}
 
-In this chapter we will present the results obtained while running all the heuristics explained in the previous chapters. We also compare our results against the ones of the top five winners of the \gls{itc2007} contest and more up to date approaches.\\
+In this chapter we report the results obtained by the heuristics explained in the previous chapters. We also compare our results against the ones of the top five winners of the \gls{itc2007} contest as well as with those of more up to date approaches.\\
 \\
-The parameters used to run the \gls{sa} were:\\
+The \gls{sa} parameters are:\\
 \\
 TMax = 0.1 $\rightarrow$ Maximum/initial temperature\\
 TMin = 1e-06 $\rightarrow$ Minimum temperature\\
 reps = 5 $\rightarrow$ Number of repetitions per temperature\\
-rate = \textit{computed automatically} $\rightarrow$ Temperature cooling rate\\
+rate = \textit{computed automatically using Algorithm \ref{alg:RateComputing}} $\rightarrow$ Temperature cooling rate\\
 \\
-All the 12 sets were tested by running the algorithm on each set 20 times. Table \ref{tab:20tests} presents the obtained results, showing the values for the average fitness, fitness' best and worst values, its standard deviation, and the average of feasible and unfeasible generated neighbors. Compared to the previous approaches, which excludes the use of incremental fitness computing and the real time computed rate, these results are noticeable better, as can be seen in Table \ref{tab:PrevApprVSNewAppr}. \\
+All the 12 datasets were tested by running the algorithm on each dataset 20 times. Table \ref{tab:20tests} presents the obtained results, showing the values for the average fitness, fitness' best and worst values, its standard deviation, and the average of feasible and unfeasible generated neighbors. Compared to the previous approaches, which excludes the use of incremental fitness computing and the real time computed rate, these results are noticeable better, as can be seen in Table \ref{tab:PrevApprVSNewAppr}. \\
 \\
 \begin{table}[!t]
 \centering
-\caption{Comparison of the current approach with the previous approach. ''--'' indicates that a feasible solution could not be obtained.}
+\caption{\textcolor{green}{Comparison of the current approach with the previous approach. The best solutions are in boldface. ``--'' indicates that a feasible solution could not be obtained.}}
 \sisetup{table-alignment=center,detect-weight=true,detect-inline-weight=math}
 \begin{tabular}{%
 	S[table-figures-integer=3]%
+	S[table-format=5.1]%
 	S[table-format=5.1]%
 	S[table-format=5.1]%
     }
 
 \toprule
 
-\multicolumn{1}{c}{Set} & \multicolumn{1}{c}{Current} &	\multicolumn{1}{c}{Previous}\\
-\multicolumn{1}{c}{}	& \multicolumn{1}{c}{approach} & \multicolumn{1}{c}{approach}\\
+\multicolumn{1}{c}{Dataset} & \multicolumn{1}{c}{Current} &	\multicolumn{1}{c}{Previous} &	\multicolumn{1}{c}{Improvement}\\
+\multicolumn{1}{c}{}	& \multicolumn{1}{c}{approach} & \multicolumn{1}{c}{approach} &	\multicolumn{1}{c}{Factor (\%)}\\
 
 \midrule
 
-1   &   5019  & 6934 \\
-2   &   478  & 821 \\
-3   &   14997  & 24627 \\
-4   &   \text{--}  & \text{--} \\
-5   &   4950 & 7729 \\
-6   &   27680  & 30195 \\
-7   &   4799  & 8089 \\
-8   &   8551  & 11067 \\
-9   &   1141  & 1448 \\
-10  &   28219  & 35698 \\
-11  &   45344  & 72751 \\
-12  &   7222  & 8049 \\
+1   &   \boldentry{5.1}{5019}  & 6934 & \textcolor{green}{+27.6} \\
+2   &   \boldentry{5.1}{478}  & 821 & \textcolor{green}{+41.8} \\
+3   &   \boldentry{5.1}{14997}  & 24627 & \textcolor{green}{+39.1} \\
+4   &   \text{--}  & \text{--} & \text{--} \\
+5   &   \boldentry{5.1}{4950} & 7729 & \textcolor{green}{+36.0} \\
+6   &   \boldentry{5.1}{27680}  & 30195 & \textcolor{green}{+8.3} \\
+7   &   \boldentry{5.1}{4799}  & 8089 & \textcolor{green}{+40.7} \\
+8   &   \boldentry{5.1}{8551}  & 11067 & \textcolor{green}{+22.7} \\
+9   &   \boldentry{5.1}{1141}  & 1448 & \textcolor{green}{+21.2} \\
+10  &   \boldentry{5.1}{28219}  & 35698 & \textcolor{green}{+21.0} \\
+11  &   \boldentry{5.1}{45344}  & 72751 & \textcolor{green}{+37.7} \\
+12  &   \boldentry{5.1}{7222}  & 8049 & \textcolor{green}{+10.3} \\
 
 \bottomrule
+$\sum$  &     &  & \textcolor{green}{+306.4}
 
 \end{tabular}
 \label{tab:PrevApprVSNewAppr}
-\end{table}While studying the results, it was noticed that some runs produced results very far from the average results for the given dataset. As can be seen in Table \ref{tab:20tests}, the sets 2, 5, 6, 8, 10, and 12 have the worst fitness much more distant to the average fitness compared to the other sets. The fitness standard deviation itself, in these sets, is much smaller compared to the distance between the average fitness and the worst fitness of the 20 runs. On the 20 runs for these sets, only one or two had this kind of results. We believe this rarely happens because of the problem specified in Chapter \ref{sub:SAStatistics}, the fact that examinations with coincidence hard constraints cannot be moved, it limits the algorithm performance to get better results.\\
+\end{table}While studying the results, it was noticed that some runs produced results very far from the average results for the given dataset. As can be seen in Table \ref{tab:20tests}, the datasets 2, 5, 6, 8, 10, and 12 have the worst fitness,deviating from the average fitness compared to the other datasets. The fitness standard deviation itself, in these datasets, is much smaller compared to the distance between the average fitness and the worst fitness of the 20 runs. On the 20 runs for these datasets, only one or two had this kind of results. We believe this rarely happens because of the problem specified in Chapter \ref{sub:SAStatistics}, the fact that examinations with coincidence hard constraints cannot be moved, it limits the algorithm performance to get better results.\\
 \\
 \begin{table*}[!t]
 \centering
-\caption{Obtained results for the proposed SA hybrid algorithm. ''--'' indicates that a feasible solution could not be obtained.}
+\caption{Obtained results for the proposed SA hybrid algorithm. ``--'' indicates that a feasible solution could not be obtained.}
 \sisetup{table-alignment=center,detect-weight=true,detect-inline-weight=math}
 \begin{tabular}{%
 	S[table-figures-integer=3]%
@@ -65,7 +67,7 @@ All the 12 sets were tested by running the algorithm on each set 20 times. Table
 \toprule
 
 \multicolumn{1}{c}{} & \multicolumn{1}{c}{Average} &	\multicolumn{1}{c}{Best} & \multicolumn{1}{c}{Worst} & \multicolumn{1}{c}{Fitness} & \multicolumn{1}{c}{\# Feasible} & \multicolumn{1}{c}{\# Unfeasible}\\
-\multicolumn{1}{c}{Set} & \multicolumn{1}{c}{Fitness} & \multicolumn{1}{c}{Fitness} & \multicolumn{1}{c}{Fitness} & \multicolumn{1}{c}{Standard} & \multicolumn{1}{c}{Generated} & \multicolumn{1}{c}{Generated} \\
+\multicolumn{1}{c}{Dataset} & \multicolumn{1}{c}{Fitness} & \multicolumn{1}{c}{Fitness} & \multicolumn{1}{c}{Fitness} & \multicolumn{1}{c}{Standard} & \multicolumn{1}{c}{Generated} & \multicolumn{1}{c}{Generated} \\
 		& \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{Deviation} & \multicolumn{1}{c}{Neighbors} & \multicolumn{1}{c}{Neighbors} \\
 
 \midrule
@@ -87,11 +89,11 @@ All the 12 sets were tested by running the algorithm on each set 20 times. Table
 
 \end{tabular}
 \label{tab:20tests}
-\end{table*}In Table \ref{tab:ITC2007ResultsComparison} we compare the results obtained in this project's approach with the five winners of the \gls{itc2007}. Being this approach based on M\"{u}ller's \cite{Mueller2009} approach, the results are not as good as their, and this might be because of the use of the \gls{gd} heuristic in his approach and differences on the neighborhood and on the initialization procedure. In some sets, however, the developed approach was able to reach and beat most of the contestants. We can also observe that the sets with the highest scores, and so represent the ones with worst results, are the ones that have more \textit{exam\_coincident} hard constraints. We believe that solving this approach limitation mentioned above, would improve the algorithm results.\\
+\end{table*}In Table \ref{tab:ITC2007ResultsComparison} we compare the results obtained in this project's approach with the five winners of the \gls{itc2007}. Our approach based on M\"{u}ller's \cite{Mueller2009} approach, however the results are not as good as their, and this might be because of the use of the \gls{gd} heuristic in his approach and differences on the neighborhood and on the initialization procedure. In some datasets, however, the developed approach was able to reach and beat most of the contestants. We can also observe that the datasets with the highest scores, and so represent the ones with worst results, are the ones that have more \textit{exam\_coincident} hard constraints. We believe that by solving this approach limitation mentioned above, would improve the algorithm results.\\
 \\
 \begin{table*}[!t]
 \centering
-\caption{Comparison of the proposed approach with the ITC 2007 finalists. The comparison is made between the average values of each approach. The best solutions are indicated in bold. ''--'' indicates that a feasible solution could not be obtained.}
+\caption{Comparison of the proposed approach with the ITC 2007 finalists. The comparison is made between the average values of each approach. The best solutions are in boldface. ``--'' indicates that a feasible solution could not be obtained.}
 \sisetup{table-alignment=center,detect-weight=true,detect-inline-weight=math}
 \begin{tabular}{%
 	S[table-figures-integer=3]%
@@ -105,7 +107,7 @@ All the 12 sets were tested by running the algorithm on each set 20 times. Table
 
 \toprule
 
-\multicolumn{1}{c}{Set} & \multicolumn{1}{c}{M\"{u}ller} &	\multicolumn{1}{c}{Gogos et al.} & \multicolumn{1}{c}{Atsuta et al.} & \multicolumn{1}{c}{De Smet} & \multicolumn{1}{c}{Pillay} & \multicolumn{1}{c}{Proposed}\\
+\multicolumn{1}{c}{Dataset} & \multicolumn{1}{c}{M\"{u}ller} &	\multicolumn{1}{c}{Gogos et al.} & \multicolumn{1}{c}{Atsuta et al.} & \multicolumn{1}{c}{De Smet} & \multicolumn{1}{c}{Pillay} & \multicolumn{1}{c}{Proposed}\\
 		& \multicolumn{1}{c}{2009 \cite{Mueller2009}} & \multicolumn{1}{c}{2012~\cite{Gogos2012}} & \multicolumn{1}{c}{2007~\cite{Atsuta2007}} & \multicolumn{1}{c}{2008~\cite{Smet2007}} & \multicolumn{1}{c}{2008~\cite{Pillay2007}} & \multicolumn{1}{c}{Approach 2015} \\
 
 \midrule
@@ -127,11 +129,11 @@ All the 12 sets were tested by running the algorithm on each set 20 times. Table
 
 \end{tabular}
 \label{tab:ITC2007ResultsComparison}
-\end{table*}In table \ref{tab:UpToDateResultsComparison}, our algorithm's results are compared to more up to date approaches. As can be seen, Rahman et al. \cite{Rahman2014}, Bryce et al. \cite{Hamilton-Bryce2014}, and Mouhoub et al. \cite{Mouhoub2014} beat almost all the best results. Some of Rahman's \cite{Rahman2014} and Bryce's results surpass M\"{u}ller's \cite{Mueller2009} results. None of the sets' score of our approach was able to beat all the other approaches shown on the table. \\
+\end{table*}In table \ref{tab:UpToDateResultsComparison}, our algorithm's results are compared to more up to date approaches. As can be seen, Rahman et al. \cite{Rahman2014}, Bryce et al. \cite{Hamilton-Bryce2014}, and Mouhoub et al. \cite{Mouhoub2014} beat almost all the best results. Some of Rahman's \cite{Rahman2014} and Bryce's results surpass M\"{u}ller's \cite{Mueller2009} results. None of the datasets' score of our approach was able to beat all the other approaches shown on the table. \\
 \\
 \begin{table*}[!t]
 \centering
-\caption{Comparison of the proposed approach with state-of-the-art approaches. The comparison is made between the average values of each approach. ''--'' indicates that a feasible solution could not be obtained, or the following sets were not tested.}
+\caption{Comparison of the proposed approach with state-of-the-art approaches. The comparison is made between the average values of each approach. The best solutions are in boldface. ``--'' indicates that a feasible solution could not be obtained, or the following datasets were not tested.}
 \sisetup{table-alignment=center,detect-weight=true,detect-inline-weight=math}
 \begin{tabular}{%
 	S[table-figures-integer=3]%
@@ -145,7 +147,7 @@ All the 12 sets were tested by running the algorithm on each set 20 times. Table
 
 \toprule
 
-\multicolumn{1}{c}{Set} & \multicolumn{1}{c}{Rahman et al.} &	\multicolumn{1}{c}{Bryce et al.} & \multicolumn{1}{c}{Mouhoub et al.} & \multicolumn{1}{c}{De Smet} & \multicolumn{1}{c}{Abdullah et al.} & \multicolumn{1}{c}{Proposed}\\
+\multicolumn{1}{c}{Dataset} & \multicolumn{1}{c}{Rahman et al.} &	\multicolumn{1}{c}{Bryce et al.} & \multicolumn{1}{c}{Mouhoub et al.} & \multicolumn{1}{c}{De Smet} & \multicolumn{1}{c}{Abdullah et al.} & \multicolumn{1}{c}{Proposed}\\
 		& \multicolumn{1}{c}{2014 \cite{Rahman2014a}} & \multicolumn{1}{c}{2014~\cite{Hamilton-Bryce2014}} & \multicolumn{1}{c}{2014~\cite{Mouhoub2014}} & \multicolumn{1}{c}{2014~\cite{Burke2014}} & \multicolumn{1}{c}{2014~\cite{Alzaqebah2014}} & \multicolumn{1}{c}{Approach 2015} \\
 
 \midrule
@@ -167,11 +169,11 @@ All the 12 sets were tested by running the algorithm on each set 20 times. Table
 
 \end{tabular}
 \label{tab:UpToDateResultsComparison}
-\end{table*}One interesting test would be to run the created approach allowing it to run for a large period of time, not considering the time limit. The \gls{sa} heuristic should obtain better results compared to the 221 seconds time limit tests. Table \ref{tab:LimitedTimevsUnlimitedTime} represents the comparison of the original tests with time limit, with tests that took 12 hours for each set. It can be seen that for most of the sets, for the 12 hours tests, the algorithm obtained better results. In two sets the results were not better, and the reason should be because of the \gls{sa} limitation.
+\end{table*}One interesting test would be to run the created approach allowing it to run for a large period of time, not considering the time limit. The \gls{sa} heuristic should obtain better results compared to the 221 seconds time limit tests. Table \ref{tab:LimitedTimevsUnlimitedTime} reports the comparison of the original tests with time limit, with tests that took 12 hours for each dataset. It can be seen that for all the datasets, the 12 hours tests, the algorithm obtained better results. 
 
 \begin{table}[!t]
 \centering
-\caption{Obtained results with different time constraints. ''--'' indicates that a feasible solution could not be obtained.}
+\caption{\textcolor{green}{Obtained results with different time constraints. The best solutions are in boldface. ``--'' indicates that a feasible solution could not be obtained.}}
 \sisetup{table-alignment=center,detect-weight=true,detect-inline-weight=math}
 \begin{tabular}{%
 	S[table-figures-integer=3]%
@@ -181,23 +183,23 @@ All the 12 sets were tested by running the algorithm on each set 20 times. Table
 
 \toprule
 
-\multicolumn{1}{c}{Set} & \multicolumn{1}{c}{221 seconds} &	\multicolumn{1}{c}{12 hours}\\
+\multicolumn{1}{c}{Dataset} & \multicolumn{1}{c}{221 seconds} &	\multicolumn{1}{c}{12 hours}\\
 \multicolumn{1}{c}{}	& \multicolumn{1}{c}{fitness} & \multicolumn{1}{c}{fitness}\\
 
 \midrule
 
-1   &   5019  & 3784 \\
-2   &   478  & 385 \\
-3   &   14997  & 12928 \\
+1   &   5019  & \boldentry{5.1}{3784} \\
+2   &   478  & \boldentry{5.1}{385} \\
+3   &   14997  & \boldentry{5.1}{12928} \\
 4   &   \text{--}  & \text{--} \\
-5   &   4950 & 3681 \\
-6   &   27680  & 25890 \\
-7   &   4799  & 3260 \\
-8   &   8551  & 7011 \\
-9   &   1141  & 978 \\
-10  &   28219  & 19734 \\
-11  &   45344  & 31366 \\
-12  &   7222  & 5580 \\
+5   &   4950 & \boldentry{5.1}{3681} \\
+6   &   27680  & \boldentry{5.1}{25890} \\
+7   &   4799  & \boldentry{5.1}{3260} \\
+8   &   8551  & \boldentry{5.1}{7011} \\
+9   &   1141  & \boldentry{5.1}{978} \\
+10  &   28219  & \boldentry{5.1}{19734} \\
+11  &   45344  & \boldentry{5.1}{31366} \\
+12  &   7222  & \boldentry{5.1}{5580} \\
 
 \bottomrule
 

@@ -6,11 +6,11 @@
 \contentsline {table}{\numberline {4.1}{\ignorespaces Specifications of the 12 datasets of the ITC 2007 examination timetabling problem.\relax }}{22}
 \contentsline {table}{\numberline {4.2}{\ignorespaces Some of the Graph Coloring's performance features.\relax }}{27}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Percentage of improvement factor between using five and six neighbors.\relax }}{40}
+\contentsline {table}{\numberline {5.1}{\ignorespaces \leavevmode {\color {green}Improvement factor (percentage) between using five and six neighbor operators.}\relax }}{40}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Comparison of the current approach with the previous approach. ''--'' indicates that a feasible solution could not be obtained.\relax }}{44}
-\contentsline {table}{\numberline {6.2}{\ignorespaces Obtained results for the proposed SA hybrid algorithm. ''--'' indicates that a feasible solution could not be obtained.\relax }}{44}
-\contentsline {table}{\numberline {6.3}{\ignorespaces Comparison of the proposed approach with the ITC 2007 finalists. The comparison is made between the average values of each approach. The best solutions are indicated in bold. ''--'' indicates that a feasible solution could not be obtained.\relax }}{45}
-\contentsline {table}{\numberline {6.4}{\ignorespaces Comparison of the proposed approach with state-of-the-art approaches. The comparison is made between the average values of each approach. ''--'' indicates that a feasible solution could not be obtained, or the following sets were not tested.\relax }}{45}
-\contentsline {table}{\numberline {6.5}{\ignorespaces Obtained results with different time constraints. ''--'' indicates that a feasible solution could not be obtained.\relax }}{46}
+\contentsline {table}{\numberline {6.1}{\ignorespaces \leavevmode {\color {green}Comparison of the current approach with the previous approach. The best solutions are in boldface. ``--'' indicates that a feasible solution could not be obtained.}\relax }}{44}
+\contentsline {table}{\numberline {6.2}{\ignorespaces Obtained results for the proposed SA hybrid algorithm. ``--'' indicates that a feasible solution could not be obtained.\relax }}{44}
+\contentsline {table}{\numberline {6.3}{\ignorespaces Comparison of the proposed approach with the ITC 2007 finalists. The comparison is made between the average values of each approach. The best solutions are in boldface. ``--'' indicates that a feasible solution could not be obtained.\relax }}{45}
+\contentsline {table}{\numberline {6.4}{\ignorespaces Comparison of the proposed approach with state-of-the-art approaches. The comparison is made between the average values of each approach. The best solutions are in boldface. ``--'' indicates that a feasible solution could not be obtained, or the following datasets were not tested.\relax }}{45}
+\contentsline {table}{\numberline {6.5}{\ignorespaces \leavevmode {\color {green}Obtained results with different time constraints. The best solutions are in boldface. ``--'' indicates that a feasible solution could not be obtained.}\relax }}{46}
 \addvspace {10\p@ }

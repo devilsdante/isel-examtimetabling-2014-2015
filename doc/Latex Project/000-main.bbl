@@ -24,7 +24,7 @@ A.~Schaerf, ``A survey of automated timetabling,'' {\em Artif. Intell. Rev.},
   vol.~13, no.~2, pp.~87--127, 1999.
 
 \bibitem{Jensen2001}
-T.~R. Jensen, {\em Graph Coloring Problems}.
+T.~Jensen, {\em Graph Coloring Problems}.
 \newblock John Wiley \& Sons, Inc., 2001.
 
 \bibitem{Arora2009}
@@ -58,7 +58,7 @@ M.~Carter, G.~Laporte, and S.~Lee, ``Examination timetabling: Algorithmic
 \newblock 1996.
 
 \bibitem{McCollum2007}
-B.~McCollum, ``Itc2007 examination evaluation function.''
+B.~McCollum, ``{ITC2007} examination evaluation function.''
   \url{http://www.cs.qub.ac.uk/itc2007/examtrack/exam_track_index_files/examevaluation.htm},
   2007.
 
@@ -97,7 +97,7 @@ M.~Atsuta, K.~Nonobe, and T.~Ibaraki, ``Itc-2007 track2: An approach using
   Science and Technology, Tokyo, Japan, 2007.
 
 \bibitem{Drools}
-T.~J. Drools, ``Drools planner user guide.''
+J.~Drools, ``Drools planner user guide.''
   \url{http://docs.jboss.org/drools/release/5.4.0.Final/drools-planner-docs/html_single/}.
 
 \bibitem{Pillay2007}
@@ -155,8 +155,8 @@ P.~Demeester, B.~Bilgin, P.~Causmaecker, and G.~Berghe, ``A hyperheuristic
 
 \bibitem{Burke2008}
 E.~Burke and Y.~Bykov, ``A late acceptance strategy in hill-climbing for
-  examination timetabling problems,'' in {\em In Proceedings of the conference
-  on the Practice and Theory of Automated Timetabling(PATAT}, 2008.
+  examination timetabling problems,'' in {\em Proceedings of the conference on
+  the Practice and Theory of Automated Timetabling}, 2008.
 
 \bibitem{McCollum2012}
 B.~McCollum, P.~McMullan, A.~Parkes, E.~Burke, and R.~Qu, ``A new model for
@@ -165,8 +165,8 @@ B.~McCollum, P.~McMullan, A.~Parkes, E.~Burke, and R.~Qu, ``A new model for
 
 \bibitem{Sabar2012}
 N.~Sabar, M.~Ayob, R.~Qu, and G.~Kendall, ``A graph coloring constructive
-  hyper-heuristic for examination timetabling problems,'' {\em Appl. Intell.},
-  vol.~37, no.~1, pp.~1--11, 2012.
+  hyper-heuristic for examination timetabling problems,'' {\em Applied
+  Intelligence}, vol.~37, no.~1, pp.~1--11, 2012.
 
 \bibitem{Sabar2012a}
 N.~Sabar, M.~Ayob, G.~Kendall, and R.~Qu, ``A honey-bee mating optimization
@@ -175,8 +175,8 @@ N.~Sabar, M.~Ayob, G.~Kendall, and R.~Qu, ``A honey-bee mating optimization
 
 \bibitem{Abdullah2013}
 S.~Abdullah and M.~Alzaqebah, ``A hybrid self-ddaptive bees algorithm for
-  examination timetabling problems,'' {\em Appl. Soft Comput.}, vol.~13, no.~8,
-  pp.~3608--3620, 2013.
+  examination timetabling problems,'' {\em Applied Soft Computinglr}, vol.~13,
+  no.~8, pp.~3608--3620, 2013.
 
 \bibitem{Alzaqebah2014}
 M.~Alzaqebah and S.~Abdullah, ``An adaptive artificial bee colony and
@@ -212,22 +212,22 @@ S.~Rahman, A.~Bargiela, E.~Burke, E.~{\"{O}}zcan, B.~McCollum, and P.~McMullan,
   vol.~232, no.~2, pp.~287--297, 2014.
 
 \bibitem{McCollum2007b}
-B.~McCollum, ``Itc2007 examination output format.''
+B.~McCollum, ``{ITC2007} examination output format.''
   \url{http://www.cs.qub.ac.uk/itc2007/examtrack/exam_track_index_files/outputformat.htm},
   2007.
 
 \bibitem{McCollum2007c}
-B.~McCollum, ``Itc2007 examination validator.''
+B.~McCollum, ``{ITC2007} examination validator.''
   \url{http://www.cs.qub.ac.uk/itc2007/examtrack/exam_track_index_files/validation.htm},
   2007.
 
 \bibitem{McCollum2007d}
-B.~McCollum, ``Itc2007 examination input format.''
+B.~McCollum, ``{ITC2007} examination input format.''
   \url{http://www.cs.qub.ac.uk/itc2007/examtrack/exam_track_index_files/Inputformat.htm},
   2007.
 
 \bibitem{McCollum2007e}
-B.~McCollum, ``Itc 2007 examination benchmarking.''
+B.~McCollum, ``{ITC2007} examination benchmarking.''
   \url{http://www.cs.qub.ac.uk/itc2007/index_files/benchmarking.htm}, 2007.
 
 \bibitem{CarvalhoLisbonNovember2004}
