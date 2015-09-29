@@ -7,7 +7,7 @@ The Loader and the solution initializer (heuristic) are the first tools used in 
 \section{Loader Module}
 \label{sec:Loader}
 
-The Loader's job is to load all the information presented in the dataset files. Each set file includes information about examinations and the enrolled students, the periods, the rooms, and their penalties, as well as the period and room hard constraints, and the information about the soft constraints, named \textit{Institutional Weightings}. The presence of period and room hard constraints are optional.\\
+The Loader's job is to load all the information presented in the dataset files. Each set file includes information about examinations, enrolled students, periods, rooms and their penalties, period and room hard constraints, and the information about the soft constraints, named \textit{Institutional Weightings}. The presence of period and room hard constraints are optional.\\
 \\
 This tool not only loads all the data to their corresponding repositories, but also creates and populates the conflict matrix depending on the data obtained previously. The conflict matrix contains the information about the conflicts between each pair of examinations.
 
@@ -61,7 +61,7 @@ All the specifications and benchmark data from the 12 datasets of the \gls{itc20
 
 \subsection{Implementation}
 
-The development of the \verb+ILoader+ tool is divided into two main parts: the loading part, which loads the dataset file into the repositories using the business layer, and the creation and population of the conflict matrix.\\
+The development of the \verb+ILoader+ is divided into two main parts: the loading part, which loads the dataset file into the repositories using the business layer, and the creation and population of the conflict matrix.\\
 \\
 The loader was implemented using the \verb+Loader+ base class, from which the \verb+LoaderTimetable+ extends. The \verb+Loader+ class provides methods to read the file contents. These two classes are depicted in Figure \ref{fig:Loaders}.\\
 \\
@@ -103,7 +103,7 @@ Unlike the \verb+Loader+, \verb+LoaderTimetable+ depends on the structure of the
 \end{tikzpicture}
 
 \caption{Specification of Loader and LoaderTimetable tools} \label{fig:Loaders}
-\end{figure}The implementation of the \verb+LoaderTimetable+ class is all about the \verb+Load+ method. This public method will be asking for new lines and reading the tokens out of it, using the \verb+Loader+ class. This procedure will take place as long as there are new lines to read. It's a pretty simple cycle that gets a new line and checks if, for instance, the string ``Exams'' is contained on that line. If so, it runs \verb+InitExaminations+, if not, checks if ``Periods'' is contained on that line, and so on, until it reaches the end of the file. The pseudo code of this method can be seen on Algorithm \ref{alg:Load}.\\
+\end{figure}The implementation of the \verb+LoaderTimetable+ class is all about the \verb+Load+ method. This public method will be asking for new lines and reading the tokens out of it, using the \verb+Loader+ class. This procedure will take place as long as there are new lines to read. It consists in a cycle that gets a new line and checks if the first string (e.g., ``Exams'') is contained on that line. If so, it runs \verb+InitExaminations+, if not, checks if the next string (e.g. ``Periods'') is contained on that line, and so on, until it reaches the end of the file. The pseudo code of this method can be seen on Algorithm \ref{alg:Load}.\\
 \\
 \begin{algorithm}[b!]
 \begin{algorithmic}
@@ -152,7 +152,7 @@ The fourth phase is the examination assignment phase (the most important phase o
 \\
 \begin{itemize}
 	\item Normal assignment -- If it's possible to assign the chosen examination to a period and room, a normal assignment is processed. In this type of assignment, of all the possible periods to assign, one of them is chosen randomly. It should be noted that a possible period to assign means that the examination can be assigned to that period and at least in one room on that period. After choosing the period, the same will be done to the rooms, and so, a random room will be chosen from all possible assignable rooms for that examination and period. If the current examination has to be coincident to another, and so, set to the same period as the other, the rules explained will not occur. Instead, only that period will be considered and if the period is not feasible to the current examination, the normal assignment will not take place. \\
-	\item Forcing assignment -- Occurs if there are no possible periods to assign the chosen examination, because the normal assignment was not possible. A random period and room are selected and the examination will be forced to be assigned on those, unassigning all the examinations that conflict with this assignment. As the normal assignment, there are exceptions to this rule. If a coincident examination is already set, the examination to be set will be forced to be on the same period as the coincident examination, in a random room. Forcing an examination to a specific period because of a coincident examination sometimes caused infinite or very long loops in dataset 6. Because of this, there's a chance of 25\% that the previous rule does not occur, but instead, it unassigns all coincident examinations and try to assign the current examination to a random period. \textcolor{green}{We chose 25\% because this event must happen rarely to avoid infinite loops. \textit{Exam\_coincidence} hard constraint is present in larger amounts only in a few datasets, and is only applied to pairs of examinations. Finding an \textit{exam\_coincidence} chain with more than 3 examinations is very rare, so even if this event triggers in other datasets, it is not considered a problem. It would be considered a problem if the event was to be triggered more often, or if bigger \textit{exam\_coincidence} chains existed, degrading the efficiency of the heuristic.}
+	\item Forcing assignment -- Occurs if there are no possible periods to assign the chosen examination, because the normal assignment was not possible. A random period and room are selected and the examination will be forced to be assigned on those, unassigning all the examinations that conflict with this assignment. As the normal assignment, there are exceptions to this rule. If a coincident examination is already set, the examination to be set will be forced to be on the same period as the coincident examination, in a random room. Forcing an examination to a specific period because of a coincident examination sometimes caused infinite or very long loops in dataset 6. Because of this, there's a chance of 25\% that the previous rule does not occur, but instead, it unassigns all coincident examinations and try to assign the current examination to a random period. We chose 25\% because this event must happen rarely to avoid infinite loops. \textit{Exam\_coincidence} hard constraint is present in larger amounts only in a few datasets, and is only applied to pairs of examinations. Finding an \textit{exam\_coincidence} chain with more than 3 examinations is very rare, so even if this event triggers in other datasets, it is not considered a problem. It would be considered a problem if the event was to be triggered more often, or if bigger \textit{exam\_coincidence} chains existed, degrading the efficiency of the heuristic.
 \end{itemize}
 The \gls{gc} heuristic implementation only performs assignments and unassignments of examinations and checks examination clashes, when forcing an assignment. The feasibility checking done to periods and rooms is made by the \verb+FeasibilityTester+ tool, as mentioned in Section \ref{subsec:BussinessLayer}. The \verb+GraphColoring+ and \verb+FeasibilityTester+ classes, with all their attributes and methods, can be seen in Figure \ref{fig:GraphColoring}. The algorithm of the \gls{gc} heuristic, which was explained in this section, is described in Algorithm \ref{alg:GraphColoring}.\\
 
@@ -209,7 +209,15 @@ The \gls{gc} heuristic implementation only performs assignments and unassignment
 
 %%%%%%%%%%%%%%%%%%%%
 
-\begin{algorithm}
+\subsection{Stochasticity}
+
+In order to produce random initial solutions, the implemented \gls{gc} heuristic must have a stochastic behavior, i.e., it should produce different results in different runs. To verify the \gls{gc} heuristic stochasticity, the following test was conducted. In order to have a statistically significant result, a total of 10 runs were performed; for each run, the period where each exam was scheduled was registered. Finally, it was observed that the periods distribution was random meaning that the generated timetables have the same examinations placed in random periods for different runs, forming random solutions.
+
+\section{Solution Initialization Results}
+\label{sec:SolutionInitResults}
+The goal of the initialization procedure is not to find the best possible solution (in terms of fitness), but find feasible solutions. Some sets are simpler than others, always getting good and stable execution times. Others can be harder, getting worse execution times and instability. An unstable set means that the results vary too much, and so some tests show very good execution times and others not so much. The Graph Coloring heuristic results on the 12 datasets can be seen in Table \ref{tab:GCResults}. These results were obtained by running the heuristic, 10 times for each set, and computing the average for both fitness and execution time.\\
+\\
+\begin{algorithm}[t]
 \begin{itemize}
 \item Initial solution $solution$
 \end{itemize}
@@ -229,17 +237,7 @@ The \gls{gc} heuristic implementation only performs assignments and unassignment
 \end{algorithmic}
 \caption{Graph Coloring algorithm.}
 \label{alg:GraphColoring}
-\end{algorithm}
-
-\subsection{Stochasticity}
-
-In order to produce random initial solutions, the implemented \gls{gc} heuristic must have a stochastic behavior, i.e., it should produce different results in different runs. To verify the \gls{gc} heuristic stochasticity, the following test was conducted. In order to have a statistically significant result, a total of 10 runs were performed; for each run, the period where each exam was scheduled was registered. Finally, it was observed that the periods distribution was random meaning that the generated timetables have the same examinations placed in random periods for different runs, forming random solutions.
-
-\section{Solution Initialization Results}
-\label{sec:SolutionInitResults}
-The goal of the initialization procedure is not to find the best possible solution (in terms of fitness), but find feasible solutions. Some sets are simpler than others, always getting good and stable execution times. Others can be harder, getting worse execution times and instability. An unstable set means that the results vary too much, and so some tests show very good execution times and others not so much. The Graph Coloring heuristic results on the 12 datasets can be seen in Table \ref{tab:GCResults}. These results were obtained by running the heuristic, 10 times for each set, and computing the average for both fitness and execution time.\\
-\\
-\begin{table}[t]
+\end{algorithm}\begin{table}[t]
 \centering
 
 \sisetup{table-alignment=center,table-figures-decimal=3}
@@ -279,10 +277,10 @@ The goal of the initialization procedure is not to find the best possible soluti
 \end{tabular}
 \label{tab:GCResults}
 
-\end{table}Table \ref{tab:GCResults} exhibits the average fitness of the solutions created for each dataset, and so the average execution time, its standard deviation, and the percentage of time used in the first and second phase of this project. The standard deviation taken due to the large variation on execution times of datasets when creating initial solutions, using the \gls{gc} heuristic. By checking the standard deviation, the datasets 6, 11, and 12 are unstable. The datasets 11 and 12, even thought the average execution time was 3405 and 3690, the tested values varied from 864 to 7642 and from 201 to 6452, respectively.\\
+\end{table}Table \ref{tab:GCResults} exhibits the average fitness of the solutions created for each dataset, the average execution time and standard deviation, and the percentage of time used in the first and second phase of this project. The standard deviation was taken due to the large variation on execution times of datasets when creating initial solutions, using the \gls{gc} heuristic. Observing the results, it can be concluded that datasets 6, 11, and 12, present some degree of instability due to a large execution time standard deviation, compared to the other datasets. The datasets 11 and 12, even though the average execution time was 3405 and 3690, the tested values varied from 864 to 7642 and from 201 to 6452, respectively.\\
 \\
 The allowed execution time is 221000 milliseconds for each test made to each dataset. This time was picked by the benchmark program provided by the \gls{itc2007} site \cite{McCollum2007e} when executed on the machine where all testes were performed. In the results presented on Table \ref{tab:GCResults}, we can conclude that a very short amount of time is used on this first phase, as compared to the one being used on the second phase.\\
 \\
-As shown in Table \ref{tab:GCResults}, the heuristic could not get a feasible solution for dataset 4. The reason for this might be the presence of an infinite cycle of normal and forcing assignments, resulting in assigning and unassigning the same examinations. Different approaches have been tried in order to solve this problem. These include using a single unsorted list of unassigned examinations, using all four unsorted lists, and keeping the four lists sorted but changing the priority order of their usage. Oddly, using only one unsorted list led to the best results, sometimes leaving only 20 to 30 examinations to be placed, while the default approach varied between 90 and 120. Unfortunately none of the approaches were able to generate a feasible solution.\\
+As shown in Table \ref{tab:GCResults}, the heuristic was not able to produce a feasible solution for dataset 4. The reason for this might be the presence of an infinite cycle of normal and forcing assignments, resulting in assigning and unassigning the same examinations. Different approaches have been tried in order to solve this problem. These include using a single unsorted list of unassigned examinations, using all four unsorted lists, and keeping the four lists sorted but changing the priority order of their usage. Oddly, using only one unsorted list led to the best results, sometimes leaving only 20 to 30 examinations to be placed, while the default approach varied between 90 and 120. Unfortunately none of the approaches were able to generate a feasible solution.\\
 \\
 In the proposed approach, the exams were sorted by the number of students conflicts with other exams. Other approaches to tackle the problem would be to use a different sorting criteria, for example, the Largest Degree First criterion. In this heuristic, vertices with a large number of edges with other vertices  are scheduled first. This and other approaches should be developed in future work.

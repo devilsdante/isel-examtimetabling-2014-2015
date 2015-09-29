@@ -26,7 +26,7 @@
 \contentsline {section}{\numberline {3.1}Data Layer}{15}
 \contentsline {section}{\numberline {3.2}Data Access Layer}{15}
 \contentsline {section}{\numberline {3.3}Business Layer}{17}
-\contentsline {section}{\numberline {3.4}Tools Layer}{18}
+\contentsline {section}{\numberline {3.4}Tools Layer}{17}
 \contentsline {section}{\numberline {3.5}Heuristics Layer}{20}
 \contentsline {section}{\numberline {3.6}Presentation Layer}{20}
 \contentsline {chapter}{\numberline {4}Loader and Solution Initialization}{21}
@@ -39,16 +39,17 @@
 \contentsline {section}{\numberline {4.3}Solution Initialization Results}{25}
 \contentsline {chapter}{\numberline {5}Proposed Approach: Local Search}{29}
 \contentsline {section}{\numberline {5.1}Simulated Annealing}{29}
-\contentsline {subsection}{\numberline {5.1.1}\leavevmode {\color {green}Implementation}}{30}
+\contentsline {subsection}{\numberline {5.1.1}Implementation}{30}
 \contentsline {subsection}{\numberline {5.1.2}Variable Rate Computation}{32}
-\contentsline {section}{\numberline {5.2}Hill Climbing}{33}
+\contentsline {section}{\numberline {5.2}Hill Climbing}{34}
 \contentsline {subsection}{\numberline {5.2.1}Implementation}{34}
-\contentsline {section}{\numberline {5.3}Neighborhood Operators}{34}
-\contentsline {subsection}{\numberline {5.3.1}Implementation}{36}
+\contentsline {section}{\numberline {5.3}Neighborhood Operators}{35}
+\contentsline {subsection}{\numberline {5.3.1}Implementation}{37}
 \contentsline {subsection}{\numberline {5.3.2}Statistics}{37}
-\contentsline {subsection}{\numberline {5.3.3}Neighborhood Operators Effect}{37}
-\contentsline {section}{\numberline {5.4}Fitness Computation}{39}
+\contentsline {subsection}{\numberline {5.3.3}Neighborhood Operators Effect}{39}
+\contentsline {section}{\numberline {5.4}Fitness Computation}{40}
 \contentsline {subsection}{\numberline {5.4.1}Implementation}{40}
 \contentsline {chapter}{\numberline {6}Experimental Results}{43}
-\contentsline {chapter}{\numberline {7}\leavevmode {\color {green}Conclusions and Future Work}}{47}
+\contentsline {chapter}{\numberline {7}Conclusions}{47}
+\contentsline {section}{\numberline {7.1}Future Work}{47}
 \contentsline {chapter}{References}{49}

@@ -1,54 +1,20 @@
 \chapter{Experimental Results}
 \label{chap:ExpResults}
 
-In this chapter we report the results obtained by the heuristics explained in the previous chapters. We also compare our results against the ones of the top five winners of the \gls{itc2007} contest as well as with those of more up to date approaches.\\
+In this chapter we report the results obtained by the heuristics explained in the previous chapters. We also compare our results against the ones of the top five winners of the \gls{itc2007} contest, as well as with those of more up to date approaches.\\
 \\
 The \gls{sa} parameters are:\\
-\\
-TMax = 0.1 $\rightarrow$ Maximum/initial temperature\\
-TMin = 1e-06 $\rightarrow$ Minimum temperature\\
-reps = 5 $\rightarrow$ Number of repetitions per temperature\\
-rate = \textit{computed automatically using Algorithm \ref{alg:RateComputing}} $\rightarrow$ Temperature cooling rate\\
-\\
+\begin{itemize}
+	\item TMax = 0.1 $\rightarrow$ Maximum/initial temperature;
+	
+	\item TMin = 1e-06 $\rightarrow$ Minimum temperature;
+	
+	\item reps = 5 $\rightarrow$ Number of repetitions per temperature;
+	
+	\item rate = \textit{computed automatically using Algorithm\ref{alg:RateComputing}} $\rightarrow$ Temperature cooling rate.
+\\	
+\end{itemize}
 All the 12 datasets were tested by running the algorithm on each dataset 20 times. Table \ref{tab:20tests} presents the obtained results, showing the values for the average fitness, fitness' best and worst values, its standard deviation, and the average of feasible and unfeasible generated neighbors. Compared to the previous approaches, which excludes the use of incremental fitness computing and the real time computed rate, these results are noticeable better, as can be seen in Table \ref{tab:PrevApprVSNewAppr}. \\
-\\
-\begin{table}[!t]
-\centering
-\caption{\textcolor{green}{Comparison of the current approach with the previous approach. The best solutions are in boldface. ``--'' indicates that a feasible solution could not be obtained.}}
-\sisetup{table-alignment=center,detect-weight=true,detect-inline-weight=math}
-\begin{tabular}{%
-	S[table-figures-integer=3]%
-	S[table-format=5.1]%
-	S[table-format=5.1]%
-	S[table-format=5.1]%
-    }
-
-\toprule
-
-\multicolumn{1}{c}{Dataset} & \multicolumn{1}{c}{Current} &	\multicolumn{1}{c}{Previous} &	\multicolumn{1}{c}{Improvement}\\
-\multicolumn{1}{c}{}	& \multicolumn{1}{c}{approach} & \multicolumn{1}{c}{approach} &	\multicolumn{1}{c}{Factor (\%)}\\
-
-\midrule
-
-1   &   \boldentry{5.1}{5019}  & 6934 & \textcolor{green}{+27.6} \\
-2   &   \boldentry{5.1}{478}  & 821 & \textcolor{green}{+41.8} \\
-3   &   \boldentry{5.1}{14997}  & 24627 & \textcolor{green}{+39.1} \\
-4   &   \text{--}  & \text{--} & \text{--} \\
-5   &   \boldentry{5.1}{4950} & 7729 & \textcolor{green}{+36.0} \\
-6   &   \boldentry{5.1}{27680}  & 30195 & \textcolor{green}{+8.3} \\
-7   &   \boldentry{5.1}{4799}  & 8089 & \textcolor{green}{+40.7} \\
-8   &   \boldentry{5.1}{8551}  & 11067 & \textcolor{green}{+22.7} \\
-9   &   \boldentry{5.1}{1141}  & 1448 & \textcolor{green}{+21.2} \\
-10  &   \boldentry{5.1}{28219}  & 35698 & \textcolor{green}{+21.0} \\
-11  &   \boldentry{5.1}{45344}  & 72751 & \textcolor{green}{+37.7} \\
-12  &   \boldentry{5.1}{7222}  & 8049 & \textcolor{green}{+10.3} \\
-
-\bottomrule
-$\sum$  &     &  & \textcolor{green}{+306.4}
-
-\end{tabular}
-\label{tab:PrevApprVSNewAppr}
-\end{table}While studying the results, it was noticed that some runs produced results very far from the average results for the given dataset. As can be seen in Table \ref{tab:20tests}, the datasets 2, 5, 6, 8, 10, and 12 have the worst fitness,deviating from the average fitness compared to the other datasets. The fitness standard deviation itself, in these datasets, is much smaller compared to the distance between the average fitness and the worst fitness of the 20 runs. On the 20 runs for these datasets, only one or two had this kind of results. We believe this rarely happens because of the problem specified in Chapter \ref{sub:SAStatistics}, the fact that examinations with coincidence hard constraints cannot be moved, it limits the algorithm performance to get better results.\\
 \\
 \begin{table*}[!t]
 \centering
@@ -89,7 +55,45 @@ $\sum$  &     &  & \textcolor{green}{+306.4}
 
 \end{tabular}
 \label{tab:20tests}
-\end{table*}In Table \ref{tab:ITC2007ResultsComparison} we compare the results obtained in this project's approach with the five winners of the \gls{itc2007}. Our approach based on M\"{u}ller's \cite{Mueller2009} approach, however the results are not as good as their, and this might be because of the use of the \gls{gd} heuristic in his approach and differences on the neighborhood and on the initialization procedure. In some datasets, however, the developed approach was able to reach and beat most of the contestants. We can also observe that the datasets with the highest scores, and so represent the ones with worst results, are the ones that have more \textit{exam\_coincident} hard constraints. We believe that by solving this approach limitation mentioned above, would improve the algorithm results.\\
+\end{table*}\begin{table}[!t]
+\centering
+\caption{Comparison of the fitness results of the current approach with the previous approach. The best solutions are in boldface. ``--'' indicates that a feasible solution could not be obtained.}
+\sisetup{table-alignment=center,detect-weight=true,detect-inline-weight=math}
+\begin{tabular}{%
+	S[table-figures-integer=3]%
+	S[table-format=5.1]%
+	S[table-format=5.1]%
+	S[table-format=5.1]%
+    }
+
+\toprule
+
+\multicolumn{1}{c}{Dataset} & \multicolumn{1}{c}{Previous} &	\multicolumn{1}{c}{Current} &	\multicolumn{1}{c}{Improvement}\\
+\multicolumn{1}{c}{}	& \multicolumn{1}{c}{approach} & \multicolumn{1}{c}{approach} &	\multicolumn{1}{c}{Factor (\%)}\\
+
+\midrule
+
+1   &   6934 & \boldentry{5.1}{5019} & \textcolor{green}{+27.6} \\
+2   &    821 & \boldentry{5.1}{478}  & \textcolor{green}{+41.8} \\
+3   & 24627 &   \boldentry{5.1}{14997} & \textcolor{green}{+39.1} \\
+4   &   \text{--}  & \text{--} & \text{--} \\
+5   & 7729 &   \boldentry{5.1}{4950}  & \textcolor{green}{+36.0} \\
+6   & 30195 &   \boldentry{5.1}{27680} & \textcolor{green}{+8.3} \\
+7   & 8089 &   \boldentry{5.1}{4799}   & \textcolor{green}{+40.7} \\
+8   & 11067 &   \boldentry{5.1}{8551}   & \textcolor{green}{+22.7} \\
+9   & 1448 &   \boldentry{5.1}{1141}   & \textcolor{green}{+21.2} \\
+10  & 35698 &   \boldentry{5.1}{28219}   & \textcolor{green}{+21.0} \\
+11  & 72751 &   \boldentry{5.1}{45344}   & \textcolor{green}{+37.7} \\
+12  & 8049 &   \boldentry{5.1}{7222}   & \textcolor{green}{+10.3} \\
+
+\bottomrule
+$\sum$  &  207408  & 148400 & \textcolor{green}{+306.4}
+
+\end{tabular}
+\label{tab:PrevApprVSNewAppr}
+\end{table}While analyzing the results, it was noticed that some runs produced results very far from the average results for the given dataset. As can be seen in Table \ref{tab:20tests}, the datasets 2, 5, 6, 8, 10, and 12 have the worst fitness deviating from the average fitness compared to the other datasets. The fitness standard deviation itself, in these datasets, is much smaller compared to the distance between the average fitness and the worst fitness of the 20 runs. On the 20 runs for these datasets, only one or two had this kind of results. We believe this rarely happens because of the problem specified in Subsection \ref{sub:SAStatistics}, the fact that examinations with coincidence hard constraints cannot be moved, it limits the algorithm performance to get better results.\\
+\\
+In Table \ref{tab:ITC2007ResultsComparison} we compare the results obtained in this project's approach with the five winners of the \gls{itc2007}. Our approach is based on M\"{u}ller's \cite{Mueller2009} approach, however the results are not as good as his, and this might be because of the use of the \gls{gd} heuristic in his approach and differences on the neighborhood and on the initialization procedure. In some datasets, however, the developed approach was able to reach and beat most of the contestants. We can also observe that the datasets with the highest scores, and so represent the ones with worst results, are the ones that have more \textit{exam\_coincident} hard constraints. We believe that by solving this approach limitation mentioned above, would improve the algorithm results.\\
 \\
 \begin{table*}[!t]
 \centering
@@ -129,7 +133,7 @@ $\sum$  &     &  & \textcolor{green}{+306.4}
 
 \end{tabular}
 \label{tab:ITC2007ResultsComparison}
-\end{table*}In table \ref{tab:UpToDateResultsComparison}, our algorithm's results are compared to more up to date approaches. As can be seen, Rahman et al. \cite{Rahman2014}, Bryce et al. \cite{Hamilton-Bryce2014}, and Mouhoub et al. \cite{Mouhoub2014} beat almost all the best results. Some of Rahman's \cite{Rahman2014} and Bryce's results surpass M\"{u}ller's \cite{Mueller2009} results. None of the datasets' score of our approach was able to beat all the other approaches shown on the table. \\
+\end{table*}In Table \ref{tab:UpToDateResultsComparison}, our algorithm's results are compared to more up to date approaches. As can be seen, Rahman et al. \cite{Rahman2014}, Bryce et al. \cite{Hamilton-Bryce2014}, and Mouhoub et al. \cite{Mouhoub2014} beat almost all the best results. Some of Rahman's \cite{Rahman2014} and Bryce's results surpass M\"{u}ller's \cite{Mueller2009} results. None of the datasets' score of our approach was able to beat all the other approaches shown on the table. \\
 \\
 \begin{table*}[!t]
 \centering
@@ -173,7 +177,7 @@ $\sum$  &     &  & \textcolor{green}{+306.4}
 
 \begin{table}[!t]
 \centering
-\caption{\textcolor{green}{Obtained results with different time constraints. The best solutions are in boldface. ``--'' indicates that a feasible solution could not be obtained.}}
+\caption{Results with different time constraints. The best solutions are in boldface. ``--'' indicates that a feasible solution could not be obtained.}
 \sisetup{table-alignment=center,detect-weight=true,detect-inline-weight=math}
 \begin{tabular}{%
 	S[table-figures-integer=3]%
