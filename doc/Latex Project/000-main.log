@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.16)  22 OCT 2015 18:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.16)  12 NOV 2015 22:39
 entering extended mode
 **000-main.tex
 (000-main.tex
@@ -3091,55 +3091,55 @@ Missing character: There is no y in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
 
-Overfull \hbox (32.15245pt too wide) in paragraph at lines 262--263
+Overfull \hbox (32.15245pt too wide) in paragraph at lines 263--264
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 54.36844pt on input line 264.
-
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 267--284
-
- []
+LaTeX Warning: Float too large for page by 54.36844pt on input line 265.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 267--284
+Underfull \hbox (badness 10000) in paragraph at lines 134--270
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 267--284
+Underfull \hbox (badness 10000) in paragraph at lines 134--270
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 267--284
+Underfull \hbox (badness 10000) in paragraph at lines 134--270
+
+ []
+
+[16] [17] [18]
+Underfull \hbox (badness 10000) in paragraph at lines 272--283
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 267--284
+Underfull \hbox (badness 10000) in paragraph at lines 272--283
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 267--284
+Underfull \hbox (badness 10000) in paragraph at lines 272--283
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 267--284
+Underfull \hbox (badness 10000) in paragraph at lines 272--283
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 267--284
+Underfull \hbox (badness 10000) in paragraph at lines 272--283
 
  []
 
-[17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 287--290
+
+Underfull \hbox (badness 10000) in paragraph at lines 286--289
 
  []
 
@@ -3871,7 +3871,7 @@ ram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr9.pfb><C:/Program Files (x8
 .9/fonts/type1/public/lm/lmsy5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
 e1/public/lm/lmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm
 /lmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy9.pfb>
-Output written on 000-main.pdf (71 pages, 751945 bytes).
+Output written on 000-main.pdf (71 pages, 751974 bytes).
 PDF statistics:
  392 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

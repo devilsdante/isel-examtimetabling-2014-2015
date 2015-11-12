@@ -131,7 +131,8 @@ The \verb+Repository+ class stores the entities in a list, with indexes correspo
 \section{Business Layer}
 \label{subsec:BussinessLayer}
 
-The \gls{bl} provides access to the repositories explained above by, in each of the business classes, with \gls{crud} functions or get/set functions, and specific functions that depend on the type of the repository. One example of these latter functions is the following. Considering the room hard constraints repository, one could invoke a method for obtaining all room hard constraints of a given type. This can be seen in Figure \ref{fig:BusinessLayer}, which includes all the \gls{bl} classes, methods and, variables. The \gls{crud} functions provided by some of the business classes use the \gls{crud} functions from the Repository instance, which is presented on that same business class.
+The \gls{bl} provides access to the repositories explained above by, in each of the business classes, with \gls{crud} functions or get/set functions, and specific functions that depend on the type of the repository. One example of these latter functions is the following. Considering the room hard constraints repository, one could invoke a method for obtaining all room hard constraints of a given type. This can be seen in Figure \ref{fig:BusinessLayer}, which includes all the \gls{bl} classes, methods and, variables. The \gls{crud} functions provided by some of the business classes use the \gls{crud} functions from the Repository instance, which is presented on that same business class.\\
+\\
 \begin{figure}[p]
 \centering
 \thispagestyle{empty}
@@ -261,15 +262,13 @@ The \gls{bl} provides access to the repositories explained above by, in each of 
 \end{umlpackage}
 \end{tikzpicture}
 \caption{Overview of the BL and its main classes.} \label{fig:BusinessLayer}
-\end{figure}
-
-\section{Tools Layer}
-\label{subsec:ToolsLayer}It's possible to store multiple instances of a certain type of entity, using to the \gls{bl} classes, which provide \verb+Repository+ functions for that objective. If that's the case, a \verb+Repository+ instance of that type of entity is used. Thus, business classes that only store one instance, do not provide \gls{crud} functions; instead, they provide \textit{set} and \textit{get} functions. This makes sense, considering it only stores one instance of an entity, instead of multiple entity instances, not needing the use of a \verb+Repository+. One example of these classes is the \verb+ConflictMatrix+. \\
+\end{figure}It's possible to store multiple instances of a certain type of entity, using to the \gls{bl} classes, which provide \verb+Repository+ functions for that objective. If that's the case, a \verb+Repository+ instance of that type of entity is used. Thus, business classes that only store one instance, do not provide \gls{crud} functions; instead, they provide \textit{set} and \textit{get} functions. This makes sense, considering it only stores one instance of an entity, instead of multiple entity instances, not needing the use of a \verb+Repository+. One example of these classes is the \verb+ConflictMatrix+. \\
 \\
 The \verb+ConflictMatrix+ class represents the \textit{Conflict matrix}, of size equal to the number of examinations. Each matrix element $(i,j)$ contains the number of conflicts between examinations $i$ and $j$. Even though it's not an entity that implements \verb+IEntity+, it must be easily accessed in the lower layers. There's only one instance of this class because there's only one conflict matrix for each set. Each set must be loaded using the \verb+Loader+ if that set is to be tested.\\
 \\
-All the business classes implement the \textit{Singleton} pattern. This decision was made because it makes sense to keep only one repository of each entity since it must be populated using the Loader each time a set is tested. Another reason is to avoid passing the instances references of the business classes to all the heuristics and tools that use them, and so, the instances can easily be accessed statically.\\
-\\
+All the business classes implement the \textit{Singleton} pattern. This decision was made because it makes sense to keep only one repository of each entity since it must be populated using the Loader each time a set is tested. Another reason is to avoid passing the instances references of the business classes to all the heuristics and tools that use them, and so, the instances can easily be accessed statically.
+\section{Tools Layer}
+\label{subsec:ToolsLayer}
 The \gls{tl} contains all the tools used by the \gls{hl} and by the lower layers, while using the \gls{bl} to access the stored entities. These tools are named \verb+EvaluationFunction+, \verb+Loader+, \verb+NeighborSelection+, \verb+FeasibilityTester+, and \verb+OutputFormatting+.\\
 \\
 \verb+EvaluationFunction+ is a tool  for solution validation, and computation of solution's fitness and distance to feasibility. A solution is only valid if the examinations are all scheduled, even if the solution is not feasible. The distance to feasibility determines the number of violated hard constraints. The fitness value refers to the score of the solution depending on the violated soft constraints and their penalty values. The distance to feasibility is used by the \gls{gc} heuristic to guarantee that the end solution is feasible, while the fitness is applied by the metaheuristics, such as \gls{sa}, to compare different solutions.\\
