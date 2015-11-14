@@ -13,7 +13,7 @@ This tool not only loads all the data to their corresponding repositories, but a
 
 \subsection{Analysis of benchmark data}
 
-Table 4.1 presents the specifications of the 12 datasets of the \gls{itc2007}. The instances presented have different degrees of complexity, that is, ease of finding a feasible solution and number of feasible solutions. Using the developed \gls{gc} heuristic (described in Section \ref{sec:GraphColoring}), dataset 4 is the most complex one, as no feasible solution could be obtained. The high conflict matrix density, in addition to the fact there's only one room (with capacity capacity 1200 seats), and the presence of 40 period hard constraints, help to explain the dataset complexity.\\
+Table 4.1 presents the specifications of the 12 datasets of the \gls{itc2007}. The instances presented have different degrees of complexity, that is, ease of finding a feasible solution and number of feasible solutions. Using the developed \gls{gc} heuristic (described in Section \ref{sec:GraphColoring}), dataset 4 is the most complex one, as no feasible solution could be obtained. The high conflict matrix density, in addition to the fact there's only one room (with the capacity of 1200 seats), and the presence of 40 period hard constraints, help to explain the dataset complexity.\\
 \\
 All the specifications and benchmark data from the 12 datasets of the \gls{itc2007} timetabling problem are shown in Table \ref{tab:ITC2007Datasets}.
 
@@ -61,7 +61,7 @@ All the specifications and benchmark data from the 12 datasets of the \gls{itc20
 
 \subsection{Implementation}
 
-The development of the \verb+ILoader+ is divided into two main parts: the loading part, which loads the dataset file into the repositories using the business layer, and the creation and population of the conflict matrix.\\
+The development of the \verb+Loader+ is divided into two main parts: the loading part, which loads the dataset file into the repositories using the business layer, and the creation and population of the conflict matrix.\\
 \\
 The loader was implemented using the \verb+Loader+ base class, from which the \verb+LoaderTimetable+ extends. The \verb+Loader+ class provides methods to read the file contents. These two classes are depicted in Figure \ref{fig:Loaders}.\\
 \\
@@ -176,15 +176,21 @@ The \gls{gc} heuristic implementation only performs assignments and unassignment
 	-unassigned\_examinations : \\ List<Examination>
 }
 {
-	+Restart() : void\\
-	+NextLine() : bool\\
-	+ReadNextToken() : string\\
-	+ReadCurrToken() : string\\
-	+ReadNextLine() : List<string>
+	+Exec() : Solution\\
+	-PopulateAndSortAssignmentLists() : void\\
+	-AddExclusionToConflictMatrix() : void\\
+	-EraseCoincidenceHCWithConflict() : void\\
+	-ExaminationNormalAssignment(exam : Examination)\\
+	-ExaminationForcingAssignment(exam : Examination)\\
+	-UnassignExaminationsAndCoincidences(exams : List<int>)\\
+	-UnassignExamination(exam : Examination)\\
+	-UnassignExaminationAndCoincidences(exam : Examination)\\
+	-UnassignExaminations(exams : List<int>)\\
+	-AssignExamination(period : Period, room : Room, \\ exam : Examination)
 }
 \end{umlpackage}
 \begin{umlpackage}[x = 2, y = 0]{Tools Layer} 
-\umlclass[x = 0, y = -9]{FeasibilityTester}
+\umlclass[x = 0, y = -11]{FeasibilityTester}
 {
 	-examinations : Examinations\\
 	-period\_hard\_constraints : PeriodHardConstraints\\
@@ -193,9 +199,9 @@ The \gls{gc} heuristic implementation only performs assignments and unassignment
 	-conflict\_matrix : int[,]
 }
 {
-	+IsFeasiblePeriod(soltution : solution,\\ exam : Examination, period : Period) : bool\\
-	+IsFeasibleRoom(soltution : solution,\\ exam : Examination, period : Period, room : Room) : bool\\
-	+IsFeasiblePeriodRoom(soltution : solution,\\ exam : Examination, period : Period, room : Room) : bool\\
+	+IsFeasiblePeriod(soltution : Solution,\\ exam : Examination, period : Period) : bool\\
+	+IsFeasibleRoom(soltution : Solution,\\ exam : Examination, period : Period, room : Room) : bool\\
+	+IsFeasiblePeriodRoom(soltution : Solution,\\ exam : Examination, period : Period, room : Room) : bool\\
 	+RoomCurrentCapacityOnPeriod(solution : Solution,\\ period : Period, room : Room)\\
 }
 \end{umlpackage}
