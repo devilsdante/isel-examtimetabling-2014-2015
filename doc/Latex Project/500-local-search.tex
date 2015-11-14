@@ -25,13 +25,14 @@ The \gls{sa} was implemented in a way that it is independent from the type of th
 	-cooling\_schedule : ICoolingSchedule
 }
 {
-	+Exec(solution : ISolution, TMax : double, \\ TMin : double, loops : int, type : int, minimize : bool)\\
-	+Exec2(solution : ISolution, TMax : double, \\ TMin : double, loops : int, rate : double, type : int, minimize : bool)\\
-	+ExecLinearTimer(solution : ISolution, TMax : double,\\ TMin : double, milliseconds : long, type : int, long : minimize)\\
+	+Exec(solution : ISolution, TMax : double, TMin : double, loops : int, \\ type : int, minimize : bool, time\_limit : long) : ISolution\\
+	+Exec2(solution : ISolution, TMax : double, TMin : double, loops : int, \\ rate : double, type : int, minimize : bool, time\_limit : long) : ISolution\\
+	+ExecLinearTimer(solution : ISolution, TMax : double, TMin : double, \\ milliseconds : long, type : int, minimize : bool) : ISolution\\
+	+GetSANumberEvaluations(Tmax : double, R : double, K : double, \\ TMin : double) : long\\
 	\umlvirt{\#GenerateNeighbor(solution : ISolution, type : int) : INeighbor}\\
-	\umlvirt{\#InitVals(type : int)}
+	\umlvirt{\#InitVals(type : int) : void}
 }
-\umlclass[x = 0, y = -8]{SimulatedAnnealingTimetable}
+\umlclass[x = 0, y = -9]{SimulatedAnnealingTimetable}
 {
 	\#evaluation\_function : IEvaluationFunction\\
 	-neighbor\_selection\_timetable : NeighborSelectionTimetable\\
@@ -54,8 +55,8 @@ The \gls{sa} was implemented in a way that it is independent from the type of th
 	-GenerateRandomNeighbor(solution : Solution) : INeighbor\\
 	-GenerateGuidedNeighbor1(solution : Solution) : INeighbor\\
 	-GenerateGuidedNeighbor2(solution : Solution) : INeighbor\\
-	\#InitVals(type : int)\\
-	+EstimateTotalNumberOfNeighbors(average\_reps : int, \\ total\_time : int, solution : Solution)
+	\#InitVals(type : int) : void\\
+	+EstimateTotalNumberOfNeighbors(average\_reps : int, \\ total\_time : int, solution : Solution) : long
 }
 \end{umlpackage}
 
@@ -176,7 +177,7 @@ CompNeighbs = TotalTime / CompTime * AverageReps * TotalOperats,
 \end{axis}
 \end{tikzpicture}
 
-\caption{Simulated Annealing results: score value as a function of the temperature} 
+\caption{Simulated Annealing results} 
 \label{fig:SimulatedAnnealingPlot}
 \end{figure}
 
@@ -199,7 +200,7 @@ The implementation of this heuristic is very similar to that of the \gls{sa}; it
 	\umlvirt{\#evaluation\_function : IEvaluationFunction}\\
 }
 {
-	+Exec(solution : ISolution, milliseconds : long, type : int, \\ minimize : bool)\\
+	+Exec(solution : ISolution, milliseconds : long, type : int, \\ minimize : bool) : ISolution\\
 	\umlvirt{\#GenerateNeighbor(solution : ISolution, type : int) : INeighbor}
 }
 \umlclass[x = 0, y = -5]{HillClimbingTimetable}
@@ -248,7 +249,7 @@ The neighborhood operators, in this context, are all based on moving examination
 	
 	\item \textit{Period Swap} -  An examination is randomly selected. After that, a period is randonly selected. If the selected examination can be placed in that period, while maintaining the room, then a \textit{Period Change} neighbor is returned instead. If not, if the swapping of the random examination with any of the examinations presented in the period, keeping the same room, does not clash with any hard constraints, that neighbor is returned. If not, the examinations presented in the adjacent periods are tested until a feasible solution is found (always testing first if a \textit{Period Change} can be returned instead). If it reaches the limit of periods and no feasible solution is found, no neighbor is returned;\\
 	
-	\item \textit{Period \& Room Swap} - An examination is randomly selected. After that, a period and room are randomly selected. If the selected examination can be placed in that period and room, then a \textit{Period Change} neighbor is returned instead. If not, if the swapping of the random examination with any of the examinations presented in the period and room does not clash with any hard constraints, that neighbor is returned. If not, the examinations presented in the adjacent periods and rooms are tested until a feasible solution is found (always testing first if a \textit{Period \& Room Change} can be returned instead). If it reaches the limit of periods and rooms and no feasible solution is found, no neighbor is returned.
+	\item \textit{Period \& Room Swap} - An examination is randomly selected. After that, a period and room are randomly selected. If the selected examination can be placed in that period and room, then a \textit{Period \& Room Change} neighbor is returned instead. If not, if the swapping of the random examination with any of the examinations presented in the period and room does not clash with any hard constraints, that neighbor is returned. If not, the examinations presented in the adjacent periods and rooms are tested until a feasible solution is found (always testing first if a \textit{Period \& Room Change} can be returned instead). If it reaches the limit of periods and rooms and no feasible solution is found, no neighbor is returned.
 \end{itemize}
 
 \subsection{Implementation}
@@ -373,7 +374,7 @@ Other blue lines, which have values between 1000 and 1, are rare. This occurs no
 \label{fig:AvsRNeighbors} 
 \end{figure}
 \subsection{Neighborhood Operators Effect}
-One of the most important aspects when dealing with the \gls{sa} is the choice of the neighbor operators. It is crucial that all the neighbor operators contribute positively. If a neighbor operator contributes negatively, it's better not to use it. M\"{u}ller proposed the first five operators~\cite{Mueller2009} \textit{Room Change}, \textit{Period Change}, \textit{Period \& Room Change}, \textit{Room Swap}, and \textit{Period Swap}. We add to the Muller's set a sixth operator, the \textit{Period \& Room Swap} operator. In the sequel we present a study of the influence of this operator. For all 12 datasets, 20 runs were performed, computing the fitness average for each of the two cases. Table \ref{tab:NeighborsImprovementFactor} shows the improvement factor for using six neighbors instead of five. In most cases, it's worse compared to using the original five neighbor operators, and so, the 6th operator will not be used in this project's results. The results of using five operators also showed that more neighbors were generated and the percentage of feasible generated neighbors compared to the unfeasible, for each dataset, is also higher compared to using six neighbor operators.
+One of the most important aspects when dealing with the \gls{sa} is the choice of the neighbor operators. It is crucial that all the neighbor operators contribute positively. If a neighbor operator contributes negatively, it's better not to use it. M\"{u}ller proposed the first five operators~\cite{Mueller2009} \textit{Room Change}, \textit{Period Change}, \textit{Period \& Room Change}, \textit{Room Swap}, and \textit{Period Swap}. We add to the M\"{u}ller's set a sixth operator, the \textit{Period \& Room Swap} operator. In the sequel we present a study of the influence of this operator. For all 12 datasets, 20 runs were performed, computing the fitness average for each of the two cases. Table \ref{tab:NeighborsImprovementFactor} shows the improvement factor for using six neighbors instead of five. In most cases, it's worse compared to using the original five neighbor operators, and so, the 6th operator will not be used in this project's results. The results of using five operators also showed that more neighbors were generated and the percentage of feasible generated neighbors compared to the unfeasible, for each dataset, is also higher compared to using six neighbor operators.
 
 \begin{table}[!t]
 \centering

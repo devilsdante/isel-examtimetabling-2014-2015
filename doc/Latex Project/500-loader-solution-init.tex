@@ -169,6 +169,7 @@ The \gls{gc} heuristic implementation only performs assignments and unassignment
 	-room\_hard\_constraints: RoomHardConstraints\\
 	-rooms : Rooms\\
 	-conflict\_matrix : int[,]\\
+	-feasibility\_tester : FeasibilityTester\\
 	-solution : Solution\\
 	-unassigned\_examinations\_with\_exclusive : \\ List<Examination>\\
 	-unassigned\_examinations\_with\_coincidence : \\ List<Examination>\\
@@ -180,13 +181,13 @@ The \gls{gc} heuristic implementation only performs assignments and unassignment
 	-PopulateAndSortAssignmentLists() : void\\
 	-AddExclusionToConflictMatrix() : void\\
 	-EraseCoincidenceHCWithConflict() : void\\
-	-ExaminationNormalAssignment(exam : Examination)\\
-	-ExaminationForcingAssignment(exam : Examination)\\
-	-UnassignExaminationsAndCoincidences(exams : List<int>)\\
-	-UnassignExamination(exam : Examination)\\
-	-UnassignExaminationAndCoincidences(exam : Examination)\\
-	-UnassignExaminations(exams : List<int>)\\
-	-AssignExamination(period : Period, room : Room, \\ exam : Examination)
+	-ExaminationNormalAssignment(exam : Examination) : bool\\
+	-ExaminationForcingAssignment(exam : Examination) : void\\
+	-UnassignExaminationsAndCoincidences(exams : List<int>) : void\\
+	-UnassignExamination(exam : Examination) : void\\
+	-UnassignExaminationAndCoincidences(exam : Examination) : void\\
+	-UnassignExaminations(exams : List<int>) : void\\
+	-AssignExamination(period : Period, room : Room, \\ exam : Examination) : void
 }
 \end{umlpackage}
 \begin{umlpackage}[x = 2, y = 0]{Tools Layer} 
@@ -202,7 +203,7 @@ The \gls{gc} heuristic implementation only performs assignments and unassignment
 	+IsFeasiblePeriod(soltution : Solution,\\ exam : Examination, period : Period) : bool\\
 	+IsFeasibleRoom(soltution : Solution,\\ exam : Examination, period : Period, room : Room) : bool\\
 	+IsFeasiblePeriodRoom(soltution : Solution,\\ exam : Examination, period : Period, room : Room) : bool\\
-	+RoomCurrentCapacityOnPeriod(solution : Solution,\\ period : Period, room : Room)\\
+	+RoomCurrentCapacityOnPeriod(solution : Solution,\\ period : Period, room : Room) : int\\
 }
 \end{umlpackage}
 

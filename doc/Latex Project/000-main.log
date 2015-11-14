@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.16)  14 NOV 2015 16:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.16)  14 NOV 2015 21:52
 entering extended mode
 **000-main.tex
 (000-main.tex
@@ -3286,25 +3286,25 @@ Missing character: There is no y in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
 
-LaTeX Warning: Float too large for page by 30.61903pt on input line 214.
+LaTeX Warning: Float too large for page by 36.39404pt on input line 215.
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 224--118
+Underfull \hbox (badness 10000) in paragraph at lines 225--118
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 224--118
+Underfull \hbox (badness 10000) in paragraph at lines 225--118
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 224--118
+Underfull \hbox (badness 10000) in paragraph at lines 225--118
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 224--118
+Underfull \hbox (badness 10000) in paragraph at lines 225--118
 
  []
 
@@ -3351,60 +3351,60 @@ Missing character: There is no y in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--72
+Underfull \hbox (badness 10000) in paragraph at lines 16--73
 
  []
 
 
-Overfull \hbox (5.67871pt too wide) in paragraph at lines 16--72
+Overfull \hbox (5.67871pt too wide) in paragraph at lines 16--73
  \T1/fve/m/n/10 The []\T1/fvm/m/n/10 SimulatedAnnealing \T1/fve/m/n/10 ab-strac
 t class has the meth-ods []\T1/fvm/m/n/10 Exec\T1/fve/m/n/10 , []\T1/fvm/m/n/10
  Exec2\T1/fve/m/n/10 , and []\T1/fvm/m/n/10 ExecLinearTimer\T1/fve/m/n/10 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--72
+Underfull \hbox (badness 10000) in paragraph at lines 16--73
 
  []
 
 [29]
-Underfull \hbox (badness 10000) in paragraph at lines 74--76
+Underfull \hbox (badness 10000) in paragraph at lines 75--77
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--81
+Underfull \hbox (badness 10000) in paragraph at lines 79--82
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--81
+Underfull \hbox (badness 10000) in paragraph at lines 79--82
 
  []
 
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
-(Font)              scaled to size 6.29996pt on input line 84.
+(Font)              scaled to size 6.29996pt on input line 85.
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--86
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 119--124
+Underfull \hbox (badness 10000) in paragraph at lines 84--87
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 119--124
+Underfull \hbox (badness 10000) in paragraph at lines 120--125
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--125
 
  []
 
 [30] [31] [32]
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
-(Font)              scaled to size 5.39996pt on input line 136.
+(Font)              scaled to size 5.39996pt on input line 137.
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
-(Font)              scaled to size 4.49997pt on input line 136.
-Package pgfplots info on input line 167: Overriding colorspace to rgb due to xc
+(Font)              scaled to size 4.49997pt on input line 137.
+Package pgfplots info on input line 168: Overriding colorspace to rgb due to xc
 olor configuration.
 Missing character: There is no s in font nullfont!
 Missing character: There is no o in font nullfont!
@@ -3413,17 +3413,17 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no d in font nullfont!
 PGFPlots: reading {sa_plot_data.dat}
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--182
+Underfull \hbox (badness 10000) in paragraph at lines 127--183
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--182
+Underfull \hbox (badness 10000) in paragraph at lines 127--183
 
  []
 
 [33]
-Underfull \hbox (badness 10000) in paragraph at lines 186--189
+Underfull \hbox (badness 10000) in paragraph at lines 187--190
 
  []
 
@@ -3458,52 +3458,52 @@ Missing character: There is no y in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--228
+Underfull \hbox (badness 10000) in paragraph at lines 192--229
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 232--240
+Underfull \hbox (badness 10000) in paragraph at lines 233--241
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 232--240
+Underfull \hbox (badness 10000) in paragraph at lines 233--241
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 232--240
+Underfull \hbox (badness 10000) in paragraph at lines 233--241
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 232--240
+Underfull \hbox (badness 10000) in paragraph at lines 233--241
 
  []
 
 [34]
-Underfull \hbox (badness 10000) in paragraph at lines 241--242
+Underfull \hbox (badness 10000) in paragraph at lines 242--243
 
  []
 
 [35]
-Underfull \hbox (badness 10000) in paragraph at lines 243--244
+Underfull \hbox (badness 10000) in paragraph at lines 244--245
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 245--246
+Underfull \hbox (badness 10000) in paragraph at lines 246--247
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--248
+Underfull \hbox (badness 10000) in paragraph at lines 248--249
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 249--250
+Underfull \hbox (badness 10000) in paragraph at lines 250--251
 
  []
 
@@ -3538,58 +3538,58 @@ Missing character: There is no y in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
 
-Underfull \hbox (badness 10000) in paragraph at lines 256--314
+Underfull \hbox (badness 10000) in paragraph at lines 257--315
 
  []
 
 [36]
-Package pgfplots info on input line 362: Overriding colorspace to rgb due to xc
+Package pgfplots info on input line 363: Overriding colorspace to rgb due to xc
 olor configuration.
 PGFPlots: reading {./SAResults6.dat}
-Package pgfplots info on input line 368: Overriding colorspace to rgb due to xc
+Package pgfplots info on input line 369: Overriding colorspace to rgb due to xc
 olor configuration.
 
-Overfull \hbox (43.30434pt too wide) in paragraph at lines 370--371
+Overfull \hbox (43.30434pt too wide) in paragraph at lines 371--372
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 317--375
+Underfull \hbox (badness 10000) in paragraph at lines 318--376
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 317--375
+Underfull \hbox (badness 10000) in paragraph at lines 318--376
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 317--375
+Underfull \hbox (badness 10000) in paragraph at lines 318--376
 
  []
 
 [37] [38]
-Overfull \hbox (4.625pt too wide) detected at line 411
+Overfull \hbox (4.625pt too wide) detected at line 412
  
  []
 
 
-Overfull \hbox (4.625pt too wide) detected at line 411
+Overfull \hbox (4.625pt too wide) detected at line 412
  
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 420--425
+Underfull \hbox (badness 10000) in paragraph at lines 421--426
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 420--425
+Underfull \hbox (badness 10000) in paragraph at lines 421--426
 
  []
 
 [39])
-Underfull \hbox (badness 10000) in paragraph at lines 428--119
+Underfull \hbox (badness 10000) in paragraph at lines 429--119
 
  []
 
@@ -3847,7 +3847,7 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Here is how much of TeX's memory you used:
  49005 strings out of 493671
  1117153 string characters out of 3141423
- 2974128 words of memory out of 3000000
+ 2974154 words of memory out of 3000000
  51352 multiletter control sequences out of 15000+200000
  97033 words of font info for 90 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
@@ -3874,7 +3874,7 @@ ram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr9.pfb><C:/Program Files (x8
 .9/fonts/type1/public/lm/lmsy5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
 e1/public/lm/lmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm
 /lmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy9.pfb>
-Output written on 000-main.pdf (71 pages, 752082 bytes).
+Output written on 000-main.pdf (71 pages, 752208 bytes).
 PDF statistics:
  392 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

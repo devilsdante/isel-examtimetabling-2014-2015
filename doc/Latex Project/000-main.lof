@@ -10,7 +10,7 @@
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Graph Coloring and Feasibility Tester\relax }}{26}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Simulated Annealing classes\relax }}{31}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Simulated Annealing results: score value as a function of the temperature\relax }}{34}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Simulated Annealing results\relax }}{34}
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Hill Climbing classes\relax }}{35}
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Neighborhood selection and operators\relax }}{38}
 \contentsline {figure}{\numberline {5.5}{\ignorespaces Accepted and rejected neighbors for each examination in the Simulated Annealing.\relax }}{39}
