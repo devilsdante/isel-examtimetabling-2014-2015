@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.16)  16 NOV 2015 20:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.16)  17 NOV 2015 21:39
 entering extended mode
 **000-main.tex
 (000-main.tex
@@ -3845,10 +3845,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 49005 strings out of 493671
- 1117153 string characters out of 3141423
- 2974154 words of memory out of 3000000
- 51352 multiletter control sequences out of 15000+200000
+ 48932 strings out of 493671
+ 1115563 string characters out of 3141423
+ 2972883 words of memory out of 3000000
+ 51279 multiletter control sequences out of 15000+200000
  97033 words of font info for 90 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  63i,15n,105p,10397b,2397s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -3874,7 +3874,7 @@ ram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr9.pfb><C:/Program Files (x8
 .9/fonts/type1/public/lm/lmsy5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
 e1/public/lm/lmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm
 /lmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy9.pfb>
-Output written on 000-main.pdf (71 pages, 752061 bytes).
+Output written on 000-main.pdf (71 pages, 752069 bytes).
 PDF statistics:
  392 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

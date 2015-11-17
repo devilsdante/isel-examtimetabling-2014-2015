@@ -7,7 +7,7 @@ The Loader and the solution initializer (heuristic) are the first tools used in 
 \section{Loader Module}
 \label{sec:Loader}
 
-The Loader's job is to load all the information presented in the dataset files. Each set file includes information about examinations, enrolled students, periods, rooms and their penalties, period and room hard constraints, and the information about the soft constraints, named \textit{Institutional Weightings}. The presence of period and room hard constraints are optional.\\
+The Loader's job is to load all the information presented in the dataset files. Each dataset file includes information about examinations, enrolled students, periods, rooms and their penalties, period and room hard constraints, and the information about the soft constraints, named \textit{Institutional Weightings}. The presence of period and room hard constraints are optional.\\
 \\
 This tool not only loads all the data to their corresponding repositories, but also creates and populates the conflict matrix depending on the data obtained previously. The conflict matrix contains the information about the conflicts between each pair of examinations.
 
@@ -222,7 +222,7 @@ In order to produce random initial solutions, the implemented \gls{gc} heuristic
 
 \section{Solution Initialization Results}
 \label{sec:SolutionInitResults}
-The goal of the initialization procedure is not to find the best possible solution (in terms of fitness), but find feasible solutions. Some sets are simpler than others, always getting good and stable execution times. Others can be harder, getting worse execution times and instability. An unstable set means that the results vary too much, and so some tests show very good execution times and others not so much. The Graph Coloring heuristic results on the 12 datasets can be seen in Table \ref{tab:GCResults}. These results were obtained by running the heuristic, 10 times for each set, and computing the average for both fitness and execution time.\\
+The goal of the initialization procedure is not to find the best possible solution (in terms of fitness), but find feasible solutions. Some datasets are simpler than others, always getting good and stable execution times. Others can be harder, getting worse execution times and instability. An unstable dataset means that the results vary too much, and so some tests show very good execution times and others not so much. The Graph Coloring heuristic results on the 12 datasets can be seen in Table \ref{tab:GCResults}. These results were obtained by running the heuristic, 10 times for each dataset, and computing the average for both fitness and execution time.\\
 \\
 \begin{algorithm}[t]
 \begin{itemize}

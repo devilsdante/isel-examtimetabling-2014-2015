@@ -11,18 +11,18 @@ This project was developed using .NET (C\# programming language). It was impleme
 \begin{figure}[h!]
 \centering
 \begin{tikzpicture}
-\begin{umlpackage}[x = 4, y = 0]{Data Layer} 
+\begin{umlpackage}[x = 4, y = -15]{Data Layer} 
 
 \end{umlpackage}
 
-\begin{umlpackage}[x = 0, y=-3]{Data Access Layer}
+\begin{umlpackage}[x = 0, y=-12]{Data Access Layer}
 \begin{umlpackage}[x = -0.9]{Models}
 \end{umlpackage}
 \umlinterface[x = 3]{IRepository}{}{}
 \umlclass[x = 6]{Repository}{}{}
 \end{umlpackage}
 
-\begin{umlpackage}[y=-6]{Business Layer} 
+\begin{umlpackage}[y=-7.3]{Business Layer} 
 \umlclass[x = 0]{PeriodHardConstraints}{}{}
 \umlclass[x = 3.5]{Solutions}{}{}
 \umlclass[x = 6]{Periods}{}{}
@@ -33,13 +33,13 @@ This project was developed using .NET (C\# programming language). It was impleme
 \umlclass[x = 8.7, y = -1.5]{ModelWeightings}{}{}
 \end{umlpackage}
 
-\begin{umlpackage}[x = -0.2, y=-10.5]{Heuristics Layer}
+\begin{umlpackage}[x = -0.2, y=-3]{Heuristics Layer}
 \umlclass[x = 0]{SimulatedAnnealing}{}{}
 \umlclass[x = 3.2]{HillClimbing}{}{}
 \umlclass[x = -0.4, y = -1.5]{Graph Coloring}{}{}
 \end{umlpackage}
 
-\begin{umlpackage}[x = 6.8, y=-10.5]{Tools Layer}
+\begin{umlpackage}[x = 6.8, y=-3]{Tools Layer}
 \umlclass[x = -0.1]{NeighborSelection}{}{}
 \umlclass[x = 2.55]{Loader}{}{}
 \umlclass[x = 5.0]{FeasibilityTester}{}{}
@@ -47,17 +47,17 @@ This project was developed using .NET (C\# programming language). It was impleme
 \umlclass[x = 3.7, y = -1.5]{OutputFormatting}{}{}
 \end{umlpackage}
 
-\begin{umlpackage}[x = 2.5,y = -15]{Presentation Layer}
+\begin{umlpackage}[x = 2.5,y = 0]{Presentation Layer}
 \umlclass[x = 0]{GraphColoringTest}{}{}
 \umlclass[x = 4]{SimulatedAnnealingTest}{}{}
 \end{umlpackage}
 
-\umlassoc[geometry=-|-, anchor1 = -139, anchor2 = 60]{Data Layer}{Data Access Layer}
-\umlassoc[geometry=-|-, anchor1 = -37, anchor2 = 135]{Data Access Layer}{Business Layer}
-\umlassoc[geometry=-|-, anchor1 = 37, anchor2 = -143]{Heuristics Layer}{Business Layer}
-\umlassoc[geometry=-|-, anchor1 = 143, anchor2 = -37]{Tools Layer}{Business Layer}
-\umlassoc[geometry=-|-, anchor1 = 18, anchor2 = -149]{Presentation Layer}{Tools Layer}
-\umlassoc[geometry=-|-, anchor1 = 152, anchor2 = -44]{Presentation Layer}{Heuristics Layer}
+\umluniassoc[geometry=-|, anchor1 = -60, anchor2 = 139]{Data Access Layer}{Data Layer}
+\umluniassoc[geometry=-|, anchor1 = -135, anchor2 = 37]{Business Layer}{Data Access Layer}
+\umluniassoc[geometry=-|, anchor1 = -37, anchor2 = 143]{Heuristics Layer}{Business Layer}
+\umluniassoc[geometry=-|, anchor1 = -143, anchor2 = 37]{Tools Layer}{Business Layer}
+\umluniassoc[geometry=-|, anchor1 = -18, anchor2 = 149]{Presentation Layer}{Tools Layer}
+\umluniassoc[geometry=-|, anchor1 = -152, anchor2 = 44]{Presentation Layer}{Heuristics Layer}
 \end{tikzpicture}
 
 \caption{Overview of the subsystems that compose the system software architecture.} \label{fig:SystemArchitecture}
@@ -131,7 +131,7 @@ The \verb+Repository+ class stores the entities in a list, with indexes correspo
 \section{Business Layer}
 \label{subsec:BussinessLayer}
 
-The \gls{bl} provides access to the repositories explained above by, in each of the business classes, with \gls{crud} functions or get/set functions, and specific functions that depend on the type of the repository. One example of these latter functions is the following. Considering the room hard constraints repository, one could invoke a method for obtaining all room hard constraints of a given type. This can be seen in Figure \ref{fig:BusinessLayer}, which includes all the \gls{bl} classes, methods and, variables. The \gls{crud} functions provided by some of the business classes use the \gls{crud} functions from the Repository instance, which is presented on that same business class.\\
+The \gls{bl} allows access to the repositories explained above by, in each of the business classes, providing \gls{crud} functions or get/set functions, and specific functions that depend on the type of the repository. One example of these latter functions is the following. Considering the room hard constraints repository, one could invoke a method for obtaining all room hard constraints of a given type. This can be seen in Figure \ref{fig:BusinessLayer}, which includes all the \gls{bl} classes, methods, and variables. The \gls{crud} functions provided by some of the business classes use the \gls{crud} functions from the Repository instance, which is presented on that same business class.\\
 \\
 \begin{figure}[p]
 \centering
@@ -264,14 +264,14 @@ The \gls{bl} provides access to the repositories explained above by, in each of 
 \caption{Overview of the BL and its main classes.} \label{fig:BusinessLayer}
 \end{figure}It's possible to store multiple instances of a certain type of entity, using to the \gls{bl} classes, which provide \verb+Repository+ functions for that objective. If that's the case, a \verb+Repository+ instance of that type of entity is used. Thus, business classes that only store one instance, do not provide \gls{crud} functions; instead, they provide \textit{set} and \textit{get} functions. This makes sense, considering it only stores one instance of an entity, instead of multiple entity instances, not needing the use of a \verb+Repository+. One example of these classes is the \verb+ConflictMatrix+. \\
 \\
-The \verb+ConflictMatrix+ class represents the \textit{Conflict matrix}, of size equal to the number of examinations. Each matrix element $(i,j)$ contains the number of conflicts between examinations $i$ and $j$. Even though it's not an entity that implements \verb+IEntity+, it must be easily accessed in the lower layers. There's only one instance of this class because there's only one conflict matrix for each set. Each set must be loaded using the \verb+Loader+ if that set is to be tested.\\
+The \verb+ConflictMatrix+ class represents the \textit{Conflict matrix}, of size equal to the number of examinations. Each matrix element $(i,j)$ contains the number of conflicts between examinations $i$ and $j$. Even though it's not an entity that implements \verb+IEntity+, it must be easily accessed in the higher layers. There's only one instance of this class because there's only one conflict matrix for each dataset. Each dataset must be loaded using the \verb+Loader+ if that dataset is to be tested.\\
 \\
-All the business classes implement the \textit{Singleton} pattern. This decision was made because it makes sense to keep only one repository of each entity since it must be populated using the Loader each time a set is tested. Another reason is to avoid passing the instances references of the business classes to all the heuristics and tools that use them, and so, the instances can easily be accessed statically.
+All the business classes implement the \textit{Singleton} pattern. This decision was made because it makes sense to keep only one repository of each entity since it must be populated using the Loader each time a dataset is tested. Another reason is to avoid passing the instances references of the business classes to all the heuristics and tools that use them, and so, the instances can easily be accessed statically.
 \section{Tools Layer}
 \label{subsec:ToolsLayer}
-The \gls{tl} contains all the tools used by the \gls{hl} and by the lower layers, while using the \gls{bl} to access the stored entities. These tools are named \verb+EvaluationFunction+, \verb+Loader+, \verb+NeighborSelection+, \verb+FeasibilityTester+, and \verb+OutputFormatting+.\\
+The \gls{tl} contains all the tools used by the \gls{hl} and by the higher layers, while using the \gls{bl} to access the stored entities. These tools are named \verb+EvaluationFunction+, \verb+Loader+, \verb+NeighborSelection+, \verb+FeasibilityTester+, and \verb+OutputFormatting+.\\
 \\
-\verb+EvaluationFunction+ is a tool  for solution validation, and computation of solution's fitness and distance to feasibility. A solution is only valid if the examinations are all scheduled, even if the solution is not feasible. The distance to feasibility determines the number of violated hard constraints. The fitness value refers to the score of the solution depending on the violated soft constraints and their penalty values. The distance to feasibility is used by the \gls{gc} heuristic to guarantee that the end solution is feasible, while the fitness is applied by the metaheuristics, such as \gls{sa}, to compare different solutions.\\
+\verb+EvaluationFunction+ is a tool  for solution validation, and computation of solution's fitness and distance to feasibility. A solution is only valid if the examinations are all scheduled, even if the solution is not feasible. The distance to feasibility determines the number of violated hard constraints. The fitness value refers to the score of the solution depending on the violated soft constraints and their penalty values. The distance to feasibility is used by the \gls{gc} heuristic to guarantee that the end solution is feasible, while the fitness is applied by the meta-heuristics, such as \gls{sa}, to compare different solutions.\\
 \\
 The \verb+Loader+ loads all the information presented in a benchmark file into the repositories. This tool is the first to be run, allowing the heuristics and other tools to use the entities through the repositories. More information about this tool is given in Section \ref{sec:Loader}.\\
 \\
